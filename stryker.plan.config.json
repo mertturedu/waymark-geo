@@ -1,0 +1,32 @@
+{
+  "mutate": [
+    "src/core/plan/rules.ts",
+    "src/core/plan/exact.ts",
+    "src/core/plan/problem.ts",
+    "src/core/plan/plan.ts",
+    "src/core/plan/heuristic.ts"
+  ],
+  "testRunner": "jest",
+  "jest": {
+    "configFile": "jest.plan-mutation.config.js"
+  },
+  "coverageAnalysis": "perTest",
+  "thresholds": {
+    "high": 90,
+    "low": 80,
+    "break": 80
+  },
+  "reporters": [
+    "clear-text",
+    "progress"
+  ],
+  "ignorePatterns": [
+    "dist",
+    "pipeline",
+    "example",
+    "scripts"
+  ],
+  "tempDirName": ".stryker-tmp-plan",
+  "dryRunTimeoutMinutes": 30,
+  "concurrency": 6
+}

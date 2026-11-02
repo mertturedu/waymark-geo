@@ -1,0 +1,4618 @@
+{
+ "version": 1,
+ "plate": "59",
+ "queries": [
+  {
+   "id": "59-full-1",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Ümit Sokak No:8A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072296",
+    "number": "8A",
+    "streetName": "Ümit Sokak"
+   }
+  },
+  {
+   "id": "59-full-2",
+   "text": "Elvan Sokak No:3 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w445114615",
+    "number": "3",
+    "streetName": "Elvan Sokak"
+   }
+  },
+  {
+   "id": "59-full-3",
+   "text": "Ömer Halisdemir Mah. Biricik Sokak 6, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124681",
+    "number": "6",
+    "streetName": "Biricik Sokak"
+   }
+  },
+  {
+   "id": "59-full-4",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, 30 Ağustos Caddesi, Kapı No: 110",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13525397494",
+    "number": "110",
+    "streetName": "30 Ağustos Caddesi"
+   }
+  },
+  {
+   "id": "59-full-5",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Özge Sokak No:22C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413873",
+    "number": "22C",
+    "streetName": "Özge Sokak"
+   }
+  },
+  {
+   "id": "59-full-6",
+   "text": "Zafer Sokak No:7 İnönü Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805423",
+    "number": "7",
+    "streetName": "Zafer Sokak"
+   }
+  },
+  {
+   "id": "59-full-7",
+   "text": "Atatürk Mah. Kıbrıs Caddesi 19, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413834",
+    "number": "19",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-full-8",
+   "text": "Tekirdağ, Kapaklı, İnönü Mahallesi, Eski Cami Caddesi, Kapı No: 21A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459325997",
+    "number": "21A",
+    "streetName": "Eski Cami Caddesi"
+   }
+  },
+  {
+   "id": "59-full-9",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Erbay Caddesi No:19A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521113505",
+    "number": "19A",
+    "streetName": "Erbay Caddesi"
+   }
+  },
+  {
+   "id": "59-full-10",
+   "text": "Arin Sokak No:7 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12514608460",
+    "number": "7",
+    "streetName": "Arin Sokak"
+   }
+  },
+  {
+   "id": "59-full-11",
+   "text": "Atatürk Mah. Hafızlar Sokak 19, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839168",
+    "number": "19",
+    "streetName": "Hafızlar Sokak"
+   }
+  },
+  {
+   "id": "59-full-12",
+   "text": "Tekirdağ, Kapaklı, Vatan Mahallesi, Kıbrıs Caddesi, Kapı No: 34B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14094679206",
+    "number": "34B",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-full-13",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Doğuş Sokak No:16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w445114481",
+    "number": "16",
+    "streetName": "Doğuş Sokak"
+   }
+  },
+  {
+   "id": "59-full-14",
+   "text": "Erbay Caddesi No:50 Vatan Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w477314137",
+    "number": "50",
+    "streetName": "Erbay Caddesi"
+   }
+  },
+  {
+   "id": "59-full-15",
+   "text": "İnönü Mah. Onur Sokak 23-27C, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459326209",
+    "number": "23-27C",
+    "streetName": "Onur Sokak"
+   }
+  },
+  {
+   "id": "59-full-16",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, Kırlarbağı Sokak, Kapı No: 42",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797890",
+    "number": "42",
+    "streetName": "Kırlarbağı Sokak"
+   }
+  },
+  {
+   "id": "59-full-17",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Dinç Sokak No:18C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521123931",
+    "number": "18C",
+    "streetName": "Dinç Sokak"
+   }
+  },
+  {
+   "id": "59-full-18",
+   "text": "Necati Çalışkan Caddesi No:32 Muradiye Mahallesi Muratlı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437475140",
+    "number": "32",
+    "streetName": "Necati Çalışkan Caddesi"
+   }
+  },
+  {
+   "id": "59-full-19",
+   "text": "İstiklal-Kurtpınar Mah. Salkım Sokak 10, Muratlı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436976358",
+    "number": "10",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "59-full-20",
+   "text": "Tekirdağ, Kapaklı, İnönü Mahallesi, Eski Cami Caddesi, Kapı No: 13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n3645631681",
+    "number": "13",
+    "streetName": "Eski Cami Caddesi"
+   }
+  },
+  {
+   "id": "59-full-21",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Vadi Sokak No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124809",
+    "number": "14",
+    "streetName": "Vadi Sokak"
+   }
+  },
+  {
+   "id": "59-full-22",
+   "text": "Güler Sokak No:3 Vatan Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446804702",
+    "number": "3",
+    "streetName": "Güler Sokak"
+   }
+  },
+  {
+   "id": "59-full-23",
+   "text": "İnönü Mah. Yayla Sokak 5, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1467475398",
+    "number": "5",
+    "streetName": "Yayla Sokak"
+   }
+  },
+  {
+   "id": "59-full-24",
+   "text": "Tekirdağ, Süleymanpaşa, 100. Yıl Mahallesi, Uysallar Sokak, Kapı No: 15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036989342",
+    "number": "15",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-full-25",
+   "text": "Tekirdağ Kapaklı Yıldızkent Mah. Sakarya Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010621",
+    "number": "3",
+    "streetName": "Sakarya Sokak"
+   }
+  },
+  {
+   "id": "59-full-26",
+   "text": "Aşıklar Sokak No:13 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839774",
+    "number": "13",
+    "streetName": "Aşıklar Sokak"
+   }
+  },
+  {
+   "id": "59-full-27",
+   "text": "Cumhuriyet Mah. Dumlupınar Caddesi 45-47, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548484",
+    "number": "45-47",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-full-28",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Soylu Sokak, Kapı No: 4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413642",
+    "number": "4",
+    "streetName": "Soylu Sokak"
+   }
+  },
+  {
+   "id": "59-full-29",
+   "text": "Tekirdağ Kapaklı Vatan Mah. Vatan Caddesi No:86B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14107563743",
+    "number": "86B",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "59-full-30",
+   "text": "Öğretmenler Sokak No:21 Fatih Mahallesi Muratlı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436979647",
+    "number": "21",
+    "streetName": "Öğretmenler Sokak"
+   }
+  },
+  {
+   "id": "59-full-31",
+   "text": "İstiklal-Kurtpınar Mah. Gazi Caddesi 44, Muratlı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w607215556",
+    "number": "44",
+    "streetName": "Gazi Caddesi"
+   }
+  },
+  {
+   "id": "59-full-32",
+   "text": "Tekirdağ, Kapaklı, Mevlana Mahallesi, Alper Sokak, Kapı No: 6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13613255486",
+    "number": "6",
+    "streetName": "Alper Sokak"
+   }
+  },
+  {
+   "id": "59-full-33",
+   "text": "Tekirdağ Muratlı Fatih Mah. Stad Caddesi No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437157000",
+    "number": "7",
+    "streetName": "Stad Caddesi"
+   }
+  },
+  {
+   "id": "59-full-34",
+   "text": "İstiklal Caddesi No:26 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072407",
+    "number": "26",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "59-full-35",
+   "text": "Ömer Halisdemir Mah. Akbaş Sokak 35, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14049224810",
+    "number": "35",
+    "streetName": "Akbaş Sokak"
+   }
+  },
+  {
+   "id": "59-full-36",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Erbay Caddesi, Kapı No: 117B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11086025467",
+    "number": "117B",
+    "streetName": "Erbay Caddesi"
+   }
+  },
+  {
+   "id": "59-full-37",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Kadife Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512024233",
+    "number": "3",
+    "streetName": "Kadife Sokak"
+   }
+  },
+  {
+   "id": "59-full-38",
+   "text": "Çeken Caddesi No:4B Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12487057630",
+    "number": "4B",
+    "streetName": "Çeken Caddesi"
+   }
+  },
+  {
+   "id": "59-full-39",
+   "text": "İnönü Mah. Yazgan Sokak 2A, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13513792508",
+    "number": "2A",
+    "streetName": "Yazgan Sokak"
+   }
+  },
+  {
+   "id": "59-full-40",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Canbazlar Caddesi, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548344",
+    "number": "11",
+    "streetName": "Canbazlar Caddesi"
+   }
+  },
+  {
+   "id": "59-full-41",
+   "text": "Tekirdağ Süleymanpaşa Yavuz Mah. Ruşen Güneş Sokak No:4/F",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12348483728",
+    "number": "4/F",
+    "streetName": "Ruşen Güneş Sokak"
+   }
+  },
+  {
+   "id": "59-full-42",
+   "text": "Yosun Sokak No:3 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1392143408",
+    "number": "3",
+    "streetName": "Yosun Sokak"
+   }
+  },
+  {
+   "id": "59-full-43",
+   "text": "Cumhuriyet Mah. Erbay Caddesi 7-9B, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521113308",
+    "number": "7-9B",
+    "streetName": "Erbay Caddesi"
+   }
+  },
+  {
+   "id": "59-full-44",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Öykü Sokak, Kapı No: 19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12517392172",
+    "number": "19",
+    "streetName": "Öykü Sokak"
+   }
+  },
+  {
+   "id": "59-full-45",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Çağla Sokak No:1-3C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12541871201",
+    "number": "1-3C",
+    "streetName": "Çağla Sokak"
+   }
+  },
+  {
+   "id": "59-full-46",
+   "text": "Melodi Sokak No:2 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992413",
+    "number": "2",
+    "streetName": "Melodi Sokak"
+   }
+  },
+  {
+   "id": "59-full-47",
+   "text": "100. Yıl Mah. Tarık Buğra Caddesi 8-12A, Süleymanpaşa, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14234050001",
+    "number": "8-12A",
+    "streetName": "Tarık Buğra Caddesi"
+   }
+  },
+  {
+   "id": "59-full-48",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Sezer Sokak, Kapı No: 16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521090454",
+    "number": "16",
+    "streetName": "Sezer Sokak"
+   }
+  },
+  {
+   "id": "59-full-49",
+   "text": "Tekirdağ Kapaklı İnönü Mah. Zümrüt Sokak No:6A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13513786387",
+    "number": "6A",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "59-full-50",
+   "text": "Vatan Caddesi No:12 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521113389",
+    "number": "12",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "59-full-51",
+   "text": "Muhittin Mah. Adnan Kahveci Caddesi 20, Çorlu, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w467045479",
+    "number": "20",
+    "streetName": "Adnan Kahveci Caddesi"
+   }
+  },
+  {
+   "id": "59-full-52",
+   "text": "Tekirdağ, Şarköy, İstiklal Mahallesi, Tavşan Pınar Mevkii Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w830331644",
+    "number": "2",
+    "streetName": "Tavşan Pınar Mevkii Sokak"
+   }
+  },
+  {
+   "id": "59-full-53",
+   "text": "Tekirdağ Kapaklı Mevlana Mah. Yeliz Sokak No:22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805717",
+    "number": "22",
+    "streetName": "Yeliz Sokak"
+   }
+  },
+  {
+   "id": "59-full-54",
+   "text": "Kışla Tepe Caddesi No:41 Kayı Mahallesi Süleymanpaşa/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w507868678",
+    "number": "41",
+    "streetName": "Kışla Tepe Caddesi"
+   }
+  },
+  {
+   "id": "59-full-55",
+   "text": "Cumhuriyet Mah. Sema Sokak 3A, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521228103",
+    "number": "3A",
+    "streetName": "Sema Sokak"
+   }
+  },
+  {
+   "id": "59-full-56",
+   "text": "Tekirdağ, Süleymanpaşa, Çınarlı Mahallesi, Nuriye Sokak, Kapı No: 3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1566728240",
+    "number": "3",
+    "streetName": "Nuriye Sokak"
+   }
+  },
+  {
+   "id": "59-full-57",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Siren Sokak No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797841",
+    "number": "10",
+    "streetName": "Siren Sokak"
+   }
+  },
+  {
+   "id": "59-full-58",
+   "text": "Sezin Sokak No:12 Yıldızkent Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13349057204",
+    "number": "12",
+    "streetName": "Sezin Sokak"
+   }
+  },
+  {
+   "id": "59-full-59",
+   "text": "Ömer Halisdemir Mah. Kırlarbağı Sokak 68, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797766",
+    "number": "68",
+    "streetName": "Kırlarbağı Sokak"
+   }
+  },
+  {
+   "id": "59-full-60",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Özlem Sokak, Kapı No: 4/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12514608439",
+    "number": "4/1",
+    "streetName": "Özlem Sokak"
+   }
+  },
+  {
+   "id": "59-full-61",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Hürriyet Caddesi No:35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839375",
+    "number": "35",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "59-full-62",
+   "text": "Arda Sokak No:6 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12541861283",
+    "number": "6",
+    "streetName": "Arda Sokak"
+   }
+  },
+  {
+   "id": "59-full-63",
+   "text": "Vatan Mah. Kıbrıs Caddesi 38, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446804477",
+    "number": "38",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-full-64",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, Rüya Sokak, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512075374",
+    "number": "1",
+    "streetName": "Rüya Sokak"
+   }
+  },
+  {
+   "id": "59-full-65",
+   "text": "Tekirdağ Ergene Yulaflı Mah. 3. Yanyol No:1/4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13206600512",
+    "number": "1/4",
+    "streetName": "3. Yanyol"
+   }
+  },
+  {
+   "id": "59-full-66",
+   "text": "Dubaz Sokak No:37 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12514608406",
+    "number": "37",
+    "streetName": "Dubaz Sokak"
+   }
+  },
+  {
+   "id": "59-full-67",
+   "text": "Atatürk Mah. Ergene Caddesi 37, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512005038",
+    "number": "37",
+    "streetName": "Ergene Caddesi"
+   }
+  },
+  {
+   "id": "59-full-68",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Yıldız Caddesi, Kapı No: 7D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548248",
+    "number": "7D",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-full-69",
+   "text": "Tekirdağ Muratlı Muradiye Mah. Necati Çalışkan Caddesi No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437475143",
+    "number": "1",
+    "streetName": "Necati Çalışkan Caddesi"
+   }
+  },
+  {
+   "id": "59-full-70",
+   "text": "İmran Sokak No:8 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072505",
+    "number": "8",
+    "streetName": "İmran Sokak"
+   }
+  },
+  {
+   "id": "59-full-71",
+   "text": "Ömer Halisdemir Mah. Çamlıca Sokak 13, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124695",
+    "number": "13",
+    "streetName": "Çamlıca Sokak"
+   }
+  },
+  {
+   "id": "59-full-72",
+   "text": "Tekirdağ, Kapaklı, İnönü Mahallesi, Saray Caddesi, Kapı No: 41",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459326167",
+    "number": "41",
+    "streetName": "Saray Caddesi"
+   }
+  },
+  {
+   "id": "59-full-73",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Coşkun Sokak No:36",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446807547",
+    "number": "36",
+    "streetName": "Coşkun Sokak"
+   }
+  },
+  {
+   "id": "59-full-74",
+   "text": "Eren Caddesi No:186 Kızılpınar Namık Kemal Mahallesi Çerkezköy/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1050207752",
+    "number": "186",
+    "streetName": "Eren Caddesi"
+   }
+  },
+  {
+   "id": "59-full-75",
+   "text": "İnönü Mah. Volkan Caddesi 17A, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459325863",
+    "number": "17A",
+    "streetName": "Volkan Caddesi"
+   }
+  },
+  {
+   "id": "59-full-76",
+   "text": "Tekirdağ, Kapaklı, Yıldızkent Mahallesi, Nilüfer Caddesi, Kapı No: 43",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13347103784",
+    "number": "43",
+    "streetName": "Nilüfer Caddesi"
+   }
+  },
+  {
+   "id": "59-full-77",
+   "text": "Tekirdağ Muratlı İstiklal-Kurtpınar Mah. Gül Sokak No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436914636",
+    "number": "9",
+    "streetName": "Gül Sokak"
+   }
+  },
+  {
+   "id": "59-full-78",
+   "text": "Bora Sokak No:10 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805798",
+    "number": "10",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-full-79",
+   "text": "Cumhuriyet Mah. Dumlupınar Caddesi 15A, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932185",
+    "number": "15A",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-full-80",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Zengin Caddesi, Kapı No: 39B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932093",
+    "number": "39B",
+    "streetName": "Zengin Caddesi"
+   }
+  },
+  {
+   "id": "59-full-81",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Tuna Caddesi No:30",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992299",
+    "number": "30",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "59-full-82",
+   "text": "İpek Sokak No:8 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072514",
+    "number": "8",
+    "streetName": "İpek Sokak"
+   }
+  },
+  {
+   "id": "59-full-83",
+   "text": "İstiklal-Kurtpınar Mah. Gazi Caddesi 72, Muratlı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436894355",
+    "number": "72",
+    "streetName": "Gazi Caddesi"
+   }
+  },
+  {
+   "id": "59-full-84",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Sema Sokak, Kapı No: 17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521123994",
+    "number": "17",
+    "streetName": "Sema Sokak"
+   }
+  },
+  {
+   "id": "59-full-85",
+   "text": "Tekirdağ Kapaklı Mevlana Mah. Ali İhsan Mandalı Sokak No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797739",
+    "number": "5",
+    "streetName": "Ali İhsan Mandalı Sokak"
+   }
+  },
+  {
+   "id": "59-full-86",
+   "text": "Fatih Caddesi No:38 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13574936981",
+    "number": "38",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "59-full-87",
+   "text": "100. Yıl Mah. Sanayi Caddesi 22/A, Süleymanpaşa, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12348817460",
+    "number": "22/A",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "59-full-88",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Namık Kemal Caddesi, Kapı No: 16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992435",
+    "number": "16",
+    "streetName": "Namık Kemal Caddesi"
+   }
+  },
+  {
+   "id": "59-full-89",
+   "text": "Tekirdağ Kapaklı İnönü Mah. Büyük Sokak No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446804669",
+    "number": "5",
+    "streetName": "Büyük Sokak"
+   }
+  },
+  {
+   "id": "59-full-90",
+   "text": "Atasever Sokak No:13 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124654",
+    "number": "13",
+    "streetName": "Atasever Sokak"
+   }
+  },
+  {
+   "id": "59-full-91",
+   "text": "Atatürk Mah. Koru Sokak 57, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512075383",
+    "number": "57",
+    "streetName": "Koru Sokak"
+   }
+  },
+  {
+   "id": "59-full-92",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Hürriyet Caddesi, Kapı No: 57A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521251003",
+    "number": "57A",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "59-full-93",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Yaşar Doğu Caddesi No:17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12566197722",
+    "number": "17",
+    "streetName": "Yaşar Doğu Caddesi"
+   }
+  },
+  {
+   "id": "59-full-94",
+   "text": "Burcu Sokak No:3B Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12539717095",
+    "number": "3B",
+    "streetName": "Burcu Sokak"
+   }
+  },
+  {
+   "id": "59-full-95",
+   "text": "Yıldızkent Mah. Aysel Sokak 12, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13354808106",
+    "number": "12",
+    "streetName": "Aysel Sokak"
+   }
+  },
+  {
+   "id": "59-full-96",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Pınar Bulvarı, Kapı No: 80D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12539784072",
+    "number": "80D",
+    "streetName": "Pınar Bulvarı"
+   }
+  },
+  {
+   "id": "59-full-97",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Karakaya Sokak No:17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806733",
+    "number": "17",
+    "streetName": "Karakaya Sokak"
+   }
+  },
+  {
+   "id": "59-full-98",
+   "text": "Cengiz Topel Caddesi No:137 İstasyon Mahallesi Çerkezköy/Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n5526908397",
+    "number": "137",
+    "streetName": "Cengiz Topel Caddesi"
+   }
+  },
+  {
+   "id": "59-full-99",
+   "text": "Cumhuriyet Mah. Billur Sokak 2, Kapaklı, Tekirdağ",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932173",
+    "number": "2",
+    "streetName": "Billur Sokak"
+   }
+  },
+  {
+   "id": "59-full-100",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Can Sokak, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12539725848",
+    "number": "11",
+    "streetName": "Can Sokak"
+   }
+  },
+  {
+   "id": "59-full-101",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Hacılar Sokak No:2",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "59",
+    "osm": "n13616277839",
+    "number": "2",
+    "streetName": "Hacılar Sokak"
+   }
+  },
+  {
+   "id": "59-full-102",
+   "text": "Tekirdağ Muratlı Fatih Mah. Gardenya Sokak No:18",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "59",
+    "osm": "n9522663046",
+    "number": "18",
+    "streetName": "Gardenya Sokak"
+   }
+  },
+  {
+   "id": "59-full-103",
+   "text": "Tekirdağ Çerkezköy Gazi Osman Paşa Mah. 1. Cadde No:143",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "59",
+    "osm": "w1371214134",
+    "number": "143",
+    "streetName": "1. Cadde",
+    "streetNumber": 1
+   }
+  },
+  {
+   "id": "59-full-104",
+   "text": "Tekirdağ Çerkezköy Gazi Osman Paşa Mah. Atatürk Caddesi No:1",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "59",
+    "osm": "n5967860878",
+    "number": "1",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "59-full-105",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Koru Sokak No:13",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "59",
+    "osm": "n12512004933",
+    "number": "13",
+    "streetName": "Koru Sokak"
+   }
+  },
+  {
+   "id": "59-folded-1",
+   "text": "tekirdag kapakli yildizkent mah gokirmak sk no 12a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010687",
+    "number": "12A",
+    "streetName": "Gökırmak Sokak"
+   }
+  },
+  {
+   "id": "59-folded-2",
+   "text": "tekirdag kapakli inonu mah nurlu sk no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13441695995",
+    "number": "1",
+    "streetName": "Nurlu Sokak"
+   }
+  },
+  {
+   "id": "59-folded-3",
+   "text": "tekirdag kapakli ataturk mah gurur sk no 1d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12528204325",
+    "number": "1D",
+    "streetName": "Gurur Sokak"
+   }
+  },
+  {
+   "id": "59-folded-4",
+   "text": "tekirdag kapakli omer halisdemir mah vefali sk no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13525449262",
+    "number": "13",
+    "streetName": "Vefalı Sokak"
+   }
+  },
+  {
+   "id": "59-folded-5",
+   "text": "tekirdag kapakli ataturk mah asiklar sk. no 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512045680",
+    "number": "15",
+    "streetName": "Aşıklar Sokak"
+   }
+  },
+  {
+   "id": "59-folded-6",
+   "text": "TEKIRDAG KAPAKLI CUMHURIYET MAH YILDIZ CD NO 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548268",
+    "number": "23",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-7",
+   "text": "tekirdag muratli istiklal-kurtpinar mah namik kemal cd no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436974601",
+    "number": "17",
+    "streetName": "Namık Kemal Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-8",
+   "text": "tekirdag kapakli ataturk mah erbay cd no 125b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n9863774650",
+    "number": "125B",
+    "streetName": "Erbay Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-9",
+   "text": "tekirdag kapakli cumhuriyet mah ibo sk no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932044",
+    "number": "14",
+    "streetName": "İbo Sokak"
+   }
+  },
+  {
+   "id": "59-folded-10",
+   "text": "tekirdag kapakli cumhuriyet mah ferah sk. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12585325636",
+    "number": "11",
+    "streetName": "Ferah Sokak"
+   }
+  },
+  {
+   "id": "59-folded-11",
+   "text": "tekirdag kapakli inonu mah kazim karabekir cd no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806390",
+    "number": "7",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-12",
+   "text": "TEKIRDAG KAPAKLI INONU MAH SARAY CD NO 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w660845344",
+    "number": "29",
+    "streetName": "Saray Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-13",
+   "text": "TEKIRDAG KAPAKLI CUMHURIYET MAH ZENGIN CAD. NO 28C",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548289",
+    "number": "28C",
+    "streetName": "Zengin Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-14",
+   "text": "TEKIRDAG KAPAKLI YILDIZKENT MAH GEDIZ SK NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w447339954",
+    "number": "3",
+    "streetName": "Gediz Sokak"
+   }
+  },
+  {
+   "id": "59-folded-15",
+   "text": "TEKIRDAG SULEYMANPASA 100. YIL MAH RECAI SENCAN SK NO 17/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1084516135",
+    "number": "17/1",
+    "streetName": "Recai Şencan Sokak"
+   }
+  },
+  {
+   "id": "59-folded-16",
+   "text": "tekirdag kapakli omer halisdemir mah ozyurek sok. no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970882277",
+    "number": "20",
+    "streetName": "Özyürek Sokak"
+   }
+  },
+  {
+   "id": "59-folded-17",
+   "text": "tekirdag corlu nusratiye mah inonu cd no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w467038134",
+    "number": "9",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-18",
+   "text": "tekirdag kapakli omer halisdemir mah karakaya sok. no 51",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797872",
+    "number": "51",
+    "streetName": "Karakaya Sokak"
+   }
+  },
+  {
+   "id": "59-folded-19",
+   "text": "tekirdag kapakli cumhuriyet mah mithatpasa cd. no 51-53a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12570390823",
+    "number": "51-53A",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-20",
+   "text": "tekirdag kapakli cumhuriyet mah seda sk. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413725",
+    "number": "9",
+    "streetName": "Seda Sokak"
+   }
+  },
+  {
+   "id": "59-folded-21",
+   "text": "TEKIRDAG KAPAKLI CUMHURIYET MAH DUMLUPINAR CD NO 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805429",
+    "number": "13",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-22",
+   "text": "tekirdag kapakli omer halisdemir mah mandali cad. no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13613255441",
+    "number": "29",
+    "streetName": "Mandalı Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-23",
+   "text": "tekirdag kapakli cumhuriyet mah dinc sk. no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521123925",
+    "number": "1",
+    "streetName": "Dinç Sokak"
+   }
+  },
+  {
+   "id": "59-folded-24",
+   "text": "TEKIRDAG KAPAKLI VATAN MAH TURGUT OZAL CAD. NO 32-34A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14168110531",
+    "number": "32-34A",
+    "streetName": "Turgut Özal Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-25",
+   "text": "tekirdag kapakli cumhuriyet mah yasardogu cd. no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806770",
+    "number": "20",
+    "streetName": "Yaşardoğu Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-26",
+   "text": "tekirdag kapakli cumhuriyet mah sevda sok. no 14b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413676",
+    "number": "14B",
+    "streetName": "Sevda Sokak"
+   }
+  },
+  {
+   "id": "59-folded-27",
+   "text": "TEKIRDAG KAPAKLI YILDIZKENT MAH SEZIN SK NO 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13349017800",
+    "number": "20",
+    "streetName": "Sezin Sokak"
+   }
+  },
+  {
+   "id": "59-folded-28",
+   "text": "tekirdag kapakli ataturk mah kemal pasa cad. no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12514608345",
+    "number": "23",
+    "streetName": "Kemal Paşa Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-29",
+   "text": "tekirdag kapakli omer halisdemir mah sehit er mehmet uyar sk. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563541",
+    "number": "13",
+    "streetName": "Şehit Er Mehmet Uyar Sokak"
+   }
+  },
+  {
+   "id": "59-folded-30",
+   "text": "tekirdag kapakli cumhuriyet mah guven cad. no 16a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12566197744",
+    "number": "16A",
+    "streetName": "Güven Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-31",
+   "text": "tekirdag kapakli cumhuriyet mah eser sk no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12541871248",
+    "number": "3",
+    "streetName": "Eser Sokak"
+   }
+  },
+  {
+   "id": "59-folded-32",
+   "text": "tekirdag kapakli cumhuriyet mah arda sk. no 12a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12541861278",
+    "number": "12A",
+    "streetName": "Arda Sokak"
+   }
+  },
+  {
+   "id": "59-folded-33",
+   "text": "TEKIRDAG KAPAKLI OMER HALISDEMIR MAH ILKAY SK. NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11971464180",
+    "number": "9",
+    "streetName": "İlkay Sokak"
+   }
+  },
+  {
+   "id": "59-folded-34",
+   "text": "TEKIRDAG KAPAKLI ATATURK MAH ERGENE CD. NO 24-26A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992207",
+    "number": "24-26A",
+    "streetName": "Ergene Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-35",
+   "text": "tekirdag kapakli omer halisdemir mah nasrettin hoca cd. no 9a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797810",
+    "number": "9A",
+    "streetName": "Nasrettin Hoca Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-36",
+   "text": "tekirdag kapakli vatan mah safak sok. no 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14094679223",
+    "number": "18",
+    "streetName": "Şafak Sokak"
+   }
+  },
+  {
+   "id": "59-folded-37",
+   "text": "tekirdag suleymanpasa bahcelievler mah sehit suleyman ilgulenler sk no 11/5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1249806580",
+    "number": "11/5",
+    "streetName": "Şehit Süleyman İlgülenler Sokak"
+   }
+  },
+  {
+   "id": "59-folded-38",
+   "text": "tekirdag kapakli yildizkent mah muge sok. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13354808132",
+    "number": "10",
+    "streetName": "Müge Sokak"
+   }
+  },
+  {
+   "id": "59-folded-39",
+   "text": "tekirdag kapakli vatan mah aksu sok. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14094670916",
+    "number": "10",
+    "streetName": "Aksu Sokak"
+   }
+  },
+  {
+   "id": "59-folded-40",
+   "text": "tekirdag kapakli inonu mah yazgi sk. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13513792533",
+    "number": "4",
+    "streetName": "Yazgı Sokak"
+   }
+  },
+  {
+   "id": "59-folded-41",
+   "text": "tekirdag cerkezkoy istasyon mah beser sok. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14118692135",
+    "number": "2",
+    "streetName": "Beşer Sokak"
+   }
+  },
+  {
+   "id": "59-folded-42",
+   "text": "tekirdag kapakli cumhuriyet mah duygu sok. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806183",
+    "number": "11",
+    "streetName": "Duygu Sokak"
+   }
+  },
+  {
+   "id": "59-folded-43",
+   "text": "tekirdag kapakli yildizkent mah gazi osman pasa cd. no 16b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010619",
+    "number": "16B",
+    "streetName": "Gazi Osman Paşa Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-44",
+   "text": "tekirdag muratli istiklal-kurtpinar mah isik sk. no 44",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w271547244",
+    "number": "44",
+    "streetName": "Işık Sokak"
+   }
+  },
+  {
+   "id": "59-folded-45",
+   "text": "tekirdag kapakli ataturk mah yildiz cad. no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12517595887",
+    "number": "58",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-46",
+   "text": "tekirdag suleymanpasa 100. yil mah laleli sk no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1084909613",
+    "number": "9",
+    "streetName": "Laleli Sokak"
+   }
+  },
+  {
+   "id": "59-folded-47",
+   "text": "TEKIRDAG KAPAKLI INONU MAH EYUPOGLU CD. NO 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805498",
+    "number": "16",
+    "streetName": "Eyüpoğlu Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-48",
+   "text": "tekirdag kapakli mevlana mah isilsu sk. no 11a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13613255544",
+    "number": "11A",
+    "streetName": "Işılsu Sokak"
+   }
+  },
+  {
+   "id": "59-folded-49",
+   "text": "tekirdag kapakli omer halisdemir mah tepekoy sk no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-folded-50",
+   "text": "TEKIRDAG CORLU SEYHSINAN MAH FAZIL HUSNU DAGLARCA CD. NO 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-51",
+   "text": "TEKIRDAG SULEYMANPASA 100. YIL MAH UYSALLAR SK NO 5/4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-folded-52",
+   "text": "TEKIRDAG MURATLI ISTIKLAL-KURTPINAR MAH GAZI CD. NO 73",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w438078385",
+    "number": "73",
+    "streetName": "Gazi Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-53",
+   "text": "tekirdag kapakli cumhuriyet mah bora sk. no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-folded-54",
+   "text": "tekirdag kapakli cumhuriyet mah yildiz cd. no 27c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548262",
+    "number": "27C",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-55",
+   "text": "tekirdag kapakli omer halisdemir mah mandali cd. no 43",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563467",
+    "number": "43",
+    "streetName": "Mandalı Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-56",
+   "text": "tekirdag cerkezkoy gazi mustafa kemal pasa mah aktas sk no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-folded-57",
+   "text": "tekirdag kapakli cumhuriyet mah vatan cd no 29b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521113427",
+    "number": "29B",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "59-folded-58",
+   "text": "tekirdag kapakli ataturk mah mert sok. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n9863774648",
+    "number": "6",
+    "streetName": "Mert Sokak"
+   }
+  },
+  {
+   "id": "59-folded-59",
+   "text": "TEKIRDAG KAPAKLI OMER HALISDEMIR MAH BATTALGAZI SK. NO 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-folded-60",
+   "text": "tekirdag cerkezkoy kizilpinar gultepe mah terzi cd no 4/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14168708301",
+    "number": "4/A",
+    "streetName": "Terzi Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-1",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Biircik Sokak No:6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124681",
+    "number": "6",
+    "streetName": "Biricik Sokak"
+   }
+  },
+  {
+   "id": "59-typo-2",
+   "text": "30 Ağlstos Caddesi No:110 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13525397494",
+    "number": "110",
+    "streetName": "30 Ağustos Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-3",
+   "text": "Atatürk Mah. Kıbrs Caddesi 19, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413834",
+    "number": "19",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-4",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Hacızlar Sokak, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839168",
+    "number": "19",
+    "streetName": "Hafızlar Sokak"
+   }
+  },
+  {
+   "id": "59-typo-5",
+   "text": "Tekirdağ Kapaklı Vatan Mah. Kbrıs Caddesi No:34B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14094679206",
+    "number": "34B",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-6",
+   "text": "Kırarbağı Sokak No:42 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797890",
+    "number": "42",
+    "streetName": "Kırlarbağı Sokak"
+   }
+  },
+  {
+   "id": "59-typo-7",
+   "text": "Muradiye Mah. Necati Çadışkan Caddesi 32, Muratlı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437475140",
+    "number": "32",
+    "streetName": "Necati Çalışkan Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-8",
+   "text": "Tekirdağ, Muratlı, İstiklal-Kurtpınar Mahallesi, Salkam Sokak, Kapı No: 10",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436976358",
+    "number": "10",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "59-typo-9",
+   "text": "Tekirdağ Süleymanpaşa 100. Yıl Mah. Upsallar Sokak No:15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036989342",
+    "number": "15",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-typo-10",
+   "text": "Saarya Sokak No:3 Yıldızkent Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010621",
+    "number": "3",
+    "streetName": "Sakarya Sokak"
+   }
+  },
+  {
+   "id": "59-typo-11",
+   "text": "Atatürk Mah. Aşılar Sokak 13, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839774",
+    "number": "13",
+    "streetName": "Aşıklar Sokak"
+   }
+  },
+  {
+   "id": "59-typo-12",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Dumlupnar Caddesi, Kapı No: 45-47",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548484",
+    "number": "45-47",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-13",
+   "text": "Tekirdağ Muratlı Fatih Mah. Öğertmenler Sokak No:21",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436979647",
+    "number": "21",
+    "streetName": "Öğretmenler Sokak"
+   }
+  },
+  {
+   "id": "59-typo-14",
+   "text": "İstinlal Caddesi No:26 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072407",
+    "number": "26",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-15",
+   "text": "Atatürk Mah. Kadffe Sokak 3, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512024233",
+    "number": "3",
+    "streetName": "Kadife Sokak"
+   }
+  },
+  {
+   "id": "59-typo-16",
+   "text": "Tekirdağ, Kapaklı, İnönü Mahallesi, Yazygan Sokak, Kapı No: 2A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13513792508",
+    "number": "2A",
+    "streetName": "Yazgan Sokak"
+   }
+  },
+  {
+   "id": "59-typo-17",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Canbdazlar Caddesi No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548344",
+    "number": "11",
+    "streetName": "Canbazlar Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-18",
+   "text": "Mlodi Sokak No:2 Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992413",
+    "number": "2",
+    "streetName": "Melodi Sokak"
+   }
+  },
+  {
+   "id": "59-typo-19",
+   "text": "İnönü Mah. Zümürt Sokak 6A, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13513786387",
+    "number": "6A",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "59-typo-20",
+   "text": "Tekirdağ, Çorlu, Muhittin Mahallesi, Adnan Kahvci Caddesi, Kapı No: 20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w467045479",
+    "number": "20",
+    "streetName": "Adnan Kahveci Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-21",
+   "text": "Tekirdağ Şarköy İstiklal Mah. Tagşan Pınar Mevkii Sokak No:2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w830331644",
+    "number": "2",
+    "streetName": "Tavşan Pınar Mevkii Sokak"
+   }
+  },
+  {
+   "id": "59-typo-22",
+   "text": "Nurbiye Sokak No:3 Çınarlı Mahallesi Süleymanpaşa/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1566728240",
+    "number": "3",
+    "streetName": "Nuriye Sokak"
+   }
+  },
+  {
+   "id": "59-typo-23",
+   "text": "Ömer Halisdemir Mah. Kırlarağı Sokak 68, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797766",
+    "number": "68",
+    "streetName": "Kırlarbağı Sokak"
+   }
+  },
+  {
+   "id": "59-typo-24",
+   "text": "Tekirdağ, Kapaklı, Atatürk Mahallesi, Hürriget Caddesi, Kapı No: 35",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839375",
+    "number": "35",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-25",
+   "text": "Tekirdağ Kapaklı Vatan Mah. Kırbıs Caddesi No:38",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446804477",
+    "number": "38",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-26",
+   "text": "3. Ynayol No:1/4 Yulaflı Mahallesi Ergene/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13206600512",
+    "number": "1/4",
+    "streetName": "3. Yanyol"
+   }
+  },
+  {
+   "id": "59-typo-27",
+   "text": "Atatürk Mah. Egene Caddesi 37, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512005038",
+    "number": "37",
+    "streetName": "Ergene Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-28",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Yılıdz Caddesi, Kapı No: 7D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548248",
+    "number": "7D",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-29",
+   "text": "Tekirdağ Muratlı Muradiye Mah. Necati Çalışakn Caddesi No:1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437475143",
+    "number": "1",
+    "streetName": "Necati Çalışkan Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-30",
+   "text": "Çavmlıca Sokak No:13 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124695",
+    "number": "13",
+    "streetName": "Çamlıca Sokak"
+   }
+  },
+  {
+   "id": "59-typo-31",
+   "text": "Cumhuriyet Mah. Coşukn Sokak 36, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446807547",
+    "number": "36",
+    "streetName": "Coşkun Sokak"
+   }
+  },
+  {
+   "id": "59-typo-32",
+   "text": "Tekirdağ, Kapaklı, İnönü Mahallesi, Volakn Caddesi, Kapı No: 17A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459325863",
+    "number": "17A",
+    "streetName": "Volkan Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-33",
+   "text": "Tekirdağ Kapaklı Yıldızkent Mah. Nilüfuer Caddesi No:43",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13347103784",
+    "number": "43",
+    "streetName": "Nilüfer Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-34",
+   "text": "Dumlupınra Caddesi No:15A Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932185",
+    "number": "15A",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-35",
+   "text": "Cumhuriyet Mah. Zenign Caddesi 39B, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932093",
+    "number": "39B",
+    "streetName": "Zengin Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-36",
+   "text": "Tekirdağ, Kapaklı, Mevlana Mahallesi, Ali İhsan Mandualı Sokak, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797739",
+    "number": "5",
+    "streetName": "Ali İhsan Mandalı Sokak"
+   }
+  },
+  {
+   "id": "59-typo-37",
+   "text": "Tekirdağ Süleymanpaşa 100. Yıl Mah. Snayi Caddesi No:22/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12348817460",
+    "number": "22/A",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-38",
+   "text": "Atsaever Sokak No:13 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124654",
+    "number": "13",
+    "streetName": "Atasever Sokak"
+   }
+  },
+  {
+   "id": "59-typo-39",
+   "text": "Atatürk Mah. Hüriyet Caddesi 57A, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521251003",
+    "number": "57A",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-40",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, Krakaya Sokak, Kapı No: 17",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806733",
+    "number": "17",
+    "streetName": "Karakaya Sokak"
+   }
+  },
+  {
+   "id": "59-typo-41",
+   "text": "Tekirdağ Çerkezköy İstasyon Mah. Cenfiz Topel Caddesi No:137",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n5526908397",
+    "number": "137",
+    "streetName": "Cengiz Topel Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-42",
+   "text": "Billru Sokak No:2 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612932173",
+    "number": "2",
+    "streetName": "Billur Sokak"
+   }
+  },
+  {
+   "id": "59-typo-43",
+   "text": "Yıldızkent Mah. Gköırmak Sokak 12A, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010687",
+    "number": "12A",
+    "streetName": "Gökırmak Sokak"
+   }
+  },
+  {
+   "id": "59-typo-44",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, Veflı Sokak, Kapı No: 13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13525449262",
+    "number": "13",
+    "streetName": "Vefalı Sokak"
+   }
+  },
+  {
+   "id": "59-typo-45",
+   "text": "Tekirdağ Kapaklı Atatürk Mah. Aşıkalr Sokak No:15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512045680",
+    "number": "15",
+    "streetName": "Aşıklar Sokak"
+   }
+  },
+  {
+   "id": "59-typo-46",
+   "text": "Yılhdız Caddesi No:23 Cumhuriyet Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548268",
+    "number": "23",
+    "streetName": "Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-47",
+   "text": "İnönü Mah. Kazım Karabefir Caddesi 7, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806390",
+    "number": "7",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-48",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Zengni Caddesi, Kapı No: 28C",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548289",
+    "number": "28C",
+    "streetName": "Zengin Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-49",
+   "text": "Tekirdağ Süleymanpaşa 100. Yıl Mah. Recai Şbncan Sokak No:17/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1084516135",
+    "number": "17/1",
+    "streetName": "Recai Şencan Sokak"
+   }
+  },
+  {
+   "id": "59-typo-50",
+   "text": "Öczyürek Sokak No:20 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970882277",
+    "number": "20",
+    "streetName": "Özyürek Sokak"
+   }
+  },
+  {
+   "id": "59-typo-51",
+   "text": "Ömer Halisdemir Mah. Karakaeya Sokak 51, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797872",
+    "number": "51",
+    "streetName": "Karakaya Sokak"
+   }
+  },
+  {
+   "id": "59-typo-52",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Mihatpaşa Caddesi, Kapı No: 51-53A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12570390823",
+    "number": "51-53A",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-53",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Mah. Dumlpuınar Caddesi No:13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446805429",
+    "number": "13",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-54",
+   "text": "Mndalı Caddesi No:29 Ömer Halisdemir Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13613255441",
+    "number": "29",
+    "streetName": "Mandalı Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-55",
+   "text": "Vatan Mah. Turugt Özal Caddesi 32-34A, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14168110531",
+    "number": "32-34A",
+    "streetName": "Turgut Özal Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-56",
+   "text": "Tekirdağ, Kapaklı, Cumhuriyet Mahallesi, Yaşaroğu Caddesi, Kapı No: 20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446806770",
+    "number": "20",
+    "streetName": "Yaşardoğu Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-57",
+   "text": "Tekirdağ Kapaklı Ömer Halisdemir Mah. Şehit Er Mehbmet Uyar Sokak No:13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563541",
+    "number": "13",
+    "streetName": "Şehit Er Mehmet Uyar Sokak"
+   }
+  },
+  {
+   "id": "59-typo-58",
+   "text": "Ergne Caddesi No:24-26A Atatürk Mahallesi Kapaklı/Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992207",
+    "number": "24-26A",
+    "streetName": "Ergene Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-59",
+   "text": "Ömer Halisdemir Mah. Nasretotin Hoca Caddesi 9A, Kapaklı, Tekirdağ",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797810",
+    "number": "9A",
+    "streetName": "Nasrettin Hoca Caddesi"
+   }
+  },
+  {
+   "id": "59-typo-60",
+   "text": "Tekirdağ, Süleymanpaşa, Bahçelievler Mahallesi, Şehit Süleyman İlülenler Sokak, Kapı No: 11/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1249806580",
+    "number": "11/5",
+    "streetName": "Şehit Süleyman İlgülenler Sokak"
+   }
+  },
+  {
+   "id": "59-numbered-1",
+   "text": "Tekirdağ Çerkezköy Yıldırım Beyazıt Mah. 8. Cadde No:1/2",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4816977307",
+    "number": "1/2",
+    "streetName": "8. Cadde",
+    "streetNumber": 8
+   }
+  },
+  {
+   "id": "59-numbered-2",
+   "text": "59. Sokak No:20 İstiklal-Kurtpınar Mahallesi Muratlı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436973126",
+    "number": "20",
+    "streetName": "59. Sokak",
+    "streetNumber": 59
+   }
+  },
+  {
+   "id": "59-numbered-3",
+   "text": "Muradiye Mah. 118. Sokak 4, Muratlı, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437898426",
+    "number": "4",
+    "streetName": "118. Sokak",
+    "streetNumber": 118
+   }
+  },
+  {
+   "id": "59-numbered-4",
+   "text": "Tekirdağ, Kapaklı, İsmet Paşa Mahallesi, 62. Sokak, Kapı No: 4D",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13201790687",
+    "number": "4D",
+    "streetName": "62. Sokak",
+    "streetNumber": 62
+   }
+  },
+  {
+   "id": "59-numbered-5",
+   "text": "Tekirdağ Muratlı İstiklal-Kurtpınar Mah. 64. Sokak No:27",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436970993",
+    "number": "27",
+    "streetName": "64. Sokak",
+    "streetNumber": 64
+   }
+  },
+  {
+   "id": "59-numbered-6",
+   "text": "98. Sokak No:2 Muradiye Mahallesi Muratlı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437896937",
+    "number": "2",
+    "streetName": "98. Sokak",
+    "streetNumber": 98
+   }
+  },
+  {
+   "id": "59-numbered-7",
+   "text": "Gazi Osman Paşa Mah. 22. Sokak 3, Çerkezköy, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w489463619",
+    "number": "3",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "59-numbered-8",
+   "text": "Tekirdağ, Kapaklı, Mimar Sinan Mahallesi, 13. Sokak, Kapı No: 4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4816977514",
+    "number": "4",
+    "streetName": "13. Sokak",
+    "streetNumber": 13
+   }
+  },
+  {
+   "id": "59-numbered-9",
+   "text": "Tekirdağ Kapaklı Mimar Sinan Mah. 102. Cadde No:99/1",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w544937083",
+    "number": "99/1",
+    "streetName": "102. Cadde",
+    "streetNumber": 102
+   }
+  },
+  {
+   "id": "59-numbered-10",
+   "text": "32. Sokak No:1B İsmet Paşa Mahallesi Kapaklı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12613233493",
+    "number": "1B",
+    "streetName": "32. Sokak",
+    "streetNumber": 32
+   }
+  },
+  {
+   "id": "59-numbered-11",
+   "text": "Velimeşe Mah. 241. Sokak 6/1, Ergene, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1193933963",
+    "number": "6/1",
+    "streetName": "241. Sokak",
+    "streetNumber": 241
+   }
+  },
+  {
+   "id": "59-numbered-12",
+   "text": "Tekirdağ, Muratlı, İstiklal-Kurtpınar Mahallesi, 66. Sokak, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444212138",
+    "number": "8",
+    "streetName": "66. Sokak",
+    "streetNumber": 66
+   }
+  },
+  {
+   "id": "59-numbered-13",
+   "text": "Tekirdağ Muratlı İstiklal-Kurtpınar Mah. 63. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436971021",
+    "number": "5",
+    "streetName": "63. Sokak",
+    "streetNumber": 63
+   }
+  },
+  {
+   "id": "59-numbered-14",
+   "text": "1047. Sokak No:10 Mevlana Mahallesi Kapaklı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563409",
+    "number": "10",
+    "streetName": "1047. Sokak",
+    "streetNumber": 1047
+   }
+  },
+  {
+   "id": "59-numbered-15",
+   "text": "İsmet Paşa Mah. 33. Sokak 7C, Kapaklı, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839283",
+    "number": "7C",
+    "streetName": "33. Sokak",
+    "streetNumber": 33
+   }
+  },
+  {
+   "id": "59-numbered-16",
+   "text": "Tekirdağ, Kapaklı, İsmet Paşa Mahallesi, 36. Sokak, Kapı No: 6D",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13359556588",
+    "number": "6D",
+    "streetName": "36. Sokak",
+    "streetNumber": 36
+   }
+  },
+  {
+   "id": "59-numbered-17",
+   "text": "Tekirdağ Muratlı İstiklal-Kurtpınar Mah. 68. Sokak No:37",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436907896",
+    "number": "37",
+    "streetName": "68. Sokak",
+    "streetNumber": 68
+   }
+  },
+  {
+   "id": "59-numbered-18",
+   "text": "65. Sokak No:1G Yıldızkent Mahallesi Kapaklı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839206",
+    "number": "1G",
+    "streetName": "65. Sokak",
+    "streetNumber": 65
+   }
+  },
+  {
+   "id": "59-numbered-19",
+   "text": "Muradiye Mah. 117. Sokak 21, Muratlı, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n5756986182",
+    "number": "21",
+    "streetName": "117. Sokak",
+    "streetNumber": 117
+   }
+  },
+  {
+   "id": "59-numbered-20",
+   "text": "Tekirdağ, Kapaklı, İsmet Paşa Mahallesi, 49. Sokak, Kapı No: 2B",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444838855",
+    "number": "2B",
+    "streetName": "49. Sokak",
+    "streetNumber": 49
+   }
+  },
+  {
+   "id": "59-numbered-21",
+   "text": "Tekirdağ Çerkezköy Gazi Osman Paşa Mah. 18. Sokak No:4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4816977813",
+    "number": "4",
+    "streetName": "18. Sokak",
+    "streetNumber": 18
+   }
+  },
+  {
+   "id": "59-numbered-22",
+   "text": "110. Sokak No:5 Muradiye Mahallesi Muratlı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437987731",
+    "number": "5",
+    "streetName": "110. Sokak",
+    "streetNumber": 110
+   }
+  },
+  {
+   "id": "59-numbered-23",
+   "text": "Kazım Karabekir Mah. 10. Sokak 6, Kapaklı, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w216718519",
+    "number": "6",
+    "streetName": "10. Sokak",
+    "streetNumber": 10
+   }
+  },
+  {
+   "id": "59-numbered-24",
+   "text": "Tekirdağ, Muratlı, Muradiye Mahallesi, 114. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437900405",
+    "number": "5",
+    "streetName": "114. Sokak",
+    "streetNumber": 114
+   }
+  },
+  {
+   "id": "59-numbered-25",
+   "text": "Tekirdağ Kapaklı Mimar Sinan Mah. 31. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n8436360752",
+    "number": "5",
+    "streetName": "31. Sokak",
+    "streetNumber": 31
+   }
+  },
+  {
+   "id": "59-numbered-26",
+   "text": "4. Cadde No:2 Gazi Osman Paşa Mahallesi Çerkezköy/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4816977254",
+    "number": "2",
+    "streetName": "4. Cadde",
+    "streetNumber": 4
+   }
+  },
+  {
+   "id": "59-numbered-27",
+   "text": "Muradiye Mah. 127. Sokak 5A, Muratlı, Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13535617929",
+    "number": "5A",
+    "streetName": "127. Sokak",
+    "streetNumber": 127
+   }
+  },
+  {
+   "id": "59-numbered-28",
+   "text": "Tekirdağ, Kapaklı, Ömer Halisdemir Mahallesi, 1013. Sokak, Kapı No: 11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563515",
+    "number": "11",
+    "streetName": "1013. Sokak",
+    "streetNumber": 1013
+   }
+  },
+  {
+   "id": "59-numbered-29",
+   "text": "Tekirdağ Kapaklı Mevlana Mah. 1047. Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563417",
+    "number": "8",
+    "streetName": "1047. Sokak",
+    "streetNumber": 1047
+   }
+  },
+  {
+   "id": "59-numbered-30",
+   "text": "59. Sokak No:11 İstiklal-Kurtpınar Mahallesi Muratlı/Tekirdağ",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436973140",
+    "number": "11",
+    "streetName": "59. Sokak",
+    "streetNumber": 59
+   }
+  },
+  {
+   "id": "59-hide-1",
+   "text": "Muhittin Mah. Atatürk Bulvarı 41, Çorlu, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14205789401",
+    "number": "41",
+    "streetName": "Atatürk Bulvarı",
+    "truth": [
+     27.807317,
+     41.155538
+    ]
+   }
+  },
+  {
+   "id": "59-hide-2",
+   "text": "İnönü Mah. Pınar Bulvarı 1A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13518336184",
+    "number": "1A",
+    "streetName": "Pınar Bulvarı",
+    "truth": [
+     27.975154,
+     41.328642
+    ]
+   }
+  },
+  {
+   "id": "59-hide-3",
+   "text": "Atatürk Mah. Dr. Sadık Ahmet Caddesi 50, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w445114273",
+    "number": "50",
+    "streetName": "Dr. Sadık Ahmet Caddesi",
+    "truth": [
+     27.980228,
+     41.334127
+    ]
+   }
+  },
+  {
+   "id": "59-hide-4",
+   "text": "Ömer Halisdemir Mah. Zeybek Sokak 8, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512075331",
+    "number": "8",
+    "streetName": "Zeybek Sokak",
+    "truth": [
+     27.974214,
+     41.33814
+    ]
+   }
+  },
+  {
+   "id": "59-hide-5",
+   "text": "Ömer Halisdemir Mah. Atasever Sokak 3, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124658",
+    "number": "3",
+    "streetName": "Atasever Sokak",
+    "truth": [
+     27.970461,
+     41.344385
+    ]
+   }
+  },
+  {
+   "id": "59-hide-6",
+   "text": "Fatih Mah. Celal Atik Caddesi 4, Muratlı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436979710",
+    "number": "4",
+    "streetName": "Celal Atik Caddesi",
+    "truth": [
+     27.49116,
+     41.17775
+    ]
+   }
+  },
+  {
+   "id": "59-hide-7",
+   "text": "Cumhuriyet Mah. Güven Caddesi 6A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12541871244",
+    "number": "6A",
+    "streetName": "Güven Caddesi",
+    "truth": [
+     27.976202,
+     41.328848
+    ]
+   }
+  },
+  {
+   "id": "59-hide-8",
+   "text": "Vatan Mah. Erbay Caddesi 34A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13784033023",
+    "number": "34A",
+    "streetName": "Erbay Caddesi",
+    "truth": [
+     27.983459,
+     41.333292
+    ]
+   }
+  },
+  {
+   "id": "59-hide-9",
+   "text": "Ömer Halisdemir Mah. 30 Ağustos Caddesi 102, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13525397498",
+    "number": "102",
+    "streetName": "30 Ağustos Caddesi",
+    "truth": [
+     27.970431,
+     41.34773
+    ]
+   }
+  },
+  {
+   "id": "59-hide-10",
+   "text": "Ömer Halisdemir Mah. Özyürek Sokak 25, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970882301",
+    "number": "25",
+    "streetName": "Özyürek Sokak",
+    "truth": [
+     27.966995,
+     41.339007
+    ]
+   }
+  },
+  {
+   "id": "59-hide-11",
+   "text": "Cumhuriyet Mah. Güven Caddesi 22D, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548311",
+    "number": "22D",
+    "streetName": "Güven Caddesi",
+    "truth": [
+     27.978256,
+     41.329645
+    ]
+   }
+  },
+  {
+   "id": "59-hide-12",
+   "text": "Atatürk Mah. Tuna Caddesi 33B, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12487057652",
+    "number": "33B",
+    "streetName": "Tuna Caddesi",
+    "truth": [
+     27.969667,
+     41.333254
+    ]
+   }
+  },
+  {
+   "id": "59-hide-13",
+   "text": "Atatürk Mah. Kemal Paşa Caddesi 4, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12514608314",
+    "number": "4",
+    "streetName": "Kemal Paşa Caddesi",
+    "truth": [
+     27.975126,
+     41.331826
+    ]
+   }
+  },
+  {
+   "id": "59-hide-14",
+   "text": "Zafer Mah. Muratlı Caddesi 14, Süleymanpaşa, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11768131569",
+    "number": "14",
+    "streetName": "Muratlı Caddesi",
+    "truth": [
+     27.511472,
+     40.979128
+    ]
+   }
+  },
+  {
+   "id": "59-hide-15",
+   "text": "Atatürk Mah. Yarımay Sokak 6A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12527992383",
+    "number": "6A",
+    "streetName": "Yarımay Sokak",
+    "truth": [
+     27.970746,
+     41.332032
+    ]
+   }
+  },
+  {
+   "id": "59-hide-16",
+   "text": "Vatan Mah. Şafak Sokak 8, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w446804962",
+    "number": "8",
+    "streetName": "Şafak Sokak",
+    "truth": [
+     27.982409,
+     41.33424
+    ]
+   }
+  },
+  {
+   "id": "59-hide-17",
+   "text": "Ömer Halisdemir Mah. Akbaş Sokak 20, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14049224864",
+    "number": "20",
+    "streetName": "Akbaş Sokak",
+    "truth": [
+     27.978887,
+     41.337607
+    ]
+   }
+  },
+  {
+   "id": "59-hide-18",
+   "text": "Cumhuriyet Mah. Yaşardoğu Caddesi 26, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548434",
+    "number": "26",
+    "streetName": "Yaşardoğu Caddesi",
+    "truth": [
+     27.978389,
+     41.328429
+    ]
+   }
+  },
+  {
+   "id": "59-hide-19",
+   "text": "Cumhuriyet Mah. Dr. Sadık Ahmet Caddesi 15A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413625",
+    "number": "15A",
+    "streetName": "Dr. Sadık Ahmet Caddesi",
+    "truth": [
+     27.982966,
+     41.332173
+    ]
+   }
+  },
+  {
+   "id": "59-hide-20",
+   "text": "Atatürk Mah. Kadife Sokak 12A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512024242",
+    "number": "12A",
+    "streetName": "Kadife Sokak",
+    "truth": [
+     27.974631,
+     41.336914
+    ]
+   }
+  },
+  {
+   "id": "59-hide-21",
+   "text": "Cumhuriyet Mah. Yıldız Caddesi 9B, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12570390852",
+    "number": "9B",
+    "streetName": "Yıldız Caddesi",
+    "truth": [
+     27.982882,
+     41.330908
+    ]
+   }
+  },
+  {
+   "id": "59-hide-22",
+   "text": "Atatürk Mah. Yıldız Caddesi 56B, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12517595884",
+    "number": "56B",
+    "streetName": "Yıldız Caddesi",
+    "truth": [
+     27.978701,
+     41.332933
+    ]
+   }
+  },
+  {
+   "id": "59-hide-23",
+   "text": "Cumhuriyet Mah. Zengin Caddesi 34B, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548518",
+    "number": "34B",
+    "streetName": "Zengin Caddesi",
+    "truth": [
+     27.981156,
+     41.329369
+    ]
+   }
+  },
+  {
+   "id": "59-hide-24",
+   "text": "Yıldırım Beyazıt Mah. Namık Kemal Bulvarı 94/1, Çerkezköy, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w482780970",
+    "number": "94/1",
+    "streetName": "Namık Kemal Bulvarı",
+    "truth": [
+     27.982598,
+     41.282108
+    ]
+   }
+  },
+  {
+   "id": "59-hide-25",
+   "text": "Atatürk Mah. Kamelya Sokak 24A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512075316",
+    "number": "24A",
+    "streetName": "Kamelya Sokak",
+    "truth": [
+     27.973421,
+     41.334361
+    ]
+   }
+  },
+  {
+   "id": "59-hide-26",
+   "text": "Ömer Halisdemir Mah. Mandalı Caddesi 41, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13533563468",
+    "number": "41",
+    "streetName": "Mandalı Caddesi",
+    "truth": [
+     27.970686,
+     41.348824
+    ]
+   }
+  },
+  {
+   "id": "59-hide-27",
+   "text": "Cumhuriyet Mah. Dumlupınar Caddesi 37-39A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12593548465",
+    "number": "37-39A",
+    "streetName": "Dumlupınar Caddesi",
+    "truth": [
+     27.980904,
+     41.328524
+    ]
+   }
+  },
+  {
+   "id": "59-hide-28",
+   "text": "Cumhuriyet Mah. Seven Sokak 1, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12518413813",
+    "number": "1",
+    "streetName": "Seven Sokak",
+    "truth": [
+     27.979274,
+     41.332374
+    ]
+   }
+  },
+  {
+   "id": "59-hide-29",
+   "text": "Cumhuriyet Mah. Yeni Cami Caddesi 25, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931972",
+    "number": "25",
+    "streetName": "Yeni Cami Caddesi",
+    "truth": [
+     27.979724,
+     41.326883
+    ]
+   }
+  },
+  {
+   "id": "59-hide-30",
+   "text": "Cumhuriyet Mah. Fatih Sultan Mehmet Caddesi 13, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444838953",
+    "number": "13",
+    "streetName": "Fatih Sultan Mehmet Caddesi",
+    "truth": [
+     27.977567,
+     41.331453
+    ]
+   }
+  },
+  {
+   "id": "59-hide-31",
+   "text": "Kazım Karabekir Mah. Atatürk Caddesi 35-41, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4816156169",
+    "number": "35-41",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     27.95751,
+     41.2914
+    ]
+   }
+  },
+  {
+   "id": "59-hide-32",
+   "text": "Ömer Halisdemir Mah. Hacılar Sokak 10, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13616277843",
+    "number": "10",
+    "streetName": "Hacılar Sokak",
+    "truth": [
+     27.978988,
+     41.337645
+    ]
+   }
+  },
+  {
+   "id": "59-hide-33",
+   "text": "Yıldızkent Mah. Bülent Ecevit Caddesi 4M, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13359568417",
+    "number": "4M",
+    "streetName": "Bülent Ecevit Caddesi",
+    "truth": [
+     27.976219,
+     41.322472
+    ]
+   }
+  },
+  {
+   "id": "59-hide-34",
+   "text": "Cumhuriyet Mah. Demir Sokak 7, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521228153",
+    "number": "7",
+    "streetName": "Demir Sokak",
+    "truth": [
+     27.983849,
+     41.329991
+    ]
+   }
+  },
+  {
+   "id": "59-hide-35",
+   "text": "Yıldızkent Mah. Aysel Sokak 18, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13354808111",
+    "number": "18",
+    "streetName": "Aysel Sokak",
+    "truth": [
+     27.971642,
+     41.32319
+    ]
+   }
+  },
+  {
+   "id": "59-hide-36",
+   "text": "Atatürk Mah. Özgür Sokak 1, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w445114170",
+    "number": "1",
+    "streetName": "Özgür Sokak",
+    "truth": [
+     27.980685,
+     41.333949
+    ]
+   }
+  },
+  {
+   "id": "59-hide-37",
+   "text": "Ömer Halisdemir Mah. Rüya Sokak 61A, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12512075361",
+    "number": "61A",
+    "streetName": "Rüya Sokak",
+    "truth": [
+     27.974544,
+     41.33779
+    ]
+   }
+  },
+  {
+   "id": "59-hide-38",
+   "text": "Ömer Halisdemir Mah. Latife Sokak 16-18, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1392143391",
+    "number": "16-18",
+    "streetName": "Latife Sokak",
+    "truth": [
+     27.975242,
+     41.341255
+    ]
+   }
+  },
+  {
+   "id": "59-hide-39",
+   "text": "Atatürk Mah. İstiklal Caddesi 32, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12532072402",
+    "number": "32",
+    "streetName": "İstiklal Caddesi",
+    "truth": [
+     27.973636,
+     41.333331
+    ]
+   }
+  },
+  {
+   "id": "59-hide-40",
+   "text": "Ömer Halisdemir Mah. Yağcılar Sokak 14, Kapaklı, Tekirdağ",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970114114",
+    "number": "14",
+    "streetName": "Yağcılar Sokak",
+    "truth": [
+     27.969562,
+     41.340553
+    ]
+   }
+  },
+  {
+   "id": "59-lang-1",
+   "text": "Omer Halisdemir, 3 Tepekoy Street floor 8 apartment 6, Kapakli/Tekirdag",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-lang-2",
+   "text": "Kapaklı, Ömer Halisdemir Ortsteil, Tepeköy Gasse Nummer 3, 59919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-lang-3",
+   "text": "текирдаг капаклы, ул. тепекёй д. 3",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-lang-4",
+   "text": "Οδός Tepeköy αρ. 3 όροφος 2 διαμέρισμα 2, τεκιρνταγ καπακλι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-lang-5",
+   "text": "Ömer Halisdemir، شارع Tepeköy رقم 3،  Kapaklı",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "n11970804433",
+    "number": "3",
+    "streetName": "Tepeköy Sokak"
+   }
+  },
+  {
+   "id": "59-lang-6",
+   "text": "Fazıl Hüsnü Dağlarca Street 23, Tekirdağ Çorlu, 59408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-lang-7",
+   "text": "CORLU/TEKİRDAG SEYHSİNAN ORTSTEİL FAZİL HUSNU DAGLARCA STRASSE NR. 23",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-lang-8",
+   "text": "шейхсинан, проспект фазыл хюсню дагларджа дом 23, текирдаг чорлу",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-lang-9",
+   "text": "Λεωφόρος Fazıl Hüsnü Dağlarca αρ. 23, τσορλου/τεκιρνταγ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-lang-10",
+   "text": "Çorlu Tekirdağ, جادة Fazıl Hüsnü Dağlarca رقم 23, 59334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "w216064085",
+    "number": "23",
+    "streetName": "Fazıl Hüsnü Dağlarca Caddesi"
+   }
+  },
+  {
+   "id": "59-lang-11",
+   "text": "100. Yıl Neighbourhood, 5/4 Uysallar Street floor 2 apartment 6, Süleymanpaşa/Tekirdağ, 59715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-lang-12",
+   "text": "Tekirdağ Süleymanpaşa Uysallar Str. Nummer 5/4 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-lang-13",
+   "text": "микрорайон 100. йыл, улица уйсаллар 5/4, сюлейманпаша/текирдаг",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-lang-14",
+   "text": "Tekirdağ Süleymanpaşa γειτονιά 100. Yıl Οδ. ουϊσαλλαρ 5/4 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-lang-15",
+   "text": "زقاق Uysallar رقم 5/4، Süleymanpaşa Tekirdağ، 59988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036674133",
+    "number": "5/4",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-lang-16",
+   "text": "Tekirdağ Kapaklı Cumhuriyet Neighbourhood 1 Bora St",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-lang-17",
+   "text": "Cumhuriyet, Bora Str. Nummer 1, Kapaklı ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-lang-18",
+   "text": "текирдаг капаклы, микрорайон джумхурийет, ул. бора д. 1 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΤΖΟΥΜΧΟΥΡΙΓΙΕΤ, ΟΔΌΣ BORA ΑΡΙΘΜΌΣ 1, ΤΕΚΙΡΝΤΑΓ KAPAKLI",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-lang-20",
+   "text": "حي Cumhuriyet, شارع Bora رقم 1,  Kapaklı",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "n12612931979",
+    "number": "1",
+    "streetName": "Bora Sokak"
+   }
+  },
+  {
+   "id": "59-lang-21",
+   "text": "Gazi Mustafa Kemal Pasa, Aktas St no 5, Tekirdag Cerkezkoy",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-lang-22",
+   "text": "Gazi Mustafa Kemal Paşa Ortsteil, Aktaş Str. Nr. 5, Tekirdağ Çerkezköy, 59152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-lang-23",
+   "text": "черкезкёй/текирдаг, микрорайон гази мустафа кемал паша, улица акташ д. 5",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-lang-24",
+   "text": "Gazi Mustafa Kemal Paşa, Οδ. ακτασ 5, τσερκεζκοϊ Tekirdağ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-lang-25",
+   "text": "Gazi Mustafa Kemal Paşa، شارع Aktaş رقم 5،  Çerkezköy",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "w452345066",
+    "number": "5",
+    "streetName": "Aktaş Sokak"
+   }
+  },
+  {
+   "id": "59-lang-26",
+   "text": "Ömer Halisdemir Neighbourhood, Battalgazi St number 16, Kapaklı/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-lang-27",
+   "text": "Kapakli, Omer Halisdemir Ortsteil, Battalgazi Str. 16",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-lang-28",
+   "text": "капаклы, ул. батталгази д. 16 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-lang-29",
+   "text": "Tekirdağ καπακλι Οδός μπατταλγκαζι αριθμός 16",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-lang-30",
+   "text": "حي Ömer Halisdemir، شارع Battalgazi رقم 16، Tekirdağ Kapaklı",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124633",
+    "number": "16",
+    "streetName": "Battalgazi Sokak"
+   }
+  },
+  {
+   "id": "59-hard-1",
+   "text": "Hafızlar Sokak 19 Atatürk",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w444839168",
+    "number": "19",
+    "streetName": "Hafızlar Sokak"
+   }
+  },
+  {
+   "id": "59-hard-2",
+   "text": "Cumhuriyet mah Doğuş Sokak no:16 d:3 kat:2 Kapaklı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w445114481",
+    "number": "16",
+    "streetName": "Doğuş Sokak"
+   }
+  },
+  {
+   "id": "59-hard-3",
+   "text": "Kapaklı Onur Sokak no23-27C",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13459326209",
+    "number": "23-27C",
+    "streetName": "Onur Sokak"
+   }
+  },
+  {
+   "id": "59-hard-4",
+   "text": "42 Kırlarbağı Sokak Ömer Halisdemir Kapaklı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13599797890",
+    "number": "42",
+    "streetName": "Kırlarbağı Sokak"
+   }
+  },
+  {
+   "id": "59-hard-5",
+   "text": "CUMHURIYET DINC SOKAK 18C",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n12521123931",
+    "number": "18C",
+    "streetName": "Dinç Sokak"
+   }
+  },
+  {
+   "id": "59-hard-6",
+   "text": "Muratlı Necati Çalışkan Caddesi apartmanı 32 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w437475140",
+    "number": "32",
+    "streetName": "Necati Çalışkan Caddesi"
+   }
+  },
+  {
+   "id": "59-hard-7",
+   "text": "İstiklal-Kurtpınar mahallesi Salkım Sokak 10 nolu bina Muratlı/Tekirdağ",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w436976358",
+    "number": "10",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "59-hard-8",
+   "text": "Eski Cami 13 İnönü Kapaklı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n3645631681",
+    "number": "13",
+    "streetName": "Eski Cami Caddesi"
+   }
+  },
+  {
+   "id": "59-hard-9",
+   "text": "ÖmerH alisdemir mah Vadi Sokak 14 Kapaklı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13545124809",
+    "number": "14",
+    "streetName": "Vadi Sokak"
+   }
+  },
+  {
+   "id": "59-hard-10",
+   "text": "Yayla Sokak 5 İnönü mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1467475398",
+    "number": "5",
+    "streetName": "Yayla Sokak"
+   }
+  },
+  {
+   "id": "59-hard-11",
+   "text": "Süleymanpaşa 100. Yıl Uysallar Sokak 15, 34174",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1036989342",
+    "number": "15",
+    "streetName": "Uysallar Sokak"
+   }
+  },
+  {
+   "id": "59-hard-12",
+   "text": "Tekirdağ Kapaklı Sakarya Sokak 3 Yıldızkent",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n13357010621",
+    "number": "3",
+    "streetName": "Sakarya Sokak"
+   }
+  },
+  {
+   "id": "59-poi-1",
+   "text": "Çerkezköy Belediyesi Çerkezköy Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w263614263",
+    "kind": "townhall",
+    "streetName": "Çerkezköy Belediyesi"
+   }
+  },
+  {
+   "id": "59-poi-2",
+   "text": "Atatürk Mesleki ve Teknik Anadolu Lisesi Ergene Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1115162855",
+    "kind": "school",
+    "streetName": "Atatürk Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "59-poi-3",
+   "text": "Öğretmen Mediha Mehmet Tetikol Ortaokulu Süleymanpaşa Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w234866999",
+    "kind": "school",
+    "streetName": "Öğretmen Mediha Mehmet Tetikol Ortaokulu"
+   }
+  },
+  {
+   "id": "59-poi-4",
+   "text": "Sanayiciler İlkokulu Kapaklı Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w264915811",
+    "kind": "school",
+    "streetName": "Sanayiciler İlkokulu"
+   }
+  },
+  {
+   "id": "59-poi-5",
+   "text": "Hacı Fahri Zümbül Mesleki Ve Teknik Anadolu Lisesi Çerkezköy Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w591910976",
+    "kind": "school",
+    "streetName": "Hacı Fahri Zümbül Mesleki Ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "59-poi-6",
+   "text": "Hüseyin Korkmaz Anadolu Lisesi Hayrabolu Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w426263494",
+    "kind": "school",
+    "streetName": "Hüseyin Korkmaz Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "59-poi-7",
+   "text": "Osmanlı İlkokulu - ortaokul Çerkezköy",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1387099218",
+    "kind": "school",
+    "streetName": "Osmanlı İlkokulu - Ortaokulu"
+   }
+  },
+  {
+   "id": "59-poi-8",
+   "text": "Hürriyet Aile Sağlığı Merkezi Kapaklı Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n14081333514",
+    "kind": "hospital",
+    "streetName": "Hürriyet Aile Sağlığı Merkezi"
+   }
+  },
+  {
+   "id": "59-poi-9",
+   "text": "Gazi İlkokulu Hayrabolu Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w426263505",
+    "kind": "school",
+    "streetName": "Gazi İlkokulu"
+   }
+  },
+  {
+   "id": "59-poi-10",
+   "text": "Çerkezköy Center Avm 2.Kısım Çerkezköy Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1281983690",
+    "kind": "mall",
+    "streetName": "Çerkezköy Center Avm 2.Kısım"
+   }
+  },
+  {
+   "id": "59-poi-11",
+   "text": "Corner Park AVM Kapaklı",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n5138051697",
+    "kind": "mall",
+    "streetName": "Corner Park AVM"
+   }
+  },
+  {
+   "id": "59-poi-12",
+   "text": "Tekira Alışveriş Merkezi Süleymanpaşa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w207772100",
+    "kind": "mall",
+    "streetName": "Tekira Alışveriş Merkezi"
+   }
+  },
+  {
+   "id": "59-poi-13",
+   "text": "Necip Fazıl Kısakürek İlkokulu Çerkezköy Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w733541835",
+    "kind": "school",
+    "streetName": "Necip Fazıl Kısakürek İlkokulu"
+   }
+  },
+  {
+   "id": "59-poi-14",
+   "text": "kizilpinar mahalle muhtarligi cerkezkoy tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w551196356",
+    "kind": "townhall",
+    "streetName": "Kızılpınar Mahalle Muhtarlığı"
+   }
+  },
+  {
+   "id": "59-poi-15",
+   "text": "sehit ogretmen nese alten ilkokulu sarkoy tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1077958939",
+    "kind": "school",
+    "streetName": "Şehit Öğretmen Neşe Alten İlkokulu"
+   }
+  },
+  {
+   "id": "59-poi-16",
+   "text": "bahceagil ortaokul kapakli tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n6929354540",
+    "kind": "school",
+    "streetName": "Bahçeağıl Ortaokulu"
+   }
+  },
+  {
+   "id": "59-poi-17",
+   "text": "ozel yasam poliklinigi marmaraereglisi tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n5509605681",
+    "kind": "hospital",
+    "streetName": "Özel Yaşam Polikliniği"
+   }
+  },
+  {
+   "id": "59-poi-18",
+   "text": "Optimed Kapaklı Kapaklı Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w739802036",
+    "kind": "hospital",
+    "streetName": "Optimed Kapaklı"
+   }
+  },
+  {
+   "id": "59-poi-19",
+   "text": "Şarköy Hükümet Konağı Şarköy",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n7750476171",
+    "kind": "townhall",
+    "streetName": "Şarköy Hükümet Konağı"
+   }
+  },
+  {
+   "id": "59-poi-20",
+   "text": "Çobançeşme ASM Çorlu Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w467038994",
+    "kind": "hospital",
+    "streetName": "Çobançeşme ASM"
+   }
+  },
+  {
+   "id": "59-poi-21",
+   "text": "ergene devlet hastane ergene tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1034039899",
+    "kind": "hospital",
+    "streetName": "Ergene Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "59-poi-22",
+   "text": "Tekirdağ Büyükşehir Belediyesi Fen İşleri Dairesi Başkanlığı Süleymanpaşa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w873984531",
+    "kind": "townhall",
+    "streetName": "Tekirdağ Büyükşehir Belediyesi Fen İşleri Dairesi Başkanlığı"
+   }
+  },
+  {
+   "id": "59-poi-23",
+   "text": "uzunhaci saglik evi kapakli tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w652533020",
+    "kind": "hospital",
+    "streetName": "Uzunhacı Sağlık Evi"
+   }
+  },
+  {
+   "id": "59-poi-24",
+   "text": "ozel reyap hastane corlu tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w217140849",
+    "kind": "hospital",
+    "streetName": "Özel Reyap Hastanesi"
+   }
+  },
+  {
+   "id": "59-poi-25",
+   "text": "sarkoy belediyesi sarkoy tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w1243406340",
+    "kind": "townhall",
+    "streetName": "Şarköy Belediyesi"
+   }
+  },
+  {
+   "id": "59-poi-26",
+   "text": "sarkoy park alisveris ve yasam merkezi sarkoy tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n9010519458",
+    "kind": "mall",
+    "streetName": "Şarköy Park Alışveriş ve Yaşam Merkezi"
+   }
+  },
+  {
+   "id": "59-poi-27",
+   "text": "Namık Kemal Üniversitesi Araştırma ve Uygulama Hastanesi Süleymanpaşa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w492709807",
+    "kind": "hospital",
+    "streetName": "Namık Kemal Üniversitesi Araştırma ve Uygulama Hastanesi"
+   }
+  },
+  {
+   "id": "59-poi-28",
+   "text": "Mandıracı ASM Çorlu Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w467045021",
+    "kind": "hospital",
+    "streetName": "Mandıracı ASM"
+   }
+  },
+  {
+   "id": "59-poi-29",
+   "text": "Mevlana ASM Çorlu Tekirdağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n11582545708",
+    "kind": "hospital",
+    "streetName": "Mevlana ASM"
+   }
+  },
+  {
+   "id": "59-poi-30",
+   "text": "corlu alis veris merkezi ergene tekirdag",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "n4917097022",
+    "kind": "mall",
+    "streetName": "Çorlu Alış Veriş Merkezi"
+   }
+  },
+  {
+   "id": "59-poi-31",
+   "text": "corlu belediye binasi corlu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "59",
+    "osm": "w216112222",
+    "kind": "townhall",
+    "streetName": "Çorlu Belediyesi"
+   }
+  }
+ ]
+}

@@ -1,0 +1,4642 @@
+{
+ "version": 1,
+ "plate": "16",
+ "queries": [
+  {
+   "id": "16-full-1",
+   "text": "Bursa İnegöl Hamidiye Mah. Kurtuluş Sokak No:45",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w584541134",
+    "number": "45",
+    "streetName": "Kurtuluş Sokak"
+   }
+  },
+  {
+   "id": "16-full-2",
+   "text": "Sarı Caddesi No:17 Fethiye Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844678",
+    "number": "17",
+    "streetName": "Sarı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-3",
+   "text": "Küçükbalıklı Mah. Köprübaşı Caddesi 74B, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12925320398",
+    "number": "74B",
+    "streetName": "Köprübaşı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-4",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Turuncu Caddesi, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056529",
+    "number": "14",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-full-5",
+   "text": "Bursa İnegöl Turgutalp Mah. Barbaros Caddesi No:22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665841306",
+    "number": "22",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-full-6",
+   "text": "İstanbul Caddesi No:365 Panayır Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n5128359221",
+    "number": "365",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-full-7",
+   "text": "Kiremitçi Mah. Tamer Sokak 24, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953706450",
+    "number": "24",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-8",
+   "text": "Bursa, Nilüfer, Ahmet Yesevi Mahallesi, Ergin Sokak, Kapı No: 107",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13946374481",
+    "number": "107",
+    "streetName": "Ergin Sokak"
+   }
+  },
+  {
+   "id": "16-full-9",
+   "text": "Bursa İnegöl Turgutalp Mah. Barbaros Caddesi No:40",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665704207",
+    "number": "40",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-full-10",
+   "text": "Doğanbey Caddesi No:11 Doğanbey Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12918644184",
+    "number": "11",
+    "streetName": "Doğanbey Caddesi"
+   }
+  },
+  {
+   "id": "16-full-11",
+   "text": "Işıktepe Mah. Eflatun Caddesi 10, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069470",
+    "number": "10",
+    "streetName": "Eflatun Caddesi"
+   }
+  },
+  {
+   "id": "16-full-12",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Füme Sokak, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217194284",
+    "number": "14",
+    "streetName": "Füme Sokak"
+   }
+  },
+  {
+   "id": "16-full-13",
+   "text": "Bursa Nilüfer Fethiye Mah. Mavi Caddesi No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211785013",
+    "number": "5",
+    "streetName": "Mavi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-14",
+   "text": "Lise Caddesi No:25/A Güzelyalı Mahallesi Mudanya/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12223977004",
+    "number": "25/A",
+    "streetName": "Lise Caddesi"
+   }
+  },
+  {
+   "id": "16-full-15",
+   "text": "Işıktepe Mah. Beyaz Sokak 1C, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069462",
+    "number": "1C",
+    "streetName": "Beyaz Sokak"
+   }
+  },
+  {
+   "id": "16-full-16",
+   "text": "Bursa, Osmangazi, Ovaakça Eğitim Mahallesi, İstanbul Caddesi, Kapı No: 750",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1091677953",
+    "number": "750",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-full-17",
+   "text": "Bursa Nilüfer Fethiye Mah. Turkuaz Cadde No:31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844721",
+    "number": "31",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-full-18",
+   "text": "Mavi Caddesi No:43 Minareliçavuş Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056482",
+    "number": "43",
+    "streetName": "Mavi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-19",
+   "text": "Çamlıca Mah. Karasu Sokak 1, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1138325783",
+    "number": "1",
+    "streetName": "Karasu Sokak"
+   }
+  },
+  {
+   "id": "16-full-20",
+   "text": "Bursa, Osmangazi, Tayakadın Mahallesi, 18. Bahçe Sokak, Kapı No: 5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953867394",
+    "number": "5",
+    "streetName": "18. Bahçe Sokak"
+   }
+  },
+  {
+   "id": "16-full-21",
+   "text": "Bursa Osmangazi Bağlarbaşı Mah. Abdülkadir Geylani Caddesi No:52",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12520223019",
+    "number": "52",
+    "streetName": "Abdülkadir Geylani Caddesi"
+   }
+  },
+  {
+   "id": "16-full-22",
+   "text": "2. Uçlu Sokak No:33 Küçükbalıklı Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13668236968",
+    "number": "33",
+    "streetName": "2. Uçlu Sokak"
+   }
+  },
+  {
+   "id": "16-full-23",
+   "text": "Fethiye Mah. Turkuaz Cadde 26, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844728",
+    "number": "26",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-full-24",
+   "text": "Bursa, Osmangazi, Elmasbahçeler Mahallesi, 3. Baş Sokak, Kapı No: 26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1171931437",
+    "number": "26",
+    "streetName": "3. Baş Sokak"
+   }
+  },
+  {
+   "id": "16-full-25",
+   "text": "Bursa Osmangazi Tayakadın Mah. 1. Menteş Sokak No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826410",
+    "number": "19",
+    "streetName": "1. Menteş Sokak"
+   }
+  },
+  {
+   "id": "16-full-26",
+   "text": "Yeşil Cadde No:10 Minareliçavuş Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056451",
+    "number": "10",
+    "streetName": "Yeşil Cadde"
+   }
+  },
+  {
+   "id": "16-full-27",
+   "text": "Yeşilova Mah. 1. Yenicami Sk 14, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w247424190",
+    "number": "14",
+    "streetName": "1. Yenicami Sk"
+   }
+  },
+  {
+   "id": "16-full-28",
+   "text": "Bursa, Osmangazi, Emek Zekai Gümüşdiş Mahallesi, Mudanya Caddesi, Kapı No: 568",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4686940747",
+    "number": "568",
+    "streetName": "Mudanya Caddesi"
+   }
+  },
+  {
+   "id": "16-full-29",
+   "text": "Bursa Nilüfer 19 Mayıs Mah. Sıla Caddesi No:17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964484928",
+    "number": "17",
+    "streetName": "Sıla Caddesi"
+   }
+  },
+  {
+   "id": "16-full-30",
+   "text": "Lacivert Caddesi No:19 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162007",
+    "number": "19",
+    "streetName": "Lacivert Caddesi"
+   }
+  },
+  {
+   "id": "16-full-31",
+   "text": "29 Ekim Mah. Ümit Kaftancıoğlu Caddesi 20, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456568421",
+    "number": "20",
+    "streetName": "Ümit Kaftancıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-full-32",
+   "text": "Bursa, Osmangazi, Gülbahçe Mahallesi, Bekirdede Sokak, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12121878805",
+    "number": "20",
+    "streetName": "Bekirdede Sokak"
+   }
+  },
+  {
+   "id": "16-full-33",
+   "text": "Bursa Osmangazi Sakarya Mah. 1. Sezen Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1451746667",
+    "number": "7",
+    "streetName": "1. Sezen Sokak"
+   }
+  },
+  {
+   "id": "16-full-34",
+   "text": "Orta Sokak No:10 Ata Mahallesi Gemlik/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031723",
+    "number": "10",
+    "streetName": "Orta Sokak"
+   }
+  },
+  {
+   "id": "16-full-35",
+   "text": "Mollaarap Mah. 4. Vakıf Sokak 1/1, Yıldırım, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w289689174",
+    "number": "1/1",
+    "streetName": "4. Vakıf Sokak"
+   }
+  },
+  {
+   "id": "16-full-36",
+   "text": "Bursa, Nilüfer, Fethiye Mahallesi, Pembe Caddesi, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844715",
+    "number": "11",
+    "streetName": "Pembe Caddesi"
+   }
+  },
+  {
+   "id": "16-full-37",
+   "text": "Bursa İnegöl Akhisar Mah. Lodos Sokak No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n8344226147",
+    "number": "4",
+    "streetName": "Lodos Sokak"
+   }
+  },
+  {
+   "id": "16-full-38",
+   "text": "Ali Osman Sönmez Bulvarı No:23 Fethiye Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844666",
+    "number": "23",
+    "streetName": "Ali Osman Sönmez Bulvarı"
+   }
+  },
+  {
+   "id": "16-full-39",
+   "text": "Işıktepe Mah. Beyaz Sokak 6F, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069453",
+    "number": "6F",
+    "streetName": "Beyaz Sokak"
+   }
+  },
+  {
+   "id": "16-full-40",
+   "text": "Bursa, Nilüfer, Konak Mahallesi, 1. Badem Sokak, Kapı No: 26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12154084333",
+    "number": "26",
+    "streetName": "1. Badem Sokak"
+   }
+  },
+  {
+   "id": "16-full-41",
+   "text": "Bursa Nilüfer Barış Mah. Petek Sokak No:37",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n8171523624",
+    "number": "37",
+    "streetName": "Petek Sokak"
+   }
+  },
+  {
+   "id": "16-full-42",
+   "text": "Doğanbey Caddesi No:22 Doğanbey Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761750",
+    "number": "22",
+    "streetName": "Doğanbey Caddesi"
+   }
+  },
+  {
+   "id": "16-full-43",
+   "text": "Elmasbahçeler Mah. 5. Zafer Sokak 36, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1167457633",
+    "number": "36",
+    "streetName": "5. Zafer Sokak"
+   }
+  },
+  {
+   "id": "16-full-44",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Ormanlar Caddesi, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217194289",
+    "number": "22",
+    "streetName": "Ormanlar Caddesi"
+   }
+  },
+  {
+   "id": "16-full-45",
+   "text": "Bursa Nilüfer Işıktepe Mah. Arıtma Caddesi No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260419",
+    "number": "10",
+    "streetName": "Arıtma Caddesi"
+   }
+  },
+  {
+   "id": "16-full-46",
+   "text": "Filiz Sokak No:14/1 Değirmenönü Mahallesi Yıldırım/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w522578537",
+    "number": "14/1",
+    "streetName": "Filiz Sokak"
+   }
+  },
+  {
+   "id": "16-full-47",
+   "text": "Fethiye Mah. Zümrüt Sokak 6, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844691",
+    "number": "6",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "16-full-48",
+   "text": "Bursa, Osmangazi, Reyhan Mahallesi, 8. Park Sokak, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n9299915917",
+    "number": "10",
+    "streetName": "8. Park Sokak"
+   }
+  },
+  {
+   "id": "16-full-49",
+   "text": "Bursa Nilüfer Minareliçavuş Mah. Sarı Caddesi No:45",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056493",
+    "number": "45",
+    "streetName": "Sarı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-50",
+   "text": "Turuncu Caddesi No:8 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069439",
+    "number": "8",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-full-51",
+   "text": "Fethiye Mah. Ali Osman Sönmez Bulvarı 13, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211784997",
+    "number": "13",
+    "streetName": "Ali Osman Sönmez Bulvarı"
+   }
+  },
+  {
+   "id": "16-full-52",
+   "text": "Bursa, Nilüfer, Fethiye Mahallesi, Kırmızı Caddesi, Kapı No: 24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844709",
+    "number": "24",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-53",
+   "text": "Bursa Nilüfer Işıktepe Mah. Turkuaz Cadde No:54",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069496",
+    "number": "54",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-full-54",
+   "text": "Yeşil Cadde No:23 Minareliçavuş Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056472",
+    "number": "23",
+    "streetName": "Yeşil Cadde"
+   }
+  },
+  {
+   "id": "16-full-55",
+   "text": "Minareliçavuş Mah. 75. Yıl Bulvarı 28, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217312042",
+    "number": "28",
+    "streetName": "75. Yıl Bulvarı"
+   }
+  },
+  {
+   "id": "16-full-56",
+   "text": "Bursa, Mudanya, Güzelyalı Yalı Mahallesi, Kumluyalı Sokak, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n9651774079",
+    "number": "7",
+    "streetName": "Kumluyalı Sokak"
+   }
+  },
+  {
+   "id": "16-full-57",
+   "text": "Bursa Osmangazi Tayakadın Mah. 1. Menteş Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826414",
+    "number": "7",
+    "streetName": "1. Menteş Sokak"
+   }
+  },
+  {
+   "id": "16-full-58",
+   "text": "Kahverengi Caddesi No:4 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162032",
+    "number": "4",
+    "streetName": "Kahverengi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-59",
+   "text": "Tayakadın Mah. Tamer Sokak 10, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826417",
+    "number": "10",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-60",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Bordo Cadde, Kapı No: 34",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056527",
+    "number": "34",
+    "streetName": "Bordo Cadde"
+   }
+  },
+  {
+   "id": "16-full-61",
+   "text": "Bursa Nilüfer Fethiye Mah. Turkuaz Cadde No:24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844727",
+    "number": "24",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-full-62",
+   "text": "Mavi Caddesi No:19 Minareliçavuş Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211896666",
+    "number": "19",
+    "streetName": "Mavi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-63",
+   "text": "Karaağaç Mah. Eşrefliler Caddesi 47, Yıldırım, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n14148775628",
+    "number": "47",
+    "streetName": "Eşrefliler Caddesi"
+   }
+  },
+  {
+   "id": "16-full-64",
+   "text": "Bursa, Nilüfer, Minareliçavuş Mahallesi, Turuncu Caddesi, Kapı No: 52",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056490",
+    "number": "52",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-full-65",
+   "text": "Bursa Osmangazi Demirtaşpaşa Mah. Tahıliçi Sokak No:41",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1240029292",
+    "number": "41",
+    "streetName": "Tahıliçi Sokak"
+   }
+  },
+  {
+   "id": "16-full-66",
+   "text": "3. Turunç Sk No:19 Bahar Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w515174289",
+    "number": "19",
+    "streetName": "3. Turunç Sk"
+   }
+  },
+  {
+   "id": "16-full-67",
+   "text": "Ata Mah. Orta Sokak 26, Gemlik, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w478725959",
+    "number": "26",
+    "streetName": "Orta Sokak"
+   }
+  },
+  {
+   "id": "16-full-68",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Kırmızı Caddesi, Kapı No: 31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056521",
+    "number": "31",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-69",
+   "text": "Bursa Osmangazi Tayakadın Mah. Tamer Sokak No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953921523",
+    "number": "5",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-70",
+   "text": "Okul Sokak No:22 Ata Mahallesi Gemlik/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w479065640",
+    "number": "22",
+    "streetName": "Okul Sokak"
+   }
+  },
+  {
+   "id": "16-full-71",
+   "text": "Armutköy Mah. Nil Caddesi 22, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456568482",
+    "number": "22",
+    "streetName": "Nil Caddesi"
+   }
+  },
+  {
+   "id": "16-full-72",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Kırmızı Caddesi, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069441",
+    "number": "9",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-full-73",
+   "text": "Bursa Osmangazi Güneştepe Mahallasi Mah. Bebek Sokak No:18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561674922",
+    "number": "18",
+    "streetName": "Bebek Sokak"
+   }
+  },
+  {
+   "id": "16-full-74",
+   "text": "Öznur Sokak No:7 Osmaniye Mahallesi İnegöl/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n7006490098",
+    "number": "7",
+    "streetName": "Öznur Sokak"
+   }
+  },
+  {
+   "id": "16-full-75",
+   "text": "İbrahimpaşa Mah. Kocaçınar Sokak 8/B, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11034581327",
+    "number": "8/B",
+    "streetName": "Kocaçınar Sokak"
+   }
+  },
+  {
+   "id": "16-full-76",
+   "text": "Bursa, Osmangazi, Elmasbahçeler Mahallesi, 3. Kumru Sokak, Kapı No: 67",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1167457640",
+    "number": "67",
+    "streetName": "3. Kumru Sokak"
+   }
+  },
+  {
+   "id": "16-full-77",
+   "text": "Bursa Nilüfer Balat Mah. Mavi Caddesi No:18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211896673",
+    "number": "18",
+    "streetName": "Mavi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-78",
+   "text": "İstanbul Caddesi No:323D Fatih Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12810977775",
+    "number": "323D",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-full-79",
+   "text": "Tayakadın Mah. Tamer Sokak 14, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826404",
+    "number": "14",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-80",
+   "text": "Bursa, İnegöl, Turgutalp Mahallesi, Uzay Sokak, Kapı No: 19J",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w751520664",
+    "number": "19J",
+    "streetName": "Uzay Sokak"
+   }
+  },
+  {
+   "id": "16-full-81",
+   "text": "Bursa Osmangazi Kiremitçi Mah. Tamer Sokak No:27/3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761746",
+    "number": "27/3",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-82",
+   "text": "Tamer Sokak No:12 Tayakadın Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826403",
+    "number": "12",
+    "streetName": "Tamer Sokak"
+   }
+  },
+  {
+   "id": "16-full-83",
+   "text": "Balat Mah. Bahar Sokak 23, Nilüfer, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13401646988",
+    "number": "23",
+    "streetName": "Bahar Sokak"
+   }
+  },
+  {
+   "id": "16-full-84",
+   "text": "Bursa, Osmangazi, Bahar Mahallesi, Ulubatlı Hasan Bulvarı, Kapı No: 59/5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4685810388",
+    "number": "59/5",
+    "streetName": "Ulubatlı Hasan Bulvarı"
+   }
+  },
+  {
+   "id": "16-full-85",
+   "text": "Bursa Yıldırım Bağlaraltı Mah. Cebel Caddesi No:54",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12680445168",
+    "number": "54",
+    "streetName": "Cebel Caddesi"
+   }
+  },
+  {
+   "id": "16-full-86",
+   "text": "İnönü Caddesi No:14 Kayıhan Mahallesi Osmangazi/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1123402211",
+    "number": "14",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "16-full-87",
+   "text": "Esentepe Mah. Basın Caddesi 1, Kestel, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n5827975243",
+    "number": "1",
+    "streetName": "Basın Caddesi"
+   }
+  },
+  {
+   "id": "16-full-88",
+   "text": "Bursa, İnegöl, Turgutalp Mahallesi, Barbaros Caddesi, Kapı No: 26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665797493",
+    "number": "26",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-full-89",
+   "text": "Bursa Kestel Esentepe Mah. Zümrüt Sokak No:6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w616407373",
+    "number": "6",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "16-full-90",
+   "text": "Eflatun Caddesi No:8 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069471",
+    "number": "8",
+    "streetName": "Eflatun Caddesi"
+   }
+  },
+  {
+   "id": "16-full-91",
+   "text": "Doğanbey Mah. Kiremitçi Caddesi 16, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12925224434",
+    "number": "16",
+    "streetName": "Kiremitçi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-92",
+   "text": "Bursa, Osmangazi, Bağlarbaşı Mahallesi, Sanayi Caddesi, Kapı No: 348",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12520250722",
+    "number": "348",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "16-full-93",
+   "text": "Bursa İnegöl Yunusemre Mah. Kanarya Caddesi No:17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6989926350",
+    "number": "17",
+    "streetName": "Kanarya Caddesi"
+   }
+  },
+  {
+   "id": "16-full-94",
+   "text": "Balarım Sokak No:19 Göllüce Mahallesi İznik/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1394908778",
+    "number": "19",
+    "streetName": "Balarım Sokak"
+   }
+  },
+  {
+   "id": "16-full-95",
+   "text": "Soğukkuyu Mah. 2. Gün Sokak 2, Osmangazi, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1168894163",
+    "number": "2",
+    "streetName": "2. Gün Sokak"
+   }
+  },
+  {
+   "id": "16-full-96",
+   "text": "Bursa, Nilüfer, Minareliçavuş Mahallesi, Yeşil Cadde, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056485",
+    "number": "22",
+    "streetName": "Yeşil Cadde"
+   }
+  },
+  {
+   "id": "16-full-97",
+   "text": "Bursa Nilüfer Işıktepe Mah. Turkuaz Cadde No:58",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069497",
+    "number": "58",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-full-98",
+   "text": "Barbaros Caddesi No:30 Turgutalp Mahallesi İnegöl/Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665791138",
+    "number": "30",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-full-99",
+   "text": "Mustafa Kemal Paşa Mah. Kumbaşı Sokak 22, İznik, Bursa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1432087616",
+    "number": "22",
+    "streetName": "Kumbaşı Sokak"
+   }
+  },
+  {
+   "id": "16-full-100",
+   "text": "Bursa, Osmangazi, Tayakadın Mahallesi, Kocasinan Caddesi, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953883471",
+    "number": "20",
+    "streetName": "Kocasinan Caddesi"
+   }
+  },
+  {
+   "id": "16-full-101",
+   "text": "Bursa Nilüfer Cumhuriyet Mah. Nilüfer Hatun Cd. No:114",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "16",
+    "osm": "n8084082043",
+    "number": "114",
+    "streetName": "Nilüfer Hatun Cd."
+   }
+  },
+  {
+   "id": "16-full-102",
+   "text": "Bursa Nilüfer Cumhuriyet Mah. Nilüfer Hatun Cd. No:114",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "16",
+    "osm": "n8084082035",
+    "number": "114",
+    "streetName": "Nilüfer Hatun Cd."
+   }
+  },
+  {
+   "id": "16-full-103",
+   "text": "Bursa Nilüfer Cumhuriyet Mah. Nilüfer Hatun Cd. No:114",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "16",
+    "osm": "n8084082036",
+    "number": "114",
+    "streetName": "Nilüfer Hatun Cd."
+   }
+  },
+  {
+   "id": "16-full-104",
+   "text": "Bursa Nilüfer 29 Ekim Mah. 501. Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "16",
+    "osm": "w1456665430",
+    "number": "7",
+    "streetName": "501. Sokak",
+    "streetNumber": 501
+   }
+  },
+  {
+   "id": "16-full-105",
+   "text": "Bursa Nilüfer Cumhuriyet Mah. Nilüfer Hatun Cd. No:114",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "16",
+    "osm": "n8084082029",
+    "number": "114",
+    "streetName": "Nilüfer Hatun Cd."
+   }
+  },
+  {
+   "id": "16-folded-1",
+   "text": "bursa nilufer isiktepe mah ata blv. no 95c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069457",
+    "number": "95C",
+    "streetName": "Ata Bulvarı"
+   }
+  },
+  {
+   "id": "16-folded-2",
+   "text": "bursa nilufer isiktepe mah demirciler cad. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217297748",
+    "number": "11",
+    "streetName": "Demirciler Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-3",
+   "text": "bursa osmangazi niluferkoy mah 14. akasya sok. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w930127891",
+    "number": "2",
+    "streetName": "14. Akasya Sokak"
+   }
+  },
+  {
+   "id": "16-folded-4",
+   "text": "bursa kestel barakfakih mah vatan cd no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w531017007",
+    "number": "11",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-5",
+   "text": "bursa nilufer isiktepe mah turuncu cd. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069468",
+    "number": "3",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-6",
+   "text": "bursa nilufer gorukle mah universite-1 cad. no 933/103",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13047813522",
+    "number": "933/103",
+    "streetName": "Üniversite-1 Cad."
+   }
+  },
+  {
+   "id": "16-folded-7",
+   "text": "bursa osmangazi tayakadin mah kiremitci cd no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953921525",
+    "number": "29",
+    "streetName": "Kiremitçi Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-8",
+   "text": "bursa yildirim yavuzselim mah 1. okul cad. no 82",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n7740034788",
+    "number": "82",
+    "streetName": "1. Okul Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-9",
+   "text": "BURSA NILUFER YUZUNCUYIL MAH IZMIR YOLU CD NO 428",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n7010970693",
+    "number": "428",
+    "streetName": "İzmir Yolu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-10",
+   "text": "bursa nilufer isiktepe mah fume sok. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217194285",
+    "number": "12",
+    "streetName": "Füme Sokak"
+   }
+  },
+  {
+   "id": "16-folded-11",
+   "text": "bursa osmangazi muradiye mah cekirge cad. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w461827680",
+    "number": "5",
+    "streetName": "Çekirge Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-12",
+   "text": "bursa nilufer isiktepe mah turuncu cd no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056530",
+    "number": "16",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-13",
+   "text": "BURSA NILUFER ISIKTEPE MAH TURKUAZ CAD. NO 65",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162008",
+    "number": "65",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-folded-14",
+   "text": "bursa nilufer isiktepe mah turuncu cd. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056528",
+    "number": "12",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-15",
+   "text": "bursa osmangazi elmasbahceler mah olgun sk. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1171931431",
+    "number": "4",
+    "streetName": "Olgun Sokak"
+   }
+  },
+  {
+   "id": "16-folded-16",
+   "text": "bursa inegol burhaniye mah mimar sinan cad. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w457196965",
+    "number": "54",
+    "streetName": "Mimar Sinan Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-17",
+   "text": "bursa osmangazi demirtas cumhuriyet mah ayan sk. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1154195991",
+    "number": "12",
+    "streetName": "Ayan Sokak"
+   }
+  },
+  {
+   "id": "16-folded-18",
+   "text": "bursa yildirim yediselviler mah teyyareci mehmet ali cd. no 20/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n9040901191",
+    "number": "20/C",
+    "streetName": "Teyyareci Mehmet Ali Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-19",
+   "text": "bursa yenisehir yenigun mah incirlik cd. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1290618147",
+    "number": "14",
+    "streetName": "İncirlik Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-20",
+   "text": "bursa nilufer 29 ekim mah dogan avcioglu cd. no 19a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n14029526791",
+    "number": "19A",
+    "streetName": "Doğan Avcıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-21",
+   "text": "bursa nilufer isiktepe mah kahverengi cd no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162034",
+    "number": "10",
+    "streetName": "Kahverengi Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-22",
+   "text": "bursa nilufer isiktepe mah park cad. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260413",
+    "number": "5",
+    "streetName": "Park Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-23",
+   "text": "bursa nilufer altinsehir mah ahmet taner kislali blv no 46",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w635921251",
+    "number": "46",
+    "streetName": "Ahmet Taner Kışlalı Blv"
+   }
+  },
+  {
+   "id": "16-folded-24",
+   "text": "BURSA OSMANGAZI ALACAMASCIT MAH INONU CD. NO 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13328355446",
+    "number": "19",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-25",
+   "text": "bursa nilufer fethiye mah sari cad. no 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844674",
+    "number": "25",
+    "streetName": "Sarı Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-26",
+   "text": "BURSA NILUFER FETHIYE MAH PEMBE CD NO 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844719",
+    "number": "12",
+    "streetName": "Pembe Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-27",
+   "text": "bursa nilufer fethiye mah gri cd no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844694",
+    "number": "4",
+    "streetName": "Gri Cadde"
+   }
+  },
+  {
+   "id": "16-folded-28",
+   "text": "bursa osmangazi ibrahimpasa mah kizokulu cad. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1110278142",
+    "number": "11",
+    "streetName": "Kızokulu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-29",
+   "text": "bursa osmangazi kircaali mah kayali sok. no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n5551879168",
+    "number": "22",
+    "streetName": "Kayalı Sokak"
+   }
+  },
+  {
+   "id": "16-folded-30",
+   "text": "BURSA NILUFER ISIKTEPE MAH KIRMIZI CD. NO 7E",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069446",
+    "number": "7E",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-31",
+   "text": "BURSA NILUFER CAMLICA MAH KAVAKDERE CD NO 125",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w393319673",
+    "number": "125",
+    "streetName": "Kavakdere Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-32",
+   "text": "bursa gemlik ata mah orta sk. no 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w478725957",
+    "number": "30",
+    "streetName": "Orta Sokak"
+   }
+  },
+  {
+   "id": "16-folded-33",
+   "text": "bursa kestel esentepe mah zumrut sk. no 3/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n5827943107",
+    "number": "3/B",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "16-folded-34",
+   "text": "bursa nilufer konak mah bilginler cd no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4457804733",
+    "number": "29",
+    "streetName": "Bilginler Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-35",
+   "text": "bursa nilufer 29 ekim mah dogan avcioglu cad. no 19b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n14029526790",
+    "number": "19B",
+    "streetName": "Doğan Avcıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-36",
+   "text": "bursa nilufer minarelicavus mah altin sok. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056498",
+    "number": "9",
+    "streetName": "Altın Sokak"
+   }
+  },
+  {
+   "id": "16-folded-37",
+   "text": "bursa osmangazi soganli mahallasi mah istanbul cd no 343",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12584654957",
+    "number": "343",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-38",
+   "text": "bursa nilufer minarelicavus mah turuncu cad. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056491",
+    "number": "54",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-39",
+   "text": "bursa nilufer 29 ekim mah umit kaftancioglu cd. no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456665463",
+    "number": "21",
+    "streetName": "Ümit Kaftancıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-40",
+   "text": "bursa osmangazi baglarbasi mah 1. hurriyet cad. no 323",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13328384532",
+    "number": "323",
+    "streetName": "1. Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-41",
+   "text": "bursa osmangazi kurucesme mah altiparmak cd no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11982008769",
+    "number": "3",
+    "streetName": "Altıparmak Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-42",
+   "text": "bursa osmangazi gunestepe mahallasi mah 1. sentepe sk no 3/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561674913",
+    "number": "3/A",
+    "streetName": "1. Şentepe Sokak"
+   }
+  },
+  {
+   "id": "16-folded-43",
+   "text": "bursa karacabey gazi mah ortaokul cad. no 43/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11455111169",
+    "number": "43/A",
+    "streetName": "Ortaokul Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-44",
+   "text": "bursa karacabey garipce mah park cd no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12582503632",
+    "number": "22",
+    "streetName": "Park Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-45",
+   "text": "bursa osmangazi tahtakale mah samsa sok. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1061963676",
+    "number": "11",
+    "streetName": "Samsa Sokak"
+   }
+  },
+  {
+   "id": "16-folded-46",
+   "text": "BURSA MUDANYA GUZELYALI YALI MAH KUMLUYALI SK. NO 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n9651774083",
+    "number": "2",
+    "streetName": "Kumluyalı Sokak"
+   }
+  },
+  {
+   "id": "16-folded-47",
+   "text": "BURSA NILUFER FETHIYE MAH SARI CAD. NO 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844673",
+    "number": "23",
+    "streetName": "Sarı Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-48",
+   "text": "bursa osmangazi doganbey mah 4. celebi sk. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761757",
+    "number": "11",
+    "streetName": "4. Çelebi Sokak"
+   }
+  },
+  {
+   "id": "16-folded-49",
+   "text": "bursa nilufer odunluk mah erdogan binyucel cad. no 4b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w531009800",
+    "number": "4B",
+    "streetName": "Erdoğan Binyücel Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-50",
+   "text": "bursa gemlik dr. ziya kaya mah hurriyet cd. no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11304812004",
+    "number": "58",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-51",
+   "text": "BURSA NILUFER FETHIYE MAH SARI CD NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844696",
+    "number": "3",
+    "streetName": "Sarı Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-52",
+   "text": "bursa inegol turgutalp mah barbaros cad. no 31",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w666088217",
+    "number": "31",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-53",
+   "text": "bursa nilufer isiktepe mah ormanlar cd no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069466",
+    "number": "5",
+    "streetName": "Ormanlar Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-54",
+   "text": "bursa nilufer isiktepe mah aritma cd. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260414",
+    "number": "2",
+    "streetName": "Arıtma Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-55",
+   "text": "BURSA OSMANGAZI DOGANBEY MAH DOGANBEY CD NO 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761749",
+    "number": "20",
+    "streetName": "Doğanbey Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-56",
+   "text": "bursa orhangazi muradiye mah turist yolu no 98",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w593711445",
+    "number": "98",
+    "streetName": "Turist Yolu"
+   }
+  },
+  {
+   "id": "16-folded-57",
+   "text": "BURSA NILUFER ALAADDINBEY MAH ATILLA TATVEREN CD. NO 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1100611798",
+    "number": "18",
+    "streetName": "Atilla Tatveren Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-58",
+   "text": "bursa kestel barakfakih mah ankara cad. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w531029971",
+    "number": "54",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-59",
+   "text": "BURSA MUDANYA BADEMLI MAH KULTUR CD. NO 51",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w849440096",
+    "number": "51",
+    "streetName": "Kültür Caddesi"
+   }
+  },
+  {
+   "id": "16-folded-60",
+   "text": "bursa yildirim mimar sinan mah ankara yolu cd no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1470234095",
+    "number": "5",
+    "streetName": "Ankara Yolu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-1",
+   "text": "Bursa İnegöl Hamidiye Mah. Kurtluuş Sokak No:45",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w584541134",
+    "number": "45",
+    "streetName": "Kurtuluş Sokak"
+   }
+  },
+  {
+   "id": "16-typo-2",
+   "text": "Kprübaşı Caddesi No:74B Küçükbalıklı Mahallesi Osmangazi/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12925320398",
+    "number": "74B",
+    "streetName": "Köprübaşı Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-3",
+   "text": "Işıktepe Mah. Truncu Caddesi 14, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056529",
+    "number": "14",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-4",
+   "text": "Bursa, İnegöl, Turgutalp Mahallesi, Barbaos Caddesi, Kapı No: 22",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665841306",
+    "number": "22",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-5",
+   "text": "Bursa Osmangazi Panayır Mah. İstnabul Caddesi No:365",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n5128359221",
+    "number": "365",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-6",
+   "text": "Barbaors Caddesi No:40 Turgutalp Mahallesi İnegöl/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665704207",
+    "number": "40",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-7",
+   "text": "Doğanbey Mah. Doğanbfy Caddesi 11, Osmangazi, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12918644184",
+    "number": "11",
+    "streetName": "Doğanbey Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-8",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Eflastun Caddesi, Kapı No: 10",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069470",
+    "number": "10",
+    "streetName": "Eflatun Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-9",
+   "text": "Bursa Osmangazi Ovaakça Eğitim Mah. İssanbul Caddesi No:750",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1091677953",
+    "number": "750",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-10",
+   "text": "Turguaz Cadde No:31 Fethiye Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844721",
+    "number": "31",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-11",
+   "text": "Çamlıca Mah. Kuarasu Sokak 1, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1138325783",
+    "number": "1",
+    "streetName": "Karasu Sokak"
+   }
+  },
+  {
+   "id": "16-typo-12",
+   "text": "Bursa, Osmangazi, Bağlarbaşı Mahallesi, Abdhlkadir Geylani Caddesi, Kapı No: 52",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12520223019",
+    "number": "52",
+    "streetName": "Abdülkadir Geylani Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-13",
+   "text": "Bursa Nilüfer Fethiye Mah. Turuaz Cadde No:26",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844728",
+    "number": "26",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-14",
+   "text": "1. Mentş Sokak No:19 Tayakadın Mahallesi Osmangazi/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826410",
+    "number": "19",
+    "streetName": "1. Menteş Sokak"
+   }
+  },
+  {
+   "id": "16-typo-15",
+   "text": "Yeşilova Mah. 1. Yenicmai Sk 14, Osmangazi, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w247424190",
+    "number": "14",
+    "streetName": "1. Yenicami Sk"
+   }
+  },
+  {
+   "id": "16-typo-16",
+   "text": "Bursa, Osmangazi, Emek Zekai Gümüşdiş Mahallesi, Mudayna Caddesi, Kapı No: 568",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4686940747",
+    "number": "568",
+    "streetName": "Mudanya Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-17",
+   "text": "Bursa Nilüfer Işıktepe Mah. Lacivet Caddesi No:19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162007",
+    "number": "19",
+    "streetName": "Lacivert Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-18",
+   "text": "Ümit Kaftanıoğlu Caddesi No:20 29 Ekim Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456568421",
+    "number": "20",
+    "streetName": "Ümit Kaftancıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-19",
+   "text": "Gülbahçe Mah. Bektirdede Sokak 20, Osmangazi, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12121878805",
+    "number": "20",
+    "streetName": "Bekirdede Sokak"
+   }
+  },
+  {
+   "id": "16-typo-20",
+   "text": "Bursa, Nilüfer, Fethiye Mahallesi, Ali Osman Sönmlez Bulvarı, Kapı No: 23",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844666",
+    "number": "23",
+    "streetName": "Ali Osman Sönmez Bulvarı"
+   }
+  },
+  {
+   "id": "16-typo-21",
+   "text": "Bursa Osmangazi Doğanbey Mah. Dtoğanbey Caddesi No:22",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761750",
+    "number": "22",
+    "streetName": "Doğanbey Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-22",
+   "text": "Oamanlar Caddesi No:22 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217194289",
+    "number": "22",
+    "streetName": "Ormanlar Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-23",
+   "text": "Işıktepe Mah. Adrıtma Caddesi 10, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260419",
+    "number": "10",
+    "streetName": "Arıtma Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-24",
+   "text": "Bursa, Nilüfer, Fethiye Mahallesi, Zfümrüt Sokak, Kapı No: 6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844691",
+    "number": "6",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "16-typo-25",
+   "text": "Bursa Nilüfer Işıktepe Mah. Tuurncu Caddesi No:8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069439",
+    "number": "8",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-26",
+   "text": "Ali Osman Sönmsz Bulvarı No:13 Fethiye Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211784997",
+    "number": "13",
+    "streetName": "Ali Osman Sönmez Bulvarı"
+   }
+  },
+  {
+   "id": "16-typo-27",
+   "text": "Fethiye Mah. Kdırmızı Caddesi 24, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844709",
+    "number": "24",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-28",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Tturkuaz Cadde, Kapı No: 54",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069496",
+    "number": "54",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-29",
+   "text": "Bursa Mudanya Güzelyalı Yalı Mah. Kumluylaı Sokak No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n9651774079",
+    "number": "7",
+    "streetName": "Kumluyalı Sokak"
+   }
+  },
+  {
+   "id": "16-typo-30",
+   "text": "1. Mneteş Sokak No:7 Tayakadın Mahallesi Osmangazi/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953826414",
+    "number": "7",
+    "streetName": "1. Menteş Sokak"
+   }
+  },
+  {
+   "id": "16-typo-31",
+   "text": "Işıktepe Mah. Kaverengi Caddesi 4, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162032",
+    "number": "4",
+    "streetName": "Kahverengi Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-32",
+   "text": "Bursa, Nilüfer, Fethiye Mahallesi, Turkuz Cadde, Kapı No: 24",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844727",
+    "number": "24",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-33",
+   "text": "Bursa Yıldırım Karaağaç Mah. Erefliler Caddesi No:47",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n14148775628",
+    "number": "47",
+    "streetName": "Eşrefliler Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-34",
+   "text": "Turunncu Caddesi No:52 Minareliçavuş Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056490",
+    "number": "52",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-35",
+   "text": "Demirtaşpaşa Mah. Taphıliçi Sokak 41, Osmangazi, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1240029292",
+    "number": "41",
+    "streetName": "Tahıliçi Sokak"
+   }
+  },
+  {
+   "id": "16-typo-36",
+   "text": "Bursa, Osmangazi, Bahar Mahallesi, 3. Tugunç Sk, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w515174289",
+    "number": "19",
+    "streetName": "3. Turunç Sk"
+   }
+  },
+  {
+   "id": "16-typo-37",
+   "text": "Bursa Nilüfer Işıktepe Mah. Kıcmızı Caddesi No:31",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056521",
+    "number": "31",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-38",
+   "text": "Kermızı Caddesi No:9 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069441",
+    "number": "9",
+    "streetName": "Kırmızı Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-39",
+   "text": "İbrahimpaşa Mah. Kocaıçnar Sokak 8/B, Osmangazi, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11034581327",
+    "number": "8/B",
+    "streetName": "Kocaçınar Sokak"
+   }
+  },
+  {
+   "id": "16-typo-40",
+   "text": "Bursa, Osmangazi, Fatih Mahallesi, İtanbul Caddesi, Kapı No: 323D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12810977775",
+    "number": "323D",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-41",
+   "text": "Bursa Osmangazi Bahar Mah. Ulubaelı Hasan Bulvarı No:59/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4685810388",
+    "number": "59/5",
+    "streetName": "Ulubatlı Hasan Bulvarı"
+   }
+  },
+  {
+   "id": "16-typo-42",
+   "text": "Barbarso Caddesi No:26 Turgutalp Mahallesi İnegöl/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665797493",
+    "number": "26",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-43",
+   "text": "Esentepe Mah. Zümürt Sokak 6, Kestel, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w616407373",
+    "number": "6",
+    "streetName": "Zümrüt Sokak"
+   }
+  },
+  {
+   "id": "16-typo-44",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Efltaun Caddesi, Kapı No: 8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069471",
+    "number": "8",
+    "streetName": "Eflatun Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-45",
+   "text": "Bursa Osmangazi Doğanbey Mah. Kremitçi Caddesi No:16",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12925224434",
+    "number": "16",
+    "streetName": "Kiremitçi Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-46",
+   "text": "Sanaiy Caddesi No:348 Bağlarbaşı Mahallesi Osmangazi/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12520250722",
+    "number": "348",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-47",
+   "text": "Yunusemre Mah. Kannarya Caddesi 17, İnegöl, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6989926350",
+    "number": "17",
+    "streetName": "Kanarya Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-48",
+   "text": "Bursa, İznik, Göllüce Mahallesi, Balaırm Sokak, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1394908778",
+    "number": "19",
+    "streetName": "Balarım Sokak"
+   }
+  },
+  {
+   "id": "16-typo-49",
+   "text": "Bursa Nilüfer Işıktepe Mah. Trukuaz Cadde No:58",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069497",
+    "number": "58",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-50",
+   "text": "Barbars Caddesi No:30 Turgutalp Mahallesi İnegöl/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w665791138",
+    "number": "30",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-51",
+   "text": "Mustafa Kemal Paşa Mah. Kumbatşı Sokak 22, İznik, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1432087616",
+    "number": "22",
+    "streetName": "Kumbaşı Sokak"
+   }
+  },
+  {
+   "id": "16-typo-52",
+   "text": "Bursa, Osmangazi, Tayakadın Mahallesi, Koccasinan Caddesi, Kapı No: 20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953883471",
+    "number": "20",
+    "streetName": "Kocasinan Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-53",
+   "text": "Bursa Nilüfer Işıktepe Mah. Dmirciler Caddesi No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217297748",
+    "number": "11",
+    "streetName": "Demirciler Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-54",
+   "text": "14. Akassya Sokak No:2 Nilüferköy Mahallesi Osmangazi/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w930127891",
+    "number": "2",
+    "streetName": "14. Akasya Sokak"
+   }
+  },
+  {
+   "id": "16-typo-55",
+   "text": "Işıktepe Mah. Tuduncu Caddesi 3, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069468",
+    "number": "3",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-56",
+   "text": "Bursa, Osmangazi, Tayakadın Mahallesi, Kireitçi Caddesi, Kapı No: 29",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953921525",
+    "number": "29",
+    "streetName": "Kiremitçi Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-57",
+   "text": "Bursa Osmangazi Muradiye Mah. Çeiirge Caddesi No:5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w461827680",
+    "number": "5",
+    "streetName": "Çekirge Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-58",
+   "text": "Tuurncu Caddesi No:16 Işıktepe Mahallesi Nilüfer/Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056530",
+    "number": "16",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-typo-59",
+   "text": "Işıktepe Mah. Turluaz Cadde 65, Nilüfer, Bursa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162008",
+    "number": "65",
+    "streetName": "Turkuaz Cadde"
+   }
+  },
+  {
+   "id": "16-typo-60",
+   "text": "Bursa, Nilüfer, Işıktepe Mahallesi, Turucu Caddesi, Kapı No: 12",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056528",
+    "number": "12",
+    "streetName": "Turuncu Caddesi"
+   }
+  },
+  {
+   "id": "16-numbered-1",
+   "text": "Bursa Gemlik Ata Mah. 182. Sokak No:15",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w478725951",
+    "number": "15",
+    "streetName": "182. Sokak",
+    "streetNumber": 182
+   }
+  },
+  {
+   "id": "16-numbered-2",
+   "text": "1217. Sokak No:69 Demirtaş Cumhuriyet Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567423417",
+    "number": "69",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-3",
+   "text": "Demirtaş Cumhuriyet Mah. 1254. Sokak 27, Osmangazi, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567437145",
+    "number": "27",
+    "streetName": "1254. Sokak",
+    "streetNumber": 1254
+   }
+  },
+  {
+   "id": "16-numbered-4",
+   "text": "Bursa, Osmangazi, Tayakadın Mahallesi, 781. Sokak, Kapı No: 10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953883478",
+    "number": "10",
+    "streetName": "781. Sokak",
+    "streetNumber": 781
+   }
+  },
+  {
+   "id": "16-numbered-5",
+   "text": "Bursa Osmangazi Demirtaş Cumhuriyet Mah. 1257. Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567630369",
+    "number": "8",
+    "streetName": "1257. Sokak",
+    "streetNumber": 1257
+   }
+  },
+  {
+   "id": "16-numbered-6",
+   "text": "7202. Sokak No:12 Millet Mahallesi Yıldırım/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n10304608727",
+    "number": "12",
+    "streetName": "7202. Sokak",
+    "streetNumber": 7202
+   }
+  },
+  {
+   "id": "16-numbered-7",
+   "text": "Demirtaş Cumhuriyet Mah. 1217. Sokak 54, Osmangazi, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567416910",
+    "number": "54",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-8",
+   "text": "Bursa, Osmangazi, Demirtaş Cumhuriyet Mahallesi, 1217. Sokak, Kapı No: 53",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567422947",
+    "number": "53",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-9",
+   "text": "Bursa Osmangazi Tayakadın Mah. 781. Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953883477",
+    "number": "8",
+    "streetName": "781. Sokak",
+    "streetNumber": 781
+   }
+  },
+  {
+   "id": "16-numbered-10",
+   "text": "1217. Sokak No:47 Demirtaş Cumhuriyet Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567422950",
+    "number": "47",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-11",
+   "text": "Tayakadın Mah. 781. Sokak 4, Osmangazi, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953883475",
+    "number": "4",
+    "streetName": "781. Sokak",
+    "streetNumber": 781
+   }
+  },
+  {
+   "id": "16-numbered-12",
+   "text": "Bursa, Osmangazi, Demirtaş Cumhuriyet Mahallesi, 1256. Sokak, Kapı No: 3",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567349354",
+    "number": "3",
+    "streetName": "1256. Sokak",
+    "streetNumber": 1256
+   }
+  },
+  {
+   "id": "16-numbered-13",
+   "text": "Bursa Karacabey Esentepe Mah. 225 Sk. No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w379322070",
+    "number": "6",
+    "streetName": "225 Sk.",
+    "streetNumber": 225
+   }
+  },
+  {
+   "id": "16-numbered-14",
+   "text": "781. Sokak No:11 Tayakadın Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953903487",
+    "number": "11",
+    "streetName": "781. Sokak",
+    "streetNumber": 781
+   }
+  },
+  {
+   "id": "16-numbered-15",
+   "text": "Demirtaş Cumhuriyet Mah. 1257. Sokak 9, Osmangazi, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567630367",
+    "number": "9",
+    "streetName": "1257. Sokak",
+    "streetNumber": 1257
+   }
+  },
+  {
+   "id": "16-numbered-16",
+   "text": "Bursa, Osmangazi, Demirtaş Cumhuriyet Mahallesi, 1263. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567617051",
+    "number": "5",
+    "streetName": "1263. Sokak",
+    "streetNumber": 1263
+   }
+  },
+  {
+   "id": "16-numbered-17",
+   "text": "Bursa Osmangazi Demirtaş Cumhuriyet Mah. 1252. Sokak No:4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567425742",
+    "number": "4",
+    "streetName": "1252. Sokak",
+    "streetNumber": 1252
+   }
+  },
+  {
+   "id": "16-numbered-18",
+   "text": "1217. Sokak No:65 Demirtaş Cumhuriyet Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567423419",
+    "number": "65",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-19",
+   "text": "Alaaddinbey Mah. 639. Sokak 2A, Nilüfer, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13250065746",
+    "number": "2A",
+    "streetName": "639. Sokak",
+    "streetNumber": 639
+   }
+  },
+  {
+   "id": "16-numbered-20",
+   "text": "Bursa, Osmangazi, Demirtaş Cumhuriyet Mahallesi, 1252. Sokak, Kapı No: 13",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567437875",
+    "number": "13",
+    "streetName": "1252. Sokak",
+    "streetNumber": 1252
+   }
+  },
+  {
+   "id": "16-numbered-21",
+   "text": "Bursa Osmangazi Demirtaş Cumhuriyet Mah. 1254. Sokak No:9",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567449887",
+    "number": "9",
+    "streetName": "1254. Sokak",
+    "streetNumber": 1254
+   }
+  },
+  {
+   "id": "16-numbered-22",
+   "text": "1217. Sokak No:67 Demirtaş Cumhuriyet Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567423418",
+    "number": "67",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-23",
+   "text": "Demirtaş Cumhuriyet Mah. 1257. Sokak 13, Osmangazi, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567630365",
+    "number": "13",
+    "streetName": "1257. Sokak",
+    "streetNumber": 1257
+   }
+  },
+  {
+   "id": "16-numbered-24",
+   "text": "Bursa, Gemlik, Ata Mahallesi, 182. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w478725947",
+    "number": "5",
+    "streetName": "182. Sokak",
+    "streetNumber": 182
+   }
+  },
+  {
+   "id": "16-numbered-25",
+   "text": "Bursa Nilüfer 29 Ekim Mah. 501. Sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456665427",
+    "number": "6",
+    "streetName": "501. Sokak",
+    "streetNumber": 501
+   }
+  },
+  {
+   "id": "16-numbered-26",
+   "text": "1252. Sokak No:17 Demirtaş Cumhuriyet Mahallesi Osmangazi/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567437874",
+    "number": "17",
+    "streetName": "1252. Sokak",
+    "streetNumber": 1252
+   }
+  },
+  {
+   "id": "16-numbered-27",
+   "text": "Esentepe Mah. 251. Sokak 3, Karacabey, Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w379326262",
+    "number": "3",
+    "streetName": "251. Sokak",
+    "streetNumber": 251
+   }
+  },
+  {
+   "id": "16-numbered-28",
+   "text": "Bursa, Osmangazi, Demirtaş Cumhuriyet Mahallesi, 1217. Sokak, Kapı No: 56",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567416909",
+    "number": "56",
+    "streetName": "1217. Sokak",
+    "streetNumber": 1217
+   }
+  },
+  {
+   "id": "16-numbered-29",
+   "text": "Bursa Osmangazi Demirtaş Cumhuriyet Mah. 1254. Sokak No:1",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6567401283",
+    "number": "1",
+    "streetName": "1254. Sokak",
+    "streetNumber": 1254
+   }
+  },
+  {
+   "id": "16-numbered-30",
+   "text": "251. Sokak No:7/BC 23 Nisan Mahallesi Nilüfer/Bursa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13244658302",
+    "number": "7/BC",
+    "streetName": "251. Sokak",
+    "streetNumber": 251
+   }
+  },
+  {
+   "id": "16-hide-1",
+   "text": "Millet Mah. 11 Eylül Bulvarı 118, Yıldırım, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699018439",
+    "number": "118",
+    "streetName": "11 Eylül Bulvarı",
+    "truth": [
+     29.099194,
+     40.214177
+    ]
+   }
+  },
+  {
+   "id": "16-hide-2",
+   "text": "Çağrışan Mah. Eski Mudanya Caddesi 48, Mudanya, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n6098376410",
+    "number": "48",
+    "streetName": "Eski Mudanya Caddesi",
+    "truth": [
+     28.92549,
+     40.28731
+    ]
+   }
+  },
+  {
+   "id": "16-hide-3",
+   "text": "Fethiye Mah. Ali Osman Sönmez Bulvarı 12, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844654",
+    "number": "12",
+    "streetName": "Ali Osman Sönmez Bulvarı",
+    "truth": [
+     28.966339,
+     40.239897
+    ]
+   }
+  },
+  {
+   "id": "16-hide-4",
+   "text": "Işıktepe Mah. Park Caddesi 7, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260418",
+    "number": "7",
+    "streetName": "Park Caddesi",
+    "truth": [
+     28.946716,
+     40.223015
+    ]
+   }
+  },
+  {
+   "id": "16-hide-5",
+   "text": "Orhaneli Merkez Mah. M.Dokuyan Cd. 9, Orhaneli, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w885991076",
+    "number": "9",
+    "streetName": "M.Dokuyan Cd.",
+    "truth": [
+     28.986463,
+     39.903799
+    ]
+   }
+  },
+  {
+   "id": "16-hide-6",
+   "text": "Orhaneli Merkez Mah. Hastane Sokak 11, Orhaneli, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n8238458265",
+    "number": "11",
+    "streetName": "Hastane Sokak",
+    "truth": [
+     28.98728,
+     39.901481
+    ]
+   }
+  },
+  {
+   "id": "16-hide-7",
+   "text": "Bağlaraltı Mah. A314. Sokak 99, Yıldırım, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w975415157",
+    "number": "99",
+    "streetName": "A314. Sokak",
+    "truth": [
+     29.141685,
+     40.184923
+    ]
+   }
+  },
+  {
+   "id": "16-hide-8",
+   "text": "Turgutalp Mah. Barbaros Caddesi 29, İnegöl, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w667236897",
+    "number": "29",
+    "streetName": "Barbaros Caddesi",
+    "truth": [
+     29.493344,
+     40.07975
+    ]
+   }
+  },
+  {
+   "id": "16-hide-9",
+   "text": "Tayakadın Mah. Kiremitçi Caddesi 31, Osmangazi, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953921526",
+    "number": "31",
+    "streetName": "Kiremitçi Caddesi",
+    "truth": [
+     29.065877,
+     40.18909
+    ]
+   }
+  },
+  {
+   "id": "16-hide-10",
+   "text": "Minareliçavuş Mah. Lila Sokak 1, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217312045",
+    "number": "1",
+    "streetName": "Lila Sokak",
+    "truth": [
+     28.94133,
+     40.232357
+    ]
+   }
+  },
+  {
+   "id": "16-hide-11",
+   "text": "Kiremitçi Mah. Tamer Sokak 27, Osmangazi, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953761743",
+    "number": "27",
+    "streetName": "Tamer Sokak",
+    "truth": [
+     29.062997,
+     40.191156
+    ]
+   }
+  },
+  {
+   "id": "16-hide-12",
+   "text": "Minareliçavuş Mah. Sarı Caddesi 38, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056468",
+    "number": "38",
+    "streetName": "Sarı Caddesi",
+    "truth": [
+     28.952475,
+     40.244422
+    ]
+   }
+  },
+  {
+   "id": "16-hide-13",
+   "text": "Vanimehmet Mah. Buluş Caddesi 13, Kestel, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w514667995",
+    "number": "13",
+    "streetName": "Buluş Caddesi",
+    "truth": [
+     29.215567,
+     40.19915
+    ]
+   }
+  },
+  {
+   "id": "16-hide-14",
+   "text": "Karaağaç Mah. İpekçilik Caddesi 32, Yıldırım, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w261070990",
+    "number": "32",
+    "streetName": "İpekçilik Caddesi",
+    "truth": [
+     29.069197,
+     40.179629
+    ]
+   }
+  },
+  {
+   "id": "16-hide-15",
+   "text": "Işıktepe Mah. Kahverengi Caddesi 8, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162033",
+    "number": "8",
+    "streetName": "Kahverengi Caddesi",
+    "truth": [
+     28.95273,
+     40.224367
+    ]
+   }
+  },
+  {
+   "id": "16-hide-16",
+   "text": "30 Ağustos Zafer Mah. Çamlık Bulvarı 109, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1433972149",
+    "number": "109",
+    "streetName": "Çamlık Bulvarı",
+    "truth": [
+     28.841827,
+     40.198815
+    ]
+   }
+  },
+  {
+   "id": "16-hide-17",
+   "text": "Işıktepe Mah. Park Caddesi 8, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260420",
+    "number": "8",
+    "streetName": "Park Caddesi",
+    "truth": [
+     28.94546,
+     40.223343
+    ]
+   }
+  },
+  {
+   "id": "16-hide-18",
+   "text": "Minareliçavuş Mah. Sarı Caddesi 44, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056477",
+    "number": "44",
+    "streetName": "Sarı Caddesi",
+    "truth": [
+     28.947244,
+     40.24353
+    ]
+   }
+  },
+  {
+   "id": "16-hide-19",
+   "text": "Fethiye Mah. Gri Cadde 6, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11211844695",
+    "number": "6",
+    "streetName": "Gri Cadde",
+    "truth": [
+     28.962303,
+     40.236113
+    ]
+   }
+  },
+  {
+   "id": "16-hide-20",
+   "text": "Işıktepe Mah. 75. Yıl Bulvarı 15, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217260423",
+    "number": "15",
+    "streetName": "75. Yıl Bulvarı",
+    "truth": [
+     28.946796,
+     40.224284
+    ]
+   }
+  },
+  {
+   "id": "16-hide-21",
+   "text": "Minareliçavuş Mah. Mavi Caddesi 31, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056456",
+    "number": "31",
+    "streetName": "Mavi Caddesi",
+    "truth": [
+     28.952028,
+     40.248824
+    ]
+   }
+  },
+  {
+   "id": "16-hide-22",
+   "text": "Bağlaraltı Mah. A108. Sokak 5, Yıldırım, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12003598672",
+    "number": "5",
+    "streetName": "A108. Sokak",
+    "truth": [
+     29.131681,
+     40.178931
+    ]
+   }
+  },
+  {
+   "id": "16-hide-23",
+   "text": "Ata Mah. Orta Sokak 21, Gemlik, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031737",
+    "number": "21",
+    "streetName": "Orta Sokak",
+    "truth": [
+     29.135347,
+     40.416323
+    ]
+   }
+  },
+  {
+   "id": "16-hide-24",
+   "text": "Turgutalp Mah. Gaziosmanpaşa Sokak 6H, İnegöl, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w749694302",
+    "number": "6H",
+    "streetName": "Gaziosmanpaşa Sokak",
+    "truth": [
+     29.490255,
+     40.078699
+    ]
+   }
+  },
+  {
+   "id": "16-hide-25",
+   "text": "Minareliçavuş Mah. Gri Cadde 25, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056514",
+    "number": "25",
+    "streetName": "Gri Cadde",
+    "truth": [
+     28.951515,
+     40.241649
+    ]
+   }
+  },
+  {
+   "id": "16-hide-26",
+   "text": "19 Mayıs Mah. Tibet Caddesi 14, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi",
+    "truth": [
+     28.902245,
+     40.230626
+    ]
+   }
+  },
+  {
+   "id": "16-hide-27",
+   "text": "Süleymaniye Mah. Babacan Sokak 21/A, İnegöl, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak",
+    "truth": [
+     29.485548,
+     40.093437
+    ]
+   }
+  },
+  {
+   "id": "16-hide-28",
+   "text": "Hamitler Mah. Abdülhamit Han Caddesi 38, Osmangazi, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi",
+    "truth": [
+     28.979318,
+     40.251419
+    ]
+   }
+  },
+  {
+   "id": "16-hide-29",
+   "text": "Konak Mah. Kuşburnu Sokak 2, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak",
+    "truth": [
+     28.979416,
+     40.204471
+    ]
+   }
+  },
+  {
+   "id": "16-hide-30",
+   "text": "30 Ağustos Zafer Mah. Adalet Caddesi 11, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi",
+    "truth": [
+     28.843311,
+     40.196349
+    ]
+   }
+  },
+  {
+   "id": "16-hide-31",
+   "text": "Ata Mah. Alt Sokak 25, Gemlik, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak",
+    "truth": [
+     29.135284,
+     40.415973
+    ]
+   }
+  },
+  {
+   "id": "16-hide-32",
+   "text": "Balkan Mah. Naim Süleymanoğlu Bulvarı 1, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13995404516",
+    "number": "1",
+    "streetName": "Naim Süleymanoğlu Bulvarı",
+    "truth": [
+     28.81694,
+     40.200595
+    ]
+   }
+  },
+  {
+   "id": "16-hide-33",
+   "text": "Işıktepe Mah. Ormanlar Caddesi 6, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056536",
+    "number": "6",
+    "streetName": "Ormanlar Caddesi",
+    "truth": [
+     28.957689,
+     40.230624
+    ]
+   }
+  },
+  {
+   "id": "16-hide-34",
+   "text": "Turgutalp Mah. Uzay Sokak 19C, İnegöl, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w751520667",
+    "number": "19C",
+    "streetName": "Uzay Sokak",
+    "truth": [
+     29.489211,
+     40.078278
+    ]
+   }
+  },
+  {
+   "id": "16-hide-35",
+   "text": "Yenigün Mah. Piri Ateş Caddesi 19, Yenişehir, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1046270454",
+    "number": "19",
+    "streetName": "Piri Ateş Caddesi",
+    "truth": [
+     29.64377,
+     40.268874
+    ]
+   }
+  },
+  {
+   "id": "16-hide-36",
+   "text": "Turgutalp Mah. Uzay Sokak 19I, İnegöl, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w751520663",
+    "number": "19I",
+    "streetName": "Uzay Sokak",
+    "truth": [
+     29.490005,
+     40.077384
+    ]
+   }
+  },
+  {
+   "id": "16-hide-37",
+   "text": "Mollaarap Mah. 4. Vakıf Sokak 1/2, Yıldırım, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w376554755",
+    "number": "1/2",
+    "streetName": "4. Vakıf Sokak",
+    "truth": [
+     29.06543,
+     40.173874
+    ]
+   }
+  },
+  {
+   "id": "16-hide-38",
+   "text": "Işıktepe Mah. Kırmızı Caddesi 7C, Nilüfer, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212069444",
+    "number": "7C",
+    "streetName": "Kırmızı Caddesi",
+    "truth": [
+     28.961439,
+     40.230808
+    ]
+   }
+  },
+  {
+   "id": "16-hide-39",
+   "text": "Hamitler Mah. 1. Erkan Sokak 3, Osmangazi, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13252163986",
+    "number": "3",
+    "streetName": "1. Erkan Sokak",
+    "truth": [
+     28.9802,
+     40.250843
+    ]
+   }
+  },
+  {
+   "id": "16-hide-40",
+   "text": "Hamzabey Mah. Şehit Adnan Yıldız Sokak 5, Mustafakemalpaşa, Bursa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13194602509",
+    "number": "5",
+    "streetName": "Şehit Adnan Yıldız Sokak",
+    "truth": [
+     28.401537,
+     40.041943
+    ]
+   }
+  },
+  {
+   "id": "16-lang-1",
+   "text": "19 Mayis, 14 Tibet Avenue floor 8 apartment 6, Nilufer/Bursa",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-2",
+   "text": "Nilüfer, 19 Mayıs Ortsteil, Tibet Straße Nummer 14, 16919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-3",
+   "text": "бурса нилюфер, проспект тибет д. 14",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-4",
+   "text": "Λεωφόρος Tibet αρ. 14 όροφος 2 διαμέρισμα 2, μπουρσα νιλουφερ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-5",
+   "text": "19 Mayıs، جادة Tibet رقم 14،  Nilüfer",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964517638",
+    "number": "14",
+    "streetName": "Tibet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-6",
+   "text": "Babacan St 21/A, Bursa İnegöl, 16408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak"
+   }
+  },
+  {
+   "id": "16-lang-7",
+   "text": "INEGOL/BURSA SULEYMANİYE ORTSTEİL BABACAN GASSE NR. 21/A",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak"
+   }
+  },
+  {
+   "id": "16-lang-8",
+   "text": "сюлейманийе, ул. бабаджан дом 21/A, бурса инегёл",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak"
+   }
+  },
+  {
+   "id": "16-lang-9",
+   "text": "Οδός Babacan αρ. 21/A, ινεγκολ/μπουρσα",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak"
+   }
+  },
+  {
+   "id": "16-lang-10",
+   "text": "İnegöl Bursa, شارع Babacan رقم 21/A, 16334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "n4699020228",
+    "number": "21/A",
+    "streetName": "Babacan Sokak"
+   }
+  },
+  {
+   "id": "16-lang-11",
+   "text": "Hamitler Neighbourhood, 38 Abdülhamit Han Ave floor 2 apartment 6, Osmangazi/Bursa, 16715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-12",
+   "text": "Bursa Osmangazi Abdülhamit Han Straße Nummer 38 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-13",
+   "text": "микрорайон хамитлер, пр. абдюлхамит хан 38, османгази/бурса",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-14",
+   "text": "γειτονιά Hamitler, Λεωφ. αμπντουλχαμιτ χαν 38 όροφος 1 μπλοκ C διαμέρισμα 9, Bursa Osmangazi",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-15",
+   "text": "Hamitler، جادة Abdülhamit Han رقم 38 طابق 5 بلوك A شقة 30، Osmangazi/Bursa، 16497",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "w1354602150",
+    "number": "38",
+    "streetName": "Abdülhamit Han Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-16",
+   "text": "Bursa Nilüfer Konak Neighbourhood 2 Kuşburnu St",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak"
+   }
+  },
+  {
+   "id": "16-lang-17",
+   "text": "Konak, Kuşburnu Str. Nummer 2, Nilüfer ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak"
+   }
+  },
+  {
+   "id": "16-lang-18",
+   "text": "бурса нилюфер, микрорайон конак, ул. кушбурну д. 2 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak"
+   }
+  },
+  {
+   "id": "16-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΚΟΝΑΚ, ΟΔΌΣ KUŞBURNU ΑΡΙΘΜΌΣ 2, ΜΠΟΥΡΣΑ NILÜFER",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak"
+   }
+  },
+  {
+   "id": "16-lang-20",
+   "text": "حي Konak, شارع Kuşburnu رقم 2,  Nilüfer",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "w1561121334",
+    "number": "2",
+    "streetName": "Kuşburnu Sokak"
+   }
+  },
+  {
+   "id": "16-lang-21",
+   "text": "30 Agustos Zafer, Adalet Ave no 11, Bursa Nilufer",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-22",
+   "text": "30 Ağustos Zafer Ortsteil, Adalet Straße Nr. 11, Bursa Nilüfer, 16152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-23",
+   "text": "нилюфер/бурса, микрорайон 30 агустос зафер, пр. адалет д. 11",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-24",
+   "text": "30 Ağustos Zafer, Λεωφ. ανταλετ 11, νιλουφερ Bursa",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-25",
+   "text": "30 Ağustos Zafer، جادة Adalet رقم 11،  Nilüfer",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "n13078177048",
+    "number": "11",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "16-lang-26",
+   "text": "Ata Neighbourhood, Alt St number 25, Gemlik/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak"
+   }
+  },
+  {
+   "id": "16-lang-27",
+   "text": "Gemlik, Ata Ortsteil, Alt Str. 25",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak"
+   }
+  },
+  {
+   "id": "16-lang-28",
+   "text": "гемлик, ул. алт д. 25 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak"
+   }
+  },
+  {
+   "id": "16-lang-29",
+   "text": "Bursa γκεμλικ Οδός αλτ αριθμός 25",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak"
+   }
+  },
+  {
+   "id": "16-lang-30",
+   "text": "حي Ata، شارع Alt رقم 25، Bursa Gemlik",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "16",
+    "osm": "w479031739",
+    "number": "25",
+    "streetName": "Alt Sokak"
+   }
+  },
+  {
+   "id": "16-hard-1",
+   "text": "Karasu Sokak 1 Çamlıca",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1138325783",
+    "number": "1",
+    "streetName": "Karasu Sokak"
+   }
+  },
+  {
+   "id": "16-hard-2",
+   "text": "Tayakadın mah 18. Bahçe Sokak no:5 d:3 kat:2 Osmangazi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12953867394",
+    "number": "5",
+    "streetName": "18. Bahçe Sokak"
+   }
+  },
+  {
+   "id": "16-hard-3",
+   "text": "Osmangazi 2. Uçlu Sokak no33",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13668236968",
+    "number": "33",
+    "streetName": "2. Uçlu Sokak"
+   }
+  },
+  {
+   "id": "16-hard-4",
+   "text": "26 3. Baş Sokak Elmasbahçeler Osmangazi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1171931437",
+    "number": "26",
+    "streetName": "3. Baş Sokak"
+   }
+  },
+  {
+   "id": "16-hard-5",
+   "text": "MINARELICAVUS YESIL CADDE 10",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11212056451",
+    "number": "10",
+    "streetName": "Yeşil Cadde"
+   }
+  },
+  {
+   "id": "16-hard-6",
+   "text": "Osmangazi 1. Yenicami Sk apartmanı 14 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w247424190",
+    "number": "14",
+    "streetName": "1. Yenicami Sk"
+   }
+  },
+  {
+   "id": "16-hard-7",
+   "text": "Emek Zekai Gümüşdiş mahallesi Mudanya Caddesi 568 nolu bina Osmangazi/Bursa",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4686940747",
+    "number": "568",
+    "streetName": "Mudanya Caddesi"
+   }
+  },
+  {
+   "id": "16-hard-8",
+   "text": "Sıla 17 19 Mayıs Nilüfer",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13964484928",
+    "number": "17",
+    "streetName": "Sıla Caddesi"
+   }
+  },
+  {
+   "id": "16-hard-9",
+   "text": "Işıkepe mah Lacivert Caddesi 19 Nilüfer",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n11217162007",
+    "number": "19",
+    "streetName": "Lacivert Caddesi"
+   }
+  },
+  {
+   "id": "16-hard-10",
+   "text": "Ümit Kaftancıoğlu Caddesi 20 29 Ekim mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1456568421",
+    "number": "20",
+    "streetName": "Ümit Kaftancıoğlu Caddesi"
+   }
+  },
+  {
+   "id": "16-hard-11",
+   "text": "Osmangazi Gülbahçe Bekirdede Sokak 20, 34174",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n12121878805",
+    "number": "20",
+    "streetName": "Bekirdede Sokak"
+   }
+  },
+  {
+   "id": "16-hard-12",
+   "text": "Bursa Osmangazi 1. Sezen Sokak 7 Sakarya",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1451746667",
+    "number": "7",
+    "streetName": "1. Sezen Sokak"
+   }
+  },
+  {
+   "id": "16-poi-1",
+   "text": "Görükle Mesleki ve Teknik Anadolu Lisesi Nilüfer Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1155406745",
+    "kind": "school",
+    "streetName": "Görükle Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "16-poi-2",
+   "text": "Garipçetekke Muhtarlığı Mustafakemalpaşa Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1327508373",
+    "kind": "townhall",
+    "streetName": "Garipçetekke Muhtarlığı"
+   }
+  },
+  {
+   "id": "16-poi-3",
+   "text": "Mustafakemalpaşa 14 Eylül İlkokulu Mustafakemalpaşa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1320893440",
+    "kind": "school",
+    "streetName": "Mustafakemalpaşa 14 Eylül İlkokulu"
+   }
+  },
+  {
+   "id": "16-poi-4",
+   "text": "ali hadi turkay ilkokulu osmangazi bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w530365780",
+    "kind": "school",
+    "streetName": "Ali Hadi Türkay İlkokulu"
+   }
+  },
+  {
+   "id": "16-poi-5",
+   "text": "Yıldız Anadolu Lisesi Gürsu Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w738548909",
+    "kind": "school",
+    "streetName": "Yıldız Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "16-poi-6",
+   "text": "Anadolu Hastanesi Nilüfer Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n2096745663",
+    "kind": "hospital",
+    "streetName": "Anadolu Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-7",
+   "text": "davut zeki akpinar yatili bolge ortaokulu keles bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1384580586",
+    "kind": "school",
+    "streetName": "Davut Zeki Akpınar Yatılı Bölge Ortaokulu"
+   }
+  },
+  {
+   "id": "16-poi-8",
+   "text": "bursa buyuksehir belediyesi tarihi hizmet binasi osmangazi bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1127745416",
+    "kind": "townhall",
+    "streetName": "Bursa Büyükşehir Belediyesi Tarihi Hizmet Binası"
+   }
+  },
+  {
+   "id": "16-poi-9",
+   "text": "akcasusurluk ilkokulu karacabey bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1342403352",
+    "kind": "school",
+    "streetName": "Akçasusurluk İlkokulu"
+   }
+  },
+  {
+   "id": "16-poi-10",
+   "text": "Müşerref-muzaffer Samda Ortaokulu İnegöl Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w744862450",
+    "kind": "school",
+    "streetName": "Müşerref-muzaffer Samda Ortaokulu"
+   }
+  },
+  {
+   "id": "16-poi-11",
+   "text": "Musa Fırat Coşkun İlkokulu Kestel",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w323607761",
+    "kind": "school",
+    "streetName": "Musa Fırat Coşkun İlkokulu"
+   }
+  },
+  {
+   "id": "16-poi-12",
+   "text": "Yunuseli Anaokulu Osmangazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n7709839169",
+    "kind": "school",
+    "streetName": "Yunuseli Anaokulu"
+   }
+  },
+  {
+   "id": "16-poi-13",
+   "text": "osmangazi imkb mesleki ve teknik anadolu lisesi osmangazi bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w430030384",
+    "kind": "school",
+    "streetName": "Osmangazi İMKB Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "16-poi-14",
+   "text": "Bursa Yüksek İhtisas Eğitim ve Araştırma Hastanesi Nilüfer",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1157168602",
+    "kind": "hospital",
+    "streetName": "Bursa Yüksek İhtisas Eğitim ve Araştırma Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-15",
+   "text": "ozdilek inegol bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w457194620",
+    "kind": "mall",
+    "streetName": "Özdilek"
+   }
+  },
+  {
+   "id": "16-poi-16",
+   "text": "Orhangazi belediye binası Orhangazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w463640516",
+    "kind": "townhall",
+    "streetName": "Orhangazi Belediyesi"
+   }
+  },
+  {
+   "id": "16-poi-17",
+   "text": "Küçükkumla Sağlık Ocağı Gemlik Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13864116302",
+    "kind": "hospital",
+    "streetName": "Küçükkumla Sağlık Ocağı"
+   }
+  },
+  {
+   "id": "16-poi-18",
+   "text": "Ortasarıbey Muhtarlığı Karacabey",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1328360550",
+    "kind": "townhall",
+    "streetName": "Ortasarıbey Muhtarlığı"
+   }
+  },
+  {
+   "id": "16-poi-19",
+   "text": "Çocuk Hastanesi Osmangazi Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w534271451",
+    "kind": "hospital",
+    "streetName": "Çocuk Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-20",
+   "text": "Yıldırım Belediyesi Tıp Merkezi Yıldırım Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w480990380",
+    "kind": "hospital",
+    "streetName": "Yıldırım Belediyesi Tıp Merkezi"
+   }
+  },
+  {
+   "id": "16-poi-21",
+   "text": "Özel Jimer Hastanesi Nilüfer",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n4999155322",
+    "kind": "hospital",
+    "streetName": "Özel Jimer Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-22",
+   "text": "trio meydan nilufer bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w462301212",
+    "kind": "mall",
+    "streetName": "Trio Meydan"
+   }
+  },
+  {
+   "id": "16-poi-23",
+   "text": "yenisehir devlet hastane yenisehir bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w864700743",
+    "kind": "hospital",
+    "streetName": "Yenişehir Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-24",
+   "text": "ilker celikcan fizik tedavi ve rehabilitasyon hastane osmangazi bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w441403984",
+    "kind": "hospital",
+    "streetName": "İlker Çelikcan Fizik Tedavi ve Rehabilitasyon Hastanesi"
+   }
+  },
+  {
+   "id": "16-poi-25",
+   "text": "VM Medical Park Osmangazi Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w411659382",
+    "kind": "hospital",
+    "streetName": "VM Medical Park"
+   }
+  },
+  {
+   "id": "16-poi-26",
+   "text": "Nilpark Nilüfer Bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w466672910",
+    "kind": "mall",
+    "streetName": "Nilpark"
+   }
+  },
+  {
+   "id": "16-poi-27",
+   "text": "Bursa Dr. Ayten Bozkaya Spastik Çocuklar Hastanesi Ve Rehabilitasyon Merkezi Osmangazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "n13836159666",
+    "kind": "hospital",
+    "streetName": "Bursa Dr. Ayten Bozkaya Spastik Çocuklar Hastanesi Ve Rehabilitasyon Merkezi"
+   }
+  },
+  {
+   "id": "16-poi-28",
+   "text": "Sur Yapı Marka AVM Nilüfer",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w557570250",
+    "kind": "mall",
+    "streetName": "Sur Yapı Marka AVM"
+   }
+  },
+  {
+   "id": "16-poi-29",
+   "text": "meydan ozluce nilufer bursa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1156299881",
+    "kind": "mall",
+    "streetName": "Meydan Özlüce"
+   }
+  },
+  {
+   "id": "16-poi-30",
+   "text": "Gemlik Belediyesi Gemlik",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1378078075",
+    "kind": "townhall",
+    "streetName": "Gemlik Belediyesi"
+   }
+  },
+  {
+   "id": "16-poi-31",
+   "text": "karacabey belediye binasi karacabey",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w379316940",
+    "kind": "townhall",
+    "streetName": "Karacabey Belediyesi"
+   }
+  },
+  {
+   "id": "16-poi-32",
+   "text": "kestel belediye binasi kestel",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w323607767",
+    "kind": "townhall",
+    "streetName": "Kestel Belediyesi"
+   }
+  },
+  {
+   "id": "16-poi-33",
+   "text": "t.c. harmancik belediye binasi harmancik",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "16",
+    "osm": "w1337520120",
+    "kind": "townhall",
+    "streetName": "T.C. Harmancık Belediyesi"
+   }
+  }
+ ]
+}

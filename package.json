@@ -1,0 +1,73 @@
+{
+  "name": "@yuksi/geo",
+  "version": "0.3.0",
+  "description": "Offline maps, door-level address search and route planning for React Native",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./core": "./src/core/index.ts",
+    "./native": "./src/native/index.ts",
+    "./app.plugin.js": "./app.plugin.js"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit && tsc --noEmit -p example/tsconfig.check.json",
+    "lint": "eslint .",
+    "test": "jest",
+    "verify": "npm run typecheck && npm run lint && jest --coverage",
+    "mutation": "stryker run",
+    "gates": "tsx gates/cli.ts",
+    "try": "tsx scripts/try.ts",
+    "device-report": "tsx scripts/device-report.ts",
+    "serve:packs": "tsx scripts/serve-packs.ts",
+    "make:test-data": "tsx scripts/make-test-data.ts",
+    "data:blocks": "tsx scripts/add-block-hashes.ts",
+    "data:sources": "tsx scripts/fetch-sources.ts",
+    "data:build": "tsx scripts/data-build.ts",
+    "corrections": "tsx scripts/corrections.ts",
+    "sim": "tsx scripts/sim.ts",
+    "sdk-check": "tsx scripts/package-check.ts",
+    "build-check": "tsx scripts/check-builds.ts",
+    "data:release": "tsx scripts/data-release.ts",
+    "data:publish": "tsx scripts/data-publish.ts",
+    "golden:refresh": "tsx scripts/golden-refresh.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@maplibre/maplibre-gl-style-spec": "^26.2.1",
+    "@stryker-mutator/core": "^10.0.0",
+    "@stryker-mutator/jest-runner": "^10.0.0",
+    "@swc/core": "^1.16.18",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.5",
+    "eslint": "^9.39.5",
+    "fast-check": "^4.10.2",
+    "jest": "^30.5.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.0"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.9.7",
+    "@noble/hashes": "^1.8.0",
+    "@protomaps/basemaps": "5.7.2"
+  },
+  "files": [
+    "src",
+    "app.plugin.js",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@maplibre/maplibre-react-native": ">=11.5.0",
+    "expo": ">=57.0.0",
+    "expo-crypto": ">=57.0.0",
+    "expo-file-system": ">=57.0.0",
+    "expo-network": ">=57.0.0",
+    "expo-sqlite": ">=57.0.0",
+    "react": ">=19.0.0",
+    "react-native": ">=0.86.0"
+  }
+}

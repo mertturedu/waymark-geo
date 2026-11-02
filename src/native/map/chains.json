@@ -1,0 +1,694 @@
+[
+  {
+    "id": "a101",
+    "group": "market",
+    "patterns": [
+      "a101",
+      "a 101"
+    ],
+    "text": "A101",
+    "fill": "009FE3",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "bim",
+    "group": "market",
+    "patterns": [
+      "bim"
+    ],
+    "text": "BİM",
+    "fill": "E2001A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "sok",
+    "group": "market",
+    "patterns": [
+      "sok",
+      "sok market"
+    ],
+    "text": "ŞOK",
+    "fill": "FFD500",
+    "ink": "1A1A1A"
+  },
+  {
+    "id": "migros",
+    "group": "market",
+    "patterns": [
+      "migros",
+      "5m migros",
+      "migros jet",
+      "migros hemen"
+    ],
+    "text": "MİGROS",
+    "fill": "F7821B",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "carrefoursa",
+    "group": "market",
+    "patterns": [
+      "carrefoursa",
+      "carrefour",
+      "gurme carrefoursa"
+    ],
+    "text": "CSA",
+    "fill": "0050AA",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "macro",
+    "group": "market",
+    "patterns": [
+      "macro",
+      "macrocenter",
+      "macro center"
+    ],
+    "text": "MACRO",
+    "fill": "7B1E3A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "file",
+    "group": "market",
+    "patterns": [
+      "file",
+      "file market"
+    ],
+    "text": "FİLE",
+    "fill": "D4001A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "hakmar",
+    "group": "market",
+    "patterns": [
+      "hakmar",
+      "hakmar express"
+    ],
+    "text": "HAKMAR",
+    "fill": "00853E",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "kipa",
+    "group": "market",
+    "patterns": [
+      "kipa"
+    ],
+    "text": "KİPA",
+    "fill": "1B3F94",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "bizim",
+    "group": "market",
+    "patterns": [
+      "bizim toptan",
+      "bizim market"
+    ],
+    "text": "BİZİM",
+    "fill": "F2B600",
+    "ink": "1A1A1A"
+  },
+  {
+    "id": "metro",
+    "group": "market",
+    "patterns": [
+      "metro",
+      "metro toptancı market"
+    ],
+    "text": "METRO",
+    "fill": "003A8F",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "tekzen",
+    "group": "shop",
+    "patterns": [
+      "tekzen"
+    ],
+    "text": "TEKZEN",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "koctas",
+    "group": "shop",
+    "patterns": [
+      "koctas"
+    ],
+    "text": "KOÇTAŞ",
+    "fill": "F58220",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "bauhaus",
+    "group": "shop",
+    "patterns": [
+      "bauhaus"
+    ],
+    "text": "BAUHAUS",
+    "fill": "D2232A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "teknosa",
+    "group": "shop",
+    "patterns": [
+      "teknosa"
+    ],
+    "text": "TEKNOSA",
+    "fill": "F37021",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "mediamarkt",
+    "group": "shop",
+    "patterns": [
+      "mediamarkt",
+      "media markt"
+    ],
+    "text": "MM",
+    "fill": "DF0000",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "vatan",
+    "group": "shop",
+    "patterns": [
+      "vatan bilgisayar",
+      "vatan"
+    ],
+    "text": "VATAN",
+    "fill": "003B7A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "gratis",
+    "group": "shop",
+    "patterns": [
+      "gratis"
+    ],
+    "text": "GRATİS",
+    "fill": "E4007C",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "watsons",
+    "group": "shop",
+    "patterns": [
+      "watsons"
+    ],
+    "text": "WATSONS",
+    "fill": "00A3AD",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "rossmann",
+    "group": "shop",
+    "patterns": [
+      "rossmann"
+    ],
+    "text": "ROSSMANN",
+    "fill": "C8102E",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "lcw",
+    "group": "shop",
+    "patterns": [
+      "lc waikiki",
+      "lcw",
+      "lcwaikiki"
+    ],
+    "text": "LCW",
+    "fill": "0072BC",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "defacto",
+    "group": "shop",
+    "patterns": [
+      "defacto"
+    ],
+    "text": "DEFACTO",
+    "fill": "111111",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "koton",
+    "group": "shop",
+    "patterns": [
+      "koton"
+    ],
+    "text": "KOTON",
+    "fill": "2B2B2B",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "flo",
+    "group": "shop",
+    "patterns": [
+      "flo",
+      "flo ayakkabi"
+    ],
+    "text": "FLO",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "vodafone",
+    "group": "shop",
+    "patterns": [
+      "vodafone"
+    ],
+    "text": "VODAFONE",
+    "fill": "E60000",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "turkcell",
+    "group": "shop",
+    "patterns": [
+      "turkcell"
+    ],
+    "text": "TURKCELL",
+    "fill": "FFC600",
+    "ink": "0A2E6E"
+  },
+  {
+    "id": "turktelekom",
+    "group": "shop",
+    "patterns": [
+      "turk telekom"
+    ],
+    "text": "TT",
+    "fill": "00A6E3",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "opet",
+    "group": "fuel",
+    "patterns": [
+      "opet"
+    ],
+    "text": "OPET",
+    "fill": "00549F",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "shell",
+    "group": "fuel",
+    "patterns": [
+      "shell"
+    ],
+    "text": "SHELL",
+    "fill": "FBCE07",
+    "ink": "C8102E"
+  },
+  {
+    "id": "bp",
+    "group": "fuel",
+    "patterns": [
+      "bp",
+      "bpet"
+    ],
+    "text": "BP",
+    "fill": "009B3A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "po",
+    "group": "fuel",
+    "patterns": [
+      "petrol ofisi",
+      "po"
+    ],
+    "text": "PO",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "total",
+    "group": "fuel",
+    "patterns": [
+      "totalenergies",
+      "total"
+    ],
+    "text": "TOTAL",
+    "fill": "ED1C24",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "aytemiz",
+    "group": "fuel",
+    "patterns": [
+      "aytemiz"
+    ],
+    "text": "AYTEMİZ",
+    "fill": "0B3D91",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "lukoil",
+    "group": "fuel",
+    "patterns": [
+      "lukoil"
+    ],
+    "text": "LUKOIL",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "kadoil",
+    "group": "fuel",
+    "patterns": [
+      "kadoil"
+    ],
+    "text": "KADOİL",
+    "fill": "1B5E20",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "starbucks",
+    "group": "food",
+    "patterns": [
+      "starbucks"
+    ],
+    "text": "S",
+    "fill": "00704A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "mcdonalds",
+    "group": "food",
+    "patterns": [
+      "mcdonalds",
+      "mcdonald s"
+    ],
+    "text": "M",
+    "fill": "FFC72C",
+    "ink": "DA291C"
+  },
+  {
+    "id": "burgerking",
+    "group": "food",
+    "patterns": [
+      "burger king"
+    ],
+    "text": "BK",
+    "fill": "D62300",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "dominos",
+    "group": "food",
+    "patterns": [
+      "domino s",
+      "dominos"
+    ],
+    "text": "DOMINO'S",
+    "fill": "006491",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "kfc",
+    "group": "food",
+    "patterns": [
+      "kfc"
+    ],
+    "text": "KFC",
+    "fill": "E4002B",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "popeyes",
+    "group": "food",
+    "patterns": [
+      "popeyes",
+      "popeyes louisiana kitchen"
+    ],
+    "text": "POPEYES",
+    "fill": "F26A21",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "komagene",
+    "group": "food",
+    "patterns": [
+      "komagene"
+    ],
+    "text": "KOMAGENE",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "kahvedunyasi",
+    "group": "food",
+    "patterns": [
+      "kahve dunyasi"
+    ],
+    "text": "KD",
+    "fill": "6B3A1E",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "simitsarayi",
+    "group": "food",
+    "patterns": [
+      "simit sarayi"
+    ],
+    "text": "SS",
+    "fill": "C8102E",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "mado",
+    "group": "food",
+    "patterns": [
+      "mado"
+    ],
+    "text": "MADO",
+    "fill": "1C3F94",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "isbank",
+    "group": "money",
+    "patterns": [
+      "turkiye is bankasi",
+      "is bankasi"
+    ],
+    "text": "İŞ",
+    "fill": "003D8F",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "ziraat",
+    "group": "money",
+    "patterns": [
+      "ziraat bankasi",
+      "ziraat"
+    ],
+    "text": "ZİRAAT",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "halkbank",
+    "group": "money",
+    "patterns": [
+      "halkbank",
+      "turkiye halk bankasi"
+    ],
+    "text": "HALK",
+    "fill": "0066B3",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "garanti",
+    "group": "money",
+    "patterns": [
+      "garanti bbva",
+      "garanti bankasi",
+      "garanti"
+    ],
+    "text": "GARANTİ",
+    "fill": "00854A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "akbank",
+    "group": "money",
+    "patterns": [
+      "akbank"
+    ],
+    "text": "AKBANK",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "yapikredi",
+    "group": "money",
+    "patterns": [
+      "yapi kredi",
+      "yapi ve kredi bankasi"
+    ],
+    "text": "YKB",
+    "fill": "0B3D91",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "vakifbank",
+    "group": "money",
+    "patterns": [
+      "vakifbank",
+      "turkiye vakiflar bankasi"
+    ],
+    "text": "VAKIF",
+    "fill": "F5A800",
+    "ink": "1A1A1A"
+  },
+  {
+    "id": "qnb",
+    "group": "money",
+    "patterns": [
+      "qnb",
+      "qnb finansbank",
+      "finansbank"
+    ],
+    "text": "QNB",
+    "fill": "7D1E6A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "denizbank",
+    "group": "money",
+    "patterns": [
+      "denizbank"
+    ],
+    "text": "DENİZ",
+    "fill": "0072CE",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "teb",
+    "group": "money",
+    "patterns": [
+      "teb",
+      "turk ekonomi bankasi"
+    ],
+    "text": "TEB",
+    "fill": "00833E",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "kuveytturk",
+    "group": "money",
+    "patterns": [
+      "kuveyt turk",
+      "kuveyt turk katilim bankasi"
+    ],
+    "text": "KUVEYT",
+    "fill": "007A3D",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "yurtici",
+    "group": "cargo",
+    "patterns": [
+      "yurtici kargo",
+      "yurtici"
+    ],
+    "text": "YURTİÇİ",
+    "fill": "0B3D91",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "aras",
+    "group": "cargo",
+    "patterns": [
+      "aras kargo"
+    ],
+    "text": "ARAS",
+    "fill": "E30613",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "mng",
+    "group": "cargo",
+    "patterns": [
+      "mng kargo"
+    ],
+    "text": "MNG",
+    "fill": "F26A21",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "ptt",
+    "group": "cargo",
+    "patterns": [
+      "ptt kargo",
+      "ptt"
+    ],
+    "text": "PTT",
+    "fill": "FFCC00",
+    "ink": "003B71"
+  },
+  {
+    "id": "surat",
+    "group": "cargo",
+    "patterns": [
+      "surat kargo"
+    ],
+    "text": "SÜRAT",
+    "fill": "D71920",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "hepsijet",
+    "group": "cargo",
+    "patterns": [
+      "hepsijet",
+      "hepsi jet"
+    ],
+    "text": "HEPSİJET",
+    "fill": "FF6000",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "trendyolexpress",
+    "group": "cargo",
+    "patterns": [
+      "trendyol express",
+      "trendyol ekspres"
+    ],
+    "text": "TY EXPRESS",
+    "fill": "F27A1A",
+    "ink": "FFFFFF"
+  },
+  {
+    "id": "ups",
+    "group": "cargo",
+    "patterns": [
+      "ups kargo",
+      "ups express"
+    ],
+    "text": "UPS",
+    "fill": "351C15",
+    "ink": "FFB500"
+  },
+  {
+    "id": "dhl",
+    "group": "cargo",
+    "patterns": [
+      "dhl express",
+      "dhl kargo",
+      "dhl"
+    ],
+    "text": "DHL",
+    "fill": "FFCC00",
+    "ink": "D40511"
+  }
+]

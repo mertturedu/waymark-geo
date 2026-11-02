@@ -1,0 +1,2502 @@
+[
+ {
+  "q": "Mahmutbey Caddesi",
+  "name": "Mahmutbey Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Yazıköy Sokağı",
+  "name": "Yazıköy Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Akkuş Çıkmazı",
+  "name": "Akkuş Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Billurcu Çıkmazı Sokağı",
+  "name": "Billurcu Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Yeşilbaş Çıkmazı Sokağı",
+  "name": "Yeşilbaş Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Bayramoğlu Sokağı",
+  "name": "Bayramoğlu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Selvi Sokağı",
+  "name": "Selvi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Anadolu Sokağı",
+  "name": "Anadolu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Oyuk Duvar Sokağı",
+  "name": "Oyuk Duvar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1. Kartepe Sokağı",
+  "name": "1. Kartepe Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Halay Sokagi",
+  "name": "Halay Sokagi",
+  "typo": false
+ },
+ {
+  "q": "1795. Sokak",
+  "name": "1795. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Laleül Sokağı",
+  "name": "Lalegül Sokağı",
+  "typo": true
+ },
+ {
+  "q": "2. Kavak Sokağı",
+  "name": "2. Kavak Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Alev Sokağı",
+  "name": "Alev Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Karçubuk Sokağı",
+  "name": "Karaçubuk Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Yakut Sokak",
+  "name": "Yakut Sokak",
+  "typo": false
+ },
+ {
+  "q": "Toprakkale Çıkmazı Sokaḡı",
+  "name": "Toprakkale Çıkmazı Sokaḡı",
+  "typo": false
+ },
+ {
+  "q": "Gmrükçüler Sokak",
+  "name": "Gümrükçüler Sokak",
+  "typo": true
+ },
+ {
+  "q": "Kocayusuf Sokağı",
+  "name": "Kocayusuf Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Barbaros Sk.",
+  "name": "Barbaros Sk.",
+  "typo": false
+ },
+ {
+  "q": "Asri Sokak",
+  "name": "Asri Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sazlı Sokak",
+  "name": "Sazlı Sokak",
+  "typo": false
+ },
+ {
+  "q": "K-2 Topkapı Kavşağı",
+  "name": "K-2 Topkapı Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "Arpa Emini Köprüsü Sokağı",
+  "name": "Arpa Emini Köprüsü Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Camii Çımazı",
+  "name": "Camii Çıkmazı",
+  "typo": true
+ },
+ {
+  "q": "Orkinos Sokağı",
+  "name": "Orkinos Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Özgül Aralığ",
+  "name": "Özgül Aralığı",
+  "typo": true
+ },
+ {
+  "q": "Giyimkent 2. Sokak",
+  "name": "Giyimkent 2. Sokak",
+  "typo": false
+ },
+ {
+  "q": "İham Sokağı",
+  "name": "İhram Sokağı",
+  "typo": true
+ },
+ {
+  "q": "1111/1. Sokak",
+  "name": "1111/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ender Sk.",
+  "name": "Ender Sk.",
+  "typo": false
+ },
+ {
+  "q": "Meftun Sokağı",
+  "name": "Meftun Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2311. Sokak",
+  "name": "2311. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sabırlı Sokak",
+  "name": "Sabırlı Sokak",
+  "typo": false
+ },
+ {
+  "q": "Bostaniçi Sokağı",
+  "name": "Bostaniçi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Akçakiraz Sokağı",
+  "name": "Akçakiraz Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Tütsülü Sokağ",
+  "name": "Tütsülü Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Koçbey Sokağı",
+  "name": "Koçbey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Göknur Sokak",
+  "name": "Göknur Sokak",
+  "typo": false
+ },
+ {
+  "q": "Doğan Araslı Bulvarı",
+  "name": "Doğan Araslı Bulvarı",
+  "typo": false
+ },
+ {
+  "q": "Dericiler B Blok Sokağı",
+  "name": "Dericiler B Blok Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Cansel Sokağı",
+  "name": "Cansel Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Yaldız Sokağı",
+  "name": "Yaldız Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Şevkat Sokağı",
+  "name": "Şevkat Sokağı",
+  "typo": false
+ },
+ {
+  "q": "GoncaSokak",
+  "name": "GoncaSokak",
+  "typo": false
+ },
+ {
+  "q": "Cazibe Skak",
+  "name": "Cazibe Sokak",
+  "typo": true
+ },
+ {
+  "q": "Dağlıç Sk.",
+  "name": "Dağlıç Sk.",
+  "typo": false
+ },
+ {
+  "q": "ÇeltikSokağı",
+  "name": "Çeltik Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Tütün Soka",
+  "name": "Tütün Sokak",
+  "typo": true
+ },
+ {
+  "q": "Akyazan Sokağı",
+  "name": "Akyazan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Piri Çavuş Sokağı",
+  "name": "Piri Çavuş Sokağı",
+  "typo": false
+ },
+ {
+  "q": "G-737 Sokağı",
+  "name": "G-737 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Afyon Caddesi",
+  "name": "Afyon Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Dost Sokağı",
+  "name": "Dost Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Milli Sokağı",
+  "name": "Milli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Devir Sk.",
+  "name": "Devir Sk.",
+  "typo": false
+ },
+ {
+  "q": "Fevzi Şeker Sokğı",
+  "name": "Fevzi Şeker Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Ersin Soak",
+  "name": "Ersin Sokak",
+  "typo": true
+ },
+ {
+  "q": "Moral Sokağı",
+  "name": "Moral Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çeşni Sokak",
+  "name": "Çeşni Sokak",
+  "typo": false
+ },
+ {
+  "q": "Manastırlı Rıfat Sokağı",
+  "name": "Manastırlı Rıfat Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Alaçam Cadesi",
+  "name": "Alaçam Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Ramazan Efendi Cami Aralığı Sokağı",
+  "name": "Ramazan Efendi Cami Aralığı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Biruni Sokak",
+  "name": "Biruni Sokak",
+  "typo": false
+ },
+ {
+  "q": "1325/1. Sokak",
+  "name": "1325/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Aydınlık Sokak",
+  "name": "Aydınlık Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kuzu Sokak",
+  "name": "Kuzu Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ahbap okak",
+  "name": "Ahbap Sokak",
+  "typo": true
+ },
+ {
+  "q": "Cami Sokağı",
+  "name": "Cami Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Göksu Sokağı",
+  "name": "Göksu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Oya Sokak",
+  "name": "Oya Sokak",
+  "typo": false
+ },
+ {
+  "q": "Dostlar Sokak",
+  "name": "Dostlar Sokak",
+  "typo": false
+ },
+ {
+  "q": "Değirmen Sokak",
+  "name": "Değirmen Sokak",
+  "typo": false
+ },
+ {
+  "q": "Meclis-i Mebusan Caddesi",
+  "name": "Meclis-i Mebusan Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Kızılay Bulvarı",
+  "name": "Kızılay Bulvarı",
+  "typo": false
+ },
+ {
+  "q": "Deryalı Sokağı",
+  "name": "Deryalı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dercan Sokak",
+  "name": "Dercan Sokak",
+  "typo": false
+ },
+ {
+  "q": "Aydınlık Skak",
+  "name": "Aydınlık Sokak",
+  "typo": true
+ },
+ {
+  "q": "Defie Sokağı",
+  "name": "Define Sokağı",
+  "typo": true
+ },
+ {
+  "q": "1596. Sokak",
+  "name": "1596. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Küheylan Sokağı",
+  "name": "Küheylan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hasan Kaya Sokak",
+  "name": "Hasan Kaya Sokak",
+  "typo": false
+ },
+ {
+  "q": "Resne Sokağı",
+  "name": "Resne Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Trabzon Caddesi",
+  "name": "Trabzon Caddesi",
+  "typo": false
+ },
+ {
+  "q": "A Sokağı",
+  "name": "A Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Karagöz Tekkesi Sokağı",
+  "name": "Karagöz Tekkesi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çamlık Yokuşu Sokağı",
+  "name": "Çamlık Yokuşu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "858/1. Sokak",
+  "name": "858/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Menzilhane Caddesi",
+  "name": "Menzilhane Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Aslanlı Sokağı",
+  "name": "Aslanlı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kemalettin Sokağı",
+  "name": "Kemalettin Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hekimoğlu Alipaşa Caddesi",
+  "name": "Hekimoğlu Alipaşa Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Yali - Esenyurdum Çıkmazı",
+  "name": "Yali - Esenyurdum Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "1845. Sokak",
+  "name": "1845. Sokak",
+  "typo": false
+ },
+ {
+  "q": "2127. Sokak",
+  "name": "2127. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Akarsu Sk.",
+  "name": "Akarsu Sk.",
+  "typo": false
+ },
+ {
+  "q": "Olimpiyat Caddesi",
+  "name": "Olimpiyat Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şengül Sokağı",
+  "name": "Şengül Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Miroğlu Sokağı",
+  "name": "Miroğlu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Yağmur Çıkmazı Sokak",
+  "name": "Yağmur Çıkmazı Sokak",
+  "typo": false
+ },
+ {
+  "q": "Efeler Caddesi",
+  "name": "Efeler Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Zafer Kursun Cd.",
+  "name": "Zafer Kursun Cd.",
+  "typo": false
+ },
+ {
+  "q": "Ecla Sokağı",
+  "name": "Ecla Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Mezbaha Sokağı",
+  "name": "Mezbaha Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Yama Sokak",
+  "name": "Yaman Sokak",
+  "typo": true
+ },
+ {
+  "q": "118 Sokak",
+  "name": "118 Sokak",
+  "typo": false
+ },
+ {
+  "q": "25. Sokağı",
+  "name": "25. Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Mümtaz Tarhan Alt Geçidi",
+  "name": "Mümtaz Tarhan Alt Geçidi",
+  "typo": false
+ },
+ {
+  "q": "İsmail Paşa Sokağı",
+  "name": "İsmail Paşa Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hacı Reşit Bey Sokağı",
+  "name": "Hacı Reşit Bey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "84/3. Sokak",
+  "name": "84/3. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Bllur Caddesi",
+  "name": "Billur Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Cahide Sokak",
+  "name": "Cahide Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kurtçu Hamam Sokağı",
+  "name": "Kurtçu Hamam Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Taşpınar Sokağı",
+  "name": "Taşpınar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Amir Sokağı",
+  "name": "Amir Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kanarya Sokağı",
+  "name": "Kanarya Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hak Sokağı",
+  "name": "Hak Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Gebze Kavşağı",
+  "name": "Gebze Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "D020",
+  "name": "D020",
+  "typo": false
+ },
+ {
+  "q": "876/1. Sokak",
+  "name": "876/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ihlara Vadisi Sokağı",
+  "name": "Ihlara Vadisi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Karcıkent Sokağı",
+  "name": "Karcıkent Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Mümin Sokağı",
+  "name": "Mümin Sokağı",
+  "typo": false
+ },
+ {
+  "q": "667. Sokak",
+  "name": "667. Sokak",
+  "typo": false
+ },
+ {
+  "q": "1. Kardelen Sokak",
+  "name": "1. Kardelen Sokak",
+  "typo": false
+ },
+ {
+  "q": "886. Sokak",
+  "name": "886. Sokak",
+  "typo": false
+ },
+ {
+  "q": "İhvanlar Caddei",
+  "name": "İhvanlar Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Giray Sokağı",
+  "name": "Giray Sokağı",
+  "typo": false
+ },
+ {
+  "q": "3. Cadde",
+  "name": "3. Cadde",
+  "typo": false
+ },
+ {
+  "q": "Türkü Sokağı",
+  "name": "Türkün Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Ağaç Köprü Sokağı",
+  "name": "Ağaç Köprü Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kubilaybey Sokağ",
+  "name": "Kubilaybey Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Serhat Kale Sokağı",
+  "name": "Serhat Kale Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Tekkiraz Sokak",
+  "name": "Tekkiraz Sokak",
+  "typo": false
+ },
+ {
+  "q": "Timurhan Sokak",
+  "name": "Timurhan Sokak",
+  "typo": false
+ },
+ {
+  "q": "Akoylu Sokağı",
+  "name": "Aksoylu Sokağı",
+  "typo": true
+ },
+ {
+  "q": "1989. Sokak",
+  "name": "1989. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Berker Sokak",
+  "name": "Berker Sokak",
+  "typo": false
+ },
+ {
+  "q": "Nur-u Osmaniye Caddesi",
+  "name": "Nur-u Osmaniye Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şehit Ertuğrl Kabataş Caddesi",
+  "name": "Şehit Ertuğrul Kabataş Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Doğançam Sokağı",
+  "name": "Doğançam Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Vakkas Sokak",
+  "name": "Vakkas Sokak",
+  "typo": false
+ },
+ {
+  "q": "Artan Sokak",
+  "name": "Artan Sokak",
+  "typo": false
+ },
+ {
+  "q": "İnönü Çıkmazı",
+  "name": "İnönü Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Kandemir Sokağı",
+  "name": "Kandemir Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ünsiyet Sokak",
+  "name": "Ünsiyet Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kurtuluş Fırını Sokağı",
+  "name": "Kurtuluş Fırını Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Davutoğlu Sokağı",
+  "name": "Davutoğlu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Seri Evler Sokağı",
+  "name": "Seri Evler Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Oğuz Sk.",
+  "name": "Oğuz Sk.",
+  "typo": false
+ },
+ {
+  "q": "Kemankeş Caddesi",
+  "name": "Kemankeş Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şehit Tarık Aslanbaşı Sokağı",
+  "name": "Şehit Tarık Aslanbaşı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dalaman Sokak",
+  "name": "Dalaman Sokak",
+  "typo": false
+ },
+ {
+  "q": "Numan Tekcan Sokağı",
+  "name": "Numan Tekcan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Fazilet Çıkmazı",
+  "name": "Fazilet Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Demirciler OSB Kavşağı",
+  "name": "Demirciler OSB Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "G-750 Sokağı",
+  "name": "G-750 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dr. Nasırbey Sokağı",
+  "name": "Dr. Nasırbey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Vekil Sokak",
+  "name": "Vekil Sokak",
+  "typo": false
+ },
+ {
+  "q": "Yeşilçim Sokağı",
+  "name": "Yeşilçim Sokağı",
+  "typo": false
+ },
+ {
+  "q": "927/2. Sokak",
+  "name": "927/2. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Büyük Cami Sokağı",
+  "name": "Büyük Cami Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Havacı Şinasi Sokağı",
+  "name": "Havacı Şinasi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Minnet Sokağı",
+  "name": "Minnet Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Sayman Sokağı",
+  "name": "Sayman Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Algül Sokağı",
+  "name": "Algül Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çağlayan Çıkmazı Sokağı",
+  "name": "Çağlayan Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Halid okağı",
+  "name": "Halid Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Çambel Sokak",
+  "name": "Çambel Sokak",
+  "typo": false
+ },
+ {
+  "q": "Garajaltı Sokağı",
+  "name": "Garajaltı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Melek Sokak",
+  "name": "Melek Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kanaya Çiçeği Çıkmazı",
+  "name": "Kanarya Çiçeği Çıkmazı",
+  "typo": true
+ },
+ {
+  "q": "297. Sokak",
+  "name": "297. Sokak",
+  "typo": false
+ },
+ {
+  "q": "509/1. Sokak",
+  "name": "509/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Eski Kilyos Caddesi",
+  "name": "Eski Kilyos Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Veysel Ağa Sokak",
+  "name": "Veysel Ağa Sokak",
+  "typo": false
+ },
+ {
+  "q": "2479. Sokak",
+  "name": "2479. Sokak",
+  "typo": false
+ },
+ {
+  "q": "1393/2. Sokak",
+  "name": "1393/2. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Beşir Sokağı",
+  "name": "Beşir Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Beşbahar Sokak",
+  "name": "Beşbahar Sokak",
+  "typo": false
+ },
+ {
+  "q": "Meziyetli Sokak",
+  "name": "Meziyetli Sokak",
+  "typo": false
+ },
+ {
+  "q": "cami yolu Caddesi",
+  "name": "cami yolu Caddesi",
+  "typo": false
+ },
+ {
+  "q": "3. Yakut Sokağı",
+  "name": "3. Yakut Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Midye Caddesi",
+  "name": "Midye Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Harp Akademileri Tüneli",
+  "name": "Harp Akademileri Tüneli",
+  "typo": false
+ },
+ {
+  "q": "Belkis Aran Sokagi",
+  "name": "Belkis Aran Sokagi",
+  "typo": false
+ },
+ {
+  "q": "Kandıra Caddesi",
+  "name": "Kandıra Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Lale Paşa Soağı",
+  "name": "Lale Paşa Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Palmiyeli Sokağı",
+  "name": "Palmiyeli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "450. Sokak",
+  "name": "450. Sokak",
+  "typo": false
+ },
+ {
+  "q": "1973. Sokak",
+  "name": "1973. Sokak",
+  "typo": false
+ },
+ {
+  "q": "14 Nisan Caddesi",
+  "name": "14 Nisan Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Dr. Şükrü Kunt Sokağı",
+  "name": "Dr. Şükrü Kunt Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ağaçkakan Sokağı",
+  "name": "Ağaçkakan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Küçük Tomurcuk Sokağı",
+  "name": "Küçük Tomurcuk Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Duman Sokağı",
+  "name": "Duman Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1384. Sokak",
+  "name": "1384. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sarı Sokağı",
+  "name": "Sarı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Eski Sarayönü Çıkmazı",
+  "name": "Eski Sarayönü Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Tank Sokağı",
+  "name": "Tank Sokağı",
+  "typo": false
+ },
+ {
+  "q": "73. Sokak",
+  "name": "73. Sokak",
+  "typo": false
+ },
+ {
+  "q": "2420. Sokak",
+  "name": "2420. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sözler Sokak",
+  "name": "Sözler Sokak",
+  "typo": false
+ },
+ {
+  "q": "Yudum Çıkmazı Sokak",
+  "name": "Yudum Çıkmazı Sokak",
+  "typo": false
+ },
+ {
+  "q": "Heyecan Sokak",
+  "name": "Heyecan Sokak",
+  "typo": false
+ },
+ {
+  "q": "Akmerkez Levzım Yolu",
+  "name": "Akmerkez Levazım Yolu",
+  "typo": true
+ },
+ {
+  "q": "Oktar Sokağı",
+  "name": "Oktar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Sultanotu Sokak",
+  "name": "Sultanotu Sokak",
+  "typo": false
+ },
+ {
+  "q": "67. Sokak",
+  "name": "67. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Nedim Çıkmazı Sokağı",
+  "name": "Nedim Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kocabıyık Sokağı",
+  "name": "Kocabıyık Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ömrüm Sokağı",
+  "name": "Ömrüm Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Selma Soka",
+  "name": "Selma Sokak",
+  "typo": true
+ },
+ {
+  "q": "Küçük Langa 1.Çıkmazı",
+  "name": "Küçük Langa 1.Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Burna Caddesi",
+  "name": "Burnaz Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Resim Sokak",
+  "name": "Resim Sokak",
+  "typo": false
+ },
+ {
+  "q": "Bağ Caddesi",
+  "name": "Bağ Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Günçiçeği okağı",
+  "name": "Günçiçeği Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Işılçay Sokaı",
+  "name": "Işılçay Sokağı",
+  "typo": true
+ },
+ {
+  "q": "2554. Sokak",
+  "name": "2554. Sokak",
+  "typo": false
+ },
+ {
+  "q": "7. Bağ Sokağı",
+  "name": "7. Bağ Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Şeyh Raşit Caddesi",
+  "name": "Şeyh Raşit Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Halife Çıkmazı Sokağı",
+  "name": "Halife Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Merdiven Sokağı",
+  "name": "Merdiven Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Okan Soka",
+  "name": "Okan Sokak",
+  "typo": true
+ },
+ {
+  "q": "Uzlaş Sokağı",
+  "name": "Uzlaş Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Arslanlı Sokağı",
+  "name": "Arslanlı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Site İçi yollar",
+  "name": "Site İçi yollar",
+  "typo": false
+ },
+ {
+  "q": "Hatice Sokağı",
+  "name": "Hatice Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hüdaoğlu Sokaı",
+  "name": "Hüdaoğlu Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Erciyes 1 Sokağı",
+  "name": "Erciyes 1 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Gelengül Sokağı",
+  "name": "Gelengül Sokağı",
+  "typo": false
+ },
+ {
+  "q": "IGA Liman Cddesi",
+  "name": "IGA Liman Caddesi",
+  "typo": true
+ },
+ {
+  "q": "2003. Sokak",
+  "name": "2003. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Çayırkent Sokak",
+  "name": "Çayırkent Sokak",
+  "typo": false
+ },
+ {
+  "q": "Nazım Hikmet Caddesi",
+  "name": "Nazım Hikmet Caddesi",
+  "typo": false
+ },
+ {
+  "q": "1852. Sokak",
+  "name": "1852. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kırmızı Karanfil Sokağı",
+  "name": "Kırmızı Karanfil Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hasan Paşa Sokağı",
+  "name": "Hasan Paşa Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hamidiye Sokak",
+  "name": "Hamidiye Sokak",
+  "typo": false
+ },
+ {
+  "q": "Köşem Soağı",
+  "name": "Köşem Sokağı",
+  "typo": true
+ },
+ {
+  "q": "1. Karadut Sokağı",
+  "name": "1. Karadut Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Parla Caddesi",
+  "name": "Parlar Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Salih Bey Sokağı",
+  "name": "Salih Bey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Boybey Sokağı",
+  "name": "Boybey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çağrankaya Sokağı",
+  "name": "Çağrankaya Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1674. Sokak",
+  "name": "1674. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kurfallı Caddesi",
+  "name": "Kurfallı Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Gülbahar Caddesi",
+  "name": "Gülbahar Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Sevhan Soağı",
+  "name": "Sevhan Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Libadiye Caddesi",
+  "name": "Libadiye Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Vakur Sokağı",
+  "name": "Vakur Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1. Şençalar Çıkmazı",
+  "name": "1. Şençalar Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "ÇimendağSokağı",
+  "name": "Çimendağ Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Havadis Sokağı",
+  "name": "Havadis Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Koca Tepe Caddesi",
+  "name": "Koca Tepe Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Yazı Caddesi",
+  "name": "Yazı Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şehit Taner Güler Sokak",
+  "name": "Şehit Taner Güler Sokak",
+  "typo": false
+ },
+ {
+  "q": "Şair Talat Sokağı",
+  "name": "Şair Talat Sokağı",
+  "typo": false
+ },
+ {
+  "q": "İstasyon 2 Sk.",
+  "name": "İstasyon 2 Sk.",
+  "typo": false
+ },
+ {
+  "q": "Tygar Sokak",
+  "name": "Toygar Sokak",
+  "typo": true
+ },
+ {
+  "q": "Şerbetç Sokağı",
+  "name": "Şerbetçi Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Yücetürk Sokak",
+  "name": "Yücetürk Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sürmeli Çıkmazı",
+  "name": "Sürmeli Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Vuslat Sokak",
+  "name": "Vuslat Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ördek Sokak",
+  "name": "Ördek Sokak",
+  "typo": false
+ },
+ {
+  "q": "Bayındırık Sitesi Ada",
+  "name": "Bayındırlık Sitesi Ada",
+  "typo": true
+ },
+ {
+  "q": "Sakıburun Caddesi",
+  "name": "Saklıburun Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Bakıcı Sokağı",
+  "name": "Bakıcı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Eski Bağdat Caddesi",
+  "name": "Eski Bağdat Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şehit Doğan Öztürk Sokağı",
+  "name": "Şehit Doğan Öztürk Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Taşkızak Tersanesi Caddesi",
+  "name": "Taşkızak Tersanesi Caddesi",
+  "typo": false
+ },
+ {
+  "q": "1113/2. Sokak",
+  "name": "1113/2. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Osmangazi Caddesi",
+  "name": "Osmangazi Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Başhane Sokağı",
+  "name": "Başhane Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çay Boyu Sokak",
+  "name": "Çay Boyu Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ezber Caddesi",
+  "name": "Ezber Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Mirali Sokağı",
+  "name": "Mirali Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hacı Hazım Sokak",
+  "name": "Hacı Hazım Sokak",
+  "typo": false
+ },
+ {
+  "q": "Şht. Çağrı Cyhan Sk.",
+  "name": "Şht. Çağrı Ceyhan Sk.",
+  "typo": true
+ },
+ {
+  "q": "2250. Sokak",
+  "name": "2250. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Muti Sokağı",
+  "name": "Muti Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Gökmavi Sokak",
+  "name": "Gökmavi Sokak",
+  "typo": false
+ },
+ {
+  "q": "Vardar Sokağı",
+  "name": "Vardar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kıyı Sokağ",
+  "name": "Kıyı Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Akıncılarbayırı Sokağı",
+  "name": "Akıncılarbayırı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Raif Paşa Sokağı",
+  "name": "Raif Paşa Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kemerdere Caddesi",
+  "name": "Kemerdere Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Çanpınar Sokağı",
+  "name": "Çanpınar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1 Mart Cd.",
+  "name": "1 Mart Cd.",
+  "typo": false
+ },
+ {
+  "q": "2. Bahçeli Sokağı",
+  "name": "2. Bahçeli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2869/1. Sokak",
+  "name": "2869/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Çlekli Sokak",
+  "name": "Çilekli Sokak",
+  "typo": true
+ },
+ {
+  "q": "Karaboyacılar Skağı",
+  "name": "Karaboyacılar Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Molla Cmii Sokağı",
+  "name": "Molla Camii Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Uluç Sokağı",
+  "name": "Uluç Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Anibal Sokak",
+  "name": "Anibal Sokak",
+  "typo": false
+ },
+ {
+  "q": "Nakilbent okağı",
+  "name": "Nakilbent Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Kızılcahamam Sokak",
+  "name": "Kızılcahamam Sokak",
+  "typo": false
+ },
+ {
+  "q": "Küçük Fıstıklı Sokağı",
+  "name": "Küçük Fıstıklı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kıvrak Sokak",
+  "name": "Kıvrak Sokak",
+  "typo": false
+ },
+ {
+  "q": "Kııltunç Sokak",
+  "name": "Kızıltunç Sokak",
+  "typo": true
+ },
+ {
+  "q": "Radar Caddesi",
+  "name": "Radar Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Buhara Sokağı",
+  "name": "Buhara Sokağı",
+  "typo": false
+ },
+ {
+  "q": "İhya Sokak",
+  "name": "İhya Sokak",
+  "typo": false
+ },
+ {
+  "q": "Liva Sokağı",
+  "name": "Liva Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Nispetiye Caddesi",
+  "name": "Nispetiye Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Çalar Saat Sokağı",
+  "name": "Çalar Saat Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Durusu Yeniköy Caddesi",
+  "name": "Durusu Yeniköy Caddesi",
+  "typo": false
+ },
+ {
+  "q": "K11 Körfez Kavşağı",
+  "name": "K11 Körfez Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "Çöreotu Sokağı",
+  "name": "Çöreotu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "926. Sokak",
+  "name": "926. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Denizhan Sokağı",
+  "name": "Denizhan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Isparta Caddesi",
+  "name": "Isparta Caddesi",
+  "typo": false
+ },
+ {
+  "q": "1198. Sokak",
+  "name": "1198. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Nafe Sokağı",
+  "name": "Nafe Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Şehzade Mehmet Caddesi",
+  "name": "Şehzade Mehmet Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Şadırvan Çıkmazı Sokağı",
+  "name": "Şadırvan Çıkmazı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "İlim Altı Sokağı",
+  "name": "İlim Altı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kahramanlar Sokak",
+  "name": "Kahramanlar Sokak",
+  "typo": false
+ },
+ {
+  "q": "Avukat Caddesi",
+  "name": "Avukat Caddesi",
+  "typo": false
+ },
+ {
+  "q": "İklim Sokak",
+  "name": "İklim Sokak",
+  "typo": false
+ },
+ {
+  "q": "Demetbağı Sokağı",
+  "name": "Demetbağı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Erdemli Sk.",
+  "name": "Erdemli Sk.",
+  "typo": false
+ },
+ {
+  "q": "Aksaray Sokağı",
+  "name": "Aksaray Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çaydanlık Sokağı",
+  "name": "Çaydanlık Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kayıkçı Şükrü Sokağı",
+  "name": "Kayıkçı Şükrü Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kırıkhan Sokağı",
+  "name": "Kırıkhan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Güldere Çıkmazı",
+  "name": "Güldere Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Güngör Sokağı",
+  "name": "Güngör Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Nehir Çıkmazı",
+  "name": "Nehir Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "G-621 Sokağı",
+  "name": "G-621 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Akgüner Soağı",
+  "name": "Akgüner Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Eğreltiotu Sokağı",
+  "name": "Eğreltiotu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1163. Sokak",
+  "name": "1163. Sokak",
+  "typo": false
+ },
+ {
+  "q": "547. Sokak",
+  "name": "547. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Müstakil Sk.",
+  "name": "Müstakil Sk.",
+  "typo": false
+ },
+ {
+  "q": "1605. Sokak",
+  "name": "1605. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Güz Sokağı",
+  "name": "Güz Sokağı",
+  "typo": false
+ },
+ {
+  "q": "700. Sokak",
+  "name": "700. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ramazan Efendi Cami Aralığı Sokağı",
+  "name": "Ramazan Efendi Cami Aralığı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Boyacı Çeşme Sokağı",
+  "name": "Boyacı Çeşme Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dr. Zeki Acar Cadde",
+  "name": "Dr. Zeki Acar Cadde",
+  "typo": false
+ },
+ {
+  "q": "Melek Çeşmesi Sokağı",
+  "name": "Melek Çeşmesi Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Turkuaz 2 Sokağı",
+  "name": "Turkuaz 2 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2467. Sokak",
+  "name": "2467. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Anıt Sk.",
+  "name": "Anıt Sk.",
+  "typo": false
+ },
+ {
+  "q": "Ziraat Çıkmazı 6",
+  "name": "Ziraat Çıkmazı 6",
+  "typo": false
+ },
+ {
+  "q": "Yeni Mithatpaşa Caddesi",
+  "name": "Yeni Mithatpaşa Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Hacı MustafaSokağı",
+  "name": "Hacı Mustafa Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Mehmet Akfan Sokağı",
+  "name": "Mehmet Akfan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "İbrahim Hayırlıoğlu Alt Geçidi",
+  "name": "İbrahim Hayırlıoğlu Alt Geçidi",
+  "typo": false
+ },
+ {
+  "q": "Eski Tay Çıkmazı Sokğı",
+  "name": "Eski Tay Çıkmazı Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Kşgözü Sokağı",
+  "name": "Kuşgözü Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Yeni Bosta Sokağı",
+  "name": "Yeni Bostan Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Kara İbrahim Sokağı",
+  "name": "Kara İbrahim Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Şehit Erdem Kayaklı Sokağı",
+  "name": "Şehit Erdem Kayaklı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Okul Caddesı",
+  "name": "Okul Caddesı",
+  "typo": false
+ },
+ {
+  "q": "Çayırbaşı Caddesi",
+  "name": "Çayırbaşı Caddesi",
+  "typo": false
+ },
+ {
+  "q": "2569/1. Sokak",
+  "name": "2569/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Ayvaz Cami Sokağı",
+  "name": "Ayvaz Cami Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Fener Caddesi",
+  "name": "Fener Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Katre Sokağı",
+  "name": "Katre Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dervan Sokağı",
+  "name": "Dervan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dosteli Sokağı",
+  "name": "Dosteli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Yurtbey Sokağı",
+  "name": "Yurtbey Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Bajdar Sokağı",
+  "name": "Bajdar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hemdem Sokağı",
+  "name": "Hemdem Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Samyeli Sokağı",
+  "name": "Samyeli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "G-62 Sokağı",
+  "name": "G-62 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Şinasi Caddesi",
+  "name": "Şinasi Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Geedeli Yolu",
+  "name": "Geredeli Yolu",
+  "typo": true
+ },
+ {
+  "q": "1737. Sokak",
+  "name": "1737. Sokak",
+  "typo": false
+ },
+ {
+  "q": "51. Sokağı",
+  "name": "51. Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dr. Bedii Gorbon Sokağı",
+  "name": "Dr. Bedii Gorbon Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Karakum Sokağı",
+  "name": "Karakum Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Etkin Sokak",
+  "name": "Etkin Sokak",
+  "typo": false
+ },
+ {
+  "q": "Salih Omurtak Sokağı",
+  "name": "Salih Omurtak Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ebubekir Caddesi",
+  "name": "Ebubekir Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Cambaziye Aralığı Sokağı",
+  "name": "Cambaziye Aralığı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Bestekar Civanağa Soağı",
+  "name": "Bestekar Civanağa Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Esmer Sokağ",
+  "name": "Esmer Sokağı",
+  "typo": true
+ },
+ {
+  "q": "162. Sokak",
+  "name": "162. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Set Sokağı",
+  "name": "Set Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2020. Sokak",
+  "name": "2020. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Merdiven Sokağı",
+  "name": "Merdiven Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Alkış Barış Sokağı",
+  "name": "Alkış Barış Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Aydinlar Sokağı",
+  "name": "Aydinlar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Gümüşsuyu Caddesi",
+  "name": "Gümüşsuyu Caddesi",
+  "typo": false
+ },
+ {
+  "q": "119/1. Sokak",
+  "name": "119/1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Fildii Sokağı",
+  "name": "Fildişi Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Hasan Tahsin Üçer Sokağı",
+  "name": "Hasan Tahsin Üçer Sokağı",
+  "typo": false
+ },
+ {
+  "q": "112 Sokak",
+  "name": "112 Sokak",
+  "typo": false
+ },
+ {
+  "q": "İşkembeci Yaver Sokağı",
+  "name": "İşkembeci Yaver Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ağç Sokak",
+  "name": "Ağaç Sokak",
+  "typo": true
+ },
+ {
+  "q": "Pamir Sokak",
+  "name": "Pamir Sokak",
+  "typo": false
+ },
+ {
+  "q": "Şehit Ercan Bulut Sokak",
+  "name": "Şehit Ercan Bulut Sokak",
+  "typo": false
+ },
+ {
+  "q": "Zümrüt 4 Sokağı",
+  "name": "Zümrüt 4 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Barınak Çıkmazı",
+  "name": "Barınak Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Kabakulak 2. Çıkmazı",
+  "name": "Kabakulak 2. Çıkmazı",
+  "typo": false
+ },
+ {
+  "q": "Tırmık Sokağı",
+  "name": "Tırmık Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1. Cengiz Topel Caddesi",
+  "name": "1. Cengiz Topel Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Yahya Köprüsü Sokak",
+  "name": "Yahya Köprüsü Sokak",
+  "typo": false
+ },
+ {
+  "q": "Özğün Sokağı",
+  "name": "Özğün Sokağı",
+  "typo": false
+ },
+ {
+  "q": "68. Sokak",
+  "name": "68. Sokak",
+  "typo": false
+ },
+ {
+  "q": "1030/3. Sokak",
+  "name": "1030/3. Sokak",
+  "typo": false
+ },
+ {
+  "q": "İshakağa Caddesi",
+  "name": "İshakağa Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Modabağ 1. Sokak",
+  "name": "Modabağ 1. Sokak",
+  "typo": false
+ },
+ {
+  "q": "2648. Sokak",
+  "name": "2648. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Mor Menekşe Sokak",
+  "name": "Mor Menekşe Sokak",
+  "typo": false
+ },
+ {
+  "q": "Taşsavaklar Sokğı",
+  "name": "Taşsavaklar Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Ayşe Çavuş Caddesi",
+  "name": "Ayşe Çavuş Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Ero Sokağı",
+  "name": "Erol Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Çaylak Sokağı",
+  "name": "Çaylak Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kokulu Bahar Sokağı",
+  "name": "Kokulu Bahar Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1403. Sokak",
+  "name": "1403. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Toramanlar Sokaı",
+  "name": "Toramanlar Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Doğan Sk.",
+  "name": "Doğan Sk.",
+  "typo": false
+ },
+ {
+  "q": "İmren Sokağı",
+  "name": "İmren Sokağı",
+  "typo": false
+ },
+ {
+  "q": "87. Sokak",
+  "name": "87. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Enbiye Sokağı",
+  "name": "Enbiye Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2115. Sokak",
+  "name": "2115. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Muhasebe Sokağı",
+  "name": "Muhasebe Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Mahmut Kemal İnan Sokağı",
+  "name": "Mahmut Kemal İnan Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kış Sokaı",
+  "name": "Kış Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Osmanlı Sokağı",
+  "name": "Osmanlı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "G-935 Sokağı",
+  "name": "G-935 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Topel Sokağı",
+  "name": "Topel Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Gece Sokağ",
+  "name": "Gece Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Anı Sokağı",
+  "name": "Anı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Marmara Cezaevi Kavşağı",
+  "name": "Marmara Cezaevi Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "Koopera Sokağı",
+  "name": "Koopera Sokağı",
+  "typo": false
+ },
+ {
+  "q": "G-425 Sokağı",
+  "name": "G-425 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ege Sokak",
+  "name": "Ege Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sakin Cadesi",
+  "name": "Sakin Caddesi",
+  "typo": true
+ },
+ {
+  "q": "Müverrih Ali Caddesi",
+  "name": "Müverrih Ali Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Yılmaztürk Sokak",
+  "name": "Yılmaztürk Sokak",
+  "typo": false
+ },
+ {
+  "q": "Hatmi Çiçeği Sokak",
+  "name": "Hatmi Çiçeği Sokak",
+  "typo": false
+ },
+ {
+  "q": "860. Sokak",
+  "name": "860. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Güvenli Sokak",
+  "name": "Güvenli Sokak",
+  "typo": false
+ },
+ {
+  "q": "G-1007 Sokak",
+  "name": "G-1007 Sokak",
+  "typo": false
+ },
+ {
+  "q": "Alçin Sokağı",
+  "name": "Alçin Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ömür Sokak",
+  "name": "Ömür Sokak",
+  "typo": false
+ },
+ {
+  "q": "Övül Tezişler Sokak",
+  "name": "Övül Tezişler Sokak",
+  "typo": false
+ },
+ {
+  "q": "294. Sokak",
+  "name": "294. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Hoca Nasrettin Caddesi",
+  "name": "Hoca Nasrettin Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Biberlik Caddesi",
+  "name": "Biberlik Caddesi",
+  "typo": false
+ },
+ {
+  "q": "Temiz Sokağı",
+  "name": "Temiz Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Saka Kuşu Sokak",
+  "name": "Saka Kuşu Sokak",
+  "typo": false
+ },
+ {
+  "q": "İstanbul Yolu Küme Evlei",
+  "name": "İstanbul Yolu Küme Evleri",
+  "typo": true
+ },
+ {
+  "q": "Sedat Bora Sokağı",
+  "name": "Sedat Bora Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Celal Atık 1 Sokağı",
+  "name": "Celal Atık 1 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Beykoz Konakları Sokağı",
+  "name": "Beykoz Konakları Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Beşer Sokağı",
+  "name": "Beşer Sokağı",
+  "typo": false
+ },
+ {
+  "q": "1334. Sokak",
+  "name": "1334. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Rasiağa Sokağı",
+  "name": "Rasimağa Sokağı",
+  "typo": true
+ },
+ {
+  "q": "1491. Sokak",
+  "name": "1491. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Telli Sokğı",
+  "name": "Telli Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Keskin Kalem Sokağı",
+  "name": "Keskin Kalem Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Dolu Sokağı",
+  "name": "Dolu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Ladin Sokağı",
+  "name": "Ladin Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Tahsinbey Sokak",
+  "name": "Tahsinbey Sokak",
+  "typo": false
+ },
+ {
+  "q": "Sağıroğlu Sokağı",
+  "name": "Sağıroğlu Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hasan Harakani Sokağı",
+  "name": "Hasan Harakani Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Mabet Sokağı",
+  "name": "Mabet Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Cemiyet Sokağı",
+  "name": "Cemiyet Sokağı",
+  "typo": false
+ },
+ {
+  "q": "G-69 Sokağı",
+  "name": "G-69 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Cami 2 Sokağı",
+  "name": "Cami 2 Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Orhan Kemal Sokağı",
+  "name": "Orhan Kemal Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Alkıım Sokak",
+  "name": "Alkıım Sokak",
+  "typo": false
+ },
+ {
+  "q": "Tazegül Sokak",
+  "name": "Tazegül Sokak",
+  "typo": false
+ },
+ {
+  "q": "Şehrazat Sokak",
+  "name": "Şehrazat Sokak",
+  "typo": false
+ },
+ {
+  "q": "Çerkezköy Saray Yolu",
+  "name": "Çerkezköy Saray Yolu",
+  "typo": false
+ },
+ {
+  "q": "K. M. O. Çatalca Kavşağı",
+  "name": "K. M. O. Çatalca Kavşağı",
+  "typo": false
+ },
+ {
+  "q": "Yekta Sokağı",
+  "name": "Yekta Sokağı",
+  "typo": false
+ },
+ {
+  "q": "2. Başak Sokağı",
+  "name": "2. Başak Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Maeşal Sokağı",
+  "name": "Mareşal Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Salkısoğüt Sokağı",
+  "name": "Salkımsoğüt Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Akgül Sokak",
+  "name": "Akgül Sokak",
+  "typo": false
+ },
+ {
+  "q": "Şarap Sokağı",
+  "name": "Şarap Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Rıdvan Koral Sokağı",
+  "name": "Rıdvan Koral Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Tornacı Sokağı",
+  "name": "Tornacı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Uluca Sokak",
+  "name": "Uluca Sokak",
+  "typo": false
+ },
+ {
+  "q": "Başçı Mahmut CamiSokağı",
+  "name": "Başçı Mahmut Cami Sokağı",
+  "typo": true
+ },
+ {
+  "q": "Setbaşı Sokağı",
+  "name": "Setbaşı Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Hayrettin Özbek Sokağı",
+  "name": "Hayrettin Özbek Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Melike Hanım Sokağı",
+  "name": "Melike Hanım Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Birinci Yol Sokağı",
+  "name": "Birinci Yol Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Teknecik Sokağı",
+  "name": "Teknecik Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Meçhul Asker Sokağı",
+  "name": "Meçhul Asker Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Çiçekli Sokağı",
+  "name": "Çiçekli Sokağı",
+  "typo": false
+ },
+ {
+  "q": "İstiklal Yolu Cd.",
+  "name": "İstiklal Yolu Cd.",
+  "typo": false
+ },
+ {
+  "q": "2517. Sokak",
+  "name": "2517. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Yılanlı Ayazma Sokağı",
+  "name": "Yılanlı Ayazma Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Varnalı Caddesi",
+  "name": "Varnalı Caddesi",
+  "typo": false
+ },
+ {
+  "q": "487. Sokak",
+  "name": "487. Sokak",
+  "typo": false
+ },
+ {
+  "q": "Viran Odaları Sokağı",
+  "name": "Viran Odaları Sokağı",
+  "typo": false
+ },
+ {
+  "q": "Kumrulu Yokuşu",
+  "name": "Kumrulu Yokuşu",
+  "typo": false
+ }
+]

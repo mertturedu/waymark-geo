@@ -1,0 +1,4616 @@
+{
+ "version": 1,
+ "plate": "45",
+ "queries": [
+  {
+   "id": "45-full-1",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzan Bulvarı No:20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717653",
+    "number": "20",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-2",
+   "text": "Hacıbektaşlı Sokak No:335/17 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064272",
+    "number": "335/17",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-3",
+   "text": "Güzelyurt Mah. Birlik Caddesi 8/A, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794120",
+    "number": "8/A",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-4",
+   "text": "Manisa, Kula, 4 Eylül Mahallesi, Yabaayak Caddesi, Kapı No: 3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n6541683085",
+    "number": "3",
+    "streetName": "Yabaayak Caddesi"
+   }
+  },
+  {
+   "id": "45-full-5",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzan Bulvarı No:27",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721348",
+    "number": "27",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-6",
+   "text": "Manas Caddesi No:62 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794136",
+    "number": "62",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-7",
+   "text": "Güzelyurt Mah. Manas Caddesi 16, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764097",
+    "number": "16",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-8",
+   "text": "Manisa, Salihli, Hacıbektaşlı Mahallesi, Hacıbektaşlı Sokak, Kapı No: 335/4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058539",
+    "number": "335/4",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-9",
+   "text": "Manisa Soma Hürriyet Mah. Muzaffer Tezcan Cad. No:43",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4686944348",
+    "number": "43",
+    "streetName": "Muzaffer Tezcan Cad."
+   }
+  },
+  {
+   "id": "45-full-10",
+   "text": "İzmir-Uşak Yolu No:46 Ergenekon Mahallesi Turgutlu/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n11572070596",
+    "number": "46",
+    "streetName": "İzmir-Uşak Yolu"
+   }
+  },
+  {
+   "id": "45-full-11",
+   "text": "Muradiye Mah. İstasyon Caddesi 33, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277860785",
+    "number": "33",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-full-12",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721342",
+    "number": "15",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-13",
+   "text": "Manisa Yunus Emre Muradiye Mah. İstasyon Caddesi No:38",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277861317",
+    "number": "38",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-full-14",
+   "text": "Manas Caddesi No:11 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773760",
+    "number": "11",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-15",
+   "text": "1.Anafartalar Mah. Cumhuriyet Caddesi 29/B, Şehzadeler, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10692822214",
+    "number": "29/B",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "45-full-16",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Birlik Caddesi, Kapı No: 15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773749",
+    "number": "15",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-17",
+   "text": "Manisa Salihli Hacıbektaşlı Mah. Hacıbektaşlı Sokak No:335/9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064275",
+    "number": "335/9",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-18",
+   "text": "Albayrak No:20 Hatboyu Sokak Mahallesi Turgutlu/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "r16474896",
+    "number": "20",
+    "streetName": "Albayrak"
+   }
+  },
+  {
+   "id": "45-full-19",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşlı Sokak 335/16, Salihli, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064269",
+    "number": "335/16",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-20",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Manas Caddesi, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764098",
+    "number": "14",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-21",
+   "text": "Manisa Şehzadeler Peker Mah. Hakkı İplikçi Caddesi No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834329",
+    "number": "1",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-full-22",
+   "text": "İzmir Caddesi No:227 Topçuasım Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n14287627604",
+    "number": "227",
+    "streetName": "İzmir Caddesi"
+   }
+  },
+  {
+   "id": "45-full-23",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 57, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721370",
+    "number": "57",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-24",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 36",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773721",
+    "number": "36",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-25",
+   "text": "Manisa Yunus Emre Merkez Efendi Mah. 8 Eylül Caddesi No:157/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n6466448628",
+    "number": "157/B",
+    "streetName": "8 Eylül Caddesi"
+   }
+  },
+  {
+   "id": "45-full-26",
+   "text": "Hacıbektaşlı Sokak No:335/19 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064274",
+    "number": "335/19",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-27",
+   "text": "Güzelyurt Mah. Manas Caddesi 23, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773754",
+    "number": "23",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-28",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 51",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721359",
+    "number": "51",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-29",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzan Bulvarı No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717649",
+    "number": "12",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-30",
+   "text": "Belediye Caddesi No:50/A Peker Mahallesi Şehzadeler/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n3970270179",
+    "number": "50/A",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-full-31",
+   "text": "Güzelyurt Mah. Manas Caddesi 10, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764100",
+    "number": "10",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-32",
+   "text": "Manisa, Ahmetli, Gökkaya Mahallesi, Selvi Sokağı, Kapı No: 13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w505062614",
+    "number": "13",
+    "streetName": "Selvi Sokağı"
+   }
+  },
+  {
+   "id": "45-full-33",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Birlik Caddesi No:7/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794103",
+    "number": "7/A",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-34",
+   "text": "Tarzan Bulvarı No:35 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721352",
+    "number": "35",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-35",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 77, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721360",
+    "number": "77",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-36",
+   "text": "Manisa, Alaşehir, Beşeylül Mahallesi, Mektep Caddesi, Kapı No: 40",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12244057722",
+    "number": "40",
+    "streetName": "Mektep Caddesi"
+   }
+  },
+  {
+   "id": "45-full-37",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Manas Caddesi No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764101",
+    "number": "8",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-38",
+   "text": "Hacıbektaşlı Sokak No:335/6 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058542",
+    "number": "335/6",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-39",
+   "text": "Peker Mah. Belediye Caddesi 36, Şehzadeler, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236696882",
+    "number": "36",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-full-40",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 55",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721371",
+    "number": "55",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-41",
+   "text": "Manisa Salihli Yörük Mah. Avar Caddesi No:113",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1561990732",
+    "number": "113",
+    "streetName": "Avar Caddesi"
+   }
+  },
+  {
+   "id": "45-full-42",
+   "text": "Bergama Caddesi No:1 Turgutalp Mahallesi Soma/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4699020986",
+    "number": "1",
+    "streetName": "Bergama Caddesi"
+   }
+  },
+  {
+   "id": "45-full-43",
+   "text": "Güzelyurt Mah. Manas Caddesi 7, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773762",
+    "number": "7",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-44",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Birlik Caddesi, Kapı No: 7/E",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794107",
+    "number": "7/E",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-45",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Birlik Caddesi No:7/G",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794109",
+    "number": "7/G",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-46",
+   "text": "Tarzan Bulvarı No:53 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721372",
+    "number": "53",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-47",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşlı Sokak 335/12, Salihli, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064265",
+    "number": "335/12",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-48",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Manas Caddesi, Kapı No: 40/D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794111",
+    "number": "40/D",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-49",
+   "text": "Manisa Salihli Namık Kemal Mah. Şüheda Caddesi No:38",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w921849066",
+    "number": "38",
+    "streetName": "Şüheda Caddesi"
+   }
+  },
+  {
+   "id": "45-full-50",
+   "text": "Hakkı İplikçi Caddesi No:5 Peker Mahallesi Şehzadeler/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834297",
+    "number": "5",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-full-51",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 69, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721364",
+    "number": "69",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-52",
+   "text": "Manisa, Turgutlu, Yıldırım Mahallesi, Özyiğit Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1384769816",
+    "number": "2",
+    "streetName": "Özyiğit Sokak"
+   }
+  },
+  {
+   "id": "45-full-53",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Manas Caddesi No:28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764091",
+    "number": "28",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-54",
+   "text": "Kurucalar Sk. No:52 Beypınar Mahallesi Selendi/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1427077835",
+    "number": "52",
+    "streetName": "Kurucalar Sk."
+   }
+  },
+  {
+   "id": "45-full-55",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 8, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717647",
+    "number": "8",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-56",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Konuk Caddesi, Kapı No: 49",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236558305",
+    "number": "49",
+    "streetName": "Konuk Caddesi"
+   }
+  },
+  {
+   "id": "45-full-57",
+   "text": "Manisa Şehzadeler Peker Mah. Konuk Caddesi No:45",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236558120",
+    "number": "45",
+    "streetName": "Konuk Caddesi"
+   }
+  },
+  {
+   "id": "45-full-58",
+   "text": "Birlik Caddesi No:7 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794102",
+    "number": "7",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-59",
+   "text": "Uncubozköy Mah. Celal Bayar Ünv. 187, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w471495779",
+    "number": "187",
+    "streetName": "Celal Bayar Ünv."
+   }
+  },
+  {
+   "id": "45-full-60",
+   "text": "Manisa, Şehzadeler, 1.Anafartalar Mahallesi, Cumhuriyet Caddesi, Kapı No: 23/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10692822213",
+    "number": "23/A",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "45-full-61",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzan Bulvarı No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717650",
+    "number": "14",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-62",
+   "text": "Manas Caddesi No:26 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764092",
+    "number": "26",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-63",
+   "text": "Utku Mah. Erler Caddesi 18/A, Şehzadeler, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n13202884864",
+    "number": "18/A",
+    "streetName": "Erler Caddesi"
+   }
+  },
+  {
+   "id": "45-full-64",
+   "text": "Manisa, Yunus Emre, Uncubozköy Mahallesi, Cemal Ergün Caddesi, Kapı No: 23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1047477760",
+    "number": "23",
+    "streetName": "Cemal Ergün Caddesi"
+   }
+  },
+  {
+   "id": "45-full-65",
+   "text": "Manisa Şehzadeler Peker Mah. Belediye Caddesi No:28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695961",
+    "number": "28",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-full-66",
+   "text": "İstiklal Caddesi No:147 Soğuksu Mahallesi Alaşehir/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w760259574",
+    "number": "147",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "45-full-67",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 65, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721366",
+    "number": "65",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-68",
+   "text": "Manisa, Salihli, Cumhuriyet Mahallesi, Menderes Caddesi, Kapı No: 55",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10202437955",
+    "number": "55",
+    "streetName": "Menderes Caddesi"
+   }
+  },
+  {
+   "id": "45-full-69",
+   "text": "Manisa Salihli Yörük Mah. Atatürk Caddesi No:234",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1557573760",
+    "number": "234",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "45-full-70",
+   "text": "Hacıbektaşlı Sokak No:335/8 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058540",
+    "number": "335/8",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-71",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşlı Sokak 335/13, Salihli, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064268",
+    "number": "335/13",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-72",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Birlik Caddesi, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794117",
+    "number": "14",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-73",
+   "text": "Manisa Salihli Hacıbektaşlı Mah. Hacıbektaşlı Sokak No:335/3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058538",
+    "number": "335/3",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-74",
+   "text": "Tarzan Bulvarı No:6 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717645",
+    "number": "6",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-75",
+   "text": "Peker Mah. Belediye Caddesi 30, Şehzadeler, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695987",
+    "number": "30",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-full-76",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721338",
+    "number": "7",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-77",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Manas Caddesi No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764099",
+    "number": "12",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-78",
+   "text": "Hacıbektaşlı Sokak No:335/5 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058543",
+    "number": "335/5",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-full-79",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 61, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721368",
+    "number": "61",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-80",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721335",
+    "number": "1",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-81",
+   "text": "Manisa Şehzadeler Peker Mah. Belediye Caddesi No:26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695942",
+    "number": "26",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-full-82",
+   "text": "Birlik Caddesi No:7/D Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794106",
+    "number": "7/D",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-83",
+   "text": "Hürriyet Mah. kütahya sokak 31, Soma, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12816408241",
+    "number": "31",
+    "streetName": "kütahya sokak"
+   }
+  },
+  {
+   "id": "45-full-84",
+   "text": "Manisa, Soma, Hürriyet Mahallesi, Rüzgar Sokak, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w842374337",
+    "number": "14",
+    "streetName": "Rüzgar Sokak"
+   }
+  },
+  {
+   "id": "45-full-85",
+   "text": "Manisa Yunus Emre Cumhuriyet Mah. 75. Yıl Bulvarı No:91",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1132207971",
+    "number": "91",
+    "streetName": "75. Yıl Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-86",
+   "text": "Tarzan Bulvarı No:48 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773727",
+    "number": "48",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-87",
+   "text": "Cumhuriyet Mah. AŞIK VEYSEL 10, Saruhanlı, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10195226363",
+    "number": "10",
+    "streetName": "AŞIK VEYSEL"
+   }
+  },
+  {
+   "id": "45-full-88",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Cumhuriyet C., Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236558106",
+    "number": "9",
+    "streetName": "Cumhuriyet C."
+   }
+  },
+  {
+   "id": "45-full-89",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Birlik Caddesi No:31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773741",
+    "number": "31",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-full-90",
+   "text": "Menderes Caddesi No:72 Aksoy Mahallesi Salihli/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n9310829238",
+    "number": "72",
+    "streetName": "Menderes Caddesi"
+   }
+  },
+  {
+   "id": "45-full-91",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 67, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721365",
+    "number": "67",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-92",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Manas Caddesi, Kapı No: 64",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794135",
+    "number": "64",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-93",
+   "text": "Manisa Şehzadeler 1.Anafartalar Mah. Konuk Caddesi No:30",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1123626675",
+    "number": "30",
+    "streetName": "Konuk Caddesi"
+   }
+  },
+  {
+   "id": "45-full-94",
+   "text": "Tarzan Bulvarı No:32 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717659",
+    "number": "32",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-95",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 34, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717660",
+    "number": "34",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-96",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Manas Caddesi, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764094",
+    "number": "22",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-97",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Manas Caddesi No:13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773759",
+    "number": "13",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-full-98",
+   "text": "Tarzan Bulvarı No:39 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721354",
+    "number": "39",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-99",
+   "text": "Muradiye Mah. İstasyon Caddesi 98/A, Yunus Emre, Manisa",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n11151944107",
+    "number": "98/A",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-full-100",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzan Bulvarı, Kapı No: 40",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773723",
+    "number": "40",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-full-101",
+   "text": "Manisa Kula Seyitali Mah. Sazlık Mevki No:4/1",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "45",
+    "osm": "n13673877049",
+    "number": "4/1",
+    "streetName": "Sazlık Mevki"
+   }
+  },
+  {
+   "id": "45-full-102",
+   "text": "Manisa Yunus Emre Hafsa Sultan Mah. Bahtiyar Tosunbaş Caddesi No:68",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "45",
+    "osm": "w1381361112",
+    "number": "68",
+    "streetName": "Bahtiyar Tosunbaş Caddesi"
+   }
+  },
+  {
+   "id": "45-full-103",
+   "text": "Manisa Kula Seyitali Mah. Sazlık Mevki No:4/1",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "45",
+    "osm": "w1493005600",
+    "number": "4/1",
+    "streetName": "Sazlık Mevki"
+   }
+  },
+  {
+   "id": "45-full-104",
+   "text": "Manisa Yunus Emre Hafsa Sultan Mah. Bahtiyar Tosunbaş Caddesi No:68",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "45",
+    "osm": "n11881309115",
+    "number": "68",
+    "streetName": "Bahtiyar Tosunbaş Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-1",
+   "text": "manisa yunus emre muradiye mah manisa celal bayar universitesi sehit prof. dr. ilhan varank yerleskesi kume evleri no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w738301851",
+    "number": "22",
+    "streetName": "Manisa Celal Bayar Üniversitesi Şehit Prof. Dr. İlhan Varank Yerleşkesi Küme Evleri"
+   }
+  },
+  {
+   "id": "45-folded-2",
+   "text": "manisa yunus emre guzelyurt mah tarzan bulv. no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721343",
+    "number": "17",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-3",
+   "text": "manisa salihli hacibektasli mah hacibektasli sk. no 335/15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064270",
+    "number": "335/15",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-folded-4",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH TARZAN BLV. NO 56",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773731",
+    "number": "56",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-5",
+   "text": "MANISA SALIHLI HACIBEKTASLI MAH HACIBEKTASLI SK NO 335",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058536",
+    "number": "335",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-folded-6",
+   "text": "manisa yunus emre guzelyurt mah birlik cad. no 7/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794105",
+    "number": "7/C",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-7",
+   "text": "manisa salihli aksoy mah suheda cd no 162",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w230391345",
+    "number": "162",
+    "streetName": "Şüheda Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-8",
+   "text": "manisa sehzadeler peker mah hakki iplikci cd no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834247",
+    "number": "9",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-9",
+   "text": "MANISA YUNUS EMRE UNCUBOZKOY MAH CEMAL ERGUN CD. NO 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046305795",
+    "number": "6",
+    "streetName": "Cemal Ergün Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-10",
+   "text": "manisa yunus emre guzelyurt mah manas cd no 40/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794114",
+    "number": "40/B",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-11",
+   "text": "manisa yunus emre merkez efendi mah izmir cd. no 210/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12854897498",
+    "number": "210/B",
+    "streetName": "İzmir Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-12",
+   "text": "manisa sehzadeler peker mah belediye cd. no 45",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236689170",
+    "number": "45",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-13",
+   "text": "manisa sehzadeler 1.anafartalar mah konuk cd. no 30/2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10275777629",
+    "number": "30/2",
+    "streetName": "Konuk Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-14",
+   "text": "manisa yunus emre guzelyurt mah manas cd. no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773756",
+    "number": "19",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-15",
+   "text": "manisa yunus emre guzelyurt mah birlik cad. no 27",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773743",
+    "number": "27",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-16",
+   "text": "manisa sehzadeler peker mah cumhuriyet cd no 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236694586",
+    "number": "15",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-17",
+   "text": "manisa yunus emre guzelyurt mah tarzan blv. no 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-18",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CD NO 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-19",
+   "text": "MANISA YUNUS EMRE MURADIYE MAH ISTASYON CD. NO 39",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-20",
+   "text": "manisa yunus emre guzelyurt mah manas cd. no 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-21",
+   "text": "manisa turgutlu istiklal mah ataturk bulv. no 111",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n9974195917",
+    "number": "111",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-22",
+   "text": "manisa yunus emre guzelyurt mah manas cad. no 66",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-23",
+   "text": "manisa yunus emre guzelyurt mah tarzan blv. no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-24",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH TARZAN BULV. NO 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721340",
+    "number": "11",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-25",
+   "text": "manisa yunus emre guzelyurt mah manas cd no 40/e",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794110",
+    "number": "40/E",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-26",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MEHMET AKIF ERSOY CAD. NO 42",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717619",
+    "number": "42",
+    "streetName": "Mehmet Akif Ersoy Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-27",
+   "text": "manisa sehzadeler utku mah izmir cd no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4427070190",
+    "number": "22",
+    "streetName": "İzmir Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-28",
+   "text": "manisa yunus emre guzelyurt mah manas cd no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794138",
+    "number": "58",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-29",
+   "text": "manisa yunus emre guzelyurt mah tarzan bulv. no 50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773728",
+    "number": "50",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-30",
+   "text": "manisa yunus emre guzelyurt mah manas cd no 46",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794144",
+    "number": "46",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-31",
+   "text": "manisa yunus emre guzelyurt mah manas cad. no 44",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794145",
+    "number": "44",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-32",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CD. NO 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717678",
+    "number": "5",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-33",
+   "text": "manisa yunus emre guzelyurt mah birlik cd no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794119",
+    "number": "10",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-34",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CAD. NO 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764103",
+    "number": "6",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-35",
+   "text": "manisa yunus emre uncubozkoy mah cemal ergun cd no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046305796",
+    "number": "4",
+    "streetName": "Cemal Ergün Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-36",
+   "text": "manisa yunus emre guzelyurt mah manas cd. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794140",
+    "number": "54",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-37",
+   "text": "MANISA SALIHLI HACIBEKTASLI MAH HACIBEKTASLI SK. NO 335/20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064273",
+    "number": "335/20",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-folded-38",
+   "text": "manisa yunus emre guzelyurt mah tarzan blv. no 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717657",
+    "number": "28",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-39",
+   "text": "manisa salihli yoruk mah avar cad. no 123",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w391328508",
+    "number": "123",
+    "streetName": "Avar Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-40",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH TARZAN BLV. NO 62",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773733",
+    "number": "62",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-41",
+   "text": "manisa yunus emre guzelyurt mah tarzan bulv. no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721344",
+    "number": "19",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-42",
+   "text": "manisa sehzadeler peker mah belediye cad. no 34",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236696456",
+    "number": "34",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-43",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH TARZAN BULV. NO 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717654",
+    "number": "22",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-44",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CAD. NO 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773758",
+    "number": "15",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-45",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CD NO 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773757",
+    "number": "17",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-46",
+   "text": "manisa salihli saglik mah suheda cd. no 86",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12409086052",
+    "number": "86",
+    "streetName": "Şüheda Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-47",
+   "text": "manisa turgutlu albayrak mah sart sk no 2/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1088774927",
+    "number": "2/1",
+    "streetName": "Sart Sokak"
+   }
+  },
+  {
+   "id": "45-folded-48",
+   "text": "MANISA SEHZADELER PEKER MAH HAKKI IPLIKCI CAD. NO 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834282",
+    "number": "7",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-49",
+   "text": "manisa yunus emre guzelyurt mah manas cd no 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773753",
+    "number": "25",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-50",
+   "text": "MANISA YUNUS EMRE MERKEZ EFENDI MAH 8 EYLUL CD NO 157/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w689315333",
+    "number": "157/B",
+    "streetName": "8 Eylül Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-51",
+   "text": "manisa yunus emre muradiye mah istasyon cd. no 31",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277860784",
+    "number": "31",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-52",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH MANAS CAD. NO 32",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764089",
+    "number": "32",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-53",
+   "text": "manisa yunus emre guzelyurt mah tarzan bulv. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721337",
+    "number": "5",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-54",
+   "text": "MANISA YUNUS EMRE MURADIYE MAH 20. OSB SOK. NO 11C",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n14250269740",
+    "number": "11C",
+    "streetName": "20. OSB Sokak"
+   }
+  },
+  {
+   "id": "45-folded-55",
+   "text": "MANISA YUNUS EMRE GUZELYURT MAH BIRLIK CAD. NO 6/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794122",
+    "number": "6/B",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-56",
+   "text": "MANISA SARIGOL SELIMIYE MAH ARNAVUTLAR CAD. NO 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w654072893",
+    "number": "10",
+    "streetName": "Arnavutlar Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-57",
+   "text": "manisa yunus emre guzelyurt mah birlik cad. no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773742",
+    "number": "29",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-folded-58",
+   "text": "manisa yunus emre guzelyurt mah tarzan bulv. no 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717652",
+    "number": "18",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-59",
+   "text": "manisa yunus emre laleli mah mimar sinan bulv. no 242",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1207850739",
+    "number": "242",
+    "streetName": "Mimar Sinan Bulvarı"
+   }
+  },
+  {
+   "id": "45-folded-60",
+   "text": "manisa selendi zafer mah ataturk cad. no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n14158396402",
+    "number": "23",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-1",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzna Bulvarı No:20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717653",
+    "number": "20",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-2",
+   "text": "Hacıbketaşlı Sokak No:335/17 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064272",
+    "number": "335/17",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-3",
+   "text": "Güzelyurt Mah. Burlik Caddesi 8/A, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794120",
+    "number": "8/A",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-4",
+   "text": "Manisa, Kula, 4 Eylül Mahallesi, Yabaayfak Caddesi, Kapı No: 3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n6541683085",
+    "number": "3",
+    "streetName": "Yabaayak Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-5",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Trzan Bulvarı No:27",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721348",
+    "number": "27",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-6",
+   "text": "Hacıbektaşslı Sokak No:335/4 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058539",
+    "number": "335/4",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-7",
+   "text": "Hürriyet Mah. Muzzaffer Tezcan Cad. 43, Soma, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4686944348",
+    "number": "43",
+    "streetName": "Muzaffer Tezcan Cad."
+   }
+  },
+  {
+   "id": "45-typo-8",
+   "text": "Manisa, Yunus Emre, Muradiye Mahallesi, İstasoyn Caddesi, Kapı No: 33",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277860785",
+    "number": "33",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-9",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarnzan Bulvarı No:15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721342",
+    "number": "15",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-10",
+   "text": "İstsyon Caddesi No:38 Muradiye Mahallesi Yunus Emre/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277861317",
+    "number": "38",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-11",
+   "text": "1.Anafartalar Mah. Cucmhuriyet Caddesi 29/B, Şehzadeler, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10692822214",
+    "number": "29/B",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-12",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Bpirlik Caddesi, Kapı No: 15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773749",
+    "number": "15",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-13",
+   "text": "Manisa Salihli Hacıbektaşlı Mah. Hacıbetkaşlı Sokak No:335/9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064275",
+    "number": "335/9",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-14",
+   "text": "Albhayrak No:20 Hatboyu Sokak Mahallesi Turgutlu/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "r16474896",
+    "number": "20",
+    "streetName": "Albayrak"
+   }
+  },
+  {
+   "id": "45-typo-15",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşeı Sokak 335/16, Salihli, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064269",
+    "number": "335/16",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-16",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Hakkı İplidkçi Caddesi, Kapı No: 1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834329",
+    "number": "1",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-17",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Taran Bulvarı No:57",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721370",
+    "number": "57",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-18",
+   "text": "Tazran Bulvarı No:36 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773721",
+    "number": "36",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-19",
+   "text": "Hacıbektaşlı Mah. Hcaıbektaşlı Sokak 335/19, Salihli, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064274",
+    "number": "335/19",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-20",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tanrzan Bulvarı, Kapı No: 51",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721359",
+    "number": "51",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-21",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzgan Bulvarı No:12",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717649",
+    "number": "12",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-22",
+   "text": "Beldeiye Caddesi No:50/A Peker Mahallesi Şehzadeler/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n3970270179",
+    "number": "50/A",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-23",
+   "text": "Güzelyurt Mah. Birlvk Caddesi 7/A, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794103",
+    "number": "7/A",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-24",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarzzan Bulvarı, Kapı No: 35",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721352",
+    "number": "35",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-25",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzyan Bulvarı No:77",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721360",
+    "number": "77",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-26",
+   "text": "Mktep Caddesi No:40 Beşeylül Mahallesi Alaşehir/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12244057722",
+    "number": "40",
+    "streetName": "Mektep Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-27",
+   "text": "Hacıbektaşlı Mah. Hacıbectaşlı Sokak 335/6, Salihli, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058542",
+    "number": "335/6",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-28",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Beledoye Caddesi, Kapı No: 36",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236696882",
+    "number": "36",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-29",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Trazan Bulvarı No:55",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721371",
+    "number": "55",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-30",
+   "text": "Bergcma Caddesi No:1 Turgutalp Mahallesi Soma/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4699020986",
+    "number": "1",
+    "streetName": "Bergama Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-31",
+   "text": "Güzelyurt Mah. Bidrlik Caddesi 7/E, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794107",
+    "number": "7/E",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-32",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Birlki Caddesi, Kapı No: 7/G",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794109",
+    "number": "7/G",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-33",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzna Bulvarı No:53",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721372",
+    "number": "53",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-34",
+   "text": "Hacıbektalı Sokak No:335/12 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064265",
+    "number": "335/12",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-35",
+   "text": "Namık Kemal Mah. Şüeda Caddesi 38, Salihli, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w921849066",
+    "number": "38",
+    "streetName": "Şüheda Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-36",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Hakkı İiplikçi Caddesi, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236834297",
+    "number": "5",
+    "streetName": "Hakkı İplikçi Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-37",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tazan Bulvarı No:69",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721364",
+    "number": "69",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-38",
+   "text": "Ötzyiğit Sokak No:2 Yıldırım Mahallesi Turgutlu/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1384769816",
+    "number": "2",
+    "streetName": "Özyiğit Sokak"
+   }
+  },
+  {
+   "id": "45-typo-39",
+   "text": "Beypınar Mah. Kurrucalar Sk. 52, Selendi, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1427077835",
+    "number": "52",
+    "streetName": "Kurucalar Sk."
+   }
+  },
+  {
+   "id": "45-typo-40",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Tarazn Bulvarı, Kapı No: 8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717647",
+    "number": "8",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-41",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Biroik Caddesi No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794102",
+    "number": "7",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-42",
+   "text": "Cumhruiyet Caddesi No:23/A 1.Anafartalar Mahallesi Şehzadeler/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10692822213",
+    "number": "23/A",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-43",
+   "text": "Güzelyurt Mah. Tarazn Bulvarı 14, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717650",
+    "number": "14",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-44",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, Bebediye Caddesi, Kapı No: 28",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695961",
+    "number": "28",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-45",
+   "text": "Manisa Alaşehir Soğuksu Mah. İstibklal Caddesi No:147",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w760259574",
+    "number": "147",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-46",
+   "text": "Tyrzan Bulvarı No:65 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721366",
+    "number": "65",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-47",
+   "text": "Cumhuriyet Mah. Menyeres Caddesi 55, Salihli, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n10202437955",
+    "number": "55",
+    "streetName": "Menderes Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-48",
+   "text": "Manisa, Salihli, Yörük Mahallesi, Atatrk Caddesi, Kapı No: 234",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1557573760",
+    "number": "234",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-49",
+   "text": "Manisa Salihli Hacıbektaşlı Mah. Hacıbektaşflı Sokak No:335/8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058540",
+    "number": "335/8",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-50",
+   "text": "Hacıbgktaşlı Sokak No:335/13 Hacıbektaşlı Mahallesi Salihli/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064268",
+    "number": "335/13",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-51",
+   "text": "Güzelyurt Mah. Birlki Caddesi 14, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794117",
+    "number": "14",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-52",
+   "text": "Manisa, Salihli, Hacıbektaşlı Mahallesi, Hacıebktaşlı Sokak, Kapı No: 335/3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058538",
+    "number": "335/3",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-53",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Tarzn Bulvarı No:6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717645",
+    "number": "6",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-54",
+   "text": "Belemdiye Caddesi No:30 Peker Mahallesi Şehzadeler/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695987",
+    "number": "30",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-55",
+   "text": "Güzelyurt Mah. Taryan Bulvarı 7, Yunus Emre, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721338",
+    "number": "7",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-56",
+   "text": "Manisa, Salihli, Hacıbektaşlı Mahallesi, Hacıbektalı Sokak, Kapı No: 335/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058543",
+    "number": "335/5",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-typo-57",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. Trzan Bulvarı No:61",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721368",
+    "number": "61",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-58",
+   "text": "Tarazn Bulvarı No:1 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721335",
+    "number": "1",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-typo-59",
+   "text": "Peker Mah. Beledibe Caddesi 26, Şehzadeler, Manisa",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236695942",
+    "number": "26",
+    "streetName": "Belediye Caddesi"
+   }
+  },
+  {
+   "id": "45-typo-60",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, Bzrlik Caddesi, Kapı No: 7/D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794106",
+    "number": "7/D",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-numbered-1",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5705. Sokak No:28",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764017",
+    "number": "28",
+    "streetName": "5705. Sokak",
+    "streetNumber": 5705
+   }
+  },
+  {
+   "id": "45-numbered-2",
+   "text": "5504. Sokak No:2 Uncubozköy Mahallesi Yunus Emre/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1047475346",
+    "number": "2",
+    "streetName": "5504. Sokak",
+    "streetNumber": 5504
+   }
+  },
+  {
+   "id": "45-numbered-3",
+   "text": "Uncubozköy Mah. 5513. Sokak 3, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046305769",
+    "number": "3",
+    "streetName": "5513. Sokak",
+    "streetNumber": 5513
+   }
+  },
+  {
+   "id": "45-numbered-4",
+   "text": "Manisa, Yunus Emre, Uncubozköy Mahallesi, 5507. Sokak, Kapı No: 7",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1057000743",
+    "number": "7",
+    "streetName": "5507. Sokak",
+    "streetNumber": 5507
+   }
+  },
+  {
+   "id": "45-numbered-5",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5719. Sokak No:24",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773718",
+    "number": "24",
+    "streetName": "5719. Sokak",
+    "streetNumber": 5719
+   }
+  },
+  {
+   "id": "45-numbered-6",
+   "text": "5504. Sokak No:4 Uncubozköy Mahallesi Yunus Emre/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1047475334",
+    "number": "4",
+    "streetName": "5504. Sokak",
+    "streetNumber": 5504
+   }
+  },
+  {
+   "id": "45-numbered-7",
+   "text": "Peker Mah. 1701. Sokak 24, Şehzadeler, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236833721",
+    "number": "24",
+    "streetName": "1701. Sokak",
+    "streetNumber": 1701
+   }
+  },
+  {
+   "id": "45-numbered-8",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, 5704. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717626",
+    "number": "5",
+    "streetName": "5704. Sokak",
+    "streetNumber": 5704
+   }
+  },
+  {
+   "id": "45-numbered-9",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5715. Sokak No:5/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717695",
+    "number": "5/A",
+    "streetName": "5715. Sokak",
+    "streetNumber": 5715
+   }
+  },
+  {
+   "id": "45-numbered-10",
+   "text": "5705. Sokak No:56 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764070",
+    "number": "56",
+    "streetName": "5705. Sokak",
+    "streetNumber": 5705
+   }
+  },
+  {
+   "id": "45-numbered-11",
+   "text": "Uncubozköy Mah. 5509. Sokak 37, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1057000750",
+    "number": "37",
+    "streetName": "5509. Sokak",
+    "streetNumber": 5509
+   }
+  },
+  {
+   "id": "45-numbered-12",
+   "text": "Manisa, Şehzadeler, Yarhasanlar Mahallesi, 2108. Sokak, Kapı No: 12",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236558904",
+    "number": "12",
+    "streetName": "2108. Sokak",
+    "streetNumber": 2108
+   }
+  },
+  {
+   "id": "45-numbered-13",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5715. Sokak No:14",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717671",
+    "number": "14",
+    "streetName": "5715. Sokak",
+    "streetNumber": 5715
+   }
+  },
+  {
+   "id": "45-numbered-14",
+   "text": "4229. Sokak No:3 Kuşlubahçe Mahallesi Şehzadeler/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12769669235",
+    "number": "3",
+    "streetName": "4229. Sokak",
+    "streetNumber": 4229
+   }
+  },
+  {
+   "id": "45-numbered-15",
+   "text": "Uncubozköy Mah. 5507. Sokak 37, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1047475336",
+    "number": "37",
+    "streetName": "5507. Sokak",
+    "streetNumber": 5507
+   }
+  },
+  {
+   "id": "45-numbered-16",
+   "text": "Manisa, Yunus Emre, Uncubozköy Mahallesi, 5506. Sokak, Kapı No: 23",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1047475324",
+    "number": "23",
+    "streetName": "5506. Sokak",
+    "streetNumber": 5506
+   }
+  },
+  {
+   "id": "45-numbered-17",
+   "text": "Manisa Şehzadeler Peker Mah. 1708. Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236833940",
+    "number": "8",
+    "streetName": "1708. Sokak",
+    "streetNumber": 1708
+   }
+  },
+  {
+   "id": "45-numbered-18",
+   "text": "1708. Sokak No:6 Peker Mahallesi Şehzadeler/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236833937",
+    "number": "6",
+    "streetName": "1708. Sokak",
+    "streetNumber": 1708
+   }
+  },
+  {
+   "id": "45-numbered-19",
+   "text": "Güzelyurt Mah. 5707. Sokak 1, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764031",
+    "number": "1",
+    "streetName": "5707. Sokak",
+    "streetNumber": 5707
+   }
+  },
+  {
+   "id": "45-numbered-20",
+   "text": "Manisa, Yunus Emre, Uncubozköy Mahallesi, 5506. Sokak, Kapı No: 17",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1341575035",
+    "number": "17",
+    "streetName": "5506. Sokak",
+    "streetNumber": 5506
+   }
+  },
+  {
+   "id": "45-numbered-21",
+   "text": "Manisa Şehzadeler Peker Mah. 1708. Sokak No:4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236833867",
+    "number": "4",
+    "streetName": "1708. Sokak",
+    "streetNumber": 1708
+   }
+  },
+  {
+   "id": "45-numbered-22",
+   "text": "5705. Sokak No:42 Güzelyurt Mahallesi Yunus Emre/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764024",
+    "number": "42",
+    "streetName": "5705. Sokak",
+    "streetNumber": 5705
+   }
+  },
+  {
+   "id": "45-numbered-23",
+   "text": "Uncubozköy Mah. 5504. Sokak 8, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1210417220",
+    "number": "8",
+    "streetName": "5504. Sokak",
+    "streetNumber": 5504
+   }
+  },
+  {
+   "id": "45-numbered-24",
+   "text": "Manisa, Şehzadeler, Peker Mahallesi, 1701. Sokak, Kapı No: 35",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236699841",
+    "number": "35",
+    "streetName": "1701. Sokak",
+    "streetNumber": 1701
+   }
+  },
+  {
+   "id": "45-numbered-25",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5719. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764075",
+    "number": "5",
+    "streetName": "5719. Sokak",
+    "streetNumber": 5719
+   }
+  },
+  {
+   "id": "45-numbered-26",
+   "text": "1706. Sokak No:10 Peker Mahallesi Şehzadeler/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236689107",
+    "number": "10",
+    "streetName": "1706. Sokak",
+    "streetNumber": 1706
+   }
+  },
+  {
+   "id": "45-numbered-27",
+   "text": "Güzelyurt Mah. 5715. Sokak 36, Yunus Emre, Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717643",
+    "number": "36",
+    "streetName": "5715. Sokak",
+    "streetNumber": 5715
+   }
+  },
+  {
+   "id": "45-numbered-28",
+   "text": "Manisa, Yunus Emre, Güzelyurt Mahallesi, 5702. Sokak, Kapı No: 11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794152",
+    "number": "11",
+    "streetName": "5702. Sokak",
+    "streetNumber": 5702
+   }
+  },
+  {
+   "id": "45-numbered-29",
+   "text": "Manisa Yunus Emre Güzelyurt Mah. 5702. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794155",
+    "number": "5",
+    "streetName": "5702. Sokak",
+    "streetNumber": 5702
+   }
+  },
+  {
+   "id": "45-numbered-30",
+   "text": "5509. Sokak No:16 Uncubozköy Mahallesi Yunus Emre/Manisa",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046305777",
+    "number": "16",
+    "streetName": "5509. Sokak",
+    "streetNumber": 5509
+   }
+  },
+  {
+   "id": "45-hide-1",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 59, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721369",
+    "number": "59",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.3882,
+     38.622497
+    ]
+   }
+  },
+  {
+   "id": "45-hide-2",
+   "text": "Güzelyurt Mah. Birlik Caddesi 11, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773751",
+    "number": "11",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.391594,
+     38.625039
+    ]
+   }
+  },
+  {
+   "id": "45-hide-3",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 3, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721336",
+    "number": "3",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.38848,
+     38.622264
+    ]
+   }
+  },
+  {
+   "id": "45-hide-4",
+   "text": "Güzelyurt Mah. Birlik Caddesi 33, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773740",
+    "number": "33",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.390351,
+     38.625222
+    ]
+   }
+  },
+  {
+   "id": "45-hide-5",
+   "text": "Güzelyurt Mah. Manas Caddesi 60, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794137",
+    "number": "60",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.392682,
+     38.6266
+    ]
+   }
+  },
+  {
+   "id": "45-hide-6",
+   "text": "Güzelyurt Mah. Manas Caddesi 48, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794143",
+    "number": "48",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.392562,
+     38.626129
+    ]
+   }
+  },
+  {
+   "id": "45-hide-7",
+   "text": "Güzelyurt Mah. Birlik Caddesi 25, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773744",
+    "number": "25",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.390822,
+     38.625143
+    ]
+   }
+  },
+  {
+   "id": "45-hide-8",
+   "text": "Cumhuriyet Mah. İstiklal Caddesi 1/2, Sarıgöl, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w654075096",
+    "number": "1/2",
+    "streetName": "İstiklal Caddesi",
+    "truth": [
+     28.696121,
+     38.238046
+    ]
+   }
+  },
+  {
+   "id": "45-hide-9",
+   "text": "Peker Mah. İbrahim Gökçen Bulvarı 84, Şehzadeler, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w911832501",
+    "number": "84",
+    "streetName": "İbrahim Gökçen Bulvarı",
+    "truth": [
+     27.428162,
+     38.619174
+    ]
+   }
+  },
+  {
+   "id": "45-hide-10",
+   "text": "Uncubozköy Mah. Cemal Ergün Caddesi 8, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046305794",
+    "number": "8",
+    "streetName": "Cemal Ergün Caddesi",
+    "truth": [
+     27.38924,
+     38.613337
+    ]
+   }
+  },
+  {
+   "id": "45-hide-11",
+   "text": "Cumhuriyet Mah. Türkmen Sokak 5/A, Turgutlu, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4924291531",
+    "number": "5/A",
+    "streetName": "Türkmen Sokak",
+    "truth": [
+     27.70503,
+     38.495779
+    ]
+   }
+  },
+  {
+   "id": "45-hide-12",
+   "text": "Güzelyurt Mah. Manas Caddesi 3, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717698",
+    "number": "3",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.391339,
+     38.622378
+    ]
+   }
+  },
+  {
+   "id": "45-hide-13",
+   "text": "Güzelyurt Mah. Manas Caddesi 1, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749471",
+    "number": "1",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.391518,
+     38.621871
+    ]
+   }
+  },
+  {
+   "id": "45-hide-14",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 47, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721373",
+    "number": "47",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388525,
+     38.623119
+    ]
+   }
+  },
+  {
+   "id": "45-hide-15",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 44, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773725",
+    "number": "44",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.389825,
+     38.624182
+    ]
+   }
+  },
+  {
+   "id": "45-hide-16",
+   "text": "Güzelyurt Mah. Birlik Caddesi 6/A, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794123",
+    "number": "6/A",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.393018,
+     38.625467
+    ]
+   }
+  },
+  {
+   "id": "45-hide-17",
+   "text": "Muradiye Mah. İstasyon Caddesi 19, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277863900",
+    "number": "19",
+    "streetName": "İstasyon Caddesi",
+    "truth": [
+     27.336788,
+     38.658745
+    ]
+   }
+  },
+  {
+   "id": "45-hide-18",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 38, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773722",
+    "number": "38",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.389763,
+     38.623889
+    ]
+   }
+  },
+  {
+   "id": "45-hide-19",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 45, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721357",
+    "number": "45",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388515,
+     38.623056
+    ]
+   }
+  },
+  {
+   "id": "45-hide-20",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 13, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721341",
+    "number": "13",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388612,
+     38.622751
+    ]
+   }
+  },
+  {
+   "id": "45-hide-21",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 63, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721367",
+    "number": "63",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388238,
+     38.622673
+    ]
+   }
+  },
+  {
+   "id": "45-hide-22",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 73, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721362",
+    "number": "73",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388353,
+     38.623164
+    ]
+   }
+  },
+  {
+   "id": "45-hide-23",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 60, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773734",
+    "number": "60",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.389974,
+     38.624842
+    ]
+   }
+  },
+  {
+   "id": "45-hide-24",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşlı Sokak 335/2, Salihli, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058537",
+    "number": "335/2",
+    "streetName": "Hacıbektaşlı Sokak",
+    "truth": [
+     28.166869,
+     38.466978
+    ]
+   }
+  },
+  {
+   "id": "45-hide-25",
+   "text": "Güzelyurt Mah. Manas Caddesi 21, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773755",
+    "number": "21",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.391803,
+     38.624779
+    ]
+   }
+  },
+  {
+   "id": "45-hide-26",
+   "text": "Hacıbektaşlı Mah. Hacıbektaşlı Sokak 335/10, Salihli, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058544",
+    "number": "335/10",
+    "streetName": "Hacıbektaşlı Sokak",
+    "truth": [
+     28.167643,
+     38.467357
+    ]
+   }
+  },
+  {
+   "id": "45-hide-27",
+   "text": "Güzelyurt Mah. Manas Caddesi 30, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764090",
+    "number": "30",
+    "streetName": "Manas Caddesi",
+    "truth": [
+     27.391853,
+     38.623218
+    ]
+   }
+  },
+  {
+   "id": "45-hide-28",
+   "text": "Kurtuluş Mah. Denizli-Salihli yolu 1/101, Alaşehir, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12352750363",
+    "number": "1/101",
+    "streetName": "Denizli-Salihli yolu",
+    "truth": [
+     28.521243,
+     38.361878
+    ]
+   }
+  },
+  {
+   "id": "45-hide-29",
+   "text": "Alahıdır Mah. Alahıdır Sokak 483A, Ahmetli, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1459562817",
+    "number": "483A",
+    "streetName": "Alahıdır Sokak",
+    "truth": [
+     27.902581,
+     38.508892
+    ]
+   }
+  },
+  {
+   "id": "45-hide-30",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 71, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721363",
+    "number": "71",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.388327,
+     38.623049
+    ]
+   }
+  },
+  {
+   "id": "45-hide-31",
+   "text": "Peker Mah. Belediye Caddesi 32, Şehzadeler, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236696226",
+    "number": "32",
+    "streetName": "Belediye Caddesi",
+    "truth": [
+     27.429728,
+     38.615572
+    ]
+   }
+  },
+  {
+   "id": "45-hide-32",
+   "text": "Güzelyurt Mah. Birlik Caddesi 9, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773752",
+    "number": "9",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.391811,
+     38.624945
+    ]
+   }
+  },
+  {
+   "id": "45-hide-33",
+   "text": "Yenice Mah. Yıldırımlar Cad. 22, Alaşehir, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w760258466",
+    "number": "22",
+    "streetName": "Yıldırımlar Cad.",
+    "truth": [
+     28.509663,
+     38.353935
+    ]
+   }
+  },
+  {
+   "id": "45-hide-34",
+   "text": "Güzelyurt Mah. Tarzan Bulvarı 10, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717648",
+    "number": "10",
+    "streetName": "Tarzan Bulvarı",
+    "truth": [
+     27.389381,
+     38.622431
+    ]
+   }
+  },
+  {
+   "id": "45-hide-35",
+   "text": "Peker Mah. Hakkı İplikçi Caddesi 15, Şehzadeler, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w236828123",
+    "number": "15",
+    "streetName": "Hakkı İplikçi Caddesi",
+    "truth": [
+     27.429517,
+     38.616272
+    ]
+   }
+  },
+  {
+   "id": "45-hide-36",
+   "text": "Akmescit Mah. Mimar Sinan Bulvarı 159, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "r18387490",
+    "number": "159",
+    "streetName": "Mimar Sinan Bulvarı",
+    "truth": [
+     27.400797,
+     38.614877
+    ]
+   }
+  },
+  {
+   "id": "45-hide-37",
+   "text": "Güzelyurt Mah. Birlik Caddesi 17, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773748",
+    "number": "17",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.391306,
+     38.625093
+    ]
+   }
+  },
+  {
+   "id": "45-hide-38",
+   "text": "Yeniköy Mah. Atatürk Bulvarı 181, Şehzadeler, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4699018059",
+    "number": "181",
+    "streetName": "Atatürk Bulvarı",
+    "truth": [
+     27.478792,
+     38.679683
+    ]
+   }
+  },
+  {
+   "id": "45-hide-39",
+   "text": "Peker Mah. İbrahim Gökçen Bulvarı 63/B, Şehzadeler, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12405628792",
+    "number": "63/B",
+    "streetName": "İbrahim Gökçen Bulvarı",
+    "truth": [
+     27.427802,
+     38.618237
+    ]
+   }
+  },
+  {
+   "id": "45-hide-40",
+   "text": "Güzelyurt Mah. Birlik Caddesi 7/B, Yunus Emre, Manisa",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794104",
+    "number": "7/B",
+    "streetName": "Birlik Caddesi",
+    "truth": [
+     27.392793,
+     38.62485
+    ]
+   }
+  },
+  {
+   "id": "45-lang-1",
+   "text": "Guzelyurt, 26 Tarzan Boulevard floor 8 apartment 6, Yunus Emre/Manisa",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-2",
+   "text": "Yunus Emre, Güzelyurt Ortsteil, Tarzan Boulevard Nummer 26, 45919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-3",
+   "text": "маниса йунус эмре, бульвар тарзан д. 26",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-4",
+   "text": "Λεωφόρος Tarzan αρ. 26 όροφος 2 διαμέρισμα 2, μανισα γιουνους εμρε",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-5",
+   "text": "Güzelyurt، شارع Tarzan رقم 26،  Yunus Emre",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125717656",
+    "number": "26",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-6",
+   "text": "Manas Street 4, Manisa Yunus Emre, 45408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-7",
+   "text": "YUNUS EMRE/MANİSA GUZELYURT ORTSTEİL MANAS STRASSE NR. 4",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-8",
+   "text": "гюзелйурт, проспект манас дом 4, маниса йунус эмре",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-9",
+   "text": "Λεωφόρος Manas αρ. 4, γιουνους εμρε/μανισα",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-10",
+   "text": "Yunus Emre Manisa, جادة Manas رقم 4, 45334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125749470",
+    "number": "4",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-11",
+   "text": "Muradiye Neighbourhood, 39 İstasyon Ave floor 2 apartment 6, Yunus Emre/Manisa, 45715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-12",
+   "text": "Manisa Yunus Emre İstasyon Straße Nummer 39 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-13",
+   "text": "микрорайон мурадийе, пр. истасйон 39, йунус эмре/маниса",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-14",
+   "text": "Manisa Yunus Emre γειτονιά Muradiye Λεωφ. ιστασγιον 39 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-15",
+   "text": "شارع İstasyon رقم 39، Yunus Emre Manisa، 45988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "w1272733249",
+    "number": "39",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-16",
+   "text": "Manisa Yunus Emre Güzelyurt Neighbourhood 18 Manas Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-17",
+   "text": "Güzelyurt, Manas Straße Nummer 18, Yunus Emre ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-18",
+   "text": "маниса йунус эмре, микрорайон гюзелйурт, проспект манас д. 18 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΓΚΟΥΖΕΛΓΙΟΥΡΤ, ΛΕΩΦΌΡΟΣ MANAS ΑΡΙΘΜΌΣ 18, ΜΑΝΙΣΑ YUNUS EMRE",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-20",
+   "text": "حي Güzelyurt, جادة Manas رقم 18,  Yunus Emre",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764096",
+    "number": "18",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-21",
+   "text": "Guzelyurt, Manas Ave no 66, Manisa Yunus Emre",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-22",
+   "text": "Güzelyurt Ortsteil, Manas Straße Nr. 66, Manisa Yunus Emre, 45152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-23",
+   "text": "йунус эмре/маниса, микрорайон гюзелйурт, пр. манас д. 66",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-24",
+   "text": "Güzelyurt, Λεωφ. μανας 66, γιουνους εμρε Manisa",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-25",
+   "text": "Güzelyurt، جادة Manas رقم 66،  Yunus Emre",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125794134",
+    "number": "66",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-lang-26",
+   "text": "Güzelyurt Neighbourhood, Tarzan Blvd number 58, Yunus Emre/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-27",
+   "text": "Yunus Emre, Guzelyurt Ortsteil, Tarzan Boulevard 58",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-28",
+   "text": "йунус эмре, бульвар тарзан д. 58 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-29",
+   "text": "Manisa γιουνους εμρε Λεωφόρος ταρζαν αριθμός 58",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-lang-30",
+   "text": "حي Güzelyurt، شارع Tarzan رقم 58، Manisa Yunus Emre",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773732",
+    "number": "58",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-hard-1",
+   "text": "Hacıbektaşlı Sokak 335/4 Hacıbektaşlı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564058539",
+    "number": "335/4",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-hard-2",
+   "text": "Hürriyet mah Muzaffer Tezcan Cad. no:43 d:3 kat:2 Soma",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n4686944348",
+    "number": "43",
+    "streetName": "Muzaffer Tezcan Cad."
+   }
+  },
+  {
+   "id": "45-hard-3",
+   "text": "Turgutlu İzmir-Uşak Yolu no46",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n11572070596",
+    "number": "46",
+    "streetName": "İzmir-Uşak Yolu"
+   }
+  },
+  {
+   "id": "45-hard-4",
+   "text": "33 İstasyon Caddesi Muradiye Yunus Emre",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277860785",
+    "number": "33",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-hard-5",
+   "text": "GUZELYURT TARZAN BULVARI 15",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125721342",
+    "number": "15",
+    "streetName": "Tarzan Bulvarı"
+   }
+  },
+  {
+   "id": "45-hard-6",
+   "text": "Yunus Emre İstasyon Caddesi apartmanı 38 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1277861317",
+    "number": "38",
+    "streetName": "İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "45-hard-7",
+   "text": "Güzelyurt mahallesi Manas Caddesi 11 nolu bina Yunus Emre/Manisa",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773760",
+    "number": "11",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-hard-8",
+   "text": "Birlik 15 Güzelyurt Yunus Emre",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125773749",
+    "number": "15",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "45-hard-9",
+   "text": "Hacıbektaşıl mah Hacıbektaşlı Sokak 335/9 Salihli",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064275",
+    "number": "335/9",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-hard-10",
+   "text": "Albayrak 20 Hatboyu Sokak mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "r16474896",
+    "number": "20",
+    "streetName": "Albayrak"
+   }
+  },
+  {
+   "id": "45-hard-11",
+   "text": "Salihli Hacıbektaşlı Hacıbektaşlı Sokak 335/16, 34322",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1564064269",
+    "number": "335/16",
+    "streetName": "Hacıbektaşlı Sokak"
+   }
+  },
+  {
+   "id": "45-hard-12",
+   "text": "Manisa Yunus Emre Manas Caddesi 14 Güzelyurt",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n12125764098",
+    "number": "14",
+    "streetName": "Manas Caddesi"
+   }
+  },
+  {
+   "id": "45-poi-1",
+   "text": "Vakıfbank-Türkbirliği Ortaokulu Yunus Emre",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1303351977",
+    "kind": "school",
+    "streetName": "Vakıfbank-Türkbirliği Ortaokulu"
+   }
+  },
+  {
+   "id": "45-poi-2",
+   "text": "Salihli Devlet hastane Salihli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w390963265",
+    "kind": "hospital",
+    "streetName": "Salihli Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-3",
+   "text": "23 Nisan Ulusal Egemenlik İlkokulu Yunus Emre Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w447183170",
+    "kind": "school",
+    "streetName": "23 Nisan Ulusal Egemenlik İlkokulu"
+   }
+  },
+  {
+   "id": "45-poi-4",
+   "text": "Murat Germen İlköğretim Okulu Şehzadeler Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w327748809",
+    "kind": "school",
+    "streetName": "Murat Germen İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "45-poi-5",
+   "text": "Novada Akhisar Akhisar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n5087902125",
+    "kind": "mall",
+    "streetName": "Novada Akhisar"
+   }
+  },
+  {
+   "id": "45-poi-6",
+   "text": "Nuray Sayarı İlköğretim Okulu Soma",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1427971162",
+    "kind": "school",
+    "streetName": "Nuray Sayarı İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "45-poi-7",
+   "text": "cumhuriyet riza nebahat dolman ilkokulu kirkagac manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1411028809",
+    "kind": "school",
+    "streetName": "Cumhuriyet Rıza Nebahat Dolman İlkokulu"
+   }
+  },
+  {
+   "id": "45-poi-8",
+   "text": "İstiklal İlköğretim Okulu Şehzadeler Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w327748818",
+    "kind": "school",
+    "streetName": "İstiklal İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "45-poi-9",
+   "text": "manisa sehir hastane sehzadeler manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w731266089",
+    "kind": "hospital",
+    "streetName": "Manisa Şehir Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-10",
+   "text": "turgutlu 19 mayis ortaokul turgutlu manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1384769816",
+    "kind": "school",
+    "streetName": "Turgutlu 19 Mayıs Ortaokulu"
+   }
+  },
+  {
+   "id": "45-poi-11",
+   "text": "Kalp Merkezi Yunus Emre Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1314164500",
+    "kind": "hospital",
+    "streetName": "Kalp Merkezi"
+   }
+  },
+  {
+   "id": "45-poi-12",
+   "text": "Beş Eylül İlkokulu Alaşehir Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1270730581",
+    "kind": "school",
+    "streetName": "Beş Eylül İlkokulu"
+   }
+  },
+  {
+   "id": "45-poi-13",
+   "text": "Manisa Gazi İlkokulu Şehzadeler",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1303351925",
+    "kind": "school",
+    "streetName": "Manisa Gazi İlkokulu"
+   }
+  },
+  {
+   "id": "45-poi-14",
+   "text": "Gördes Cumhuriyet Ortaokulu Gördes",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1428290493",
+    "kind": "school",
+    "streetName": "Gördes Cumhuriyet Ortaokulu"
+   }
+  },
+  {
+   "id": "45-poi-15",
+   "text": "Selendi Devlet Hastanesi Selendi Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w807152282",
+    "kind": "hospital",
+    "streetName": "Selendi Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-16",
+   "text": "alphard carsi turgutlu manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1214924439",
+    "kind": "mall",
+    "streetName": "Alphard Çarşı"
+   }
+  },
+  {
+   "id": "45-poi-17",
+   "text": "novada avm akhisar manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w718234611",
+    "kind": "mall",
+    "streetName": "Novada AVM"
+   }
+  },
+  {
+   "id": "45-poi-18",
+   "text": "Alaşehir Belediyesi Alaşehir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w452279989",
+    "kind": "townhall",
+    "streetName": "Alaşehir Belediyesi"
+   }
+  },
+  {
+   "id": "45-poi-19",
+   "text": "45 Park AVM Yunus Emre Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w632238441",
+    "kind": "mall",
+    "streetName": "45 Park AVM"
+   }
+  },
+  {
+   "id": "45-poi-20",
+   "text": "Turgutlu Belediyesi Turgutlu Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w518567851",
+    "kind": "townhall",
+    "streetName": "Turgutlu Belediyesi"
+   }
+  },
+  {
+   "id": "45-poi-21",
+   "text": "gordes devlet hastane gordes manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046472515",
+    "kind": "hospital",
+    "streetName": "Gördes Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-22",
+   "text": "Akhisar Belediyesi Akhisar Manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w279614976",
+    "kind": "townhall",
+    "streetName": "Akhisar Belediyesi"
+   }
+  },
+  {
+   "id": "45-poi-23",
+   "text": "Soma Devlet hastane Soma",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w444517243",
+    "kind": "hospital",
+    "streetName": "Soma Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-24",
+   "text": "Manisa Şehzadeler Semt Polikliniği Şehzadeler",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w389541602",
+    "kind": "hospital",
+    "streetName": "Manisa Şehzadeler Semt Polikliniği"
+   }
+  },
+  {
+   "id": "45-poi-25",
+   "text": "demirci devlet hastane demirci manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w796500348",
+    "kind": "hospital",
+    "streetName": "Demirci Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-26",
+   "text": "Salihli belediye binası Salihli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w657310050",
+    "kind": "townhall",
+    "streetName": "Salihli Belediyesi"
+   }
+  },
+  {
+   "id": "45-poi-27",
+   "text": "manisa ruh sagligi ve hastaliklari hastanesi sehzadeler manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1150084527",
+    "kind": "hospital",
+    "streetName": "Manisa Ruh Sağlığı ve Hastalıkları Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-28",
+   "text": "Özel Medigüneş Hastanesi Salihli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w391273503",
+    "kind": "hospital",
+    "streetName": "Özel Medigüneş Hastanesi"
+   }
+  },
+  {
+   "id": "45-poi-29",
+   "text": "Gökkaya Belediye Başkanlığı Ahmetli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "n2472087330",
+    "kind": "townhall",
+    "streetName": "Gökkaya Belediye Başkanlığı"
+   }
+  },
+  {
+   "id": "45-poi-30",
+   "text": "magnesia avm yunus emre manisa",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1046290489",
+    "kind": "mall",
+    "streetName": "Magnesia AVM"
+   }
+  },
+  {
+   "id": "45-poi-32",
+   "text": "yunusemre belediye binasi yunus emre",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w1341104682",
+    "kind": "townhall",
+    "streetName": "Yunusemre Belediyesi"
+   }
+  },
+  {
+   "id": "45-poi-33",
+   "text": "manisa buyuksehir belediye binasi sehzadeler",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "45",
+    "osm": "w394287152",
+    "kind": "townhall",
+    "streetName": "Manisa Büyükşehir Belediyesi"
+   }
+  }
+ ]
+}

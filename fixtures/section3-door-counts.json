@@ -1,0 +1,14 @@
+[
+  { "plate": "16", "name": "Bursa", "doors": 3170, "tileMB": 47 },
+  { "plate": "10", "name": "Balıkesir", "doors": 56316, "tileMB": 87 },
+  { "plate": "35", "name": "İzmir", "doors": 5835, "tileMB": 75 },
+  { "plate": "38", "name": "Kayseri", "doors": 658, "tileMB": 83 },
+  { "plate": "20", "name": "Denizli", "doors": 807, "tileMB": 32 },
+  { "plate": "42", "name": "Konya", "doors": 1202, "tileMB": 68 },
+  { "plate": "06", "name": "Ankara", "doors": 22042, "tileMB": 80 },
+  { "plate": "34", "name": "İstanbul", "doors": 44094, "tileMB": 79 },
+  { "plate": "58", "name": "Sivas", "doors": 5214, "tileMB": 69 },
+  { "plate": "45", "name": "Manisa", "doors": 1072, "tileMB": 57 },
+  { "plate": "41", "name": "Kocaeli", "doors": 2104, "tileMB": 33 },
+  { "plate": "59", "name": "Tekirdağ", "doors": 11624, "tileMB": 43 }
+]

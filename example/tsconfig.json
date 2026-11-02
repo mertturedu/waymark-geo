@@ -1,0 +1,28 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src",
+    "../src/core",
+    "../src/native",
+    "../scripts/spikes/graph.ts",
+    "../scripts/spikes/blob.ts",
+    "../scripts/spikes/resume-download.ts",
+    "../scripts/spikes/street-query.ts",
+    "../scripts/spikes/street-queries.ts",
+    "../fixtures/spike-queries.json",
+    "../fixtures/text-golden.json",
+    "../fixtures/address-golden/34.json",
+    "../fixtures/text-unicode.json",
+    "../test/text/helpers/golden.ts",
+    "../test/text/helpers/evaluate.ts",
+    "../test/text/helpers/types.ts",
+    "*.js",
+    "*.ts"
+  ]
+}

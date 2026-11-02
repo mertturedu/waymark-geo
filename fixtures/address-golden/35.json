@@ -1,0 +1,4641 @@
+{
+ "version": 1,
+ "plate": "35",
+ "queries": [
+  {
+   "id": "35-full-1",
+   "text": "İzmir Bergama Zeytindağ Mah. Ali Gıcır Sokağı No:1/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744565105",
+    "number": "1/A",
+    "streetName": "Ali Gıcır Sokağı"
+   }
+  },
+  {
+   "id": "35-full-2",
+   "text": "Önder Caddesi No:5/A Gazi Mahallesi Gaziemir/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9858307077",
+    "number": "5/A",
+    "streetName": "Önder Caddesi"
+   }
+  },
+  {
+   "id": "35-full-3",
+   "text": "Zeytindağ Mah. Camiönü Sokağı 7, Bergama, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746333894",
+    "number": "7",
+    "streetName": "Camiönü Sokağı"
+   }
+  },
+  {
+   "id": "35-full-4",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Ali Gıcır Sokağı, Kapı No: 3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744566208",
+    "number": "3",
+    "streetName": "Ali Gıcır Sokağı"
+   }
+  },
+  {
+   "id": "35-full-5",
+   "text": "İzmir Urla Yenikent Mah. Mustafa Ertekin Caddesi No:60",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903106976",
+    "number": "60",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-6",
+   "text": "Ugur Mumcu Sevgi Yolu No:10 Atatürk Mahallesi Selçuk/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9943170729",
+    "number": "10",
+    "streetName": "Ugur Mumcu Sevgi Yolu"
+   }
+  },
+  {
+   "id": "35-full-7",
+   "text": "Rüstem Mah. Bilgi Sokağı 2/6, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546991228",
+    "number": "2/6",
+    "streetName": "Bilgi Sokağı"
+   }
+  },
+  {
+   "id": "35-full-8",
+   "text": "İzmir, Urla, İçmeler Mahallesi, İtokent Caddesi, Kapı No: 26/9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408528",
+    "number": "26/9",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-full-9",
+   "text": "İzmir Karaburun Mordoğan Mah. Fevzi Çakmak Caddesi No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1008259765",
+    "number": "19",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "35-full-10",
+   "text": "Mustafa Ertekin Caddesi No:183 Yenikent Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102971",
+    "number": "183",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-11",
+   "text": "Alsancak Mah. Liman Caddesi 416, Konak, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n5287461172",
+    "number": "416",
+    "streetName": "Liman Caddesi"
+   }
+  },
+  {
+   "id": "35-full-12",
+   "text": "İzmir, Konak, Mimar Sinan Mahallesi, Işılay Saygın Sokak, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12989105276",
+    "number": "9",
+    "streetName": "Işılay Saygın Sokak"
+   }
+  },
+  {
+   "id": "35-full-13",
+   "text": "İzmir Konak Altıntaş Mah. İnönü Caddesi No:62",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1236290281",
+    "number": "62",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "35-full-14",
+   "text": "Cumhuriyet Bulvarı No:221/A Alsancak Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w872781005",
+    "number": "221/A",
+    "streetName": "Cumhuriyet Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-15",
+   "text": "Atatürk Mah. Atatürk Caddesi 1045, Selçuk, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4990212421",
+    "number": "1045",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-16",
+   "text": "İzmir, Buca, Çaldıran Mahallesi, Menderes Caddesi, Kapı No: 405",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1101809625",
+    "number": "405",
+    "streetName": "Menderes Caddesi"
+   }
+  },
+  {
+   "id": "35-full-17",
+   "text": "İzmir Urla İçmeler Mah. Eski Urla-İzmir Yolu Caddesi No:17A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891904497",
+    "number": "17A",
+    "streetName": "Eski Urla-İzmir Yolu Caddesi"
+   }
+  },
+  {
+   "id": "35-full-18",
+   "text": "Cumhuriyet Bulvarı No:16 Konak Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n6364553442",
+    "number": "16",
+    "streetName": "Cumhuriyet Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-19",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 140, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109037",
+    "number": "140",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-20",
+   "text": "İzmir, Urla, Kalabak Mahallesi, Kocadağ Sokağı, Kapı No: 8/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177877",
+    "number": "8/1",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-full-21",
+   "text": "İzmir Urla Kalabak Mah. Mareşal Fevzi Çakmak Bulvarı No:581",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w424789971",
+    "number": "581",
+    "streetName": "Mareşal Fevzi Çakmak Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-22",
+   "text": "Nazım Hikmet Caddesi No:64/A Yenigün Mahallesi Buca/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9307129835",
+    "number": "64/A",
+    "streetName": "Nazım Hikmet Caddesi"
+   }
+  },
+  {
+   "id": "35-full-23",
+   "text": "Hacı İsa Mah. Hamam Sokak 6, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1434619694",
+    "number": "6",
+    "streetName": "Hamam Sokak"
+   }
+  },
+  {
+   "id": "35-full-24",
+   "text": "İzmir, Konak, Alsancak Mahallesi, Enver Dündar Başar Sokağı, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865990624",
+    "number": "2",
+    "streetName": "Enver Dündar Başar Sokağı"
+   }
+  },
+  {
+   "id": "35-full-25",
+   "text": "İzmir Konak Alsancak Mah. Muzaffer İzgü Sokak No:52",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1363668934",
+    "number": "52",
+    "streetName": "Muzaffer İzgü Sokak"
+   }
+  },
+  {
+   "id": "35-full-26",
+   "text": "Kocadağ Sokağı No:8/5 Kalabak Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177870",
+    "number": "8/5",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-full-27",
+   "text": "İnönü Mah. Lise Caddesi 8, Ödemiş, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w994066248",
+    "number": "8",
+    "streetName": "Lise Caddesi"
+   }
+  },
+  {
+   "id": "35-full-28",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Arabacı Sokağı, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574032",
+    "number": "1",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-full-29",
+   "text": "İzmir Konak Barbaros Mah. Mithatpaşa Caddesi No:123",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8086003638",
+    "number": "123",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-full-30",
+   "text": "Atatürk Caddesi No:4 Kazımdirik Mahallesi Bornova/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1465520069",
+    "number": "4",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-31",
+   "text": "Yenice Mah. Akarsu Sokak 1, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906542292",
+    "number": "1",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-full-32",
+   "text": "İzmir, Urla, İçmeler Mahallesi, İtokent Caddesi, Kapı No: 26/22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408531",
+    "number": "26/22",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-full-33",
+   "text": "İzmir Narlıdere Ilıca Mah. Palandöken Sokak No:18/1A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8867711521",
+    "number": "18/1A",
+    "streetName": "Palandöken Sokak"
+   }
+  },
+  {
+   "id": "35-full-34",
+   "text": "Şair Eşref Bulvarı No:85 Kültür Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13999723764",
+    "number": "85",
+    "streetName": "Şair Eşref Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-35",
+   "text": "İçmeler Mah. İtokent Caddesi 26/20, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408511",
+    "number": "26/20",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-full-36",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Başöğretmen Atatürk Caddesi, Kapı No: 8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731835",
+    "number": "8",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-37",
+   "text": "İzmir Torbalı Torbalı Mah. Haydar Çam Sokak No:24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1302427654",
+    "number": "24",
+    "streetName": "Haydar Çam Sokak"
+   }
+  },
+  {
+   "id": "35-full-38",
+   "text": "Bilgi Sokağı No:2/7 Rüstem Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546991232",
+    "number": "2/7",
+    "streetName": "Bilgi Sokağı"
+   }
+  },
+  {
+   "id": "35-full-39",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 257, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102989",
+    "number": "257",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-40",
+   "text": "İzmir, Urla, Yenice Mahallesi, Akasya Sokak, Kapı No: 1/66",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546279934",
+    "number": "1/66",
+    "streetName": "Akasya Sokak"
+   }
+  },
+  {
+   "id": "35-full-41",
+   "text": "İzmir Bornova Evka 3 Mah. 126. Sokak Evka 3 Bornova No:14/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w282902616",
+    "number": "14/1",
+    "streetName": "126. Sokak Evka 3 Bornova"
+   }
+  },
+  {
+   "id": "35-full-42",
+   "text": "Kıbrıs Şehitleri Caddesi No:4 Alsancak Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w866683726",
+    "number": "4",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "35-full-43",
+   "text": "Alsancak Mah. Atatürk Caddesi 312, Konak, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865990630",
+    "number": "312",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-44",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Başöğretmen Atatürk Caddesi, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731847",
+    "number": "22",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-45",
+   "text": "İzmir Urla Yelaltı Mah. 75. Yıl Cumhuriyet Caddesi No:80",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109910",
+    "number": "80",
+    "streetName": "75. Yıl Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "35-full-46",
+   "text": "Şair Eşref Bulvarı No:74 Mimar Sinan Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8071567092",
+    "number": "74",
+    "streetName": "Şair Eşref Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-47",
+   "text": "Zeytindağ Mah. Başöğretmen Atatürk Caddesi 11, Bergama, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731837",
+    "number": "11",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-48",
+   "text": "İzmir, Karaburun, Mordoğan Mahallesi, Atatürk Caddesi, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1523448210",
+    "number": "20",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-49",
+   "text": "İzmir Urla Yenikent Mah. Mustafa Ertekin Caddesi No:120",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109041",
+    "number": "120",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-50",
+   "text": "Şair Eşref Bulvarı No:8 Mimar Sinan Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n2824456897",
+    "number": "8",
+    "streetName": "Şair Eşref Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-51",
+   "text": "Zeytindağ Mah. 23 Nisan Sokağı 1, Bergama, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744457796",
+    "number": "1",
+    "streetName": "23 Nisan Sokağı"
+   }
+  },
+  {
+   "id": "35-full-52",
+   "text": "İzmir, Karaburun, Mordoğan Mahallesi, Fatih Caddesi, Kapı No: 232",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1009735064",
+    "number": "232",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "35-full-53",
+   "text": "İzmir Konak Mimar Sinan Mah. Şair Eşref Bulvarı No:74",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8071567091",
+    "number": "74",
+    "streetName": "Şair Eşref Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-54",
+   "text": "Cami Sokak No:2 Cumhuriyet Mahallesi Kiraz/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1020356134",
+    "number": "2",
+    "streetName": "Cami Sokak"
+   }
+  },
+  {
+   "id": "35-full-55",
+   "text": "Sıra Mah. Bahar Sokak 5, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w896217277",
+    "number": "5",
+    "streetName": "Bahar Sokak"
+   }
+  },
+  {
+   "id": "35-full-56",
+   "text": "İzmir, Karşıyaka, Bahçelievler Mahallesi, Cevdet Bilsay Caddesi, Kapı No: 118/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4861938744",
+    "number": "118/B",
+    "streetName": "Cevdet Bilsay Caddesi"
+   }
+  },
+  {
+   "id": "35-full-57",
+   "text": "İzmir Urla Yenikent Mah. Mustafa Ertekin Caddesi No:141",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903169623",
+    "number": "141",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-58",
+   "text": "Mustafa Ertekin Caddesi No:259 Yenikent Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102990",
+    "number": "259",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-59",
+   "text": "Denizköy Mah. Esyer Sokağı 1/13, Dikili, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w753427157",
+    "number": "1/13",
+    "streetName": "Esyer Sokağı"
+   }
+  },
+  {
+   "id": "35-full-60",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Ali Ünsalan Caddesi, Kapı No: 85/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718083",
+    "number": "85/1",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-full-61",
+   "text": "İzmir Dikili Denizköy Mah. Esyer Sokağı No:1/7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w753427163",
+    "number": "1/7",
+    "streetName": "Esyer Sokağı"
+   }
+  },
+  {
+   "id": "35-full-62",
+   "text": "Ankara Caddesi No:172/28 Erzene Mahallesi Bornova/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1470222682",
+    "number": "172/28",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "35-full-63",
+   "text": "Rüstem Mah. Bilgi Sokağı 2/3, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546991236",
+    "number": "2/3",
+    "streetName": "Bilgi Sokağı"
+   }
+  },
+  {
+   "id": "35-full-64",
+   "text": "İzmir, Bornova, İnönü Mahallesi, Barbaros Caddesi, Kapı No: 282/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12213799292",
+    "number": "282/B",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "35-full-65",
+   "text": "İzmir Urla İçmeler Mah. Tekke Caddesi No:14A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408580",
+    "number": "14A",
+    "streetName": "Tekke Caddesi"
+   }
+  },
+  {
+   "id": "35-full-66",
+   "text": "Akarsu Sokak No:6 Yenice Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906542296",
+    "number": "6",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-full-67",
+   "text": "Kalabak Mah. Kocadağ Sokağı 8/6, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177864",
+    "number": "8/6",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-full-68",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Başöğretmen Atatürk Caddesi, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744720458",
+    "number": "1",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-69",
+   "text": "İzmir Bergama Zeytindağ Mah. Candan Sokağı No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746341581",
+    "number": "4",
+    "streetName": "Candan Sokağı"
+   }
+  },
+  {
+   "id": "35-full-70",
+   "text": "Berin Taşan Sokağı No:57 Bahriye Üçok Mahallesi Karşıyaka/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w798394889",
+    "number": "57",
+    "streetName": "Berin Taşan Sokağı"
+   }
+  },
+  {
+   "id": "35-full-71",
+   "text": "Yıldırım Beyazıt Mah. Yıldırım Beyazıt Caddesi 112/A, Bornova, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13003983857",
+    "number": "112/A",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "35-full-72",
+   "text": "İzmir, Balçova, Bahçelerarası Mahallesi, Mithatpaşa Caddesi, Kapı No: 1446",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4262604098",
+    "number": "1446",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-full-73",
+   "text": "İzmir Bornova Doğanlar Mah. Hacılarkırı Caddesi No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w867734234",
+    "number": "11",
+    "streetName": "Hacılarkırı Caddesi"
+   }
+  },
+  {
+   "id": "35-full-74",
+   "text": "Atatürk Caddesi No:394 Alsancak Mahallesi Konak/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10731342394",
+    "number": "394",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-75",
+   "text": "Zeytindağ Mah. Arabacı Sokağı 12, Bergama, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574043",
+    "number": "12",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-full-76",
+   "text": "İzmir, Urla, Yenice Mahallesi, Ortanca Sokağı, Kapı No: 3/5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311368",
+    "number": "3/5",
+    "streetName": "Ortanca Sokağı"
+   }
+  },
+  {
+   "id": "35-full-77",
+   "text": "İzmir Urla Rüstem Mah. Bilgi Sokağı No:2/5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546991224",
+    "number": "2/5",
+    "streetName": "Bilgi Sokağı"
+   }
+  },
+  {
+   "id": "35-full-78",
+   "text": "Sanayi Caddesi No:76 Kazımdirik Mahallesi Bornova/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12536584906",
+    "number": "76",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "35-full-79",
+   "text": "Yenikent Mah. Gelincik Sokak 10, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1569696188",
+    "number": "10",
+    "streetName": "Gelincik Sokak"
+   }
+  },
+  {
+   "id": "35-full-80",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Mustafa Ertekin Caddesi, Kapı No: 225",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102980",
+    "number": "225",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-81",
+   "text": "İzmir Konak Güzelyalı Mah. Mithatpaşa Caddesi No:1176/a",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n2552818770",
+    "number": "1176/a",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-full-82",
+   "text": "18 Mart Sokağı No:15/2 Zeytindağ Mahallesi Bergama/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744443567",
+    "number": "15/2",
+    "streetName": "18 Mart Sokağı"
+   }
+  },
+  {
+   "id": "35-full-83",
+   "text": "Zeytindağ Mah. Celal Bayar Caddesi 24, Bergama, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746353854",
+    "number": "24",
+    "streetName": "Celal Bayar Caddesi"
+   }
+  },
+  {
+   "id": "35-full-84",
+   "text": "İzmir, Urla, Hacı İsa Mahallesi, 2. Pazar Yeri Sokak, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903368506",
+    "number": "22",
+    "streetName": "2. Pazar Yeri Sokak"
+   }
+  },
+  {
+   "id": "35-full-85",
+   "text": "İzmir Bornova Kızılay Mah. Hürriyet Caddesi No:2/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13252985209",
+    "number": "2/2",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "35-full-86",
+   "text": "Yeşiltepe Sokak No:71 Yaka Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902735682",
+    "number": "71",
+    "streetName": "Yeşiltepe Sokak"
+   }
+  },
+  {
+   "id": "35-full-87",
+   "text": "Yenikent Mah. Ali Ünsalan Caddesi 85/9, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718086",
+    "number": "85/9",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-full-88",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Mustafa Ertekin Caddesi, Kapı No: 142",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109036",
+    "number": "142",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-89",
+   "text": "İzmir Konak Akdeniz Mah. Gazi Osman Paşa Bulvarı No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12565832229",
+    "number": "10",
+    "streetName": "Gazi Osman Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-90",
+   "text": "Atatürk Caddesi No:112/A Esatpaşa Mahallesi Menemen/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w918735475",
+    "number": "112/A",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-full-91",
+   "text": "Yenikent Mah. Ali Ünsalan Caddesi 85/14, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718085",
+    "number": "85/14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-full-92",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Arabacı Sokağı, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574039",
+    "number": "10",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-full-93",
+   "text": "İzmir Konak Mersinli Mah. Gaziler Caddesi No:4562",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w233336602",
+    "number": "4562",
+    "streetName": "Gaziler Caddesi"
+   }
+  },
+  {
+   "id": "35-full-94",
+   "text": "Tekke Caddesi No:1A İçmeler Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408573",
+    "number": "1A",
+    "streetName": "Tekke Caddesi"
+   }
+  },
+  {
+   "id": "35-full-95",
+   "text": "Güvendik Mah. Güvendik Caddesi 29, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14232916527",
+    "number": "29",
+    "streetName": "Güvendik Caddesi"
+   }
+  },
+  {
+   "id": "35-full-96",
+   "text": "İzmir, Urla, İçmeler Mahallesi, İtokent Caddesi, Kapı No: 16/46",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884161064",
+    "number": "16/46",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-full-97",
+   "text": "İzmir Güzelbahçe Yalı Mah. İstikbal Caddesi No:51/4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14100461975",
+    "number": "51/4",
+    "streetName": "İstikbal Caddesi"
+   }
+  },
+  {
+   "id": "35-full-98",
+   "text": "İtokent Caddesi No:16/41 İçmeler Mahallesi Urla/İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884156706",
+    "number": "16/41",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-full-99",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 214, Urla, İzmir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109015",
+    "number": "214",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-full-100",
+   "text": "İzmir, Bornova, Laka Mahallesi, Gül Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w867720101",
+    "number": "2",
+    "streetName": "Gül Sokak"
+   }
+  },
+  {
+   "id": "35-full-101",
+   "text": "İzmir Kiraz Yeni Mah. Pınar Sokak No:6",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "35",
+    "osm": "w1020529935",
+    "number": "6",
+    "streetName": "Pınar Sokak"
+   }
+  },
+  {
+   "id": "35-full-102",
+   "text": "İzmir Konak İsmet Kaptan Mah. Gazi Osman Paşa Bulvarı No:1",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "35",
+    "osm": "n12264363201",
+    "number": "1",
+    "streetName": "Gazi Osman Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "35-full-103",
+   "text": "İzmir Urla Yenice Mah. Akarsu Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "35",
+    "osm": "w1549876268",
+    "number": "7",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-full-104",
+   "text": "İzmir Buca Adatepe Mah. Doğuş Caddesi No:207/O",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "35",
+    "osm": "w1524552574",
+    "number": "207/O",
+    "streetName": "Doğuş Caddesi"
+   }
+  },
+  {
+   "id": "35-full-105",
+   "text": "İzmir Buca Adatepe Mah. Doğuş Caddesi No:207/A",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "35",
+    "osm": "w1524552562",
+    "number": "207/A",
+    "streetName": "Doğuş Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-1",
+   "text": "IZMIR NARLIDERE LIMANREIS MAH MITHATPASA CAD. NO 604",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4996630822",
+    "number": "604",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-2",
+   "text": "izmir bergama zeytindag mah cevdet sunay cd. no 31",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746383602",
+    "number": "31",
+    "streetName": "Cevdet Sunay Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-3",
+   "text": "IZMIR BUCA BUCA KOOP MAH AHMET PIRISTINA BLV. NO 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w878965396",
+    "number": "24",
+    "streetName": "Ahmet Piriştina Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-4",
+   "text": "izmir buca adatepe mah dogus cad. no 207/o",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1524552575",
+    "number": "207/O",
+    "streetName": "Doğuş Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-5",
+   "text": "izmir konak akdeniz mah gazi osman pasa bulv. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12670182229",
+    "number": "10",
+    "streetName": "Gazi Osman Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-6",
+   "text": "izmir cigli koyici mah dere cad. no 13/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13926519128",
+    "number": "13/A",
+    "streetName": "Dere Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-7",
+   "text": "IZMIR URLA ICMELER MAH ITOKENT CD. NO 26/14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408522",
+    "number": "26/14",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-8",
+   "text": "izmir bergama zeytindag mah camionu sk no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746333899",
+    "number": "10",
+    "streetName": "Camiönü Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-9",
+   "text": "izmir konak goztepe mah inonu cd no 424",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w887675285",
+    "number": "424",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-10",
+   "text": "IZMIR URLA YENICE MAH AKASYA SK. NO 1/50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546279890",
+    "number": "1/50",
+    "streetName": "Akasya Sokak"
+   }
+  },
+  {
+   "id": "35-folded-11",
+   "text": "IZMIR URLA ICMELER MAH ITOKENT CD. NO 26/29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408539",
+    "number": "26/29",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-12",
+   "text": "izmir konak kultur mah ataturk cd. no 190",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w866464102",
+    "number": "190",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-13",
+   "text": "izmir karsiyaka mavisehir mah caher dudayey bulv. no 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n6842866991",
+    "number": "26",
+    "streetName": "Caher Dudayey Bulv."
+   }
+  },
+  {
+   "id": "35-folded-14",
+   "text": "izmir bergama zeytindag mah celal bayar cd. no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746353844",
+    "number": "17",
+    "streetName": "Celal Bayar Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-15",
+   "text": "IZMIR URLA YENIKENT MAH MUSTAFA ERTEKIN CAD. NO 206",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109014",
+    "number": "206",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-16",
+   "text": "IZMIR URLA KUSCULAR MAH KUSCULAR CD NO 59",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14065125620",
+    "number": "59",
+    "streetName": "Kuşçular Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-17",
+   "text": "izmir urla yenice mah kekliktepe cd. no 93/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1566873325",
+    "number": "93/1",
+    "streetName": "Kekliktepe Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-18",
+   "text": "izmir bergama zeytindag mah 1. kumeevler sk no 10/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w748864409",
+    "number": "10/1",
+    "streetName": "1. Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-19",
+   "text": "izmir balcova koruturk mah mithatpasa cad. no 167",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14185739072",
+    "number": "167",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-20",
+   "text": "izmir urla icmeler mah akasya sk no 29/30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902672462",
+    "number": "29/30",
+    "streetName": "Akasya Sokak"
+   }
+  },
+  {
+   "id": "35-folded-21",
+   "text": "izmir konak ismet kaptan mah gazi bulv. no 128",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12803070501",
+    "number": "128",
+    "streetName": "Gazi Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-22",
+   "text": "izmir urla yenikent mah ali unsalan cad. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903103025",
+    "number": "54",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-23",
+   "text": "izmir bergama zeytindag mah atanak sk. no 19/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744443571",
+    "number": "19/1",
+    "streetName": "Atanak Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-24",
+   "text": "izmir urla haci isa mah bulent baratali blv. no 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13948044077",
+    "number": "49",
+    "streetName": "Bülent Baratalı Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-25",
+   "text": "izmir urla rustem mah ozbek yolu cad. no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14070822835",
+    "number": "8",
+    "streetName": "Özbek Yolu Cad."
+   }
+  },
+  {
+   "id": "35-folded-26",
+   "text": "izmir beydag adakure mah ovacik yaylasi kume evleri no 86",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13324701047",
+    "number": "86",
+    "streetName": "Ovacık Yaylası Küme Evleri"
+   }
+  },
+  {
+   "id": "35-folded-27",
+   "text": "izmir konak alsancak mah cumhuriyet bulv. no 228",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8078010382",
+    "number": "228",
+    "streetName": "Cumhuriyet Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-28",
+   "text": "izmir urla icmeler mah itokent cd. no 16/43",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884156708",
+    "number": "16/43",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-29",
+   "text": "IZMIR URLA YENIKENT MAH MUSTAFA ERTEKIN CD. NO 168",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109019",
+    "number": "168",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-30",
+   "text": "izmir karsiyaka bahriye ucok mah latife hanim sok. no 67",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1547635602",
+    "number": "67",
+    "streetName": "Latife Hanım Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-31",
+   "text": "IZMIR KONAK KULTUR MAH PLEVNE BLV. NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865609897",
+    "number": "3",
+    "streetName": "Plevne Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-32",
+   "text": "izmir konak kahramanlar mah mursel pasa blv. no 163",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w868433523",
+    "number": "163",
+    "streetName": "Mürsel Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-33",
+   "text": "izmir bergama zeytindag mah cevdet sunay cd no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746368907",
+    "number": "14",
+    "streetName": "Cevdet Sunay Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-34",
+   "text": "izmir konak kultur mah meksika sk. no 5a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13071431556",
+    "number": "5A",
+    "streetName": "Meksika Sokak"
+   }
+  },
+  {
+   "id": "35-folded-35",
+   "text": "IZMIR BERGAMA ZEYTINDAG MAH BIRLIK CD. NO 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744756553",
+    "number": "18",
+    "streetName": "Birlik Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-36",
+   "text": "izmir urla haci isa mah yavuz sk. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903172584",
+    "number": "16",
+    "streetName": "Yavuz Sokak"
+   }
+  },
+  {
+   "id": "35-folded-37",
+   "text": "izmir bergama zeytindag mah 18 mart sk no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744441618",
+    "number": "13",
+    "streetName": "18 Mart Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-38",
+   "text": "izmir urla icmeler mah itokent cad. no 16/8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884156677",
+    "number": "16/8",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-39",
+   "text": "izmir dikili denizkoy mah denizkoy ataturk cd. no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w750590238",
+    "number": "7",
+    "streetName": "Denizköy Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-40",
+   "text": "izmir bergama zeytindag mah 1. kumeevler sk. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w748864411",
+    "number": "13",
+    "streetName": "1. Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-41",
+   "text": "IZMIR URLA HACI ISA MAH OZLEM SOK. NO 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13948044075",
+    "number": "4",
+    "streetName": "Özlem Sokak"
+   }
+  },
+  {
+   "id": "35-folded-42",
+   "text": "izmir urla icmeler mah itokent cd no 16/50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884156712",
+    "number": "16/50",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-43",
+   "text": "izmir urla yaka mah yesiltepe sok. no 50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902735675",
+    "number": "50",
+    "streetName": "Yeşiltepe Sokak"
+   }
+  },
+  {
+   "id": "35-folded-44",
+   "text": "izmir urla yeni mah kir sok. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1557845043",
+    "number": "6",
+    "streetName": "Kır Sokak"
+   }
+  },
+  {
+   "id": "35-folded-45",
+   "text": "IZMIR URLA YENIKENT MAH ALI UNSALAN CD. NO 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-46",
+   "text": "izmir kemalpasa akalan mah ankara asfalti cd. no 113",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-47",
+   "text": "IZMIR GAZIEMIR DOKUZ EYLUL MAH AKCAY CD. NO 265",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w453958946",
+    "number": "265",
+    "streetName": "Akçay Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-48",
+   "text": "izmir urla yelalti mah avni erdogan cad. no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-49",
+   "text": "izmir karaburun mordogan mah inonu cad. no 174",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1009121180",
+    "number": "174",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-50",
+   "text": "izmir konak konak mah milli kutuphane cd. no 41",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-51",
+   "text": "izmir urla yenice mah sefakoy cad. no 12/4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-52",
+   "text": "izmir konak ismet kaptan mah gazi bulv. no 93/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12593565867",
+    "number": "93/B",
+    "streetName": "Gazi Bulvarı"
+   }
+  },
+  {
+   "id": "35-folded-53",
+   "text": "IZMIR URLA YENIKENT MAH 75. YIL CUMHURIYET CAD. NO 116",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903103106",
+    "number": "116",
+    "streetName": "75. Yıl Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-54",
+   "text": "izmir urla torasan mah kemal ertan cd no 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-55",
+   "text": "IZMIR TORBALI YAZIBASI MAH KARAKAYA SOK. NO 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w851632367",
+    "number": "11",
+    "streetName": "Karakaya Sokak"
+   }
+  },
+  {
+   "id": "35-folded-56",
+   "text": "izmir urla icmeler mah itokent cd. no 26/15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408523",
+    "number": "26/15",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-57",
+   "text": "IZMIR URLA YENIKENT MAH ALI UNSALAN CD NO 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903103002",
+    "number": "26",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-58",
+   "text": "izmir bergama zeytindag mah atanak sk. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744581220",
+    "number": "6",
+    "streetName": "Atanak Sokağı"
+   }
+  },
+  {
+   "id": "35-folded-59",
+   "text": "izmir urla yenikent mah mustafa ertekin cad. no 80",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903106982",
+    "number": "80",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-folded-60",
+   "text": "IZMIR URLA ICMELER MAH ITOKENT CD. NO 16/17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w884156718",
+    "number": "16/17",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-1",
+   "text": "İzmir Bergama Zeytindağ Mah. Caiönü Sokağı No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746333894",
+    "number": "7",
+    "streetName": "Camiönü Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-2",
+   "text": "Mutsafa Ertekin Caddesi No:60 Yenikent Mahallesi Urla/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903106976",
+    "number": "60",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-3",
+   "text": "İçmeler Mah. İokent Caddesi 26/9, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408528",
+    "number": "26/9",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-4",
+   "text": "İzmir, Karaburun, Mordoğan Mahallesi, Fevzi Çkmak Caddesi, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1008259765",
+    "number": "19",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-5",
+   "text": "İzmir Urla Yenikent Mah. Musafa Ertekin Caddesi No:183",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102971",
+    "number": "183",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-6",
+   "text": "Iştlay Saygın Sokak No:9 Mimar Sinan Mahallesi Konak/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12989105276",
+    "number": "9",
+    "streetName": "Işılay Saygın Sokak"
+   }
+  },
+  {
+   "id": "35-typo-7",
+   "text": "Alsancak Mah. Cmuhuriyet Bulvarı 221/A, Konak, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w872781005",
+    "number": "221/A",
+    "streetName": "Cumhuriyet Bulvarı"
+   }
+  },
+  {
+   "id": "35-typo-8",
+   "text": "İzmir, Selçuk, Atatürk Mahallesi, Atauürk Caddesi, Kapı No: 1045",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4990212421",
+    "number": "1045",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-9",
+   "text": "İzmir Buca Çaldıran Mah. Mendres Caddesi No:405",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1101809625",
+    "number": "405",
+    "streetName": "Menderes Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-10",
+   "text": "Cumhuiryet Bulvarı No:16 Konak Mahallesi Konak/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n6364553442",
+    "number": "16",
+    "streetName": "Cumhuriyet Bulvarı"
+   }
+  },
+  {
+   "id": "35-typo-11",
+   "text": "Yenikent Mah. Msutafa Ertekin Caddesi 140, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109037",
+    "number": "140",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-12",
+   "text": "İzmir, Urla, Kalabak Mahallesi, Kocaadğ Sokağı, Kapı No: 8/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177877",
+    "number": "8/1",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-13",
+   "text": "İzmir Urla Kalabak Mah. Marhşal Fevzi Çakmak Bulvarı No:581",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w424789971",
+    "number": "581",
+    "streetName": "Mareşal Fevzi Çakmak Bulvarı"
+   }
+  },
+  {
+   "id": "35-typo-14",
+   "text": "Nazım Hiket Caddesi No:64/A Yenigün Mahallesi Buca/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9307129835",
+    "number": "64/A",
+    "streetName": "Nazım Hikmet Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-15",
+   "text": "Alsancak Mah. Enver Dündtar Başar Sokağı 2, Konak, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865990624",
+    "number": "2",
+    "streetName": "Enver Dündar Başar Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-16",
+   "text": "İzmir, Konak, Alsancak Mahallesi, Muvzaffer İzgü Sokak, Kapı No: 52",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1363668934",
+    "number": "52",
+    "streetName": "Muzaffer İzgü Sokak"
+   }
+  },
+  {
+   "id": "35-typo-17",
+   "text": "İzmir Urla Kalabak Mah. Kocadğ Sokağı No:8/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177870",
+    "number": "8/5",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-18",
+   "text": "Arabauı Sokağı No:1 Zeytindağ Mahallesi Bergama/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574032",
+    "number": "1",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-19",
+   "text": "Barbaros Mah. Mithatapşa Caddesi 123, Konak, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8086003638",
+    "number": "123",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-20",
+   "text": "İzmir, Bornova, Kazımdirik Mahallesi, Atatükr Caddesi, Kapı No: 4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1465520069",
+    "number": "4",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-21",
+   "text": "İzmir Urla Yenice Mah. Aakrsu Sokak No:1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906542292",
+    "number": "1",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-typo-22",
+   "text": "İokent Caddesi No:26/22 İçmeler Mahallesi Urla/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408531",
+    "number": "26/22",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-23",
+   "text": "Ilıca Mah. Paladnöken Sokak 18/1A, Narlıdere, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8867711521",
+    "number": "18/1A",
+    "streetName": "Palandöken Sokak"
+   }
+  },
+  {
+   "id": "35-typo-24",
+   "text": "İzmir, Urla, İçmeler Mahallesi, İtoknt Caddesi, Kapı No: 26/20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408511",
+    "number": "26/20",
+    "streetName": "İtokent Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-25",
+   "text": "İzmir Bergama Zeytindağ Mah. Başöğretmn Atatürk Caddesi No:8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731835",
+    "number": "8",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-26",
+   "text": "Hgaydar Çam Sokak No:24 Torbalı Mahallesi Torbalı/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1302427654",
+    "number": "24",
+    "streetName": "Haydar Çam Sokak"
+   }
+  },
+  {
+   "id": "35-typo-27",
+   "text": "Yenikent Mah. Mpustafa Ertekin Caddesi 257, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102989",
+    "number": "257",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-28",
+   "text": "İzmir, Urla, Yenice Mahallesi, Akaaya Sokak, Kapı No: 1/66",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546279934",
+    "number": "1/66",
+    "streetName": "Akasya Sokak"
+   }
+  },
+  {
+   "id": "35-typo-29",
+   "text": "İzmir Bornova Evka 3 Mah. 126. Sokak Evka 3 Bornvoa No:14/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w282902616",
+    "number": "14/1",
+    "streetName": "126. Sokak Evka 3 Bornova"
+   }
+  },
+  {
+   "id": "35-typo-30",
+   "text": "Kıbrıs Şehitpleri Caddesi No:4 Alsancak Mahallesi Konak/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w866683726",
+    "number": "4",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-31",
+   "text": "Alsancak Mah. Atahtürk Caddesi 312, Konak, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865990630",
+    "number": "312",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-32",
+   "text": "İzmir, Bergama, Zeytindağ Mahallesi, Bşöğretmen Atatürk Caddesi, Kapı No: 22",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731847",
+    "number": "22",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-33",
+   "text": "İzmir Urla Yelaltı Mah. 75. Yıl Cudhuriyet Caddesi No:80",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109910",
+    "number": "80",
+    "streetName": "75. Yıl Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-34",
+   "text": "Bşöğretmen Atatürk Caddesi No:11 Zeytindağ Mahallesi Bergama/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731837",
+    "number": "11",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-35",
+   "text": "Mordoğan Mah. Atatbrk Caddesi 20, Karaburun, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1523448210",
+    "number": "20",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-36",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Musafa Ertekin Caddesi, Kapı No: 120",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109041",
+    "number": "120",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-37",
+   "text": "İzmir Karşıyaka Bahçelievler Mah. Cmvdet Bilsay Caddesi No:118/B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4861938744",
+    "number": "118/B",
+    "streetName": "Cevdet Bilsay Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-38",
+   "text": "Muutafa Ertekin Caddesi No:141 Yenikent Mahallesi Urla/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903169623",
+    "number": "141",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-39",
+   "text": "Yenikent Mah. Musteafa Ertekin Caddesi 259, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102990",
+    "number": "259",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-40",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Ali Üsnalan Caddesi, Kapı No: 85/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718083",
+    "number": "85/1",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-41",
+   "text": "İzmir Bornova Erzene Mah. Anakra Caddesi No:172/28",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1470222682",
+    "number": "172/28",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-42",
+   "text": "Babrbaros Caddesi No:282/B İnönü Mahallesi Bornova/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12213799292",
+    "number": "282/B",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-43",
+   "text": "Yenice Mah. Akarus Sokak 6, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906542296",
+    "number": "6",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-typo-44",
+   "text": "İzmir, Urla, Kalabak Mahallesi, Kcadağ Sokağı, Kapı No: 8/6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177864",
+    "number": "8/6",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-45",
+   "text": "İzmir Bergama Zeytindağ Mah. Başöğretmne Atatürk Caddesi No:1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744720458",
+    "number": "1",
+    "streetName": "Başöğretmen Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-46",
+   "text": "Ccndan Sokağı No:4 Zeytindağ Mahallesi Bergama/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746341581",
+    "number": "4",
+    "streetName": "Candan Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-47",
+   "text": "Yıldırım Beyazıt Mah. Yıldıarım Beyazıt Caddesi 112/A, Bornova, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13003983857",
+    "number": "112/A",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-48",
+   "text": "İzmir, Balçova, Bahçelerarası Mahallesi, Mivthatpaşa Caddesi, Kapı No: 1446",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4262604098",
+    "number": "1446",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-49",
+   "text": "İzmir Bornova Doğanlar Mah. Haıclarkırı Caddesi No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w867734234",
+    "number": "11",
+    "streetName": "Hacılarkırı Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-50",
+   "text": "Atbtürk Caddesi No:394 Alsancak Mahallesi Konak/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10731342394",
+    "number": "394",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-51",
+   "text": "Zeytindağ Mah. Arhabacı Sokağı 12, Bergama, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574043",
+    "number": "12",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-52",
+   "text": "İzmir, Urla, Yenice Mahallesi, Oranca Sokağı, Kapı No: 3/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311368",
+    "number": "3/5",
+    "streetName": "Ortanca Sokağı"
+   }
+  },
+  {
+   "id": "35-typo-53",
+   "text": "İzmir Bornova Kazımdirik Mah. Sarayi Caddesi No:76",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12536584906",
+    "number": "76",
+    "streetName": "Sanayi Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-54",
+   "text": "Gelyincik Sokak No:10 Yenikent Mahallesi Urla/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1569696188",
+    "number": "10",
+    "streetName": "Gelincik Sokak"
+   }
+  },
+  {
+   "id": "35-typo-55",
+   "text": "Yenikent Mah. Musotafa Ertekin Caddesi 225, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102980",
+    "number": "225",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-56",
+   "text": "İzmir, Konak, Güzelyalı Mahallesi, Mithatpaca Caddesi, Kapı No: 1176/a",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n2552818770",
+    "number": "1176/a",
+    "streetName": "Mithatpaşa Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-57",
+   "text": "İzmir Bornova Kızılay Mah. Hürriet Caddesi No:2/2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13252985209",
+    "number": "2/2",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-58",
+   "text": "Yeşuiltepe Sokak No:71 Yaka Mahallesi Urla/İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902735682",
+    "number": "71",
+    "streetName": "Yeşiltepe Sokak"
+   }
+  },
+  {
+   "id": "35-typo-59",
+   "text": "Yenikent Mah. Ali Ünsalmn Caddesi 85/9, Urla, İzmir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718086",
+    "number": "85/9",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-typo-60",
+   "text": "İzmir, Urla, Yenikent Mahallesi, Mustlfa Ertekin Caddesi, Kapı No: 142",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109036",
+    "number": "142",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-numbered-1",
+   "text": "İzmir Urla İçmeler Mah. 1049. Sokak No:3/36",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891254431",
+    "number": "3/36",
+    "streetName": "1049. Sokak",
+    "streetNumber": 1049
+   }
+  },
+  {
+   "id": "35-numbered-2",
+   "text": "2003. Sokak No:42 İskele Mahallesi Urla/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w905915591",
+    "number": "42",
+    "streetName": "2003. Sokak",
+    "streetNumber": 2003
+   }
+  },
+  {
+   "id": "35-numbered-3",
+   "text": "Mansuroğlu Mah. 286 Sokak 4, Bayraklı, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w751948280",
+    "number": "4",
+    "streetName": "286 Sokak",
+    "streetNumber": 286
+   }
+  },
+  {
+   "id": "35-numbered-4",
+   "text": "İzmir, Urla, Kuşçular Mahallesi, 8029. Sokak, Kapı No: 4/4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w933855696",
+    "number": "4/4",
+    "streetName": "8029. Sokak",
+    "streetNumber": 8029
+   }
+  },
+  {
+   "id": "35-numbered-5",
+   "text": "İzmir Bornova Mevlana Mah. 1700. Sokak No:55A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10697080313",
+    "number": "55A",
+    "streetName": "1700. Sokak",
+    "streetNumber": 1700
+   }
+  },
+  {
+   "id": "35-numbered-6",
+   "text": "96. Sokak No:38 Göztepe Mahallesi Konak/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w887673312",
+    "number": "38",
+    "streetName": "96. Sokak",
+    "streetNumber": 96
+   }
+  },
+  {
+   "id": "35-numbered-7",
+   "text": "Alaçatı Mah. 4053. Sokak 4, Çeşme, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n4101000195",
+    "number": "4",
+    "streetName": "4053. Sokak",
+    "streetNumber": 4053
+   }
+  },
+  {
+   "id": "35-numbered-8",
+   "text": "İzmir, Urla, Kuşçular Mahallesi, 8029. Sokak, Kapı No: 6/27",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w933855729",
+    "number": "6/27",
+    "streetName": "8029. Sokak",
+    "streetNumber": 8029
+   }
+  },
+  {
+   "id": "35-numbered-9",
+   "text": "İzmir Buca Adatepe Mah. 62. Sokak No:16/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12527860801",
+    "number": "16/A",
+    "streetName": "62. Sokak",
+    "streetNumber": 62
+   }
+  },
+  {
+   "id": "35-numbered-10",
+   "text": "1727. Sokak No:1 Donanmacı Mahallesi Karşıyaka/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n2559095179",
+    "number": "1",
+    "streetName": "1727. Sokak",
+    "streetNumber": 1727
+   }
+  },
+  {
+   "id": "35-numbered-11",
+   "text": "Gülbahçe Mah. 12068. Sokak 13/2, Urla, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w897326499",
+    "number": "13/2",
+    "streetName": "12068. Sokak",
+    "streetNumber": 12068
+   }
+  },
+  {
+   "id": "35-numbered-12",
+   "text": "İzmir, Urla, Gülbahçe Mahallesi, 12080. Sokak, Kapı No: 3",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w900959684",
+    "number": "3",
+    "streetName": "12080. Sokak",
+    "streetNumber": 12080
+   }
+  },
+  {
+   "id": "35-numbered-13",
+   "text": "İzmir Urla M.Fevzi Çakmak Mah. 4078. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w932385799",
+    "number": "5",
+    "streetName": "4078. Sokak",
+    "streetNumber": 4078
+   }
+  },
+  {
+   "id": "35-numbered-14",
+   "text": "1382. Sokak No:17B Kültür Mahallesi Konak/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14182728106",
+    "number": "17B",
+    "streetName": "1382. Sokak",
+    "streetNumber": 1382
+   }
+  },
+  {
+   "id": "35-numbered-15",
+   "text": "Kuşçular Mah. 8029. Sokak 4/6, Urla, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w933855697",
+    "number": "4/6",
+    "streetName": "8029. Sokak",
+    "streetNumber": 8029
+   }
+  },
+  {
+   "id": "35-numbered-16",
+   "text": "İzmir, Bornova, Ergene Mahallesi, 544 sok., Kapı No: 6/D",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12774877207",
+    "number": "6/D",
+    "streetName": "544 sok.",
+    "streetNumber": 544
+   }
+  },
+  {
+   "id": "35-numbered-17",
+   "text": "İzmir Konak Kültür Mah. 1382. Sokak No:22",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w595807215",
+    "number": "22",
+    "streetName": "1382. Sokak",
+    "streetNumber": 1382
+   }
+  },
+  {
+   "id": "35-numbered-18",
+   "text": "476. Sokak No:2 Mordoğan Mahallesi Karaburun/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1004716072",
+    "number": "2",
+    "streetName": "476. Sokak",
+    "streetNumber": 476
+   }
+  },
+  {
+   "id": "35-numbered-19",
+   "text": "Kültür Mah. 1379. Sokak 10, Konak, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w595775937",
+    "number": "10",
+    "streetName": "1379. Sokak",
+    "streetNumber": 1379
+   }
+  },
+  {
+   "id": "35-numbered-20",
+   "text": "İzmir, Urla, İçmeler Mahallesi, 1087. Sokak, Kapı No: 32/2",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902027739",
+    "number": "32/2",
+    "streetName": "1087. Sokak",
+    "streetNumber": 1087
+   }
+  },
+  {
+   "id": "35-numbered-21",
+   "text": "İzmir Bornova Kazımdirik Mah. 379. Sokak No:1/a",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1266599822",
+    "number": "1/a",
+    "streetName": "379. Sokak",
+    "streetNumber": 379
+   }
+  },
+  {
+   "id": "35-numbered-22",
+   "text": "861. Sokak No:72/304 Konak Mahallesi Konak/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10275462347",
+    "number": "72/304",
+    "streetName": "861. Sokak",
+    "streetNumber": 861
+   }
+  },
+  {
+   "id": "35-numbered-23",
+   "text": "Mordoğan Mah. 481. Sokak 21, Karaburun, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1008259772",
+    "number": "21",
+    "streetName": "481. Sokak",
+    "streetNumber": 481
+   }
+  },
+  {
+   "id": "35-numbered-24",
+   "text": "İzmir, Urla, İçmeler Mahallesi, 1185. Sokak, Kapı No: 6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891901023",
+    "number": "6",
+    "streetName": "1185. Sokak",
+    "streetNumber": 1185
+   }
+  },
+  {
+   "id": "35-numbered-25",
+   "text": "İzmir Karşıyaka Yalı Mah. 6436. Sokak No:120",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w876182208",
+    "number": "120",
+    "streetName": "6436. Sokak",
+    "streetNumber": 6436
+   }
+  },
+  {
+   "id": "35-numbered-26",
+   "text": "12090. Sokak No:11 Gülbahçe Mahallesi Urla/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w908265579",
+    "number": "11",
+    "streetName": "12090. Sokak",
+    "streetNumber": 12090
+   }
+  },
+  {
+   "id": "35-numbered-27",
+   "text": "Alsancak Mah. 1469 Sk 110, Konak, İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13048810338",
+    "number": "110",
+    "streetName": "1469 Sk",
+    "streetNumber": 1469
+   }
+  },
+  {
+   "id": "35-numbered-28",
+   "text": "İzmir, Urla, Gülbahçe Mahallesi, 12077. Sokak, Kapı No: 17",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w900959712",
+    "number": "17",
+    "streetName": "12077. Sokak",
+    "streetNumber": 12077
+   }
+  },
+  {
+   "id": "35-numbered-29",
+   "text": "İzmir Urla Kuşçular Mah. 8036. Sokak No:9/2",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w933847220",
+    "number": "9/2",
+    "streetName": "8036. Sokak",
+    "streetNumber": 8036
+   }
+  },
+  {
+   "id": "35-numbered-30",
+   "text": "1184. Sokak No:9 İçmeler Mahallesi Urla/İzmir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891901020",
+    "number": "9",
+    "streetName": "1184. Sokak",
+    "streetNumber": 1184
+   }
+  },
+  {
+   "id": "35-hide-1",
+   "text": "Halıköy Mah. Ovacık Yaylası Küme Evleri 86, Beydağ, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13516731690",
+    "number": "86",
+    "streetName": "Ovacık Yaylası Küme Evleri",
+    "truth": [
+     28.160365,
+     38.049455
+    ]
+   }
+  },
+  {
+   "id": "35-hide-2",
+   "text": "Hacı İsa Mah. Bülent Baratalı Bulvarı 25, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1530396279",
+    "number": "25",
+    "streetName": "Bülent Baratalı Bulvarı",
+    "truth": [
+     26.766803,
+     38.324514
+    ]
+   }
+  },
+  {
+   "id": "35-hide-3",
+   "text": "İçmeler Mah. İtokent Caddesi 26/8, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408527",
+    "number": "26/8",
+    "streetName": "İtokent Caddesi",
+    "truth": [
+     26.728039,
+     38.310706
+    ]
+   }
+  },
+  {
+   "id": "35-hide-4",
+   "text": "Rüstem Mah. Sefa Sokak 15, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14300187413",
+    "number": "15",
+    "streetName": "Sefa Sokak",
+    "truth": [
+     26.761848,
+     38.334722
+    ]
+   }
+  },
+  {
+   "id": "35-hide-5",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 134, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906780940",
+    "number": "134",
+    "streetName": "Mustafa Ertekin Caddesi",
+    "truth": [
+     26.772483,
+     38.332196
+    ]
+   }
+  },
+  {
+   "id": "35-hide-6",
+   "text": "Alsancak Mah. Cumhuriyet Bulvarı 300/B, Konak, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13572686360",
+    "number": "300/B",
+    "streetName": "Cumhuriyet Bulvarı",
+    "truth": [
+     27.143809,
+     38.441464
+    ]
+   }
+  },
+  {
+   "id": "35-hide-7",
+   "text": "Havutçulu Mah. Dervent Mevkii 71-A, Selçuk, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n7832191253",
+    "number": "71-A",
+    "streetName": "Dervent Mevkii",
+    "truth": [
+     27.437358,
+     37.883705
+    ]
+   }
+  },
+  {
+   "id": "35-hide-8",
+   "text": "Akçaşehir Mah. Akkuyu Küme Evleri 51, Tire, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n8926967749",
+    "number": "51",
+    "streetName": "Akkuyu Küme Evleri",
+    "truth": [
+     27.622906,
+     38.047251
+    ]
+   }
+  },
+  {
+   "id": "35-hide-9",
+   "text": "Mehmet Ali Akman Mah. Mustafa Kemal Sahil Bulvarı 803, Konak, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w248505167",
+    "number": "803",
+    "streetName": "Mustafa Kemal Sahil Bulvarı",
+    "truth": [
+     27.076906,
+     38.399557
+    ]
+   }
+  },
+  {
+   "id": "35-hide-10",
+   "text": "İçmeler Mah. İtokent Caddesi 26/7, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408513",
+    "number": "26/7",
+    "streetName": "İtokent Caddesi",
+    "truth": [
+     26.72808,
+     38.31024
+    ]
+   }
+  },
+  {
+   "id": "35-hide-11",
+   "text": "İçmeler Mah. İtokent Caddesi 26/21, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408532",
+    "number": "26/21",
+    "streetName": "İtokent Caddesi",
+    "truth": [
+     26.726585,
+     38.311726
+    ]
+   }
+  },
+  {
+   "id": "35-hide-12",
+   "text": "Mersin Alanı Mah. Ürkmez Caddesi 209, Seferihisar, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9293137573",
+    "number": "209",
+    "streetName": "Ürkmez Caddesi",
+    "truth": [
+     26.968269,
+     38.080173
+    ]
+   }
+  },
+  {
+   "id": "35-hide-13",
+   "text": "Cumhuriyet Mah. Atatürk Caddesi 157, Dikili, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w500674920",
+    "number": "157",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     26.9078,
+     39.084678
+    ]
+   }
+  },
+  {
+   "id": "35-hide-14",
+   "text": "Yenice Mah. Kekliktepe Caddesi 93/16, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1549876264",
+    "number": "93/16",
+    "streetName": "Kekliktepe Caddesi",
+    "truth": [
+     26.789165,
+     38.335392
+    ]
+   }
+  },
+  {
+   "id": "35-hide-15",
+   "text": "Evka 4 Mah. Barbaros Caddesi 117/4, Bornova, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w867541532",
+    "number": "117/4",
+    "streetName": "Barbaros Caddesi",
+    "truth": [
+     27.207061,
+     38.489243
+    ]
+   }
+  },
+  {
+   "id": "35-hide-16",
+   "text": "İçmeler Mah. İtokent Caddesi 20/4, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w902408567",
+    "number": "20/4",
+    "streetName": "İtokent Caddesi",
+    "truth": [
+     26.729216,
+     38.311879
+    ]
+   }
+  },
+  {
+   "id": "35-hide-17",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 90, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903106967",
+    "number": "90",
+    "streetName": "Mustafa Ertekin Caddesi",
+    "truth": [
+     26.772456,
+     38.331512
+    ]
+   }
+  },
+  {
+   "id": "35-hide-18",
+   "text": "Adalet Mah. Manas Bulvarı 81, Bayraklı, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10028325038",
+    "number": "81",
+    "streetName": "Manas Bulvarı",
+    "truth": [
+     27.175486,
+     38.456987
+    ]
+   }
+  },
+  {
+   "id": "35-hide-19",
+   "text": "Alsancak Mah. Talatpaşa Bulvarı 75, Konak, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w597285221",
+    "number": "75",
+    "streetName": "Talatpaşa Bulvarı",
+    "truth": [
+     27.14654,
+     38.436549
+    ]
+   }
+  },
+  {
+   "id": "35-hide-20",
+   "text": "Yalı Mah. İstikbal Caddesi 10/B, Güzelbahçe, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n13786649391",
+    "number": "10/B",
+    "streetName": "İstikbal Caddesi",
+    "truth": [
+     26.892136,
+     38.37754
+    ]
+   }
+  },
+  {
+   "id": "35-hide-21",
+   "text": "Yenikent Mah. Gelincik Sokak 8, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903107018",
+    "number": "8",
+    "streetName": "Gelincik Sokak",
+    "truth": [
+     26.773084,
+     38.329691
+    ]
+   }
+  },
+  {
+   "id": "35-hide-22",
+   "text": "Zeytindağ Mah. Cevdet Sunay Caddesi 33/A, Bergama, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746383604",
+    "number": "33/A",
+    "streetName": "Cevdet Sunay Caddesi",
+    "truth": [
+     27.075999,
+     38.964056
+    ]
+   }
+  },
+  {
+   "id": "35-hide-23",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 74, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903106985",
+    "number": "74",
+    "streetName": "Mustafa Ertekin Caddesi",
+    "truth": [
+     26.773133,
+     38.331166
+    ]
+   }
+  },
+  {
+   "id": "35-hide-24",
+   "text": "Zeytindağ Mah. Ali Gıcır Sokağı 6, Bergama, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744567360",
+    "number": "6",
+    "streetName": "Ali Gıcır Sokağı",
+    "truth": [
+     27.073664,
+     38.967278
+    ]
+   }
+  },
+  {
+   "id": "35-hide-25",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 145, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903169618",
+    "number": "145",
+    "streetName": "Mustafa Ertekin Caddesi",
+    "truth": [
+     26.770515,
+     38.329838
+    ]
+   }
+  },
+  {
+   "id": "35-hide-26",
+   "text": "Zeytindağ Mah. Candan Sokağı 1/A, Bergama, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746341576",
+    "number": "1/A",
+    "streetName": "Candan Sokağı",
+    "truth": [
+     27.076663,
+     38.968061
+    ]
+   }
+  },
+  {
+   "id": "35-hide-27",
+   "text": "Yelaltı Mah. Avni Erdoğan Caddesi 27, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1544309542",
+    "number": "27",
+    "streetName": "Avni Erdoğan Caddesi",
+    "truth": [
+     26.77213,
+     38.324479
+    ]
+   }
+  },
+  {
+   "id": "35-hide-28",
+   "text": "Mordoğan Mah. Fatih Caddesi 126, Karaburun, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1009735069",
+    "number": "126",
+    "streetName": "Fatih Caddesi",
+    "truth": [
+     26.625609,
+     38.509434
+    ]
+   }
+  },
+  {
+   "id": "35-hide-29",
+   "text": "Yalı Mah. Cahar Dudayev Bulvarı 113, Karşıyaka, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14101307406",
+    "number": "113",
+    "streetName": "Cahar Dudayev Bulvarı",
+    "truth": [
+     27.087705,
+     38.468659
+    ]
+   }
+  },
+  {
+   "id": "35-hide-30",
+   "text": "Kalabak Mah. Kocadağ Sokağı 8/3, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177854",
+    "number": "8/3",
+    "streetName": "Kocadağ Sokağı",
+    "truth": [
+     26.823966,
+     38.342822
+    ]
+   }
+  },
+  {
+   "id": "35-hide-31",
+   "text": "Kalabak Mah. Mareşal Fevzi Çakmak Bulvarı 579, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w424789606",
+    "number": "579",
+    "streetName": "Mareşal Fevzi Çakmak Bulvarı",
+    "truth": [
+     26.817711,
+     38.361251
+    ]
+   }
+  },
+  {
+   "id": "35-hide-32",
+   "text": "Alsancak Mah. Mahmut Esat Bozkurt Caddesi 23, Konak, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w866668961",
+    "number": "23",
+    "streetName": "Mahmut Esat Bozkurt Caddesi",
+    "truth": [
+     27.144943,
+     38.436847
+    ]
+   }
+  },
+  {
+   "id": "35-hide-33",
+   "text": "Alsancak Mah. Mahmut Esat Bozkurt Caddesi 49, Konak, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w260493573",
+    "number": "49",
+    "streetName": "Mahmut Esat Bozkurt Caddesi",
+    "truth": [
+     27.146994,
+     38.436963
+    ]
+   }
+  },
+  {
+   "id": "35-hide-34",
+   "text": "Torasan Mah. Kemal Ertan Caddesi 43, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903392545",
+    "number": "43",
+    "streetName": "Kemal Ertan Caddesi",
+    "truth": [
+     26.706913,
+     38.323289
+    ]
+   }
+  },
+  {
+   "id": "35-hide-35",
+   "text": "Zeytindağ Mah. Başöğretmen Atatürk Caddesi 33, Bergama, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744731850",
+    "number": "33",
+    "streetName": "Başöğretmen Atatürk Caddesi",
+    "truth": [
+     27.074769,
+     38.967279
+    ]
+   }
+  },
+  {
+   "id": "35-hide-36",
+   "text": "Kazımdirik Mah. Ankara Caddesi 193, Bornova, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865810102",
+    "number": "193",
+    "streetName": "Ankara Caddesi",
+    "truth": [
+     27.20357,
+     38.457163
+    ]
+   }
+  },
+  {
+   "id": "35-hide-37",
+   "text": "Zeytindağ Mah. Cevdet Sunay Caddesi 9, Bergama, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w746368900",
+    "number": "9",
+    "streetName": "Cevdet Sunay Caddesi",
+    "truth": [
+     27.074588,
+     38.963183
+    ]
+   }
+  },
+  {
+   "id": "35-hide-38",
+   "text": "Yenikent Mah. Ali Ünsalan Caddesi 85/6, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n14122718084",
+    "number": "85/6",
+    "streetName": "Ali Ünsalan Caddesi",
+    "truth": [
+     26.770112,
+     38.331522
+    ]
+   }
+  },
+  {
+   "id": "35-hide-39",
+   "text": "Fevzi Çakmak Mah. Çağrı Sk. 26/1, Foça, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n11337906635",
+    "number": "26/1",
+    "streetName": "Çağrı Sk.",
+    "truth": [
+     26.831307,
+     38.741954
+    ]
+   }
+  },
+  {
+   "id": "35-hide-40",
+   "text": "Yenikent Mah. Mustafa Ertekin Caddesi 195, Urla, İzmir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102973",
+    "number": "195",
+    "streetName": "Mustafa Ertekin Caddesi",
+    "truth": [
+     26.771512,
+     38.331037
+    ]
+   }
+  },
+  {
+   "id": "35-lang-1",
+   "text": "Yenikent, 14 Ali Unsalan Avenue floor 8 apartment 6, Urla/Izmir",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-2",
+   "text": "Urla, Yenikent Ortsteil, Ali Ünsalan Straße Nummer 14, 35919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-3",
+   "text": "измир урла, проспект али юнсалан д. 14",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-4",
+   "text": "Λεωφόρος Ali Ünsalan αρ. 14 όροφος 2 διαμέρισμα 2, ιζμιρ ουρλα",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-5",
+   "text": "Yenikent، جادة Ali Ünsalan رقم 14،  Urla",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102996",
+    "number": "14",
+    "streetName": "Ali Ünsalan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-6",
+   "text": "Ankara Asfaltı Street 113, İzmir Kemalpaşa, 35408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-7",
+   "text": "KEMALPASA/IZMİR AKALAN ORTSTEİL ANKARA ASFALTİ STRASSE NR. 113",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-8",
+   "text": "акалан, проспект анкара асфалты дом 113, измир кемалпаша",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-9",
+   "text": "ιζμιρ κεμαλπασα, Λεωφόρος Ankara Asfaltı αρ. 113",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-10",
+   "text": "حي Akalan, جادة Ankara Asfaltı رقم 113, İzmir Kemalpaşa",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w502902619",
+    "number": "113",
+    "streetName": "Ankara Asfaltı Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-11",
+   "text": "Yelaltı Neighbourhood, 21 Avni Erdoğan Ave floor 2 apartment 6, Urla/İzmir, 35715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-12",
+   "text": "İzmir Urla Avni Erdoğan Straße Nummer 21 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-13",
+   "text": "микрорайон йелалты, пр. авни эрдоган 21, урла/измир",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-14",
+   "text": "İzmir Urla γειτονιά Yelaltı Λεωφ. αβνι ερντογαν 21 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-15",
+   "text": "شارع Avni Erdoğan رقم 21، Urla İzmir، 35988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102955",
+    "number": "21",
+    "streetName": "Avni Erdoğan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-16",
+   "text": "İzmir Konak Konak Neighbourhood 41 Milli Kütüphane Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-17",
+   "text": "konak ortsteil, milli kütüphane straße nummer 41,  konak",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-18",
+   "text": "микрорайон конак, проспект милли кютюпхане 41, измир конак",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-19",
+   "text": "Λεωφόρος μιλλι κουτουπχανε 41, ιζμιρ Konak",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-20",
+   "text": "حي Konak، جادة Milli Kütüphane رقم 41 طابق 8 بلوك D شقة 8، Konak İzmir",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w865373155",
+    "number": "41",
+    "streetName": "Milli Kütüphane Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-21",
+   "text": "Yenice, Sefakoy Ave no 12/4, Izmir Urla",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-22",
+   "text": "Yenice Ortsteil, Sefaköy Straße Nr. 12/4, İzmir Urla, 35152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-23",
+   "text": "урла/измир, микрорайон йенидже, пр. сефакёй д. 12/4",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-24",
+   "text": "Yenice, Λεωφ. σεφακοϊ 12/4, ουρλα İzmir",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-25",
+   "text": "Yenice، جادة Sefaköy رقم 12/4،  Urla",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w1546311424",
+    "number": "12/4",
+    "streetName": "Sefaköy Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-26",
+   "text": "Torasan Neighbourhood, Kemal Ertan Street number 18, Urla/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-27",
+   "text": "Urla, Torasan Ortsteil, Kemal Ertan Straße 18",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-28",
+   "text": "урла, проспект кемал эртан д. 18 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-29",
+   "text": "İzmir ουρλα Λεωφόρος κεμαλ ερταν αριθμός 18",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-lang-30",
+   "text": "حي Torasan، جادة Kemal Ertan رقم 18، İzmir Urla",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "35",
+    "osm": "w891923205",
+    "number": "18",
+    "streetName": "Kemal Ertan Caddesi"
+   }
+  },
+  {
+   "id": "35-hard-1",
+   "text": "Mustafa Ertekin Caddesi 183 Yenikent",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903102971",
+    "number": "183",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-hard-2",
+   "text": "Mimar Sinan mah Işılay Saygın Sokak no:9 d:3 kat:2 Konak",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12989105276",
+    "number": "9",
+    "streetName": "Işılay Saygın Sokak"
+   }
+  },
+  {
+   "id": "35-hard-3",
+   "text": "Urla Eski Urla-İzmir Yolu Caddesi no17A",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w891904497",
+    "number": "17A",
+    "streetName": "Eski Urla-İzmir Yolu Caddesi"
+   }
+  },
+  {
+   "id": "35-hard-4",
+   "text": "140 Mustafa Ertekin Caddesi Yenikent Urla",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w903109037",
+    "number": "140",
+    "streetName": "Mustafa Ertekin Caddesi"
+   }
+  },
+  {
+   "id": "35-hard-5",
+   "text": "KALABAK KOCADAG SOKAGI 8/1",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177877",
+    "number": "8/1",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-hard-6",
+   "text": "Buca Nazım Hikmet Caddesi apartmanı 64/A numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9307129835",
+    "number": "64/A",
+    "streetName": "Nazım Hikmet Caddesi"
+   }
+  },
+  {
+   "id": "35-hard-7",
+   "text": "Hacı İsa mahallesi Hamam Sokak 6 nolu bina Urla/İzmir",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1434619694",
+    "number": "6",
+    "streetName": "Hamam Sokak"
+   }
+  },
+  {
+   "id": "35-hard-8",
+   "text": "Enver Dündar Başar 2 Alsancak Konak",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865990624",
+    "number": "2",
+    "streetName": "Enver Dündar Başar Sokağı"
+   }
+  },
+  {
+   "id": "35-hard-9",
+   "text": "Alsancka mah Muzaffer İzgü Sokak 52 Konak",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1363668934",
+    "number": "52",
+    "streetName": "Muzaffer İzgü Sokak"
+   }
+  },
+  {
+   "id": "35-hard-10",
+   "text": "Kocadağ Sokağı 8/5 Kalabak mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1551177870",
+    "number": "8/5",
+    "streetName": "Kocadağ Sokağı"
+   }
+  },
+  {
+   "id": "35-hard-11",
+   "text": "Bergama Zeytindağ Arabacı Sokağı 1, 34137",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w744574032",
+    "number": "1",
+    "streetName": "Arabacı Sokağı"
+   }
+  },
+  {
+   "id": "35-hard-12",
+   "text": "İzmir Urla Akarsu Sokak 1 Yenice",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w906542292",
+    "number": "1",
+    "streetName": "Akarsu Sokak"
+   }
+  },
+  {
+   "id": "35-poi-1",
+   "text": "Atatürk Şehit Pilot Yüzbaşı Mehmet İlker Karaman Mesleki ve Teknik Anadolu Lisesi Bornova",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w792159476",
+    "kind": "school",
+    "streetName": "Atatürk Şehit Pilot Yüzbaşı Mehmet İlker Karaman Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "35-poi-2",
+   "text": "meliha ve dogan akad ilkokulu konak izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w910405821",
+    "kind": "school",
+    "streetName": "Meliha Ve Doğan Akad İlkokulu"
+   }
+  },
+  {
+   "id": "35-poi-3",
+   "text": "Nevvar-Salih İşgören Anadolu Lisesi Karabağlar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w116774665",
+    "kind": "school",
+    "streetName": "Nevvar-Salih İşgören Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "35-poi-4",
+   "text": "makbule suleyman alkan ortaokulu buca izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w860688692",
+    "kind": "school",
+    "streetName": "Makbule Süleyman Alkan Ortaokulu"
+   }
+  },
+  {
+   "id": "35-poi-5",
+   "text": "malazgir ilkokulu bornova izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w867502146",
+    "kind": "school",
+    "streetName": "Malazgir İlkokulu"
+   }
+  },
+  {
+   "id": "35-poi-6",
+   "text": "izmir alsancak agiz ve dis sagligi merkezine bagli bayrakli agiz ve dis sagligi poliklinigi bayrakli izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12231153601",
+    "kind": "hospital",
+    "streetName": "İzmir Alsancak Ağız ve Diş Sağlığı Merkezine Bağlı Bayraklı Ağız ve Diş Sağlığı Polikliniği"
+   }
+  },
+  {
+   "id": "35-poi-7",
+   "text": "emiralem sehit baris demir ilkokulu menemen izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1259380728",
+    "kind": "school",
+    "streetName": "Emiralem Şehit Barış Demir ilkokulu"
+   }
+  },
+  {
+   "id": "35-poi-8",
+   "text": "sidika rodop lisesi bornova izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w37335784",
+    "kind": "school",
+    "streetName": "Sıdıka Rodop Lisesi"
+   }
+  },
+  {
+   "id": "35-poi-9",
+   "text": "konak nevvar salih isgoren egitim kampusu cok programli anadolu lisesi konak izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n9804316588",
+    "kind": "school",
+    "streetName": "Konak Nevvar Salih İşgören Eğitim Kampüsü Çok Programlı Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "35-poi-10",
+   "text": "Ali Rıza Efendi İlkokulu Buca İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w589976429",
+    "kind": "school",
+    "streetName": "Ali Rıza Efendi İlkokulu"
+   }
+  },
+  {
+   "id": "35-poi-11",
+   "text": "Bornova Altay Mesleki ve Teknik Anadolu Lisesi Bornova İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w748857227",
+    "kind": "school",
+    "streetName": "Bornova Altay Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "35-poi-12",
+   "text": "yedigun tip merkezi camdibi subesi bornova izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n10914275739",
+    "kind": "hospital",
+    "streetName": "Yedigün Tıp Merkezi Çamdibi Şubesi"
+   }
+  },
+  {
+   "id": "35-poi-13",
+   "text": "medicana international izmir hastane konak izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w703795069",
+    "kind": "hospital",
+    "streetName": "Medicana İnternational İzmir Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-14",
+   "text": "Bergama Belediyesi Bergama",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w377274255",
+    "kind": "townhall",
+    "streetName": "Bergama Belediyesi"
+   }
+  },
+  {
+   "id": "35-poi-15",
+   "text": "İzmir Bergama 1 Nolu Acil Yardım İstasyonu Bergama İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n12606884733",
+    "kind": "hospital",
+    "streetName": "İzmir Bergama 1 Nolu Acil Yardım İstasyonu"
+   }
+  },
+  {
+   "id": "35-poi-16",
+   "text": "Alsancak Nevvar - Salih İşgören Devlet hastane Konak",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w865968487",
+    "kind": "hospital",
+    "streetName": "Alsancak Nevvar - Salih İşgören Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-17",
+   "text": "Tire Devlet Hastanesi Tire",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w427570511",
+    "kind": "hospital",
+    "streetName": "Tire Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-18",
+   "text": "Kordon Kadın Doğum ve Çocuk Hastalıkları hastane Çiğli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w376872080",
+    "kind": "hospital",
+    "streetName": "Kordon Kadın Doğum ve Çocuk Hastalıkları Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-19",
+   "text": "izmir bergama 2 nolu merkez aile sagligi merkezi bergama izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1361688957",
+    "kind": "hospital",
+    "streetName": "İzmir Bergama 2 Nolu Merkez Aile Sağlığı Merkezi"
+   }
+  },
+  {
+   "id": "35-poi-20",
+   "text": "Bergama Belediyesi Haluk Elbe Salonu Bergama İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w386192834",
+    "kind": "townhall",
+    "streetName": "Bergama Belediyesi Haluk Elbe Salonu"
+   }
+  },
+  {
+   "id": "35-poi-21",
+   "text": "Selway Outlet Balçova Balçova",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "n5087889664",
+    "kind": "mall",
+    "streetName": "Selway Outlet Balçova"
+   }
+  },
+  {
+   "id": "35-poi-22",
+   "text": "Tınaztepe Hastanesi Buca",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w176362260",
+    "kind": "hospital",
+    "streetName": "Tınaztepe Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-23",
+   "text": "Diş Hekimliği Ağız ve Diş Sağlığı Hastanesi Bornova",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w729012307",
+    "kind": "hospital",
+    "streetName": "Diş Hekimliği Ağız ve Diş Sağlığı Hastanesi"
+   }
+  },
+  {
+   "id": "35-poi-24",
+   "text": "Olympos AVM Bergama İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w377274238",
+    "kind": "mall",
+    "streetName": "Olympos AVM"
+   }
+  },
+  {
+   "id": "35-poi-25",
+   "text": "palmiye avm balcova izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w312215616",
+    "kind": "mall",
+    "streetName": "Palmiye AVM"
+   }
+  },
+  {
+   "id": "35-poi-26",
+   "text": "THK İş Hanı Bayındır",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w878188907",
+    "kind": "mall",
+    "streetName": "THK İş Hanı"
+   }
+  },
+  {
+   "id": "35-poi-27",
+   "text": "cigli belediye binasi cigli izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w377465495",
+    "kind": "townhall",
+    "streetName": "Çiğli Belediyesi"
+   }
+  },
+  {
+   "id": "35-poi-28",
+   "text": "Sakıpağa Outlet Menemen İzmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w779934636",
+    "kind": "mall",
+    "streetName": "Sakıpağa Outlet"
+   }
+  },
+  {
+   "id": "35-poi-29",
+   "text": "Karşıyaka Belediyesi Karşıyaka",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w384550237",
+    "kind": "townhall",
+    "streetName": "Karşıyaka Belediyesi"
+   }
+  },
+  {
+   "id": "35-poi-30",
+   "text": "urla bamboo avm urla izmir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w923203738",
+    "kind": "mall",
+    "streetName": "Urla Bamboo AVM"
+   }
+  },
+  {
+   "id": "35-poi-31",
+   "text": "t.c. bergama belediye binasi bergama",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w1335896988",
+    "kind": "townhall",
+    "streetName": "T.C. Bergama Belediyesi"
+   }
+  },
+  {
+   "id": "35-poi-32",
+   "text": "balcova belediye binasi balcova",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w286871810",
+    "kind": "townhall",
+    "streetName": "Balçova Belediyesi"
+   }
+  },
+  {
+   "id": "35-poi-33",
+   "text": "torbali belediye binasi torbali",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "35",
+    "osm": "w155468757",
+    "kind": "townhall",
+    "streetName": "Torbalı Belediyesi"
+   }
+  }
+ ]
+}

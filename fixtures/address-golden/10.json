@@ -1,0 +1,4629 @@
+{
+ "version": 1,
+ "plate": "10",
+ "queries": [
+  {
+   "id": "10-full-1",
+   "text": "Balıkesir Bandırma 17 Eylül Mah. Fatih Caddesi No:40",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993744",
+    "number": "40",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "10-full-2",
+   "text": "Eser Sokağı No:69 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183759598",
+    "number": "69",
+    "streetName": "Eser Sokağı"
+   }
+  },
+  {
+   "id": "10-full-3",
+   "text": "İhsaniye Mah. Kayacık Caddesi 14/2A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13373864146",
+    "number": "14/2A",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-full-4",
+   "text": "Balıkesir, Bandırma, Hacı Yusuf Mahallesi, Levent Caddesi, Kapı No: 65",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12881396833",
+    "number": "65",
+    "streetName": "Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-full-5",
+   "text": "Balıkesir Bandırma Haydar Çavuş Mah. General Ali Hikmet Paşa Caddesi No:4/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12918083925",
+    "number": "4/A",
+    "streetName": "General Ali Hikmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "10-full-6",
+   "text": "Ortaokul Caddesi No:11 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760234",
+    "number": "11",
+    "streetName": "Ortaokul Caddesi"
+   }
+  },
+  {
+   "id": "10-full-7",
+   "text": "600 Evler Mah. Emek Sokağı 66/A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13495848102",
+    "number": "66/A",
+    "streetName": "Emek Sokağı"
+   }
+  },
+  {
+   "id": "10-full-8",
+   "text": "Balıkesir, Bandırma, Yeni Mahallesi, Kemal Aydos Caddesi, Kapı No: 35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13529057221",
+    "number": "35",
+    "streetName": "Kemal Aydos Caddesi"
+   }
+  },
+  {
+   "id": "10-full-9",
+   "text": "Balıkesir Bandırma Hacı Yusuf Mah. Mareşal Fevzi Çakmak Caddesi No:3/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13021667170",
+    "number": "3/B",
+    "streetName": "Mareşal Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "10-full-10",
+   "text": "Taflan Sokağı No:19 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521887",
+    "number": "19",
+    "streetName": "Taflan Sokağı"
+   }
+  },
+  {
+   "id": "10-full-11",
+   "text": "Günaydın Mah. Demirciler Caddesi 35/A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13202931212",
+    "number": "35/A",
+    "streetName": "Demirciler Caddesi"
+   }
+  },
+  {
+   "id": "10-full-12",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Kayacık Caddesi, Kapı No: 14/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13373864145",
+    "number": "14/1",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-full-13",
+   "text": "Balıkesir Bandırma Çınarlı Mah. Ada Sokağı No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13456028891",
+    "number": "4",
+    "streetName": "Ada Sokağı"
+   }
+  },
+  {
+   "id": "10-full-14",
+   "text": "Pirenlik Sokağı No:37 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10990353837",
+    "number": "37",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-full-15",
+   "text": "Güre Mah. Albay Selçuk Caddesi 25/2, Edremit, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502265",
+    "number": "25/2",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-16",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, Havuzlu Bahçe Sokağı, Kapı No: 40/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13394926298",
+    "number": "40/A",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-full-17",
+   "text": "Balıkesir Bandırma Sunullah Mah. Moralı Sokağı No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489077",
+    "number": "8",
+    "streetName": "Moralı Sokağı"
+   }
+  },
+  {
+   "id": "10-full-18",
+   "text": "Yıldız Sokağı No:13 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521818",
+    "number": "13",
+    "streetName": "Yıldız Sokağı"
+   }
+  },
+  {
+   "id": "10-full-19",
+   "text": "17 Eylül Mah. Atatürk Caddesi 113, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993998",
+    "number": "113",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-20",
+   "text": "Balıkesir, Bandırma, 600 Evler Mahallesi, Pirenlik Sokağı, Kapı No: 21",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183507751",
+    "number": "21",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-full-21",
+   "text": "Balıkesir Bandırma Paşakent Mah. Şehit Hüseyin Süzener Caddesi No:8/1B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13244649837",
+    "number": "8/1B",
+    "streetName": "Şehit Hüseyin Süzener Caddesi"
+   }
+  },
+  {
+   "id": "10-full-22",
+   "text": "Adalet Caddesi No:101 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760035",
+    "number": "101",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "10-full-23",
+   "text": "17 Eylül Mah. Şehit Özkul Sokağı 9, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993877",
+    "number": "9",
+    "streetName": "Şehit Özkul Sokağı"
+   }
+  },
+  {
+   "id": "10-full-24",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Celal Atik Caddesi, Kapı No: 29/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11584334208",
+    "number": "29/2",
+    "streetName": "Celal Atik Caddesi"
+   }
+  },
+  {
+   "id": "10-full-25",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Güven Sokağı No:4/2B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13231522194",
+    "number": "4/2B",
+    "streetName": "Güven Sokağı"
+   }
+  },
+  {
+   "id": "10-full-26",
+   "text": "Albay Selçuk Caddesi No:27/6 Güre Mahallesi Edremit/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502253",
+    "number": "27/6",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-27",
+   "text": "Paşakonak Mah. Hamit Kaplan Caddesi 28/1, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13255440697",
+    "number": "28/1",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-full-28",
+   "text": "Balıkesir, Bandırma, Bentbaşı Mahallesi, Trenyolu Sokağı, Kapı No: 56/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13415732738",
+    "number": "56/A",
+    "streetName": "Trenyolu Sokağı"
+   }
+  },
+  {
+   "id": "10-full-29",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Ziraat Bahçesi Yolu Sokağı No:2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10996190668",
+    "number": "2",
+    "streetName": "Ziraat Bahçesi Yolu Sokağı"
+   }
+  },
+  {
+   "id": "10-full-30",
+   "text": "Güngör Sokağı No:11 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13506622562",
+    "number": "11",
+    "streetName": "Güngör Sokağı"
+   }
+  },
+  {
+   "id": "10-full-31",
+   "text": "Paşamescit Mah. Kurtuluş Caddesi 79, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926323",
+    "number": "79",
+    "streetName": "Kurtuluş Caddesi"
+   }
+  },
+  {
+   "id": "10-full-32",
+   "text": "Balıkesir, Bandırma, Hacı Yusuf Mahallesi, Sevgi Yolu, Kapı No: 9/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n2840935687",
+    "number": "9/A",
+    "streetName": "Sevgi Yolu"
+   }
+  },
+  {
+   "id": "10-full-33",
+   "text": "Balıkesir Bandırma Sunullah Mah. Hasan Kaya Sokağı No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13435964620",
+    "number": "8",
+    "streetName": "Hasan Kaya Sokağı"
+   }
+  },
+  {
+   "id": "10-full-34",
+   "text": "Küçük Pazar Caddesi No:2/C Levent Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11016823136",
+    "number": "2/C",
+    "streetName": "Küçük Pazar Caddesi"
+   }
+  },
+  {
+   "id": "10-full-35",
+   "text": "İhsaniye Mah. Kayacık Caddesi 1/F, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13378270804",
+    "number": "1/F",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-full-36",
+   "text": "Balıkesir, Bandırma, Paşabayır Mahallesi, Ahmet Taner Kışlalı Caddesi, Kapı No: 31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13304711772",
+    "number": "31",
+    "streetName": "Ahmet Taner Kışlalı Caddesi"
+   }
+  },
+  {
+   "id": "10-full-37",
+   "text": "Balıkesir Bandırma İhsaniye Mah. Hastane Sokağı No:1/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13351194724",
+    "number": "1/A",
+    "streetName": "Hastane Sokağı"
+   }
+  },
+  {
+   "id": "10-full-38",
+   "text": "Kooperatif Evleri Sokağı No:15/1 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13026556133",
+    "number": "15/1",
+    "streetName": "Kooperatif Evleri Sokağı"
+   }
+  },
+  {
+   "id": "10-full-39",
+   "text": "Hacı Yusuf Mah. Hacı Yusuf Sokağı 28, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760188",
+    "number": "28",
+    "streetName": "Hacı Yusuf Sokağı"
+   }
+  },
+  {
+   "id": "10-full-40",
+   "text": "Balıkesir, Bandırma, Paşabayır Mahallesi, Paşa Sokağı, Kapı No: 9/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13249787434",
+    "number": "9/A",
+    "streetName": "Paşa Sokağı"
+   }
+  },
+  {
+   "id": "10-full-41",
+   "text": "Balıkesir Bandırma 17 Eylül Mah. Dr. Cevdet Güntürkün Sokağı No:16/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13411049256",
+    "number": "16/A",
+    "streetName": "Dr. Cevdet Güntürkün Sokağı"
+   }
+  },
+  {
+   "id": "10-full-42",
+   "text": "Ali Kemal Deveciler Bulvarı No:222/3A Bahçelievler Mahallesi Burhaniye/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12686862336",
+    "number": "222/3A",
+    "streetName": "Ali Kemal Deveciler Bulvarı"
+   }
+  },
+  {
+   "id": "10-full-43",
+   "text": "Levent Mah. Büyük Levent Caddesi 61/1, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264309",
+    "number": "61/1",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-full-44",
+   "text": "Balıkesir, Bandırma, Paşakonak Mahallesi, Hamit Kaplan Caddesi, Kapı No: 55",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13243229354",
+    "number": "55",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-full-45",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Paşa Sokağı No:17/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13291204304",
+    "number": "17/A",
+    "streetName": "Paşa Sokağı"
+   }
+  },
+  {
+   "id": "10-full-46",
+   "text": "Ayyıldız Tepe Caddesi No:36 Ayyıldız Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13565565522",
+    "number": "36",
+    "streetName": "Ayyıldız Tepe Caddesi"
+   }
+  },
+  {
+   "id": "10-full-47",
+   "text": "Günaydın Mah. Eski İtfaiye Caddesi 27, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13342616310",
+    "number": "27",
+    "streetName": "Eski İtfaiye Caddesi"
+   }
+  },
+  {
+   "id": "10-full-48",
+   "text": "Balıkesir, Bandırma, Çınarlı Mahallesi, Servet Çırpan Caddesi, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458096",
+    "number": "11",
+    "streetName": "Servet Çırpan Caddesi"
+   }
+  },
+  {
+   "id": "10-full-49",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Ordu Caddesi No:36/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11446682543",
+    "number": "36/A",
+    "streetName": "Ordu Caddesi"
+   }
+  },
+  {
+   "id": "10-full-50",
+   "text": "Camii Sokağı No:14A Cumhuriyet Mahallesi Marmara/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n14093881433",
+    "number": "14A",
+    "streetName": "Camii Sokağı"
+   }
+  },
+  {
+   "id": "10-full-51",
+   "text": "600 Evler Mah. Atatürk Caddesi 423, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11595978990",
+    "number": "423",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-52",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Hastane Sokağı, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13351185287",
+    "number": "7",
+    "streetName": "Hastane Sokağı"
+   }
+  },
+  {
+   "id": "10-full-53",
+   "text": "Balıkesir Bandırma Paşakent Mah. Şehit Kenan Tuğluoğlu Caddesi No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13246914965",
+    "number": "7",
+    "streetName": "Şehit Kenan Tuğluoğlu Caddesi"
+   }
+  },
+  {
+   "id": "10-full-54",
+   "text": "Son Kurşun Caddesi No:13 Çınarlı Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458023",
+    "number": "13",
+    "streetName": "Son Kurşun Caddesi"
+   }
+  },
+  {
+   "id": "10-full-55",
+   "text": "Çınarlı Mah. Celal Atik Caddesi 56/1, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183457956",
+    "number": "56/1",
+    "streetName": "Celal Atik Caddesi"
+   }
+  },
+  {
+   "id": "10-full-56",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, Kemal Özal Caddesi, Kapı No: 116/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13406396604",
+    "number": "116/1",
+    "streetName": "Kemal Özal Caddesi"
+   }
+  },
+  {
+   "id": "10-full-57",
+   "text": "Balıkesir Bandırma Paşakonak Mah. Mehmetçik Caddesi No:105/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13275435565",
+    "number": "105/2",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "10-full-58",
+   "text": "Ayyıldız Tepe Caddesi No:2 Ayyıldız Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13545914389",
+    "number": "2",
+    "streetName": "Ayyıldız Tepe Caddesi"
+   }
+  },
+  {
+   "id": "10-full-59",
+   "text": "İhsaniye Mah. Menekşe Sokağı 52, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11585255649",
+    "number": "52",
+    "streetName": "Menekşe Sokağı"
+   }
+  },
+  {
+   "id": "10-full-60",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Kuyulu Sokağı, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458534",
+    "number": "18",
+    "streetName": "Kuyulu Sokağı"
+   }
+  },
+  {
+   "id": "10-full-61",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Yaman Egeli Sokağı No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087460",
+    "number": "14",
+    "streetName": "Yaman Egeli Sokağı"
+   }
+  },
+  {
+   "id": "10-full-62",
+   "text": "İsmail Gökmen Sokağı No:17 Sunullah Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13430801697",
+    "number": "17",
+    "streetName": "İsmail Gökmen Sokağı"
+   }
+  },
+  {
+   "id": "10-full-63",
+   "text": "Paşabayır Mah. Mustafa Kemal Atatürk Bulvarı 33/3, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13275618159",
+    "number": "33/3",
+    "streetName": "Mustafa Kemal Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "10-full-64",
+   "text": "Balıkesir, Bandırma, 600 Evler Mahallesi, Yiğitler Sokağı, Kapı No: 1/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13481559034",
+    "number": "1/B",
+    "streetName": "Yiğitler Sokağı"
+   }
+  },
+  {
+   "id": "10-full-65",
+   "text": "Balıkesir Bandırma Ayyıldız Mah. Esentepe Caddesi No:141",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1186199210",
+    "number": "141",
+    "streetName": "Esentepe Caddesi"
+   }
+  },
+  {
+   "id": "10-full-66",
+   "text": "Yaman Egeli Sokağı No:13 Paşabayır Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13299315130",
+    "number": "13",
+    "streetName": "Yaman Egeli Sokağı"
+   }
+  },
+  {
+   "id": "10-full-67",
+   "text": "17 Eylül Mah. Atatürk Caddesi 57/A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13347905087",
+    "number": "57/A",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-68",
+   "text": "Balıkesir, Bandırma, Bentbaşı Mahallesi, General Ali Hikmet Paşa Caddesi, Kapı No: 59",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957714",
+    "number": "59",
+    "streetName": "General Ali Hikmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "10-full-69",
+   "text": "Balıkesir Bandırma Haydar Çavuş Mah. Sevgi Yolu No:4/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10995855922",
+    "number": "4/A",
+    "streetName": "Sevgi Yolu"
+   }
+  },
+  {
+   "id": "10-full-70",
+   "text": "Kayacık Caddesi No:168 Kayacık Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13582587478",
+    "number": "168",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-full-71",
+   "text": "600 Evler Mah. Gündoğan Sokağı 2/1, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11595979013",
+    "number": "2/1",
+    "streetName": "Gündoğan Sokağı"
+   }
+  },
+  {
+   "id": "10-full-72",
+   "text": "Balıkesir, Bandırma, Kayacık Mahallesi, Çanakkale Şehitleri Sokağı, Kapı No: 11/8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1073636320",
+    "number": "11/8",
+    "streetName": "Çanakkale Şehitleri Sokağı"
+   }
+  },
+  {
+   "id": "10-full-73",
+   "text": "Balıkesir Bandırma Çınarlı Mah. Değirmenler Caddesi No:100",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13452542726",
+    "number": "100",
+    "streetName": "Değirmenler Caddesi"
+   }
+  },
+  {
+   "id": "10-full-74",
+   "text": "Şükrü Naili Caddesi No:55 Paşamescit Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182927071",
+    "number": "55",
+    "streetName": "Şükrü Naili Caddesi"
+   }
+  },
+  {
+   "id": "10-full-75",
+   "text": "600 Evler Mah. Pirenlik Sokağı 97, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13470233874",
+    "number": "97",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-full-76",
+   "text": "Balıkesir, Bandırma, Çınarlı Mahallesi, Şevkiye Caddesi, Kapı No: 29",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926604",
+    "number": "29",
+    "streetName": "Şevkiye Caddesi"
+   }
+  },
+  {
+   "id": "10-full-77",
+   "text": "Balıkesir Bandırma Yeni Mah. Kıbrıs Caddesi No:37",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1474107052",
+    "number": "37",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "10-full-78",
+   "text": "Bahçelievler Sokağı No:7 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13027300932",
+    "number": "7",
+    "streetName": "Bahçelievler Sokağı"
+   }
+  },
+  {
+   "id": "10-full-79",
+   "text": "Günaydın Mah. Kurtuluş Caddesi 60/A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12950154085",
+    "number": "60/A",
+    "streetName": "Kurtuluş Caddesi"
+   }
+  },
+  {
+   "id": "10-full-80",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, Şehit İlhan Güncan Caddesi, Kapı No: 62",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13413348112",
+    "number": "62",
+    "streetName": "Şehit İlhan Güncan Caddesi"
+   }
+  },
+  {
+   "id": "10-full-81",
+   "text": "Balıkesir Bandırma Paşakonak Mah. İhsan Taylan Sokağı No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13271395155",
+    "number": "12",
+    "streetName": "İhsan Taylan Sokağı"
+   }
+  },
+  {
+   "id": "10-full-82",
+   "text": "Hamit Kaplan Caddesi No:28/5 Paşakonak Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13255440693",
+    "number": "28/5",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-full-83",
+   "text": "Hacı Yusuf Mah. Şehit Ali İhsan Kalmaz Sokağı 67, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183759983",
+    "number": "67",
+    "streetName": "Şehit Ali İhsan Kalmaz Sokağı"
+   }
+  },
+  {
+   "id": "10-full-84",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Eski Stadyum Sokağı, Kapı No: 6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926060",
+    "number": "6",
+    "streetName": "Eski Stadyum Sokağı"
+   }
+  },
+  {
+   "id": "10-full-85",
+   "text": "Balıkesir Bandırma Sunullah Mah. Ordu Caddesi No:65",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489411",
+    "number": "65",
+    "streetName": "Ordu Caddesi"
+   }
+  },
+  {
+   "id": "10-full-86",
+   "text": "Vecihibey Caddesi No:121 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1417621797",
+    "number": "121",
+    "streetName": "Vecihibey Caddesi"
+   }
+  },
+  {
+   "id": "10-full-87",
+   "text": "Çalışkanlar Mah. Çalışkanlar Caddesi 53, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13617673511",
+    "number": "53",
+    "streetName": "Çalışkanlar Caddesi"
+   }
+  },
+  {
+   "id": "10-full-88",
+   "text": "Balıkesir, Bandırma, Paşakent Mahallesi, Şehit Hüseyin Süzener Caddesi, Kapı No: 9/2A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13244649861",
+    "number": "9/2A",
+    "streetName": "Şehit Hüseyin Süzener Caddesi"
+   }
+  },
+  {
+   "id": "10-full-89",
+   "text": "Balıkesir Bandırma 17 Eylül Mah. Atatürk Caddesi No:132",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13404404437",
+    "number": "132",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-90",
+   "text": "Kemal Özal Caddesi No:47 Sunullah Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13432538927",
+    "number": "47",
+    "streetName": "Kemal Özal Caddesi"
+   }
+  },
+  {
+   "id": "10-full-91",
+   "text": "600 Evler Mah. Atatürk Caddesi 325, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183507801",
+    "number": "325",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-92",
+   "text": "Balıkesir, Bandırma, 600 Evler Mahallesi, Sipahi Sokağı, Kapı No: 61",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13483850853",
+    "number": "61",
+    "streetName": "Sipahi Sokağı"
+   }
+  },
+  {
+   "id": "10-full-93",
+   "text": "Balıkesir Bandırma Günaydın Mah. Pazar Caddesi No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993423",
+    "number": "10",
+    "streetName": "Pazar Caddesi"
+   }
+  },
+  {
+   "id": "10-full-94",
+   "text": "Kaşif Acar Caddesi No:69 Günaydın Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11336802037",
+    "number": "69",
+    "streetName": "Kaşif Acar Caddesi"
+   }
+  },
+  {
+   "id": "10-full-95",
+   "text": "Sunullah Mah. Hacı Cafer Yaşbek Sokağı 54, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13436159318",
+    "number": "54",
+    "streetName": "Hacı Cafer Yaşbek Sokağı"
+   }
+  },
+  {
+   "id": "10-full-96",
+   "text": "Balıkesir, Bandırma, 100. Yıl Mahallesi, Nato Caddesi, Kapı No: 89/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13596183696",
+    "number": "89/B",
+    "streetName": "Nato Caddesi"
+   }
+  },
+  {
+   "id": "10-full-97",
+   "text": "Balıkesir Bandırma Paşamescit Mah. Çınarlı Caddesi No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926100",
+    "number": "9",
+    "streetName": "Çınarlı Caddesi"
+   }
+  },
+  {
+   "id": "10-full-98",
+   "text": "Atatürk Caddesi No:1/1 Haydar Çavuş Mahallesi Bandırma/Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760409",
+    "number": "1/1",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-99",
+   "text": "Paşabayır Mah. Mehmetçik Caddesi 17/1A, Bandırma, Balıkesir",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13299578149",
+    "number": "17/1A",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "10-full-100",
+   "text": "Balıkesir, Bandırma, Sunullah Mahallesi, Serdar Sokağı, Kapı No: 70",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489246",
+    "number": "70",
+    "streetName": "Serdar Sokağı"
+   }
+  },
+  {
+   "id": "10-full-101",
+   "text": "Balıkesir Bandırma 17 Eylül Mah. Atatürk Caddesi No:150",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "10",
+    "osm": "n13393647402",
+    "number": "150",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-full-102",
+   "text": "Balıkesir Altıeylül Hasan Basri Çantay Mah. Stadyum Caddesi No:10",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "10",
+    "osm": "r9106193",
+    "number": "10",
+    "streetName": "Stadyum Caddesi"
+   }
+  },
+  {
+   "id": "10-full-103",
+   "text": "Balıkesir Karesi Akıncılar Mah. Gazi Bulvarı No:11",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "10",
+    "osm": "w571707278",
+    "number": "11",
+    "streetName": "Gazi Bulvarı"
+   }
+  },
+  {
+   "id": "10-full-104",
+   "text": "Balıkesir Bandırma Yeni Mah. Şehit Astsubay Mustafa Soner Varlık Caddesi No:15/1",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "10",
+    "osm": "n13582739597",
+    "number": "15/1",
+    "streetName": "Şehit Astsubay Mustafa Soner Varlık Caddesi"
+   }
+  },
+  {
+   "id": "10-full-105",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Yaşar Doğu Caddesi No:20",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "10",
+    "osm": "n13376721361",
+    "number": "20",
+    "streetName": "Yaşar Doğu Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-1",
+   "text": "balikesir bandirma cinarli mah omer bagana sok. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13440396794",
+    "number": "13",
+    "streetName": "Ömer Bagana Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-2",
+   "text": "BALIKESIR BANDIRMA CINARLI MAH ESKI STADYUM SK NO 27",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13460472265",
+    "number": "27",
+    "streetName": "Eski Stadyum Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-3",
+   "text": "balikesir bandirma 600 evler mah pirenlik sk no 47",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13474095292",
+    "number": "47",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-4",
+   "text": "balikesir bandirma kayacik mah kore sehitleri sk no 12/3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13123633143",
+    "number": "12/3",
+    "streetName": "Kore Şehitleri Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-5",
+   "text": "balikesir bandirma haci yusuf mah sahil sok. no 98",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13027300869",
+    "number": "98",
+    "streetName": "Sahil Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-6",
+   "text": "balikesir bandirma haydar cavus mah cabi sok. no 8/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13311092885",
+    "number": "8/A",
+    "streetName": "Cabi Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-7",
+   "text": "BALIKESIR BANDIRMA 600 EVLER MAH NATO CD NO 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183507428",
+    "number": "25",
+    "streetName": "Nato Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-8",
+   "text": "BALIKESIR BANDIRMA IHSANIYE MAH ESKI STADYUM SK NO 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13381375616",
+    "number": "26",
+    "streetName": "Eski Stadyum Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-9",
+   "text": "balikesir bandirma haci yusuf mah vecihibey cad. no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13022923987",
+    "number": "29",
+    "streetName": "Vecihibey Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-10",
+   "text": "balikesir bandirma 600 evler mah ataturk cd. no 415",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11595978997",
+    "number": "415",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-11",
+   "text": "balikesir bandirma 17 eylul mah tamirciler cikmazi sk no 6/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13406465529",
+    "number": "6/B",
+    "streetName": "Tamirciler Çıkmazı Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-12",
+   "text": "balikesir bandirma pasakent mah mehmetcik cad. no 78/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1185818907",
+    "number": "78/1",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-13",
+   "text": "balikesir bandirma pasakonak mah hamit kaplan cd. no 1/3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13243229331",
+    "number": "1/3",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-14",
+   "text": "balikesir bandirma 17 eylul mah havuzlu bahce sk. no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13393167432",
+    "number": "7",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-15",
+   "text": "balikesir bandirma ihsaniye mah asmali sk no 45",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13378101190",
+    "number": "45",
+    "streetName": "Asmalı Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-16",
+   "text": "balikesir bandirma bentbasi mah general ali hikmet pasa cd. no 60/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10984632333",
+    "number": "60/A",
+    "streetName": "General Ali Hikmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-17",
+   "text": "balikesir bandirma dere mah deniz tegmen erdem ozturk sok. no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957476",
+    "number": "8",
+    "streetName": "Deniz Teğmen Erdem Öztürk Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-18",
+   "text": "BALIKESIR EDREMIT GURE MAH CAKIR AGA CAD. NO 1/4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954516020",
+    "number": "1/4",
+    "streetName": "Çakır Ağa Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-19",
+   "text": "balikesir bandirma 17 eylul mah genclik cad. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13389269506",
+    "number": "14",
+    "streetName": "Gençlik Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-20",
+   "text": "BALIKESIR BANDIRMA CINARLI MAH SON KURSUN CAD. NO 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458026",
+    "number": "5",
+    "streetName": "Son Kurşun Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-21",
+   "text": "BALIKESIR BANDIRMA CINARLI MAH SERVET CIRPAN CD NO 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926531",
+    "number": "22",
+    "streetName": "Servet Çırpan Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-22",
+   "text": "balikesir bandirma pasabayir mah ahmet taner kislali cad. no 50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1450677889",
+    "number": "50",
+    "streetName": "Ahmet Taner Kışlalı Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-23",
+   "text": "balikesir bandirma haci yusuf mah haci yusuf sk no 19/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13025355437",
+    "number": "19/A",
+    "streetName": "Hacı Yusuf Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-24",
+   "text": "BALIKESIR BANDIRMA 17 EYLUL MAH KOROZMAN CD. NO 8-10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1041700385",
+    "number": "8-10",
+    "streetName": "Korozman Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-25",
+   "text": "balikesir bandirma 17 eylul mah havuzlu bahce sk no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13395072733",
+    "number": "10",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-26",
+   "text": "BALIKESIR BANDIRMA SUNULLAH MAH SUNULLAH CD NO 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13421247899",
+    "number": "58",
+    "streetName": "Sunullah Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-27",
+   "text": "balikesir bandirma 17 eylul mah havuzlu bahce sk no 20/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13395072707",
+    "number": "20/C",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-28",
+   "text": "BALIKESIR BANDIRMA 17 EYLUL MAH IBRAHIM BILGIN SOK. NO 21/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13401459354",
+    "number": "21/A",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-29",
+   "text": "balikesir bandirma sunullah mah hasan tahsin hoca sk no 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489666",
+    "number": "30",
+    "streetName": "Hasan Tahsin Hoca Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-30",
+   "text": "balikesir bandirma 600 evler mah ataturk cd no 297",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13474095339",
+    "number": "297",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-31",
+   "text": "balikesir bandirma haci yusuf mah sehit ali ihsan kalmaz sok. no 43",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1417887895",
+    "number": "43",
+    "streetName": "Şehit Ali İhsan Kalmaz Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-32",
+   "text": "balikesir bandirma 17 eylul mah ataturk cd. no 137/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11329529252",
+    "number": "137/A",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-33",
+   "text": "balikesir bandirma pasabayir mah ahmet taner kislali cd no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13304397106",
+    "number": "21",
+    "streetName": "Ahmet Taner Kışlalı Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-34",
+   "text": "BALIKESIR BANDIRMA SUNULLAH MAH HUSEYIN SEZGIN SK. NO 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489212",
+    "number": "10",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-35",
+   "text": "balikesir bandirma yeni mah ismail balcioglu sk no 11/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13512107268",
+    "number": "11/A",
+    "streetName": "İsmail Balcıoğlu Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-36",
+   "text": "balikesir bandirma 17 eylul mah hal cd. no 6/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13347790502",
+    "number": "6/C",
+    "streetName": "Hal Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-37",
+   "text": "balikesir bandirma 17 eylul mah haci kesfettin cad. no 66",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13388639019",
+    "number": "66",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-38",
+   "text": "balikesir bandirma pasabayir mah tunel ustu sk no 19/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10996211191",
+    "number": "19/1",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-39",
+   "text": "balikesir bandirma cinarli mah sukru naili cd. no 24/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13458574229",
+    "number": "24/1",
+    "streetName": "Şükrü Naili Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-40",
+   "text": "balikesir bandirma haci yusuf mah santral cad. no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13021672843",
+    "number": "7",
+    "streetName": "Santral Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-41",
+   "text": "balikesir bandirma ihsaniye mah cesme sk. no 7/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13357594022",
+    "number": "7/C",
+    "streetName": "Çeşme Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-42",
+   "text": "balikesir bandirma cinarli mah omer bagana sk no 65/2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183457769",
+    "number": "65/2",
+    "streetName": "Ömer Bagana Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-43",
+   "text": "balikesir bandirma pasakent mah sehit cemil kaya cad. no 27",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13203384970",
+    "number": "27",
+    "streetName": "Şehit Cemil Kaya Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-44",
+   "text": "balikesir bandirma pasakonak mah ihsan taylan sk. no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1446260739",
+    "number": "17",
+    "streetName": "İhsan Taylan Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-45",
+   "text": "balikesir bandirma 17 eylul mah sehit ilhan guncan cd no 68",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13413348106",
+    "number": "68",
+    "streetName": "Şehit İlhan Güncan Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-46",
+   "text": "balikesir marmara okullar mah hukumet cad. no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n14077461106",
+    "number": "21",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-47",
+   "text": "BALIKESIR BANDIRMA BENTBASI MAH SUNULLAH CAD. NO 41/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13418027364",
+    "number": "41/B",
+    "streetName": "Sunullah Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-48",
+   "text": "BALIKESIR BANDIRMA HAYDAR CAVUS MAH ISMET INONU CD. NO 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1419239554",
+    "number": "1",
+    "streetName": "İsmet İnönü Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-49",
+   "text": "BALIKESIR BANDIRMA BENTBASI MAH TRENYOLU SOK. NO 68",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957931",
+    "number": "68",
+    "streetName": "Trenyolu Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-50",
+   "text": "balikesir bandirma pasabayir mah ordu cd. no 56/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13299315154",
+    "number": "56/A",
+    "streetName": "Ordu Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-51",
+   "text": "balikesir bandirma pasakent mah erdek cd. no 26/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13200626487",
+    "number": "26/B",
+    "streetName": "Erdek Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-52",
+   "text": "balikesir bandirma pasakent mah sehit cem guclu cd no 26/1f",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13306451594",
+    "number": "26/1F",
+    "streetName": "Şehit Cem Güçlü Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-53",
+   "text": "balikesir bandirma levent mah buyuk levent cd. no 61/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1186085560",
+    "number": "61/1",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-54",
+   "text": "balikesir bandirma 600 evler mah ihlamur sk. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521865",
+    "number": "13",
+    "streetName": "Ihlamur Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-55",
+   "text": "balikesir bandirma 600 evler mah taflan sok. no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13506622616",
+    "number": "21",
+    "streetName": "Taflan Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-56",
+   "text": "balikesir bandirma 17 eylul mah ataturk cad. no 101/g",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13388500371",
+    "number": "101/G",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-folded-57",
+   "text": "balikesir bandirma 17 eylul mah yahya sezai bey sok. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13411012847",
+    "number": "14",
+    "streetName": "Yahya Sezai Bey Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-58",
+   "text": "BALIKESIR BANDIRMA 17 EYLUL MAH CIFTCILER SOK. NO 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993956",
+    "number": "24",
+    "streetName": "Çiftçiler Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-59",
+   "text": "balikesir bandirma pasabayir mah tunel ustu sok. no 79",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13287045218",
+    "number": "79",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-folded-60",
+   "text": "BALIKESIR BANDIRMA PASAKENT MAH SEHIT HAKAN PALABIYIK CD. NO 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1185818407",
+    "number": "8",
+    "streetName": "Şehit Hakan Palabıyık Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-1",
+   "text": "Balıkesir Bandırma İhsaniye Mah. Kayaıck Caddesi No:14/2A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13373864146",
+    "number": "14/2A",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-2",
+   "text": "Lveent Caddesi No:65 Hacı Yusuf Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12881396833",
+    "number": "65",
+    "streetName": "Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-3",
+   "text": "Haydar Çavuş Mah. Genperal Ali Hikmet Paşa Caddesi 4/A, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12918083925",
+    "number": "4/A",
+    "streetName": "General Ali Hikmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-4",
+   "text": "Balıkesir, Bandırma, Hacı Yusuf Mahallesi, Oirtaokul Caddesi, Kapı No: 11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760234",
+    "number": "11",
+    "streetName": "Ortaokul Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-5",
+   "text": "Balıkesir Bandırma Hacı Yusuf Mah. Mraeşal Fevzi Çakmak Caddesi No:3/B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13021667170",
+    "number": "3/B",
+    "streetName": "Mareşal Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-6",
+   "text": "Tafmlan Sokağı No:19 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521887",
+    "number": "19",
+    "streetName": "Taflan Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-7",
+   "text": "Günaydın Mah. Demircifer Caddesi 35/A, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13202931212",
+    "number": "35/A",
+    "streetName": "Demirciler Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-8",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Kayaık Caddesi, Kapı No: 14/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13373864145",
+    "number": "14/1",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-9",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Pirenlki Sokağı No:37",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10990353837",
+    "number": "37",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-10",
+   "text": "Albay Slçuk Caddesi No:25/2 Güre Mahallesi Edremit/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502265",
+    "number": "25/2",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-11",
+   "text": "17 Eylül Mah. Havulzu Bahçe Sokağı 40/A, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13394926298",
+    "number": "40/A",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-12",
+   "text": "Balıkesir, Bandırma, Sunullah Mahallesi, Mofralı Sokağı, Kapı No: 8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489077",
+    "number": "8",
+    "streetName": "Moralı Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-13",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Yılgdız Sokağı No:13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521818",
+    "number": "13",
+    "streetName": "Yıldız Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-14",
+   "text": "Ataütrk Caddesi No:113 17 Eylül Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993998",
+    "number": "113",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-15",
+   "text": "600 Evler Mah. Pifenlik Sokağı 21, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183507751",
+    "number": "21",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-16",
+   "text": "Balıkesir, Bandırma, Paşakent Mahallesi, Şehit Hüsein Süzener Caddesi, Kapı No: 8/1B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13244649837",
+    "number": "8/1B",
+    "streetName": "Şehit Hüseyin Süzener Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-17",
+   "text": "Balıkesir Bandırma Hacı Yusuf Mah. Adaolet Caddesi No:101",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760035",
+    "number": "101",
+    "streetName": "Adalet Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-18",
+   "text": "Albay Stelçuk Caddesi No:27/6 Güre Mahallesi Edremit/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502253",
+    "number": "27/6",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-19",
+   "text": "Paşakonak Mah. Hamit Kaplna Caddesi 28/1, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13255440697",
+    "number": "28/1",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-20",
+   "text": "Balıkesir, Bandırma, Bentbaşı Mahallesi, Trenyhlu Sokağı, Kapı No: 56/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13415732738",
+    "number": "56/A",
+    "streetName": "Trenyolu Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-21",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Ziraat Bahçsi Yolu Sokağı No:2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10996190668",
+    "number": "2",
+    "streetName": "Ziraat Bahçesi Yolu Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-22",
+   "text": "Gngör Sokağı No:11 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13506622562",
+    "number": "11",
+    "streetName": "Güngör Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-23",
+   "text": "Paşamescit Mah. Kurtluuş Caddesi 79, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926323",
+    "number": "79",
+    "streetName": "Kurtuluş Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-24",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Kayacek Caddesi, Kapı No: 1/F",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13378270804",
+    "number": "1/F",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-25",
+   "text": "Balıkesir Bandırma Paşabayır Mah. Ahmet Taner Kışlaclı Caddesi No:31",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13304711772",
+    "number": "31",
+    "streetName": "Ahmet Taner Kışlalı Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-26",
+   "text": "Hasane Sokağı No:1/A İhsaniye Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13351194724",
+    "number": "1/A",
+    "streetName": "Hastane Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-27",
+   "text": "Hacı Yusuf Mah. Koogeratif Evleri Sokağı 15/1, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13026556133",
+    "number": "15/1",
+    "streetName": "Kooperatif Evleri Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-28",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, Dr. Cevdet Güntükün Sokağı, Kapı No: 16/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13411049256",
+    "number": "16/A",
+    "streetName": "Dr. Cevdet Güntürkün Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-29",
+   "text": "Balıkesir Burhaniye Bahçelievler Mah. Ali Kemal Devecielr Bulvarı No:222/3A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12686862336",
+    "number": "222/3A",
+    "streetName": "Ali Kemal Deveciler Bulvarı"
+   }
+  },
+  {
+   "id": "10-typo-30",
+   "text": "Büyük Levept Caddesi No:61/1 Levent Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264309",
+    "number": "61/1",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-31",
+   "text": "Paşakonak Mah. Hamit Kpalan Caddesi 55, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13243229354",
+    "number": "55",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-32",
+   "text": "Balıkesir, Bandırma, Ayyıldız Mahallesi, Ayıyldız Tepe Caddesi, Kapı No: 36",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13565565522",
+    "number": "36",
+    "streetName": "Ayyıldız Tepe Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-33",
+   "text": "Balıkesir Bandırma Günaydın Mah. Eski İtfaine Caddesi No:27",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13342616310",
+    "number": "27",
+    "streetName": "Eski İtfaiye Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-34",
+   "text": "Srevet Çırpan Caddesi No:11 Çınarlı Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458096",
+    "number": "11",
+    "streetName": "Servet Çırpan Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-35",
+   "text": "600 Evler Mah. Atitürk Caddesi 423, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11595978990",
+    "number": "423",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-36",
+   "text": "Balıkesir, Bandırma, İhsaniye Mahallesi, Hastmane Sokağı, Kapı No: 7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13351185287",
+    "number": "7",
+    "streetName": "Hastane Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-37",
+   "text": "Balıkesir Bandırma Paşakent Mah. Şehit Kenan Tuğluoğu Caddesi No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13246914965",
+    "number": "7",
+    "streetName": "Şehit Kenan Tuğluoğlu Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-38",
+   "text": "Son Kruşun Caddesi No:13 Çınarlı Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458023",
+    "number": "13",
+    "streetName": "Son Kurşun Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-39",
+   "text": "Paşakonak Mah. Mehgetçik Caddesi 105/2, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13275435565",
+    "number": "105/2",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-40",
+   "text": "Balıkesir, Bandırma, Ayyıldız Mahallesi, Ayycıldız Tepe Caddesi, Kapı No: 2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13545914389",
+    "number": "2",
+    "streetName": "Ayyıldız Tepe Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-41",
+   "text": "Balıkesir Bandırma İhsaniye Mah. Muenekşe Sokağı No:52",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11585255649",
+    "number": "52",
+    "streetName": "Menekşe Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-42",
+   "text": "Kuoulu Sokağı No:18 İhsaniye Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458534",
+    "number": "18",
+    "streetName": "Kuyulu Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-43",
+   "text": "Sunullah Mah. İbmail Gökmen Sokağı 17, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13430801697",
+    "number": "17",
+    "streetName": "İsmail Gökmen Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-44",
+   "text": "Balıkesir, Bandırma, Paşabayır Mahallesi, Mustaaf Kemal Atatürk Bulvarı, Kapı No: 33/3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13275618159",
+    "number": "33/3",
+    "streetName": "Mustafa Kemal Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "10-typo-45",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Yiğitelr Sokağı No:1/B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13481559034",
+    "number": "1/B",
+    "streetName": "Yiğitler Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-46",
+   "text": "Esenetpe Caddesi No:141 Ayyıldız Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1186199210",
+    "number": "141",
+    "streetName": "Esentepe Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-47",
+   "text": "17 Eylül Mah. Atatoürk Caddesi 57/A, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13347905087",
+    "number": "57/A",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-48",
+   "text": "Balıkesir, Bandırma, Bentbaşı Mahallesi, Gyeneral Ali Hikmet Paşa Caddesi, Kapı No: 59",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957714",
+    "number": "59",
+    "streetName": "General Ali Hikmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-49",
+   "text": "Balıkesir Bandırma Kayacık Mah. Kryacık Caddesi No:168",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13582587478",
+    "number": "168",
+    "streetName": "Kayacık Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-50",
+   "text": "Gündğoan Sokağı No:2/1 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11595979013",
+    "number": "2/1",
+    "streetName": "Gündoğan Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-51",
+   "text": "Kayacık Mah. Çankakale Şehitleri Sokağı 11/8, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1073636320",
+    "number": "11/8",
+    "streetName": "Çanakkale Şehitleri Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-52",
+   "text": "Balıkesir, Bandırma, Çınarlı Mahallesi, Değirdmenler Caddesi, Kapı No: 100",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13452542726",
+    "number": "100",
+    "streetName": "Değirmenler Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-53",
+   "text": "Balıkesir Bandırma 600 Evler Mah. Pirnlik Sokağı No:97",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13470233874",
+    "number": "97",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-54",
+   "text": "Şelvkiye Caddesi No:29 Çınarlı Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182926604",
+    "number": "29",
+    "streetName": "Şevkiye Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-55",
+   "text": "Yeni Mah. Ksbrıs Caddesi 37, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1474107052",
+    "number": "37",
+    "streetName": "Kıbrıs Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-56",
+   "text": "Balıkesir, Bandırma, Hacı Yusuf Mahallesi, Bahçeliievler Sokağı, Kapı No: 7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13027300932",
+    "number": "7",
+    "streetName": "Bahçelievler Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-57",
+   "text": "Balıkesir Bandırma Günaydın Mah. Kurctuluş Caddesi No:60/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n12950154085",
+    "number": "60/A",
+    "streetName": "Kurtuluş Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-58",
+   "text": "Şehit İlhan Güncln Caddesi No:62 17 Eylül Mahallesi Bandırma/Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13413348112",
+    "number": "62",
+    "streetName": "Şehit İlhan Güncan Caddesi"
+   }
+  },
+  {
+   "id": "10-typo-59",
+   "text": "Paşakonak Mah. İhsan Tayan Sokağı 12, Bandırma, Balıkesir",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13271395155",
+    "number": "12",
+    "streetName": "İhsan Taylan Sokağı"
+   }
+  },
+  {
+   "id": "10-typo-60",
+   "text": "Balıkesir, Bandırma, Paşakonak Mahallesi, Hamit Kapan Caddesi, Kapı No: 28/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13255440693",
+    "number": "28/5",
+    "streetName": "Hamit Kaplan Caddesi"
+   }
+  },
+  {
+   "id": "10-numbered-1",
+   "text": "Balıkesir Bandırma Paşakent Mah. 17020 Sokak No:7",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13306900468",
+    "number": "7",
+    "streetName": "17020 Sokak",
+    "streetNumber": 17020
+   }
+  },
+  {
+   "id": "10-numbered-2",
+   "text": "13074 Sokak No:10/A İhsaniye Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13359455535",
+    "number": "10/A",
+    "streetName": "13074 Sokak",
+    "streetNumber": 13074
+   }
+  },
+  {
+   "id": "10-numbered-3",
+   "text": "Sunullah Mah. 20030 Sokak 3, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13429077093",
+    "number": "3",
+    "streetName": "20030 Sokak",
+    "streetNumber": 20030
+   }
+  },
+  {
+   "id": "10-numbered-4",
+   "text": "Balıkesir, Bandırma, Paşabayır Mahallesi, 16046 Sokak, Kapı No: 19",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13299315141",
+    "number": "19",
+    "streetName": "16046 Sokak",
+    "streetNumber": 16046
+   }
+  },
+  {
+   "id": "10-numbered-5",
+   "text": "Balıkesir Bandırma 600 Evler Mah. 2002 Sokak No:13/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13476754047",
+    "number": "13/A",
+    "streetName": "2002 Sokak",
+    "streetNumber": 2002
+   }
+  },
+  {
+   "id": "10-numbered-6",
+   "text": "164 Sokak No:3 100. Yıl Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13610202405",
+    "number": "3",
+    "streetName": "164 Sokak",
+    "streetNumber": 164
+   }
+  },
+  {
+   "id": "10-numbered-7",
+   "text": "17 Eylül Mah. 1011 Sokak 20, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13386227920",
+    "number": "20",
+    "streetName": "1011 Sokak",
+    "streetNumber": 1011
+   }
+  },
+  {
+   "id": "10-numbered-8",
+   "text": "Balıkesir, Bandırma, Yeni Mahallesi, 21008 Sokak, Kapı No: 69",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1067569076",
+    "number": "69",
+    "streetName": "21008 Sokak",
+    "streetNumber": 21008
+   }
+  },
+  {
+   "id": "10-numbered-9",
+   "text": "Balıkesir Bandırma Kayacık Mah. 14066 Sokak No:12",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13652206365",
+    "number": "12",
+    "streetName": "14066 Sokak",
+    "streetNumber": 14066
+   }
+  },
+  {
+   "id": "10-numbered-10",
+   "text": "4085 Sokak No:14 Ayyıldız Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13544066194",
+    "number": "14",
+    "streetName": "4085 Sokak",
+    "streetNumber": 4085
+   }
+  },
+  {
+   "id": "10-numbered-11",
+   "text": "17 Eylül Mah. 1022 Sokak 4/A, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13410496406",
+    "number": "4/A",
+    "streetName": "1022 Sokak",
+    "streetNumber": 1022
+   }
+  },
+  {
+   "id": "10-numbered-12",
+   "text": "Balıkesir, Bandırma, Sunullah Mahallesi, 20027 Sokak, Kapı No: 10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489314",
+    "number": "10",
+    "streetName": "20027 Sokak",
+    "streetNumber": 20027
+   }
+  },
+  {
+   "id": "10-numbered-13",
+   "text": "Balıkesir Bandırma Ayyıldız Mah. 4016 Sokak No:14",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1186198807",
+    "number": "14",
+    "streetName": "4016 Sokak",
+    "streetNumber": 4016
+   }
+  },
+  {
+   "id": "10-numbered-14",
+   "text": "5003 Sokak No:13 Bentbaşı Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957834",
+    "number": "13",
+    "streetName": "5003 Sokak",
+    "streetNumber": 5003
+   }
+  },
+  {
+   "id": "10-numbered-15",
+   "text": "Kayacık Mah. 14030 Sokak 6, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1481547030",
+    "number": "6",
+    "streetName": "14030 Sokak",
+    "streetNumber": 14030
+   }
+  },
+  {
+   "id": "10-numbered-16",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, 1050 Sokak, Kapı No: 52",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13408542926",
+    "number": "52",
+    "streetName": "1050 Sokak",
+    "streetNumber": 1050
+   }
+  },
+  {
+   "id": "10-numbered-17",
+   "text": "Balıkesir Bandırma Hacı Yusuf Mah. 11034 Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13021672827",
+    "number": "8",
+    "streetName": "11034 Sokak",
+    "streetNumber": 11034
+   }
+  },
+  {
+   "id": "10-numbered-18",
+   "text": "13084 Sokak No:1/A İhsaniye Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13353236315",
+    "number": "1/A",
+    "streetName": "13084 Sokak",
+    "streetNumber": 13084
+   }
+  },
+  {
+   "id": "10-numbered-19",
+   "text": "Hacı Yusuf Mah. 11020 Sokak 10, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13030022305",
+    "number": "10",
+    "streetName": "11020 Sokak",
+    "streetNumber": 11020
+   }
+  },
+  {
+   "id": "10-numbered-20",
+   "text": "Balıkesir, Bandırma, 100. Yıl Mahallesi, 15000 Sokak, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13589553562",
+    "number": "8",
+    "streetName": "15000 Sokak",
+    "streetNumber": 15000
+   }
+  },
+  {
+   "id": "10-numbered-21",
+   "text": "Balıkesir Bandırma Yeni Mah. 21090 Sokak No:72",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13536990358",
+    "number": "72",
+    "streetName": "21090 Sokak",
+    "streetNumber": 21090
+   }
+  },
+  {
+   "id": "10-numbered-22",
+   "text": "151 Sokak No:20 600 Evler Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13610331694",
+    "number": "20",
+    "streetName": "151 Sokak",
+    "streetNumber": 151
+   }
+  },
+  {
+   "id": "10-numbered-23",
+   "text": "Paşakent Mah. 17004 Sokak 18/1, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13308233639",
+    "number": "18/1",
+    "streetName": "17004 Sokak",
+    "streetNumber": 17004
+   }
+  },
+  {
+   "id": "10-numbered-24",
+   "text": "Balıkesir, Bandırma, 100. Yıl Mahallesi, 106 Sokak, Kapı No: 20",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13614813283",
+    "number": "20",
+    "streetName": "106 Sokak",
+    "streetNumber": 106
+   }
+  },
+  {
+   "id": "10-numbered-25",
+   "text": "Balıkesir Bandırma Paşakonak Mah. 18038 Sokak No:9",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1185818876",
+    "number": "9",
+    "streetName": "18038 Sokak",
+    "streetNumber": 18038
+   }
+  },
+  {
+   "id": "10-numbered-26",
+   "text": "21022 Sokak No:48 Yeni Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1380369298",
+    "number": "48",
+    "streetName": "21022 Sokak",
+    "streetNumber": 21022
+   }
+  },
+  {
+   "id": "10-numbered-27",
+   "text": "100. Yıl Mah. 180 Sokak 6, Bandırma, Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13614802265",
+    "number": "6",
+    "streetName": "180 Sokak",
+    "streetNumber": 180
+   }
+  },
+  {
+   "id": "10-numbered-28",
+   "text": "Balıkesir, Bandırma, 17 Eylül Mahallesi, 1011 Sokak, Kapı No: 18",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13386226271",
+    "number": "18",
+    "streetName": "1011 Sokak",
+    "streetNumber": 1011
+   }
+  },
+  {
+   "id": "10-numbered-29",
+   "text": "Balıkesir Bandırma 100. Yıl Mah. 33 Sokak No:10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183506795",
+    "number": "10",
+    "streetName": "33 Sokak",
+    "streetNumber": 33
+   }
+  },
+  {
+   "id": "10-numbered-30",
+   "text": "7021 Sokak No:16/A Çınarlı Mahallesi Bandırma/Balıkesir",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13440272507",
+    "number": "16/A",
+    "streetName": "7021 Sokak",
+    "streetNumber": 7021
+   }
+  },
+  {
+   "id": "10-hide-1",
+   "text": "Günaydın Mah. Kaşif Acar Caddesi 21, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1187328823",
+    "number": "21",
+    "streetName": "Kaşif Acar Caddesi",
+    "truth": [
+     27.971935,
+     40.354426
+    ]
+   }
+  },
+  {
+   "id": "10-hide-2",
+   "text": "Yeni Mah. Esentepe Caddesi 40/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13520102154",
+    "number": "40/A",
+    "streetName": "Esentepe Caddesi",
+    "truth": [
+     27.938748,
+     40.346832
+    ]
+   }
+  },
+  {
+   "id": "10-hide-3",
+   "text": "Yeni Mah. Hamit Öztan Sokağı 2, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1472471144",
+    "number": "2",
+    "streetName": "Hamit Öztan Sokağı",
+    "truth": [
+     27.94273,
+     40.342522
+    ]
+   }
+  },
+  {
+   "id": "10-hide-4",
+   "text": "17 Eylül Mah. Şehit Şenkon Sokağı 17/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13405658479",
+    "number": "17/A",
+    "streetName": "Şehit Şenkon Sokağı",
+    "truth": [
+     27.977892,
+     40.344988
+    ]
+   }
+  },
+  {
+   "id": "10-hide-5",
+   "text": "Haydar Çavuş Mah. Evyapan Sokağı 17/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13141445430",
+    "number": "17/A",
+    "streetName": "Evyapan Sokağı",
+    "truth": [
+     27.970847,
+     40.353341
+    ]
+   }
+  },
+  {
+   "id": "10-hide-6",
+   "text": "Paşabayır Mah. Hasan Bostancı Sokağı 17, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13256702091",
+    "number": "17",
+    "streetName": "Hasan Bostancı Sokağı",
+    "truth": [
+     27.965582,
+     40.345882
+    ]
+   }
+  },
+  {
+   "id": "10-hide-7",
+   "text": "Paşabayır Mah. Mehmetçik Caddesi 40, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1445393922",
+    "number": "40",
+    "streetName": "Mehmetçik Caddesi",
+    "truth": [
+     27.963459,
+     40.348088
+    ]
+   }
+  },
+  {
+   "id": "10-hide-8",
+   "text": "Haydar Çavuş Mah. Saatçiler Caddesi 14, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183760472",
+    "number": "14",
+    "streetName": "Saatçiler Caddesi",
+    "truth": [
+     27.970278,
+     40.35356
+    ]
+   }
+  },
+  {
+   "id": "10-hide-9",
+   "text": "Sunullah Mah. Gönen Karayolu Caddesi 80, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13436159390",
+    "number": "80",
+    "streetName": "Gönen Karayolu Caddesi",
+    "truth": [
+     27.97218,
+     40.340994
+    ]
+   }
+  },
+  {
+   "id": "10-hide-10",
+   "text": "17 Eylül Mah. Atatürk Caddesi 155/D, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13401635964",
+    "number": "155/D",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     27.976837,
+     40.347972
+    ]
+   }
+  },
+  {
+   "id": "10-hide-11",
+   "text": "17 Eylül Mah. Şehit Mezarlık Sokağı 17/6, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13401529913",
+    "number": "17/6",
+    "streetName": "Şehit Mezarlık Sokağı",
+    "truth": [
+     27.978882,
+     40.34867
+    ]
+   }
+  },
+  {
+   "id": "10-hide-12",
+   "text": "600 Evler Mah. Korkmaz Sokağı 40/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13503921700",
+    "number": "40/A",
+    "streetName": "Korkmaz Sokağı",
+    "truth": [
+     27.987267,
+     40.335287
+    ]
+   }
+  },
+  {
+   "id": "10-hide-13",
+   "text": "Hacı Yusuf Mah. Levent Caddesi 32, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10992733010",
+    "number": "32",
+    "streetName": "Levent Caddesi",
+    "truth": [
+     27.97642,
+     40.359868
+    ]
+   }
+  },
+  {
+   "id": "10-hide-14",
+   "text": "Paşabayır Mah. Paşa Sokağı 55, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13257424623",
+    "number": "55",
+    "streetName": "Paşa Sokağı",
+    "truth": [
+     27.964302,
+     40.347731
+    ]
+   }
+  },
+  {
+   "id": "10-hide-15",
+   "text": "Kayacık Mah. Kayacık Caddesi 224, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13586618619",
+    "number": "224",
+    "streetName": "Kayacık Caddesi",
+    "truth": [
+     28.00786,
+     40.345591
+    ]
+   }
+  },
+  {
+   "id": "10-hide-16",
+   "text": "600 Evler Mah. Korkmaz Sokağı 45, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13495848159",
+    "number": "45",
+    "streetName": "Korkmaz Sokağı",
+    "truth": [
+     27.988071,
+     40.334754
+    ]
+   }
+  },
+  {
+   "id": "10-hide-17",
+   "text": "İhsaniye Mah. Hal Caddesi 22, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13346224819",
+    "number": "22",
+    "streetName": "Hal Caddesi",
+    "truth": [
+     27.97446,
+     40.353784
+    ]
+   }
+  },
+  {
+   "id": "10-hide-18",
+   "text": "Paşabayır Mah. Aktoprak Caddesi 13, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13264832633",
+    "number": "13",
+    "streetName": "Aktoprak Caddesi",
+    "truth": [
+     27.96248,
+     40.345689
+    ]
+   }
+  },
+  {
+   "id": "10-hide-19",
+   "text": "Bentbaşı Mah. Hv. Plt. Ütğm. Tayyar Bahadır Demirel Sokağı 8, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957460",
+    "number": "8",
+    "streetName": "Hv. Plt. Ütğm. Tayyar Bahadır Demirel Sokağı",
+    "truth": [
+     27.970094,
+     40.351196
+    ]
+   }
+  },
+  {
+   "id": "10-hide-20",
+   "text": "100. Yıl Mah. Kayacık Caddesi 120, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1393646588",
+    "number": "120",
+    "streetName": "Kayacık Caddesi",
+    "truth": [
+     27.994711,
+     40.346658
+    ]
+   }
+  },
+  {
+   "id": "10-hide-21",
+   "text": "Haydar Çavuş Mah. General Ali Hikmet Paşa Caddesi 24/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13311005479",
+    "number": "24/A",
+    "streetName": "General Ali Hikmet Paşa Caddesi",
+    "truth": [
+     27.970255,
+     40.351951
+    ]
+   }
+  },
+  {
+   "id": "10-hide-22",
+   "text": "600 Evler Mah. Atatürk Caddesi 228/64, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13621020044",
+    "number": "228/64",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     27.996407,
+     40.328855
+    ]
+   }
+  },
+  {
+   "id": "10-hide-23",
+   "text": "Levent Mah. Büyük Levent Caddesi 75/3, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264361",
+    "number": "75/3",
+    "streetName": "Büyük Levent Caddesi",
+    "truth": [
+     27.991264,
+     40.365698
+    ]
+   }
+  },
+  {
+   "id": "10-hide-24",
+   "text": "Haydar Çavuş Mah. Sevgi Yolu 6/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13043087915",
+    "number": "6/A",
+    "streetName": "Sevgi Yolu",
+    "truth": [
+     27.970735,
+     40.355113
+    ]
+   }
+  },
+  {
+   "id": "10-hide-25",
+   "text": "İhsaniye Mah. Asmalı Sokağı 24, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13377958937",
+    "number": "24",
+    "streetName": "Asmalı Sokağı",
+    "truth": [
+     27.989677,
+     40.350535
+    ]
+   }
+  },
+  {
+   "id": "10-hide-26",
+   "text": "600 Evler Mah. Atatürk Caddesi 365/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13474094961",
+    "number": "365/A",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     27.991226,
+     40.335867
+    ]
+   }
+  },
+  {
+   "id": "10-hide-27",
+   "text": "Haydar Çavuş Mah. Terziler Caddesi 9, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182957486",
+    "number": "9",
+    "streetName": "Terziler Caddesi",
+    "truth": [
+     27.97058,
+     40.352731
+    ]
+   }
+  },
+  {
+   "id": "10-hide-28",
+   "text": "İhsaniye Mah. Asmalı Sokağı 55, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183458050",
+    "number": "55",
+    "streetName": "Asmalı Sokağı",
+    "truth": [
+     27.985447,
+     40.350611
+    ]
+   }
+  },
+  {
+   "id": "10-hide-29",
+   "text": "17 Eylül Mah. Atatürk Caddesi 75/B, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13384100126",
+    "number": "75/B",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     27.972921,
+     40.351564
+    ]
+   }
+  },
+  {
+   "id": "10-hide-30",
+   "text": "Sunullah Mah. Hüseyin Sezgin Sokağı 21/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı",
+    "truth": [
+     27.972541,
+     40.346464
+    ]
+   }
+  },
+  {
+   "id": "10-hide-31",
+   "text": "Hacı Yusuf Mah. Mareşal Fevzi Çakmak Caddesi 13/B, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13021432895",
+    "number": "13/B",
+    "streetName": "Mareşal Fevzi Çakmak Caddesi",
+    "truth": [
+     27.972495,
+     40.356341
+    ]
+   }
+  },
+  {
+   "id": "10-hide-32",
+   "text": "Paşabayır Mah. Tünel Üstü Sokağı 39, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı",
+    "truth": [
+     27.966443,
+     40.345908
+    ]
+   }
+  },
+  {
+   "id": "10-hide-33",
+   "text": "Levent Mah. Büyük Levent Caddesi 67/2, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi",
+    "truth": [
+     27.992604,
+     40.364218
+    ]
+   }
+  },
+  {
+   "id": "10-hide-34",
+   "text": "17 Eylül Mah. Hacı Keşfettin Caddesi 3, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi",
+    "truth": [
+     27.97343,
+     40.352054
+    ]
+   }
+  },
+  {
+   "id": "10-hide-35",
+   "text": "600 Evler Mah. Nato Caddesi 27/A, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13478930196",
+    "number": "27/A",
+    "streetName": "Nato Caddesi",
+    "truth": [
+     27.992971,
+     40.337823
+    ]
+   }
+  },
+  {
+   "id": "10-hide-36",
+   "text": "Çınarlı Mah. İbrahim Adalıer Sokağı 10, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı",
+    "truth": [
+     27.98192,
+     40.353395
+    ]
+   }
+  },
+  {
+   "id": "10-hide-37",
+   "text": "17 Eylül Mah. İbrahim Bilgin Sokağı 10, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı",
+    "truth": [
+     27.977274,
+     40.3483
+    ]
+   }
+  },
+  {
+   "id": "10-hide-38",
+   "text": "17 Eylül Mah. İbrahim Bilgin Sokağı 3/1, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13401547097",
+    "number": "3/1",
+    "streetName": "İbrahim Bilgin Sokağı",
+    "truth": [
+     27.97689,
+     40.348192
+    ]
+   }
+  },
+  {
+   "id": "10-hide-39",
+   "text": "Haydar Çavuş Mah. Şehit Süleyman Bey Caddesi 22, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993122",
+    "number": "22",
+    "streetName": "Şehit Süleyman Bey Caddesi",
+    "truth": [
+     27.97163,
+     40.353829
+    ]
+   }
+  },
+  {
+   "id": "10-hide-40",
+   "text": "Kayacık Mah. Kayacık Caddesi 266/3, Bandırma, Balıkesir",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13588144202",
+    "number": "266/3",
+    "streetName": "Kayacık Caddesi",
+    "truth": [
+     28.013687,
+     40.344699
+    ]
+   }
+  },
+  {
+   "id": "10-lang-1",
+   "text": "Sunullah, 21/A Huseyin Sezgin Street floor 8 apartment 6, Bandirma/Balikesir",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-2",
+   "text": "Bandırma, Sunullah Ortsteil, Hüseyin Sezgin Gasse Nummer 21/A, 10919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-3",
+   "text": "балыкесир бандырма, ул. хюсейин сезгин д. 21/A",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-4",
+   "text": "Οδός Hüseyin Sezgin αρ. 21/A όροφος 5 μπλοκ D διαμέρισμα 29, μπαλικεσιρ Bandırma",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-5",
+   "text": "حي Sunullah، شارع Hüseyin Sezgin رقم 21/A،  ",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "n11347069217",
+    "number": "21/A",
+    "streetName": "Hüseyin Sezgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-6",
+   "text": "Tünel Üstü St 39, Balıkesir Bandırma, 10408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-7",
+   "text": "BANDİRMA/BALİKESİR PASABAYİR ORTSTEİL TUNEL USTU GASSE NR. 39",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-8",
+   "text": "пашабайыр, ул. тюнел юстю дом 39, балыкесир бандырма",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-9",
+   "text": "μπαλικεσιρ Bandırma, Οδ. Tünel Üstü αρ. 39",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-10",
+   "text": "حي Paşabayır, شارع Tünel Üstü رقم 39, Balıkesir Bandırma",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "w1184087155",
+    "number": "39",
+    "streetName": "Tünel Üstü Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-11",
+   "text": "Levent Neighbourhood, 67/2 Büyük Levent Ave floor 2 apartment 6, Bandırma/Balıkesir, 10715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-12",
+   "text": "Balıkesir Bandırma Büyük Levent Straße Nummer 67/2 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-13",
+   "text": "микрорайон левент, пр. бюйюк левент 67/2, бандырма/балыкесир",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-14",
+   "text": "γειτονιά Levent, Λεωφ. Büyük Levent 67/2 όροφος 1 μπλοκ C διαμέρισμα 9, Balıkesir Bandırma",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-15",
+   "text": "Bandırma/Balıkesir حي Levent جادة Büyük Levent رقم 67/2",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "n13121264346",
+    "number": "67/2",
+    "streetName": "Büyük Levent Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-16",
+   "text": "Balıkesir Bandırma 17 Eylül Neighbourhood 3 Hacı Keşfettin Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-17",
+   "text": "17 Eylül, Hacı Keşfettin Straße Nummer 3, Bandırma ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-18",
+   "text": "балыкесир бандырма, микрорайон 17 эйлюл, проспект хаджы кешфеттин д. 3 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ 17 EYLÜL, ΛΕΩΦΌΡΟΣ HACI KEŞFETTIN ΑΡΙΘΜΌΣ 3, BANDIRMA ΜΠΑΛΙΚΕΣΙΡ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-20",
+   "text": "حي 17 Eylül, جادة Hacı Keşfettin رقم 3,  Bandırma",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "w1511056972",
+    "number": "3",
+    "streetName": "Hacı Keşfettin Caddesi"
+   }
+  },
+  {
+   "id": "10-lang-21",
+   "text": "Cinarli, Ibrahim Adalier St no 10, Balikesir Bandirma",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-22",
+   "text": "Çınarlı Ortsteil, İbrahim Adalıer Str. Nr. 10, Balıkesir Bandırma, 10152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-23",
+   "text": "бандырма/балыкесир, микрорайон чынарлы, улица ибрахим адалыэр д. 10",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-24",
+   "text": "τσιναρλι, Οδός ιμπραχιμ ανταλιερ 10, Balıkesir Bandırma",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-25",
+   "text": "زقاق İbrahim Adalıer رقم 10،  Bandırma",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "n13442516867",
+    "number": "10",
+    "streetName": "İbrahim Adalıer Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-26",
+   "text": "17 Eylül Neighbourhood, İbrahim Bilgin St number 10, Bandırma/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-27",
+   "text": "Bandirma, 17 Eylul Ortsteil, Ibrahim Bilgin Str. 10",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-28",
+   "text": "бандырма, ул. ибрахим билгин д. 10 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-29",
+   "text": "Bandırma Balıkesir Οδός İbrahim Bilgin 10",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-lang-30",
+   "text": "حي 17 Eylül، شارع İbrahim Bilgin رقم 10، Balıkesir Bandırma",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183041431",
+    "number": "10",
+    "streetName": "İbrahim Bilgin Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-1",
+   "text": "Ada Sokağı 4 Çınarlı",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13456028891",
+    "number": "4",
+    "streetName": "Ada Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-2",
+   "text": "600 Evler mah Pirenlik Sokağı no:37 d:3 kat:2 Bandırma",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10990353837",
+    "number": "37",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-3",
+   "text": "Edremit Albay Selçuk Caddesi no25/2",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502265",
+    "number": "25/2",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-hard-4",
+   "text": "40/A Havuzlu Bahçe Sokağı 17 Eylül Bandırma",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13394926298",
+    "number": "40/A",
+    "streetName": "Havuzlu Bahçe Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-5",
+   "text": "SUNULLAH MORALI SOKAGI 8",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183489077",
+    "number": "8",
+    "streetName": "Moralı Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-6",
+   "text": "Bandırma Yıldız Sokağı apartmanı 13 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183521818",
+    "number": "13",
+    "streetName": "Yıldız Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-7",
+   "text": "600 Evler mahallesi Pirenlik Sokağı 21 nolu bina Bandırma/Balıkesir",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1183507751",
+    "number": "21",
+    "streetName": "Pirenlik Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-8",
+   "text": "Şehit Hüseyin Süzener 8/1B Paşakent Bandırma",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13244649837",
+    "number": "8/1B",
+    "streetName": "Şehit Hüseyin Süzener Caddesi"
+   }
+  },
+  {
+   "id": "10-hard-9",
+   "text": "17 Eyüll mah Şehit Özkul Sokağı 9 Bandırma",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1182993877",
+    "number": "9",
+    "streetName": "Şehit Özkul Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-10",
+   "text": "Güven Sokağı 4/2B 600 Evler mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n13231522194",
+    "number": "4/2B",
+    "streetName": "Güven Sokağı"
+   }
+  },
+  {
+   "id": "10-hard-11",
+   "text": "Edremit Güre Albay Selçuk Caddesi 27/6, 34248",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w954502253",
+    "number": "27/6",
+    "streetName": "Albay Selçuk Caddesi"
+   }
+  },
+  {
+   "id": "10-hard-12",
+   "text": "Balıkesir Bandırma Ziraat Bahçesi Yolu Sokağı 2 Paşabayır",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n10996190668",
+    "number": "2",
+    "streetName": "Ziraat Bahçesi Yolu Sokağı"
+   }
+  },
+  {
+   "id": "10-poi-1",
+   "text": "derekoy ilkokulu gonen balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1340053281",
+    "kind": "school",
+    "streetName": "Dereköy İlkokulu"
+   }
+  },
+  {
+   "id": "10-poi-2",
+   "text": "Edincik Recep Gencer Mesleki ve Teknik Anadolu Lisesi Bandırma",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w446894604",
+    "kind": "school",
+    "streetName": "Edincik Recep Gencer Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "10-poi-3",
+   "text": "Özcan Kılınçay İlkokulu Gönen",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1243441801",
+    "kind": "school",
+    "streetName": "Özcan Kılınçay İlkokulu"
+   }
+  },
+  {
+   "id": "10-poi-4",
+   "text": "Edremit Mesleki ve Teknik Anadolu Lisesi Edremit Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w769610786",
+    "kind": "school",
+    "streetName": "Edremit Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "10-poi-5",
+   "text": "Atatürk İlkokulu Gönen",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1243441805",
+    "kind": "school",
+    "streetName": "Atatürk İlkokulu"
+   }
+  },
+  {
+   "id": "10-poi-6",
+   "text": "kocaavsar ilkokulu karesi balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n4967767923",
+    "kind": "school",
+    "streetName": "Kocaavşar İlkokulu"
+   }
+  },
+  {
+   "id": "10-poi-7",
+   "text": "aci koleji ayvalik balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1365696067",
+    "kind": "school",
+    "streetName": "Açı Koleji"
+   }
+  },
+  {
+   "id": "10-poi-8",
+   "text": "17 eylul ilkogretim okulu bandirma balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w296646643",
+    "kind": "school",
+    "streetName": "17 Eylül İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "10-poi-9",
+   "text": "avni jale ozken adalar muzesi marmara balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w236398082",
+    "kind": "townhall",
+    "streetName": "Avni Jale Özken Adalar Müzesi"
+   }
+  },
+  {
+   "id": "10-poi-10",
+   "text": "omerli mahallesi muhtarligi bandirma balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1162004569",
+    "kind": "townhall",
+    "streetName": "Ömerli Mahallesi Muhtarlığı"
+   }
+  },
+  {
+   "id": "10-poi-11",
+   "text": "Tıbbiyeli Hikmet Mesleki ve Teknik Anadolu Lisesi Savaştepe Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1392454155",
+    "kind": "school",
+    "streetName": "Tıbbiyeli Hikmet Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "10-poi-12",
+   "text": "15 eylul ortaokul ayvalik balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w686579611",
+    "kind": "school",
+    "streetName": "15 Eylül Ortaokulu"
+   }
+  },
+  {
+   "id": "10-poi-13",
+   "text": "Bandırma Ağız ve Diş Sağlığı Merkezi Bandırma",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w893628162",
+    "kind": "hospital",
+    "streetName": "Bandırma Ağız ve Diş Sağlığı Merkezi"
+   }
+  },
+  {
+   "id": "10-poi-14",
+   "text": "Balıkesir Şehir Hastanesi Altıeylül Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w552985982",
+    "kind": "hospital",
+    "streetName": "Balıkesir Şehir Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-15",
+   "text": "Dutliman Muhtarlığı Bandırma Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1328819751",
+    "kind": "townhall",
+    "streetName": "Dutliman Muhtarlığı"
+   }
+  },
+  {
+   "id": "10-poi-16",
+   "text": "ayvalik belediyesi ayvalik balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w610810207",
+    "kind": "townhall",
+    "streetName": "Ayvalık Belediyesi"
+   }
+  },
+  {
+   "id": "10-poi-17",
+   "text": "Yasa Outlet Edremit Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w233613751",
+    "kind": "mall",
+    "streetName": "Yasa Outlet"
+   }
+  },
+  {
+   "id": "10-poi-18",
+   "text": "Bandırma Eğitim ve Araştırma Hastanesi Bandırma Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w444832888",
+    "kind": "hospital",
+    "streetName": "Bandırma Eğitim ve Araştırma Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-19",
+   "text": "balikesir devlet hastanesi karesi balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w250815602",
+    "kind": "hospital",
+    "streetName": "Balıkesir Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-20",
+   "text": "Ayvalık Belediyesi Ek Hizmet Binası Ayvalık Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1194142929",
+    "kind": "townhall",
+    "streetName": "Ayvalık Belediyesi Ek Hizmet Binası"
+   }
+  },
+  {
+   "id": "10-poi-21",
+   "text": "İvrindi belediye binası İvrindi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1360310315",
+    "kind": "townhall",
+    "streetName": "İvrindi Belediyesi"
+   }
+  },
+  {
+   "id": "10-poi-22",
+   "text": "Salur Mahallesi Muhtarlığı Manyas Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1237560848",
+    "kind": "townhall",
+    "streetName": "Salur Mahallesi Muhtarlığı"
+   }
+  },
+  {
+   "id": "10-poi-23",
+   "text": "Edremit Narlı Sağlık Evi Edremit Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "n9015771991",
+    "kind": "hospital",
+    "streetName": "Edremit Narlı Sağlık Evi"
+   }
+  },
+  {
+   "id": "10-poi-24",
+   "text": "Festiva Outlet Susurluk Balıkesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w233417567",
+    "kind": "mall",
+    "streetName": "Festiva Outlet"
+   }
+  },
+  {
+   "id": "10-poi-25",
+   "text": "Balya belediye binası Balya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1241341336",
+    "kind": "townhall",
+    "streetName": "Balya Belediyesi"
+   }
+  },
+  {
+   "id": "10-poi-26",
+   "text": "Balıkesir Büyükşehir Belediyesi Güney Marmara Hizmet Binası Bandırma",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w997475263",
+    "kind": "townhall",
+    "streetName": "Balıkesir Büyükşehir Belediyesi Güney Marmara Hizmet Binası"
+   }
+  },
+  {
+   "id": "10-poi-27",
+   "text": "Süleyman İlik Devlet hastane Marmara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1486431352",
+    "kind": "hospital",
+    "streetName": "Süleyman İlik Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-28",
+   "text": "sindirgi kaymakamligi sindirgi balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w310755289",
+    "kind": "townhall",
+    "streetName": "Sındırgı Kaymakamlığı"
+   }
+  },
+  {
+   "id": "10-poi-29",
+   "text": "dursunbey devlet hastane dursunbey balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w864146796",
+    "kind": "hospital",
+    "streetName": "Dursunbey Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-30",
+   "text": "erdek neyyire sitki devlet hastane erdek balikesir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1234738065",
+    "kind": "hospital",
+    "streetName": "Erdek Neyyire Sıtkı Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "10-poi-31",
+   "text": "sindirgi belediye binasi sindirgi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w1412598832",
+    "kind": "townhall",
+    "streetName": "Sındırgı Belediyesi"
+   }
+  },
+  {
+   "id": "10-poi-32",
+   "text": "marmara adalar belediye binasi marmara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "10",
+    "osm": "w293298934",
+    "kind": "townhall",
+    "streetName": "Marmara Adalar Belediyesi"
+   }
+  }
+ ]
+}
