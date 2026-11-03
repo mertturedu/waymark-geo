@@ -1,6 +1,7 @@
 import type { Manifest, ManifestFile, ManifestRegion } from '../region/manifest';
 import { step, type RegionEvent, type RegionState } from './machine';
 import { downloadFile } from './download';
+import { encodedPaths, finalPath, installedPaths, manifestPaths, partPath, partsOf } from './paths';
 import type { ClockPort, ConnectionKind, ConnectivityPort, DecodePort, FsPort, HashPort, NetPort } from './ports';
 import { PART_KINDS, emptyState, loadState, saveState, type InstalledFile, type PackState, type PartKind, type RegionRecord } from './state-file';
 import { isPackError, packError, type PackError, type PackErrorCode } from './types';
@@ -71,9 +72,6 @@ type Job = {
   placed: string[];
 };
 
-const finalPath = (path: string): string => `files/${path}`;
-const partPath = (path: string): string => `.part/${path.replace(/\//g, '__')}`;
-const encodedPaths = (file: ManifestFile): string[] => (file.encoded ? [finalPath(file.encoded.path), partPath(file.encoded.path)] : []);
 const noop = (): void => undefined;
 
 export async function createPackManager(env: PackEnv, config: PackConfig): Promise<PackManager> {
@@ -171,33 +169,12 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     return changed;
   };
 
-  const wantedPaths = (): Set<string> => {
-    const wanted = new Set<string>();
-    for (const record of Object.values(state.regions)) for (const file of Object.values(record.files)) wanted.add(finalPath(file.path));
-    for (const file of state.base?.files ?? []) wanted.add(finalPath(file.path));
-    return wanted;
-  };
-
-  const manifestPaths = (): Set<string> => {
-    const paths = new Set<string>();
-    if (!current) return paths;
-    const installed = wantedPaths();
-    const add = (file: ManifestFile): void => {
-      paths.add(finalPath(file.path));
-      if (file.encoded && !installed.has(finalPath(file.path))) paths.add(finalPath(file.encoded.path));
-    };
-    for (const file of current.manifest.base) add(file);
-    for (const region of current.manifest.regions) for (const file of region.files) add(file);
-    return paths;
-  };
-
   const sweepOrphans = async (): Promise<void> => {
-    const wanted = wantedPaths();
-    const keep = manifestPaths();
+    const wanted = installedPaths(state);
+    const keep = manifestPaths(current?.manifest ?? null, wanted);
     for (const path of await fs.list('files')) if (!wanted.has(path) && !keep.has(path)) await fs.remove(path);
     if (!current) return;
-    const keepParts = new Set<string>();
-    for (const path of keep) keepParts.add(partPath(path.slice('files/'.length)));
+    const keepParts = partsOf(keep);
     for (const path of await fs.list('.part')) if (!keepParts.has(path)) await fs.remove(path);
   };
 
@@ -387,7 +364,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       if (job.intent === 'remove') return { ok: false, error: packError('cancelled') };
       {
         if (error.code === 'no-space') {
-          const keep = wantedPaths();
+          const keep = installedPaths(state);
           for (const path of job.placed) if (!keep.has(path)) await fs.remove(path);
         }
         entry.error = { code: error.code, message: error.message };
