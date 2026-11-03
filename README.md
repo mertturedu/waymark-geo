@@ -44,7 +44,7 @@ The package is private. See [Access and licence](#access-and-licence).
 | Map | `@maplibre/maplibre-react-native` 11.5 or newer |
 | Expo modules | `expo-crypto`, `expo-file-system`, `expo-network`, `expo-sqlite` |
 
-The package ships TypeScript sources; Metro compiles them with the app. A development build is needed (MapLibre is native code), Expo Go is not enough. `@rnmapbox/maps` and MapLibre do not build together in one app.
+A development build is needed (MapLibre is native code), Expo Go is not enough. `@rnmapbox/maps` and MapLibre do not build together in one app.
 
 ## Installation
 
@@ -109,9 +109,9 @@ function MapScreen() {
 
 | Area | Calls |
 |---|---|
-| `geo.regions` | `list`, `installed`, `status`, `download`, `pause`, `resume`, `remove`, `checkUpdates`, `detect`, `suggest`, `subscribe` |
-| `geo.search` | `resolve`, `autocomplete`, `reverse`, `hoods`, `coverage` |
-| `geo.route` | `route`, `matrix`, `installed` |
+| `geo.regions` | `list`, `installed`, `status`, `download`, `downloadBytes`, `pause`, `resume`, `remove`, `checkUpdates`, `connection`, `detect`, `suggest`, `subscribe` |
+| `geo.search` | `resolve`, `autocomplete`, `reverse`, `nearby`, `hoods`, `coverage` |
+| `geo.route` | `route`, `matrix`, `directions`, `installed` |
 | `geo.plan` | `plan` |
 | `geo.learn` | `confirm`, `export`, `import`, `clear`, `stats` |
 
@@ -319,7 +319,7 @@ if (result.ok) console.log(result.order, result.totalDistanceM, result.totalDura
 
 ## Learning
 
-`createLearning({ store })` in `src/core/learn` keeps the points that users and couriers confirm. Pass `learning.layer` to `createSearch({ ..., layers: [learning.layer] })` and a confirmed door is answered from the learned point next time. A pin or two close deliveries make it an exact address; a single delivery stays an estimate. A confirmation more than 50 m from the others is treated as an outlier and kept apart. The store is a small interface (`LearnStore`); `memoryStore`, `fileStore` (Node) and an `expo-sqlite` store for the phone ship with the package.
+`createLearning({ store })` in `src/core/learn` keeps the points that users and couriers confirm. Pass `learning.layer` to `createSearch({ ..., layers: [learning.layer] })` and a confirmed door is answered from the learned point next time. A pin or two close deliveries make it an exact address; a single delivery stays an estimate. A confirmation more than 50 m from the others is treated as an outlier and kept apart. The store is a small interface (`LearnStore`); `memoryStore` and an `expo-sqlite` store for the phone ship with the package. `fileStore` in `src/node` is only for the Node scripts of this repository and is not in the package.
 
 ```ts
 await geo.learn.confirm({ place, houseNumber: '40', point: [29.02, 40.98], source: 'pin' });
@@ -386,7 +386,7 @@ A pack that fails its SHA-256 or whose manifest signature is wrong is rejected a
 
 ### Packs inside the app
 
-The packs can also ship inside the app instead of being downloaded. Pass a `net` that answers from the app bundle (`GeoNativeConfig.net`) and point `manifestUrl` at it. The Kargoio courier app does this with the Istanbul and Bursa packs, so the first launch already works without a network. `app.plugin.cjs` is not involved; the app's own build copies the files into its assets.
+The packs can also ship inside the app instead of being downloaded. Pass a `net` that answers from the app bundle (`GeoNativeConfig.net`) and point `manifestUrl` at it. The Kargoio courier app does this with the Bursa pack, so the first launch already works without a network. Copy only the plain files and pass `zstd: false`; otherwise the SDK asks for the `.zst` copies the manifest lists. `app.plugin.cjs` is not involved; the app's own build copies the files into its assets.
 
 ## Hosting the packs
 
