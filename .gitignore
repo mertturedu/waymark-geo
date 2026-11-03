@@ -13,3 +13,4 @@ example/.expo
 .DS_Store
 reports
 lib
+__pycache__/
