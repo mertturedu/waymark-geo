@@ -73,6 +73,7 @@ type Job = {
 
 const finalPath = (path: string): string => `files/${path}`;
 const partPath = (path: string): string => `.part/${path.replace(/\//g, '__')}`;
+const encodedPaths = (file: ManifestFile): string[] => (file.encoded ? [finalPath(file.encoded.path), partPath(file.encoded.path)] : []);
 const noop = (): void => undefined;
 
 export async function createPackManager(env: PackEnv, config: PackConfig): Promise<PackManager> {
@@ -180,8 +181,13 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
   const manifestPaths = (): Set<string> => {
     const paths = new Set<string>();
     if (!current) return paths;
-    for (const file of current.manifest.base) paths.add(finalPath(file.path));
-    for (const region of current.manifest.regions) for (const file of region.files) paths.add(finalPath(file.path));
+    const installed = wantedPaths();
+    const add = (file: ManifestFile): void => {
+      paths.add(finalPath(file.path));
+      if (file.encoded && !installed.has(finalPath(file.path))) paths.add(finalPath(file.encoded.path));
+    };
+    for (const file of current.manifest.base) add(file);
+    for (const region of current.manifest.regions) for (const file of region.files) add(file);
     return paths;
   };
 
@@ -619,7 +625,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       if (region) {
         for (const file of region.files) {
           if (!kinds.includes(file.kind as PartKind)) continue;
-          leftovers.push(partPath(file.path));
+          leftovers.push(partPath(file.path), ...encodedPaths(file));
           if (!doomed.includes(finalPath(file.path))) doomed.push(finalPath(file.path));
         }
       }
@@ -634,7 +640,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       const baseWanted = Object.values(regions).some((r) => r.files.tiles !== undefined) || [...jobs.values()].some((other) => other.id !== id && other.parts.includes('tiles'));
       if (!baseWanted) {
         deletedBase.push(...(base?.files ?? []).map((f) => finalPath(f.path)), ...(current?.manifest.base ?? []).map((f) => finalPath(f.path)));
-        leftovers.push(...(current?.manifest.base ?? []).map((f) => partPath(f.path)));
+        leftovers.push(...(current?.manifest.base ?? []).flatMap((f) => [partPath(f.path), ...encodedPaths(f)]));
         base = null;
       }
       state = { ...state, regions, base, pending };

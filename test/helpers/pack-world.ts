@@ -1,6 +1,7 @@
 import { sha256 } from '@noble/hashes/sha256';
 import { bytesToHex } from '@noble/hashes/utils';
 import { generateKeyPairSync } from 'node:crypto';
+import { zstdCompressSync } from 'node:zlib';
 import { signManifest } from '../../pipeline/build/manifest';
 import { serializeManifest, type Manifest, type ManifestFile, type ManifestRegion } from '../../src/core/region/manifest';
 import { createFakeEnv, type FakeEnv } from './fake-env';
@@ -28,7 +29,7 @@ export type World = {
   signWith(text: string): string;
 };
 
-export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<string, Uint8Array>; capacity?: number } = {}): World {
+export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<string, Uint8Array>; capacity?: number; encode?: Part[] } = {}): World {
   const { privateKey, publicKey } = generateKeyPairSync('ed25519');
   const privatePem = String(privateKey.export({ type: 'pkcs8', format: 'pem' }));
   const publicPem = String(publicKey.export({ type: 'spki', format: 'pem' }));
@@ -46,7 +47,10 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
     const sha = bytesToHex(sha256(bytes));
     const path = `${id}/${kind}-${sha.slice(0, 8)}.${EXTENSION[kind]}`;
     env.server.put(`${BASE_URL}/${path}`, bytes);
-    return { kind, path, size: bytes.length, sha256: sha };
+    if (!options.encode?.includes(kind)) return { kind, path, size: bytes.length, sha256: sha };
+    const packed = new Uint8Array(zstdCompressSync(bytes));
+    env.server.put(`${BASE_URL}/${path}.zst`, packed);
+    return { kind, path, size: bytes.length, sha256: sha, encoded: { codec: 'zstd', path: `${path}.zst`, size: packed.length, sha256: bytesToHex(sha256(packed)) } };
   };
 
   const world: World = {

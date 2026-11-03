@@ -3,6 +3,7 @@
 ## Unreleased
 
 - The Expo config plugin is `app.plugin.cjs`. As `app.plugin.js` in a package of ES modules Expo could not load it, so `"plugins": ["@yuksi/geo"]` failed with `INVALID_PLUGIN_TYPE`.
+- A half downloaded zstd file is kept when the app restarts, so the download goes on from where it stopped instead of starting again from zero. Removing a province also deletes its zstd leftovers.
 
 ## 0.5.0 (2026-11-03)
 

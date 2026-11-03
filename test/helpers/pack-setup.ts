@@ -1,12 +1,12 @@
 import { createPackManager, type PackManager } from '../../src/core/packs/manager';
-import type { NetPort } from '../../src/core/packs/ports';
+import type { DecodePort, NetPort } from '../../src/core/packs/ports';
 import { makeWorld, type World } from './pack-world';
 
-export type SetupOptions = { autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; net?: NetPort };
+export type SetupOptions = { autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; net?: NetPort; decode?: DecodePort };
 
 export async function setup(world: World = makeWorld(), options: SetupOptions = {}): Promise<{ world: World; manager: PackManager }> {
-  const { net, ...rest } = options;
-  const manager = await createPackManager({ fs: world.env.fs, net: net ?? world.env.net, hash: world.env.hash, clock: world.env.clock, connectivity: world.env.connectivity }, { ...world.config, ...rest });
+  const { net, decode, ...rest } = options;
+  const manager = await createPackManager({ fs: world.env.fs, net: net ?? world.env.net, hash: world.env.hash, clock: world.env.clock, connectivity: world.env.connectivity, ...(decode ? { decode } : {}) }, { ...world.config, ...rest });
   return { world, manager };
 }
 

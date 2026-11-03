@@ -2,7 +2,8 @@ import fc from 'fast-check';
 import type { NetPort } from '../../src/core/packs/ports';
 import { loadState, parseState, STATE_PATH, BACKUP_PATH } from '../../src/core/packs/state-file';
 import { createPackManager } from '../../src/core/packs/manager';
-import { makeWorld, type World } from '../helpers/pack-world';
+import { createZstdDecode } from '../../src/core/packs/zstd';
+import { blob, makeWorld, type World } from '../helpers/pack-world';
 import { requested, setup, stored } from '../helpers/pack-setup';
 
 function hanging(world: World, afterBytes: number, match: string): NetPort {
@@ -18,7 +19,7 @@ function hanging(world: World, afterBytes: number, match: string): NetPort {
           for await (const chunk of response.body) {
             yield chunk;
             sent += chunk.length;
-            if (sent >= afterBytes) await new Promise<void>(() => undefined);
+            if (sent >= afterBytes) await new Promise<void>((_, reject) => options?.signal?.addEventListener('abort', () => reject(new Error('aborted'))));
           }
         })(),
       };
@@ -189,4 +190,59 @@ describe('whatever happens, installed files are the verified ones', () => {
       { numRuns: 60 },
     );
   }, 120_000);
+});
+
+describe('restart with zstd files', () => {
+  const noise = (size: number, seed: number): Uint8Array => {
+    let x = seed;
+    return Uint8Array.from({ length: size }, () => {
+      x = (Math.imul(x, 1103515245) + 12345) >>> 0;
+      return x >>> 24;
+    });
+  };
+  const zstdWorld = (): World => makeWorld({ regions: [{ id: '34', parts: { address: noise(80_000, 1), tiles: blob(20_000, 2) } }], encode: ['address'] });
+  const zstPart = (world: World): string => `.part/${world.pathOf('34', 'address').replace(/\//g, '__')}.zst`;
+  const zstFiles = (world: World): string[] => [...world.env.fs.files.keys()].filter((path) => path.endsWith('.zst'));
+
+  it('keeps a half downloaded zstd file and goes on from it', async () => {
+    const world = zstdWorld();
+    const first = await setup(world, { net: hanging(world, 20_000, '.zst'), decode: createZstdDecode() });
+    await first.manager.checkUpdates();
+    void first.manager.download('34').catch(() => undefined);
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    const half = world.env.fs.files.get(zstPart(world))?.length ?? 0;
+    expect(half).toBeGreaterThan(0);
+
+    const second = await setup(world, { decode: createZstdDecode() });
+    expect(world.env.fs.files.get(zstPart(world))?.length).toBe(half);
+    world.env.server.log.length = 0;
+    await second.manager.resume('34');
+    expect(second.manager.status('34').state).toBe('installed');
+    expect(world.env.server.log.filter((r) => r.url.endsWith('.zst')).map((r) => r.rangeStart)).toEqual([half]);
+    expect(stored(world, second.manager.installedFile('34', 'address') as string)).toEqual(Array.from(world.regions[0]?.parts.address ?? []));
+    expect(zstFiles(world)).toEqual([]);
+  });
+
+  it('drops a zstd file left next to a file that is already installed', async () => {
+    const world = zstdWorld();
+    const first = await setup(world, { decode: createZstdDecode() });
+    await first.manager.download('34');
+    const leftover = `files/${world.pathOf('34', 'address')}.zst`;
+    world.env.fs.files.set(leftover, new Uint8Array(10));
+    world.env.fs.files.set(zstPart(world), new Uint8Array(10));
+    await setup(world, { decode: createZstdDecode() });
+    expect(zstFiles(world)).toEqual([]);
+  });
+
+  it('leaves no zstd file behind when the province is removed during the download', async () => {
+    const world = zstdWorld();
+    const { manager } = await setup(world, { net: hanging(world, 20_000, '.zst'), decode: createZstdDecode() });
+    await manager.checkUpdates();
+    void manager.download('34').catch(() => undefined);
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    expect(world.env.fs.files.has(zstPart(world))).toBe(true);
+    await manager.remove('34');
+    expect(zstFiles(world)).toEqual([]);
+    expect(manager.status('34').state).toBe('none');
+  });
 });
