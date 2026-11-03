@@ -11,7 +11,7 @@ export type PlatformResult = { ok: boolean; seconds: number; tail: string };
 export type BuildReport = { source: string; at: string; android: PlatformResult; ios: PlatformResult };
 
 const REPORT_FILE = 'faz-5-derleme.json';
-const SOURCE_ROOTS = ['src', 'example/src', 'example/app.config.js', 'example/package.json', 'package.json', 'app.plugin.js'];
+const SOURCE_ROOTS = ['src', 'example/src', 'example/app.config.js', 'example/package.json', 'package.json', 'app.plugin.cjs'];
 const TAIL = 1500;
 
 function listFiles(path: string, out: string[]): void {

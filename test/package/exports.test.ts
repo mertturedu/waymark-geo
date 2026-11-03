@@ -22,7 +22,7 @@ describe('the packed package', () => {
     const targets = Object.values(pkg.exports).flatMap((entry) => (typeof entry === 'string' ? [entry] : [entry.types, entry.default]));
     targets.push(pkg.main, pkg.types);
     for (const target of targets) expect(paths.has(target.replace(/^\.\//, ''))).toBe(true);
-    expect(Object.keys(pkg.exports)).toEqual(['.', './core', './native', './app.plugin.js', './package.json']);
+    expect(Object.keys(pkg.exports)).toEqual(['.', './core', './native', './app.plugin.cjs', './package.json']);
   });
 
   it('ships types and source maps for the compiled files', () => {
@@ -49,7 +49,7 @@ describe('the packed package', () => {
     const paths = packed.files.map((file) => file.path);
     const bad = paths.filter((path) => /^(src|test|scripts|pipeline|gates|example|tools|docs|fixtures)\//.test(path) || /\.test\.(js|ts)$/.test(path) || (path.endsWith('.ts') && !path.endsWith('.d.ts')) || path.includes('/node/'));
     expect(bad).toEqual([]);
-    expect(paths.filter((path) => !path.startsWith('lib/')).sort()).toEqual(['CHANGELOG.md', 'LICENSE', 'README.md', 'app.plugin.js', 'package.json']);
+    expect(paths.filter((path) => !path.startsWith('lib/')).sort()).toEqual(['CHANGELOG.md', 'LICENSE', 'README.md', 'app.plugin.cjs', 'package.json']);
   });
 
   it('stays small and has the version of the SDK', () => {

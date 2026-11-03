@@ -386,7 +386,7 @@ A pack that fails its SHA-256 or whose manifest signature is wrong is rejected a
 
 ### Packs inside the app
 
-The packs can also ship inside the app instead of being downloaded. Pass a `net` that answers from the app bundle (`GeoNativeConfig.net`) and point `manifestUrl` at it. The Kargoio courier app does this with the Istanbul and Bursa packs, so the first launch already works without a network. `app.plugin.js` is not involved; the app's own build copies the files into its assets.
+The packs can also ship inside the app instead of being downloaded. Pass a `net` that answers from the app bundle (`GeoNativeConfig.net`) and point `manifestUrl` at it. The Kargoio courier app does this with the Istanbul and Bursa packs, so the first launch already works without a network. `app.plugin.cjs` is not involved; the app's own build copies the files into its assets.
 
 ## Hosting the packs
 
@@ -475,7 +475,7 @@ npm run try -- parse "balikesir karesi pasaalani mah 1. sk no 12 d 3"
 ```
 src/core/        pure TypeScript: text, region, packs, address, learn, route, plan, i18n, report
 src/native/      Expo and React Native layer: platform adapters, map style and theme, React components
-app.plugin.js    Expo config plugin (registers MapLibre)
+app.plugin.cjs   Expo config plugin (registers MapLibre)
 pipeline/        data pipeline: Python extractors, TypeScript builders, validation
 scripts/         command line tools: try, data:*, measure-*, serve-packs, device-report
 gates/           the measured acceptance gates for each phase

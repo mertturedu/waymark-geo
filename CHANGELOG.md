@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- The Expo config plugin is `app.plugin.cjs`. As `app.plugin.js` in a package of ES modules Expo could not load it, so `"plugins": ["@yuksi/geo"]` failed with `INVALID_PLUGIN_TYPE`.
+
 ## 0.5.0 (2026-11-03)
 
 - **Packaging:** the package ships compiled code in `lib/` (`@yuksi/geo`, `@yuksi/geo/core`, `@yuksi/geo/native`) with type files and source maps instead of TypeScript sources; `npm run build:package` builds it (`prepare` and `prepack` do it for git installs and packs). Apps linked with `file:` build it once. `react`, `react-native`, `expo` and MapLibre stay peer dependencies.

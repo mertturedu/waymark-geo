@@ -22,7 +22,7 @@ const noClasses = [
 ];
 
 const commonjsFiles = {
-  files: ['app.plugin.js'],
+  files: ['app.plugin.cjs'],
   languageOptions: { sourceType: 'commonjs', globals: { require: 'readonly', module: 'writable' } },
   rules: { '@typescript-eslint/no-require-imports': 'off' },
 };
