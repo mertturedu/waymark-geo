@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { AUTO_IDS, DEFERRED_IDS, EXTRA_IDS, INFO_IDS, OFFLINE_IDS, QUESTION_IDS, RESTART_IDS } from '../../example/src/sdk-test/ids';
+import { AUTO_IDS, DEFERRED_IDS, EXTRA_IDS, INFO_IDS, OFFLINE_IDS, PROBE_IDS, QUESTION_IDS, RESTART_IDS } from '../../example/src/sdk-test/ids';
 
 const root = join(__dirname, '../../example/src/sdk-test');
 
@@ -11,7 +11,7 @@ function sources(dir: string): string[] {
 describe('SDK device test ids', () => {
   const text = sources(root).map((f) => readFileSync(f, 'utf8')).join('\n');
 
-  it.each([...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS])('%s exists in the example app', (id) => {
+  it.each([...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS, ...PROBE_IDS])('%s exists in the example app', (id) => {
     expect(text).toContain(`'${id}'`);
   });
 
@@ -27,12 +27,12 @@ describe('SDK device test ids', () => {
 
   it('lists every test the app defines', () => {
     const defined = [...text.matchAll(/'(sdk\.[a-z0-9-]+)'/g)].map((m) => m[1] as string);
-    const known = new Set([...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS]);
+    const known = new Set([...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS, ...PROBE_IDS]);
     expect([...new Set(defined)].filter((id) => !known.has(id))).toEqual([]);
   });
 
   it('has no id twice across the lists', () => {
-    const all = [...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS];
+    const all = [...AUTO_IDS, ...EXTRA_IDS, ...RESTART_IDS, ...INFO_IDS, ...QUESTION_IDS, ...DEFERRED_IDS, ...PROBE_IDS];
     expect(new Set(all).size).toBe(all.length);
   });
 });

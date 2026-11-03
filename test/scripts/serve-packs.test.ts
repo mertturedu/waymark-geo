@@ -168,3 +168,48 @@ describe('lanAddress', () => {
     expect(address === null || /^\d+\.\d+\.\d+\.\d+$/.test(address)).toBe(true);
   });
 });
+
+describe('extra mounts', () => {
+  it('serves a second folder under a prefix and keeps both folders closed to each other', async () => {
+    const base = mkdtempSync(join(tmpdir(), 'geo-mount-'));
+    const main = join(base, 'main');
+    const extra = join(base, 'extra');
+    mkdirSync(main);
+    mkdirSync(extra);
+    writeFileSync(join(main, 'a.txt'), 'main');
+    writeFileSync(join(extra, 'b.txt'), 'extra');
+    writeFileSync(join(base, 'secret.txt'), 'nope');
+    const mounted = await startServer({ root: main, port: 0, host: '127.0.0.1', mounts: { '/old/': extra } });
+    const fetchText = async (path: string) => {
+      const response = await fetch(`${mounted.url}${path}`);
+      return { status: response.status, text: await response.text() };
+    };
+    try {
+      expect(await fetchText('/a.txt')).toEqual({ status: 200, text: 'main' });
+      expect(await fetchText('/old/b.txt')).toEqual({ status: 200, text: 'extra' });
+      expect((await fetchText('/old/a.txt')).status).toBe(404);
+      expect((await fetchText('/b.txt')).status).toBe(404);
+      expect((await fetchText('/old/../secret.txt')).status).toBeGreaterThanOrEqual(403);
+      expect((await fetchText('/oldfile')).status).toBe(404);
+    } finally {
+      await mounted.close();
+    }
+  });
+});
+
+describe('rate limit', () => {
+  it('serves the file slowly when asked and the same bytes', async () => {
+    const started = Date.now();
+    const response = await rawGet('/file.bin?rate=2000000');
+    const elapsed = Date.now() - started;
+    expect(response.status).toBe(200);
+    expect(response.body.equals(blob)).toBe(true);
+    expect(elapsed).toBeGreaterThanOrEqual(300);
+  });
+
+  it('keeps the range answer under a rate limit', async () => {
+    const response = await rawGet('/file.bin?rate=2000000', { Range: 'bytes=100-199' });
+    expect(response.status).toBe(206);
+    expect(response.body.length).toBe(100);
+  });
+});

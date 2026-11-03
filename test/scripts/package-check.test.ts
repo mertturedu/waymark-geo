@@ -1,7 +1,7 @@
 import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { appFiles, packageCheckSteps, runPackageCheck, type Runner } from '../../scripts/package-check';
+import { appFiles, packageCheckSteps, runPackageCheck, tarballName, type Runner } from '../../scripts/package-check';
 
 const paths = { repoRoot: '/repo', work: '/work', exampleRoot: '/repo/example' };
 
@@ -28,6 +28,11 @@ describe('packageCheckSteps', () => {
 
 describe('appFiles', () => {
   const files = appFiles({ exampleDependencies: { expo: '^57.0.0', react: '19.2.3' }, exampleDevDependencies: { typescript: '~6.0.3' }, bare: '/work/geo.git' });
+
+  it('takes the example dependencies and the SDK from a packed file when one is given', () => {
+    const pkg = JSON.parse(appFiles({ exampleDependencies: {}, tarball: '/w/geo.tgz' })['package.json'] as string) as { dependencies: Record<string, string> };
+    expect(pkg.dependencies['@yuksi/geo']).toBe('file:/w/geo.tgz');
+  });
 
   it('takes the example dependencies and the SDK from the bare repository', () => {
     const pkg = JSON.parse(files['package.json'] as string) as { dependencies: Record<string, string> };
@@ -63,35 +68,47 @@ describe('runPackageCheck', () => {
     };
     return { calls, run };
   }
+  const pack = (_root: string, work: string): string => join(work, 'yuksi-geo-0.5.0.tgz');
+  const repoRoot = join(__dirname, '../..');
 
-  it('prepares the bare repository and the app, then runs every step', async () => {
+  it('installs the packed package into the app, then runs every step', async () => {
     const work = mkdtempSync(join(tmpdir(), 'pc-'));
     const { calls, run } = rig();
-    const report = await runPackageCheck({ repoRoot: join(__dirname, '../..'), work, run });
+    const report = await runPackageCheck({ repoRoot, work, run, pack });
     expect(report.ok).toBe(true);
     expect(calls).toEqual(['kur', 'tip denetimi', 'android paketi', 'ios paketi', 'prebuild']);
-    expect(existsSync(join(work, 'geo.git'))).toBe(true);
     expect(existsSync(join(work, 'app', 'App.tsx'))).toBe(true);
-    expect(JSON.parse(readFileSync(join(work, 'app', 'package.json'), 'utf8')).dependencies['@yuksi/geo']).toBe(`git+file://${join(work, 'geo.git')}`);
-  }, 60_000);
+    expect(JSON.parse(readFileSync(join(work, 'app', 'package.json'), 'utf8')).dependencies['@yuksi/geo']).toBe(`file:${join(work, 'tarball', 'yuksi-geo-0.5.0.tgz')}`);
+  });
 
   it('stops at the first failing step and reports its output', async () => {
     const work = mkdtempSync(join(tmpdir(), 'pc-'));
     const { calls, run } = rig('tip denetimi');
-    const report = await runPackageCheck({ repoRoot: join(__dirname, '../..'), work, run });
+    const report = await runPackageCheck({ repoRoot, work, run, pack });
     expect(report.ok).toBe(false);
     expect(calls).toEqual(['kur', 'tip denetimi']);
     expect(report.steps.at(-1)).toMatchObject({ name: 'tip denetimi', ok: false });
     expect(report.steps.at(-1)?.tail).toContain('boom');
-  }, 60_000);
+  });
 
-  it('does not copy tests, the example app or data into the bare repository', async () => {
+  it('moves the app to another Expo version before it checks anything', async () => {
     const work = mkdtempSync(join(tmpdir(), 'pc-'));
-    await runPackageCheck({ repoRoot: join(__dirname, '../..'), work, run: rig().run });
-    const listing = (await import('node:child_process')).execFileSync('git', ['--git-dir', join(work, 'geo.git'), 'ls-tree', '-r', '--name-only', 'HEAD'], { encoding: 'utf8' }).split('\n');
-    expect(listing).toContain('package.json');
-    expect(listing).toContain('app.plugin.js');
-    expect(listing.some((f) => f.startsWith('src/native/index.ts'))).toBe(true);
-    for (const bad of ['test/', 'example/', 'dist/', 'pipeline/', 'fixtures/', 'node_modules/']) expect(listing.some((f) => f.startsWith(bad))).toBe(false);
-  }, 60_000);
+    const { calls, run } = rig();
+    const report = await runPackageCheck({ repoRoot, work, run, pack, expo: '58.0.22' });
+    expect(report.ok).toBe(true);
+    expect(calls).toEqual(['kur', 'expo 58.0.22 uyumu', 'sürüm düzeltme', 'tip denetimi', 'android paketi', 'ios paketi', 'prebuild']);
+  });
+
+  it('asks Expo to install the version and then to fix the other packages', () => {
+    const steps = packageCheckSteps(paths, { expo: '58.0.22' });
+    expect(`${steps[1]!.cmd} ${steps[1]!.args.join(' ')}`).toBe('npx expo install expo@58.0.22 -- --no-audit --no-fund');
+    expect(steps[2]!.args).toEqual(['expo', 'install', '--fix', '--', '--no-audit', '--no-fund']);
+  });
+
+  it('reads the file name from what npm pack prints, even when scripts print before it', () => {
+    expect(tarballName('[{"filename":"yuksi-geo-0.5.0.tgz","size":1}]')).toBe('yuksi-geo-0.5.0.tgz');
+    expect(tarballName('> prepack\nlib hazır: 768 dosya\n[{"filename":"a-1.0.0.tgz"}]\n')).toBe('a-1.0.0.tgz');
+    expect(() => tarballName('[]')).toThrow('dosya adı');
+    expect(() => tarballName('[{}]')).toThrow('dosya adı');
+  });
 });

@@ -15,7 +15,7 @@ const tests = (files: string[]) => async ({ run }: GateContext) => {
 
 const auto = (id: string, title: string, threshold: string, measure: Gate['measure']): Gate => ({ id, phase: 5, title, kind: 'auto', threshold, measure });
 
-export const readReports = (dir: string): DeviceReport[] => {
+const readFolder = (dir: string): DeviceReport[] => {
   let names: string[];
   try {
     names = readdirSync(dir);
@@ -33,6 +33,8 @@ export const readReports = (dir: string): DeviceReport[] => {
   }
   return reports;
 };
+
+export const readReports = (dir: string): DeviceReport[] => [...readFolder(dir), ...readFolder(join(dir, 'cihaz'))];
 
 const REQUIRED_PASS = [...AUTO_IDS, ...RESTART_IDS, ...QUESTION_IDS];
 

@@ -1,5 +1,5 @@
 import { execFileSync, spawn } from 'node:child_process';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -9,15 +9,25 @@ export type StepResult = { name: string; ok: boolean; ms: number; tail: string }
 export type Runner = (step: Step) => Promise<{ code: number; out: string }>;
 export type CheckReport = { ok: boolean; steps: StepResult[] };
 
-const SHIPPED = ['package.json', 'app.plugin.js', 'README.md', 'src'];
-const TAIL = 1200;
-const CLONE_ATTEMPTS = 4;
+export function tarballName(output: string): string {
+  const name = (JSON.parse(output.slice(output.indexOf('[')).trim()) as { filename?: string }[])[0]?.filename;
+  if (!name) throw new Error('npm pack dosya adı vermedi');
+  return name;
+}
 
-export function packageCheckSteps(paths: { repoRoot: string; work: string; exampleRoot: string }): Step[] {
+export function packTarball(repoRoot: string, work: string): string {
+  mkdirSync(work, { recursive: true });
+  const out = execFileSync('npm', ['pack', '--json', '--pack-destination', work], { cwd: repoRoot, encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] });
+  return join(work, tarballName(out));
+}
+const TAIL = 1200;
+
+export function packageCheckSteps(paths: { repoRoot: string; work: string; exampleRoot: string }, options: { expo?: string } = {}): Step[] {
   const cwd = join(paths.work, 'app');
   const env = { CI: '1', EXPO_NO_TELEMETRY: '1' };
   return [
     { name: 'kur', cmd: 'npm', args: ['install', '--no-audit', '--no-fund', '--prefer-offline'], cwd, env },
+    ...(options.expo ? [{ name: `expo ${options.expo} uyumu`, cmd: 'npx', args: ['expo', 'install', `expo@${options.expo}`, '--', '--no-audit', '--no-fund'], cwd, env }, { name: 'sürüm düzeltme', cmd: 'npx', args: ['expo', 'install', '--fix', '--', '--no-audit', '--no-fund'], cwd, env }] : []),
     { name: 'tip denetimi', cmd: 'npx', args: ['tsc', '--noEmit'], cwd, env },
     { name: 'android paketi', cmd: 'npx', args: ['expo', 'export', '--platform', 'android', '--output-dir', 'out-android'], cwd, env },
     { name: 'ios paketi', cmd: 'npx', args: ['expo', 'export', '--platform', 'ios', '--output-dir', 'out-ios'], cwd, env },
@@ -25,8 +35,9 @@ export function packageCheckSteps(paths: { repoRoot: string; work: string; examp
   ];
 }
 
-export function appFiles(input: { exampleDependencies: Record<string, string>; exampleDevDependencies?: Record<string, string>; bare: string }): Record<string, string> {
-  const pkg = { name: 'geo-package-check', version: '1.0.0', private: true, main: 'index.js', dependencies: { ...input.exampleDependencies, '@yuksi/geo': `git+file://${input.bare}` }, devDependencies: input.exampleDevDependencies ?? {} };
+export function appFiles(input: { exampleDependencies: Record<string, string>; exampleDevDependencies?: Record<string, string>; bare?: string; tarball?: string }): Record<string, string> {
+  const source = input.tarball ? `file:${input.tarball}` : `git+file://${input.bare ?? ''}`;
+  const pkg = { name: 'geo-package-check', version: '1.0.0', private: true, main: 'index.js', dependencies: { ...input.exampleDependencies, '@yuksi/geo': source }, devDependencies: input.exampleDevDependencies ?? {} };
   const app = { expo: { name: 'Geo Paket Denetimi', slug: 'geo-package-check', version: '1.0.0', plugins: ['@yuksi/geo'], ios: { bundleIdentifier: 'com.example.geocheck' }, android: { package: 'com.example.geocheck' } } };
   return {
     'package.json': JSON.stringify(pkg, null, 2),
@@ -66,27 +77,6 @@ export function appFiles(input: { exampleDependencies: Record<string, string>; e
   };
 }
 
-function prepareBare(repoRoot: string, work: string): string {
-  const staged = join(work, 'repo');
-  mkdirSync(staged, { recursive: true });
-  for (const name of SHIPPED) cpSync(join(repoRoot, name), join(staged, name), { recursive: true });
-  const git = (...args: string[]): void => void execFileSync('git', args, { cwd: staged, stdio: 'ignore' });
-  git('init', '-q', '-b', 'main');
-  git('add', '-A');
-  git('-c', 'user.name=Mert Turedu1', '-c', 'user.email=mert.turedu1@example.com', 'commit', '-q', '-m', 'ilk surum');
-  const bare = join(work, 'geo.git');
-  for (let attempt = 1; ; attempt++) {
-    rmSync(bare, { recursive: true, force: true });
-    try {
-      execFileSync('git', ['clone', '-q', '--bare', staged, bare], { stdio: 'ignore' });
-      execFileSync('git', ['--git-dir', bare, 'fsck', '--connectivity-only'], { stdio: 'ignore' });
-      return bare;
-    } catch (error) {
-      if (attempt >= CLONE_ATTEMPTS) throw error;
-    }
-  }
-}
-
 const defaultRunner: Runner = (step) =>
   new Promise((resolve) => {
     const child = spawn(step.cmd, step.args, { cwd: step.cwd, env: { ...process.env, ...step.env } });
@@ -100,16 +90,16 @@ const defaultRunner: Runner = (step) =>
     });
   });
 
-export async function runPackageCheck(input: { repoRoot: string; work: string; run?: Runner }): Promise<CheckReport> {
+export async function runPackageCheck(input: { repoRoot: string; work: string; run?: Runner; expo?: string; pack?: (repoRoot: string, work: string) => string }): Promise<CheckReport> {
   const run = input.run ?? defaultRunner;
   const exampleRoot = join(input.repoRoot, 'example');
-  const bare = prepareBare(input.repoRoot, input.work);
+  const tarball = (input.pack ?? packTarball)(input.repoRoot, join(input.work, 'tarball'));
   const example = JSON.parse(readFileSync(join(exampleRoot, 'package.json'), 'utf8')) as { dependencies: Record<string, string>; devDependencies?: Record<string, string> };
   const app = join(input.work, 'app');
   mkdirSync(app, { recursive: true });
-  for (const [name, text] of Object.entries(appFiles({ exampleDependencies: example.dependencies, ...(example.devDependencies ? { exampleDevDependencies: example.devDependencies } : {}), bare }))) writeFileSync(join(app, name), `${text}\n`);
+  for (const [name, text] of Object.entries(appFiles({ exampleDependencies: example.dependencies, ...(example.devDependencies ? { exampleDevDependencies: example.devDependencies } : {}), tarball }))) writeFileSync(join(app, name), `${text}\n`);
   const steps: StepResult[] = [];
-  for (const step of packageCheckSteps({ repoRoot: input.repoRoot, work: input.work, exampleRoot })) {
+  for (const step of packageCheckSteps({ repoRoot: input.repoRoot, work: input.work, exampleRoot }, { ...(input.expo ? { expo: input.expo } : {}) })) {
     const started = Date.now();
     const result = await run(step);
     steps.push({ name: step.name, ok: result.code === 0, ms: Date.now() - started, tail: result.out.slice(-TAIL) });
@@ -122,7 +112,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const repoRoot = fileURLToPath(new URL('..', import.meta.url));
   const keep = process.argv.includes('--keep');
   const work = mkdtempSync(join(tmpdir(), 'geo-package-check-'));
-  runPackageCheck({ repoRoot, work }).then((report) => {
+  const expoAt = process.argv.indexOf('--expo');
+  const expo = expoAt >= 0 ? process.argv[expoAt + 1] : undefined;
+  runPackageCheck({ repoRoot, work, ...(expo ? { expo } : {}) }).then((report) => {
     for (const step of report.steps) console.log(`${step.ok ? 'tamam' : 'HATA'} ${step.name} (${Math.round(step.ms / 1000)} sn)${step.ok ? '' : `\n${step.tail}`}`);
     console.log(JSON.stringify({ check: 'sdk', pass: report.ok, measured: report.steps.map((s) => `${s.name}:${s.ok ? 'ok' : 'hata'}`).join(' ') }));
     if (!keep) rmSync(work, { recursive: true, force: true });

@@ -1,3 +1,4 @@
+import { DEFAULT_PITCH } from '../../../../src/native';
 import { PLAN_START, PLAN_STOPS } from '../plan-stops';
 import type { LngLat, View } from '../map-tour/driver';
 import type { DeviceTest, TestResult } from '../../device-test/types';
@@ -288,4 +289,34 @@ export const sdkRotPlan = test('sdk.rot-plan', 'Harita yönü: 30 duraklı rota 
   ),
 );
 
-export const ROTATION_TESTS: DeviceTest[] = [sdkRotBearing, sdkRotNorth, sdkRotPitch, sdkRotProject, sdkRotTap, sdkRotLabels, sdkRotFly, sdkRotSpin, sdkRotRegions, sdkRotLayout, sdkRotLayoutTurn, sdkRotPlan];
+const BADGES = ['ov-icon@'];
+
+export const sdkRotDefaultTilt = test('sdk.rot-default-tilt', `Varsayılan eğim: ${DEFAULT_PITCH}° eğimde yol, bina ve rozetler çizilir, adlar yatmaz`, (ctx) =>
+  withTour(ctx, async (tour) => {
+    const bad: string[] = [];
+    const lines: string[] = [];
+    const spots: [string, LngLat][] = [['Kadıköy', KADIKOY], ['Kozyatağı', [29.1114, 40.9806]], ['Eminönü', [28.9752, 41.0158]]];
+    for (const [name, center] of spots) {
+      tour.say(`${name}: düz`);
+      await tour.go({ center, zoom: 16.5, bearing: 0, pitch: 0 }, 'jump');
+      await tour.until(BADGES, 3, 15000);
+      const flat = { roads: await count(tour, ROADS), buildings: await count(tour, BUILDINGS), badges: (await tour.query(BADGES)).length };
+      tour.say(`${name}: ${DEFAULT_PITCH}° eğik`);
+      await tour.go({ center, zoom: 16.5, bearing: 0, pitch: DEFAULT_PITCH }, 'jump');
+      await tour.until(BADGES, 3, 15000);
+      const view = await tour.view();
+      const tilt = { roads: await count(tour, ROADS), buildings: await count(tour, BUILDINGS), badges: (await tour.query(BADGES)).length };
+      lines.push(`${name}: düz ${flat.roads}/${flat.buildings}/${flat.badges}, eğik ${tilt.roads}/${tilt.buildings}/${tilt.badges}`);
+      if (Math.abs((view.pitch ?? 0) - DEFAULT_PITCH) > 2) bad.push(`${name}: eğim ${(view.pitch ?? 0).toFixed(1)}°`);
+      if (tilt.roads < flat.roads * 0.6) bad.push(`${name}: yol ${tilt.roads}/${flat.roads}`);
+      if (tilt.buildings < flat.buildings * 0.6) bad.push(`${name}: bina ${tilt.buildings}/${flat.buildings}`);
+      if (tilt.badges < flat.badges * 0.5) bad.push(`${name}: rozet ${tilt.badges}/${flat.badges}`);
+      const [x, y] = await tour.project(center);
+      const { width, height } = tour.size();
+      if (x < 0 || y < 0 || x > width || y > height) bad.push(`${name}: merkez ekran dışında`);
+    }
+    return wrong(bad, spots.length) ?? { outcome: 'pass', note: lines.join(' | ') };
+  }),
+);
+
+export const ROTATION_TESTS: DeviceTest[] = [sdkRotBearing, sdkRotNorth, sdkRotPitch, sdkRotDefaultTilt, sdkRotProject, sdkRotTap, sdkRotLabels, sdkRotFly, sdkRotSpin, sdkRotRegions, sdkRotLayout, sdkRotLayoutTurn, sdkRotPlan];

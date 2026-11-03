@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { DeviceTestScreen } from './device-test/DeviceTestScreen';
 import { SdkApp } from './sdk/SdkApp';
 import { SdkTestScreen } from './sdk-test/SdkTestScreen';
+import type { RunRequest } from './sdk-test/autorun';
+import { useRunRequests } from './sdk-test/launch';
 import { OfflineMapScreen } from './spikes/OfflineMapScreen';
 
 type Tab = 'sdk-test' | 'app' | 'old';
@@ -18,6 +20,11 @@ export default function App() {
     setOpened((previous) => new Set(previous).add(next));
     setTab(next);
   };
+
+  const mountApp = useCallback((request: RunRequest) => {
+    if (request.tab === 'app') setOpened((previous) => new Set(previous).add('app'));
+  }, []);
+  useRunRequests(mountApp);
 
   return (
     <View style={styles.root}>

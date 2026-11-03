@@ -30,7 +30,7 @@ const decisionGate = (n: number): Gate => ({
   },
 });
 
-const readReports = (dir: string): DeviceReport[] => {
+const readFolder = (dir: string): DeviceReport[] => {
   const reports: DeviceReport[] = [];
   let names: string[];
   try {
@@ -48,6 +48,8 @@ const readReports = (dir: string): DeviceReport[] => {
   }
   return reports;
 };
+
+const readReports = (dir: string): DeviceReport[] => [...readFolder(dir), ...readFolder(join(dir, 'cihaz'))];
 
 const REQUIRED = ['d1.map-offline', 'd1.net-state'];
 

@@ -5,7 +5,7 @@ export type AutoRegionUpdate = { decision: AutoDecision; started: string[] };
 const NOTHING: AutoDecision = { action: 'none', regions: [], neighbours: [] };
 
 export function createAutoRegion(deps: {
-  suggest(location: unknown): AutoDecision;
+  suggest(location: unknown): AutoDecision | Promise<AutoDecision>;
   download(id: string): Promise<void>;
   now(): number;
   retryMs: number;
@@ -15,7 +15,7 @@ export function createAutoRegion(deps: {
   return {
     async update(location) {
       if (location === null || location === undefined) return { decision: NOTHING, started: [] };
-      const decision = deps.suggest(location);
+      const decision = await deps.suggest(location);
       const started: string[] = [];
       if (decision.action !== 'download') return { decision, started };
       for (const id of decision.regions) {

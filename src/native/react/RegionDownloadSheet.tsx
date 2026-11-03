@@ -5,7 +5,7 @@ import { describeRegion, orderRegions, type RowAction } from '../logic/region-vi
 import { useGeo } from './GeoProvider';
 import { useRegions } from './hooks';
 
-type Props = { visible: boolean; onClose: () => void; lang?: string; only?: string[] };
+type Props = { visible: boolean; onClose: () => void; lang?: string; only?: string[]; consentFor?: string[] };
 
 const LABELS: Record<RowAction, MessageKey> = {
   download: 'action.download',
@@ -17,7 +17,7 @@ const LABELS: Record<RowAction, MessageKey> = {
   cellular: 'action.cellular',
 };
 
-export function RegionDownloadSheet({ visible, onClose, lang = 'tr', only }: Props) {
+export function RegionDownloadSheet({ visible, onClose, lang = 'tr', only, consentFor = [] }: Props) {
   const geo = useGeo();
   const { regions, statusOf, missingBaseBytes } = useRegions();
   const dark = useColorScheme() === 'dark';
@@ -59,7 +59,7 @@ export function RegionDownloadSheet({ visible, onClose, lang = 'tr', only }: Pro
               keyExtractor={(region) => region.id}
               extraData={statusOf}
               renderItem={({ item }) => {
-                const row = describeRegion({ region: item, status: statusOf(item.id), baseBytes: missingBaseBytes, lang });
+                const row = describeRegion({ region: item, status: statusOf(item.id), baseBytes: missingBaseBytes, lang, consentPending: consentFor.includes(item.id) });
                 const direction = row.rtl ? 'row-reverse' : 'row';
                 const align = row.rtl ? 'right' : 'left';
                 return (
@@ -69,6 +69,7 @@ export function RegionDownloadSheet({ visible, onClose, lang = 'tr', only }: Pro
                       <Text style={{ color: palette.mute, fontSize: 12 }}>{row.sizeText}</Text>
                     </View>
                     <Text style={{ color: row.errorText ? '#d33' : palette.mute, textAlign: align, fontSize: 12, marginTop: 2 }}>{row.errorText ?? row.statusText}</Text>
+                    {row.updatedText ? <Text style={{ color: palette.mute, textAlign: align, fontSize: 12 }}>{row.updatedText}</Text> : null}
                     {row.progressPercent !== null ? (
                       <View style={[styles.bar, { backgroundColor: palette.line }]}>
                         <View style={{ width: `${row.progressPercent}%`, height: 4, borderRadius: 2, backgroundColor: palette.accent, alignSelf: row.rtl ? 'flex-end' : 'flex-start' }} />

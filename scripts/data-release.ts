@@ -4,13 +4,13 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { resolvePlates } from '../pipeline/build/orchestrate';
-import type { Sources } from './fetch-sources';
+import { renderSources, type Sources } from './fetch-sources';
 import { compareReleases, freshnessProblems, latestRelease, renderChangeReport, summarizeRelease, tagOf } from './release-lib';
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 const LATEST_URL = 'https://download.geofabrik.de/europe/turkey-latest.osm.pbf';
 
-export type ReleaseFlags = { regions: string; pbf?: string; allowStale: boolean; approveRegressions: boolean; promote: boolean };
+export type ReleaseFlags = { regions: string; pbf?: string; allowStale: boolean; approveRegressions: boolean; promote: boolean; keepSources: boolean; revision?: number };
 
 export function parseFlags(argv: string[]): ReleaseFlags {
   const value = (name: string): string | undefined => {
@@ -20,7 +20,8 @@ export function parseFlags(argv: string[]): ReleaseFlags {
     return at >= 0 ? argv[at + 1] : undefined;
   };
   const pbf = value('--pbf');
-  return { regions: value('--regions') ?? '12il', ...(pbf ? { pbf } : {}), allowStale: argv.includes('--allow-stale'), approveRegressions: argv.includes('--approve-regressions'), promote: !argv.includes('--no-promote') };
+  const revision = Number(value('--revision'));
+  return { regions: value('--regions') ?? '12il', ...(pbf ? { pbf } : {}), keepSources: argv.includes('--keep-sources'), ...(Number.isInteger(revision) && revision > 1 ? { revision } : {}), allowStale: argv.includes('--allow-stale'), approveRegressions: argv.includes('--approve-regressions'), promote: !argv.includes('--no-promote') };
 }
 
 const run = (cmd: string, args: string[]): number => spawnSync(cmd, args, { cwd: repoRoot, stdio: 'inherit' }).status ?? 1;
@@ -36,14 +37,19 @@ export async function main(argv: string[]): Promise<number> {
   const flags = parseFlags(argv);
   const log = (line: string): void => console.log(`${new Date().toISOString().slice(11, 19)} ${line}`);
   const plates = resolvePlates(flags.regions);
-  let pbf = flags.pbf;
-  if (!pbf) {
-    pbf = join(repoRoot, 'pipeline', 'data', 'turkey-latest.download.osm.pbf');
-    log('Geofabrik dosyası indiriliyor');
-    await download(pbf);
+  const sourcesFile = join(repoRoot, 'pipeline', 'data', 'sources.json');
+  if (!flags.keepSources) {
+    let pbf = flags.pbf;
+    if (!pbf) {
+      pbf = join(repoRoot, 'pipeline', 'data', 'turkey-latest.download.osm.pbf');
+      log('Geofabrik dosyası indiriliyor');
+      await download(pbf);
+    }
+    if (run('npx', ['tsx', 'scripts/fetch-sources.ts', '--pbf', pbf]) !== 0) return 1;
   }
-  if (run('npx', ['tsx', 'scripts/fetch-sources.ts', '--pbf', pbf]) !== 0) return 1;
-  const sources = JSON.parse(readFileSync(join(repoRoot, 'pipeline', 'data', 'sources.json'), 'utf8')) as Sources;
+  const loaded = JSON.parse(readFileSync(sourcesFile, 'utf8')) as Sources;
+  const sources: Sources = flags.revision ? { ...loaded, revision: flags.revision } : loaded;
+  if (flags.revision) writeFileSync(sourcesFile, renderSources(sources));
   const problems = freshnessProblems(sources, new Date());
   if (problems.length > 0) {
     for (const problem of problems) console.error(`tazelik (K8.1): ${problem}`);

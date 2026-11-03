@@ -56,6 +56,8 @@ npm install github:YuksiTech/yuksi-geo#<tag> @maplibre/maplibre-react-native exp
 
 or, while both repositories sit side by side on one machine, with `"@yuksi/geo": "file:../yuksi-geo"`.
 
+The package ships compiled code (`lib/`, with type files and source maps), so an app needs no `watchFolders` and no extra Gradle flag. The compiled folder is built when the package is packed or installed from git (`npm run build:package`); with a `file:` link, run `npm run build:package` once in this repository and again after changing the SDK.
+
 Add the config plugin so MapLibre is registered in the native project (listing `@maplibre/maplibre-react-native` in `plugins` directly does the same):
 
 ```json
@@ -113,25 +115,110 @@ function MapScreen() {
 | `geo.plan` | `plan` |
 | `geo.learn` | `confirm`, `export`, `import`, `clear`, `stats` |
 
-`autoDownload` is `'ask' | 'wifi' | 'always' | 'never'`. `publicKeys` is a list so a key can be rotated without breaking installed apps.
+`autoDownload` is `'ask' | 'wifi' | 'always' | 'never'` (default `'always'`: once the user has shared their location, the province they are in is downloaded by itself; on mobile data a province over `cellularAskMb`, default 50, is asked about first). `publicKeys` is a list so a key can be rotated without breaking installed apps.
 
 Ready-made pieces for the common screens: `RegionDownloadSheet`, `MapLegend`, `GeoAttribution`, `RoutePlanLayer`, `PlanStopList`, and the hooks `useRegions`, `useRegionStatus`, `useAutoRegion`, `useDailyUpdateCheck`, `useAttribution`, `usePlan`.
 
 ## Map and theme
 
-`useMapStyle({ theme, language, hide, look })` returns a MapLibre style built from the installed packs: the Protomaps base map, per-province service layers, and an overlay of businesses with icons and brand badges. The style changes by itself when a province is installed or removed.
+`useMapStyle({ theme, language, hide, look })` returns a MapLibre style built from the installed packs: the Protomaps base map, per-province service layers and the overlay of businesses. The style changes by itself when a province is installed or removed.
 
-Icons follow a ladder so a crowded street stays readable:
+**Many provinces.** Every installed province adds about 70 layers to the style (12 provinces: 922 layers and 1.8 MB of style, 81 provinces: 5821 layers and 12 MB). Pass the part of the map that is on screen and only the provinces near it go into the style:
 
-| Zoom | What the map shows |
+```tsx
+const [view, setView] = useState({ center: [29.03, 40.99], zoom: 12 });
+const style = useMapStyle({ theme, language: lang, view, maxRegions: 6 });
+<Map mapStyle={style} onRegionDidChange={(e) => setView({ center: [e.nativeEvent.center[0], e.nativeEvent.center[1]], zoom: e.nativeEvent.zoom })} />
+```
+
+The provinces under the view are always in the style, and neighbours within 30 km are added up to `maxRegions` (default 6). The set changes only when the view leaves it, never while the map is zoomed out below zoom 9 (the base map covers the whole country there), and never twice for one move, so the map does not reload while the user pans inside a province. Without `view` every installed province is in the style, as before. Round the centre and zoom you pass (for example to 0.01 degrees and half a zoom step) so the app does not re-render on every frame.
+
+The place classification (badge glyph, tier and group) is baked into the business tiles as the properties `k`, `t` and `grp`; tiles built before that still work, the style works the values out itself.
+
+Places are drawn as **round category badges with the name beside them**: a coloured circle, a white glyph cut out of it and a thin white ring, in the colour of its group (food orange, shops amber, health and pharmacies red, parks green, culture magenta, transport blue, and so on). A chain store gets the badge of its category, so every supermarket shows the same basket; chain logos and letters are an option (see `brands.mode`). The base map's own sprite icons are left out so nothing is drawn twice.
+
+The map thins out like a printed map: the further out, the fewer places. Places are ranked in four tiers by kind and by how sure the data is about them.
+
+| Zoom | What shows |
 |---|---|
-| below 16 | Small tinted category icons; quiet groups (food, shops) are hidden |
-| 16 to 17.5 | Chains as round badges in the brand colour with a short letter or name |
-| 17.5 and above | Small chain logos |
+| from 15 | Hospitals, airports, metro, train and ferry stops; the surest places of the next tiers |
+| from 16 | Pharmacies, places of worship, universities; then supermarkets, banks, parks, hotels, schools and similar |
+| from 17 | Cafes, restaurants and shops, the surest ones first |
+| from 18.5 | Almost everything with a name |
 
-Icons are single-colour shapes tinted at draw time, so one icon works in every colour and in light and dark.
+Places with no name are not drawn, and neither are office-type businesses (real estate, advertising, manufacturing, legal and similar). The glyph is chosen from the category of the place (`src/native/map/poi-glyphs.ts`, 52 glyphs from Maki and Temaki, see `docs/icons.md`). Icons are small distance fields tinted at draw time, so one picture works in every colour, in light and dark.
 
-The app can change colours, emphasis and brand display with a theme. The theme is data, not images: **an app can never supply its own icon pictures**, it can only recolour, resize, hide or re-rank the built-in ones.
+`MapLegend` explains the groups and can switch each of them on and off.
+
+The map looks best leaned back a little, about 20 degrees, like a printed map held at an angle. `DEFAULT_PITCH` (20) and `tilted(view)` give the app that value for the camera; the user can still flatten or tilt it with two fingers (up to `MAX_PITCH`, 60). Names and badges stay upright when the map is tilted.
+
+```tsx
+import { DEFAULT_PITCH, tilted } from '@yuksi/geo/native';
+
+<Camera initialViewState={tilted({ center: [29.03, 40.99], zoom: 15 })} />
+camera.current?.easeTo({ center, pitch: DEFAULT_PITCH, duration: 400 });
+```
+
+`safeView(view)` keeps the bearing between 0 and 360 and the pitch between 0 and `MAX_PITCH` (iOS ignores a negative bearing). `jumpTilted(camera, view, read)` jumps safely with a tilted camera: on a far jump it flattens first, then tilts, and jumps once more if the zoom landed off (on iOS the zoom after a tilted jump depends on the previous pitch).
+
+Neighbourhood names are drawn by their own component, so the map style loads once even though the names arrive a moment later:
+
+```tsx
+<Map mapStyle={style}>
+  <GeoHoodLabels theme="light" language="tr" />
+</Map>
+```
+
+### Buildings, dark map and road shields
+
+Buildings are drawn flat below zoom 16 and as 3D blocks from zoom 16 (`map.buildings3d`, on by default). The block height is the `height` of the building when the tiles carry it and 6 m otherwise; in the Istanbul sample tile only about 4 % of the buildings have a height, so most blocks are low. The dark theme has its own base colours (`DARK_BASE`); `map.base` can change any of them. Road references (`D 100`, `O-1`, `E 80`, `34-12`) are drawn as shields.
+
+### Place cards, nearby places, directions
+
+`geo.search.nearby({ point, group: 'pharmacy', limit: 5 })` lists the closest places of a group with their distance. `usePlaceAt(project)` returns a `card` for the badge under a tap (`pick(features, { x, y })`); show it with `<PlaceCard card={card} onRoute={...} onCopy={...} onClose={...} />`. `geo.route.directions(from, to, { language })` gives the route and its steps; the text is written for reading (no voice). Turns are found from the shape of the route: the street name of a step is the street found 15 m after the turn in the address pack, and the exit number of a roundabout is estimated from the entry and exit headings, so it can be wrong on unusual roundabouts. Put `<ScaleBar zoom latitude />` and `<CompassButton bearing onPress />` on the map; `useMapStyle({ theme: 'auto' })` follows the system appearance.
+
+### Fonts and labels
+
+The map writes in Noto Sans by default. Pass `font: 'inter'` to `useMapStyle` (and `GeoHoodLabels`) to use Inter; the base pack must carry the Inter glyph files for that. Build them once with `npm i fontnik` in a scratch folder, download Inter (OFL) and run `npm run fonts -- --ttf <Inter ttf folder> --out pipeline/data/fonts-inter --noto <base>/fonts-compact --fontnik <scratch folder>`. Set `GEO_FONT=inter` when building the packs to put them in the base pack (about 19 MB more). Each Inter face also carries the Noto glyphs it lacks (Arabic, Devanagari...), because MapLibre reads one glyph file per font and cannot join two.
+
+Neighbourhood names are written in capitals with `upperTr` and street names are letter spaced. Business names that would need more than two lines use a short form (`ns` in the business tiles, made by `abbreviateName`) in Turkish.
+
+### User location
+
+Three parts show the user on the map and move the camera to them, like the location button of a system map:
+
+- `GeoUserLocation` draws the blue location dot (with the accuracy ring and, in heading mode, the direction cone).
+- `LocateButton` is a round button with an arrow: outline when idle, filled while following, upright arrow while the map turns with the compass.
+- `useLocateMe` ties them to the map camera. A press asks for permission if needed, zooms in to street level (it never zooms out), and follows the user. Another press turns the map with the compass, and the next one goes back to plain follow. Dragging the map stops following.
+
+```tsx
+import { Camera, Map, type CameraRef } from '@maplibre/maplibre-react-native';
+import { GeoUserLocation, LocateButton, useLocateMe } from '@yuksi/geo/native';
+
+const camera = useRef<CameraRef>(null);
+const locate = useLocateMe({ cameraRef: camera, getZoom: () => zoom.current, onDenied: () => toast('Location permission was not granted') });
+
+<Map ...>
+  <Camera ref={camera} {...locate.camera} />
+  <GeoUserLocation {...locate.puck} />
+</Map>
+<LocateButton mode={locate.mode} permission={locate.permission} busy={locate.busy} onPress={() => void locate.press()} lang={lang} />
+```
+
+| Option | Meaning |
+|---|---|
+| `cameraRef` | The map camera (required) |
+| `zoom` | Street-level zoom used when the map is farther out (default 16) |
+| `getZoom` | Returns the current zoom so a closer map is not zoomed out |
+| `headingMode` | `false` removes the compass step from the cycle |
+| `granted` | Tell the hook the permission is already granted (for example from `expo-location`), so the dot shows before the first press. Without it the dot appears after the first press |
+| `onDenied`, `onUnavailable` | Called when permission is refused or no fix arrives within 5 seconds |
+
+A press after a refusal asks the system again (it answers at once without a dialog when the permission is still off), so turning location on in Settings works without restarting the app. `locate.openSettings()` opens the app's page in Settings. If the app takes the permission back (`granted` turns `false`), following stops and the dot hides. A cached position older than two minutes is not used.
+
+The dot is drawn by the native map, so the app needs the usual location permission text (`NSLocationWhenInUseUsageDescription` on iOS, `ACCESS_FINE_LOCATION` on Android). The location is never sent anywhere. The button's labels come from the SDK messages in six languages.
+
+The app can change colours, size and visibility with a theme, including the colours of the base map. The theme is data, not images: **an app can never supply its own icon pictures**, it can only recolour, resize, hide or re-rank the built-in ones.
 
 ```tsx
 import { createGeoTheme } from '@yuksi/geo/native';
@@ -141,7 +228,7 @@ const theme = createGeoTheme({
   dark: { colors: { accent: '#FF7A2F' } },
   map: {
     icons: { style: 'muted', scale: 1.1, groups: { fuel: { emphasis: 'strong' }, food: { visible: false } } },
-    brands: { mode: 'ladder', ladder: { badgeFrom: 16, logoFrom: 17.5 }, shape: 'circle', chains: { migros: { fill: '#F27A1A', text: 'M' } } },
+    brands: { mode: 'category' },
   },
 });
 
@@ -152,16 +239,19 @@ const theme = createGeoTheme({
 |---|---|
 | `icons.style` | `color`, `muted` (greyed), `mono` (accent colour only) |
 | `icons.scale` | 0.5 to 2 |
-| `icons.groups.<group>` | `color`, `emphasis` (`strong`, `normal`, `quiet`), `visible` |
-| `brands.mode` | `ladder`, `badge`, `category`, `logo`, `hidden` |
-| `brands.chains.<id>` | `fill`, `ink`, `text`, `visible` for one of the 65 known chains |
+| `icons.groups.<group>` | `color`, `emphasis` (`strong` bigger, `normal`, `quiet` smaller), `visible` |
+| `brands.mode` | `category` (default, chains get their category badge), `badge`, `ladder`, `logo` (chain badges and logos from the older design), `hidden` |
+| `brands.chains.<id>` | `fill`, `ink`, `text`, `visible` for one of the 65 known chains (used by the chain modes) |
 | `colors` | `accent`, `bg`, `fg`, `mute`, `line`, `danger`, `success`, `radius`, `font` |
+| `base` | Colours of the map itself by name (`earth`, `water`, `buildings`, `park_a`, `major`, `roads_label_major`, ... the colour names of the Protomaps flavor). Light is warm cream with white roads and light green parks; dark keeps the stock dark map |
 
-Icon groups: health, pharmacy, safety, money, fuel, worship, lodging, market, public, food, shop, cargo, landmark.
+Groups: health, pharmacy, safety, money, fuel, worship, lodging, education, market, food, shop, culture, nature, transit, public, cargo, landmark.
 
-A wrong value never crashes the app. It falls back to the default and a warning is written to the development console. Badge letters that would be unreadable on their background are switched to black or white automatically. `hide` accepts tokens such as `brands`, `landmarks`, `places`, `services`, `group:food`, `chain:migros`.
+A wrong value never crashes the app. It falls back to the default and a warning is written to the development console. `hide` accepts tokens such as `group:food`, `chain:migros`, `brands`, `landmarks`, `places`, `services`.
 
 ## Address search
+
+Address packs are opened when a question needs them. At most four provinces stay open (the one used longest ago is let go first) and a province that was not used for two minutes is let go when another one is opened (`createSearch({ maxOpen, idleMs, clock })`); the next question reopens it. Neighbourhood names for the map (`hoods()`) are read with a short-lived connection and kept, so 81 installed provinces do not keep 81 databases open.
 
 `createSearch({ store, borders })` in `src/core/address` answers four questions over the SQLite address packs: `resolve` (a sentence or a structured query to ranked places), `autocomplete` (suggestions while typing), `reverse` (a point to the nearest door, street or area) and place names through the same `resolve`. Every result says how sure it is: `precision` (`address`, `interpolated`, `street`, `neighbourhood`, `district`, `province`, `poi`) and `approximate`. Only a real door from the map gets `precision: 'address'` and `approximate: false`; a number the map does not have is placed between its neighbours and marked as a guess.
 
@@ -266,7 +356,31 @@ await geo.regions.checkUpdates();           // new versions, once a day is enoug
 await geo.regions.remove('34', ['route']);  // remove one part
 ```
 
-Downloads are resumable and can be paused. With `autoDownload: 'wifi'` they wait for Wi-Fi unless the user allows mobile data. `useAutoRegion(location)` suggests the province the user is in and stays quiet near a border.
+Downloads are resumable and can be paused. With `autoDownload: 'wifi'` they wait for Wi-Fi unless the user allows mobile data.
+
+### Download by location
+
+`useLocationRegion({ granted })` downloads the province the user is in, by itself. When the user has given location permission it reads the position (on start, when the app returns to the foreground, every ten minutes, and again after 30 seconds if no fix arrived). A position that moved less than 1.5 km does not start a new check, but a return to the foreground and every ten-minute read check again, so a download that was cut off is tried again. With `'ask'` it only suggests. `useAutoRegion(location)` is the lower-level hook for an app that already has the position.
+
+```tsx
+const { decision, accept, waitForWifi, dismiss } = useLocationRegion({ granted });
+<RegionConsentSheet decision={decision} lang={lang} onAllow={() => void accept()} onWait={() => void waitForWifi()} />
+```
+
+**Mobile data.** With `autoDownload: 'always'` a province bigger than `cellularAskMb` (default 50) is not downloaded over mobile data without asking. `decision.action` becomes `'consent'` (with `decision.bytes`) and `RegionConsentSheet` asks in six languages ("The Istanbul map is 312 MB. Download it over mobile data?"). **Download** downloads now (`accept()`); **Wait for Wi-Fi** queues it (`waitForWifi()`) and it starts by itself when Wi-Fi comes, and the question is not asked again while it waits. An unknown connection counts as mobile data. `cellularAskMb: 0` always asks on mobile data, `Infinity` never asks. The first province also needs the base pack (about 20 MB), which is counted in the size.
+
+```ts
+geo.regions.downloadBytes('34');                            // what a download would fetch now
+await geo.regions.download('34', { wifiOnly: true });       // wait for Wi-Fi, for this download only
+await geo.regions.download('34', { allowCellular: true });  // mobile data is fine
+await geo.regions.connection();                             // 'wifi' | 'cellular' | 'none'
+```
+
+### Background downloads
+
+While the app is in front, the download runs in JavaScript (`fetch` stream, resumable, checked against the manifest). **When the app goes to the background the system may stop it**; the download is cut, the partly written file stays, and it continues from there when the app is in front again (`useLocationRegion` checks again on return). The package does not download while the app is suspended or closed.
+
+An experiment on an iPhone 11 (iOS 26) with `expo-file-system`'s `DownloadTask` (`sessionType: 'background'`, the default on iOS) showed that the system **does** keep a download going while the app is in the background: a 66 MB file served at 2 MB/s went on at the same speed after the app was sent to Settings, and finished (and woke the app) in the background. On Android the same API ignores `sessionType`; a download there needs a foreground service, which `expo-file-system` does not offer. Using `DownloadTask` for pack downloads would give iOS background downloads but changes the resume and pause logic that is tested today, so it is not done yet.
 
 A pack that fails its SHA-256 or whose manifest signature is wrong is rejected and the previous version stays in use. Files are replaced only after the new one is complete.
 
@@ -399,6 +513,29 @@ cd example && npm install
 ```
 
 The example needs a development build (it uses native modules); use Xcode or Gradle locally.
+
+### Testing on a device
+
+The example app can run tests without touching the screen. `npm run device-run` leaves a job on the pack server (`POST /run`) and starts the app on the simulator or the phone; the test screen picks the job up (`GET /run`, polled every 3 seconds), runs the listed tests and sends the report back (`POST /report`, local network only, at most 5 MB). The server writes it to the report folder as JSON and Markdown. A `geoornek://run?ids=...` link does the same when opened by hand.
+
+```
+npm run serve:packs -- dist/packs
+npm run device-run -- --target sim --ids sdk.map-open,sdk.offline-search --app
+npm run device-run -- --target sim --ids sdk.perf-map-open --location 41.0,29.03 --rss
+npm run device-run -- --target phone --ids auto
+```
+
+| Flag | Meaning |
+|---|---|
+| `--target` | `sim` (booted simulator) or `phone` (`--udid` to pick one) |
+| `--ids` | Test ids separated by commas, or `auto` for every automatic test |
+| `--app` | Also open the app tab at start (location and download hooks run) |
+| `--location lat,lon` | Simulator only: grant location and set the position first |
+| `--rss` | Simulator only: print the highest memory use of the app during the run |
+| `--fresh` | Simulator only: stop the app before opening the link |
+| `--timeout s` | How long to wait for the report (default 900) |
+
+The command exits with 1 when a test fails or no report arrives. The phone must be unlocked.
 
 ## Data sources and credits
 

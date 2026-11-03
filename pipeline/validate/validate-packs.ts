@@ -1,5 +1,6 @@
 import { createHash, createPublicKey, verify } from 'node:crypto';
 import { createReadStream, existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { Decompress } from 'fzstd';
 import { DatabaseSync } from 'node:sqlite';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -43,6 +44,34 @@ const hashFile = (path: string): Promise<string> =>
     const hash = createHash('sha256');
     createReadStream(path).on('data', (chunk) => hash.update(chunk)).on('error', reject).on('end', () => resolve(hash.digest('hex')));
   });
+
+export function decodedSha256(path: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const hash = createHash('sha256');
+    const stream = new Decompress((chunk) => void hash.update(chunk));
+    let failed = false;
+    createReadStream(path, { highWaterMark: 1 << 20 })
+      .on('data', (chunk) => {
+        if (failed) return;
+        try {
+          stream.push(chunk as Uint8Array, false);
+        } catch (error) {
+          failed = true;
+          reject(error);
+        }
+      })
+      .on('error', reject)
+      .on('end', () => {
+        if (failed) return;
+        try {
+          stream.push(new Uint8Array(0), true);
+          resolve(hash.digest('hex'));
+        } catch (error) {
+          reject(error);
+        }
+      });
+  });
+}
 
 function listFiles(root: string, dir = root): string[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => (entry.isDirectory() ? listFiles(root, join(dir, entry.name)) : [relative(root, join(dir, entry.name)).split('\\').join('/')]));
@@ -307,6 +336,18 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
       add('error', 'sha256 uyuşmuyor');
     } else {
       sound.add(file.path);
+    }
+    if (file.encoded) {
+      listed.add(file.encoded.path);
+      summary.encodedFiles = (summary.encodedFiles ?? 0) + 1;
+      summary.encodedBytes = (summary.encodedBytes ?? 0) + file.encoded.size;
+      const addEncoded = report(file.encoded.path);
+      const encodedFull = join(root, file.encoded.path);
+      if (!existsSync(encodedFull)) addEncoded('error', 'sıkıştırılmış dosya yok');
+      else if (statSync(encodedFull).size !== file.encoded.size) addEncoded('error', `sıkıştırılmış boyut uyuşmuyor (manifest ${file.encoded.size}, dosya ${statSync(encodedFull).size})`);
+      else if ((await hashFile(encodedFull)) !== file.encoded.sha256) addEncoded('error', 'sıkıştırılmış sha256 uyuşmuyor');
+      else if ((await decodedSha256(encodedFull).catch(() => '')) !== file.sha256) addEncoded('error', 'zstd açılınca asıl dosyanın sha256 değeri çıkmıyor');
+      if (file.encoded.size >= file.size) addEncoded('warn', 'sıkıştırılmış dosya asıl dosyadan küçük değil');
     }
   }
   for (const path of listFiles(root)) if (!listed.has(path) && !['manifest-v1.json', 'manifest-v1.json.sig', 'dev-public-key.pem'].includes(path)) report(path)('warn', `manifestte olmayan dosya: ${path}`);

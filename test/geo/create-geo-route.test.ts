@@ -43,4 +43,34 @@ describe('geo.route', () => {
     expect(await geo.route.route(from, to)).toEqual({ ok: false, code: 'START_OUTSIDE_REGION' });
     await geo.dispose();
   });
+
+  it('turns a route into steps in the language asked for and passes a failure on', async () => {
+    const w = await world();
+    const geo = await createGeo(w.config, envOf(w));
+    await geo.regions.checkUpdates();
+    const from: [number, number] = [X + lon(300), Y + deg(10)];
+    const to: [number, number] = [X + lon(1900), Y + deg(1500)];
+    expect(await geo.route.directions(from, to)).toEqual({ ok: false, code: 'START_OUTSIDE_REGION' });
+    await geo.regions.download('34', { parts: ['address', 'route'] });
+    const got = await geo.route.directions(from, to, { language: 'en' });
+    expect(got.ok).toBe(true);
+    if (!got.ok) return;
+    expect(got.steps.map((step) => step.kind)).toEqual(['start', 'left', 'arrive']);
+    expect(got.steps[1]!.text).toMatch(/^In [\d.]+ (m|km), Turn left$/);
+    const turkish = await geo.route.directions(from, to);
+    expect(turkish.ok && turkish.steps[1]!.text).toMatch(/Sola dönün/);
+    await geo.dispose();
+  });
+
+  it('lists what is near a point from the installed address pack', async () => {
+    const w = await world();
+    const geo = await createGeo({ ...w.config, language: 'en' }, envOf(w));
+    await geo.regions.checkUpdates();
+    expect(await geo.search.nearby({ point: [28.645, 40.745], group: 'pharmacy' })).toEqual([]);
+    await geo.regions.download('34', { parts: ['address'] });
+    const hits = await geo.search.nearby({ point: [28.645, 40.745], group: 'pharmacy', radiusM: 2000 });
+    expect(hits.map((hit) => hit.place.components.poiName)).toEqual(['Merkez Eczanesi']);
+    expect(hits[0]!.distanceM).toBeLessThan(5);
+    await geo.dispose();
+  });
 });

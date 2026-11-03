@@ -7,6 +7,7 @@ import time
 import math
 
 from chains import CHAIN_GROUP, chain_of
+import place_names
 
 GROUPS = [
     ("pharmacy", ("pharmacy", "drugstore")),
@@ -177,6 +178,9 @@ def feature(row):
     elif landmark(row["cat"]) and confidence >= 0.6:
         properties["lm"] = 1
     local = (row.get("name_tr") or "").strip()
+    if row.get("blank"):
+        properties["name"] = ""
+        local = ""
     if local and local != properties["name"]:
         properties["name:tr"] = local
     return {
@@ -285,6 +289,16 @@ def write_lines(path, rows):
     os.replace(path + ".tmp", path)
 
 
+def choose_names(rows, osm_cells):
+    counts = {"overture-tr": 0, "osm": 0, "generic": 0, "overture": 0}
+    for r in rows:
+        chosen = place_names.choose(r, classify(r["cat"]), osm_cells)
+        counts[chosen["source"]] += 1
+        r["name_tr"] = chosen["name_tr"] or None
+        r["blank"] = chosen["blank"]
+    return counts
+
+
 def extract(release, borders_path, out_dir, cache, wanted, pbf=None, buildings=None):
     import duckdb
     import numpy
@@ -303,6 +317,14 @@ def extract(release, borders_path, out_dir, cache, wanted, pbf=None, buildings=N
 
         chain_points = read(pbf)
         chain_plate = assign(numpy.array([p["lon"] for p in chain_points]), numpy.array([p["lat"] for p in chain_points]), borders)
+    osm_by_plate = {}
+    if pbf:
+        from osm_names import read as read_osm_names
+
+        named = read_osm_names(pbf, classify)
+        named_plate = assign(numpy.array([p["lon"] for p in named]), numpy.array([p["lat"] for p in named]), borders) if named else []
+        for p, plate_of in zip(named, named_plate):
+            osm_by_plate.setdefault(plate_of, []).append(p)
     building_index = None
     if pbf and buildings:
         from building_index import ensure
@@ -318,6 +340,7 @@ def extract(release, borders_path, out_dir, cache, wanted, pbf=None, buildings=N
             if keep(row, DIRECTORY_MIN_CONFIDENCE):
                 rows.append(row)
         rows.sort(key=lambda r: r["id"])
+        name_sources = choose_names(rows, place_names.index_osm(osm_by_plate.get(key, [])))
         mapped = [r for r in rows if keep(r)]
         features = [feature(r) for r in mapped]
         features.extend(osm_features([p for p, plate_of in zip(chain_points, chain_plate) if plate_of == key], features))
@@ -332,6 +355,8 @@ def extract(release, borders_path, out_dir, cache, wanted, pbf=None, buildings=N
             ),
         )
         summary[key] = {"all": len(indexes), "kept": len(features), "listed": len(rows), "minzoom": min((f["tippecanoe"]["minzoom"] for f in features), default=None)}
+        if pbf:
+            summary[key]["names"] = name_sources
     with open(os.path.join(out_dir, "summary.json"), "w", encoding="utf-8") as f:
         json.dump({"release": release, "plates": summary}, f, sort_keys=True, indent=1)
         f.write("\n")

@@ -1,4 +1,6 @@
-export type Look = { theme: 'light' | 'dark'; lang: string; bare?: boolean; hide?: string[] };
+import { jumpTilted } from '../../../../src/native/map/camera';
+
+export type Look = { theme: 'light' | 'dark'; lang: string; bare?: boolean; hide?: string[]; window?: boolean; font?: 'inter' | 'noto' };
 export type LngLat = [number, number];
 export type MapFeature = { properties: Record<string, unknown> | null; geometry: { type: string; coordinates?: unknown } };
 export type View = { center: LngLat; zoom: number; bearing?: number; pitch?: number };
@@ -17,6 +19,7 @@ export type MapHandle<P = unknown> = {
   project(point: LngLat): Promise<[number, number]>;
   unproject(pixel: [number, number]): Promise<LngLat>;
   plan(): P;
+  locate?: { press(): Promise<void>; stop(): void; state(): { mode: string; permission: string } };
 };
 
 type State = { geo: unknown; look: Look; status: string; mounted: number; frame: Frame; car: Car };
@@ -72,6 +75,13 @@ export type Tour<G = unknown, P = unknown> = {
   unproject(pixel: [number, number]): Promise<LngLat>;
   plan(): P;
   gaps<T>(work: () => Promise<T>): Promise<{ value: T } & Gap>;
+  frames(): number;
+  locatePress(): Promise<void>;
+  locateStop(): void;
+  locateState(): { mode: string; permission: string };
+  rendered(since: number, ms?: number): Promise<number>;
+  jumpSafe(view: View): Promise<View>;
+  styleLoads(): number;
   close(): void;
 };
 
@@ -155,14 +165,7 @@ export async function openTour<G, P = unknown>(geo: G, look: Look = { theme: 'li
       const h = live();
       if (!arrived(await h.view(), view)) {
         if (how === 'fly') h.fly(view, duration);
-        else {
-          const now = await h.view();
-          if (view.pitch && Math.abs(now.center[0] - view.center[0]) + Math.abs(now.center[1] - view.center[1]) > 0.3) {
-            h.jump({ ...view, pitch: 0 });
-            await sleep(400);
-          }
-          h.jump(view);
-        }
+        else await jumpTilted({ jumpTo: (next) => h.jump(next) }, view, () => h.view(), 400);
         await reach(view, how === 'fly' ? duration + 1500 : 800);
       }
       await quiet();
@@ -170,7 +173,7 @@ export async function openTour<G, P = unknown>(geo: G, look: Look = { theme: 'li
     },
     async look(next) {
       const merged = { ...state.look, ...next };
-      if (merged.theme === state.look.theme && merged.lang === state.look.lang && Boolean(merged.bare) === Boolean(state.look.bare) && (merged.hide ?? []).join(',') === (state.look.hide ?? []).join(',')) return 0;
+      if (merged.theme === state.look.theme && merged.lang === state.look.lang && Boolean(merged.bare) === Boolean(state.look.bare) && Boolean(merged.window) === Boolean(state.look.window) && merged.font === state.look.font && (merged.hide ?? []).join(',') === (state.look.hide ?? []).join(',')) return 0;
       const started = Date.now();
       const before = state.mounted;
       const view = await live().view();
@@ -241,6 +244,25 @@ export async function openTour<G, P = unknown>(geo: G, look: Look = { theme: 'li
       } finally {
         clearInterval(timer);
       }
+    },
+    frames: () => (handle ? live().frames() : 0),
+    locatePress: () => (live().locate ? live().locate!.press() : Promise.reject(new Error('konum düğmesi bu haritada yok'))),
+    locateStop: () => void live().locate?.stop(),
+    locateState: () => (live().locate ? live().locate!.state() : { mode: 'yok', permission: 'yok' }),
+    async jumpSafe(view) {
+      const h = live();
+      await jumpTilted({ jumpTo: (next) => h.jump(next) }, view, () => h.view(), 400);
+      return viewWhenReady();
+    },
+    styleLoads() {
+      const events = handle ? live().events() : [];
+      const mount = events.map((event) => event.startsWith('mount:')).lastIndexOf(true);
+      return events.slice(mount + 1).filter((event) => event.startsWith('style@')).length;
+    },
+    async rendered(since, ms = SETTLE_MS) {
+      const started = Date.now();
+      await until(() => handle !== null && live().frames() > since, ms, 'tam kare çizilmedi');
+      return Date.now() - started;
     },
     close() {
       handle = null;

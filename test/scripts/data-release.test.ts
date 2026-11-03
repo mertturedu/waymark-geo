@@ -7,11 +7,15 @@ import { latestRelease } from '../../scripts/release-lib';
 
 describe('release flags', () => {
   it('defaults to the 12 provinces and promotes the release', () => {
-    expect(parseFlags([])).toEqual({ regions: '12il', allowStale: false, approveRegressions: false, promote: true });
+    expect(parseFlags([])).toEqual({ regions: '12il', keepSources: false, allowStale: false, approveRegressions: false, promote: true });
   });
 
   it('reads every flag', () => {
-    expect(parseFlags(['--regions=all', '--pbf', 'a.pbf', '--allow-stale', '--approve-regressions', '--no-promote'])).toEqual({ regions: 'all', pbf: 'a.pbf', allowStale: true, approveRegressions: true, promote: false });
+    expect(parseFlags(['--regions=all', '--pbf', 'a.pbf', '--allow-stale', '--approve-regressions', '--no-promote'])).toEqual({ regions: 'all', pbf: 'a.pbf', keepSources: false, allowStale: true, approveRegressions: true, promote: false });
+    expect(parseFlags(['--keep-sources', '--revision', '2'])).toMatchObject({ keepSources: true, revision: 2 });
+    expect(parseFlags(['--revision', '1'])).not.toHaveProperty('revision');
+    expect(parseFlags(['--revision', 'x'])).not.toHaveProperty('revision');
+    expect(parseFlags(['--revision', '2.5'])).not.toHaveProperty('revision');
   });
 });
 

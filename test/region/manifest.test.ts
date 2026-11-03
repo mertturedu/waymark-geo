@@ -191,3 +191,34 @@ describe('serializeManifest and parseManifest', () => {
     expect(parseManifest(text)).toEqual(valid());
   });
 });
+
+describe('encoded files', () => {
+  const base = (encoded: unknown) => ({
+    format: 1,
+    minSdk: '0.5.0',
+    osm: { file: 'a.pbf', time: 't' },
+    tiles: { build: '20261030', time: 't' },
+    base: [],
+    regions: [{ id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox: [28, 40, 30, 42], version: 'v', stats: { addresses: 1, streets: 1, neighbourhoods: 1 }, files: [{ kind: 'address', path: '34/a.sqlite', size: 100, sha256: 'a'.repeat(64), ...(encoded === undefined ? {} : { encoded }) }] }],
+  });
+  const good = { codec: 'zstd', path: '34/a.sqlite.zst', size: 40, sha256: 'b'.repeat(64) };
+
+  it('reads a zstd file next to the real file and keeps the real file fields', () => {
+    const file = parseManifest(JSON.stringify(base(good))).regions[0]!.files[0]!;
+    expect(file.encoded).toEqual(good);
+    expect(file).toMatchObject({ path: '34/a.sqlite', size: 100 });
+    expect(parseManifest(JSON.stringify(base(undefined))).regions[0]!.files[0]!.encoded).toBeUndefined();
+  });
+
+  it.each([
+    [{ ...good, codec: 'gzip' }, /sıkıştırma türü/],
+    [{ ...good, path: '34/a.sqlite' }, /yol iki kez/],
+    [{ ...good, path: '../x.zst' }, /yol geçersiz/],
+    [{ ...good, size: 0 }, /sıkıştırılmış boyut sıfır/],
+    [{ ...good, size: 1.5 }, /sıkıştırılmış boyut geçersiz/],
+    [{ ...good, sha256: 'xyz' }, /sıkıştırılmış sha256 geçersiz/],
+    ['text', /sıkıştırılmış dosya nesne olmalı/],
+  ])('refuses %j', (encoded, message) => {
+    expect(() => parseManifest(JSON.stringify(base(encoded)))).toThrow(message);
+  });
+});

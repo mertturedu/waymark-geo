@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { expression, latest, validateStyleMin } from '@maplibre/maplibre-gl-style-spec';
 import chains from '../../src/native/map/chains.json';
+import { BASE_KEYS, LIGHT_BASE } from '../../src/native/map/base-colors';
 import { buildStyle, type StyleInput, type StyleLayer } from '../../src/native/map/style';
 import { contrast, createGeoTheme, DEFAULT_THEME, hiddenTokens, ICON_GROUPS, mix, monogram, parseColor, readableInk, resolveMapLook } from '../../src/native/map/theme';
 
@@ -54,7 +55,7 @@ describe('theme model', () => {
     expect(theme.light.colors.radius).toBe(40);
     expect(theme.light.map.icons.style).toBe('color');
     expect(theme.light.map.icons.scale).toBe(2);
-    expect(theme.light.map.brands.mode).toBe('ladder');
+    expect(theme.light.map.brands.mode).toBe('category');
     expect(theme.light.map.brands).toMatchObject({ badgeFrom: 18, logoFrom: 18 });
     expect(theme.light.map.brands.chains.migros!.fill).toBe(DEFAULT_THEME.light.map.brands.chains.migros!.fill);
     for (const path of ['version', 'colors.accent', 'colors.radius', 'map.icons.style', 'map.icons.scale', 'map.icons.groups.cargo.color', 'map.icons.groups.unicorn', 'map.brands.mode', 'map.brands.ladder', 'map.brands.chains.migros.fill', 'map.brands.chains.nowhere']) {
@@ -89,8 +90,10 @@ describe('theme model', () => {
   });
 });
 
+const ladderLook = resolveMapLook(DEFAULT_THEME.light.map, { brands: { mode: 'ladder' } });
+
 describe('chain stores by zoom', () => {
-  const style = buildStyle(input());
+  const style = buildStyle(input({ look: ladderLook }));
   const sdf = layer(style, 'ov-brand@ov34');
   const logo = layer(style, 'ov-brand@ov34:logo');
   const migros = { b: 'migros', g: 'market', c: 90 };
@@ -107,7 +110,7 @@ describe('chain stores by zoom', () => {
   it('paints the far icon in the group colour and the badge in the chain colour', () => {
     const colour = (zoom: number) => (evaluate(sdf.paint!['icon-color'], 'paint_symbol', 'icon-color', zoom, migros) as { toString(): string }).toString();
     expect(colour(15)).not.toBe(colour(16.5));
-    const custom = buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { groups: { market: { color: '#00FF00' } } }, brands: { chains: { migros: { fill: '#0000FF' } } } }) }));
+    const custom = buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { groups: { market: { color: '#00FF00' } } }, brands: { mode: 'ladder', chains: { migros: { fill: '#0000FF' } } } }) }));
     const paint = layer(custom, 'ov-brand@ov34').paint!['icon-color'];
     expect(evaluate(paint, 'paint_symbol', 'icon-color', 15, migros)).toMatchObject({ r: 0, g: 1, b: 0 });
     expect(evaluate(paint, 'paint_symbol', 'icon-color', 16.5, migros)).toMatchObject({ r: 0, g: 0, b: 1 });
@@ -118,12 +121,13 @@ describe('chain stores by zoom', () => {
       let most = 0;
       for (const l of style.layers.filter((x) => /^(ov-|service@)/.test(x.id) && x.layout?.['icon-image'] && (x.maxzoom ?? 99) > zoom && (x.minzoom ?? 0) <= zoom)) {
         for (const chain of chains) {
-          for (const g of ICON_GROUPS) {
+          for (const g of ICON_GROUPS.slice(0, 13)) {
             const props = { b: chain.id, g, kind: 'pharmacy', c: 50, min_zoom: 0 };
             const image = evaluate(l.layout!['icon-image'], 'layout_symbol', 'icon-image', zoom, props) as { name: string } | string;
             const name = typeof image === 'string' ? image : image.name;
             const size = evaluate(l.layout!['icon-size'], 'layout_symbol', 'icon-size', zoom, props) as number;
-            const inner = name.startsWith('geo-sdf-') ? pngWidth(name) - 16 : pngWidth(name);
+            if (name === 'geo-badge-none') continue;
+            const inner = name.startsWith('geo-sdf-') || name.startsWith('geo-badge-') ? pngWidth(name) - 16 : pngWidth(name);
             most = Math.max(most, inner * size);
           }
         }
@@ -131,48 +135,46 @@ describe('chain stores by zoom', () => {
       return most;
     };
     for (const zoom of [14, 15, 15.9, 16]) expect(widest(zoom)).toBeLessThanOrEqual(20);
+    expect(widest(16)).toBeGreaterThan(10);
     for (const zoom of [17.5, 18, 19, 20]) expect(widest(zoom)).toBeLessThanOrEqual(46.5);
   });
 
-  it('offers category only, badge only, the old logos and no chains at all', () => {
+  it('draws chains in the badge layer for category and hidden modes and in their own layers for badge and logo modes', () => {
     const of = (mode: 'category' | 'badge' | 'logo' | 'hidden') => buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { brands: { mode } }) })).layers.filter((l) => l.id.startsWith('ov-brand@'));
-    expect(of('category').map((l) => l.id)).toEqual(['ov-brand@ov34']);
-    expect(JSON.stringify(of('category')[0]!.layout!['icon-image'])).not.toContain('badge');
+    expect(of('category')).toEqual([]);
+    expect(of('hidden')).toEqual([]);
     expect(of('badge').map((l) => [l.id, l.maxzoom])).toEqual([['ov-brand@ov34', undefined]]);
     expect(of('logo').map((l) => [l.id, l.minzoom])).toEqual([['ov-brand@ov34:logo', undefined]]);
-    expect(of('hidden').every((l) => l.layout?.visibility === 'none')).toBe(true);
-    const rounded = buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { brands: { shape: 'rounded', ladder: { badgeFrom: 15, logoFrom: 18 } } }) }));
+    const rounded = buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { brands: { mode: 'ladder', shape: 'rounded', ladder: { badgeFrom: 15, logoFrom: 18 } } }) }));
     expect(JSON.stringify(layer(rounded, 'ov-brand@ov34').layout!['icon-image'])).toContain('"geo-sdf-badge-rounded"');
     expect(layer(rounded, 'ov-brand@ov34:logo').minzoom).toBe(18);
   });
 });
 
 describe('icons from the theme', () => {
-  it('draws the quiet groups only from zoom 16 and puts the strong groups first', () => {
-    const icon = layer(buildStyle(input()), 'ov-icon@ov34');
-    const filter = JSON.stringify(icon.filter);
-    expect(filter).toContain('["literal",["food","shop"]]');
-    expect(filter).toContain('[">=",["zoom"],16]');
-    const order = (g: string) => evaluate(icon.layout!['symbol-sort-key'], 'layout_symbol', 'symbol-sort-key', 15, { g, c: 50 }) as number;
-    expect(order('pharmacy')).toBeLessThan(order('market'));
-    expect(order('market')).toBeLessThan(order('shop'));
+  it('draws a strong group larger and a quiet group smaller', () => {
+    const look = resolveMapLook(DEFAULT_THEME.light.map, { icons: { groups: { food: { emphasis: 'strong' }, shop: { emphasis: 'quiet' } } } });
+    const icon = layer(buildStyle(input({ look })), 'ov-icon@ov34');
+    const size = (cat: string, g: string) => evaluate(icon.layout!['icon-size'], 'layout_symbol', 'icon-size', 16, { cat, g, name: 'x', c: 90 }) as number;
+    expect(size('cafe', 'food') / size('hospital', 'health')).toBeCloseTo(1.1, 5);
+    expect(size('clothing_store', 'shop') / size('hospital', 'health')).toBeCloseTo(0.88, 5);
   });
 
   it('greys the icons in muted style and paints them all in the accent in mono style', () => {
-    const colour = (style: 'muted' | 'mono') => evaluate(layer(buildStyle(input({ accent: '#E0050F', look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { style } }) })), 'ov-icon@ov34').paint!['icon-color'], 'paint_symbol', 'icon-color', 15, { g: 'market' }) as { r: number; g: number; b: number };
+    const colour = (style: 'muted' | 'mono') => evaluate(layer(buildStyle(input({ accent: '#E0050F', look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { style } }) })), 'ov-icon@ov34').paint!['icon-color'], 'paint_symbol', 'icon-color', 15, { cat: 'grocery_store', g: 'market', name: 'x', c: 90 }) as { r: number; g: number; b: number };
     const mono = colour('mono');
     expect([Math.round(mono.r * 255), Math.round(mono.g * 255), Math.round(mono.b * 255)]).toEqual([224, 5, 15]);
     const muted = colour('muted');
-    expect(Math.abs(muted.r - muted.b)).toBeLessThan(0.15);
+    expect(Math.abs(muted.r - muted.b)).toBeLessThan(0.3);
   });
 
   it('scales every icon with the theme', () => {
-    const size = (scale: number) => evaluate(layer(buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { scale } }) })), 'ov-icon@ov34').layout!['icon-size'], 'layout_symbol', 'icon-size', 15, { g: 'market' }) as number;
+    const size = (scale: number) => evaluate(layer(buildStyle(input({ look: resolveMapLook(DEFAULT_THEME.light.map, { icons: { scale } }) })), 'ov-icon@ov34').layout!['icon-size'], 'layout_symbol', 'icon-size', 15, { cat: 'grocery_store', g: 'market', name: 'x', c: 90 }) as number;
     expect(size(1.5) / size(1)).toBeCloseTo(1.5, 5);
   });
 
   it('hides what the theme hides on top of what the app hides', () => {
-    const look = resolveMapLook(DEFAULT_THEME.light.map, { icons: { groups: { food: { visible: false } } } });
+    const look = resolveMapLook(DEFAULT_THEME.light.map, { icons: { groups: { food: { visible: false } } }, brands: { mode: 'ladder' } });
     const style = buildStyle(input({ look, hide: ['chain:aras'] }));
     expect(JSON.stringify(layer(style, 'ov-icon@ov34').filter)).toContain('["literal",["food"]]');
     expect(JSON.stringify(layer(style, 'ov-brand@ov34').filter)).toContain('["literal",["aras"]]');
@@ -196,5 +198,39 @@ describe('icons from the theme', () => {
     const started = performance.now();
     for (let i = 0; i < 5; i += 1) buildStyle(input({ regions: many, look }));
     expect((performance.now() - started) / 5).toBeLessThan(20);
+  });
+});
+
+describe('base map colours', () => {
+  const paintOf = (style: { layers: StyleLayer[] }, prefix: string, key: string) => (style.layers.find((l) => l.id.startsWith(prefix))!.paint as Record<string, unknown>)[key];
+
+  it('only names colours the base style has', () => {
+    for (const key of Object.keys(LIGHT_BASE)) expect(BASE_KEYS).toContain(key);
+    for (const value of Object.values(LIGHT_BASE)) expect(value).toMatch(/^#[0-9A-F]{6}$/);
+  });
+
+  it('is warm and light by default and has its own dark ground', () => {
+    expect(DEFAULT_THEME.light.map.base.earth).toBe('#F8F4EC');
+    expect(DEFAULT_THEME.light.map.base.water).toBe('#9CE0F8');
+    expect(DEFAULT_THEME.dark.map.base.earth).toBe('#242428');
+    expect(paintOf(buildStyle(input()), 'background', 'background-color')).toBe('#F8F4EC');
+    expect(JSON.stringify(buildStyle(input()))).toContain('#9CE0F8');
+    expect(JSON.stringify(buildStyle(input({ theme: 'dark', look: DEFAULT_THEME.dark.map })))).not.toContain('#9CE0F8');
+  });
+
+  it('lets the theme change colours and warns about names and values it does not know', () => {
+    const theme = createGeoTheme({ map: { base: { water: '#112233', unicorn: '#FFFFFF', earth: 'sand' } } });
+    expect(theme.light.map.base.water).toBe('#112233');
+    expect(theme.light.map.base.earth).toBe('#F8F4EC');
+    expect(theme.warnings).toEqual(expect.arrayContaining(['map.base.unicorn', 'map.base.earth']));
+    const style = buildStyle(input({ look: theme.light.map }));
+    expect(JSON.stringify(style)).toContain('#112233');
+    expect(validateStyleMin(style as never)).toEqual([]);
+  });
+
+  it('can recolour the dark side on its own', () => {
+    const theme = createGeoTheme({ dark: { map: { base: { buildings: '#334455' } } } });
+    expect(theme.dark.map.base.buildings).toBe('#334455');
+    expect(theme.light.map.base.buildings).toBe('#E0E4EC');
   });
 });

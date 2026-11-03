@@ -1,7 +1,7 @@
 import chains from '../../../../src/native/map/chains.json';
 import type { DeviceTest } from '../../device-test/types';
 import type { LngLat, MapFeature } from '../map-tour/driver';
-import { KADIKOY, test, withTour, type Tour } from './map-tour';
+import { KADIKOY, settle, test, withTour, type Tour } from './map-tour';
 
 const CARGO = new Set((chains as { id: string; group: string }[]).filter((chain) => chain.group === 'cargo').map((chain) => chain.id));
 const SPOTS: { name: string; at: LngLat }[] = [
@@ -13,21 +13,9 @@ const SPOTS: { name: string; at: LngLat }[] = [
   { name: 'Kartal', at: [29.143, 40.9958] },
 ];
 const pause = (time: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, time));
-const BADGES = ['ov-brand@'];
+const BADGES = ['ov-icon@'];
 const PLACES = ['ov-icon@'];
 const prop = (feature: MapFeature, key: string): string => String(feature.properties?.[key] ?? '');
-
-async function settle(tour: Tour, prefixes: string[], min: number): Promise<MapFeature[]> {
-  await tour.until(prefixes, min, 15000);
-  let last = -1;
-  let features = await tour.query(prefixes);
-  for (let i = 0; i < 12 && features.length !== last; i++) {
-    last = features.length;
-    await pause(700);
-    features = await tour.query(prefixes);
-  }
-  return features;
-}
 
 export const sdkMapCargo = test('sdk.map-cargo', 'Kargo şubeleri: Yurtiçi, Aras gibi şube rozetleri 6 yoğun noktada çizilir ve konumları ekranda', (ctx) =>
   withTour(ctx, async (tour) => {

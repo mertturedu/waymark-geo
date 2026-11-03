@@ -157,4 +157,58 @@ describe('managed pack store', () => {
     await store.closeAll();
     await expect(first?.all('SELECT 1')).rejects.toThrow();
   });
+
+  it('lets go of a province on request, keeps it readable for the grace time, and opens it again when asked', async () => {
+    const { world } = await packWorld();
+    const { manager } = await setup(world);
+    await manager.download('34', { parts: ['address'] });
+    const clock = manualClock();
+    let opens = 0;
+    const opener = nodeOpener(world);
+    const store = createManagedPackStore({ manager, opener: async (path) => (opens += 1, opener(path)), clock, graceMs: 5_000 });
+    const first = await store.open('34');
+    expect(await store.open('34')).toBe(first);
+    expect(opens).toBe(1);
+    store.release?.('34');
+    expect(await first?.all('SELECT v FROM meta WHERE k = ?', ['format'])).toHaveLength(1);
+    const second = await store.open('34');
+    expect(second).not.toBe(first);
+    expect(opens).toBe(2);
+    expect(clock.sleeps).toEqual([5_000]);
+    clock.release();
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    await expect(first?.all('SELECT 1')).rejects.toThrow(/closed/);
+    expect(await second?.all('SELECT v FROM meta WHERE k = ?', ['format'])).toHaveLength(1);
+    await store.closeAll();
+  });
+
+  it('runs a short question on its own connection and closes it, or reuses the open one', async () => {
+    const { world } = await packWorld();
+    const { manager } = await setup(world);
+    await manager.download('34', { parts: ['address'] });
+    const opener = nodeOpener(world);
+    const made: { close: () => Promise<void> }[] = [];
+    let closed = 0;
+    const store = createManagedPackStore({
+      manager,
+      opener: async (path) => {
+        const db = await opener(path);
+        const wrapped = { all: db.all.bind(db), close: async () => (closed += 1, db.close()) };
+        made.push(wrapped);
+        return wrapped;
+      },
+      clock: world.env.clock,
+    });
+    expect(await store.peek?.('34', async (db) => (await db.all<{ v: string }>('SELECT v FROM meta WHERE k = ?', ['format']))[0]?.v)).toBeTruthy();
+    expect(made).toHaveLength(1);
+    expect(closed).toBe(1);
+    expect(await store.peek?.('99', async () => 1)).toBeNull();
+    await store.open('34');
+    expect(made).toHaveLength(2);
+    expect(await store.peek?.('34', async () => 'shared')).toBe('shared');
+    expect(made).toHaveLength(2);
+    expect(closed).toBe(1);
+    await store.closeAll();
+  });
 });
+

@@ -12,3 +12,4 @@ example/.expo
 *.pmtiles
 .DS_Store
 reports
+lib

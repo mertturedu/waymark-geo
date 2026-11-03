@@ -9,6 +9,8 @@ export interface PackStore {
   installed(): Promise<string[]>;
   open(region: string): Promise<SqlDb | null>;
   openPart?(region: string, kind: 'buildings' | 'directory'): Promise<SqlDb | null>;
+  release?(region: string): void;
+  peek?<T>(region: string, run: (db: SqlDb) => Promise<T>): Promise<T | null>;
 }
 
 export interface RouteStore {

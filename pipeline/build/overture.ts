@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import config from '../config/overture.json';
+import { annotateFile } from './places-annotate';
 import type { Runner } from './tiles';
 
 export type OvertureInput = {
@@ -35,13 +36,16 @@ export async function buildOverturePlaces(input: OvertureInput): Promise<Overtur
     kept[plate] = row?.kept ?? 0;
     if (!row || row.kept === 0 || row.minzoom === null) continue;
     const temporary = `${plate}.build.pmtiles`;
-    const command = `cd '${out}' && tippecanoe -o '${temporary}' -l places -Z${row.minzoom} -z16 --force --no-tile-size-limit --no-feature-limit --quiet '${plate}.geojsonl'`;
+    const annotated = `${plate}.annotated.geojsonl`;
+    await annotateFile(join(out, `${plate}.geojsonl`), join(out, annotated));
+    const command = `cd '${out}' && tippecanoe -o '${temporary}' -l places -Z${row.minzoom} -z16 --force --no-tile-size-limit --no-feature-limit --quiet '${annotated}'`;
     const built = join(out, temporary);
     let made = await input.run('/bin/sh', ['-c', command]);
     if (made.code !== 0) {
       rmSync(built, { force: true });
       made = await input.run('/bin/sh', ['-c', command]);
     }
+    rmSync(join(out, annotated), { force: true });
     if (made.code !== 0) {
       rmSync(built, { force: true });
       throw new Error(`${plate}: ${made.out.slice(-600)}`);

@@ -1,6 +1,7 @@
+import { BASE_KEYS, DARK_BASE, LIGHT_BASE } from './base-colors';
 import chains from './chains.json';
 
-export type IconGroup = 'health' | 'pharmacy' | 'safety' | 'money' | 'fuel' | 'worship' | 'lodging' | 'market' | 'public' | 'food' | 'shop' | 'cargo' | 'landmark';
+export type IconGroup = 'health' | 'pharmacy' | 'safety' | 'money' | 'fuel' | 'worship' | 'lodging' | 'market' | 'public' | 'food' | 'shop' | 'cargo' | 'landmark' | 'nature' | 'culture' | 'transit' | 'education';
 export type Emphasis = 'strong' | 'normal' | 'quiet';
 export type BrandMode = 'ladder' | 'badge' | 'category' | 'logo' | 'hidden';
 
@@ -8,6 +9,8 @@ export type GroupLook = { color?: string; emphasis?: Emphasis; visible?: boolean
 export type ChainLook = { fill?: string; ink?: string; text?: string; visible?: boolean };
 export type MapLook = {
   icons?: { style?: 'color' | 'muted' | 'mono'; scale?: number; groups?: Partial<Record<IconGroup, GroupLook>> };
+  base?: Record<string, string>;
+  buildings3d?: boolean;
   brands?: { mode?: BrandMode; ladder?: { badgeFrom?: number; logoFrom?: number }; shape?: 'circle' | 'rounded'; chains?: Record<string, ChainLook> };
 };
 export type ThemeColors = { accent?: string; bg?: string; fg?: string; mute?: string; line?: string; danger?: string; success?: string; radius?: number; font?: string };
@@ -18,31 +21,37 @@ export type ResolvedColors = Required<Omit<ThemeColors, 'font'>> & { font: strin
 export type ResolvedGroup = { color: string; emphasis: Emphasis; visible: boolean };
 export type ResolvedChain = { group: string; fill: string; ink: string; text: string; logo: string; visible: boolean };
 export type ResolvedMapLook = {
+  base: Record<string, string>;
+  buildings3d: boolean;
   icons: { style: 'color' | 'muted' | 'mono'; scale: number; groups: Record<IconGroup, ResolvedGroup> };
   brands: { mode: BrandMode; badgeFrom: number; logoFrom: number; shape: 'circle' | 'rounded'; chains: Record<string, ResolvedChain> };
 };
 export type ResolvedTheme = { colors: ResolvedColors; map: ResolvedMapLook };
 export type GeoTheme = { version: 1; light: ResolvedTheme; dark: ResolvedTheme; input: GeoThemeInput; warnings: string[] };
 
-export const ICON_GROUPS: IconGroup[] = ['health', 'pharmacy', 'safety', 'money', 'fuel', 'worship', 'lodging', 'market', 'public', 'food', 'shop', 'cargo', 'landmark'];
+export const ICON_GROUPS: IconGroup[] = ['health', 'pharmacy', 'safety', 'money', 'fuel', 'worship', 'lodging', 'market', 'public', 'food', 'shop', 'cargo', 'landmark', 'nature', 'culture', 'transit', 'education'];
 
 const GROUP_COLORS: Record<IconGroup, string> = {
-  health: '#D46A66',
-  pharmacy: '#4BA477',
-  safety: '#5B84D2',
-  money: '#3F9281',
-  fuel: '#DF9733',
-  worship: '#3C9E9F',
-  lodging: '#9579C1',
-  market: '#AC8257',
-  public: '#808C99',
-  food: '#E5A642',
-  shop: '#C07A9D',
-  cargo: '#E8590C',
-  landmark: '#4B3F8F',
+  health: '#EB4D6E',
+  pharmacy: '#EB4D6E',
+  safety: '#4A7CE0',
+  money: '#3E9E7E',
+  fuel: '#5E7CE2',
+  worship: '#6E72E0',
+  lodging: '#A66BD6',
+  market: '#F5B108',
+  public: '#8E8E93',
+  food: '#F28C28',
+  shop: '#F0A30A',
+  cargo: '#6C7A89',
+  landmark: '#B24FA3',
+  nature: '#34C759',
+  culture: '#D6459E',
+  transit: '#3C82E6',
+  education: '#C98A3B',
 };
 
-const GROUP_EMPHASIS: Partial<Record<IconGroup, Emphasis>> = { health: 'strong', pharmacy: 'strong', fuel: 'strong', safety: 'strong', food: 'quiet', shop: 'quiet' };
+const GROUP_EMPHASIS: Partial<Record<IconGroup, Emphasis>> = {};
 
 const COLORS: Record<'light' | 'dark', ResolvedColors> = {
   light: { accent: '#FF5B04', bg: '#FFFFFF', fg: '#16161A', mute: '#6B6B73', line: '#E3E3E8', danger: '#DD3333', success: '#2E9E5B', radius: 16, font: null },
@@ -136,7 +145,7 @@ function resolveColors(base: ResolvedColors, layers: (ThemeColors | undefined)[]
   return out;
 }
 
-function defaultLook(): ResolvedMapLook {
+function defaultLook(side: 'light' | 'dark'): ResolvedMapLook {
   const groups = Object.fromEntries(ICON_GROUPS.map((group) => [group, { color: GROUP_COLORS[group], emphasis: GROUP_EMPHASIS[group] ?? 'normal', visible: true }])) as Record<IconGroup, ResolvedGroup>;
   const chainLooks = Object.fromEntries(
     chains.map((chain) => {
@@ -144,13 +153,21 @@ function defaultLook(): ResolvedMapLook {
       return [chain.id, { group: chain.group, fill, ink: readableInk(fill, parseColor(chain.ink) ?? '#FFFFFF'), text: monogram(chain.text), logo: chain.text, visible: true }];
     }),
   );
-  return { icons: { style: 'color', scale: 1, groups }, brands: { mode: 'ladder', badgeFrom: LADDER.badgeFrom, logoFrom: LADDER.logoFrom, shape: 'circle', chains: chainLooks } };
+  return { base: side === 'light' ? LIGHT_BASE : DARK_BASE, buildings3d: true, icons: { style: 'color', scale: 1, groups }, brands: { mode: 'category', badgeFrom: LADDER.badgeFrom, logoFrom: LADDER.logoFrom, shape: 'circle', chains: chainLooks } };
 }
 
 export function resolveMapLook(base: ResolvedMapLook, look: MapLook | undefined, warnings: string[] = []): ResolvedMapLook {
   if (!isObject(look)) return base;
   const icons = { ...base.icons, groups: { ...base.icons.groups } };
   const brands = { ...base.brands, chains: { ...base.brands.chains } };
+  const colors = { ...base.base };
+  if (isObject(look.base)) {
+    for (const [key, value] of Object.entries(look.base)) {
+      const color = BASE_KEYS.includes(key) ? parseColor(value) : null;
+      if (color) colors[key] = color;
+      else warnings.push(`map.base.${key}`);
+    }
+  }
   if (isObject(look.icons)) {
     icons.style = pickOne(look.icons.style, ['color', 'muted', 'mono'] as const, icons.style, 'map.icons.style', warnings);
     icons.scale = pickNumber(look.icons.scale, icons.scale, SCALE_RANGE, 'map.icons.scale', warnings);
@@ -196,13 +213,14 @@ export function resolveMapLook(base: ResolvedMapLook, look: MapLook | undefined,
       }
     }
   }
-  return { icons, brands };
+  const buildings3d = typeof look.buildings3d === 'boolean' ? look.buildings3d : base.buildings3d;
+  return { base: colors, buildings3d, icons, brands };
 }
 
 function resolveSide(input: GeoThemeInput, side: 'light' | 'dark', warnings: string[]): ResolvedTheme {
   const own = isObject(input[side]) ? input[side] : undefined;
   const colors = resolveColors(COLORS[side], [input.colors, own?.colors], warnings);
-  const map = resolveMapLook(resolveMapLook(defaultLook(), input.map, warnings), own?.map, warnings);
+  const map = resolveMapLook(resolveMapLook(defaultLook(side), input.map, warnings), own?.map, warnings);
   return { colors, map };
 }
 
@@ -222,6 +240,11 @@ export function iconColor(look: ResolvedMapLook, group: IconGroup, theme: 'light
   if (look.icons.style === 'mono') return accent;
   if (look.icons.style === 'muted') return mix(color, MUTED_TARGET[theme], 0.7);
   return color;
+}
+
+export function inkColor(look: ResolvedMapLook, group: IconGroup, theme: 'light' | 'dark', accent: string): string {
+  const base = iconColor(look, group, theme, accent);
+  return theme === 'dark' ? mix(base, '#FFFFFF', 0.4) : mix(base, '#000000', 0.4);
 }
 
 export function hiddenTokens(look: ResolvedMapLook): string[] {

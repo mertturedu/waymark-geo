@@ -10,6 +10,7 @@ const fake = (overrides: Partial<Search> = {}): Search => ({
   resolve: async () => ({ status: 'resolved', best: place(), candidates: [place()] }),
   autocomplete: async () => [place()],
   reverse: async () => place(),
+  nearby: async () => [],
   invalidate: () => undefined,
   hoods: async () => [],
   coverage: async () => null,

@@ -28,11 +28,11 @@ const commonjsFiles = {
 };
 
 export default tseslint.config(
-  { ignores: ['node_modules', 'dist', 'coverage', '.stryker-tmp', 'example/**', 'pipeline/.venv/**', 'pipeline/bin/**'] },
+  { ignores: ['node_modules', 'dist', 'lib', 'coverage', '.stryker-tmp', 'example/**', 'pipeline/.venv/**', 'pipeline/bin/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   commonjsFiles,
-  { files: ['src/native/platform/icon-images.ts'], rules: { '@typescript-eslint/triple-slash-reference': ['error', { path: 'always' }] } },
+  { files: ['src/native/platform/icon-images.ts', 'src/native/platform/badge-images.ts', 'src/native/platform/legend-images.ts', 'src/native/platform/locate-images.ts', 'src/native/platform/shield-images.ts'], rules: { '@typescript-eslint/triple-slash-reference': ['error', { path: 'always' }] } },
   {
     files: ['src/core/**/*.ts'],
     rules: { 'no-restricted-imports': ['error', coreRestricted] },

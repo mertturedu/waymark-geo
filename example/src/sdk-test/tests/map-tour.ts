@@ -72,12 +72,24 @@ const lineLength = (feature: MapFeature): number => {
 };
 export const ms = (values: number[]): string => values.map((v) => Math.round(v)).join('/');
 
+export async function settle(tour: Tour, prefixes: string[], min: number): Promise<MapFeature[]> {
+  await tour.until(prefixes, min, 15000);
+  let last = -1;
+  let features = await tour.query(prefixes);
+  for (let i = 0; i < 12 && features.length !== last; i++) {
+    last = features.length;
+    await new Promise((resolve) => setTimeout(resolve, 700));
+    features = await tour.query(prefixes);
+  }
+  return features;
+}
+
 export const test = (id: string, title: string, run: DeviceTest['run']): DeviceTest => ({ id, title, kind: 'auto', run });
 
 export const sdkMapOpen = test('sdk.map-open', 'Harita turu: harita açılır, ilk kare çizilir, katmanlar kurulu', (ctx) =>
   withTour(ctx, async (tour, openMs) => {
     tour.say('Harita açıldı');
-    const groups = { yol: tour.layers('roads_').length, bina: tour.layers('buildings@').length, rozet: tour.layers('ov-brand@').length, bilinen: tour.layers('ov-landmark@').length, genel: tour.layers('ov-icon@').length };
+    const groups = { yol: tour.layers('roads_').length, bina: tour.layers('buildings@').length, rozet: tour.layers('ov-icon@').length, servis: tour.layers('service@').length };
     const missing = Object.entries(groups).filter(([, n]) => n === 0).map(([name]) => name);
     if (missing.length > 0) return { outcome: 'fail', note: `stilde katman yok: ${missing.join(', ')}` };
     const size = tour.size();
@@ -142,8 +154,9 @@ export const sdkMapBrands = test('sdk.map-brands', 'Harita turu: 5 ilçede zinci
     for (const spot of SPOTS) {
       tour.say(`${spot.name}: rozetler`);
       await tour.go({ center: spot.at, zoom: 16 }, 'jump');
-      const brands = await tour.query(['ov-brand@']);
-      const landmarks = await tour.query(['ov-landmark@']);
+      const placed = await settle(tour, ['ov-icon@'], 1);
+      const brands = placed.filter((feature) => feature.properties?.b != null);
+      const landmarks = placed.filter((feature) => feature.properties?.lm != null);
       brandTotal += brands.length;
       landmarkTotal += landmarks.length;
       lines.push(`${spot.name} ${brands.length}/${landmarks.length}`);

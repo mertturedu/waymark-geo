@@ -39,6 +39,13 @@ export type Candidate = NameHit & { shared: number };
 export type DistrictInfo = { id: number; name: string; key: string; center: LngLat };
 export type HoodInfo = { id: number; districtId: number; name: string; key: string; source: number; center: LngLat | null; names?: Record<string, string> };
 
+export type HoodRow = { names: Record<string, string> | undefined; name: string; center: LngLat };
+
+export async function readHoodRows(db: SqlDb): Promise<HoodRow[]> {
+  const rows = await db.all<{ name: string; cx: number | null; cy: number | null; extra: string }>('SELECT name, cx, cy, extra FROM neighbourhood WHERE cx IS NOT NULL AND cy IS NOT NULL ORDER BY id');
+  return rows.map((row) => ({ names: namesOf(row.extra) ?? undefined, name: row.name, center: [(row.cx as number) / 1e6, (row.cy as number) / 1e6] as LngLat }));
+}
+
 export type Region = {
   id: string;
   districts: DistrictInfo[];
@@ -54,6 +61,7 @@ export type Region = {
   neighbours(streetId: number, parity: 0 | 1 | null, districtId?: number | null): Promise<AddressRow[]>;
   partsOf(streetId: number): Promise<PartRow[]>;
   poisByIds(ids: number[]): Promise<PoiRow[]>;
+  poisInBox(kinds: readonly string[], box: [number, number, number, number], cap: number): Promise<PoiRow[]>;
   districtPolygons(): Promise<Map<number, Polygon[]>>;
   districtCoverage(): Promise<Map<number, { streets: number; addresses: number }>>;
   hoodPolygons(districtId: number): Promise<Map<number, Polygon[]>>;
@@ -121,7 +129,7 @@ export async function openRegion(db: SqlDb): Promise<Region> {
   const hoodPolys = new Map<number, Promise<Map<number, Polygon[]>>>();
   const kindCode = (kind: 'street' | 'poi'): number => (kind === 'street' ? 0 : 1);
 
-  return {
+  const region: Region = {
     id: meta.get('province') ?? '',
     districts,
     hoods,
@@ -240,6 +248,12 @@ export async function openRegion(db: SqlDb): Promise<Region> {
       }
       return out;
     },
+    async poisInBox(names, box, cap) {
+      const wanted = [...kinds].filter(([, name]) => names.includes(name)).map(([id]) => id);
+      if (wanted.length === 0) return [];
+      const rows = await db.all<{ id: number }>(`SELECT id FROM poi WHERE kind IN (${marks(wanted.length)}) AND lon BETWEEN ? AND ? AND lat BETWEEN ? AND ? LIMIT ?`, [...wanted, Math.floor(box[0] * 1e6), Math.ceil(box[2] * 1e6), Math.floor(box[1] * 1e6), Math.ceil(box[3] * 1e6), cap]);
+      return region.poisByIds(rows.map((row) => row.id));
+    },
     async poisByIds(ids) {
       if (ids.length === 0) return [];
       type Raw = { id: number; kind: number; name: string; district_id: number; hood_id: number | null; lon: number; lat: number; osm: number; cat: string | null; brand: string | null; street: string | null; number: string | null; postcode: number | null; conf: number | null };
@@ -252,4 +266,5 @@ export async function openRegion(db: SqlDb): Promise<Region> {
       }));
     },
   };
+  return region;
 }

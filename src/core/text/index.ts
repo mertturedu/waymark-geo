@@ -10,6 +10,7 @@ export { createAdmin, districtCount, findDistrict, findProvince, isDistrictName,
 export type { AdminData, AdminDistrict, AdminMatch, AdminNames, AdminProvince } from './types';
 export { parseAddress } from './parse';
 export { tokenize } from './tokenize';
+export { upperTr } from './upper';
 export type { Token } from './tokenize';
 export type { ParsedAddress, ParsedStreet } from './types';
 export { houseNumberKey, splitNumbers } from './number';

@@ -98,6 +98,29 @@ export function createManagedPackStore(config: { manager: PackManager; opener: (
     },
     open: (plate) => openKind(plate, 'address'),
     openPart: (plate, kind) => openKind(plate, kind),
+    async peek<T>(plate: string, run: (db: SqlDb) => Promise<T>): Promise<T | null> {
+      const path = manager.installedFile(plate, 'address');
+      if (!path) return null;
+      const existing = entries.get(keyOf(plate, 'address'));
+      if (existing && existing.path === path) {
+        const shared = await existing.db;
+        if (shared) return run(shared);
+      }
+      const own = await opener(path).catch(() => null);
+      if (!own) return null;
+      try {
+        return await run(own);
+      } finally {
+        await own.close().catch(() => undefined);
+      }
+    },
+    release(plate) {
+      for (const [key, entry] of [...entries]) {
+        if (entry.plate !== plate) continue;
+        entries.delete(key);
+        retire(entry);
+      }
+    },
     onChange(listener) {
       listeners.add(listener);
       return () => void listeners.delete(listener);

@@ -1,7 +1,8 @@
 export type FileKind = 'address' | 'tiles' | 'route' | 'buildings' | 'places' | 'directory' | 'base';
 export type Tier = 'full' | 'basic';
 export type FileBlocks = { size: number; sha256: string[] };
-export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks };
+export type EncodedFile = { codec: 'zstd'; path: string; size: number; sha256: string };
+export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks; encoded?: EncodedFile };
 export type Box = [number, number, number, number];
 export type ManifestRegion = {
   id: string;
@@ -78,7 +79,20 @@ function file(value: unknown, kinds: readonly string[], seen: Set<string>): Mani
   const size = count(row.size, 'boyut');
   const parsed: ManifestFile = { kind: kind as FileKind, path, size, sha256: text(row.sha256, 'sha256', SHA) };
   if (row.blocks !== undefined) parsed.blocks = blocks(row.blocks, size);
+  if (row.encoded !== undefined) parsed.encoded = encoded(row.encoded, path, seen);
   return parsed;
+}
+
+function encoded(value: unknown, plainPath: string, seen: Set<string>): EncodedFile {
+  const row = object(value, 'sıkıştırılmış dosya');
+  if (row.codec !== 'zstd') fail('sıkıştırma türü desteklenmiyor');
+  const path = text(row.path, 'sıkıştırılmış dosya yolu');
+  checkPath(path);
+  if (path === plainPath || seen.has(path)) fail(`yol iki kez: ${path}`);
+  seen.add(path);
+  const size = count(row.size, 'sıkıştırılmış boyut');
+  if (size === 0) fail('sıkıştırılmış boyut sıfır');
+  return { codec: 'zstd', path, size, sha256: text(row.sha256, 'sıkıştırılmış sha256', SHA) };
 }
 
 function blocks(value: unknown, fileSize: number): FileBlocks {

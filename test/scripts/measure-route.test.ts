@@ -159,7 +159,7 @@ describe('speed and memory', () => {
     const ctx = await routeFixture({ '34': city() });
     const got = await measureMemory(ctx);
     expect(got.pass).toBe(true);
-    expect(got.measured).toMatch(/^34 paketi yüklüyken artış \d+\.\d MB \(sınır 80\)$/);
+    expect(got.measured).toMatch(/^34 paketi yüklüyken artış -?\d+\.\d MB \(sınır 80\)$/);
   }, 120_000);
 });
 

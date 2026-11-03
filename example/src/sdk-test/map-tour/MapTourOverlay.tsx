@@ -1,14 +1,15 @@
 import { Camera, GeoJSONSource, Images, Layer, Map, type MapRef, type CameraRef } from '@maplibre/maplibre-react-native';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
-import { GeoInstanceProvider, type GeoNative, MAP_ICON_IMAGES, RoutePlanLayer, useMapStyle, usePlan } from '../../../../src/native';
+import * as Location from 'expo-location';
+import { GeoHoodLabels, GeoInstanceProvider, GeoUserLocation, type GeoNative, type ViewPoint, MAP_ICON_IMAGES, RoutePlanLayer, safeView, useLocateMe, useMapStyle, usePlan } from '../../../../src/native';
 import { destination } from '../sim/driving';
 import { attachHandle, subscribeTour, tourState, type Car, type Frame, type Look, type MapFeature, type View as MapView } from './driver';
 
-const PLAN_LAYERS = ['geo-plan-line', 'geo-plan-dot', 'geo-plan-number', 'geo-sim-car', 'geo-sim-heading'];
+const PLAN_LAYERS = ['hood-labels', 'geo-plan-line', 'geo-plan-dot', 'geo-plan-number', 'geo-sim-car', 'geo-sim-heading'];
 const START: MapView = { center: [29.0287, 40.9903], zoom: 12 };
 
-const pose = (view: MapView) => ({ center: view.center, zoom: view.zoom, ...(view.bearing === undefined ? {} : { bearing: ((view.bearing % 360) + 360) % 360 }), ...(view.pitch === undefined ? {} : { pitch: view.pitch }) });
+const pose = (view: MapView) => safeView({ center: view.center, zoom: view.zoom, ...(view.bearing === undefined ? {} : { bearing: view.bearing }), ...(view.pitch === undefined ? {} : { pitch: view.pitch }) });
 
 function frameStyle(frame: Frame, width: number, height: number) {
   if (frame === 'landscape') return { position: 'absolute' as const, width: height, height: width, left: (width - height) / 2, top: (height - width) / 2, transform: [{ rotate: '90deg' }] };
@@ -30,12 +31,21 @@ function carFeatures(car: Car) {
 
 function TourMap({ look, car }: { look: Look; car: Car }) {
   const cars = useMemo(() => carFeatures(car), [car]);
-  const style = useMapStyle({ theme: look.theme, language: look.lang, ...(look.hide && look.hide.length > 0 ? { hide: look.hide } : {}) });
+  const [viewPoint, setViewPoint] = useState<ViewPoint>({ center: START.center, zoom: START.zoom });
+  const style = useMapStyle({ theme: look.theme, language: look.lang, ...(look.font ? { font: look.font } : {}), ...(look.hide && look.hide.length > 0 ? { hide: look.hide } : {}), ...(look.window ? { view: viewPoint } : {}) });
   const plan = usePlan();
   const planRef = useRef(plan);
   planRef.current = plan;
+  const [granted, setGranted] = useState(false);
+  const zoom = useRef(12);
   const map = useRef<MapRef>(null);
   const camera = useRef<CameraRef>(null);
+  const locate = useLocateMe({ cameraRef: camera, getZoom: () => zoom.current, granted, onDenied: () => mark('locate-denied'), onUnavailable: () => mark('locate-unavailable') });
+  const locateRef = useRef(locate);
+  locateRef.current = locate;
+  useEffect(() => {
+    void Location.getForegroundPermissionsAsync().then((permission) => setGranted(permission.status === 'granted'));
+  }, []);
   const counters = useRef({ frames: 0 });
   const events = useRef<string[]>([]);
   const loadedKey = useRef('');
@@ -50,7 +60,7 @@ function TourMap({ look, car }: { look: Look; car: Car }) {
   const size = useRef({ width: 0, height: 0 });
   const styleRef = useRef(style);
   styleRef.current = style;
-  const styleKey = useMemo(() => `${look.theme}|${look.lang}${look.bare ? '|bare' : ''}|${(look.hide ?? []).join(',')}`, [look.theme, look.lang, look.bare, look.hide]);
+  const styleKey = useMemo(() => `${look.theme}|${look.lang}|${look.font ?? 'noto'}${look.bare ? '|bare' : ''}${look.window ? '|window' : ''}|${(look.hide ?? []).join(',')}`, [look.theme, look.lang, look.font, look.bare, look.window, look.hide]);
   const shown = useMemo(() => (look.bare ? { ...style, layers: style.layers.filter((layer) => layer.type !== 'symbol') } : style), [style, look.bare]);
 
   useEffect(() => {
@@ -78,6 +88,7 @@ function TourMap({ look, car }: { look: Look; car: Car }) {
         return [point[0], point[1]];
       },
       plan: () => planRef.current,
+      locate: { press: () => locateRef.current.press(), stop: () => locateRef.current.stop(), state: () => ({ mode: locateRef.current.mode, permission: locateRef.current.permission }) },
     });
     return () => attachHandle(null);
   }, [styleKey]);
@@ -100,13 +111,19 @@ function TourMap({ look, car }: { look: Look; car: Car }) {
         mark('loaded');
       }}
       onDidFailLoadingMap={() => mark('FAILED')}
+      onRegionDidChange={(event) => {
+        zoom.current = event.nativeEvent.zoom;
+        if (look.window) setViewPoint({ center: [event.nativeEvent.center[0], event.nativeEvent.center[1]], zoom: event.nativeEvent.zoom });
+      }}
       onDidFinishRenderingFrameFully={() => {
         loadedKey.current = styleKey;
         counters.current.frames += 1;
       }}
     >
       <Images images={MAP_ICON_IMAGES} />
-      <Camera ref={camera} initialViewState={START} />
+      <Camera ref={camera} initialViewState={START} {...locate.camera} />
+      <GeoUserLocation {...locate.puck} />
+      {look.bare ? null : <GeoHoodLabels theme={look.theme} language={look.lang} {...(look.font ? { font: look.font } : {})} />}
       <GeoJSONSource id="geo-sim-car-source" data={cars.dot as never}>
         <Layer id="geo-sim-car" type="circle" paint={{ 'circle-radius': 9, 'circle-color': '#e8590c', 'circle-stroke-width': 3, 'circle-stroke-color': '#ffffff' }} />
       </GeoJSONSource>

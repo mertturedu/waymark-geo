@@ -1,7 +1,11 @@
-import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildOverturePlaces, overtureRelease } from '../../pipeline/build/overture';
+import { annotateFile, annotateLine } from '../../pipeline/build/places-annotate';
+import { glyphOf } from '../../src/native/map/poi-glyphs';
+
+const glyphOfCafe = (): string | null => glyphOf('cafe', 'food');
 
 type Call = { cmd: string; args: string[] };
 
@@ -54,7 +58,7 @@ describe('buildOverturePlaces', () => {
     const script = tiles.args[1] as string;
     expect(script.startsWith(`cd '${join(work, 'overture')}' && tippecanoe `)).toBe(true);
     expect(script).toContain("-o '20.build.pmtiles'");
-    expect(script).toContain("'20.geojsonl'");
+    expect(script).toContain("'20.annotated.geojsonl'");
     expect(script).not.toContain(work.replace(/'/g, '') + '/20');
   });
 
@@ -96,5 +100,55 @@ describe('buildOverturePlaces', () => {
     };
     await expect(buildOverturePlaces({ release: 'r1', plates: ['20'], workDir: work, cacheDir: 'c', python: '/py', script: '/s/x.py', borders: 'b', run })).rejects.toBeDefined();
     expect(() => readFileSync(join(work, 'overture', '20.build.pmtiles'))).toThrow();
+  });
+});
+
+describe('place annotation', () => {
+  const line = (properties: object | undefined) => JSON.stringify({ type: 'Feature', geometry: { type: 'Point', coordinates: [29, 41] }, ...(properties ? { properties } : {}) });
+
+  it('adds the glyph, tier and group to every place and keeps what was there', () => {
+    const out = JSON.parse(annotateLine(line({ c: 90, cat: 'pharmacy', g: 'pharmacy', name: 'Merkez Eczanesi', b: 'x' }))) as { properties: Record<string, unknown>; geometry: unknown };
+    expect(out.properties).toEqual({ c: 90, g: 'pharmacy', name: 'Merkez Eczanesi', b: 'x', k: 'pharmacy', t: 2, grp: 'pharmacy' });
+    expect(out.geometry).toEqual({ type: 'Point', coordinates: [29, 41] });
+  });
+
+  it('takes the category out of the tile because the glyph already carries it', () => {
+    expect(JSON.parse(annotateLine(line({ cat: 'cafe', g: 'food', name: 'Moda' }))).properties).not.toHaveProperty('cat');
+  });
+
+  it('gives a place whose name ends in camii the mosque glyph even when the category is wrong', () => {
+    expect(JSON.parse(annotateLine(line({ cat: 'retirement_home', g: 'other', name: 'Hacı Şam Camii' }))).properties).toMatchObject({ k: 'mosque', t: 2, grp: 'worship' });
+  });
+
+  it('marks a place without a glyph and survives a feature with no properties', () => {
+    expect(JSON.parse(annotateLine(line({ cat: 'real_estate_agent', g: 'other' }))).properties).toEqual({ g: 'other', k: 'none', t: 0, grp: 'public' });
+    expect(JSON.parse(annotateLine('{}')).properties).toEqual({ k: 'none', t: 0, grp: 'public' });
+    expect(annotateLine('   ')).toBe('   ');
+  });
+
+  it('rewrites a whole file one place per line and skips blank lines', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'ann-'));
+    const input = join(dir, 'in.geojsonl');
+    writeFileSync(input, `${line({ cat: 'hospital', g: 'health' })}
+
+${line({ cat: 'cafe', g: 'food' })}
+`);
+    expect(await annotateFile(input, join(dir, 'out.geojsonl'))).toBe(2);
+    const rows = readFileSync(join(dir, 'out.geojsonl'), 'utf8').trim().split('\n').map((row) => JSON.parse(row).properties);
+    expect(rows.map((r: { k: string }) => r.k)).toEqual(['hospital', glyphOfCafe()]);
+  });
+
+  it('removes the half written file and passes the error on when a line is broken', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'ann-'));
+    const input = join(dir, 'in.geojsonl');
+    writeFileSync(input, `${line({ cat: 'hospital', g: 'health' })}\nnot json\n`);
+    await expect(annotateFile(input, join(dir, 'out.geojsonl'))).rejects.toThrow();
+    expect(existsSync(join(dir, 'out.geojsonl'))).toBe(false);
+  });
+
+  it('leaves no annotated copy behind after the tiles are built', async () => {
+    const { work, run } = rig({ '20': { all: 1, kept: 1, minzoom: 15 } });
+    await buildOverturePlaces({ release: 'r1', plates: ['20'], workDir: work, cacheDir: 'c', python: '/py', script: '/s/x.py', borders: 'b', run });
+    expect(existsSync(join(work, 'overture', '20.annotated.geojsonl'))).toBe(false);
   });
 });

@@ -12,6 +12,7 @@ export type RegionRow = {
   statusText: string;
   errorText: string | null;
   progressPercent: number | null;
+  updatedText: string | null;
   actions: RowAction[];
   busy: boolean;
   rtl: boolean;
@@ -50,14 +51,23 @@ function installedBytes(region: ManifestRegion, status: RegionStatus): number {
   return region.files.filter((file) => (status.installedParts as string[]).includes(file.kind)).reduce((sum, file) => sum + file.size, 0);
 }
 
-export function describeRegion(input: { region: ManifestRegion; status: RegionStatus; baseBytes: number; lang: string }): RegionRow {
+export function formatVersionDate(version: string | null | undefined, lang: string): string | null {
+  const match = /^(\d{4})(\d{2})(\d{2})(?:\.|$)/.exec(version ?? '');
+  if (!match) return null;
+  const [, year, month, day] = match;
+  if (Number(month) < 1 || Number(month) > 12 || Number(day) < 1 || Number(day) > 31) return null;
+  return messageLang(lang) === 'en' ? `${year}-${month}-${day}` : `${day}.${month}.${year}`;
+}
+
+export function describeRegion(input: { region: ManifestRegion; status: RegionStatus; baseBytes: number; lang: string; consentPending?: boolean }): RegionRow {
   const { region, status, lang } = input;
   const code = messageLang(lang);
   const progress = status.progress;
   const percent = progress && progress.total > 0 ? Math.min(100, Math.max(0, Math.floor((100 * progress.done) / progress.total))) : null;
   const actions = [...ACTIONS[status.state]];
   if (status.state === 'queued' && status.waitingWifi) actions.push('cellular');
-  const statusKey: MessageKey = status.waitingWifi ? 'status.waiting-wifi' : (`status.${status.state}` as MessageKey);
+  const statusKey: MessageKey = input.consentPending ? 'status.waiting-consent' : status.waitingWifi ? 'status.waiting-wifi' : (`status.${status.state}` as MessageKey);
+  const date = formatVersionDate(status.installedVersion, lang);
   return {
     id: region.id,
     name: region.names[code] ?? region.names.en ?? region.names.tr ?? region.id,
@@ -65,6 +75,7 @@ export function describeRegion(input: { region: ManifestRegion; status: RegionSt
     statusText: t(lang, statusKey),
     errorText: status.error ? t(lang, `error.${status.error.code}` as MessageKey) : null,
     progressPercent: percent,
+    updatedText: date ? t(lang, 'sheet.updated', { date }) : null,
     actions,
     busy: BUSY.has(status.state),
     rtl: isRtl(lang),

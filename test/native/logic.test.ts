@@ -3,7 +3,7 @@ import { REGION_STATES } from '../../src';
 import { nextAttribution } from '../../src/native/logic/attribution';
 import { createAutoRegion } from '../../src/native/logic/auto-region';
 import { createCoalescer } from '../../src/native/logic/coalesce';
-import { describeRegion, formatMegabytes, orderRegions, plannedBytes } from '../../src/native/logic/region-view';
+import { describeRegion, formatMegabytes, formatVersionDate, orderRegions, plannedBytes } from '../../src/native/logic/region-view';
 import type { RegionStatus } from '../../src/core/packs/manager';
 import type { ManifestRegion } from '../../src/core/region/manifest';
 
@@ -220,7 +220,7 @@ describe('createCoalescer', () => {
 });
 
 describe('createAutoRegion', () => {
-  const decision = (action: 'none' | 'suggest' | 'download', regions: string[] = [], neighbours: string[] = []) => ({ action, regions, neighbours });
+  const decision = (action: 'none' | 'suggest' | 'download' | 'consent', regions: string[] = [], neighbours: string[] = []) => ({ action, regions, neighbours });
 
   function rig(first: ReturnType<typeof decision>) {
     let current = first;
@@ -250,6 +250,26 @@ describe('createAutoRegion', () => {
     expect(await r.auto.update([28.9, 41])).toEqual({ decision: decision('download', ['34'], ['41']), started: ['34'] });
     expect(await r.auto.update([28.9, 41])).toEqual({ decision: decision('download', ['34'], ['41']), started: [] });
     expect(r.started).toEqual(['34']);
+  });
+
+  it('waits for the person on a consent decision and starts once it turns into a download', async () => {
+    const r = rig(decision('consent', ['34']));
+    expect(await r.auto.update([28.9, 41])).toEqual({ decision: decision('consent', ['34']), started: [] });
+    expect(r.started).toEqual([]);
+    r.set(decision('download', ['34']));
+    expect((await r.auto.update([28.9, 41])).started).toEqual(['34']);
+  });
+
+  it('accepts a suggestion that arrives asynchronously', async () => {
+    let started = 0;
+    const auto = createAutoRegion({
+      suggest: async () => decision('download', ['34']),
+      download: async () => void (started += 1),
+      now: () => 0,
+      retryMs: 60_000,
+    });
+    expect((await auto.update([28.9, 41])).started).toEqual(['34']);
+    expect(started).toBe(1);
   });
 
   it('only reports a suggestion without downloading anything', async () => {
@@ -310,5 +330,31 @@ describe('createAutoRegion', () => {
     await r.auto.update([28.9, 41]);
     r.auto.reset();
     expect((await r.auto.update([28.9, 41])).started).toEqual(['34']);
+  });
+});
+
+describe('storage rows: last update and waiting for approval', () => {
+  const base = { region, baseBytes: 0, lang: 'tr' };
+
+  it('writes the data date of an installed region in the language asked for', () => {
+    expect(describeRegion({ ...base, status: status({ state: 'installed', installedVersion: '20261028.20261030', installedParts: ['address'] }) }).updatedText).toBe('Güncelleme: 28.10.2026');
+    expect(describeRegion({ ...base, lang: 'en', status: status({ state: 'installed', installedVersion: '20261028.20261030' }) }).updatedText).toBe('Updated: 2026-10-28');
+    expect(describeRegion({ ...base, lang: 'de', status: status({ state: 'installed', installedVersion: '20261028' }) }).updatedText).toBe('Aktualisiert: 28.10.2026');
+  });
+
+  it('has no date for a region that is not installed or has an odd version', () => {
+    expect(describeRegion({ ...base, status: status() }).updatedText).toBeNull();
+    expect(formatVersionDate('abc', 'tr')).toBeNull();
+    expect(formatVersionDate('20261340.1', 'tr')).toBeNull();
+    expect(formatVersionDate('20260032', 'tr')).toBeNull();
+    expect(formatVersionDate(null, 'tr')).toBeNull();
+    expect(formatVersionDate(undefined, 'tr')).toBeNull();
+  });
+
+  it('says it is waiting for Wi-Fi, and for the mobile data approval when that is what holds it', () => {
+    expect(describeRegion({ ...base, status: status({ state: 'queued', waitingWifi: true }) }).statusText).toBe('Wi-Fi bekleniyor');
+    const consent = describeRegion({ ...base, consentPending: true, status: status() });
+    expect(consent.statusText).toBe('Mobil veri onayı bekleniyor');
+    expect(describeRegion({ ...base, lang: 'en', consentPending: true, status: status() }).statusText).toBe('Waiting for your mobile data approval');
   });
 });

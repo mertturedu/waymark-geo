@@ -28,6 +28,10 @@
   "exclude": [
     "src/native/platform",
     "src/native/react",
-    "src/native/index.ts"
+    "src/native/index.ts",
+    "test/react",
+    "test/helpers/render-hook.tsx",
+    "test/helpers/native-mocks.ts",
+    "test/native/location.test.ts"
   ]
 }

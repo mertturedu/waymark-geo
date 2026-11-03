@@ -1,12 +1,12 @@
 import type { Manifest, ManifestFile, ManifestRegion } from '../region/manifest';
 import { step, type RegionEvent, type RegionState } from './machine';
 import { downloadFile } from './download';
-import type { ClockPort, ConnectivityPort, FsPort, HashPort, NetPort } from './ports';
+import type { ClockPort, ConnectionKind, ConnectivityPort, DecodePort, FsPort, HashPort, NetPort } from './ports';
 import { PART_KINDS, emptyState, loadState, saveState, type InstalledFile, type PackState, type PartKind, type RegionRecord } from './state-file';
 import { isPackError, packError, type PackError, type PackErrorCode } from './types';
 import { diffManifest, inspectManifest, verifyManifest, type ManifestDiff } from './verify';
 
-export type PackEnv = { fs: FsPort; net: NetPort; hash: HashPort; clock: ClockPort; connectivity: ConnectivityPort };
+export type PackEnv = { fs: FsPort; net: NetPort; hash: HashPort; clock: ClockPort; connectivity: ConnectivityPort; decode?: DecodePort };
 export type PackConfig = { manifestUrl: string; publicKeys: string[]; sdkVersion: string; autoDownload?: 'ask' | 'wifi' | 'always' | 'never' };
 
 export type RegionStatus = {
@@ -24,7 +24,7 @@ export type CheckResult = { ok: true; updates: string[]; diff: ManifestDiff | nu
 
 export type CheckOptions = { minIntervalMs?: number };
 
-export type DownloadOptions = { parts?: PartKind[]; allowCellular?: boolean; onProgress?: (done: number, total: number) => void };
+export type DownloadOptions = { parts?: PartKind[]; allowCellular?: boolean; wifiOnly?: boolean; onProgress?: (done: number, total: number) => void };
 
 export type PackManager = {
   manifest(): Manifest | null;
@@ -32,6 +32,9 @@ export type PackManager = {
   status(id: string): RegionStatus;
   installedRegions(): string[];
   missingBaseBytes(): number;
+  downloadBytes(id: string, parts?: PartKind[]): number;
+  connection(): Promise<ConnectionKind>;
+  onConnection(listener: (kind: ConnectionKind) => void): () => void;
   checkUpdates(options?: CheckOptions): Promise<CheckResult>;
   download(id: string, options?: DownloadOptions): Promise<void>;
   pause(id: string): Promise<void>;
@@ -56,6 +59,7 @@ type Job = {
   id: string;
   parts: PartKind[];
   allowCellular: boolean;
+  wifiOnly: boolean;
   onProgress: DownloadOptions['onProgress'];
   controller: AbortController;
   intent: 'pause' | 'remove' | null;
@@ -227,7 +231,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
   };
 
   const waitForWifi = async (job: Job): Promise<void> => {
-    const blocked = async (): Promise<boolean> => config.autoDownload === 'wifi' && !job.allowCellular && (await connectivity.kind()) === 'cellular';
+    const blocked = async (): Promise<boolean> => (config.autoDownload === 'wifi' || job.wifiOnly) && !job.allowCellular && (await connectivity.kind()) === 'cellular';
     const entry = ensure(job.id);
     while (!job.controller.signal.aborted && (await blocked())) {
       entry.waitingWifi = true;
@@ -350,6 +354,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
           size: file.size,
           sha256: file.sha256,
           ...(file.blocks ? { blocks: file.blocks } : {}),
+          ...(file.encoded && env.decode ? { encoded: { url: urlOf(file.encoded.path), partPath: partPath(file.encoded.path), finalPath: finalPath(file.encoded.path), size: file.encoded.size, sha256: file.encoded.sha256 }, decode: env.decode } : {}),
           signal: job.controller.signal,
           onProgress: (done) => report(finished + done),
           ...(last ? { onVerify: () => void transition(job.id, 'verify') } : {}),
@@ -423,7 +428,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     const settled = new Promise<void>((res) => {
       settle = res;
     });
-    return { id, parts, allowCellular: options.allowCellular ?? false, onProgress: options.onProgress, controller: new AbortController(), intent: null, promise, resolve, reject, settled, settle, placed: [] };
+    return { id, parts, allowCellular: options.allowCellular ?? false, wifiOnly: options.wifiOnly ?? false, onProgress: options.onProgress, controller: new AbortController(), intent: null, promise, resolve, reject, settled, settle, placed: [] };
   };
 
   const enqueue = (job: Job): void => {
@@ -535,6 +540,18 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         installedParts: PART_KINDS.filter((kind) => record?.files[kind] !== undefined),
       };
     },
+    downloadBytes(id, parts) {
+      const region = regionOf(id);
+      if (!region) return 0;
+      const wanted = parts ?? DEFAULT_PARTS.filter((kind) => fileOfKind(region, kind));
+      const files = wanted.reduce((sum, kind) => {
+        const file = fileOfKind(region, kind);
+        return file && state.regions[id]?.files[kind]?.sha256 !== file.sha256 ? sum + (file.encoded && env.decode ? file.encoded.size : file.size) : sum;
+      }, 0);
+      return files + (wanted.includes('tiles') ? manager.missingBaseBytes() : 0);
+    },
+    connection: () => connectivity.kind(),
+    onConnection: (listener) => (connectivity.onChange ? connectivity.onChange(listener) : () => undefined),
     missingBaseBytes: () => (current?.manifest.base ?? []).filter((f) => !state.base?.files.some((b) => b.path === f.path && b.sha256 === f.sha256)).reduce((sum, f) => sum + f.size, 0),
     installedRegions: () => Object.keys(state.regions).filter((id) => state.regions[id]?.files.address !== undefined).sort(),
     checkUpdates: (options) => fetchManifest(options),

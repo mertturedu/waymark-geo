@@ -32,7 +32,28 @@ def read_features(path):
         return [json.loads(line) for line in f if line.strip() and "\"b\"" in line]
 
 
-def evidence(feature, index):
+ADDRESS_CELL = 0.0004
+
+
+def address_cells(path):
+    cells = {}
+    if not os.path.exists(path):
+        return cells
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            cells.setdefault((int(row["lon"] / ADDRESS_CELL), int(row["lat"] / ADDRESS_CELL)), []).append((row["lon"], row["lat"]))
+    return cells
+
+
+def near_address(cells, lon, lat):
+    cx, cy = int(lon / ADDRESS_CELL), int(lat / ADDRESS_CELL)
+    return any(distance((lon, lat), point) <= ON_BUILDING_METRES for dx in (-1, 0, 1) for dy in (-1, 0, 1) for point in cells.get((cx + dx, cy + dy), ()))
+
+
+def evidence(feature, index, addresses=None):
     props = feature["properties"]
     if props.get("s") == "osm":
         return "osm"
@@ -40,6 +61,8 @@ def evidence(feature, index):
     gap, _ = index.nearest(lon, lat)
     if gap <= ON_BUILDING_METRES:
         return "bina"
+    if addresses and near_address(addresses, lon, lat):
+        return "adres"
     return "yok"
 
 
@@ -77,7 +100,8 @@ def verify(work, pbf, plates, packs):
     tile_checked = 0
     for plate in plates:
         features = read_features(os.path.join(work, "overture", f"{plate}.geojsonl"))
-        counts = Counter(evidence(f, index) for f in features)
+        addresses = address_cells(os.path.join(work, "addresses", plate, "addresses.jsonl"))
+        counts = Counter(evidence(f, index, addresses) for f in features)
         moved = Counter(f["properties"].get("s", "") for f in features)
         rows.append((plate, len(features), counts, moved))
         totals.update(counts)
@@ -92,20 +116,21 @@ def verify(work, pbf, plates, packs):
 
 def render(rows, totals, worst_tile, tile_missing, tile_checked):
     total = sum(totals.values())
-    share = 100 * (totals["osm"] + totals["bina"]) / total if total else 0
+    share = 100 * (totals["osm"] + totals["bina"] + totals["adres"]) / total if total else 0
+    without_address = 100 * (totals["osm"] + totals["bina"]) / total if total else 0
     lines = [
         "# Zincir simgelerinin konum denetimi",
         "",
-        f"Her zincir noktası için bağımsız kanıt aranır: aynı zincirin OSM noktasına oturmuş (`osm`) ya da bir binanın {ON_BUILDING_METRES} m içinde (`bina`). Hiçbiri yoksa `yok` (şüpheli).",
+        f"Her zincir noktası için bağımsız kanıt aranır: aynı zincirin OSM noktasına oturmuş (`osm`), bir binanın {ON_BUILDING_METRES} m içinde (`bina`) ya da bir OSM adres noktasının {ON_BUILDING_METRES} m içinde (`adres`). Hiçbiri yoksa `yok` (şüpheli).",
         "",
-        "| İl | Nokta | OSM'e oturmuş | Binada | Kanıtsız | Binaya çekilen |",
-        "|---|---|---|---|---|---|",
+        "| İl | Nokta | OSM'e oturmuş | Binada | Kanıtsız | Binaya çekilen | Adreste |",
+        "|---|---|---|---|---|---|---|",
     ]
     for plate, count, counts, moved in rows:
-        lines.append(f"| {plate} | {count} | {counts['osm']} | {counts['bina']} | {counts['yok']} | {moved['bina']} |")
+        lines.append(f"| {plate} | {count} | {counts['osm']} | {counts['bina']} | {counts['yok']} | {moved['bina']} | {counts['adres']} |")
     lines += [
         "",
-        f"Toplam {total} nokta; kanıtlı pay %{share:.1f} (eşik en az %{EVIDENCE_MIN}).",
+        f"Toplam {total} nokta; kanıtlı pay %{share:.1f} (adres kanıtı olmadan %{without_address:.1f}; eşik en az %{EVIDENCE_MIN}).",
         f"Karo gidiş-dönüş: {tile_checked} örnekte en büyük sapma {worst_tile:.2f} m (eşik en çok {TILE_ERROR_MAX_M} m), karoda bulunamayan {tile_missing}.",
     ]
     passed = share >= EVIDENCE_MIN and worst_tile <= TILE_ERROR_MAX_M and tile_missing == 0

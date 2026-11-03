@@ -16,6 +16,8 @@ import { carriedEntries, isSettled, type Memory } from './answers';
 import { sdkGuideSteps, type SdkStepId } from './guide';
 import { MapTourOverlay } from './map-tour/MapTourOverlay';
 import { AUTO_TESTS, OFFLINE_AUTO_TESTS, RESTART_TESTS, sdkRegistry } from './registry';
+import { pickTests, reportEndpoint, type RunRequest } from './autorun';
+import { useRunPolling, useRunRequests } from './launch';
 
 const TIMEOUT_MS = 10 * 60 * 1000;
 const FOCUS = ['sdk.map-look', 'sdk.remove-frees', 'sdk.map-zoom-ladder', 'sdk.map-motion', 'sdk.rot-layout', 'sdk.sim-drive', 'sdk.sim-ring', 'sdk.sim-replan'];
@@ -90,18 +92,45 @@ export function SdkTestScreen() {
     });
   }, []);
 
-  const runList = async (tests: DeviceTest[]) => {
+  const runList = async (tests: DeviceTest[]): Promise<ReportEntry[]> => {
     stopped.current = false;
     setRan(tests.map((t) => t.id));
     setBatch({ total: tests.length, done: 0 });
+    const done: ReportEntry[] = [];
     for (const [index, test] of tests.entries()) {
       if (stopped.current) break;
       setRunning(test.id);
-      record(await runTest(test, ctx, TIMEOUT_MS));
+      const entry = await runTest(test, ctx, TIMEOUT_MS);
+      done.push(entry);
+      record(entry);
       setBatch({ total: tests.length, done: index + 1 });
     }
     setRunning(null);
+    return done;
   };
+
+  const [request, setRequest] = useState<RunRequest | null>(null);
+  useRunRequests(setRequest);
+  useRunPolling(server.ready ? server.url : null, running === null);
+
+  useEffect(() => {
+    if (!request || !server.ready || !server.url || running !== null) return;
+    const target = server.url;
+    const { tests, missing } = pickTests(request, sdkRegistry, AUTO_TESTS);
+    setRequest(null);
+    void (async () => {
+      const done = await runList(tests);
+      const report = buildReport([...done, ...missing], { device: deviceInfo(), sdk: sdkInfo(null), now: new Date() });
+      const text = formatReport(report);
+      saveReport(report.reportId, text);
+      try {
+        const response = await fetch(reportEndpoint(target), { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: text });
+        setStatus(response.ok ? `Rapor sunucuya gönderildi: ${report.reportId}` : `Rapor gönderilemedi (${response.status})`);
+      } catch (error) {
+        setStatus(`Rapor gönderilemedi: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    })();
+  }, [request, server.ready, server.url, running]);
 
   const answer = (test: DeviceTest, outcome: Outcome) => {
     const note = (notes[test.id] ?? '').trim();

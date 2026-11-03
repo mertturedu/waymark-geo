@@ -22,13 +22,26 @@ import { ICON_TESTS } from './tests/map-icons';
 import { sdkUpdateKeepsLearning } from './tests/update';
 import { ROUTE_TESTS } from './tests/route';
 import { OFFLINE_TESTS } from './tests/offline';
+import { PERF_TESTS } from './tests/perf';
+import { FIX1_TESTS } from './tests/fix1';
+import { AUTO_LOCATION_TESTS } from './tests/auto-location';
+import { LOCATE_TESTS } from './tests/locate-cycle';
+import { PROBE_TESTS } from './tests/bg-probe';
+import { REAL_LOCATION_TESTS } from './tests/real-location';
+import { PERF_REGION_TESTS } from './tests/perf-regions';
+import { PERF_PROPS_TESTS } from './tests/perf-props';
+import { SHOT_TESTS } from './tests/shot-tour';
+import { MAP_LABEL_TESTS } from './tests/map-labels';
+import { MAP_LOOK6_TESTS } from './tests/map-look6';
+import { F8_TESTS } from './tests/f8';
+import { ZSTD_TESTS } from './tests/zstd';
 import { routeBench as deviceRouteBench } from '../device-test/tests/route-bench';
 import { packsDirectory } from '../device-test/storage';
 
 export const CORE_TESTS: DeviceTest[] = [sdkRegionDetect, sdkSignature, sdkAutoRegion, sdkPackInstall, sdkRegionMissing, sdkSparseArea, sdkDirectory, sdkPackResume, sdkRemoveFrees, sdkLearnPersistA, sdkSearchSpeed, sdkMemory];
 const routeBench: DeviceTest = { ...deviceRouteBench, run: (ctx) => deviceRouteBench.run({ ...ctx, packsDir: packsDirectory().uri }) };
 
-export const EXTRA_TESTS: DeviceTest[] = [...REGION_TESTS, ...ADDRESS_TESTS, ...ROUTE_TESTS, ...PLAN_TESTS, ...MAP_TESTS, ...ROTATION_TESTS, ...SIM_TESTS, ...ICON_TESTS, sdkUpdateKeepsLearning, routeBench, ...LEARN_TESTS];
+export const EXTRA_TESTS: DeviceTest[] = [...REGION_TESTS, ...ADDRESS_TESTS, ...ROUTE_TESTS, ...PLAN_TESTS, ...MAP_TESTS, ...ROTATION_TESTS, ...SIM_TESTS, ...ICON_TESTS, sdkUpdateKeepsLearning, routeBench, ...LEARN_TESTS, ...PERF_TESTS, ...FIX1_TESTS, ...AUTO_LOCATION_TESTS, ...LOCATE_TESTS];
 export const AUTO_TESTS: DeviceTest[] = [
   ...CORE_TESTS.slice(0, CORE_TESTS.indexOf(sdkLearnPersistA)),
   ...EXTRA_TESTS,
@@ -37,4 +50,4 @@ export const AUTO_TESTS: DeviceTest[] = [
 export const OFFLINE_AUTO_TESTS: DeviceTest[] = OFFLINE_TESTS;
 export const RESTART_TESTS: DeviceTest[] = [sdkLearnPersistB];
 
-export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS];
+export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS, ...PROBE_TESTS, ...REAL_LOCATION_TESTS, ...PERF_REGION_TESTS, ...PERF_PROPS_TESTS, ...SHOT_TESTS, ...MAP_LABEL_TESTS, ...MAP_LOOK6_TESTS, ...F8_TESTS, ...ZSTD_TESTS];

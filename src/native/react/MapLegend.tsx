@@ -1,45 +1,50 @@
 import { Image, Modal, Pressable, ScrollView, StyleSheet, Text, View, useColorScheme } from 'react-native';
 import { t, type MessageKey } from '../../core/i18n/messages';
-import { MAP_ICON_IMAGES } from '../platform/icon-images';
+import { LEGEND_GLYPH } from '../map/poi-glyphs';
+import { iconColor, type IconGroup } from '../map/theme';
+import { LEGEND_IMAGES } from '../platform/legend-images';
 import { isRtl } from '../../core/i18n/messages';
+import { useGeoTheme } from './GeoProvider';
 
-const ROWS: { icon: string; label: MessageKey }[] = [
-  { icon: 'geo-health', label: 'legend.health' },
-  { icon: 'geo-pharmacy', label: 'legend.pharmacy' },
-  { icon: 'geo-safety', label: 'legend.safety' },
-  { icon: 'geo-money', label: 'legend.money' },
-  { icon: 'geo-fuel', label: 'legend.fuel' },
-  { icon: 'geo-worship', label: 'legend.worship' },
-  { icon: 'geo-lodging', label: 'legend.lodging' },
-  { icon: 'geo-market', label: 'legend.market' },
-  { icon: 'geo-food', label: 'legend.food' },
-  { icon: 'geo-shop', label: 'legend.shop' },
-  { icon: 'geo-public', label: 'legend.public' },
-  { icon: 'geo-cargo', label: 'legend.cargo' },
-  { icon: 'geo-landmark', label: 'legend.landmark' },
-  { icon: 'geo-brand-a101', label: 'legend.brands' },
+type Row = { group: IconGroup | 'brands'; label: MessageKey };
+
+const ROWS: Row[] = [
+  { group: 'health', label: 'legend.health' },
+  { group: 'pharmacy', label: 'legend.pharmacy' },
+  { group: 'safety', label: 'legend.safety' },
+  { group: 'money', label: 'legend.money' },
+  { group: 'fuel', label: 'legend.fuel' },
+  { group: 'worship', label: 'legend.worship' },
+  { group: 'lodging', label: 'legend.lodging' },
+  { group: 'education', label: 'legend.education' },
+  { group: 'market', label: 'legend.market' },
+  { group: 'food', label: 'legend.food' },
+  { group: 'shop', label: 'legend.shop' },
+  { group: 'culture', label: 'legend.culture' },
+  { group: 'nature', label: 'legend.nature' },
+  { group: 'transit', label: 'legend.transit' },
+  { group: 'public', label: 'legend.public' },
+  { group: 'cargo', label: 'legend.cargo' },
+  { group: 'landmark', label: 'legend.landmark' },
+  { group: 'brands', label: 'legend.brands' },
 ];
 
-const TOKEN: Record<string, string> = {
-  'geo-health': 'group:health',
-  'geo-pharmacy': 'group:pharmacy',
-  'geo-safety': 'group:safety',
-  'geo-money': 'group:money',
-  'geo-fuel': 'group:fuel',
-  'geo-worship': 'group:worship',
-  'geo-lodging': 'group:lodging',
-  'geo-market': 'group:market',
-  'geo-food': 'group:food',
-  'geo-shop': 'group:shop',
-  'geo-public': 'group:public',
-  'geo-cargo': 'group:cargo',
-  'geo-landmark': 'landmarks',
-  'geo-brand-a101': 'brands',
-};
+const tokenOf = (group: Row['group']): string => (group === 'brands' ? 'brands' : group === 'landmark' ? 'landmarks' : `group:${group}`);
+
+function Badge({ color, glyph }: { color: string; glyph: string }) {
+  return (
+    <View style={[styles.badge, { backgroundColor: color }]}>
+      <Image source={LEGEND_IMAGES[`legend-${glyph}`] as number} style={styles.glyph} tintColor="#FFFFFF" />
+    </View>
+  );
+}
 
 export function MapLegend({ visible, onClose, lang = 'tr', hidden, onToggle }: { visible: boolean; onClose: () => void; lang?: string; hidden?: string[]; onToggle?: (token: string) => void }) {
   const dark = useColorScheme() === 'dark';
   const rtl = isRtl(lang);
+  const theme = useGeoTheme();
+  const side = dark ? theme.dark : theme.light;
+  const colorOf = (group: Row['group']): string => iconColor(side.map, group === 'brands' ? 'market' : group, dark ? 'dark' : 'light', side.colors.accent);
   const palette = dark ? { bg: '#1b1b1d', fg: '#f2f2f2', line: '#333', accent: '#ff7a2f' } : { bg: '#ffffff', fg: '#16161a', line: '#e3e3e8', accent: '#ff5b04' };
   return (
     <Modal visible={visible} animationType="fade" transparent onRequestClose={onClose}>
@@ -54,11 +59,11 @@ export function MapLegend({ visible, onClose, lang = 'tr', hidden, onToggle }: {
           <ScrollView>
             {onToggle ? <Text style={{ color: palette.fg, opacity: 0.6, fontSize: 12, marginBottom: 4, textAlign: rtl ? 'right' : 'left' }}>{t(lang, 'legend.hint')}</Text> : null}
             {ROWS.map((row) => {
-              const token = TOKEN[row.icon];
-              const off = token !== undefined && (hidden ?? []).includes(token);
+              const token = tokenOf(row.group);
+              const off = (hidden ?? []).includes(token);
               return (
-                <Pressable key={row.icon} disabled={!onToggle || token === undefined} onPress={() => token && onToggle?.(token)} style={[styles.row, { borderColor: palette.line, flexDirection: rtl ? 'row-reverse' : 'row', opacity: off ? 0.4 : 1 }]}>
-                  <Image source={MAP_ICON_IMAGES[row.icon] as number} style={styles.icon} />
+                <Pressable key={row.group} disabled={!onToggle} onPress={() => onToggle?.(token)} style={[styles.row, { borderColor: palette.line, flexDirection: rtl ? 'row-reverse' : 'row', opacity: off ? 0.4 : 1 }]}>
+                  <Badge color={colorOf(row.group)} glyph={LEGEND_GLYPH[row.group]} />
                   <Text style={[styles.label, { color: palette.fg, textAlign: rtl ? 'right' : 'left', writingDirection: rtl ? 'rtl' : 'ltr' }]}>{t(lang, row.label)}</Text>
                   {onToggle ? <Text style={{ color: off ? palette.line : palette.accent, fontWeight: '700' }}>{off ? '○' : '●'}</Text> : null}
                 </Pressable>
@@ -77,6 +82,7 @@ const styles = StyleSheet.create({
   header: { justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   title: { fontSize: 18, fontWeight: '700' },
   row: { alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth },
-  icon: { width: 30, height: 30 },
+  badge: { width: 30, height: 30, borderRadius: 15, borderWidth: 1.5, borderColor: '#FFFFFF', alignItems: 'center', justifyContent: 'center' },
+  glyph: { width: 18, height: 18 },
   label: { flex: 1, fontSize: 14 },
 });

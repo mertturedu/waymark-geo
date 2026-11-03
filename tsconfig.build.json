@@ -1,0 +1,22 @@
+{
+  "extends": "./example/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "module": "ESNext",
+    "target": "ES2022",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["src/node", "**/*.test.ts"]
+}

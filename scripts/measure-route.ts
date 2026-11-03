@@ -1,7 +1,7 @@
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { homedir, tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { buildBaseGraph, graphOptionsFor, parseRoadRows, type BaseGraph, type PackSettings, type RoadRows } from '../pipeline/build/route-graph';
 import { buildRoutePack } from '../pipeline/build/route-pack';
@@ -23,7 +23,28 @@ import { percentile } from './measure-quality';
 
 export type RouteContext = { packsDir: string; workDir: string; plates: string[] };
 
-export const defaultContext = (plates: string[]): RouteContext => ({ packsDir: join(repoRoot, 'dist', 'packs'), workDir: join(repoRoot, 'dist', 'work', '261020'), plates });
+export const FALLBACK_WORK = '261020';
+
+export function workDateOf(manifestText: string | null): string {
+  if (!manifestText) return FALLBACK_WORK;
+  try {
+    const file = (JSON.parse(manifestText) as { osm?: { file?: unknown } }).osm?.file;
+    const date = typeof file === 'string' ? /^turkey-(\d{6})\.osm\.pbf$/.exec(file)?.[1] : undefined;
+    return date ?? FALLBACK_WORK;
+  } catch {
+    return FALLBACK_WORK;
+  }
+}
+
+const publishedWorkDate = (packsDir: string): string => {
+  const manifest = join(packsDir, 'manifest-v1.json');
+  return workDateOf(existsSync(manifest) ? readFileSync(manifest, 'utf8') : null);
+};
+
+export const defaultContext = (plates: string[]): RouteContext => {
+  const packsDir = join(repoRoot, 'dist', 'packs');
+  return { packsDir, workDir: join(repoRoot, 'dist', 'work', publishedWorkDate(packsDir)), plates };
+};
 
 export const REFERENCE_PLATES = ['79', '69', '75'];
 const REFERENCE_SOURCES = 40;
@@ -209,7 +230,7 @@ export type ReferenceRow = { plate: string; pairs: number; unreachable: number; 
 function ensureClips(ctx: RouteContext, plates: string[]): void {
   const missing = plates.filter((plate) => !existsSync(join(ctx.workDir, 'clips', `${plate}.osm.pbf`)));
   if (missing.length === 0) return;
-  execFileSync(join(repoRoot, 'pipeline', '.venv', 'bin', 'python'), [join(repoRoot, 'pipeline', 'extract', 'extract_roads.py'), join(repoRoot, 'pipeline', 'data', 'turkey-261020.osm.pbf'), join(ctx.workDir, 'admin-full.jsonl'), join(ctx.workDir, 'roads'), '--provinces', missing.join(','), '--keep-clips', join(ctx.workDir, 'clips')], { stdio: 'pipe' });
+  execFileSync(join(repoRoot, 'pipeline', '.venv', 'bin', 'python'), [join(repoRoot, 'pipeline', 'extract', 'extract_roads.py'), join(repoRoot, 'pipeline', 'data', `turkey-${basename(ctx.workDir)}.osm.pbf`), join(ctx.workDir, 'admin-full.jsonl'), join(ctx.workDir, 'roads'), '--provinces', missing.join(','), '--keep-clips', join(ctx.workDir, 'clips')], { stdio: 'pipe' });
 }
 
 export function compareReference(ctx: RouteContext, plate: string, options: ReferenceOptions = {}): { row: ReferenceRow; outside: string[] } {

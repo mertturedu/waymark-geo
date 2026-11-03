@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process';
-import { existsSync, mkdirSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assetList } from '../../scripts/make-test-data';
@@ -115,7 +115,18 @@ function listFiles(root: string, dir = root): string[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => (entry.isDirectory() ? listFiles(root, join(dir, entry.name)) : [relative(root, join(dir, entry.name)).split('\\').join('/')]));
 }
 
-export async function buildBasePack(input: { build: string; outDir: string; run?: Runner; download?: (url: string, target: string) => Promise<void> }): Promise<string[]> {
+export const INTER_DIR = fileURLToPath(new URL('../data/fonts-inter', import.meta.url));
+
+function addInter(source: string, outDir: string): void {
+  if (!existsSync(source)) return;
+  for (const face of readdirSync(source)) {
+    const target = join(outDir, 'fonts-compact', face);
+    mkdirSync(target, { recursive: true });
+    for (const file of readdirSync(join(source, face))) if (!existsSync(join(target, file))) copyFileSync(join(source, face, file), join(target, file));
+  }
+}
+
+export async function buildBasePack(input: { build: string; outDir: string; run?: Runner; download?: (url: string, target: string) => Promise<void>; interDir?: string }): Promise<string[]> {
   const run = input.run ?? defaultRunner;
   const download = input.download ?? fetchTo;
   mkdirSync(input.outDir, { recursive: true });
@@ -137,6 +148,7 @@ export async function buildBasePack(input: { build: string; outDir: string; run?
     const target = join(input.outDir, asset.path);
     if (!existsSync(target)) await download(asset.url, target);
   }
+  if (input.interDir) addInter(input.interDir, input.outDir);
   return listFiles(input.outDir).filter((path) => !path.endsWith('.tmp')).sort();
 }
 

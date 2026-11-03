@@ -1,5 +1,6 @@
 import type { LngLat } from '../geo/cells';
 import { distanceM, ringAround } from '../geo/distance';
+import type { ClockPort } from '../packs/ports';
 import type { PackStore, SqlDb } from '../ports';
 import type { Borders } from '../region/borders';
 import { findDistrict, findProvince, provinceName } from '../text/admin';
@@ -13,16 +14,21 @@ import { formatLabel } from './label';
 import { pickName } from './localize';
 import { nameScore } from './names';
 import { coverageLevel, shortHoodName, type Coverage, type HoodLabel } from './coverage';
-import { openRegion, type Region } from './pack';
-import { placesInRegion } from './places';
+import { openRegion, readHoodRows, type HoodRow, type Region } from './pack';
+import { boxAround, clampLimit, clampRadius, isNearbyGroup, NEARBY_GROUPS, NEARBY_READ_CAP, type NearbyGroup } from './nearby';
+import { placesInRegion, poiScored } from './places';
 import { firstContaining, reversePoint } from './reverse';
 import { resolveInRegion, type RegionContext, type Scored } from './resolve';
 import type { PointLayer, Place, ResolveResult, SearchOptions, StructuredQuery } from './types';
+
+export type NearbyOptions = { point: LngLat; group: NearbyGroup; limit?: number; radiusM?: number; language?: Lang };
+export type NearbyHit = { place: Place; distanceM: number };
 
 export type Search = {
   resolve(input: string | StructuredQuery, options?: SearchOptions): Promise<ResolveResult>;
   autocomplete(text: string, options?: SearchOptions): Promise<Place[]>;
   reverse(point: LngLat, options?: { language?: Lang }): Promise<Place | null>;
+  nearby(options: NearbyOptions): Promise<NearbyHit[]>;
   invalidate(plate?: string): void;
   hoods(plate?: string, language?: Lang): Promise<HoodLabel[]>;
   coverage(point: LngLat): Promise<Coverage | null>;
@@ -86,9 +92,41 @@ function rank(items: Scored[], near?: LngLat): Scored[] {
   return sorted.filter((s) => (seen.has(s.place.id) ? false : (seen.add(s.place.id), true)));
 }
 
-export function createSearch(config: { store: PackStore; borders: Borders; layers?: PointLayer[] }): Search {
+export const MAX_OPEN_REGIONS = 4;
+export const SEARCH_IDLE_MS = 120_000;
+
+export function createSearch(config: { store: PackStore; borders: Borders; layers?: PointLayer[]; clock?: ClockPort; maxOpen?: number; idleMs?: number }): Search {
   const layers = config.layers ?? [];
   const opened = new Map<string, Promise<Opened | null>>();
+  const used = new Map<string, number>();
+  const order = new Map<string, number>();
+  let tick = 0;
+  const hoodRows = new Map<string, HoodRow[]>();
+  const maxOpen = Math.max(1, config.maxOpen ?? MAX_OPEN_REGIONS);
+  const idleMs = config.idleMs ?? SEARCH_IDLE_MS;
+
+  const evict = (plate: string): void => {
+    opened.delete(plate);
+    used.delete(plate);
+    order.delete(plate);
+    config.store.release?.(plate);
+  };
+
+  const sweep = (keep: string): void => {
+    const clock = config.clock;
+    if (!clock) return;
+    const now = clock.now();
+    for (const plate of [...opened.keys()]) if (plate !== keep && now - (used.get(plate) ?? now) >= idleMs) evict(plate);
+  };
+
+  const trim = (keep: string): void => {
+    while (opened.size > maxOpen) {
+      let oldest: string | null = null;
+      for (const plate of opened.keys()) if (plate !== keep && (oldest === null || (order.get(plate) ?? 0) < (order.get(oldest) ?? 0))) oldest = plate;
+      if (oldest === null) return;
+      evict(oldest);
+    }
+  };
 
   const load = async (plate: string): Promise<Opened | null> => {
     const db = await config.store.open(plate);
@@ -129,6 +167,12 @@ export function createSearch(config: { store: PackStore; borders: Borders; layer
       value = null;
     }
     if (value === null && opened.get(plate) === entry) opened.delete(plate);
+    else if (value !== null) {
+      order.set(plate, ++tick);
+      sweep(plate);
+      if (config.clock) used.set(plate, config.clock.now());
+      trim(plate);
+    }
     return value;
   };
 
@@ -205,16 +249,34 @@ export function createSearch(config: { store: PackStore; borders: Borders; layer
   return {
     resolve,
     invalidate(plate) {
-      if (plate === undefined) opened.clear();
-      else opened.delete(plate);
+      if (plate === undefined) {
+        opened.clear();
+        used.clear();
+        order.clear();
+        hoodRows.clear();
+      } else {
+        opened.delete(plate);
+        used.delete(plate);
+        order.delete(plate);
+        hoodRows.delete(plate);
+      }
     },
     async hoods(plate, language = 'tr') {
       const installed = await config.store.installed();
       const labels: HoodLabel[] = [];
       for (const id of plate === undefined ? installed : installed.filter((p) => p === plate)) {
-        const entry = await open(id);
-        if (!entry) continue;
-        for (const hood of entry.context.region.hoods) if (hood.center) labels.push({ region: id, name: shortHoodName(pickName(hood.names, language, hood.name)), lng: hood.center[0], lat: hood.center[1] });
+        let rows = hoodRows.get(id);
+        if (!rows) {
+          const peeked = config.store.peek && !opened.has(id) ? await config.store.peek(id, readHoodRows) : null;
+          if (peeked) rows = peeked;
+          else {
+            const entry = await open(id);
+            if (!entry) continue;
+            rows = entry.context.region.hoods.filter((hood) => hood.center).map((hood) => ({ names: hood.names, name: hood.name, center: hood.center as [number, number] }));
+          }
+          hoodRows.set(id, rows);
+        }
+        for (const hood of rows) labels.push({ region: id, name: shortHoodName(pickName(hood.names, language, hood.name)), lng: hood.center[0], lat: hood.center[1] });
       }
       return labels.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : a.lng - b.lng));
     },
@@ -249,6 +311,30 @@ export function createSearch(config: { store: PackStore; borders: Borders; layer
         scored.push(...(entry.extra && own.length < limit ? mergeDirectory(plate, own, await autocompleteInRegion({ ...entry.extra, language, hints: options.hints }, parsed)) : own));
       }
       return rank(scored, options.near).slice(0, limit).map((s) => s.place);
+    },
+    async nearby(given) {
+      const point = given?.point;
+      if (!isPoint(point) || !isNearbyGroup(given.group)) return [];
+      const radius = clampRadius(given.radiusM);
+      const limit = clampLimit(given.limit);
+      const box = boxAround(point, radius);
+      const wanted = new Set<string>();
+      for (const corner of [point, [box[0], box[1]], [box[2], box[1]], [box[0], box[3]], [box[2], box[3]]] as LngLat[]) {
+        const plate = config.borders.provinceAt(corner[0], corner[1]);
+        if (plate) wanted.add(plate);
+      }
+      const installed = new Set(await config.store.installed());
+      const hits: NearbyHit[] = [];
+      for (const plate of [...wanted].sort()) {
+        const entry = installed.has(plate) ? await open(plate) : null;
+        if (!entry) continue;
+        const ctx = { ...entry.context, language: given.language ?? 'tr' };
+        for (const poi of await entry.context.region.poisInBox(NEARBY_GROUPS[given.group], box, NEARBY_READ_CAP)) {
+          const gap = distanceM(point, [poi.lng, poi.lat]);
+          if (gap <= radius) hits.push({ place: poiScored(ctx, poi, 1).place, distanceM: Math.round(gap) });
+        }
+      }
+      return hits.sort((a, b) => a.distanceM - b.distanceM || (a.place.id < b.place.id ? -1 : 1)).slice(0, limit);
     },
     async reverse(point, given = {}) {
       if (!isPoint(point)) return null;

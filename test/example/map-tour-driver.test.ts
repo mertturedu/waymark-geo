@@ -226,4 +226,44 @@ describe('map tour driver', () => {
     expect((await handle.view()).zoom).toBe(15);
     tour.close();
   });
+
+  it('waits for the next fully drawn frame after a step', async () => {
+    const tour = await openTour(geo);
+    const handle = fakeHandle();
+    attachHandle(handle);
+    handle.counters.frames = 1;
+    await tour.ready();
+    const before = tour.frames();
+    await tour.step({ center: [29.2, 41.2], zoom: 16 });
+    expect(await tour.rendered(before, 2000)).toBeGreaterThanOrEqual(0);
+    expect(tour.frames()).toBeGreaterThan(before);
+    await expect(tour.rendered(tour.frames(), 200)).rejects.toThrow(/tam kare/);
+    tour.close();
+    expect(tour.frames()).toBe(0);
+  });
+
+  it('counts style loads since the last mount', async () => {
+    const tour = await openTour(geo);
+    const handle = fakeHandle();
+    handle.events = () => ['mount:a', 'style@1', 'loaded@2', 'mount:b', 'style@3', 'style@4', 'loaded@5'];
+    attachHandle(handle);
+    expect(tour.styleLoads()).toBe(2);
+    handle.events = () => ['style@1'];
+    expect(tour.styleLoads()).toBe(1);
+    tour.close();
+    expect(tour.styleLoads()).toBe(0);
+  });
+
+  it('jumps through the SDK helper and reports where the camera landed', async () => {
+    const tour = await openTour(geo);
+    const handle = fakeHandle();
+    attachHandle(handle);
+    handle.counters.frames = 1;
+    await tour.ready();
+    const landed = await tour.jumpSafe({ center: [26.9, 38.4], zoom: 16, pitch: 20, bearing: -90 });
+    expect(handle.jumps.map((view) => view.pitch)).toEqual([0, 20]);
+    expect(landed).toEqual({ center: [26.9, 38.4], zoom: 16, pitch: 20, bearing: 270 });
+    tour.close();
+  });
 });
+

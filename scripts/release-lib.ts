@@ -1,7 +1,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import type { Sources } from './fetch-sources';
+import { revisionSuffix, type Sources } from './fetch-sources';
 
 export const MAX_SOURCE_AGE_DAYS = 7;
 export const MAX_SOURCE_GAP_DAYS = 3;
@@ -23,7 +23,7 @@ export type Comparison = {
 
 const DAY = 86_400_000;
 
-export const tagOf = (sources: Pick<Sources, 'osmTimestamp' | 'tilesBuild'>): string => `${sources.osmTimestamp.slice(0, 10).replace(/-/g, '')}.${sources.tilesBuild}`;
+export const tagOf = (sources: Pick<Sources, 'osmTimestamp' | 'tilesBuild' | 'revision'>): string => `${sources.osmTimestamp.slice(0, 10).replace(/-/g, '')}.${sources.tilesBuild}${revisionSuffix(sources)}`;
 
 export function freshnessProblems(sources: Sources, now: Date): string[] {
   const problems: string[] = [];

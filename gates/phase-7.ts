@@ -34,7 +34,8 @@ const tests = (files: string[], name?: string) => async ({ run }: GateContext) =
 const deviceEntries = (ids: string[], label: string): Gate['measure'] => async ({ reportDir }) => {
   const reports = readReports(reportDir).filter((r) => r.device.os.toLowerCase().startsWith('ios') && r.sdk.build === 'release');
   if (reports.length === 0) return { status: 'open', measured: `${label}: Release cihaz raporu yok` };
-  const report = reports[reports.length - 1];
+  const withIds = reports.filter((r) => ids.every((id) => r.entries.some((e) => e.id === id))).sort((a, b) => (a.reportId < b.reportId ? -1 : 1));
+  const report = withIds.length > 0 ? withIds[withIds.length - 1] : reports[reports.length - 1];
   const missing = ids.filter((id) => report?.entries.find((e) => e.id === id)?.outcome !== 'pass');
   return missing.length === 0 ? { status: 'pass', measured: `${label}: ${ids.join(', ')} geçti` } : { status: 'fail', measured: `${label}: geçmeyen ${missing.join(', ')}` };
 };
@@ -83,8 +84,8 @@ export const phase7Gates: Gate[] = [
     const file = join(reportDir, 'zincir-konum-denetimi.md');
     if (!existsSync(file)) return { status: 'open', measured: 'rapor yok (pipeline/verify/chain_positions.py)' };
     const text = readFileSync(file, 'utf8');
-    const rows = [...text.matchAll(/^\| (34|06) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \|/gm)];
-    const shares = rows.map((m) => ((Number(m[3]) + Number(m[4])) / Number(m[2])) * 100);
+    const rows = [...text.matchAll(/^\| (34|06) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \|(?: (\d+) \|)?/gm)];
+    const shares = rows.map((m) => ((Number(m[3]) + Number(m[4]) + Number(m[7] ?? 0)) / Number(m[2])) * 100);
     const tile = /en büyük sapma ([\d.]+) m/.exec(text)?.[1];
     const total = /kanıtlı pay %([\d.]+)/.exec(text)?.[1];
     const ok = shares.length === 2 && shares.every((v) => v >= 95) && tile !== undefined && Number(tile) <= 1;

@@ -249,6 +249,76 @@ describe('Wi-Fi only', () => {
   });
 });
 
+describe('Wi-Fi only for one download', () => {
+  it('waits on mobile data for a single download even when the setting is always, and goes on with Wi-Fi', async () => {
+    const { world, manager } = await setup(undefined, { autoDownload: 'always' });
+    await manager.checkUpdates();
+    world.env.connectivity.set('cellular');
+    const running = manager.download('06', { wifiOnly: true });
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    expect(manager.status('06')).toMatchObject({ state: 'queued', waitingWifi: true });
+    expect(requested(world).some((p) => p.startsWith('06/'))).toBe(false);
+    world.env.connectivity.set('wifi');
+    await running;
+    expect(manager.status('06')).toMatchObject({ state: 'installed', waitingWifi: false });
+  });
+
+  it('lets a later allowCellular download win over the wait', async () => {
+    const { world, manager } = await setup(undefined, { autoDownload: 'always' });
+    await manager.checkUpdates();
+    world.env.connectivity.set('cellular');
+    await manager.download('06', { wifiOnly: true, allowCellular: true });
+    expect(manager.status('06').state).toBe('installed');
+  });
+
+  it('downloads on Wi-Fi at once', async () => {
+    const { world, manager } = await setup(undefined, { autoDownload: 'always' });
+    await manager.checkUpdates();
+    world.env.connectivity.set('wifi');
+    await manager.download('06', { wifiOnly: true });
+    expect(manager.status('06').state).toBe('installed');
+  });
+});
+
+describe('download size and connection', () => {
+  it('adds the missing base pack to the first province and nothing to the next', async () => {
+    const { world, manager } = await setup();
+    await manager.checkUpdates();
+    const own = world.regions.find((r) => r.id === '06')!;
+    const parts = own.parts.address!.length + own.parts.tiles!.length;
+    const base = Object.values(world.base).reduce((sum, bytes) => sum + bytes.length, 0);
+    expect(manager.downloadBytes('06')).toBe(parts + base);
+    expect(manager.downloadBytes('06', ['address'])).toBe(own.parts.address!.length);
+    await manager.download('06');
+    expect(manager.downloadBytes('06')).toBe(0);
+    const next = world.regions.find((r) => r.id === '35')!;
+    expect(manager.downloadBytes('35')).toBe(next.parts.address!.length + next.parts.tiles!.length);
+    expect(manager.downloadBytes('99')).toBe(0);
+  });
+
+  it('only counts parts that changed on an update', async () => {
+    const { world, manager } = await setup();
+    await manager.download('35');
+    world.setPart('35', 'address', blob(21_000, 42));
+    world.publish();
+    await manager.checkUpdates();
+    expect(manager.downloadBytes('35', ['address', 'tiles'])).toBe(21_000);
+  });
+
+  it('tells the connection and passes its changes on', async () => {
+    const { world, manager } = await setup();
+    world.env.connectivity.set('cellular');
+    expect(await manager.connection()).toBe('cellular');
+    const seen: string[] = [];
+    const off = manager.onConnection((kind) => seen.push(kind));
+    world.env.connectivity.set('wifi');
+    world.env.connectivity.set('none');
+    off();
+    world.env.connectivity.set('cellular');
+    expect(seen).toEqual(['wifi', 'none']);
+  });
+});
+
 describe('dismissed suggestions', () => {
   it('remembers a dismissed region across restarts', async () => {
     const world = makeWorld();

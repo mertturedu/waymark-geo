@@ -20,6 +20,10 @@ describe('freshness', () => {
 
   it('builds the release tag from both dates', () => {
     expect(tagOf(sources())).toBe('20261029.20261030');
+    expect(tagOf({ ...sources(), revision: 2 })).toBe('20261029.20261030.2');
+    expect(tagOf({ ...sources(), revision: 1 })).toBe('20261029.20261030');
+    expect(tagOf({ ...sources(), revision: 0 })).toBe('20261029.20261030');
+    expect(tagOf({ ...sources(), revision: 2.5 })).toBe('20261029.20261030');
   });
 });
 
@@ -53,5 +57,17 @@ describe('release comparison', () => {
     expect(text).toContain('| 34 | -100 |');
     expect(text).toContain('Gerileme kapısı (K8.2): GEÇMEDİ');
     expect(text).toContain('- 34 addresses: 1000 → 900');
+  });
+});
+
+describe('revision in the sources file', () => {
+  it('is written only when it is a real revision and comes back the same', async () => {
+    const { renderSources, revisionSuffix } = await import('../../scripts/fetch-sources');
+    const base = { osmFile: 'turkey-261028.osm.pbf', osmMd5: 'x', osmTimestamp: '2026-10-28T21:21:02Z', tilesBuild: '20261030', tilesOsmTime: '2026-10-30T04:00:00Z' };
+    expect(renderSources(base)).not.toContain('revision');
+    expect(renderSources({ ...base, revision: 1 })).not.toContain('revision');
+    expect(JSON.parse(renderSources({ ...base, revision: 3 })).revision).toBe(3);
+    expect(revisionSuffix({ revision: 3 })).toBe('.3');
+    expect(revisionSuffix({})).toBe('');
   });
 });

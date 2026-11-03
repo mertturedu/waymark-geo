@@ -2,12 +2,13 @@ import { Camera, Images, Map, Marker, type CameraRef, type PressEvent, type View
 import { distanceM } from '../../../src/core/geo/distance';
 import type { Coverage, Lang, Place } from '../../../src/core';
 import { t } from '../../../src/core';
-import { MAP_ICON_IMAGES, MapLegend, RegionDownloadSheet, useAutoRegion, useDailyUpdateCheck, useGeo, useMapStyle, useRegions } from '../../../src/native';
+import { CompassButton, DEFAULT_PITCH, GeoHoodLabels, GeoUserLocation, LocateButton, ScaleBar, MAP_ICON_IMAGES, MapLegend, RegionDownloadSheet, useDailyUpdateCheck, useGeo, useLocateMe, useMapStyle, useRegions, type MapView, type ViewPoint } from '../../../src/native';
 import * as Location from 'expo-location';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { NativeSyntheticEvent } from 'react-native';
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Showing } from './SearchScreen';
+import { useAutoRegionState } from './AutoRegion';
 import { savedPoints, type SavedPoint } from './saved';
 import { Chip, Row, usePalette } from './ui';
 
@@ -23,16 +24,31 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   useDailyUpdateCheck();
   const palette = usePalette();
   const [hidden, setHidden] = useState<string[]>([]);
-  const style = useMapStyle({ theme, language: lang, hide: hidden });
+  const [mapView, setMapView] = useState<ViewPoint>({ center: ISTANBUL, zoom: 12 });
+  const style = useMapStyle({ theme, language: lang, hide: hidden, view: mapView });
   const { regions } = useRegions();
   const camera = useRef<CameraRef>(null);
-  const view = useRef<{ center: [number, number]; zoom: number }>({ center: ISTANBUL, zoom: 12 });
+  const view = useRef<MapView>({ center: ISTANBUL, zoom: 12, pitch: DEFAULT_PITCH });
+  const [tilt, setTilt] = useState(true);
+  const [bearing, setBearing] = useState(0);
+  const [shown, setShown] = useState<{ zoom: number; latitude: number }>({ zoom: 12, latitude: ISTANBUL[1] });
   const [sheet, setSheet] = useState(false);
   const [legend, setLegend] = useState(false);
   const [picked, setPicked] = useState<Picked | null>(null);
   const [message, setMessage] = useState('');
-  const [location, setLocation] = useState<[number, number] | null>(null);
-  const { decision, accept, dismiss } = useAutoRegion(location);
+  const [granted, setGranted] = useState(false);
+  const locate = useLocateMe({ cameraRef: camera, getZoom: () => view.current.zoom, granted, onDenied: () => Alert.alert(t(lang, 'locate.denied'), undefined, [{ text: t(lang, 'sheet.close'), style: 'cancel' }, { text: t(lang, 'locate.settings'), onPress: () => locateRef.current?.openSettings() }]), onUnavailable: () => setMessage('Konum şu an alınamıyor') });
+
+  const locateRef = useRef(locate);
+  locateRef.current = locate;
+  const { decision, accept, dismiss, markGranted } = useAutoRegionState();
+  useEffect(() => {
+    if (locate.permission === 'granted') markGranted();
+  }, [locate.permission, markGranted]);
+
+  useEffect(() => {
+    void Location.getForegroundPermissionsAsync().then((permission) => setGranted(permission.status === 'granted'));
+  }, []);
   const [saved, setSaved] = useState<SavedPoint[]>([]);
 
   useEffect(() => {
@@ -41,7 +57,7 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
 
   useEffect(() => {
     if (!visible || !showing) return undefined;
-    view.current = { center: showing.point, zoom: 17 };
+    view.current = { ...view.current, center: showing.point, zoom: 17 };
     const timer = setTimeout(() => camera.current?.flyTo({ center: showing.point, zoom: 17, duration: 500 }), 350);
     return () => clearTimeout(timer);
   }, [visible, showing]);
@@ -49,7 +65,7 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   useEffect(() => {
     setPicked(null);
     setMessage(pending ? `Doğru noktayı haritada seç: ${pending.place.label}${pending.street ? ` (${pending.street}${pending.houseNumber ? ` No:${pending.houseNumber}` : ''})` : ''}` : '');
-    if (pending) view.current = { center: pending.place.coordinate, zoom: 17 };
+    if (pending) view.current = { ...view.current, center: pending.place.coordinate, zoom: 17 };
   }, [pending]);
 
   useEffect(() => {
@@ -59,8 +75,15 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   }, [visible, pending]);
 
   const moved = (event: NativeSyntheticEvent<ViewStateChangeEvent>) => {
-    const { center, zoom } = event.nativeEvent;
-    view.current = { center: [center[0], center[1]], zoom };
+    const { center, zoom, bearing, pitch } = event.nativeEvent;
+    view.current = { center: [center[0], center[1]], zoom, bearing, pitch };
+    setTilt(pitch > 1);
+    setBearing(bearing ?? 0);
+    setShown({ zoom, latitude: center[1] });
+    setMapView((previous) => {
+      const next: ViewPoint = { center: [Math.round(center[0] * 100) / 100, Math.round(center[1] * 100) / 100], zoom: Math.round(zoom * 2) / 2 };
+      return previous.center[0] === next.center[0] && previous.center[1] === next.center[1] && previous.zoom === next.zoom ? previous : next;
+    });
   };
 
   const styleKey = useMemo(() => `${theme}|${lang}|${Object.keys(style.sources).join(',')}`, [theme, lang, style]);
@@ -90,7 +113,6 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
     if (permission.status !== 'granted') return setMessage('Konum izni verilmedi');
     const position = await Location.getCurrentPositionAsync({});
     const point: [number, number] = [position.coords.longitude, position.coords.latitude];
-    setLocation(point);
     camera.current?.flyTo({ center: point, zoom: 13, duration: 600 });
     const here = geo.regions.detect(point);
     const area = await geo.search.coverage(point);
@@ -98,14 +120,16 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   };
 
   const nameOf = (id: string) => regions.find((r) => r.id === id)?.names[lang] ?? regions.find((r) => r.id === id)?.names.tr ?? id;
-  const first = decision.regions[0] ?? decision.neighbours[0];
-  const suggestion = decision.action !== 'none' && first ? (decision.regions[0] ? t(lang, 'suggest.region', { name: nameOf(first) }) : t(lang, 'suggest.neighbour', { name: nameOf(first) })) : null;
+  const first = decision.action === 'suggest' ? (decision.regions[0] ?? decision.neighbours[0]) : decision.neighbours[0];
+  const suggestion = first ? (decision.action === 'suggest' && decision.regions[0] ? t(lang, 'suggest.region', { name: nameOf(first) }) : t(lang, 'suggest.neighbour', { name: nameOf(first) })) : null;
 
   return (
     <View style={styles.page}>
       <Map key={styleKey} style={styles.map} mapStyle={style as never} attribution={false} logo={false} onPress={press} onRegionDidChange={moved}>
         <Images images={MAP_ICON_IMAGES} />
-        <Camera ref={camera} initialViewState={view.current} />
+        <Camera ref={camera} initialViewState={view.current} {...locate.camera} />
+        <GeoUserLocation {...locate.puck} />
+        <GeoHoodLabels theme={theme} language={lang} />
         {pending && !picked ? (
           <Marker lngLat={pending.place.coordinate}>
             <View style={styles.old} />
@@ -127,10 +151,16 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
           </Marker>
         ) : null}
       </Map>
+      <CompassButton style={styles.compass} bearing={bearing} lang={lang} onPress={() => camera.current?.easeTo({ center: view.current.center, bearing: 0, pitch: view.current.pitch ?? DEFAULT_PITCH, duration: 400 })} />
+      <View style={styles.scale} pointerEvents="none">
+        <ScaleBar zoom={shown.zoom} latitude={shown.latitude} lang={lang} />
+      </View>
+      <LocateButton style={styles.locate} mode={locate.mode} permission={locate.permission} busy={locate.busy} onPress={() => void locate.press()} lang={lang} />
       <View style={styles.top}>
         <Row>
           <Chip label={t(lang, 'sheet.title')} onPress={() => setSheet(true)} />
           <Chip label={theme === 'light' ? 'Koyu tema' : 'Açık tema'} onPress={() => onTheme(theme === 'light' ? 'dark' : 'light')} />
+          <Chip label={tilt ? `Eğim ${Math.round(view.current.pitch ?? DEFAULT_PITCH)}°` : 'Eğim 0°'} active={tilt} onPress={() => camera.current?.easeTo({ center: view.current.center, pitch: tilt ? 0 : DEFAULT_PITCH, duration: 400 })} />
           <Chip label="Konumum" onPress={() => void askLocation()} />
           <Chip label={t(lang, 'legend.button')} onPress={() => setLegend(true)} />
         </Row>
@@ -201,6 +231,9 @@ const styles = StyleSheet.create({
   page: { flex: 1 },
   map: { flex: 1 },
   top: { position: 'absolute', top: Platform.OS === 'ios' ? 56 : 28, left: 8, right: 8, gap: 6 },
+  locate: { position: 'absolute', right: 12, top: Platform.OS === 'ios' ? 176 : 148 },
+  compass: { position: 'absolute', right: 12, top: Platform.OS === 'ios' ? 228 : 200 },
+  scale: { position: 'absolute', left: 12, bottom: 110 },
   panel: { position: 'absolute', left: 8, right: 8, bottom: 40, borderRadius: 12, padding: 12, gap: 6 },
   action: { backgroundColor: '#ff5b04', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 8 },
   actionText: { color: '#fff', fontWeight: '600' },

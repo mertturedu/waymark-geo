@@ -13,7 +13,7 @@ import { PACK_OPTIONS, graphOptionsFor, parseRoadRows } from './route-graph';
 import { buildRoutePack } from './route-pack';
 import { buildOverturePlaces, overtureRelease } from './overture';
 import { assemblePacks, defaultKeyDir, ensureDevKey, type RegionInput } from './manifest';
-import { PRIORITY_PLATES, buildBasePack, buildProvinceTiles, defaultRunner, type Runner } from './tiles';
+import { INTER_DIR, PRIORITY_PLATES, buildBasePack, buildProvinceTiles, defaultRunner, type Runner } from './tiles';
 
 export type Step = { name: string; key: string; always?: boolean; run: () => Promise<void> };
 export type StepRecord = { name: string; ms: number; skipped: boolean };
@@ -126,7 +126,7 @@ export function buildSteps(input: StepInput): Step[] {
   const streetsKey = digest({ textKey, code: fingerprint(repoRoot, extract(['extract_street_parts.py'])) });
   const placesKey = digest({ textKey, code: fingerprint(repoRoot, [...extract(['extract_places.py']), 'pipeline/config/poi-kinds.json']) });
   const binalarKey = digest({ boundaryKey, priority, code: fingerprint(repoRoot, extract(['extract_buildings.py'])) });
-  const businessKey = digest({ boundaryKey, plates, release: overtureRelease(), code: fingerprint(repoRoot, ['pipeline/extract/overture_places.py', 'pipeline/extract/chains.py', 'pipeline/extract/osm_chains.py', 'pipeline/extract/building_index.py', 'src/native/map/chains.json', 'pipeline/build/overture.ts', 'pipeline/config/overture.json']), pbf: input.pbf });
+  const businessKey = digest({ boundaryKey, plates, release: overtureRelease(), code: fingerprint(repoRoot, ['pipeline/extract/overture_places.py', 'pipeline/extract/chains.py', 'pipeline/extract/osm_chains.py', 'pipeline/extract/place_names.py', 'pipeline/extract/osm_names.py', 'pipeline/extract/building_index.py', 'src/native/map/abbreviate.ts', 'src/native/map/chains.json', 'pipeline/build/overture.ts', 'pipeline/build/places-annotate.ts', 'src/native/map/poi-glyphs.ts', 'pipeline/config/overture.json']), pbf: input.pbf });
   const directoryKey = digest({ businessKey, code: fingerprint(repoRoot, ['pipeline/build/directory.ts', 'pipeline/build/directory-read.ts', 'pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'src/core/geo/distance.ts']) });
   const roadsKey = digest({ osm, plates, boundaryKey, code: fingerprint(repoRoot, extract(['extract_roads.py', 'road_rules.py'])) });
   const routeKey = digest({ roadsKey, code: fingerprint(repoRoot, ['pipeline/build/route-graph.ts', 'pipeline/build/route-turns.ts', 'pipeline/build/route-ch.ts', 'pipeline/build/route-scc.ts', 'pipeline/build/route-pack.ts', 'src/core/route', 'src/core/geo/distance.ts', 'src/core/region/data/borders.bin']) });
@@ -228,7 +228,7 @@ export function buildSteps(input: StepInput): Step[] {
       key: digest({ build: sources.tilesBuild, plates, boundaryKey, code: fingerprint(repoRoot, ['pipeline/build/tiles.ts']) }),
       async run() {
         const budgets = Object.fromEntries((JSON.parse(readFileSync(join(repoRoot, 'fixtures', 'section3-door-counts.json'), 'utf8')) as { plate: string; tileMB: number }[]).map((r) => [r.plate, r.tileMB]));
-        await buildBasePack({ build: sources.tilesBuild, outDir: join(workDir, `base-${sources.tilesBuild}`), run: input.run });
+        await buildBasePack({ build: sources.tilesBuild, outDir: join(workDir, `base-${sources.tilesBuild}`), run: input.run, ...(process.env.GEO_FONT === 'inter' ? { interDir: INTER_DIR } : {}) });
         await buildProvinceTiles({ regionsDir: join(workDir, 'regions'), outDir: join(workDir, `tiles-${sources.tilesBuild}`), build: sources.tilesBuild, plates, budgets, run: input.run, log: input.log });
       },
     },

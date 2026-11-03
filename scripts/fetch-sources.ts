@@ -5,7 +5,9 @@ import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { resolveBuildDate } from './make-test-data';
 
-export type Sources = { osmFile: string; osmMd5: string; osmTimestamp: string; tilesBuild: string; tilesOsmTime: string };
+export type Sources = { osmFile: string; osmMd5: string; osmTimestamp: string; tilesBuild: string; tilesOsmTime: string; revision?: number };
+
+export const revisionSuffix = (sources: Pick<Sources, 'revision'>): string => (sources.revision !== undefined && Number.isInteger(sources.revision) && sources.revision > 1 ? `.${sources.revision}` : '');
 
 const GEOFABRIK = 'https://download.geofabrik.de/europe';
 const DATED = /^turkey-(\d{2})(\d{2})(\d{2})\.osm\.pbf$/;
@@ -35,7 +37,7 @@ export function gapDays(a: string, b: string): number {
 }
 
 export function renderSources(s: Sources): string {
-  const ordered: Sources = { osmFile: s.osmFile, osmMd5: s.osmMd5, osmTimestamp: s.osmTimestamp, tilesBuild: s.tilesBuild, tilesOsmTime: s.tilesOsmTime };
+  const ordered: Sources = { osmFile: s.osmFile, osmMd5: s.osmMd5, osmTimestamp: s.osmTimestamp, tilesBuild: s.tilesBuild, tilesOsmTime: s.tilesOsmTime, ...(revisionSuffix(s) !== '' ? { revision: s.revision as number } : {}) };
   return JSON.stringify(ordered, null, 2) + '\n';
 }
 

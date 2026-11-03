@@ -152,7 +152,7 @@ describe('base pack', () => {
     const out = mkdtempSync(join(tmpdir(), 'base-'));
     const fetched: string[] = [];
     const files = await buildBasePack({
-      build: '20261022', outDir: out, run,
+      build: '20261022', outDir: out, run, interDir: join(out, 'none'),
       download: async (url, target) => { fetched.push(url); mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, 'x'); },
     });
     expect(files[0]).toBe('fonts-compact/NotoSansItalic/0-255.pbf');
@@ -161,6 +161,34 @@ describe('base pack', () => {
     expect(fetched).toHaveLength(baseAssets().length);
     const extract = calls.find((c) => c.args[0] === 'extract' && !c.args.includes('--dry-run'));
     expect(extract?.args).toEqual(expect.arrayContaining(['--bbox=25.5,35.7,45,42.3', '--maxzoom=8']));
+  });
+});
+
+describe('buildBasePack with Inter', () => {
+  it('copies the Inter glyph ranges next to the Noto ones and keeps the list sorted', async () => {
+    const { run } = fakeRunner();
+    const out = mkdtempSync(join(tmpdir(), 'base-'));
+    const inter = mkdtempSync(join(tmpdir(), 'inter-'));
+    mkdirSync(join(inter, 'InterMedium'));
+    writeFileSync(join(inter, 'InterMedium', '0-255.pbf'), 'i');
+    const files = await buildBasePack({ build: '20261022', outDir: out, run, interDir: inter, download: async (url, target) => { mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, 'x'); } });
+    expect(files).toContain('fonts-compact/InterMedium/0-255.pbf');
+    expect(files).toContain('fonts-compact/NotoSansMedium/0-255.pbf');
+    expect(files).toEqual([...files].sort());
+  });
+
+  it('leaves Inter out unless a folder is given, because the base pack stays under 30 MB without it', async () => {
+    const { run } = fakeRunner();
+    const out = mkdtempSync(join(tmpdir(), 'base-'));
+    const files = await buildBasePack({ build: '20261022', outDir: out, run, download: async (url, target) => { mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, 'x'); } });
+    expect(files.some((f) => f.includes('Inter'))).toBe(false);
+  });
+
+  it('builds without Inter when its folder is missing', async () => {
+    const { run } = fakeRunner();
+    const out = mkdtempSync(join(tmpdir(), 'base-'));
+    const files = await buildBasePack({ build: '20261022', outDir: out, run, interDir: join(out, 'nope'), download: async (url, target) => { mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, 'x'); } });
+    expect(files.some((f) => f.includes('Inter'))).toBe(false);
   });
 });
 

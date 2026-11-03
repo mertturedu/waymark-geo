@@ -93,6 +93,9 @@ import sdf_worship from '../map/icons/geo-sdf-worship.png';
 import sdf_badge from '../map/icons/geo-sdf-badge.png';
 import sdf_badge_rounded from '../map/icons/geo-sdf-badge-rounded.png';
 
+import { BADGE_IMAGES } from './badge-images';
+import { SHIELD_ICON_IMAGES } from './shield-images';
+
 export type MapIconImage = number | { source: number; sdf: true };
 
 export const MAP_ICON_IMAGES: Record<string, MapIconImage> = {
@@ -189,4 +192,6 @@ export const MAP_ICON_IMAGES: Record<string, MapIconImage> = {
   'geo-sdf-worship': { source: sdf_worship, sdf: true },
   'geo-sdf-badge': { source: sdf_badge, sdf: true },
   'geo-sdf-badge-rounded': { source: sdf_badge_rounded, sdf: true },
+  ...BADGE_IMAGES,
+  ...SHIELD_ICON_IMAGES,
 };

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Pending } from './MapScreen';
 import { GeoProvider } from '../../../src/native';
+import { AutoRegion } from './AutoRegion';
 import { MapScreen } from './MapScreen';
 import { PlanScreen } from './PlanScreen';
 import { SearchScreen, type Showing } from './SearchScreen';
@@ -35,51 +36,53 @@ export function SdkApp() {
   if (!server.url) return <Text style={{ padding: 32, color: palette.fg }}>Paket sunucusu adresi yok. Ayarlardan yaz.</Text>;
 
   return (
-    <GeoProvider config={{ manifestUrl: manifestUrlOf(server.url), publicKeys: PUBLIC_KEY ? [PUBLIC_KEY] : [], language: settings.lang, autoDownload: 'ask' }} fallback={<ActivityIndicator style={{ flex: 1 }} />}>
-      <View style={{ flex: 1, backgroundColor: palette.bg }}>
-        <View style={[styles.body, inner !== 'map' && styles.hidden]}>
-          <MapScreen
-            visible={inner === 'map'}
-            lang={settings.lang}
-            onLang={(lang) => change({ lang })}
-            theme={settings.theme}
-            onTheme={(theme) => change({ theme })}
-            pending={pending}
-            clearPending={() => setPending(null)}
-            showing={showing}
-            clearShowing={() => setShowing(null)}
-          />
+    <GeoProvider config={{ manifestUrl: manifestUrlOf(server.url), publicKeys: PUBLIC_KEY ? [PUBLIC_KEY] : [], language: settings.lang, autoDownload: 'always' }} fallback={<ActivityIndicator style={{ flex: 1 }} />}>
+      <AutoRegion lang={settings.lang}>
+        <View style={{ flex: 1, backgroundColor: palette.bg }}>
+          <View style={[styles.body, inner !== 'map' && styles.hidden]}>
+            <MapScreen
+              visible={inner === 'map'}
+              lang={settings.lang}
+              onLang={(lang) => change({ lang })}
+              theme={settings.theme}
+              onTheme={(theme) => change({ theme })}
+              pending={pending}
+              clearPending={() => setPending(null)}
+              showing={showing}
+              clearShowing={() => setShowing(null)}
+            />
+          </View>
+          <View style={[styles.body, inner !== 'plan' && styles.hidden]}>
+            {inner === 'plan' ? <PlanScreen lang={settings.lang} theme={settings.theme} /> : null}
+          </View>
+          <View style={[styles.body, inner !== 'search' && styles.hidden]}>
+            <SearchScreen
+              lang={settings.lang}
+              visible={inner === 'search'}
+              onPick={(next) => {
+                setShowing(null);
+                setPending(next);
+                setInner('map');
+              }}
+              onShow={(next) => {
+                setPending(null);
+                setShowing(next);
+                setInner('map');
+              }}
+            />
+          </View>
+          <View style={[styles.body, inner !== 'settings' && styles.hidden]}>
+            <SettingsScreen lang={settings.lang} onLang={(lang) => change({ lang })} theme={settings.theme} onTheme={(theme) => change({ theme })} server={server.url} onServer={server.set} serverNote={server.note} />
+          </View>
+          <View style={[styles.tabs, { borderColor: palette.line, backgroundColor: palette.bg }]}>
+            {(['map', 'plan', 'search', 'settings'] as const).map((id) => (
+              <Pressable key={id} onPress={() => setInner(id)} style={[styles.tab, inner === id && styles.tabOn]}>
+                <Text style={{ color: inner === id ? '#fff' : palette.fg, fontWeight: '600' }}>{id === 'map' ? 'Harita' : id === 'plan' ? 'Rota' : id === 'search' ? 'Ara' : 'Ayarlar'}</Text>
+              </Pressable>
+            ))}
+          </View>
         </View>
-        <View style={[styles.body, inner !== 'plan' && styles.hidden]}>
-          {inner === 'plan' ? <PlanScreen lang={settings.lang} theme={settings.theme} /> : null}
-        </View>
-        <View style={[styles.body, inner !== 'search' && styles.hidden]}>
-          <SearchScreen
-            lang={settings.lang}
-            visible={inner === 'search'}
-            onPick={(next) => {
-              setShowing(null);
-              setPending(next);
-              setInner('map');
-            }}
-            onShow={(next) => {
-              setPending(null);
-              setShowing(next);
-              setInner('map');
-            }}
-          />
-        </View>
-        <View style={[styles.body, inner !== 'settings' && styles.hidden]}>
-          <SettingsScreen lang={settings.lang} onLang={(lang) => change({ lang })} theme={settings.theme} onTheme={(theme) => change({ theme })} server={server.url} onServer={server.set} serverNote={server.note} />
-        </View>
-        <View style={[styles.tabs, { borderColor: palette.line, backgroundColor: palette.bg }]}>
-          {(['map', 'plan', 'search', 'settings'] as const).map((id) => (
-            <Pressable key={id} onPress={() => setInner(id)} style={[styles.tab, inner === id && styles.tabOn]}>
-              <Text style={{ color: inner === id ? '#fff' : palette.fg, fontWeight: '600' }}>{id === 'map' ? 'Harita' : id === 'plan' ? 'Rota' : id === 'search' ? 'Ara' : 'Ayarlar'}</Text>
-            </Pressable>
-          ))}
-        </View>
-      </View>
+      </AutoRegion>
     </GeoProvider>
   );
 }

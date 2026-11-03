@@ -84,6 +84,47 @@ describe('createGeo', () => {
     await geo.dispose();
   });
 
+  it('asks before a province over the mobile data limit and leaves small ones and Wi-Fi alone', async () => {
+    const { world } = await packWorld();
+    const MB = 1024 * 1024;
+    const geo = await createGeo({ ...world.config, autoDownload: 'always', cellularAskMb: 0.0001 }, envOf(world));
+    await geo.regions.checkUpdates();
+    const bytes = geo.regions.downloadBytes('34');
+    expect(bytes).toBeGreaterThan(0.0001 * MB);
+    expect(geo.regions.suggest([28.9, 41.0], { connection: 'cellular' })).toEqual({ action: 'consent', regions: ['34'], neighbours: [], bytes });
+    expect(geo.regions.suggest([28.9, 41.0], { connection: 'wifi' }).action).toBe('download');
+    expect(geo.regions.suggest([28.9, 41.0]).action).toBe('download');
+    await geo.dispose();
+    const roomy = await createGeo({ ...world.config, autoDownload: 'always' }, envOf(world));
+    await roomy.regions.checkUpdates();
+    expect(roomy.regions.suggest([28.9, 41.0], { connection: 'cellular' }).action).toBe('download');
+    await roomy.dispose();
+    const off = await createGeo({ ...world.config, autoDownload: 'always', cellularAskMb: Number.POSITIVE_INFINITY }, envOf(world));
+    await off.regions.checkUpdates();
+    expect(off.regions.suggest([28.9, 41.0], { connection: 'cellular' }).action).toBe('download');
+    await off.dispose();
+  });
+
+  it('stops offering a province once its download is queued, and tells the connection', async () => {
+    const { world } = await packWorld();
+    const geo = await createGeo({ ...world.config, autoDownload: 'always', cellularAskMb: 0 }, envOf(world));
+    await geo.regions.checkUpdates();
+    world.env.connectivity.set('cellular');
+    expect(await geo.regions.connection()).toBe('cellular');
+    expect(geo.regions.suggest([28.9, 41.0], { connection: 'cellular' }).action).toBe('consent');
+    const queued = geo.regions.download('34', { wifiOnly: true });
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    expect(geo.regions.suggest([28.9, 41.0], { connection: 'cellular' }).action).toBe('none');
+    const seen: string[] = [];
+    const off = geo.regions.onConnection((kind) => seen.push(kind));
+    world.env.connectivity.set('wifi');
+    await queued;
+    off();
+    expect(seen).toEqual(['wifi']);
+    expect(geo.regions.suggest([28.9, 41.0], { connection: 'wifi' }).action).toBe('none');
+    await geo.dispose();
+  });
+
   it('does not store confirmations when learning is switched off', async () => {
     const { world } = await packWorld();
     const learnStore = memoryStore();

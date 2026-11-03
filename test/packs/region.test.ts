@@ -137,9 +137,56 @@ describe('decideAuto', () => {
     fc.assert(
       fc.property(fc.anything(), fc.constantFrom('ask', 'wifi', 'always', 'never'), (location, autoDownload) => {
         const result = decideAuto({ ...base, location: location as never, autoDownload });
-        expect(['none', 'suggest', 'download']).toContain(result.action);
+        expect(['none', 'suggest', 'download', 'consent']).toContain(result.action);
         expect(decideAuto({ ...base, location: location as never, autoDownload })).toEqual(result);
       }),
     );
   });
 });
+
+describe('decideAuto on a metered connection', () => {
+  const MB = 1024 * 1024;
+  const base = { borders: two, installed: [] as string[], dismissed: [] as string[], location: [28.5, 40.5] as [number, number], autoDownload: 'always' as const, cellularAskBytes: 50 * MB };
+  const sizes: Record<string, number> = { '34': 312 * MB, '41': 30 * MB };
+  const bytesOf = (id: string): number => sizes[id] ?? 0;
+
+  it('downloads a big province at once on Wi-Fi and on no connection', () => {
+    for (const connection of ['wifi', 'none'] as const) expect(decideAuto({ ...base, connection, bytesOf })).toEqual({ action: 'download', regions: ['34'], neighbours: [] });
+  });
+
+  it('asks first for a province over the limit on mobile data, naming the size', () => {
+    expect(decideAuto({ ...base, connection: 'cellular', bytesOf })).toEqual({ action: 'consent', regions: ['34'], neighbours: [], bytes: 312 * MB });
+  });
+
+  it('does not trust an unknown connection', () => {
+    expect(decideAuto({ ...base, connection: 'unknown', bytesOf }).action).toBe('consent');
+  });
+
+  it('downloads a small province on mobile data without asking', () => {
+    expect(decideAuto({ ...base, location: [29.5, 40.5], connection: 'cellular', bytesOf }).action).toBe('download');
+    expect(decideAuto({ ...base, location: [29.5, 40.5], connection: 'cellular', bytesOf: () => 50 * MB }).action).toBe('download');
+    expect(decideAuto({ ...base, location: [29.5, 40.5], connection: 'cellular', bytesOf: () => 50 * MB + 1 }).action).toBe('consent');
+  });
+
+  it('never asks when the limit is off, unknown, or the caller gave no sizes', () => {
+    expect(decideAuto({ ...base, connection: 'cellular', bytesOf, cellularAskBytes: 0 }).action).toBe('consent');
+    expect(decideAuto({ ...base, connection: 'cellular', bytesOf, cellularAskBytes: Number.POSITIVE_INFINITY }).action).toBe('download');
+    expect(decideAuto({ ...base, connection: 'cellular', bytesOf, cellularAskBytes: undefined }).action).toBe('download');
+    expect(decideAuto({ ...base, connection: 'cellular' }).action).toBe('download');
+  });
+
+  it('leaves the other policies alone', () => {
+    expect(decideAuto({ ...base, autoDownload: 'ask', connection: 'cellular', bytesOf }).action).toBe('suggest');
+    expect(decideAuto({ ...base, autoDownload: 'wifi', connection: 'cellular', bytesOf }).action).toBe('download');
+    expect(decideAuto({ ...base, autoDownload: 'never', connection: 'cellular', bytesOf }).action).toBe('none');
+  });
+
+  it('does not ask again about a province that is already being downloaded', () => {
+    expect(decideAuto({ ...base, connection: 'cellular', bytesOf, busy: ['34'] })).toEqual({ action: 'none', regions: [], neighbours: [] });
+  });
+
+  it('keeps the neighbour as a suggestion while the own province waits for consent', () => {
+    expect(decideAuto({ ...base, location: [28.999, 40.5], connection: 'cellular', bytesOf })).toEqual({ action: 'consent', regions: ['34'], neighbours: ['41'], bytes: 312 * MB });
+  });
+});
+

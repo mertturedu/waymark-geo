@@ -32,3 +32,7 @@ export type ConnectivityPort = {
   kind(): Promise<ConnectionKind>;
   onChange?(listener: (kind: ConnectionKind) => void): () => void;
 };
+
+export type DecodePort = {
+  zstd(): { push(chunk: Uint8Array, last: boolean): Uint8Array[] };
+};

@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { MESSAGE_KEYS } from '../../src/core/i18n/messages';
+import { BADGE_ICONS, LEGEND_GLYPH } from '../../src/native/map/poi-glyphs';
+import { ICON_GROUPS } from '../../src/native/map/theme';
 import { BRAND_ICONS, BUSINESS_ICONS, SDF_ICONS, SERVICE_ICONS } from '../../src/native/map/style';
 
 const root = join(__dirname, '../../src/native');
@@ -21,9 +23,9 @@ describe('map icons', () => {
   });
 
   it('registers exactly those pictures for the map', () => {
-    const text = readFileSync(join(root, 'platform', 'icon-images.ts'), 'utf8');
+    const text = readFileSync(join(root, 'platform', 'icon-images.ts'), 'utf8') + readFileSync(join(root, 'platform', 'badge-images.ts'), 'utf8');
     const registered = [...text.matchAll(/'(geo-[a-z0-9-]+)':/g)].map((m) => m[1]).sort();
-    expect(registered).toEqual([...pictures, ...SDF_ICONS].sort());
+    expect(registered).toEqual([...pictures, ...SDF_ICONS, ...BADGE_ICONS].sort());
   });
 
   it('ships every single-colour icon the style asks for as a small distance field marked for tinting', () => {
@@ -43,9 +45,20 @@ describe('map icons', () => {
     expect(MESSAGE_KEYS).toContain('legend.button');
   });
 
-  it('lists the same categories in the legend component', () => {
+  it('lists every theme group and the chains in the legend component, each with a text in all languages', () => {
     const text = readFileSync(join(root, 'react', 'MapLegend.tsx'), 'utf8');
-    const shown = [...text.matchAll(/icon: '(geo-[a-z0-9-]+)'/g)].map((m) => m[1]).sort();
-    expect(shown).toEqual([...names, 'geo-brand-a101'].sort());
+    const shown = [...text.matchAll(/\{ group: '([a-z]+)', label: 'legend\.([a-z]+)' \}/g)].map((m) => m[1]).sort();
+    expect(shown).toEqual([...ICON_GROUPS, 'brands'].sort());
+    for (const group of [...ICON_GROUPS, 'brands']) expect(MESSAGE_KEYS).toContain(group === 'brands' ? 'legend.brands' : `legend.${group}`);
+  });
+
+  it('ships a small white glyph picture for every legend row', () => {
+    const text = readFileSync(join(root, 'platform', 'legend-images.ts'), 'utf8');
+    for (const glyph of new Set(Object.values(LEGEND_GLYPH))) {
+      const file = join(root, 'map', 'icons', `legend-${glyph}.png`);
+      expect(existsSync(file)).toBe(true);
+      expect(statSync(file).size).toBeLessThan(3_000);
+      expect(text).toContain(`'legend-${glyph}':`);
+    }
   });
 });

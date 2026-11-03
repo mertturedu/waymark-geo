@@ -1,4 +1,4 @@
-import type { ClockPort, FsPort, HashPort, NetPort } from './ports';
+import type { ClockPort, DecodePort, FsPort, HashPort, NetPort } from './ports';
 import type { FileBlocks } from '../region/manifest';
 import { isPackError, packError } from './types';
 
@@ -13,6 +13,8 @@ export type DownloadFileInput = {
   size: number;
   sha256: string;
   blocks?: FileBlocks;
+  encoded?: { url: string; partPath: string; finalPath: string; size: number; sha256: string };
+  decode?: DecodePort;
   maxRetries?: number;
   onProgress?: (done: number, total: number) => void;
   onVerify?: () => void;
@@ -20,6 +22,7 @@ export type DownloadFileInput = {
 };
 
 const SPACE_MARGIN = 1.2;
+const DECODE_CHUNK = 256 * 1024;
 const MAX_RESTARTS = 3;
 
 type Step = 'done' | 'retry' | 'restart';
@@ -33,10 +36,60 @@ async function verifyFile(hash: HashPort, path: string, input: DownloadFileInput
   return (await hash.sha256File(path)) === input.sha256;
 }
 
+async function decodeInto(input: DownloadFileInput, encodedPath: string): Promise<void> {
+  const { fs, hash, partPath, size } = input;
+  if ((await fs.freeBytes()) < Math.ceil(size * SPACE_MARGIN)) throw packError('no-space');
+  await fs.truncate(partPath);
+  const stream = (input.decode as DecodePort).zstd();
+  const length = (await fs.size(encodedPath)) ?? 0;
+  try {
+    for (let offset = 0; offset < length; offset += DECODE_CHUNK) {
+      if (input.signal?.aborted) throw packError('cancelled');
+      const chunk = await fs.read(encodedPath, offset, Math.min(DECODE_CHUNK, length - offset));
+      for (const piece of stream.push(chunk, offset + DECODE_CHUNK >= length)) if (piece.length > 0) await fs.append(partPath, piece);
+    }
+  } catch (error) {
+    if (isPackError(error)) throw error;
+    await fs.remove(partPath);
+    await fs.remove(encodedPath);
+    throw packError('checksum', 'zstd');
+  }
+  if ((await fs.size(partPath)) !== size || !(await verifyFile(hash, partPath, input))) {
+    await fs.remove(partPath);
+    await fs.remove(encodedPath);
+    throw packError('checksum');
+  }
+}
+
+async function downloadEncoded(input: DownloadFileInput): Promise<{ bytes: number; retries: number }> {
+  const { fs, finalPath, size } = input;
+  const encoded = input.encoded as NonNullable<DownloadFileInput['encoded']>;
+  const fetched = await downloadFile({
+    ...input,
+    url: encoded.url,
+    partPath: encoded.partPath,
+    finalPath: encoded.finalPath,
+    size: encoded.size,
+    sha256: encoded.sha256,
+    onProgress: (done) => input.onProgress?.(Math.min(size, Math.floor((done * size) / encoded.size)), size),
+    encoded: undefined,
+    decode: undefined,
+    blocks: undefined,
+  });
+  input.onVerify?.();
+  await decodeInto(input, encoded.finalPath);
+  await fs.move(input.partPath, finalPath);
+  await fs.remove(encoded.finalPath);
+  if ((await fs.size(finalPath)) !== size) throw packError('storage', 'file incomplete after move');
+  input.onProgress?.(size, size);
+  return { bytes: size, retries: fetched.retries };
+}
+
 export async function downloadFile(input: DownloadFileInput): Promise<{ bytes: number; retries: number }> {
   const { fs, net, hash, clock, url, partPath, finalPath, size, signal } = input;
   const maxRetries = input.maxRetries ?? 5;
   if ((await fs.size(finalPath)) === size) return { bytes: size, retries: 0 };
+  if (input.encoded && input.decode) return downloadEncoded(input);
 
   let have = (await fs.size(partPath)) ?? 0;
   if (have > size) {

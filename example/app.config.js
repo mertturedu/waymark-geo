@@ -2,6 +2,7 @@ module.exports = {
   expo: {
     name: 'Geo Ornek',
     slug: 'geo-example',
+    scheme: 'geoornek',
     version: '0.0.0',
     orientation: 'default',
     userInterfaceStyle: 'automatic',
@@ -21,6 +22,7 @@ module.exports = {
     plugins: [
       '@maplibre/maplibre-react-native',
       './plugins/large-heap',
+      './plugins/scene-lifecycle',
       ['expo-build-properties', { android: { usesCleartextTraffic: true } }],
       ['expo-location', { locationWhenInUsePermission: 'Yakınındaki harita paketini önermek için konumun kullanılır.' }],
     ],

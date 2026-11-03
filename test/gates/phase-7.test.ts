@@ -45,6 +45,18 @@ describe('phase 7 gates', () => {
     expect(results.map((r) => r.status)).toEqual(['open', 'open']);
   });
 
+  it('uses the newest Release report that holds the ids, not simply the newest report', async () => {
+    const { ctx, reportDir } = ctxWith(() => ({ code: 0, out: '' }));
+    const report = (reportId: string, entries: { id: string; outcome: string }[]) => ({ reportId, generatedAt: '2026-11-03T00:00:00Z', device: { model: 'iPhone121', os: 'iOS 26.0' }, sdk: { version: '0.4.0', dataVersion: null, build: 'release' }, entries: entries.map((e) => ({ ...e, title: e.id, kind: 'auto' })) });
+    writeFileSync(join(reportDir, 'cihaz-a-20261101-000000.json'), JSON.stringify(report('a-20261101-000000', [{ id: 'sdk.offline-search', outcome: 'pass' }])));
+    writeFileSync(join(reportDir, 'cihaz-z-20261103-000000.json'), JSON.stringify(report('z-20261103-000000', [{ id: 'sdk.map-open', outcome: 'pass' }])));
+    const [k715] = await runGates(phase7Gates.filter((g) => g.id === 'K7.15'), ctx);
+    expect(k715?.status).toBe('pass');
+    writeFileSync(join(reportDir, 'cihaz-b-20261102-000000.json'), JSON.stringify(report('b-20261102-000000', [{ id: 'sdk.offline-search', outcome: 'fail' }])));
+    const [again] = await runGates(phase7Gates.filter((g) => g.id === 'K7.15'), ctx);
+    expect(again?.status).toBe('fail');
+  });
+
   it('reads the chain position report for the big cities and the tile check', async () => {
     const { ctx, reportDir } = ctxWith(() => ({ code: 0, out: '' }));
     writeFileSync(join(reportDir, 'zincir-konum-denetimi.md'), ['| 34 | 1000 | 100 | 880 | 20 | 0 |', '| 06 | 500 | 50 | 430 | 20 | 0 |', 'Toplam 1500 nokta; kanıtlı pay %88.4 (eşik en az %97.0).', 'Karo gidiş-dönüş: 300 örnekte en büyük sapma 0.43 m (eşik en çok 1.0 m), karoda bulunamayan 0.'].join('\n'));
