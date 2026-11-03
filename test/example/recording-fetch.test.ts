@@ -1,19 +1,28 @@
-import { recordingFetch, resumedWithRange } from '../../example/src/device-test/recording-fetch';
+import type { NetPort } from '../../src/core/packs/ports';
+import { recordingNet, resumedWithRange } from '../../example/src/device-test/recording-fetch';
 
-const fakeFetch = (statusFor: (range: string | null) => number): typeof fetch =>
-  (async (_url: unknown, init?: RequestInit) => new Response('x', { status: statusFor(new Headers(init?.headers).get('range')) })) as typeof fetch;
+const fakeNet = (): NetPort => ({
+  getText: async () => ({ status: 200, text: 'manifest' }),
+  get: async (_url, options) => ({ status: options?.rangeStart ? 206 : 200, body: (async function* () { yield new Uint8Array(1); })() }),
+});
 
-describe('recordingFetch', () => {
-  it('records method, range and status of every call', async () => {
-    const { fetch: wrapped, calls } = recordingFetch(fakeFetch((range) => (range ? 206 : 200)));
-    await wrapped('http://x/a', { method: 'HEAD' });
-    await wrapped('http://x/a', { headers: { Range: 'bytes=0-' } });
-    await wrapped('http://x/a', { headers: { Range: 'bytes=100-' } });
-    expect(calls).toEqual([
-      { method: 'HEAD', range: null, status: 200 },
-      { method: 'GET', range: 'bytes=0-', status: 206 },
+describe('recordingNet', () => {
+  it('records the range and status of every download and passes the answer on', async () => {
+    const net = recordingNet(fakeNet());
+    expect((await net.get('http://x/a')).status).toBe(200);
+    expect((await net.get('http://x/a', { rangeStart: 100 })).status).toBe(206);
+    await net.get('http://x/a', { rangeStart: 0 });
+    expect(net.calls).toEqual([
+      { method: 'GET', range: null, status: 200 },
       { method: 'GET', range: 'bytes=100-', status: 206 },
+      { method: 'GET', range: null, status: 200 },
     ]);
+  });
+
+  it('leaves text requests alone', async () => {
+    const net = recordingNet(fakeNet());
+    expect(await net.getText('http://x/manifest-v1.json')).toEqual({ status: 200, text: 'manifest' });
+    expect(net.calls).toEqual([]);
   });
 });
 

@@ -44,38 +44,3 @@ export class FileStore implements Store {
     this.handle = null;
   }
 }
-
-export class CuttingStore implements Store {
-  private cut = false;
-  private written = 0;
-
-  constructor(
-    private readonly inner: Store,
-    private readonly failAfterBytes: number,
-  ) {}
-
-  get interrupted(): boolean {
-    return this.cut;
-  }
-
-  size() {
-    return this.inner.size();
-  }
-
-  async append(chunk: Uint8Array): Promise<void> {
-    this.written += chunk.length;
-    if (!this.cut && this.written > this.failAfterBytes) {
-      this.cut = true;
-      throw new Error('simulated connection reset');
-    }
-    await this.inner.append(chunk);
-  }
-
-  truncate() {
-    return this.inner.truncate();
-  }
-
-  read(offset: number, length: number) {
-    return this.inner.read(offset, length);
-  }
-}

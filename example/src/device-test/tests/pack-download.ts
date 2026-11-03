@@ -1,17 +1,14 @@
-import { fetch as streamingFetch } from 'expo/fetch';
-import { Directory, File, Paths } from 'expo-file-system';
-import { download, type Store } from '../../../../scripts/spikes/resume-download';
-import { FileStore } from './fileStore';
+import { Directory, File } from 'expo-file-system';
+import { createExpoFs, createExpoNet } from '../../../../src/native';
+import type { FsPort, NetPort } from '../../../../src/core/packs/ports';
+import { installWith, systemClock } from '../install';
 import { pickInstallFiles, progressLine } from '../install-list';
 import { saveManifest } from '../storage';
-import { uiYielder } from '../ui-yield';
-import { nativeStoreSha256 } from './native-hash';
+import { nativeFsHash } from './native-hash';
 import type { TestContext } from '../types';
 
 export type { InstallFile as ManifestFile, InstallManifest as Manifest } from '../install-list';
 import type { InstallFile as ManifestFile, InstallManifest as Manifest } from '../install-list';
-
-export const fetchImpl = streamingFetch as unknown as typeof fetch;
 
 export async function fetchManifest(serverUrl: string): Promise<Manifest> {
   const response = await fetch(`${serverUrl}/manifest.json`);
@@ -21,42 +18,19 @@ export async function fetchManifest(serverUrl: string): Promise<Manifest> {
 
 export const packFile = (ctx: TestContext, path: string): File => new File(`${ctx.packsDir.replace(/\/$/, '')}/${path}`);
 
-const partFor = (ctx: TestContext, path: string): File => new File(`${ctx.packsDir.replace(/\/$/, '')}/.part/${path.replace(/\//g, '__')}`);
-
 export async function installFile(
   ctx: TestContext,
   file: ManifestFile,
-  options: { wrapStore?: (store: Store) => Store; onProgress?: (done: number, total: number) => void; fetchImpl?: typeof fetch } = {},
+  options: { wrapFs?: (fs: FsPort) => FsPort; wrapNet?: (net: NetPort) => NetPort; onProgress?: (done: number, total: number) => void; to?: string } = {},
 ): Promise<{ bytes: number; retries: number }> {
-  const final = packFile(ctx, file.path);
-  if (final.exists && final.size === file.size) return { bytes: file.size, retries: 0 };
-  const parent = new Directory(final.uri.slice(0, final.uri.lastIndexOf('/')));
-  if (!parent.exists) parent.create({ intermediates: true, idempotent: true });
-  const part = partFor(ctx, file.path);
-  const store = new FileStore(part);
-  try {
-    const result = await download({
-      url: `${ctx.packServerUrl}/${file.path.split('/').map(encodeURIComponent).join('/')}`,
-      store: options.wrapStore ? options.wrapStore(store) : store,
-      sha256: file.sha256,
-      fetchImpl: options.fetchImpl ?? fetchImpl,
-      maxRetries: 5,
-      freeBytes: async () => Paths.availableDiskSpace,
-      yieldNow: uiYielder(),
-      hashStore: nativeStoreSha256,
-      ...(options.onProgress ? { onProgress: options.onProgress } : {}),
-    });
-    store.close();
-    const partSize = part.exists ? part.size : -1;
-    if (partSize !== file.size) throw new Error(`indirilen parça eksik: ${partSize} / ${file.size} bayt`);
-    if (final.exists) final.delete();
-    await part.move(final);
-    const finalSize = final.exists ? final.size : -1;
-    if (finalSize !== file.size) throw new Error(`taşıma sonrası dosya eksik: ${finalSize} / ${file.size} bayt, parça ${part.exists ? part.size : 'yok'}`);
-    return result;
-  } finally {
-    store.close();
-  }
+  const fs = createExpoFs(new Directory(ctx.packsDir));
+  const net = createExpoNet();
+  return installWith(
+    { fs: options.wrapFs ? options.wrapFs(fs) : fs, net: options.wrapNet ? options.wrapNet(net) : net, hash: nativeFsHash(fs), clock: systemClock },
+    ctx.packServerUrl,
+    file,
+    { ...(options.onProgress ? { onProgress: options.onProgress } : {}), ...(options.to ? { to: options.to } : {}) },
+  );
 }
 
 export async function installAll(ctx: TestContext, onStatus: (line: string) => void, shouldStop: () => boolean = () => false): Promise<{ files: number; retries: number }> {

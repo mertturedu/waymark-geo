@@ -1,13 +1,18 @@
+import type { NetPort } from '../../../src/core/packs/ports';
+
 export type FetchCall = { method: string; range: string | null; status: number };
 
-export function recordingFetch(inner: typeof fetch): { fetch: typeof fetch; calls: FetchCall[] } {
+export function recordingNet(inner: NetPort): NetPort & { calls: FetchCall[] } {
   const calls: FetchCall[] = [];
-  const wrapped = (async (input: Parameters<typeof fetch>[0], init?: Parameters<typeof fetch>[1]) => {
-    const response = await inner(input, init);
-    calls.push({ method: init?.method ?? 'GET', range: new Headers(init?.headers).get('range'), status: response.status });
-    return response;
-  }) as typeof fetch;
-  return { fetch: wrapped, calls };
+  return {
+    calls,
+    getText: (url, options) => inner.getText(url, options),
+    async get(url, options) {
+      const response = await inner.get(url, options);
+      calls.push({ method: 'GET', range: options?.rangeStart ? `bytes=${options.rangeStart}-` : null, status: response.status });
+      return response;
+    },
+  };
 }
 
 export const resumedWithRange = (calls: FetchCall[]): boolean =>
