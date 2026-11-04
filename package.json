@@ -1,6 +1,6 @@
 {
   "name": "@yuksi/geo",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Offline maps, door-level address search and route planning for React Native",
   "license": "UNLICENSED",
   "type": "module",
@@ -35,6 +35,7 @@
     "serve:packs": "tsx scripts/serve-packs.ts",
     "make:test-data": "tsx scripts/make-test-data.ts",
     "data:blocks": "tsx scripts/add-block-hashes.ts",
+    "mlt:check": "tsx scripts/check-mlt-native.ts",
     "data:sources": "tsx scripts/fetch-sources.ts",
     "data:build": "tsx scripts/data-build.ts",
     "corrections": "tsx scripts/corrections.ts",
@@ -75,15 +76,15 @@
   "dependencies": {
     "@noble/curves": "^1.9.7",
     "@noble/hashes": "^1.8.0",
-    "@protomaps/basemaps": "5.7.2",
-    "fzstd": "0.1.1"
+    "@protomaps/basemaps": "5.7.2"
   },
   "files": [
     "lib",
     "app.plugin.cjs",
     "README.md",
     "CHANGELOG.md",
-    "LICENSE"
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "peerDependencies": {
     "@maplibre/maplibre-react-native": ">=11.5.0",

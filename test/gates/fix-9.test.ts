@@ -9,9 +9,9 @@ const gate = (id: string) => fix9Gates.find((g) => g.id === id)!;
 
 const files = (over: Record<string, string | null> = {}) => {
   const base: Record<string, string | null> = {
-    '/r/package.json': '{"version":"0.5.0"}',
-    '/r/src/core/create-geo.ts': "export const SDK_VERSION = '0.5.0';",
-    '/r/CHANGELOG.md': '# Changelog\n\n## Unreleased\n\n## 0.5.0\n\n- x\n',
+    '/r/package.json': '{"version":"0.6.0"}',
+    '/r/src/core/create-geo.ts': "export const SDK_VERSION = '0.6.0';",
+    '/r/CHANGELOG.md': '# Changelog\n\n## Unreleased\n\n## 0.6.0\n\n- x\n',
     '/r/README.md': 'x',
     '/r/docs/licences.md': 'x',
     ...over,
@@ -26,10 +26,10 @@ describe('versionProblems', () => {
 
   it('names each thing that is off', () => {
     expect(versionProblems('/r', files({ '/r/package.json': '{"version":"0.4.0"}' }))).toEqual(['package.json sürümü 0.4.0']);
-    expect(versionProblems('/r', files({ '/r/src/core/create-geo.ts': "export const SDK_VERSION = '0.4.0';" }))).toEqual(['SDK_VERSION 0.5.0 değil']);
+    expect(versionProblems('/r', files({ '/r/src/core/create-geo.ts': "export const SDK_VERSION = '0.4.0';" }))).toEqual(['SDK_VERSION 0.6.0 değil']);
     expect(versionProblems('/r', files({ '/r/docs/licences.md': null }))).toEqual(['docs/licences.md yok']);
-    expect(versionProblems('/r', files({ '/r/CHANGELOG.md': '# Changelog\n\n## 0.4.0\n' }))).toEqual(['CHANGELOG.md\'de "## 0.5.0" başlığı yok']);
-    expect(versionProblems('/r', files({ '/r/CHANGELOG.md': '# Changelog\n\n## Unreleased\n\n- yeni madde\n\n## 0.5.0\n' }))).toEqual(['CHANGELOG.md hâlâ "Unreleased" altında madde taşıyor']);
+    expect(versionProblems('/r', files({ '/r/CHANGELOG.md': '# Changelog\n\n## 0.4.0\n' }))).toEqual(['CHANGELOG.md\'de "## 0.6.0" başlığı yok']);
+    expect(versionProblems('/r', files({ '/r/CHANGELOG.md': '# Changelog\n\n## Unreleased\n\n- yeni madde\n\n## 0.6.0\n' }))).toEqual(['CHANGELOG.md hâlâ "Unreleased" altında madde taşıyor']);
     expect(versionProblems('/r', files({ '/r/package.json': null }))).toContain('package.json sürümü ?');
   });
 });

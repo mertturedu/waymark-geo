@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { Gate } from './engine';
 import { uploadedReports } from './fix-0';
 
-export const TARGET_VERSION = '0.5.0';
+export const TARGET_VERSION = '0.6.0';
 const DOCS = ['docs/licences.md', 'CHANGELOG.md', 'README.md'];
 
 export const sdkCheckFile = (reportDir: string, expo: string): string => join(reportDir, `fix-9-sdk-${expo}.json`);
@@ -23,7 +23,7 @@ export function versionProblems(root: string, read: (path: string) => string | n
   const problems: string[] = [];
   const pkg = JSON.parse(read(join(root, 'package.json')) ?? '{}') as { version?: string };
   if (pkg.version !== TARGET_VERSION) problems.push(`package.json sürümü ${pkg.version ?? '?'}`);
-  if (!/SDK_VERSION = '0\.5\.0'/.test(read(join(root, 'src/core/create-geo.ts')) ?? '')) problems.push('SDK_VERSION 0.5.0 değil');
+  if (!new RegExp(`SDK_VERSION = '${TARGET_VERSION.replace(/\./g, '\\.')}'`).test(read(join(root, 'src/core/create-geo.ts')) ?? '')) problems.push(`SDK_VERSION ${TARGET_VERSION} değil`);
   for (const file of DOCS) if (read(join(root, file)) === null) problems.push(`${file} yok`);
   const changelog = read(join(root, 'CHANGELOG.md')) ?? '';
   if (!new RegExp(`^## ${TARGET_VERSION.replace(/\./g, '\\.')}\\b`, 'm').test(changelog)) problems.push(`CHANGELOG.md'de "## ${TARGET_VERSION}" başlığı yok`);

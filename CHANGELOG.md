@@ -1,9 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.6.0 (2026-11-04)
 
 - The Expo config plugin is `app.plugin.cjs`. As `app.plugin.js` in a package of ES modules Expo could not load it, so `"plugins": ["@yuksi/geo"]` failed with `INVALID_PLUGIN_TYPE`.
 - A half downloaded zstd file is kept when the app restarts, so the download goes on from where it stopped instead of starting again from zero. Removing a province also deletes its zstd leftovers.
+- Optional MapLibre Tile packs: `GEO_TILE_FORMAT=mlt` converts the map and business tiles after pruning (`pipeline/build/tile-encode.ts`; feature ids are dropped and FastPFOR and FSST are off, because the MapLibre Native decoders cannot read those encodings). The style reads `*.mlt.pmtiles` as MLT and the manifest then asks for SDK 0.6.0. 81 provinces 1366.8 → 1227.9 MB on top of pruning. `npm run mlt:check` decodes every tile with the MapLibre Native decoder. Off by default.
+- Route pack version 2 stores an arc and its exact reverse once (`docs/route-format.md`): 81 provinces 354.4 → 299.5 MB on the phone, the same routes. The SDK reads versions 1 and 2; the build writes version 2 (`GEO_ROUTE_FORMAT=1` keeps the old one) and sets `minSdk` to 0.6.0.
+- Opening a zstd pack is about three times faster on the phone (Hermes: 4.1-6.2 → 13.5-16.4 MB/s) and never holds the JS thread for long (longest step 541 → 70 ms). The fzstd decoder is now part of the SDK (`src/core/packs/fzstd.ts`) and keeps its window in a double buffer instead of moving 8 MB for every block; the `fzstd` dependency is gone.
+- Smaller map packs: the build drops tile features no style variant draws and properties no layer reads (`pipeline/build/tile-prune.ts`), and empties glyph ranges no label uses. Istanbul tiles 68.9 → 58.9 MB, Bursa 36.1 → 28.6 MB, business tiles about 43% smaller; headless renders of 980 views match the unpruned packs. `GEO_PRUNE=0` turns it off.
 
 ## 0.5.0 (2026-11-03)
 

@@ -49,12 +49,12 @@ describe('the packed package', () => {
     const paths = packed.files.map((file) => file.path);
     const bad = paths.filter((path) => /^(src|test|scripts|pipeline|gates|example|tools|docs|fixtures)\//.test(path) || /\.test\.(js|ts)$/.test(path) || (path.endsWith('.ts') && !path.endsWith('.d.ts')) || path.includes('/node/'));
     expect(bad).toEqual([]);
-    expect(paths.filter((path) => !path.startsWith('lib/')).sort()).toEqual(['CHANGELOG.md', 'LICENSE', 'README.md', 'app.plugin.cjs', 'package.json']);
+    expect(paths.filter((path) => !path.startsWith('lib/')).sort()).toEqual(['CHANGELOG.md', 'LICENSE', 'README.md', 'THIRD_PARTY_NOTICES.md', 'app.plugin.cjs', 'package.json']);
   });
 
   it('stays small and has the version of the SDK', () => {
     expect(packed.size).toBeLessThan(4_000_000);
-    expect(pkg.version).toBe('0.5.0');
+    expect(pkg.version).toBe('0.6.0');
     expect(readFileSync(join(root, 'lib/core/create-geo.js'), 'utf8')).toContain(`'${pkg.version}'`);
   });
 
