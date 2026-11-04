@@ -1,4 +1,4 @@
-# Rota paketi biçimi (sürüm 1)
+# Rota paketi biçimi (sürüm 1 ve 2)
 
 Her il için tek dosya (`route-<özet>.bin`, manifestte `kind: route`). Sayılar küçük endian. "varint" 7 bitlik gruplarla yazılan işaretsiz tam sayıdır (en çok 5 bayt, 32 bit), "zigzag" işaretli sayının `v >= 0 ? 2v : -2v - 1` ile varint'e çevrilmiş halidir. Koordinatlar mikro derece (derece x 1e6).
 
@@ -7,7 +7,7 @@ Her il için tek dosya (`route-<özet>.bin`, manifestte `kind: route`). Sayılar
 | Konum | Boyut | Anlam |
 |---|---|---|
 | 0 | u32 | sihirli sayı `0x54524759` (`YGRT`) |
-| 4 | u16 | sürüm (1) |
+| 4 | u16 | sürüm (1 ya da 2) |
 | 6 | u16 | bayraklar (0) |
 | 8 | u32 | hiyerarşi düğüm sayısı (kavşaklar + dönüş kopyaları) |
 | 12 | u32 | temel kavşak sayısı |
@@ -30,6 +30,15 @@ Hemen ardından bölüm tablosu: her bölüm için `u8 kimlik, u32 başlangıç,
 6. **Giriş tablosu.** Dönüş yasağı yüzünden kopyası olan yönlü yaylar: `varint sayı`, sonra `varint Δyay kimliği`, `varint düğüm` (yayı bitirince varılan düğüm).
 7. **Çıkış tablosu.** Bir yaya başlanabilecek kopya düğümler (kök düğüm dışında): `varint sayı`, sonra `varint Δyay kimliği`, `varint düğüm`.
 8. **Izgara.** `zigzag başlangıç boylamı`, `zigzag başlangıç enlemi`, `varint hücre boyu (5000)`, `varint sütun`, `varint satır`, sonra her hücre için `varint kayıt sayısı`, sonra her hücrenin yol parçası kimlikleri (`varint` artan fark).
+
+## Sürüm 2: ayna yaylar
+
+Yukarı ve aşağı yay bölümleri dışında her şey sürüm 1 ile aynıdır.
+
+- Yukarı yay kaydındaki `via` bir bit daha taşır: yazılan değer `2 x via + ayna`. `ayna` 1 ise bu yayın tersi aynı düğümün aşağı listesindedir ve aşağı bölüme yazılmaz. Tersi: aynı uç düğüm, aynı süre ve uzunluk; özgün yayda yönlü yay kimliğinin yön biti çevrilir (`pa ^ 1`), kısayolda ortadaki düğüm aynı kalır.
+- Aşağı bölümde yalnızca aynası olmayan yaylar durur (toplam sayı da onların sayısıdır).
+- Okuyucu her düğümün aşağı listesini uç düğüme göre sıralı birleştirerek kurar; sonuç sürüm 1 dosyasının listesiyle birebir aynıdır. Ayna yalnızca aşağı listede o uç düğüme giden tek yay varsa kullanılır; aynı uç düğüm iki kez çıkarsa dosya bozuk sayılır.
+- Sürüm 2 paketi içeren manifestin `minSdk` değeri en az `0.6.0`'dır. Paket hattı sürüm 2'yi SDK sürümü 0.6.0 ya da üstündeyse yazar; `GEO_ROUTE_FORMAT=1|2` bunu zorlar. `rewriteRoutePack` (`pipeline/build/route-pack.ts`) bir dosyayı yeniden kurmadan iki sürüm arasında çevirir.
 
 ## Süre ve ağırlık
 

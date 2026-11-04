@@ -1,4 +1,7 @@
-import { FLAG, MAGIC, SECTION, VERSION } from '../../src/core/route/format';
+import { closeSync, openSync, readSync } from 'node:fs';
+import { SDK_VERSION } from '../../src/core/create-geo';
+import { compareVersions } from '../../src/core/packs/verify';
+import { FLAG, MAGIC, MIRROR_VERSION, SECTION, VERSION, mirrorVia, readRoutePack } from '../../src/core/route/format';
 import { ORIGINAL, VIA_MASK, type Hierarchy } from '../../src/core/route/hierarchy';
 import { buildCsr } from '../../src/core/route/plain';
 import { contract } from './route-ch';
@@ -23,6 +26,56 @@ export type PackReport = {
 };
 
 const CELL_MICRO = 5000;
+
+export type RouteFormat = typeof VERSION | typeof MIRROR_VERSION;
+export const ROUTE_MIN_SDK: Record<RouteFormat, string> = { [VERSION]: '0.3.0', [MIRROR_VERSION]: '0.6.0' };
+
+export function routeFormat(sdk: string = SDK_VERSION, wanted: string | undefined = process.env.GEO_ROUTE_FORMAT): RouteFormat {
+  if (wanted === String(VERSION) || wanted === String(MIRROR_VERSION)) return Number(wanted) as RouteFormat;
+  if (wanted !== undefined && wanted !== '') throw new Error(`GEO_ROUTE_FORMAT 1 ya da 2 olmalı: ${wanted}`);
+  return compareVersions(sdk, ROUTE_MIN_SDK[MIRROR_VERSION]) >= 0 ? MIRROR_VERSION : VERSION;
+}
+
+export function routeMinSdk(paths: string[]): string {
+  let need = ROUTE_MIN_SDK[VERSION];
+  for (const path of paths) {
+    const head = Buffer.alloc(6);
+    const fd = openSync(path, 'r');
+    try {
+      readSync(fd, head, 0, 6, 0);
+    } finally {
+      closeSync(fd);
+    }
+    const sdk = ROUTE_MIN_SDK[head.readUInt16LE(4) as RouteFormat];
+    if (!sdk) throw new Error(`${path}: bilinmeyen rota paketi sürümü ${head.readUInt16LE(4)}`);
+    if (compareVersions(sdk, need) > 0) need = sdk;
+  }
+  return need;
+}
+
+export function mirrorFlags(h: Hierarchy): { up: Uint8Array; down: Uint8Array } {
+  const up = new Uint8Array(h.upTo.length);
+  const down = new Uint8Array(h.downFrom.length);
+  for (let v = 0; v < h.n; v++) {
+    const single = new Map<number, number>();
+    const twice = new Set<number>();
+    for (let k = h.downFirst[v] as number; k < (h.downFirst[v + 1] as number); k++) {
+      const from = h.downFrom[k] as number;
+      if (single.has(from)) twice.add(from);
+      else single.set(from, k);
+    }
+    for (let i = h.upFirst[v] as number; i < (h.upFirst[v + 1] as number); i++) {
+      const to = h.upTo[i] as number;
+      const k = single.get(to);
+      if (k === undefined || twice.has(to) || down[k] === 1) continue;
+      if (h.downW[k] === h.upW[i] && h.downLen[k] === h.upLen[i] && h.downVia[k] === mirrorVia(h.upVia[i] as number)) {
+        up[i] = 1;
+        down[k] = 1;
+      }
+    }
+  }
+  return { up, down };
+}
 
 type Writer = { u(v: number): void; z(v: number): void; byte(v: number): void; u32(v: number): void; i32(v: number): void; length(): number; bytes(): Uint8Array };
 
@@ -103,30 +156,41 @@ function cellsOfSegment(x0: number, y0: number, x1: number, y1: number, originLo
   }
 }
 
-function writeHierarchy(w: Writer, h: Hierarchy, up: boolean): void {
+function writeHierarchy(w: Writer, h: Hierarchy, up: boolean, mirrors: { up: Uint8Array; down: Uint8Array } | null): void {
   const first = up ? h.upFirst : h.downFirst;
   const other = up ? h.upTo : h.downFrom;
   const weight = up ? h.upW : h.downW;
   const length = up ? h.upLen : h.downLen;
   const via = up ? h.upVia : h.downVia;
-  w.u(other.length);
+  const skip = mirrors && !up ? mirrors.down : null;
+  const flag = mirrors && up ? mirrors.up : null;
+  let total = other.length;
+  if (skip) for (let i = 0; i < skip.length; i++) total -= skip[i] as number;
+  w.u(total);
   for (let v = 0; v < h.n; v++) {
     const from = first[v] as number;
     const to = first[v + 1] as number;
-    w.u(to - from);
+    let count = to - from;
+    if (skip) for (let i = from; i < to; i++) count -= skip[i] as number;
+    w.u(count);
     let previous = v;
+    let firstKept = true;
     for (let i = from; i < to; i++) {
-      w.u((other[i] as number) - previous - (i === from ? 1 : 0));
+      if (skip?.[i] === 1) continue;
+      w.u((other[i] as number) - previous - (firstKept ? 1 : 0));
+      firstKept = false;
       previous = other[i] as number;
       w.u(weight[i] as number);
       w.u(length[i] as number);
       const raw = via[i] as number;
-      w.u(raw >= ORIGINAL ? (raw & VIA_MASK) * 2 + 1 : raw * 2);
+      const encoded = raw >= ORIGINAL ? (raw & VIA_MASK) * 2 + 1 : raw * 2;
+      w.u(flag ? encoded * 2 + (flag[i] as number) : encoded);
     }
   }
 }
 
-export function buildRoutePack(rows: RoadRows, options: GraphOptions & { plate?: string }): { bytes: Uint8Array; report: PackReport; graph: RoadGraph } {
+export function buildRoutePack(rows: RoadRows, options: GraphOptions & { plate?: string; format?: RouteFormat }): { bytes: Uint8Array; report: PackReport; graph: RoadGraph } {
+  const format = options.format ?? VERSION;
   const base = buildBaseGraph(rows, options);
   const graph = applyRestrictions(base, options.comparison === true ? [] : rows.rules);
   const component = largestComponent(buildCsr(graph.nodeCount, graph.arcTail, graph.arcHead, graph.arcDs));
@@ -219,11 +283,12 @@ export function buildRoutePack(rows: RoadRows, options: GraphOptions & { plate?:
   part(SECTION.edges, 'edges', edges);
   part(SECTION.shapes, 'shapes', shapes);
 
+  const mirrors = format === MIRROR_VERSION ? mirrorFlags(hierarchy) : null;
   const up = createWriter();
-  writeHierarchy(up, hierarchy, true);
+  writeHierarchy(up, hierarchy, true, mirrors);
   part(SECTION.up, 'up', up);
   const down = createWriter();
-  writeHierarchy(down, hierarchy, false);
+  writeHierarchy(down, hierarchy, false, mirrors);
   part(SECTION.down, 'down', down);
 
   const entry = createWriter();
@@ -272,7 +337,7 @@ export function buildRoutePack(rows: RoadRows, options: GraphOptions & { plate?:
   const file = new Uint8Array(tableBytes + parts.reduce((sum, p) => sum + p[1].length, 0));
   const view = new DataView(file.buffer);
   view.setUint32(0, MAGIC, true);
-  view.setUint16(4, VERSION, true);
+  view.setUint16(4, format, true);
   view.setUint16(6, 0, true);
   view.setUint32(8, graph.nodeCount, true);
   view.setUint32(12, baseCount, true);
@@ -309,4 +374,37 @@ export function buildRoutePack(rows: RoadRows, options: GraphOptions & { plate?:
       sections,
     },
   };
+}
+
+export function rewriteRoutePack(bytes: Uint8Array, format: RouteFormat): Uint8Array {
+  const { hierarchy } = readRoutePack(bytes);
+  const source = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const mirrors = format === MIRROR_VERSION ? mirrorFlags(hierarchy) : null;
+  const parts: [number, Uint8Array][] = [];
+  for (let i = 0; i < source.getUint32(40, true); i++) {
+    const at = 44 + i * 9;
+    const id = source.getUint8(at);
+    const start = source.getUint32(at + 1, true);
+    if (id !== SECTION.up && id !== SECTION.down) {
+      parts.push([id, bytes.subarray(start, start + source.getUint32(at + 5, true))]);
+      continue;
+    }
+    const w = createWriter();
+    writeHierarchy(w, hierarchy, id === SECTION.up, mirrors);
+    parts.push([id, w.bytes()]);
+  }
+  const tableBytes = 44 + parts.length * 9;
+  const file = new Uint8Array(tableBytes + parts.reduce((sum, p) => sum + p[1].length, 0));
+  file.set(bytes.subarray(0, 44));
+  const view = new DataView(file.buffer);
+  view.setUint16(4, format, true);
+  let offset = tableBytes;
+  parts.forEach(([id, part], i) => {
+    view.setUint8(44 + i * 9, id);
+    view.setUint32(44 + i * 9 + 1, offset, true);
+    view.setUint32(44 + i * 9 + 5, part.length, true);
+    file.set(part, offset);
+    offset += part.length;
+  });
+  return file;
 }

@@ -1,8 +1,9 @@
 import { cursorOf, packError } from './bytes';
-import { ORIGINAL, type Hierarchy } from './hierarchy';
+import { ORIGINAL, VIA_MASK, type Hierarchy } from './hierarchy';
 
 export const MAGIC = 0x54524759;
 export const VERSION = 1;
+export const MIRROR_VERSION = 2;
 export const SECTION = { nodes: 1, edges: 2, shapes: 3, up: 4, down: 5, entry: 6, exits: 7, grid: 8 } as const;
 
 export const FLAG = { forward: 1, backward: 2, main: 4, penaltyForward: 8, penaltyBackward: 16, classShift: 5 } as const;
@@ -38,10 +39,13 @@ const MAX_NODES = 1 << 26;
 
 type Table = Map<number, [number, number]>;
 
+export const mirrorVia = (via: number): number => (via >= ORIGINAL ? (ORIGINAL + ((via & VIA_MASK) ^ 1)) >>> 0 : via);
+
 function readTable(buf: Uint8Array, view: DataView): Table {
   if (buf.length < HEADER_BYTES) throw packError('too short');
   if (view.getUint32(0, true) !== MAGIC) throw packError('not a route pack');
-  if (view.getUint16(4, true) !== VERSION) throw packError('unknown version');
+  const version = view.getUint16(4, true);
+  if (version !== VERSION && version !== MIRROR_VERSION) throw packError('unknown version');
   const sections = view.getUint32(40, true);
   if (sections > 32 || HEADER_BYTES + sections * TABLE_ENTRY > buf.length) throw packError('bad section table');
   const table: Table = new Map();
@@ -61,8 +65,46 @@ function section(table: Table, id: number): [number, number] {
   return found;
 }
 
-function readHierarchy(buf: Uint8Array, table: Table, n: number): Hierarchy {
-  const read = (id: number): { first: Uint32Array; other: Uint32Array; w: Uint32Array; len: Uint32Array; via: Uint32Array } => {
+type Arcs = { first: Uint32Array; other: Uint32Array; w: Uint32Array; len: Uint32Array; via: Uint32Array; mirror: Uint8Array | null };
+
+function withMirrors(n: number, up: Arcs, rest: Arcs): Arcs {
+  const mirror = up.mirror as Uint8Array;
+  let extra = 0;
+  for (let i = 0; i < mirror.length; i++) extra += mirror[i] as number;
+  const total = rest.other.length + extra;
+  const out: Arcs = { first: new Uint32Array(n + 1), other: new Uint32Array(total), w: new Uint32Array(total), len: new Uint32Array(total), via: new Uint32Array(total), mirror: null };
+  let at = 0;
+  const take = (from: Arcs, i: number, via: number): void => {
+    out.other[at] = from.other[i] as number;
+    out.w[at] = from.w[i] as number;
+    out.len[at] = from.len[i] as number;
+    out.via[at] = via;
+    at++;
+  };
+  for (let v = 0; v < n; v++) {
+    let i = rest.first[v] as number;
+    const restEnd = rest.first[v + 1] as number;
+    let j = up.first[v] as number;
+    const upEnd = up.first[v + 1] as number;
+    while (j < upEnd && mirror[j] === 0) j++;
+    while (i < restEnd || j < upEnd) {
+      if (j >= upEnd || (i < restEnd && (rest.other[i] as number) < (up.other[j] as number))) {
+        take(rest, i, rest.via[i] as number);
+        i++;
+        continue;
+      }
+      if (i < restEnd && rest.other[i] === up.other[j]) throw packError('mirror clash');
+      take(up, j, mirrorVia(up.via[j] as number));
+      j++;
+      while (j < upEnd && mirror[j] === 0) j++;
+    }
+    out.first[v + 1] = at;
+  }
+  return out;
+}
+
+function readHierarchy(buf: Uint8Array, table: Table, n: number, version: number): Hierarchy {
+  const read = (id: number, mirrored: boolean): Arcs => {
     const [start, end] = section(table, id);
     const c = cursorOf(buf, start, end);
     const total = c.u();
@@ -72,6 +114,7 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number): Hierarchy {
     const w = new Uint32Array(total);
     const len = new Uint32Array(total);
     const via = new Uint32Array(total);
+    const mirror = mirrored ? new Uint8Array(total) : null;
     let at = 0;
     for (let v = 0; v < n; v++) {
       const count = c.u();
@@ -83,7 +126,11 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number): Hierarchy {
         other[at] = previous;
         w[at] = c.u();
         len[at] = c.u();
-        const raw = c.u();
+        let raw = c.u();
+        if (mirror) {
+          mirror[at] = raw % 2;
+          raw = (raw - (raw % 2)) / 2;
+        }
         const isOriginal = raw % 2 === 1;
         const value = (raw - (isOriginal ? 1 : 0)) / 2;
         if (!isOriginal && value >= v) throw packError('shortcut middle');
@@ -93,10 +140,12 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number): Hierarchy {
       first[v + 1] = at;
     }
     if (at !== total) throw packError('entry count mismatch');
-    return { first, other, w, len, via };
+    return { first, other, w, len, via, mirror };
   };
-  const up = read(SECTION.up);
-  const down = read(SECTION.down);
+  const mirrored = version === MIRROR_VERSION;
+  const up = read(SECTION.up, mirrored);
+  const stored = read(SECTION.down, false);
+  const down = mirrored ? withMirrors(n, up, stored) : stored;
   return {
     n,
     upFirst: up.first,
@@ -210,7 +259,7 @@ export function readRoutePack(buf: Uint8Array): RoutePack {
 
   return {
     bbox,
-    hierarchy: readHierarchy(buf, table, nodeCount),
+    hierarchy: readHierarchy(buf, table, nodeCount, view.getUint16(4, true)),
     base: { count: baseCount, lon, lat, node: hid },
     edges: { count: edgeCount, tail, head, flags, length, travel, shapeOffset, shapes: buf.slice(shapesStart, shapesEnd) },
     entry: readPairs(buf, table, SECTION.entry, nodeCount),
