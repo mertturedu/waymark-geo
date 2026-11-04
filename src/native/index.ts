@@ -24,6 +24,8 @@ export type { MapFont, MapStyle, StyleInput } from './map/style';
 export { MapLegend } from './react/MapLegend';
 export { GeoUserLocation } from './react/GeoUserLocation';
 export { LocateButton } from './react/LocateButton';
+export { useMapRotation } from './react/useMapRotation';
+export type { MapRotation, RotationEvent, RotationOptions } from './react/useMapRotation';
 export { useLocateMe } from './react/useLocateMe';
 export { useLocationRegion } from './react/useLocationRegion';
 export type { LocateControls, LocateOptions } from './react/useLocateMe';
