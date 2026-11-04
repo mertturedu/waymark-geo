@@ -1,4 +1,4 @@
-import { Decompress } from 'fzstd';
+import { Decompress } from './fzstd';
 import type { DecodePort } from './ports';
 
 export const createZstdDecode = (): DecodePort => ({

@@ -28,7 +28,7 @@ const commonjsFiles = {
 };
 
 export default tseslint.config(
-  { ignores: ['node_modules', 'dist', 'lib', 'coverage', '.stryker-tmp', 'example/**', 'pipeline/.venv/**', 'pipeline/bin/**'] },
+  { ignores: ['node_modules', 'dist', 'lib', 'coverage', '.stryker-tmp', 'example/**', 'pipeline/.venv/**', 'pipeline/bin/**', 'src/core/packs/fzstd.ts'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   commonjsFiles,

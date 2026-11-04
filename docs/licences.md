@@ -15,6 +15,7 @@ This page lists what the SDK and its data packs are built from and what each lic
 | Noto Sans glyph files (base pack) | Google Noto fonts through Protomaps assets | SIL OFL 1.1 | keep the licence with the fonts; do not sell the fonts alone |
 | Inter glyph files (only with `GEO_FONT=inter`) | Inter 4.0, Rasmus Andersson | SIL OFL 1.1 | same as Noto; the files are built by `npm run fonts` and merged with Noto glyphs |
 | Signing and hashing code | `@noble/curves`, `@noble/hashes` | MIT | keep the notice |
+| zstd decoder | fzstd 0.1.1, Arjun Barrett, copied into `src/core/packs/fzstd.ts` with a faster streaming window | MIT | keep the notice; the package ships it in `THIRD_PARTY_NOTICES.md` |
 | Map view in the apps | `@maplibre/maplibre-react-native` | MIT | keep the notice |
 
 Not checked in this repository: the licence of the Protomaps sprite pictures that come with the base pack. Check it before the packs are published.
