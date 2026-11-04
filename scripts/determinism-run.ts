@@ -1,10 +1,12 @@
 import { createHash } from 'node:crypto';
 import { createReadStream, readdirSync } from 'node:fs';
-import { existsSync, mkdirSync, readFileSync, readdirSync as list, rmSync } from 'node:fs';
+import { existsSync, linkSync, mkdirSync, readFileSync, readdirSync as list, rmSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assemblePacks, type RegionInput } from '../pipeline/build/manifest';
-import { buildSteps, resolvePlates, runSteps, type Step } from '../pipeline/build/orchestrate';
+import { buildSteps, encodeInput, pruneEnabled, pruneInput, resolvePlates, runSteps, tileFiles, type Step } from '../pipeline/build/orchestrate';
+import { encodeAll, tileFormat } from '../pipeline/build/tile-encode';
+import { pruneBuild } from '../pipeline/build/tile-prune';
 import { PRIORITY_PLATES, buildBasePack, buildProvinceTiles, defaultRunner } from '../pipeline/build/tiles';
 import { createBorders } from '../src/core/region/borders';
 import adminData from '../src/core/text/data/admin.json';
@@ -44,14 +46,14 @@ export async function compareTrees(a: string, b: string, include: (path: string)
 
 export function isComparable(path: string, build: string, priority: string[]): boolean {
   if (path === 'validation.json' || path === 'borders.bin' || path.startsWith('clips/')) return false;
-  const tiles = `tiles-${build}/`;
-  return !path.startsWith(tiles) || priority.includes(path.slice(tiles.length, tiles.length + 2));
+  const tiles = [`tiles-${build}/`, `tiles-${build}-pruned/`, `tiles-${build}-mlt/`, `tiles-${build}-pruned-mlt/`].find((dir) => path.startsWith(dir));
+  return !tiles || priority.includes(path.slice(tiles.length, tiles.length + 2));
 }
 
 export type DeterminismResult = TreeComparison & { bordersEqual: boolean; manifestsEqual: boolean; tilesCompared: number };
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
-const LEFT_OUT = ['karolar', 'doğrulama ve yayın'];
+const LEFT_OUT = ['karolar', 'karo budama', 'karo kodlama', 'doğrulama ve yayın'];
 
 export const stepsToRepeat = (steps: Step[]): Step[] => steps.filter((s) => !LEFT_OUT.includes(s.name));
 
@@ -68,6 +70,15 @@ export async function runDeterminism(sources: Sources, log: (line: string) => vo
   const budgets: Record<string, number> = {};
   await buildBasePack({ build: sources.tilesBuild, outDir: join(second, `base-${sources.tilesBuild}`) });
   await buildProvinceTiles({ regionsDir: join(second, 'regions'), outDir: join(second, `tiles-${sources.tilesBuild}`), build: sources.tilesBuild, plates: [...PRIORITY_PLATES].sort(), budgets, log });
+  if (pruneEnabled()) {
+    for (const plate of plates.filter((p) => !PRIORITY_PLATES.includes(p))) {
+      const from = tileFiles(first, sources.tilesBuild, false).tiles(plate);
+      const to = tileFiles(second, sources.tilesBuild, false).tiles(plate);
+      if (existsSync(from) && !existsSync(to)) linkSync(from, to);
+    }
+    pruneBuild(pruneInput(second, sources.tilesBuild, plates, log));
+  }
+  if (tileFormat() === 'mlt') await encodeAll(encodeInput(second, sources.tilesBuild, plates, log));
 
   const tileDir = `tiles-${sources.tilesBuild}/`;
   const tree = await compareTrees(first, second, (path) => isComparable(path, sources.tilesBuild, PRIORITY_PLATES));
@@ -87,8 +98,8 @@ export async function runDeterminism(sources: Sources, log: (line: string) => vo
         files: [
           { kind: 'address' as const, source: join(work, 'packs', plate, 'address.sqlite') },
           ...(existsSync(join(work, 'packs', plate, 'buildings.sqlite')) ? [{ kind: 'buildings' as const, source: join(work, 'packs', plate, 'buildings.sqlite') }] : []),
-          { kind: 'tiles' as const, source: join(work, `${tileDir}${plate}.pmtiles`) },
-          ...(existsSync(join(work, 'overture', `${plate}.pmtiles`)) ? [{ kind: 'places' as const, source: join(work, 'overture', `${plate}.pmtiles`) }] : []),
+          { kind: 'tiles' as const, source: tileFiles(work, sources.tilesBuild).tiles(plate) },
+          ...(existsSync(tileFiles(work, sources.tilesBuild).places(plate)) ? [{ kind: 'places' as const, source: tileFiles(work, sources.tilesBuild).places(plate) }] : []),
           ...(existsSync(join(work, 'packs', plate, 'directory.sqlite')) ? [{ kind: 'directory' as const, source: join(work, 'packs', plate, 'directory.sqlite') }] : []),
           ...(existsSync(join(work, 'packs', plate, 'route.bin')) ? [{ kind: 'route' as const, source: join(work, 'packs', plate, 'route.bin') }] : []),
         ],
@@ -99,8 +110,8 @@ export async function runDeterminism(sources: Sources, log: (line: string) => vo
   const stageB = join(second, '.stage-b');
   rmSync(stageA, { recursive: true, force: true });
   rmSync(stageB, { recursive: true, force: true });
-  await assemblePacks({ outDir: stageA, sources, regions: regionsFor(first), baseDir: join(first, `base-${sources.tilesBuild}`), keyDir, minSdk: '0.3.0' });
-  await assemblePacks({ outDir: stageB, sources, regions: regionsFor(second), baseDir: join(second, `base-${sources.tilesBuild}`), keyDir, minSdk: '0.3.0' });
+  await assemblePacks({ outDir: stageA, sources, regions: regionsFor(first), baseDir: tileFiles(first, sources.tilesBuild).base, keyDir, minSdk: '0.3.0' });
+  await assemblePacks({ outDir: stageB, sources, regions: regionsFor(second), baseDir: tileFiles(second, sources.tilesBuild).base, keyDir, minSdk: '0.3.0' });
   const manifests = await compareTrees(stageA, stageB);
   const manifestsEqual = manifests.differing.length === 0 && manifests.onlyA.length === 0 && manifests.onlyB.length === 0 && manifests.compared > 0;
   rmSync(stageA, { recursive: true, force: true });

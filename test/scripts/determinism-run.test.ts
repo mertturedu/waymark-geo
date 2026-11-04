@@ -53,6 +53,15 @@ describe('isComparable', () => {
     expect(comparable('tiles-20261021/01.pmtiles')).toBe(true);
     expect(comparable('base-20261022/overview.pmtiles')).toBe(true);
   });
+
+  it('treats the pruned tiles like the tiles they come from', () => {
+    expect(comparable('tiles-20261022-pruned/34.pmtiles')).toBe(true);
+    expect(comparable('tiles-20261022-pruned/01.pmtiles')).toBe(false);
+    expect(comparable('tiles-20261022-pruned-mlt/34.pmtiles')).toBe(true);
+    expect(comparable('tiles-20261022-pruned-mlt/01.pmtiles')).toBe(false);
+    expect(comparable('overture-pruned/01.pmtiles')).toBe(true);
+    expect(comparable('base-20261022-pruned/fonts-compact/NotoSansRegular/0-255.pbf')).toBe(true);
+  });
 });
 
 describe('stepsToRepeat', () => {
@@ -67,6 +76,8 @@ describe('stepsToRepeat', () => {
   it('leaves out the tiles and the final publish step', () => {
     const names = stepsToRepeat(steps(['34'])).map((s) => s.name);
     expect(names).not.toContain('karolar');
+    expect(names).not.toContain('karo budama');
+    expect(names).not.toContain('karo kodlama');
     expect(names).not.toContain('doğrulama ve yayın');
   });
 

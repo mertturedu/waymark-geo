@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { Decompress } from 'fzstd';
+import { Decompress } from '../../src/core/packs/fzstd';
 import { assemblePacks, encodeFile, ZSTD_KEEP_BELOW, ZSTD_KINDS, zstdCompress, type Compress, type RegionInput } from '../../pipeline/build/manifest';
 import { decodedSha256 } from '../../pipeline/validate/validate-packs';
 import { parseManifest, serializeManifest } from '../../src/core/region/manifest';

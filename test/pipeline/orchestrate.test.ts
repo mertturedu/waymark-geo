@@ -80,7 +80,7 @@ describe('buildSteps', () => {
   const make = (regions: string) => buildSteps({ plates: resolvePlates(regions), sources, workDir: '/w', outDir: '/o', pbf: '/data/turkey.osm.pbf', python: '/py', run, repoRoot: '/repo' });
 
   it('lists the steps in the order of the plan', () => {
-    expect(make('12il').map((s) => s.name)).toEqual(['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar', 'doğrulama ve yayın']);
+    expect(make('12il').map((s) => s.name)).toEqual(['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar', 'karo budama', 'karo kodlama', 'doğrulama ve yayın']);
   });
 
   it('leaves out the building points when no priority province is asked for', () => {
@@ -132,6 +132,7 @@ describe('step keys follow everything a step reads', () => {
     'pipeline/extract/extract_addresses.py', 'pipeline/extract/extract_street_parts.py', 'pipeline/extract/extract_places.py', 'pipeline/extract/extract_buildings.py', 'pipeline/extract/overture_places.py', 'pipeline/build/overture.ts', 'pipeline/config/overture.json', 'pipeline/build/directory.ts', 'pipeline/build/directory-read.ts', 'src/core/geo/distance.ts', 'pipeline/extract/extract_roads.py', 'pipeline/extract/road_rules.py', 'pipeline/build/route-graph.ts', 'pipeline/build/route-turns.ts', 'pipeline/build/route-ch.ts', 'pipeline/build/route-scc.ts', 'pipeline/build/route-pack.ts', 'src/core/route/speeds.ts', 'src/core/region/data/borders.bin',
     'pipeline/config/poi-kinds.json', 'pipeline/build/address-pack.ts', 'pipeline/build/tiles.ts', 'src/core/text/street.ts', 'src/core/text/data/admin.json', 'src/core/region/geom.ts',
     'src/core/region/borders.ts', 'scripts/build-borders.ts', 'pipeline/build/building-pack.ts', 'pipeline/build/building-select.ts', 'src/core/geo/cells.ts', 'README.md',
+    'pipeline/build/tile-prune.ts', 'pipeline/build/tile-usage.ts', 'pipeline/build/mvt.ts', 'pipeline/build/pmtiles-file.ts', 'src/native/map/style.ts', 'pipeline/build/tile-encode.ts', 'pipeline/tools.lock.json',
   ];
   const repo = (): string => {
     const dir = mkdtempSync(join(tmpdir(), 'keys-'));
@@ -152,8 +153,8 @@ describe('step keys follow everything a step reads', () => {
   };
 
   it.each([
-    ['pipeline/extract/extract_admin.py', ['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar']],
-    ['pipeline/extract/admin_pack.py', ['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar']],
+    ['pipeline/extract/extract_admin.py', ['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar', 'karo budama', 'karo kodlama']],
+    ['pipeline/extract/admin_pack.py', ['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar', 'karolar', 'karo budama', 'karo kodlama']],
     ['pipeline/extract/extract_roads.py', ['yollar', 'rota paketleri']],
     ['pipeline/extract/road_rules.py', ['yollar', 'rota paketleri']],
     ['pipeline/build/route-graph.ts', ['rota paketleri']],
@@ -163,27 +164,32 @@ describe('step keys follow everything a step reads', () => {
     ['pipeline/build/route-pack.ts', ['rota paketleri']],
     ['src/core/route/speeds.ts', ['rota paketleri']],
     ['src/core/region/data/borders.bin', ['rota paketleri']],
-    ['pipeline/extract/extract_addresses.py', ['adresler', 'adres paketleri', 'bina paketleri']],
-    ['pipeline/extract/extract_street_parts.py', ['sokaklar', 'adres paketleri', 'bina paketleri']],
-    ['pipeline/extract/extract_places.py', ['yerler', 'adres paketleri', 'bina paketleri']],
-    ['pipeline/config/poi-kinds.json', ['yerler', 'adres paketleri', 'bina paketleri']],
+    ['pipeline/extract/extract_addresses.py', ['adresler', 'adres paketleri', 'bina paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/extract/extract_street_parts.py', ['sokaklar', 'adres paketleri', 'bina paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/extract/extract_places.py', ['yerler', 'adres paketleri', 'bina paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/config/poi-kinds.json', ['yerler', 'adres paketleri', 'bina paketleri', 'karo budama', 'karo kodlama']],
     ['pipeline/extract/extract_buildings.py', ['binalar', 'bina paketleri']],
-    ['pipeline/build/address-pack.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri']],
+    ['pipeline/build/address-pack.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'karo budama', 'karo kodlama']],
     ['pipeline/build/directory.ts', ['rehber paketleri']],
     ['pipeline/build/directory-read.ts', ['rehber paketleri']],
     ['src/core/geo/distance.ts', ['rehber paketleri', 'rota paketleri']],
     ['pipeline/build/building-pack.ts', ['bina paketleri']],
     ['pipeline/build/building-select.ts', ['bina paketleri']],
-    ['src/core/geo/cells.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri']],
-    ['src/core/text/street.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri']],
-    ['src/core/text/data/admin.json', ['adres paketleri', 'bina paketleri', 'rehber paketleri']],
-    ['src/core/region/geom.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'gömülü sınırlar']],
+    ['src/core/geo/cells.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['src/core/text/street.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['src/core/text/data/admin.json', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['src/core/region/geom.ts', ['adres paketleri', 'bina paketleri', 'rehber paketleri', 'gömülü sınırlar', 'karo budama', 'karo kodlama']],
     ['src/core/region/borders.ts', ['gömülü sınırlar']],
     ['scripts/build-borders.ts', ['gömülü sınırlar']],
-    ['pipeline/build/tiles.ts', ['karolar']],
-    ['pipeline/extract/overture_places.py', ['işletmeler', 'rehber paketleri']],
-    ['pipeline/build/overture.ts', ['işletmeler', 'rehber paketleri']],
-    ['pipeline/config/overture.json', ['işletmeler', 'rehber paketleri']],
+    ['pipeline/build/tiles.ts', ['karolar', 'karo budama', 'karo kodlama']],
+    ['pipeline/extract/overture_places.py', ['işletmeler', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/build/overture.ts', ['işletmeler', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/config/overture.json', ['işletmeler', 'rehber paketleri', 'karo budama', 'karo kodlama']],
+    ['pipeline/build/tile-prune.ts', ['karo budama', 'karo kodlama']],
+    ['pipeline/build/tile-usage.ts', ['karo budama', 'karo kodlama']],
+    ['pipeline/build/mvt.ts', ['karo budama', 'karo kodlama']],
+    ['pipeline/build/pmtiles-file.ts', ['karo budama', 'karo kodlama']],
+    ['src/native/map/style.ts', ['karo budama', 'karo kodlama']],
     ['README.md', []],
   ])('a change in %s moves exactly the steps that depend on it', (file, steps) => {
     expect(changed(file).sort()).toEqual([...steps].sort());

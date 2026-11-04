@@ -1,10 +1,11 @@
 import { createHash, createPublicKey, verify } from 'node:crypto';
 import { createReadStream, existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { Decompress } from 'fzstd';
+import { Decompress } from '../../src/core/packs/fzstd';
 import { DatabaseSync } from 'node:sqlite';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defaultRunner, parseBounds, pmtilesBin, type Runner } from '../build/tiles';
+import { nameMatchesFormat } from '../build/tile-encode';
 import type { Borders } from '../../src/core/region/borders';
 import { cellOf, cellsOfLine } from '../../src/core/geo/cells';
 import { decodePostings } from '../../src/core/text/trigram';
@@ -359,6 +360,7 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
     if (!sound.has(file.path)) continue;
     const full = join(root, file.path);
     const add = report(file.path);
+    if (file.path.endsWith('.pmtiles') && !nameMatchesFormat(file.path, full)) add('error', 'dosya adı karo biçimiyle uyuşmuyor (.mlt.pmtiles yalnızca MLT içindir)');
     if (file.kind === 'address' && region) {
       const totals = checkPack(full, region, options.sampleRows ?? 50_000, options.borders, add);
       summary.addressRows = (summary.addressRows ?? 0) + totals.rows;

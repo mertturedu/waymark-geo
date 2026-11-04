@@ -3,8 +3,9 @@ import { createHash, createPrivateKey, createPublicKey, generateKeyPairSync, sig
 import { closeSync, copyFileSync, createReadStream, openSync, readSync, existsSync, linkSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join, relative } from 'node:path';
-import { serializeManifest, type Box, type EncodedFile, type FileBlocks, type Manifest, type ManifestFile, type ManifestRegion, type Tier } from '../../src/core/region/manifest';
+import { MLT_SUFFIX, serializeManifest, type Box, type EncodedFile, type FileBlocks, type Manifest, type ManifestFile, type ManifestRegion, type Tier } from '../../src/core/region/manifest';
 import { revisionSuffix, type Sources } from '../../scripts/fetch-sources';
+import { isMlt } from './tile-encode';
 
 export type RegionInput = {
   id: string;
@@ -140,7 +141,8 @@ export async function assemblePacks(input: { outDir: string; sources: Sources; r
     const files: ManifestFile[] = [];
     for (const item of [...region.files].sort((a, b) => (a.kind < b.kind ? -1 : a.kind > b.kind ? 1 : 0))) {
       const sha256 = await hashFile(item.source);
-      const path = `${region.id}/${item.kind}-${sha256.slice(0, 8)}.${EXTENSION[item.kind]}`;
+      const extension = (item.kind === 'tiles' || item.kind === 'places') && isMlt(item.source) ? MLT_SUFFIX.slice(1) : EXTENSION[item.kind];
+      const path = `${region.id}/${item.kind}-${sha256.slice(0, 8)}.${extension}`;
       place(item.source, join(input.outDir, path));
       const entry: ManifestFile = { kind: item.kind, path, size: statSync(item.source).size, sha256, ...withBlocks(item.source) };
       count += 1;

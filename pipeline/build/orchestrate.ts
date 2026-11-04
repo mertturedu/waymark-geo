@@ -10,9 +10,12 @@ import { buildAddressPack, type PackStats } from './address-pack';
 import { buildBuildingPack } from './building-pack';
 import { buildDirectoryPack } from './directory';
 import { PACK_OPTIONS, graphOptionsFor, parseRoadRows } from './route-graph';
-import { buildRoutePack } from './route-pack';
+import { buildRoutePack, routeFormat, routeMinSdk } from './route-pack';
 import { buildOverturePlaces, overtureRelease } from './overture';
 import { assemblePacks, defaultKeyDir, ensureDevKey, type RegionInput } from './manifest';
+import { encodeAll, tileFormat, tilesMinSdk, type TileFormat } from './tile-encode';
+import { pruneBuild, type PruneInput } from './tile-prune';
+import { styleVariants, usageProfile } from './tile-usage';
 import { INTER_DIR, PRIORITY_PLATES, buildBasePack, buildProvinceTiles, defaultRunner, type Runner } from './tiles';
 
 export type Step = { name: string; key: string; always?: boolean; run: () => Promise<void> };
@@ -87,6 +90,44 @@ export async function finalizePublish(input: { staging: string; outDir: string; 
   promote(input.staging, input.outDir);
 }
 
+export const pruneEnabled = (): boolean => process.env.GEO_PRUNE !== '0';
+
+export function tileFiles(workDir: string, build: string, pruned = pruneEnabled(), format: TileFormat = tileFormat()): { tiles: (plate: string) => string; places: (plate: string) => string; base: string } {
+  const suffix = pruned ? '-pruned' : '';
+  const encoded = format === 'mlt' ? '-mlt' : '';
+  return {
+    tiles: (plate) => join(workDir, `tiles-${build}${suffix}${encoded}`, `${plate}.pmtiles`),
+    places: (plate) => join(workDir, `overture${suffix}${encoded}`, `${plate}.pmtiles`),
+    base: join(workDir, `base-${build}${suffix}`),
+  };
+}
+
+export function pruneInput(workDir: string, build: string, plates: string[], log?: (line: string) => void): PruneInput {
+  const source = tileFiles(workDir, build, false, 'mvt');
+  const target = tileFiles(workDir, build, true, 'mvt');
+  return {
+    plates,
+    tiles: (plate) => ({ source: source.tiles(plate), target: target.tiles(plate) }),
+    places: (plate) => ({ source: source.places(plate), target: target.places(plate) }),
+    addressFile: (plate) => join(workDir, 'packs', plate, 'address.sqlite'),
+    base: { source: source.base, target: target.base },
+    ...(log ? { log } : {}),
+  };
+}
+
+export function encodeInput(workDir: string, build: string, plates: string[], log?: (line: string) => void): Parameters<typeof encodeAll>[0] {
+  const source = tileFiles(workDir, build, pruneEnabled(), 'mvt');
+  const target = tileFiles(workDir, build, pruneEnabled(), 'mlt');
+  return {
+    plates,
+    files: (plate) => [
+      { source: source.tiles(plate), target: target.tiles(plate) },
+      { source: source.places(plate), target: target.places(plate) },
+    ],
+    ...(log ? { log } : {}),
+  };
+}
+
 type StepInput = { plates: string[]; sources: Sources; workDir: string; outDir: string; pbf: string; python: string; run: Runner; repoRoot: string; keyDir?: string; bordersOut?: string; log?: (line: string) => void };
 
 function filesUnder(path: string): string[] {
@@ -129,9 +170,16 @@ export function buildSteps(input: StepInput): Step[] {
   const businessKey = digest({ boundaryKey, plates, release: overtureRelease(), code: fingerprint(repoRoot, ['pipeline/extract/overture_places.py', 'pipeline/extract/chains.py', 'pipeline/extract/osm_chains.py', 'pipeline/extract/place_names.py', 'pipeline/extract/osm_names.py', 'pipeline/extract/building_index.py', 'src/native/map/abbreviate.ts', 'src/native/map/chains.json', 'pipeline/build/overture.ts', 'pipeline/build/places-annotate.ts', 'src/native/map/poi-glyphs.ts', 'pipeline/config/overture.json']), pbf: input.pbf });
   const directoryKey = digest({ businessKey, code: fingerprint(repoRoot, ['pipeline/build/directory.ts', 'pipeline/build/directory-read.ts', 'pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'src/core/geo/distance.ts']) });
   const roadsKey = digest({ osm, plates, boundaryKey, code: fingerprint(repoRoot, extract(['extract_roads.py', 'road_rules.py'])) });
-  const routeKey = digest({ roadsKey, code: fingerprint(repoRoot, ['pipeline/build/route-graph.ts', 'pipeline/build/route-turns.ts', 'pipeline/build/route-ch.ts', 'pipeline/build/route-scc.ts', 'pipeline/build/route-pack.ts', 'src/core/route', 'src/core/geo/distance.ts', 'src/core/region/data/borders.bin']) });
+  const format = routeFormat();
+  const routeKey = digest({ roadsKey, format, code: fingerprint(repoRoot, ['pipeline/build/route-graph.ts', 'pipeline/build/route-turns.ts', 'pipeline/build/route-ch.ts', 'pipeline/build/route-scc.ts', 'pipeline/build/route-pack.ts', 'src/core/route', 'src/core/geo/distance.ts', 'src/core/region/data/borders.bin']) });
   const routeBorders = (): Borders => createBorders(readFileSync(join(repoRoot, 'src', 'core', 'region', 'data', 'borders.bin')));
   const packKey = digest({ addressesKey, streetsKey, placesKey, code: fingerprint(repoRoot, ['pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'pipeline/config/poi-kinds.json']) });
+  const tilesKey = digest({ build: sources.tilesBuild, plates, boundaryKey, code: fingerprint(repoRoot, ['pipeline/build/tiles.ts']) });
+  const pruned = pruneEnabled();
+  const pruneKey = digest({ tilesKey, businessKey, packKey, pruned, code: fingerprint(repoRoot, ['pipeline/build/tile-prune.ts', 'pipeline/build/tile-usage.ts', 'pipeline/build/mvt.ts', 'pipeline/build/pmtiles-file.ts', 'src/native/map', 'node_modules/@protomaps/basemaps/package.json', 'node_modules/@maplibre/maplibre-gl-style-spec/package.json']) });
+  const encoding = tileFormat();
+  const encodeKey = digest({ pruneKey, encoding, code: fingerprint(repoRoot, ['pipeline/build/tile-encode.ts', 'pipeline/tools.lock.json']) });
+  const files = tileFiles(workDir, sources.tilesBuild, pruned);
   const steps: Step[] = [
     {
       name: 'sınırlar',
@@ -207,7 +255,7 @@ export function buildSteps(input: StepInput): Step[] {
         for (const plate of plates) {
           const rows = parseRoadRows(readFileSync(join(workDir, 'roads', plate, 'roads.jsonl'), 'utf8'));
           mkdirSync(join(workDir, 'packs', plate), { recursive: true });
-          const { bytes, report } = buildRoutePack(rows, { ...graphOptionsFor({ ...PACK_OPTIONS, plate }, routeBorders()), plate });
+          const { bytes, report } = buildRoutePack(rows, { ...graphOptionsFor({ ...PACK_OPTIONS, plate }, routeBorders()), plate, format });
           writeAtomic(join(workDir, 'packs', plate, 'route.bin'), bytes);
           writeAtomic(join(workDir, 'packs', plate, 'route-stats.json'), JSON.stringify(report));
           input.log?.(`rota ${plate}: ${report.baseNodes} kavşak, ${report.edges} yol parçası, ${report.bytes} bayt, ana ağ %${(report.mainShare * 100).toFixed(1)}`);
@@ -225,11 +273,29 @@ export function buildSteps(input: StepInput): Step[] {
     },
     {
       name: 'karolar',
-      key: digest({ build: sources.tilesBuild, plates, boundaryKey, code: fingerprint(repoRoot, ['pipeline/build/tiles.ts']) }),
+      key: tilesKey,
       async run() {
         const budgets = Object.fromEntries((JSON.parse(readFileSync(join(repoRoot, 'fixtures', 'section3-door-counts.json'), 'utf8')) as { plate: string; tileMB: number }[]).map((r) => [r.plate, r.tileMB]));
         await buildBasePack({ build: sources.tilesBuild, outDir: join(workDir, `base-${sources.tilesBuild}`), run: input.run, ...(process.env.GEO_FONT === 'inter' ? { interDir: INTER_DIR } : {}) });
         await buildProvinceTiles({ regionsDir: join(workDir, 'regions'), outDir: join(workDir, `tiles-${sources.tilesBuild}`), build: sources.tilesBuild, plates, budgets, run: input.run, log: input.log });
+      },
+    },
+    {
+      name: 'karo budama',
+      key: pruneKey,
+      async run() {
+        if (!pruned) return;
+        const report = pruneBuild(pruneInput(workDir, sources.tilesBuild, plates, input.log));
+        writeAtomic(join(workDir, `prune-${sources.tilesBuild}.json`), JSON.stringify(report));
+      },
+    },
+    {
+      name: 'karo kodlama',
+      key: encodeKey,
+      async run() {
+        if (encoding !== 'mlt') return;
+        if (usageProfile(styleVariants()).usesIds) throw new Error('stil özellik kimliği okuyor; MLT karolarında kimlikler silinir');
+        await encodeAll({ ...encodeInput(workDir, sources.tilesBuild, plates, input.log), run: input.run });
       },
     },
     {
@@ -253,9 +319,9 @@ export function buildSteps(input: StepInput): Step[] {
             stats: { addresses: stats.rows, streets: stats.streets, neighbourhoods: stats.neighbourhoods },
             files: [
               { kind: 'address' as const, source: join(workDir, 'packs', plate, 'address.sqlite') },
-              { kind: 'tiles' as const, source: join(workDir, `tiles-${sources.tilesBuild}`, `${plate}.pmtiles`) },
+              { kind: 'tiles' as const, source: files.tiles(plate) },
               ...(PRIORITY_PLATES.includes(plate) && existsSync(join(workDir, 'packs', plate, 'buildings.sqlite')) ? [{ kind: 'buildings' as const, source: join(workDir, 'packs', plate, 'buildings.sqlite') }] : []),
-              ...(existsSync(join(workDir, 'overture', `${plate}.pmtiles`)) ? [{ kind: 'places' as const, source: join(workDir, 'overture', `${plate}.pmtiles`) }] : []),
+              ...(existsSync(files.places(plate)) ? [{ kind: 'places' as const, source: files.places(plate) }] : []),
               ...(existsSync(join(workDir, 'packs', plate, 'directory.sqlite')) ? [{ kind: 'directory' as const, source: join(workDir, 'packs', plate, 'directory.sqlite') }] : []),
               ...(existsSync(join(workDir, 'packs', plate, 'route.bin')) ? [{ kind: 'route' as const, source: join(workDir, 'packs', plate, 'route.bin') }] : []),
             ],
@@ -264,7 +330,9 @@ export function buildSteps(input: StepInput): Step[] {
         const staging = `${outDir}.staging`;
         rmSync(staging, { recursive: true, force: true });
         const keyDir = input.keyDir ?? defaultKeyDir();
-        await assemblePacks({ outDir: staging, sources, regions, baseDir: join(workDir, `base-${sources.tilesBuild}`), keyDir, minSdk: '0.3.0' });
+        const filesOf = (kinds: string[]): string[] => regions.flatMap((region) => region.files.filter((file) => kinds.includes(file.kind)).map((file) => file.source));
+        const minSdk = tilesMinSdk(filesOf(['tiles', 'places']), routeMinSdk(filesOf(['route'])));
+        await assemblePacks({ outDir: staging, sources, regions, baseDir: files.base, keyDir, minSdk });
         const publicKeyPem = ensureDevKey(keyDir).publicKeyPem;
         await finalizePublish({ staging, outDir, validate: () => validatePacks(staging, { run: input.run, work: workDir, publicKeyPem, borders }), log: input.log });
       },
