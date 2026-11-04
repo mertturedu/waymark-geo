@@ -336,7 +336,11 @@ export function rewritePmtiles(source: string, target: string): WriteResult {
       const data = archive.read(entry);
       for (let i = 0; i < entry.runLength; i++) tiles.push({ tileId: entry.tileId + i, data });
     }
-    return writePmtiles(target, { tileCompression: header.tileCompression, tileType: header.tileType, minZoom: header.minZoom, maxZoom: header.maxZoom, boundsE7: header.boundsE7, centerZoom: header.centerZoom, centerE7: header.centerE7 }, archive.metadata, tiles);
+    const zooms = tiles.map((tile) => zoomOfTileId(tile.tileId));
+    const minZoom = zooms.length > 0 ? Math.min(...zooms) : header.minZoom;
+    const maxZoom = zooms.length > 0 ? Math.max(...zooms) : header.maxZoom;
+    const centerZoom = Math.min(Math.max(header.centerZoom, minZoom), maxZoom);
+    return writePmtiles(target, { tileCompression: header.tileCompression, tileType: header.tileType, minZoom, maxZoom, boundsE7: header.boundsE7, centerZoom, centerE7: header.centerE7 }, archive.metadata, tiles);
   } finally {
     archive.close();
   }

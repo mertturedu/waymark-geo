@@ -65,8 +65,47 @@ describe('route pack version 2', () => {
   });
 });
 
+const withSection = (bytes: Uint8Array, id: number, part: Uint8Array): Uint8Array => {
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const count = view.getUint32(40, true);
+  const parts = Array.from({ length: count }, (_, i) => {
+    const at = 44 + i * 9;
+    const start = view.getUint32(at + 1, true);
+    return { id: view.getUint8(at), data: view.getUint8(at) === id ? part : bytes.subarray(start, start + view.getUint32(at + 5, true)) };
+  });
+  const head = 44 + count * 9;
+  const out = new Uint8Array(head + parts.reduce((sum, p) => sum + p.data.length, 0));
+  out.set(bytes.subarray(0, 44));
+  const outView = new DataView(out.buffer);
+  let offset = head;
+  parts.forEach((p, i) => {
+    outView.setUint8(44 + i * 9, p.id);
+    outView.setUint32(44 + i * 9 + 1, offset, true);
+    outView.setUint32(44 + i * 9 + 5, p.data.length, true);
+    out.set(p.data, offset);
+    offset += p.data.length;
+  });
+  return out;
+};
+
+describe('a mirrored arc that is also stored', () => {
+  it('is refused instead of being read twice', () => {
+    const v1 = buildRoutePack(world(), { ferries: false }).bytes;
+    const v2 = buildRoutePack(world(), { ferries: false, format: MIRROR_VERSION }).bytes;
+    const view = new DataView(v1.buffer, v1.byteOffset, v1.byteLength);
+    let full: Uint8Array = new Uint8Array(0);
+    for (let i = 0; i < view.getUint32(40, true); i++) {
+      const at = 44 + i * 9;
+      if (view.getUint8(at) === SECTION.down) full = v1.subarray(view.getUint32(at + 1, true), view.getUint32(at + 1, true) + view.getUint32(at + 5, true));
+    }
+    expect(() => readRoutePack(withSection(v2, SECTION.down, full))).toThrow('mirror clash');
+  });
+});
+
 describe('mirrorVia', () => {
   it('turns an original arc around and leaves a shortcut alone', () => {
+    expect(mirrorVia(ORIGINAL)).toBe(ORIGINAL + 1);
+    expect(mirrorVia(ORIGINAL - 1)).toBe(ORIGINAL - 1);
     expect(mirrorVia(ORIGINAL + 10)).toBe(ORIGINAL + 11);
     expect(mirrorVia(ORIGINAL + 11)).toBe(ORIGINAL + 10);
     expect(mirrorVia(42)).toBe(42);

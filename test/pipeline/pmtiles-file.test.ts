@@ -117,10 +117,24 @@ describe('rewritePmtiles', () => {
     expect([...tilesOf(target)]).toEqual([...tilesOf(source)]);
     const a = openPmtiles(source);
     const b = openPmtiles(target);
-    expect(b.header).toMatchObject({ ...info, clustered: true });
+    expect(b.header).toMatchObject({ ...info, maxZoom: 2, centerZoom: 2, clustered: true });
     expect(b.metadata).toEqual(a.metadata);
     a.close();
     b.close();
+  });
+
+  it('narrows the zoom range to the tiles that are there', () => {
+    const root = dir();
+    const source = join(root, 'a.pmtiles');
+    writePmtiles(source, { ...info, minZoom: 8, maxZoom: 12, centerZoom: 9 }, {}, [
+      { tileId: firstTileId(10), data: blob('a') },
+      { tileId: firstTileId(11), data: blob('b') },
+    ]);
+    const target = join(root, 'b.pmtiles');
+    rewritePmtiles(source, target);
+    const out = openPmtiles(target);
+    expect(out.header).toMatchObject({ minZoom: 10, maxZoom: 11, centerZoom: 10 });
+    out.close();
   });
 
   (existsSync(pmtilesBin) ? it : it.skip)('gives an archive that passes pmtiles verify', () => {
