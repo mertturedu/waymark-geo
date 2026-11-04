@@ -2,6 +2,7 @@ export type FileKind = 'address' | 'tiles' | 'route' | 'buildings' | 'places' | 
 export type Tier = 'full' | 'basic';
 export type FileBlocks = { size: number; sha256: string[] };
 export type EncodedFile = { codec: 'zstd'; path: string; size: number; sha256: string };
+export const MLT_SUFFIX = '.mlt.pmtiles';
 export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks; encoded?: EncodedFile };
 export type Box = [number, number, number, number];
 export type ManifestRegion = {

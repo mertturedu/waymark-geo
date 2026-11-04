@@ -2,6 +2,7 @@ import chains from './chains.json';
 import { withKind, withPlace } from './poi-glyphs';
 import { DEFAULT_THEME, hiddenTokens, iconColor, ICON_GROUPS, inkColor, type IconGroup, type ResolvedMapLook } from './theme';
 import { layers as protomapsLayers, namedFlavor } from '@protomaps/basemaps';
+import { MLT_SUFFIX } from '../../core/region/manifest';
 import { upperTr } from '../../core/text/upper';
 import { SHIELD_MAX_LENGTH, shieldImageExpression } from './shields';
 
@@ -34,6 +35,14 @@ const BASE_MAX_ZOOM = 8;
 const REGION_MAX_ZOOM = 15;
 const OVERLAY_MAX_ZOOM = 16;
 const ATTRIBUTION = '© OpenStreetMap contributors, Overture Maps';
+
+const vectorSource = (root: string, path: string, maxzoom: number): Record<string, unknown> => ({
+  type: 'vector',
+  url: `pmtiles://${root}/${encodeURI(path)}`,
+  attribution: ATTRIBUTION,
+  maxzoom,
+  ...(path.endsWith(MLT_SUFFIX) ? { encoding: 'mlt' } : {}),
+});
 
 const fileUrl = (value: string): string => {
   if (value.startsWith('file://')) return value.replace(/[^\x21-\x7e]+/g, (run) => encodeURIComponent(run));
@@ -462,18 +471,18 @@ function assembleStyle(input: StyleInput): MapStyle {
   clone('base', 'base');
   for (const region of [...input.regions].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     const name = `r${region.id}`;
-    sources[name] = { type: 'vector', url: `pmtiles://${root}/${encodeURI(region.tilesPath)}`, attribution: ATTRIBUTION, maxzoom: REGION_MAX_ZOOM };
+    sources[name] = vectorSource(root, region.tilesPath, REGION_MAX_ZOOM);
     clone(name, 'region');
     if (paint.look.buildings3d) layers.push(buildingsExtrusion(name, paint));
     layers.push(...serviceLayers(name, paint, lang));
     if (region.transitPath) {
       const transit = `tr${region.id}`;
-      sources[transit] = { type: 'vector', url: `pmtiles://${root}/${encodeURI(region.transitPath)}`, attribution: ATTRIBUTION, maxzoom: OVERLAY_MAX_ZOOM };
+      sources[transit] = vectorSource(root, region.transitPath, OVERLAY_MAX_ZOOM);
       layers.push(...transitLayers(transit, input.theme));
     }
     if (region.placesPath) {
       const overlay = `ov${region.id}`;
-      sources[overlay] = { type: 'vector', url: `pmtiles://${root}/${encodeURI(region.placesPath)}`, attribution: ATTRIBUTION, maxzoom: OVERLAY_MAX_ZOOM };
+      sources[overlay] = vectorSource(root, region.placesPath, OVERLAY_MAX_ZOOM);
       layers.push(...businessLayers(overlay, paint, lang));
     }
   }

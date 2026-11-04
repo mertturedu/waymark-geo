@@ -47,4 +47,13 @@ if not os.path.exists("bin/hermes/hermes"):
     with tarfile.open(archive) as t:
         t.extractall("bin/hermes", filter="data")
 print(subprocess.run(["bin/hermes/hermes", "--version"], capture_output=True, text=True).stdout.splitlines()[0])
+
+archive = fetch("mlt", lock["mlt"], "mlt.tar.gz")
+if not os.path.exists("bin/mlt"):
+    with tarfile.open(archive) as t:
+        member = next(m for m in t.getmembers() if os.path.basename(m.name) == "mlt" and m.isfile())
+        member.name = "mlt"
+        t.extract(member, "bin", filter="data")
+    os.chmod("bin/mlt", 0o755)
+print(subprocess.run(["bin/mlt", "--version"], capture_output=True, text=True).stdout.strip())
 PYEOF
