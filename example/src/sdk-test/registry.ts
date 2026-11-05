@@ -35,6 +35,7 @@ import { MAP_LABEL_TESTS } from './tests/map-labels';
 import { MAP_LOOK6_TESTS } from './tests/map-look6';
 import { F8_TESTS } from './tests/f8';
 import { ZSTD_TESTS } from './tests/zstd';
+import { FORMAT_TESTS } from './tests/format';
 import { routeBench as deviceRouteBench } from '../device-test/tests/route-bench';
 import { packsDirectory } from '../device-test/storage';
 
@@ -50,4 +51,4 @@ export const AUTO_TESTS: DeviceTest[] = [
 export const OFFLINE_AUTO_TESTS: DeviceTest[] = OFFLINE_TESTS;
 export const RESTART_TESTS: DeviceTest[] = [sdkLearnPersistB];
 
-export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS, ...PROBE_TESTS, ...REAL_LOCATION_TESTS, ...PERF_REGION_TESTS, ...PERF_PROPS_TESTS, ...SHOT_TESTS, ...MAP_LABEL_TESTS, ...MAP_LOOK6_TESTS, ...F8_TESTS, ...ZSTD_TESTS];
+export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS, ...PROBE_TESTS, ...REAL_LOCATION_TESTS, ...PERF_REGION_TESTS, ...PERF_PROPS_TESTS, ...SHOT_TESTS, ...MAP_LABEL_TESTS, ...MAP_LOOK6_TESTS, ...F8_TESTS, ...ZSTD_TESTS, ...FORMAT_TESTS];

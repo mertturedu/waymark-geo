@@ -25,7 +25,7 @@ function spyFetch(): { calls: string[]; restore(): void } {
   const calls: string[] = [];
   globalThis.fetch = ((input: Parameters<typeof fetch>[0], init?: Parameters<typeof fetch>[1]) => {
     const text = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-    calls.push(text.replace(/[?#].*$/, ''));
+    if (!text.endsWith('/symbolicate')) calls.push(text.replace(/[?#].*$/, ''));
     return original(input, init);
   }) as typeof fetch;
   return { calls, restore: () => void (globalThis.fetch = original) };
