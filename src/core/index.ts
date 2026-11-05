@@ -40,6 +40,8 @@ export { buildManeuvers } from './route/maneuvers';
 export type { Maneuver, ManeuverKind } from './route/maneuvers';
 export { directionsOf, formatDistance } from './route/directions';
 export type { DirectionStep } from './route/directions';
+export { ARRIVE_M, CUES_M, OFF_ROUTE_M, cueText, dueCue, headingTo, trackRoute } from './route/progress';
+export type { RouteProgress, TrackInput } from './route/progress';
 export { createRouter } from './route/router';
 export type { MatrixResult, RouteOptions, RouteResult, Router, RouterConfig, StopFailure, StopState, Vehicle, Warning } from './route/router';
 export { createManagedRouteStore } from './packs/route-store';

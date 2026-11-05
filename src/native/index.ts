@@ -26,6 +26,8 @@ export { GeoUserLocation } from './react/GeoUserLocation';
 export { LocateButton } from './react/LocateButton';
 export { useMapRotation } from './react/useMapRotation';
 export type { MapRotation, RotationEvent, RotationOptions } from './react/useMapRotation';
+export { OFF_ROUTE_FIXES, REROUTE_GAP_MS, useNavigation } from './react/useNavigation';
+export type { NavCue, NavFix, Navigation, NavigationOptions } from './react/useNavigation';
 export { useLocateMe } from './react/useLocateMe';
 export { useLocationRegion } from './react/useLocationRegion';
 export type { LocateControls, LocateOptions } from './react/useLocateMe';
