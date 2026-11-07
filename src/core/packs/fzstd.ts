@@ -88,14 +88,14 @@ var rzfh = function(dat, w) {
     }
     if (ws > 2145386496)
       err(1);
-    var buf = new u8((w == 1 ? fss || ws : w ? 0 : ws) + 12);
+    var buf = new u8((w === 1 ? fss || ws : w ? 0 : ws) + 12);
     buf[0] = 1, buf[4] = 4, buf[8] = 8;
     return {
       b: bt + fsb,
       y: 0,
       l: 0,
       d: di,
-      w: w && w != 1 ? w : buf.subarray(12),
+      w: w && w !== 1 ? w : buf.subarray(12),
       e: ws,
       o: new i32(buf.buffer, 0, 3),
       u: fss,
@@ -532,9 +532,12 @@ var rzb = function(dat, st, out) {
           } else
             off = st.o[0];
         }
-        for (var i = 0; i < ll; ++i) {
-          buf[oubt + i] = buf[spl + i];
-        }
+        if (ll > 32)
+          buf.copyWithin(oubt, spl, spl + ll);
+        else
+          for (var i = 0; i < ll; ++i) {
+            buf[oubt + i] = buf[spl + i];
+          }
         oubt += ll, spl += ll;
         var stin = oubt - off;
         if (stin < 0) {
@@ -542,14 +545,20 @@ var rzb = function(dat, st, out) {
           var bs = st.e + stin;
           if (len > ml)
             len = ml;
-          for (var i = 0; i < len; ++i) {
-            buf[oubt + i] = st.w[bs + i];
-          }
+          if (len > 32)
+            buf.set(st.w.subarray(bs, bs + len), oubt);
+          else
+            for (var i = 0; i < len; ++i) {
+              buf[oubt + i] = st.w[bs + i];
+            }
           oubt += len, ml -= len, stin = 0;
         }
-        for (var i = 0; i < ml; ++i) {
-          buf[oubt + i] = buf[stin + i];
-        }
+        if (ml > 32 && oubt - stin >= ml)
+          buf.copyWithin(oubt, stin, stin + ml);
+        else
+          for (var i = 0; i < ml; ++i) {
+            buf[oubt + i] = buf[stin + i];
+          }
         oubt += ml;
       }
       if (oubt != spl) {
@@ -719,7 +728,32 @@ var Decompress = /* @__PURE__ */ (function() {
   return Decompress2;
 })();
 
+function* inPlaceSteps(dat, buf, prefixLength) {
+  var st = rzfh(dat, buf);
+  if (typeof st != "object")
+    err(0);
+  st.y = st.e = prefixLength;
+  for (; !st.l; ) {
+    if (!rzb(dat, st, buf))
+      err(5);
+    st.e = st.y;
+    yield;
+  }
+  if (st.y != buf.length)
+    err(5);
+  return buf.subarray(prefixLength);
+}
 type Stream = { push(chunk: Uint8Array, final?: boolean): void };
 const decompressAll: (dat: Uint8Array, buf?: Uint8Array) => Uint8Array = decompress;
 const StreamDecoder: new (ondata: (data: Uint8Array, final: boolean) => void) => Stream = Decompress;
-export { decompressAll as decompress, StreamDecoder as Decompress };
+const decompressInPlaceSteps: (dat: Uint8Array, buf: Uint8Array, prefixLength: number) => Generator<void, Uint8Array, void> = inPlaceSteps;
+function decompressPrefix(dat: Uint8Array, prefix: Uint8Array, size: number): Uint8Array {
+  const buf = new Uint8Array(prefix.length + size);
+  buf.set(prefix);
+  const steps = decompressInPlaceSteps(dat, buf, prefix.length);
+  for (;;) {
+    const next = steps.next();
+    if (next.done) return next.value;
+  }
+}
+export { decompressAll as decompress, StreamDecoder as Decompress, decompressPrefix, decompressInPlaceSteps };
