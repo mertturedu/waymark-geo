@@ -5,6 +5,7 @@ import { homedir } from 'node:os';
 import { dirname, join, relative } from 'node:path';
 import { MLT_SUFFIX, serializeManifest, type Box, type EncodedFile, type FileBlocks, type Manifest, type ManifestFile, type ManifestRegion, type Tier } from '../../src/core/region/manifest';
 import { revisionSuffix, type Sources } from '../../scripts/fetch-sources';
+import { makePatches, type PatchFile, type PatchOptions, type PatchStats } from './patches';
 import { isMlt } from './tile-encode';
 
 export type RegionInput = {
@@ -115,7 +116,7 @@ function place(source: string, target: string): void {
   renameSync(`${target}.tmp`, target);
 }
 
-export async function assemblePacks(input: { outDir: string; sources: Sources; regions: RegionInput[]; baseDir: string; keyDir: string; minSdk: string; compress?: Compress | false }): Promise<{ files: number; manifestBytes: number }> {
+export async function assemblePacks(input: { outDir: string; sources: Sources; regions: RegionInput[]; baseDir: string; keyDir: string; minSdk: string; compress?: Compress | false; patches?: Omit<PatchOptions, 'outDir'> }): Promise<{ files: number; manifestBytes: number; patchStats?: PatchStats }> {
   const ids = new Set<string>();
   for (const region of input.regions) {
     if (ids.has(region.id)) throw new Error(`bölge ${region.id} iki kez verildi (twice)`);
@@ -137,6 +138,7 @@ export async function assemblePacks(input: { outDir: string; sources: Sources; r
   }
 
   const regions: ManifestRegion[] = [];
+  const patchable: { entry: ManifestFile; file: PatchFile }[] = [];
   for (const region of [...input.regions].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     const files: ManifestFile[] = [];
     for (const item of [...region.files].sort((a, b) => (a.kind < b.kind ? -1 : a.kind > b.kind ? 1 : 0))) {
@@ -156,8 +158,22 @@ export async function assemblePacks(input: { outDir: string; sources: Sources; r
         }
       }
       files.push(entry);
+      patchable.push({ entry, file: { regionId: region.id, kind: item.kind, path, size: entry.size, sha256, download: entry.encoded?.size ?? entry.size, source: item.source } });
     }
     regions.push({ id: region.id, tier: region.tier, names: region.names, bbox: region.bbox, version: `${day}.${input.sources.tilesBuild}${revisionSuffix(input.sources)}`, stats: region.stats, files });
+  }
+
+  let patchStats: PatchStats | undefined;
+  if (input.patches) {
+    const made = await makePatches(patchable.map((item) => item.file), { ...input.patches, outDir: input.outDir });
+    patchStats = made.stats;
+    for (const { entry } of patchable) {
+      const list = made.patches.get(entry.path);
+      if (list) {
+        entry.patches = list;
+        count += list.length;
+      }
+    }
   }
 
   const manifest: Manifest = {
@@ -176,5 +192,5 @@ export async function assemblePacks(input: { outDir: string; sources: Sources; r
   renameSync(`${manifestPath}.sig.tmp`, `${manifestPath}.sig`);
   renameSync(`${manifestPath}.tmp`, manifestPath);
   rmSync(`${manifestPath}.sig.tmp`, { force: true });
-  return { files: count, manifestBytes: Buffer.byteLength(text) };
+  return { files: count, manifestBytes: Buffer.byteLength(text), ...(patchStats ? { patchStats } : {}) };
 }

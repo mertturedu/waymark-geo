@@ -1,7 +1,7 @@
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { buildSteps, finalizePublish, promote, resolvePlates, runSteps, writeAtomic, type Step } from '../../pipeline/build/orchestrate';
+import { buildSteps, describePatches, finalizePublish, preparePatches, promote, resolvePlates, runSteps, writeAtomic, type Step } from '../../pipeline/build/orchestrate';
 import type { Runner } from '../../pipeline/build/tiles';
 
 const sources = { osmFile: 'turkey-261020.osm.pbf', osmMd5: 'a'.repeat(32), osmTimestamp: '2026-10-20T20:23:47Z', tilesBuild: '20261022', tilesOsmTime: '2026-10-22T04:00:00Z' };
@@ -298,5 +298,69 @@ describe('writeAtomic', () => {
     writeAtomic(join(dir, 'a.json'), '{"x":2}');
     expect(readFileSync(join(dir, 'a.json'), 'utf8')).toBe('{"x":2}');
     expect(existsSync(join(dir, 'a.json.tmp'))).toBe(false);
+  });
+});
+
+describe('preparePatches', () => {
+  const sources = { osmFile: 'turkey-261028.osm.pbf', osmMd5: 'a'.repeat(32), osmTimestamp: '2026-10-28T20:00:00Z', tilesBuild: '20261030', tilesOsmTime: '2026-10-30T04:00:00Z' };
+  const published = (root: string, version: string): string => {
+    const out = join(root, 'packs');
+    mkdirSync(out, { recursive: true });
+    writeFileSync(join(out, 'manifest-v1.json'), JSON.stringify({ format: 1, minSdk: '0.5.0', osm: { file: 'a', time: 't' }, tiles: { build: '20261030', time: 't' }, base: [], regions: [{ id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox: [28, 40, 30, 42], version, stats: { addresses: 1, streets: 1, neighbourhoods: 1 }, files: [{ kind: 'address', path: '34/a.sqlite', size: 3, sha256: 'a'.repeat(64) }] }] }));
+    mkdirSync(join(out, '34'), { recursive: true });
+    writeFileSync(join(out, '34', 'a.sqlite'), 'abc');
+    return out;
+  };
+  const withEnv = async (value: string | undefined, run: () => void | Promise<void>): Promise<void> => {
+    const was = process.env.GEO_PATCHES;
+    if (value === undefined) delete process.env.GEO_PATCHES;
+    else process.env.GEO_PATCHES = value;
+    try {
+      await run();
+    } finally {
+      if (was === undefined) delete process.env.GEO_PATCHES;
+      else process.env.GEO_PATCHES = was;
+    }
+  };
+
+  it('archives the published pack and returns where patches come from and go', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'prep-'));
+    const outDir = published(root, '20261020.20261022');
+    await withEnv(undefined, () => {
+      const plan = preparePatches({ outDir, workDir: join(root, 'work'), sources });
+      expect(plan).toMatchObject({ archiveDir: join(root, 'archive'), cacheDir: join(root, 'work', 'patch-cache'), tmpDir: join(root, 'work', 'patch-tmp'), keep: 3, exclude: '20261028.20261030' });
+      expect(existsSync(join(root, 'archive', '20261020.20261022', '34', 'a.sqlite'))).toBe(true);
+    });
+  });
+
+  it('does not archive or prune a pack of the version being built', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'prep-'));
+    const outDir = published(root, '20261028.20261030');
+    await withEnv('2', () => {
+      expect(preparePatches({ outDir, workDir: join(root, 'work'), sources })).toMatchObject({ keep: 2 });
+    });
+  });
+
+  it('keeps only the newest versions in the archive', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'prep-'));
+    for (const version of ['20261001.20261002', '20261010.20261011', '20261015.20261016']) {
+      const out = published(root, version);
+      await withEnv('2', () => void preparePatches({ outDir: out, workDir: join(root, 'work'), sources, log: () => undefined }));
+      rmSync(out, { recursive: true, force: true });
+    }
+    expect(readdirSync(join(root, 'archive')).sort()).toEqual(['20261010.20261011', '20261015.20261016']);
+  });
+
+  it('switches everything off with GEO_PATCHES=0', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'prep-'));
+    const outDir = published(root, '20261020.20261022');
+    await withEnv('0', () => {
+      expect(preparePatches({ outDir, workDir: join(root, 'work'), sources })).toBeUndefined();
+      expect(existsSync(join(root, 'archive'))).toBe(false);
+    });
+  });
+
+  it('describes the outcome in one line', () => {
+    expect(describePatches({ made: 2, cached: 1, tooBig: 3, unverified: 0, skippedSmall: 4, bytes: 12_500_000, ms: 4500 })).toBe('yamalar: 2 yeni, 1 önbellekten, 3 büyük olduğu için atlandı, 0 tutmadı, 12.5 MB, 4.5 sn');
   });
 });

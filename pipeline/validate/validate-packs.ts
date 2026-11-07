@@ -10,6 +10,7 @@ import type { Borders } from '../../src/core/region/borders';
 import { cellOf, cellsOfLine } from '../../src/core/geo/cells';
 import { decodePostings } from '../../src/core/text/trigram';
 import { decodeLines, decodeRings, pointInRings } from '../../src/core/region/geom';
+import { readPatchIndex } from '../../src/core/packs/patch';
 import { parseManifest, type Box, type ManifestFile, type ManifestRegion } from '../../src/core/region/manifest';
 import { APPLICATION_ID, FORMAT_VERSION } from '../build/address-pack';
 import { APPLICATION_ID as BUILDING_APPLICATION_ID, BUILDING_FORMAT, CELL_E6 } from '../build/building-pack';
@@ -337,6 +338,22 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
       add('error', 'sha256 uyuşmuyor');
     } else {
       sound.add(file.path);
+    }
+    for (const patch of file.patches ?? []) {
+      listed.add(patch.path);
+      summary.patchFiles = (summary.patchFiles ?? 0) + 1;
+      summary.patchBytes = (summary.patchBytes ?? 0) + patch.size;
+      const addPatch = report(patch.path);
+      const patchFull = join(root, patch.path);
+      if (!existsSync(patchFull)) addPatch('error', 'yama dosyası yok');
+      else if (statSync(patchFull).size !== patch.size) addPatch('error', `yama boyutu uyuşmuyor (manifest ${patch.size}, dosya ${statSync(patchFull).size})`);
+      else if ((await hashFile(patchFull)) !== patch.sha256) addPatch('error', 'yama sha256 uyuşmuyor');
+      else {
+        const index = readPatchIndex(new Uint8Array(readFileSync(patchFull)));
+        if (index === null) addPatch('error', 'yama başlığı ya da dilim dizini geçersiz');
+        else if (index.newSize !== file.size) addPatch('error', `yama yeni dosya boyunu ${index.newSize} sanıyor, manifestte ${file.size}`);
+      }
+      if (patch.size >= (file.encoded?.size ?? file.size)) addPatch('warn', 'yama tam indirmeden küçük değil');
     }
     if (file.encoded) {
       listed.add(file.encoded.path);

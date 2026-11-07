@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, s
 import { dirname, join } from 'node:path';
 import adminData from '../../src/core/text/data/admin.json';
 import { buildBordersFile, writeBordersModule } from '../../scripts/build-borders';
-import type { Sources } from '../../scripts/fetch-sources';
+import { revisionSuffix, type Sources } from '../../scripts/fetch-sources';
 import { createBorders, type Borders } from '../../src/core/region/borders';
 import { validatePacks } from '../validate/validate-packs';
 import { buildAddressPack, type PackStats } from './address-pack';
@@ -13,6 +13,7 @@ import { PACK_OPTIONS, graphOptionsFor, parseRoadRows } from './route-graph';
 import { buildRoutePack, routeFormat, routeMinSdk } from './route-pack';
 import { buildOverturePlaces, overtureRelease } from './overture';
 import { assemblePacks, defaultKeyDir, ensureDevKey, type RegionInput } from './manifest';
+import { archivePack, patchKeep, pruneArchive, type PatchOptions, type PatchStats } from './patches';
 import { encodeAll, tileFormat, tilesMinSdk, type TileFormat } from './tile-encode';
 import { pruneBuild, type PruneInput } from './tile-prune';
 import { styleVariants, usageProfile } from './tile-usage';
@@ -127,6 +128,19 @@ export function encodeInput(workDir: string, build: string, plates: string[], lo
     ...(log ? { log } : {}),
   };
 }
+
+export function preparePatches(input: { outDir: string; workDir: string; sources: Sources; log?: (line: string) => void }): Omit<PatchOptions, 'outDir'> | undefined {
+  const keep = patchKeep();
+  if (keep === 0) return undefined;
+  const archiveDir = join(dirname(input.outDir), 'archive');
+  const version = `${input.sources.osmTimestamp.slice(0, 10).replace(/-/g, '')}.${input.sources.tilesBuild}${revisionSuffix(input.sources)}`;
+  archivePack(input.outDir, archiveDir);
+  pruneArchive(archiveDir, keep, version);
+  return { archiveDir, cacheDir: join(input.workDir, 'patch-cache'), tmpDir: join(input.workDir, 'patch-tmp'), keep, exclude: version, ...(input.log ? { log: input.log } : {}) };
+}
+
+export const describePatches = (stats: PatchStats): string =>
+  `yamalar: ${stats.made} yeni, ${stats.cached} önbellekten, ${stats.tooBig} büyük olduğu için atlandı, ${stats.unverified} tutmadı, ${(stats.bytes / 1e6).toFixed(1)} MB, ${(stats.ms / 1000).toFixed(1)} sn`;
 
 type StepInput = { plates: string[]; sources: Sources; workDir: string; outDir: string; pbf: string; python: string; run: Runner; repoRoot: string; keyDir?: string; bordersOut?: string; log?: (line: string) => void };
 
@@ -332,7 +346,9 @@ export function buildSteps(input: StepInput): Step[] {
         const keyDir = input.keyDir ?? defaultKeyDir();
         const filesOf = (kinds: string[]): string[] => regions.flatMap((region) => region.files.filter((file) => kinds.includes(file.kind)).map((file) => file.source));
         const minSdk = tilesMinSdk(filesOf(['tiles', 'places']), routeMinSdk(filesOf(['route'])));
-        await assemblePacks({ outDir: staging, sources, regions, baseDir: files.base, keyDir, minSdk });
+        const patches = preparePatches({ outDir, workDir, sources, ...(input.log ? { log: input.log } : {}) });
+        const assembled = await assemblePacks({ outDir: staging, sources, regions, baseDir: files.base, keyDir, minSdk, ...(patches ? { patches } : {}) });
+        if (assembled.patchStats) input.log?.(describePatches(assembled.patchStats));
         const publicKeyPem = ensureDevKey(keyDir).publicKeyPem;
         await finalizePublish({ staging, outDir, validate: () => validatePacks(staging, { run: input.run, work: workDir, publicKeyPem, borders }), log: input.log });
       },
