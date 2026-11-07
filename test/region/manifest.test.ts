@@ -222,3 +222,92 @@ describe('encoded files', () => {
     expect(() => parseManifest(JSON.stringify(base(encoded)))).toThrow(message);
   });
 });
+
+describe('patches', () => {
+  const doc = (patches: unknown, extra: Record<string, unknown> = {}) => ({
+    format: 1,
+    minSdk: '0.5.0',
+    osm: { file: 'a.pbf', time: 't' },
+    tiles: { build: '20261030', time: 't' },
+    base: [],
+    regions: [{ id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox: [28, 40, 30, 42], version: 'v', stats: { addresses: 1, streets: 1, neighbourhoods: 1 }, files: [{ kind: 'tiles', path: '34/t.pmtiles', size: 100, sha256: 'a'.repeat(64), ...(patches === undefined ? {} : { patches }) }] }],
+    ...extra,
+  });
+  const good = { from: 'c'.repeat(64), codec: 'zstd-patch-seg', path: '34/patches/a-from-c.zpatch', size: 40, sha256: 'b'.repeat(64), segment: 8_388_608, margin: 4_194_304 };
+  const read = (patches: unknown) => parseManifest(JSON.stringify(doc(patches))).regions[0]!.files[0]!;
+
+  it('reads a patch next to the file and keeps the file fields', () => {
+    const file = read([good]);
+    expect(file.patches).toEqual([good]);
+    expect(file).toMatchObject({ path: '34/t.pmtiles', size: 100 });
+    expect(read(undefined).patches).toBeUndefined();
+  });
+
+  it('survives a round trip through serialize', () => {
+    const first = parseManifest(JSON.stringify(doc([good])));
+    expect(parseManifest(serializeManifest(first))).toEqual(first);
+  });
+
+  it('reads a manifest with patches and unknown fields without changing the file list', () => {
+    const plain = parseManifest(JSON.stringify(doc(undefined)));
+    const patched = parseManifest(JSON.stringify(doc([good], { future: { x: 1 } })));
+    expect(patched.regions[0]!.files[0]).toEqual({ ...plain.regions[0]!.files[0], patches: [good] });
+  });
+
+  it.each([
+    ['a wrong codec', { ...good, codec: 'bsdiff' }],
+    ['a malformed source hash', { ...good, from: 'xyz' }],
+    ['a source equal to the file itself', { ...good, from: 'a'.repeat(64) }],
+    ['a malformed patch hash', { ...good, sha256: 'xyz' }],
+    ['a missing path', { ...good, path: undefined }],
+    ['a path that climbs out', { ...good, path: '../x.zpatch' }],
+    ['the file path reused', { ...good, path: '34/t.pmtiles' }],
+    ['a zero size', { ...good, size: 0 }],
+    ['a fractional size', { ...good, size: 1.5 }],
+    ['a zero segment', { ...good, segment: 0 }],
+    ['a fractional segment', { ...good, segment: 1.5 }],
+    ['a text size', { ...good, size: '40' }],
+    ['a missing patch hash', { ...good, sha256: undefined }],
+    ['a missing source', { ...good, from: undefined }],
+    ['a numeric path', { ...good, path: 7 }],
+    ['a list', [good]],
+    ['a source given as a list', { ...good, from: ['c'.repeat(64)] }],
+    ['a missing margin', { ...good, margin: undefined }],
+    ['a negative margin', { ...good, margin: -1 }],
+    ['text instead of an object', 'text'],
+    ['null', null],
+  ])('drops only the patch with %s', (_name, bad) => {
+    const other = { ...good, from: 'd'.repeat(64), path: '34/patches/a-from-d.zpatch' };
+    const file = read([bad, other]);
+    expect(file.patches).toEqual([other]);
+    expect(file.path).toBe('34/t.pmtiles');
+  });
+
+  it('leaves no patches field when none are usable', () => {
+    expect(read([{ ...good, size: 0 }]).patches).toBeUndefined();
+    expect(read('nope').patches).toBeUndefined();
+    expect(read({}).patches).toBeUndefined();
+    expect(read([]).patches).toBeUndefined();
+  });
+
+  it('keeps the first of two patches from the same source or on the same path', () => {
+    const sameFrom = { ...good, path: '34/patches/other.zpatch' };
+    const samePath = { ...good, from: 'd'.repeat(64) };
+    expect(read([good, sameFrom]).patches).toEqual([good]);
+    expect(read([good, samePath]).patches).toEqual([good]);
+  });
+
+  it('keeps every distinct usable patch in order, and accepts a zero margin', () => {
+    const second = { ...good, from: 'd'.repeat(64), path: '34/patches/a-from-d.zpatch', margin: 0 };
+    const third = { ...good, from: 'e'.repeat(64), path: '34/patches/a-from-e.zpatch' };
+    expect(read([good, second, third]).patches).toEqual([good, second, third]);
+  });
+
+  it('keeps a patch that can sit beside an encoded file', () => {
+    const withEncoded = doc([good]);
+    (withEncoded.regions[0]!.files[0] as Record<string, unknown>).encoded = { codec: 'zstd', path: '34/t.pmtiles.zst', size: 40, sha256: 'e'.repeat(64) };
+    expect(parseManifest(JSON.stringify(withEncoded)).regions[0]!.files[0]!.patches).toEqual([good]);
+    (withEncoded.regions[0]!.files[0] as { patches: unknown[] }).patches = [{ ...good, path: '34/t.pmtiles.zst' }];
+    expect(parseManifest(JSON.stringify(withEncoded)).regions[0]!.files[0]!.patches).toBeUndefined();
+  });
+});

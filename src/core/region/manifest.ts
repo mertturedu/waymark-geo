@@ -3,7 +3,8 @@ export type Tier = 'full' | 'basic';
 export type FileBlocks = { size: number; sha256: string[] };
 export type EncodedFile = { codec: 'zstd'; path: string; size: number; sha256: string };
 export const MLT_SUFFIX = '.mlt.pmtiles';
-export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks; encoded?: EncodedFile };
+export type ManifestPatch = { from: string; codec: 'zstd-patch-seg'; path: string; size: number; sha256: string; segment: number; margin: number };
+export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks; encoded?: EncodedFile; patches?: ManifestPatch[] };
 export type Box = [number, number, number, number];
 export type ManifestRegion = {
   id: string;
@@ -64,9 +65,10 @@ function list(value: unknown, what: string): unknown[] {
   return value as unknown[];
 }
 
+const badPath = (path: string): boolean => path.startsWith('/') || /[\\%?#]/.test(path) || path.split('/').some((piece) => piece === '' || piece === '.' || piece === '..');
+
 function checkPath(path: string): void {
-  if (path.startsWith('/') || /[\\%?#]/.test(path)) fail(`yol geçersiz: ${path}`);
-  for (const piece of path.split('/')) if (piece === '' || piece === '.' || piece === '..') fail(`yol geçersiz: ${path}`);
+  if (badPath(path)) fail(`yol geçersiz: ${path}`);
 }
 
 function file(value: unknown, kinds: readonly string[], seen: Set<string>): ManifestFile {
@@ -81,7 +83,32 @@ function file(value: unknown, kinds: readonly string[], seen: Set<string>): Mani
   const parsed: ManifestFile = { kind: kind as FileKind, path, size, sha256: text(row.sha256, 'sha256', SHA) };
   if (row.blocks !== undefined) parsed.blocks = blocks(row.blocks, size);
   if (row.encoded !== undefined) parsed.encoded = encoded(row.encoded, path, seen);
+  const patches = patchList(row.patches, parsed);
+  if (patches.length > 0) parsed.patches = patches;
   return parsed;
+}
+
+const whole = (value: unknown, least: number): value is number => Number.isInteger(value) && (value as number) >= least;
+
+const hash = (value: unknown): value is string => typeof value === 'string' && SHA.test(value);
+
+function patch(value: unknown, owner: ManifestFile): ManifestPatch | null {
+  if (!(value instanceof Object)) return null;
+  const { from, codec, path, size, sha256, segment, margin } = value as Record<string, unknown>;
+  if (codec !== 'zstd-patch-seg' || !hash(from) || from === owner.sha256 || !hash(sha256)) return null;
+  if (typeof path !== 'string' || badPath(path) || path === owner.path || path === owner.encoded?.path) return null;
+  if (!whole(size, 1) || !whole(segment, 1) || !whole(margin, 0)) return null;
+  return { from, codec, path, size, sha256, segment, margin };
+}
+
+function patchList(value: unknown, owner: ManifestFile): ManifestPatch[] {
+  if (!Array.isArray(value)) return [];
+  const out: ManifestPatch[] = [];
+  for (const item of value) {
+    const parsed = patch(item, owner);
+    if (parsed && !out.some((kept) => kept.from === parsed.from || kept.path === parsed.path)) out.push(parsed);
+  }
+  return out;
 }
 
 function encoded(value: unknown, plainPath: string, seen: Set<string>): EncodedFile {
