@@ -17,6 +17,7 @@ const LANGS = ['tr', 'en', 'de', 'ar', 'ru', 'el'];
 
 export type Pending = { place: Place; street?: string; houseNumber?: string };
 
+const RUSH_HOUR = Date.UTC(2026, 10, 9, 5, 30);
 type Picked = { point: [number, number]; reverse: Place | null; ms: number; coverage: Coverage | null };
 
 export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clearPending, showing, clearShowing }: { visible: boolean; lang: string; onLang: (lang: string) => void; theme: 'light' | 'dark'; onTheme: (theme: 'light' | 'dark') => void; pending: Pending | null; clearPending: () => void; showing: Showing | null; clearShowing: () => void }) {
@@ -25,7 +26,8 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   const palette = usePalette();
   const [hidden, setHidden] = useState<string[]>([]);
   const [mapView, setMapView] = useState<ViewPoint>({ center: ISTANBUL, zoom: 12 });
-  const style = useMapStyle({ theme, language: lang, hide: hidden, view: mapView });
+  const [trafficMode, setTrafficMode] = useState(0);
+  const style = useMapStyle({ theme, language: lang, hide: hidden, view: mapView, ...(trafficMode === 1 ? { traffic: true } : trafficMode === 2 ? { traffic: RUSH_HOUR } : {}) });
   const { regions } = useRegions();
   const camera = useRef<CameraRef>(null);
   const view = useRef<MapView>({ center: ISTANBUL, zoom: 12, pitch: DEFAULT_PITCH });
@@ -163,6 +165,7 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
           <Chip label={tilt ? `Eğim ${Math.round(view.current.pitch ?? DEFAULT_PITCH)}°` : 'Eğim 0°'} active={tilt} onPress={() => camera.current?.easeTo({ center: view.current.center, pitch: tilt ? 0 : DEFAULT_PITCH, duration: 400 })} />
           <Chip label="Konumum" onPress={() => void askLocation()} />
           <Chip label={t(lang, 'legend.button')} onPress={() => setLegend(true)} />
+          <Chip label={['Trafik kapalı', 'Trafik şimdi', 'Trafik yoğun saat'][trafficMode] as string} active={trafficMode > 0} onPress={() => setTrafficMode((trafficMode + 1) % 3)} />
         </Row>
         <Row>
           {LANGS.map((code) => (

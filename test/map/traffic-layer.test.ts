@@ -23,8 +23,8 @@ describe('traffic on the roads of the map', () => {
   });
 
   it('is lighter in a small province than in Istanbul', () => {
-    const istanbul = trafficLayers('r34', '34', rush)[0]?.paint?.['line-color'] as string[];
-    const small = trafficLayers('r75', '75', rush)[0]?.paint?.['line-color'] as string[];
+    const istanbul = trafficLayers('r34', '34', rush)[1]?.paint?.['line-color'] as string[];
+    const small = trafficLayers('r75', '75', rush)[1]?.paint?.['line-color'] as string[];
     expect(istanbul.includes(TRAFFIC_COLOURS.jam)).toBe(true);
     expect(small.includes(TRAFFIC_COLOURS.jam)).toBe(false);
   });
@@ -45,9 +45,22 @@ describe('traffic on the roads of the map', () => {
   });
 
   it('thickens with the zoom and follows the road kind', () => {
-    const width = trafficLayers('r34', '34', rush)[0]?.paint?.['line-width'] as unknown[];
+    const width = trafficLayers('r34', '34', rush)[1]?.paint?.['line-width'] as unknown[];
     expect(width.slice(0, 3)).toEqual(['interpolate', ['linear'], ['zoom']]);
-    expect(width[3]).toBe(9);
+    expect(width[3]).toBe(8);
     expect(width.filter((entry) => Array.isArray(entry) && entry[0] === 'match')).toHaveLength(4);
+  });
+
+  it('shows from far away as a soft translucent glow under the sharp line', () => {
+    const [glow, line] = trafficLayers('r34', '34', rush);
+    expect(glow).toMatchObject({ id: 'traffic-glow@r34', type: 'line', source: 'r34', 'source-layer': 'roads', minzoom: 6, maxzoom: 16 });
+    expect(line).toMatchObject({ id: 'traffic@r34', minzoom: 8 });
+    expect(glow?.filter).toEqual(line?.filter);
+    expect(glow?.paint?.['line-color']).toEqual(line?.paint?.['line-color']);
+    expect(glow?.paint?.['line-blur']).toEqual(['interpolate', ['linear'], ['zoom'], 6, 3, 12, 6, 15, 8]);
+    const opacity = glow?.paint?.['line-opacity'] as unknown[];
+    expect(opacity.slice(3).filter((_, i) => i % 2 === 1).every((value) => (value as number) <= 0.4)).toBe(true);
+    const layers = buildStyle(input({ traffic: { at: rush } })).layers;
+    expect(layers.findIndex((layer) => layer.id === 'traffic-glow@r34')).toBe(layers.findIndex((layer) => layer.id === 'traffic@r34') - 1);
   });
 });

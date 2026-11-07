@@ -30,4 +30,30 @@ export const sdkShotTour: DeviceTest = test('sdk.shot-tour', 'Ekran görüntüs�
   }),
 );
 
-export const SHOT_TESTS: DeviceTest[] = [sdkShotTour];
+const TRAFFIC_RUSH = Date.UTC(2026, 10, 9, 5, 30);
+const TRAFFIC_VIEWS: { zoom: number; at: LngLat }[] = [
+  { zoom: 8, at: [29.0, 40.95] },
+  { zoom: 10, at: [29.0, 41.02] },
+  { zoom: 12, at: [29.0, 41.02] },
+  { zoom: 14, at: [29.0097, 41.0422] },
+];
+
+export const sdkShotTraffic: DeviceTest = test('sdk.shot-traffic', 'Trafik görünümü: yoğun saatte 4 uzaklıkta harita durur, sunucuya işaret gider (bilgi)', (ctx) =>
+  withTour(
+    ctx,
+    async (tour) => {
+      for (const view of TRAFFIC_VIEWS) {
+        tour.say('');
+        await tour.go({ center: view.at, zoom: view.zoom }, 'jump');
+        await tour.until(['roads_'], REGION_FEATURES, 12000).catch(() => undefined);
+        await pause(SETTLE_MS);
+        await fetch(`${ctx.packServerUrl}/mark/traffic-z${view.zoom}`).catch(() => undefined);
+        await pause(HOLD_MS);
+      }
+      return { outcome: 'info', note: `${TRAFFIC_VIEWS.length} uzaklık, yoğun saat` };
+    },
+    { look: { theme: 'light', lang: 'tr', traffic: TRAFFIC_RUSH } },
+  ),
+);
+
+export const SHOT_TESTS: DeviceTest[] = [sdkShotTour, sdkShotTraffic];

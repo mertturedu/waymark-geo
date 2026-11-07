@@ -1,6 +1,6 @@
 import { jumpTilted } from '../../../../src/native/map/camera';
 
-export type Look = { theme: 'light' | 'dark'; lang: string; bare?: boolean; hide?: string[]; window?: boolean; font?: 'inter' | 'noto' };
+export type Look = { theme: 'light' | 'dark'; lang: string; bare?: boolean; hide?: string[]; window?: boolean; font?: 'inter' | 'noto'; traffic?: number };
 export type LngLat = [number, number];
 export type MapFeature = { properties: Record<string, unknown> | null; geometry: { type: string; coordinates?: unknown } };
 export type View = { center: LngLat; zoom: number; bearing?: number; pitch?: number };

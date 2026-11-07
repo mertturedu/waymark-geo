@@ -32,7 +32,7 @@ function carFeatures(car: Car) {
 function TourMap({ look, car }: { look: Look; car: Car }) {
   const cars = useMemo(() => carFeatures(car), [car]);
   const [viewPoint, setViewPoint] = useState<ViewPoint>({ center: START.center, zoom: START.zoom });
-  const style = useMapStyle({ theme: look.theme, language: look.lang, ...(look.font ? { font: look.font } : {}), ...(look.hide && look.hide.length > 0 ? { hide: look.hide } : {}), ...(look.window ? { view: viewPoint } : {}) });
+  const style = useMapStyle({ theme: look.theme, language: look.lang, ...(look.font ? { font: look.font } : {}), ...(look.hide && look.hide.length > 0 ? { hide: look.hide } : {}), ...(look.window ? { view: viewPoint } : {}), ...(look.traffic !== undefined ? { traffic: look.traffic } : {}) });
   const plan = usePlan();
   const planRef = useRef(plan);
   planRef.current = plan;
@@ -60,7 +60,7 @@ function TourMap({ look, car }: { look: Look; car: Car }) {
   const size = useRef({ width: 0, height: 0 });
   const styleRef = useRef(style);
   styleRef.current = style;
-  const styleKey = useMemo(() => `${look.theme}|${look.lang}|${look.font ?? 'noto'}${look.bare ? '|bare' : ''}${look.window ? '|window' : ''}|${(look.hide ?? []).join(',')}`, [look.theme, look.lang, look.font, look.bare, look.window, look.hide]);
+  const styleKey = useMemo(() => `${look.theme}|${look.lang}|${look.font ?? 'noto'}${look.bare ? '|bare' : ''}${look.window ? '|window' : ''}${look.traffic !== undefined ? `|traffic${look.traffic}` : ''}|${(look.hide ?? []).join(',')}`, [look.theme, look.lang, look.font, look.bare, look.window, look.hide]);
   const shown = useMemo(() => (look.bare ? { ...style, layers: style.layers.filter((layer) => layer.type !== 'symbol') } : style), [style, look.bare]);
 
   useEffect(() => {

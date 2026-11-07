@@ -179,20 +179,26 @@ const withShields = (layers: StyleLayer[]): StyleLayer[] =>
     };
   });
 
-export const TRAFFIC_FROM = 9;
+export const TRAFFIC_FROM = 8;
+export const TRAFFIC_GLOW_FROM = 6;
 export const TRAFFIC_COLOURS: Record<Exclude<TrafficBand, 'smooth'>, string> = { busy: '#F5B800', heavy: '#F26B21', jam: '#E0050F' };
 const TRAFFIC_KINDS: MapRoadKind[] = ['highway', 'major_road', 'medium_road', 'minor_road'];
-const TRAFFIC_WIDTH: Record<MapRoadKind, number[]> = { highway: [1.2, 3, 6, 12], major_road: [0.8, 2.4, 5, 10], medium_road: [0.5, 1.6, 3.6, 8], minor_road: [0, 0.6, 2.4, 6] };
-const TRAFFIC_ZOOMS = [9, 12, 15, 18];
+const TRAFFIC_WIDTH: Record<MapRoadKind, number[]> = { highway: [1.6, 3.4, 6.5, 12], major_road: [1.2, 2.8, 5.5, 10], medium_road: [0.6, 1.8, 3.8, 8], minor_road: [0, 0.7, 2.6, 6] };
+const TRAFFIC_ZOOMS = [8, 12, 15, 18];
+const GLOW_WIDTH: Record<MapRoadKind, number[]> = { highway: [4, 7, 11, 15], major_road: [0, 4, 8, 13], medium_road: [0, 0, 3, 8], minor_road: [0, 0, 0, 4] };
+const GLOW_ZOOMS = [6, 9, 12, 15];
 
 export function trafficLayers(sourceName: string, plate: string, at: number): StyleLayer[] {
   const busyness = regionBusyness(plate);
   const slow = TRAFFIC_KINDS.map((kind) => ({ kind, band: bandOf(mapSlowdown(kind, at, busyness)) })).filter((entry): entry is { kind: MapRoadKind; band: Exclude<TrafficBand, 'smooth'> } => entry.band !== 'smooth');
   if (slow.length === 0) return [];
   const colour = ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, TRAFFIC_COLOURS[entry.band]]), '#00000000'];
-  const widthAt = (step: number): unknown[] => ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, TRAFFIC_WIDTH[entry.kind][step] as number]), 0];
-  const width = ['interpolate', ['linear'], ['zoom'], ...TRAFFIC_ZOOMS.flatMap((zoom, step) => [zoom, widthAt(step)])];
-  return [{ id: `traffic@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_FROM, filter: ['in', ['get', 'kind'], ['literal', slow.map((entry) => entry.kind)]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': colour, 'line-width': width, 'line-opacity': 0.9 } }];
+  const widths = (table: Record<MapRoadKind, number[]>, zooms: number[]): unknown[] => ['interpolate', ['linear'], ['zoom'], ...zooms.flatMap((zoom, step) => [zoom, ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, table[entry.kind][step] as number]), 0]])];
+  const filter = ['in', ['get', 'kind'], ['literal', slow.map((entry) => entry.kind)]];
+  const layout = { 'line-cap': 'round', 'line-join': 'round' };
+  const glow: StyleLayer = { id: `traffic-glow@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_GLOW_FROM, maxzoom: 16, filter, layout, paint: { 'line-color': colour, 'line-width': widths(GLOW_WIDTH, GLOW_ZOOMS), 'line-blur': ['interpolate', ['linear'], ['zoom'], 6, 3, 12, 6, 15, 8], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 6, 0.4, 9, 0.32, 12, 0.22, 15, 0.1, 16, 0] } };
+  const line: StyleLayer = { id: `traffic@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_FROM, filter, layout, paint: { 'line-color': colour, 'line-width': widths(TRAFFIC_WIDTH, TRAFFIC_ZOOMS), 'line-opacity': 0.9 } };
+  return [glow, line];
 }
 
 export const TRANSIT_LINES_FROM = 11;

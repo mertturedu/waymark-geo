@@ -32,7 +32,7 @@ const CLASS_SLOWDOWN: Record<RoadClass, number> = {
   ferry: 0,
 };
 
-const MAP_SLOWDOWN: Record<MapRoadKind, number> = { highway: 0.8, major_road: 0.55, medium_road: 0.3, minor_road: 0.1 };
+const MAP_SLOWDOWN: Record<MapRoadKind, number> = { highway: 0.8, major_road: 0.42, medium_road: 0.3, minor_road: 0.1 };
 
 const BUSY: Record<string, number> = { '34': 1, '06': 0.9, '35': 0.9, '16': 0.85, '07': 0.8, '01': 0.8, '42': 0.75, '27': 0.75, '41': 0.75, '33': 0.7, '31': 0.65, '38': 0.65, '55': 0.6, '25': 0.6, '21': 0.6, '26': 0.6, '20': 0.6, '45': 0.55, '10': 0.55, '59': 0.55, '54': 0.55, '48': 0.55, '09': 0.55 };
 const DEFAULT_BUSY = 0.4;

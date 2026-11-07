@@ -49,11 +49,12 @@ export function useRegionStatus(id: string): RegionStatus {
   return useMemo(() => geo.regions.status(id), [geo, id, tick]);
 }
 
-export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean };
+export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean | number };
 
 const TRAFFIC_TICK_MS = 60_000;
 
-function useTrafficTime(enabled: boolean): number | undefined {
+function useTrafficTime(setting: boolean | number | undefined): number | undefined {
+  const enabled = setting === true;
   const [bucket, setBucket] = useState(() => trafficBucket(Date.now()));
   useEffect(() => {
     if (!enabled) return;
@@ -61,6 +62,7 @@ function useTrafficTime(enabled: boolean): number | undefined {
     const timer = setInterval(() => setBucket(trafficBucket(Date.now())), TRAFFIC_TICK_MS);
     return () => clearInterval(timer);
   }, [enabled]);
+  if (typeof setting === 'number') return setting;
   return enabled ? bucket : undefined;
 }
 
@@ -85,7 +87,7 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   const side = geoTheme[options.theme];
   const look = useMemo(() => resolveMapLook(side.map, options.look), [side, lookKey]);
   const installed = useInstalledKey();
-  const trafficAt = useTrafficTime(given.traffic === true);
+  const trafficAt = useTrafficTime(given.traffic);
   const hideKey = (options.hide ?? []).join(',');
   const current = useRef<string[] | null>(null);
   if (options.view === undefined) current.current = null;
