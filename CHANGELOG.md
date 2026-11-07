@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.1 (2026-11-07)
+
+- `useMapStyle({ traffic: true })` shows from far away: below zoom 8 the slow roads are drawn as a soft translucent glow (`traffic-glow@` layers from zoom 6, highways and main roads first), the sharp line starts at zoom 8 and is thicker. In the rush hour a main road is orange and a highway red. `traffic` also takes a time in milliseconds to pin the hour.
+- `npm run build:package` runs `npx` through the shell on Windows, so a plain `npm install` of the git package works there.
+
 ## 0.7.0 (2026-11-07)
 
 - Routes across provinces: when the start and the end lie in different provinces, `geo.route.route` joins the route packs of the installed provinces between them (`pickChain`, `borderSamples`, `crossingsOf`, `solveChain` in `src/core/route/chain.ts`). Crossings are found in the 10 km band both packs cover and the quickest combination is chosen; the result lists the provinces in `regions`. A province on the way that is not installed still ends in `outside_region`.
