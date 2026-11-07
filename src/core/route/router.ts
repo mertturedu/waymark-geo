@@ -2,11 +2,14 @@ import type { LngLat } from '../geo/cells';
 import type { ClockPort } from '../packs/ports';
 import type { RouteStore } from '../ports';
 import type { Borders } from '../region/borders';
-import { readRoutePack, type RoutePack } from './format';
+import { congestion, regionBusyness } from '../traffic/model';
+import { borderSamples, crossingsOf, pickChain, solveChain, type ChainPlace, type Crossing } from './chain';
+import { readRoutePackAsync, type RoutePack } from './format';
 import { MOTORCYCLE_FACTOR } from './speeds';
 import { createPlanner, type Planner } from './planner';
 import { UNREACHABLE } from './matrix';
 import type { Snap } from './snap';
+import { delayDs, trafficLeg } from './traffic';
 
 export type StopFailure = 'no_road' | 'outside_region' | 'disconnected';
 
@@ -14,10 +17,12 @@ export type Warning = { stop: number; code: 'far_snap' };
 
 export type Vehicle = 'car' | 'motorcycle';
 
-export type RouteOptions = { vehicle?: Vehicle };
+export type RouteOptions = { vehicle?: Vehicle; at?: number };
+
+export type TrafficInfo = { index: number; freeFlowS: number; delayS: number; detour: boolean };
 
 export type RouteResult =
-  | { ok: true; region: string; distanceM: number; durationS: number; approximate: boolean; geometry: LngLat[]; from: LngLat; to: LngLat; warnings: Warning[] }
+  | { ok: true; region: string; regions?: string[]; distanceM: number; durationS: number; approximate: boolean; geometry: LngLat[]; from: LngLat; to: LngLat; warnings: Warning[]; traffic?: TrafficInfo }
   | { ok: false; code: 'START_OUTSIDE_REGION' | 'PACK_DAMAGED' | StopFailure; stop?: number };
 
 export type StopState = { ok: true; point: LngLat; warnings: Warning[] } | { ok: false; reason: StopFailure };
@@ -36,6 +41,8 @@ export type RouterConfig = { store: RouteStore; borders: Borders; clock?: ClockP
 
 const COVER_M = 10_000;
 const DEFAULT_IDLE_MS = 60_000;
+
+const pause = (): Promise<void> => new Promise((resolve) => setTimeout(resolve, 0));
 
 type Loaded = { pack: RoutePack; planner: Planner };
 
@@ -69,10 +76,10 @@ export function createRouter(config: RouterConfig): Router {
     if (!pending) {
       pending = store
         .read(region)
-        .then((bytes) => {
+        .then(async (bytes) => {
           if (bytes === null) return null;
           try {
-            const pack = readRoutePack(bytes);
+            const pack = await readRoutePackAsync(bytes, pause);
             return { pack, planner: createPlanner(pack) };
           } catch {
             return 'damaged' as const;
@@ -88,9 +95,16 @@ export function createRouter(config: RouterConfig): Router {
     return pending;
   };
 
+  const links = new Map<string, boolean>();
+  const crossings = new Map<string, Crossing[]>();
+  const forget = (region?: string): void => {
+    for (const map of [links, crossings] as Map<string, unknown>[]) for (const key of [...map.keys()]) if (region === undefined || key.split(/[|>]/).includes(region)) map.delete(key);
+  };
+
   store.onChange?.((region) => {
     loading.delete(region);
     used.delete(region);
+    forget(region);
   });
 
   const covers = (region: string, point: LngLat): boolean => borders.provinceAt(point[0], point[1]) === region || borders.nearBorder(point[0], point[1], COVER_M).includes(region);
@@ -150,9 +164,101 @@ export function createRouter(config: RouterConfig): Router {
         continue;
       }
       const warnings: Warning[] = [...(a.far ? [{ stop: 0, code: 'far_snap' as const }] : []), ...(b.far ? [{ stop: 1, code: 'far_snap' as const }] : [])];
-      return { ok: true, region, distanceM: leg.distanceM, durationS: (leg.durationDs / 10) * factorOf(options), approximate: options?.vehicle === 'motorcycle', geometry: toDegrees(leg.line), from: a.snap.point, to: b.snap.point, warnings };
+      const timed = options?.at === undefined ? null : trafficLeg(loaded.pack, loaded.planner, a.snap, b.snap, leg, options.at, region);
+      const chosen = timed ? timed.leg : leg;
+      const factor = factorOf(options);
+      const eta = timed ? timed.freeFlowDs + timed.delayDs : chosen.durationDs;
+      return {
+        ok: true,
+        region,
+        distanceM: chosen.distanceM,
+        durationS: (eta / 10) * factor,
+        approximate: options?.vehicle === 'motorcycle',
+        geometry: toDegrees(chosen.line),
+        from: a.snap.point,
+        to: b.snap.point,
+        warnings,
+        ...(timed && options?.at !== undefined ? { traffic: { index: congestion(options.at), freeFlowS: (timed.freeFlowDs / 10) * factor, delayS: (timed.delayDs / 10) * factor, detour: timed.detour } } : {}),
+      };
+    }
+    if (failures.some((f) => !f.ok && f.code === 'outside_region')) {
+      const chained = await chainOnce(from, to, options, opened.choices);
+      if (chained !== null) return chained;
     }
     return failures.find((f) => !f.ok && f.code !== 'outside_region') ?? (failures[0] as RouteResult);
+  };
+
+  const adjacent = (a: string, b: string): boolean => {
+    const key = `${a}|${b}`;
+    const known = links.get(key);
+    if (known !== undefined) return known;
+    const touching = borderSamples(borders, a, b).length > 0;
+    links.set(key, touching);
+    links.set(`${b}|${a}`, touching);
+    return touching;
+  };
+
+  const crossingsBetween = (a: ChainPlace, b: ChainPlace): Crossing[] => {
+    const key = `${a.region}>${b.region}`;
+    let known = crossings.get(key);
+    if (!known) {
+      known = crossingsOf(a, b, borderSamples(borders, a.region, b.region));
+      crossings.set(key, known);
+    }
+    return known;
+  };
+
+  const chainOnce = async (from: LngLat, to: LngLat, options: RouteOptions | undefined, starts: Choice[]): Promise<RouteResult | null> => {
+    const installed = await store.installed();
+    const ends: Choice[] = [];
+    for (const region of await candidates(to)) {
+      const loaded = await load(region);
+      if (loaded !== null && loaded !== 'damaged' && loaded.planner.snap(to[0], to[1]).ok) ends.push({ region, loaded });
+    }
+    for (const start of starts) {
+      for (const end of ends) {
+        if (start.region === end.region) continue;
+        await pause();
+        const names = pickChain(borders, installed, start.region, end.region, adjacent);
+        if (names === null) continue;
+        const places: ChainPlace[] = [];
+        for (const region of names) {
+          const loaded = region === start.region ? start.loaded : region === end.region ? end.loaded : await load(region);
+          if (loaded === null || loaded === 'damaged') break;
+          places.push({ region, planner: loaded.planner, pack: loaded.pack });
+        }
+        if (places.length !== names.length) continue;
+        const between: Crossing[][] = [];
+        for (let i = 1; i < places.length; i++) {
+          await pause();
+          between.push(crossingsBetween(places[i - 1] as ChainPlace, places[i] as ChainPlace));
+        }
+        if (between.some((list) => list.length === 0)) continue;
+        const a = start.loaded.planner.snap(from[0], from[1]);
+        const b = end.loaded.planner.snap(to[0], to[1]);
+        if (!a.ok || !b.ok) continue;
+        const solved = await solveChain(places, a.snap, b.snap, between, pause);
+        if (solved === null) continue;
+        const warnings: Warning[] = [...(a.farSnap ? [{ stop: 0, code: 'far_snap' as const }] : []), ...(b.farSnap ? [{ stop: 1, code: 'far_snap' as const }] : [])];
+        const at = options?.at;
+        const delay = at === undefined ? 0 : solved.legs.reduce((sum, leg, i) => sum + delayDs((places[i] as ChainPlace).pack, leg.arcs, leg.durationDs, at, regionBusyness(leg.region)), 0);
+        const factor = factorOf(options);
+        return {
+          ok: true,
+          region: start.region,
+          regions: solved.regions,
+          distanceM: solved.distanceM,
+          durationS: ((solved.durationDs + delay) / 10) * factor,
+          approximate: options?.vehicle === 'motorcycle',
+          geometry: toDegrees(solved.line),
+          from: a.snap.point,
+          to: b.snap.point,
+          warnings,
+          ...(at === undefined ? {} : { traffic: { index: congestion(at), freeFlowS: (solved.durationDs / 10) * factor, delayS: (delay / 10) * factor, detour: false } }),
+        };
+      }
+    }
+    return null;
   };
 
   const matrixOnce = async (points: ReadonlyArray<LngLat>, options?: RouteOptions): Promise<MatrixResult> => {
@@ -217,6 +323,7 @@ export function createRouter(config: RouterConfig): Router {
     },
 
     invalidate(region) {
+      forget(region);
       if (region === undefined) {
         loading.clear();
         used.clear();

@@ -15,6 +15,7 @@ import type { NearbyGroup } from '../../core/address/nearby';
 import type { MapFont, MapStyle } from '../map/style';
 import { MAX_STYLED_REGIONS, regionsForView, type ViewPoint } from '../map/region-window';
 import { resolveMapLook, type MapLook } from '../map/theme';
+import { trafficBucket } from '../../core/traffic/model';
 import { useGeo, useGeoTheme } from './GeoProvider';
 
 const REFRESH_MS = 200;
@@ -48,7 +49,31 @@ export function useRegionStatus(id: string): RegionStatus {
   return useMemo(() => geo.regions.status(id), [geo, id, tick]);
 }
 
-export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont };
+export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean };
+
+const TRAFFIC_TICK_MS = 60_000;
+
+function useTrafficTime(enabled: boolean): number | undefined {
+  const [bucket, setBucket] = useState(() => trafficBucket(Date.now()));
+  useEffect(() => {
+    if (!enabled) return;
+    setBucket(trafficBucket(Date.now()));
+    const timer = setInterval(() => setBucket(trafficBucket(Date.now())), TRAFFIC_TICK_MS);
+    return () => clearInterval(timer);
+  }, [enabled]);
+  return enabled ? bucket : undefined;
+}
+
+function useInstalledKey(): string {
+  const geo = useGeo();
+  const read = (): string => geo.regions.installed().join(',') + '|' + (geo.regions.baseDir() ?? '');
+  const [key, setKey] = useState(read);
+  useEffect(() => {
+    setKey(read());
+    return geo.regions.subscribe(() => setKey(read()));
+  }, [geo]);
+  return key;
+}
 
 export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   const system = useColorScheme();
@@ -59,8 +84,8 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   const lookKey = JSON.stringify(options.look ?? null);
   const side = geoTheme[options.theme];
   const look = useMemo(() => resolveMapLook(side.map, options.look), [side, lookKey]);
-  useRegionTick();
-  const installed = geo.regions.installed().join(',') + '|' + (geo.regions.baseDir() ?? '');
+  const installed = useInstalledKey();
+  const trafficAt = useTrafficTime(given.traffic === true);
   const hideKey = (options.hide ?? []).join(',');
   const current = useRef<string[] | null>(null);
   if (options.view === undefined) current.current = null;
@@ -71,7 +96,7 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   }
   const only = current.current;
   const onlyKey = only === null ? '*' : only.join(',');
-  return useMemo(() => geo.map.style({ theme: options.theme, ...(options.language ? { language: options.language } : {}), ...(options.hide ? { hide: options.hide } : {}), ...(only ? { only } : {}), look, accent: side.colors.accent, ...(options.font ? { font: options.font } : {}) }), [geo, options.theme, options.language, options.font, hideKey, installed, onlyKey, look, side]);
+  return useMemo(() => geo.map.style({ theme: options.theme, ...(options.language ? { language: options.language } : {}), ...(options.hide ? { hide: options.hide } : {}), ...(only ? { only } : {}), look, accent: side.colors.accent, ...(options.font ? { font: options.font } : {}), ...(trafficAt !== undefined ? { traffic: trafficAt } : {}) }), [geo, options.theme, options.language, options.font, hideKey, installed, onlyKey, look, side, trafficAt]);
 }
 
 export function useHoodLabels(language?: string): { name: string; lng: number; lat: number }[] {

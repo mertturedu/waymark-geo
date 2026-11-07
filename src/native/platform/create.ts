@@ -15,7 +15,7 @@ import { createExpoOpener } from './sqlite';
 
 export type GeoNativeConfig = GeoConfig & { zstd?: boolean; directory?: Directory; borders?: Borders; net?: NetPort; connectivity?: ConnectivityPort; wrapOpener?: (open: (path: string) => Promise<SqlDb>) => (path: string) => Promise<SqlDb> };
 
-export type MapStyleOptions = { theme: 'light' | 'dark'; language?: string; hoods?: { name: string; lng: number; lat: number }[]; hide?: string[]; look?: ResolvedMapLook; accent?: string; only?: string[]; font?: MapFont };
+export type MapStyleOptions = { theme: 'light' | 'dark'; language?: string; hoods?: { name: string; lng: number; lat: number }[]; hide?: string[]; look?: ResolvedMapLook; accent?: string; only?: string[]; font?: MapFont; traffic?: number };
 
 export type GeoNative = Geo & { map: { style(options: MapStyleOptions): MapStyle } };
 
@@ -39,7 +39,7 @@ export async function createGeoNative(config: GeoNativeConfig): Promise<GeoNativ
   return {
     ...geo,
     map: {
-      style: ({ theme, language, hoods, hide, look, accent, only, font }) =>
+      style: ({ theme, language, hoods, hide, look, accent, only, font, traffic }) =>
         buildStyle({
           rootUrl: root.uri,
           baseDir: geo.regions.baseDir(),
@@ -55,6 +55,7 @@ export async function createGeoNative(config: GeoNativeConfig): Promise<GeoNativ
           ...(look ? { look } : {}),
           ...(accent ? { accent } : {}),
           ...(font ? { font } : {}),
+          ...(traffic !== undefined ? { traffic: { at: traffic } } : {}),
         }),
     },
   };

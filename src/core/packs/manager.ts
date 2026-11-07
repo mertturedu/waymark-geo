@@ -52,6 +52,8 @@ export type PackManager = {
 
 const MANIFEST_PATH = 'manifest-v1.json';
 const SIGNATURE_PATH = 'manifest-v1.json.sig';
+const PARALLEL_FILES = 8;
+const PARALLEL_BELOW_BYTES = 1_000_000;
 const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory'];
 
 type Mutable = { state: RegionState; progress: { done: number; total: number } | null; error: { code: PackErrorCode; message: string } | null; waitingWifi: boolean };
@@ -321,9 +323,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       };
       entry.progress = { done: 0, total };
       emit();
-      for (let index = 0; index < pendingFiles.length; index++) {
-        const { file } = pendingFiles[index] as { file: ManifestFile };
-        const last = index === pendingFiles.length - 1;
+      const fetchFile = async (file: ManifestFile, signal: AbortSignal, onProgress: (done: number) => void, onVerify?: () => void): Promise<void> => {
         const target = finalPath(file.path);
         const existed = await fs.exists(target);
         await downloadFile({
@@ -338,11 +338,50 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
           sha256: file.sha256,
           ...(file.blocks ? { blocks: file.blocks } : {}),
           ...(file.encoded && env.decode ? { encoded: { url: urlOf(file.encoded.path), partPath: partPath(file.encoded.path), finalPath: finalPath(file.encoded.path), size: file.encoded.size, sha256: file.encoded.sha256 }, decode: env.decode } : {}),
-          signal: job.controller.signal,
-          onProgress: (done) => report(finished + done),
-          ...(last ? { onVerify: () => void transition(job.id, 'verify') } : {}),
+          signal,
+          onProgress,
+          ...(onVerify ? { onVerify } : {}),
         });
         if (!existed) job.placed.push(target);
+      };
+      const isSmall = ({ file }: { file: ManifestFile }): boolean => file.kind === 'base' && file.size <= PARALLEL_BELOW_BYTES;
+      const small = pendingFiles.filter(isSmall);
+      const rest = pendingFiles.filter((item) => !isSmall(item));
+      if (small.length > 0) {
+        const partial = new Map<string, number>();
+        const gate = new AbortController();
+        const forward = (): void => gate.abort();
+        job.controller.signal.addEventListener('abort', forward);
+        let firstError: unknown;
+        let taken = 0;
+        const worker = async (): Promise<void> => {
+          while (taken < small.length && !gate.signal.aborted) {
+            const { file } = small[taken++] as { file: ManifestFile };
+            await fetchFile(file, gate.signal, (done) => {
+              partial.set(file.path, done);
+              report(finished + [...partial.values()].reduce((sum, value) => sum + value, 0));
+            });
+            partial.delete(file.path);
+            finished += file.size;
+            report(finished + [...partial.values()].reduce((sum, value) => sum + value, 0));
+          }
+        };
+        await Promise.allSettled(
+          Array.from({ length: Math.min(PARALLEL_FILES, small.length) }, () =>
+            worker().catch((error: unknown) => {
+              firstError ??= error;
+              gate.abort();
+            }),
+          ),
+        );
+        job.controller.signal.removeEventListener('abort', forward);
+        if (firstError !== undefined) throw firstError;
+        if (job.controller.signal.aborted) throw packError('cancelled');
+      }
+      for (let index = 0; index < rest.length; index++) {
+        const { file } = rest[index] as { file: ManifestFile };
+        const last = index === rest.length - 1;
+        await fetchFile(file, job.controller.signal, (done) => report(finished + done), last ? () => void transition(job.id, 'verify') : undefined);
         finished += file.size;
         report(finished);
       }

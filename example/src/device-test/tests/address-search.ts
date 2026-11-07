@@ -40,7 +40,7 @@ export const addressSearch: DeviceTest = {
     const address = await openFile(ctx, addressFile.path);
     const part = buildingsFile ? await openFile(ctx, buildingsFile.path) : null;
     const store: PackStore = { installed: async () => [PLATE], open: async () => address, openPart: async () => part };
-    const search = createSearch({ store, borders: { provinceAt: () => PLATE, provinceBounds: () => region.bbox, plates: () => [PLATE], nearBorder: () => [] } });
+    const search = createSearch({ store, borders: { provinceAt: () => PLATE, provinceBounds: () => region.bbox, provincePolygons: () => [], plates: () => [PLATE], nearBorder: () => [] } });
     try {
       const queries = pickQueries((golden as { queries: GoldenEntry[] }).queries, COUNT);
       const times: number[] = [];

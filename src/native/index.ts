@@ -29,6 +29,10 @@ export type { MapRotation, RotationEvent, RotationOptions } from './react/useMap
 export { OFF_ROUTE_FIXES, REROUTE_GAP_MS, useNavigation } from './react/useNavigation';
 export type { NavCue, NavFix, Navigation, NavigationOptions } from './react/useNavigation';
 export { useLocateMe } from './react/useLocateMe';
+export { MissingRegionsLayer } from './react/MissingRegionsLayer';
+export { TRAFFIC_COLOURS } from './map/style';
+export type { MissingRegionsStyle } from './react/MissingRegionsLayer';
+export { isMissing, missingAt, missingPlates, fadeLevel, regionBytes, removedPlates } from './logic/missing-regions';
 export { useLocationRegion } from './react/useLocationRegion';
 export type { LocateControls, LocateOptions } from './react/useLocateMe';
 export { LOCATE_ZOOM, modeOfTracking, needsZoom, nextMode, trackingOf, zoomFor } from './logic/locate';

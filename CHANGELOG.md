@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.7.0 (2026-11-07)
+
+- Routes across provinces: when the start and the end lie in different provinces, `geo.route.route` joins the route packs of the installed provinces between them (`pickChain`, `borderSamples`, `crossingsOf`, `solveChain` in `src/core/route/chain.ts`). Crossings are found in the 10 km band both packs cover and the quickest combination is chosen; the result lists the provinces in `regions`. A province on the way that is not installed still ends in `outside_region`.
+- Typical traffic (`src/core/traffic/model.ts`): a built-in weekday, Saturday and Sunday profile of the congestion in Turkish time, scaled by road class and by how busy the province is. It works offline and knows nothing about live events.
+  - `geo.route.route(from, to, { at })` returns `durationS` with the delay of that hour and `traffic: { index, freeFlowS, delayS, detour }`. In the rush hour it also tries eight detours through calmer roads and takes one that is at least 5% quicker. Routes across provinces get the delay of each province. Without `at` nothing changes.
+  - `useMapStyle({ traffic: true })` draws the slow roads yellow, orange and red (`traffic@` layers under the labels, `TRAFFIC_COLOURS`), refreshed every 15 minutes. `useNavigation` asks for traffic-aware routes.
+  - `congestion`, `bandOf`, `slowdownOf`, `mapSlowdown`, `regionBusyness`, `trafficBucket`, `localTime`.
+- Route packs are read in slices of 8 ms (`readRoutePackAsync`) and the steps of a route across provinces pause in between, so touches are handled while a pack opens. Hermes: longest step 252 ms (Denizli pack) → 12 ms.
+- The small files of the base pack (fonts) download eight at a time instead of one by one: 777 requests no longer take minutes.
+- `useMapStyle` builds the style again only when the installed provinces or the base pack change, not on every download progress tick.
+- Provinces that are not installed: `MissingRegionsLayer` draws their border with a hatched fill and fades it out when the download ends; `regionOutlines`, `Borders.provincePolygons`, `isMissing`, `missingAt`, `missingPlates`, `regionBytes`.
+- Driving: `trackRoute`, `dueCue`, `cueText`, `headingTo` and `useNavigation` (progress along the route, next turn, spoken cues, off route detection and a bird's eye fallback).
+
 ## 0.6.0 (2026-11-04)
 
 - The Expo config plugin is `app.plugin.cjs`. As `app.plugin.js` in a package of ES modules Expo could not load it, so `"plugins": ["@yuksi/geo"]` failed with `INVALID_PLUGIN_TYPE`.

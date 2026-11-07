@@ -4,6 +4,7 @@ import { createReader, createWriter, decodeRings, encodeRings, pointInRings, typ
 export type Borders = {
   provinceAt(lng: number, lat: number): string | null;
   provinceBounds(plate: string): [number, number, number, number] | null;
+  provincePolygons(plate: string): Polygon[];
   plates(): string[];
   nearBorder(lng: number, lat: number, meters: number): string[];
 };
@@ -83,6 +84,7 @@ export function createBorders(bytes: Uint8Array): Borders {
   return {
     provinceAt,
     provinceBounds: (plate) => entries.find((e) => e.plate === plate)?.bounds ?? null,
+    provincePolygons: (plate) => entries.find((e) => e.plate === plate)?.rings ?? [],
     plates: () => entries.map((e) => e.plate),
     nearBorder(lng, lat, meters) {
       if (!Number.isFinite(lng) || !Number.isFinite(lat) || !Number.isFinite(meters) || meters <= 0) return [];

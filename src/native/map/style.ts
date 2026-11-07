@@ -5,6 +5,7 @@ import { layers as protomapsLayers, namedFlavor } from '@protomaps/basemaps';
 import { MLT_SUFFIX } from '../../core/region/manifest';
 import { upperTr } from '../../core/text/upper';
 import { SHIELD_MAX_LENGTH, shieldImageExpression } from './shields';
+import { bandOf, mapSlowdown, regionBusyness, type MapRoadKind, type TrafficBand } from '../../core/traffic/model';
 
 export type StyleLayer = { id: string; type: string; source?: string; minzoom?: number; maxzoom?: number; paint?: Record<string, unknown>; layout?: Record<string, unknown>; [key: string]: unknown };
 export type MapStyle = {
@@ -26,6 +27,7 @@ export type StyleInput = {
   look?: ResolvedMapLook;
   accent?: string;
   font?: MapFont;
+  traffic?: { at: number };
 };
 
 export type MapFont = 'inter' | 'noto';
@@ -176,6 +178,22 @@ const withShields = (layers: StyleLayer[]): StyleLayer[] =>
       paint: { 'text-color': '#FFFFFF' },
     };
   });
+
+export const TRAFFIC_FROM = 9;
+export const TRAFFIC_COLOURS: Record<Exclude<TrafficBand, 'smooth'>, string> = { busy: '#F5B800', heavy: '#F26B21', jam: '#E0050F' };
+const TRAFFIC_KINDS: MapRoadKind[] = ['highway', 'major_road', 'medium_road', 'minor_road'];
+const TRAFFIC_WIDTH: Record<MapRoadKind, number[]> = { highway: [1.2, 3, 6, 12], major_road: [0.8, 2.4, 5, 10], medium_road: [0.5, 1.6, 3.6, 8], minor_road: [0, 0.6, 2.4, 6] };
+const TRAFFIC_ZOOMS = [9, 12, 15, 18];
+
+export function trafficLayers(sourceName: string, plate: string, at: number): StyleLayer[] {
+  const busyness = regionBusyness(plate);
+  const slow = TRAFFIC_KINDS.map((kind) => ({ kind, band: bandOf(mapSlowdown(kind, at, busyness)) })).filter((entry): entry is { kind: MapRoadKind; band: Exclude<TrafficBand, 'smooth'> } => entry.band !== 'smooth');
+  if (slow.length === 0) return [];
+  const colour = ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, TRAFFIC_COLOURS[entry.band]]), '#00000000'];
+  const widthAt = (step: number): unknown[] => ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, TRAFFIC_WIDTH[entry.kind][step] as number]), 0];
+  const width = ['interpolate', ['linear'], ['zoom'], ...TRAFFIC_ZOOMS.flatMap((zoom, step) => [zoom, widthAt(step)])];
+  return [{ id: `traffic@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_FROM, filter: ['in', ['get', 'kind'], ['literal', slow.map((entry) => entry.kind)]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': colour, 'line-width': width, 'line-opacity': 0.9 } }];
+}
 
 export const TRANSIT_LINES_FROM = 11;
 export const TRANSIT_STATIONS_FROM = 13;
@@ -472,7 +490,13 @@ function assembleStyle(input: StyleInput): MapStyle {
   for (const region of [...input.regions].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     const name = `r${region.id}`;
     sources[name] = vectorSource(root, region.tilesPath, REGION_MAX_ZOOM);
+    const before = layers.length;
     clone(name, 'region');
+    if (input.traffic) {
+      const drawnTraffic = trafficLayers(name, region.id, input.traffic.at);
+      const symbol = layers.findIndex((layer, index) => index >= before && layer.type === 'symbol');
+      layers.splice(symbol < 0 ? layers.length : symbol, 0, ...drawnTraffic);
+    }
     if (paint.look.buildings3d) layers.push(buildingsExtrusion(name, paint));
     layers.push(...serviceLayers(name, paint, lang));
     if (region.transitPath) {

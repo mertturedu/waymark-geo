@@ -22,7 +22,7 @@ export type Navigation =
   | { state: 'arrived'; cue: NavCue | null };
 
 export type NavigationOptions = {
-  directions: (from: LngLat, to: LngLat, options?: { language?: Lang }) => Promise<DirectionsResult>;
+  directions: (from: LngLat, to: LngLat, options?: { language?: Lang; at?: number }) => Promise<DirectionsResult>;
   destination: LngLat | null;
   fix: NavFix | null;
   language?: Lang;
@@ -70,7 +70,7 @@ export function useNavigation({ directions, destination, fix, language = 'tr', e
       busy.current = true;
       asked.current = now();
       if (rerouting && route.current) setNav((current) => (current.state === 'active' ? { ...current, rerouting: true } : current));
-      void directions(fix.point, destination, { language })
+      void directions(fix.point, destination, { language, at: now() })
         .then((result) => {
           if (result.ok) {
             route.current = { geometry: result.geometry, steps: result.steps, durationS: result.durationS };

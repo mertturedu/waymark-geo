@@ -22,6 +22,11 @@ describe('the generated style is a valid MapLibre style', () => {
     expect(errors.map((e) => `${e.message}`)).toEqual([]);
   });
 
+  it('is valid with the traffic layer in the rush hour', () => {
+    const errors = validateStyleMin(buildStyle(input({ traffic: { at: Date.UTC(2026, 10, 9) + 5 * 3_600_000 } })) as never);
+    expect(errors.map((e) => `${e.message}`)).toEqual([]);
+  });
+
   it('is valid with no province installed, with nothing but the background and with many provinces', () => {
     expect(validateStyleMin(buildStyle(input({ regions: [], hoods: [] })) as never).map((e) => e.message)).toEqual([]);
     expect(validateStyleMin(buildStyle(input({ baseDir: null, regions: [] })) as never).map((e) => e.message)).toEqual([]);

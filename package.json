@@ -1,6 +1,6 @@
 {
   "name": "@yuksi/geo",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Offline maps, door-level address search and route planning for React Native",
   "license": "UNLICENSED",
   "type": "module",

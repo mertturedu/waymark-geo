@@ -67,7 +67,10 @@ function section(table: Table, id: number): [number, number] {
 
 type Arcs = { first: Uint32Array; other: Uint32Array; w: Uint32Array; len: Uint32Array; via: Uint32Array; mirror: Uint8Array | null };
 
-function withMirrors(n: number, up: Arcs, rest: Arcs): Arcs {
+type Slice = () => boolean;
+type Steps<T> = Generator<void, T, void>;
+
+function* withMirrors(n: number, up: Arcs, rest: Arcs, slice: Slice): Steps<Arcs> {
   const mirror = up.mirror as Uint8Array;
   let extra = 0;
   for (let i = 0; i < mirror.length; i++) extra += mirror[i] as number;
@@ -82,6 +85,7 @@ function withMirrors(n: number, up: Arcs, rest: Arcs): Arcs {
     at++;
   };
   for (let v = 0; v < n; v++) {
+    if ((v & 1023) === 1023 && slice()) yield;
     let i = rest.first[v] as number;
     const restEnd = rest.first[v + 1] as number;
     let j = up.first[v] as number;
@@ -103,8 +107,8 @@ function withMirrors(n: number, up: Arcs, rest: Arcs): Arcs {
   return out;
 }
 
-function readHierarchy(buf: Uint8Array, table: Table, n: number, version: number): Hierarchy {
-  const read = (id: number, mirrored: boolean): Arcs => {
+function* readHierarchy(buf: Uint8Array, table: Table, n: number, version: number, slice: Slice): Steps<Hierarchy> {
+  function* read(id: number, mirrored: boolean): Steps<Arcs> {
     const [start, end] = section(table, id);
     const c = cursorOf(buf, start, end);
     const total = c.u();
@@ -117,6 +121,7 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number, version: number
     const mirror = mirrored ? new Uint8Array(total) : null;
     let at = 0;
     for (let v = 0; v < n; v++) {
+      if ((v & 1023) === 1023 && slice()) yield;
       const count = c.u();
       if (at + count > total) throw packError('entry overflow');
       let previous = v;
@@ -141,11 +146,11 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number, version: number
     }
     if (at !== total) throw packError('entry count mismatch');
     return { first, other, w, len, via, mirror };
-  };
+  }
   const mirrored = version === MIRROR_VERSION;
-  const up = read(SECTION.up, mirrored);
-  const stored = read(SECTION.down, false);
-  const down = mirrored ? withMirrors(n, up, stored) : stored;
+  const up = yield* read(SECTION.up, mirrored);
+  const stored = yield* read(SECTION.down, false);
+  const down = mirrored ? yield* withMirrors(n, up, stored, slice) : stored;
   return {
     n,
     upFirst: up.first,
@@ -161,7 +166,7 @@ function readHierarchy(buf: Uint8Array, table: Table, n: number, version: number
   };
 }
 
-function readPairs(buf: Uint8Array, table: Table, id: number, nodes: number): Pairs {
+function* readPairs(buf: Uint8Array, table: Table, id: number, nodes: number, slice: Slice): Steps<Pairs> {
   const [start, end] = section(table, id);
   const c = cursorOf(buf, start, end);
   const count = c.u();
@@ -170,6 +175,7 @@ function readPairs(buf: Uint8Array, table: Table, id: number, nodes: number): Pa
   const node = new Uint32Array(count);
   let previous = 0;
   for (let i = 0; i < count; i++) {
+    if ((i & 1023) === 1023 && slice()) yield;
     previous += c.u();
     key[i] = previous;
     const v = c.u();
@@ -179,7 +185,7 @@ function readPairs(buf: Uint8Array, table: Table, id: number, nodes: number): Pa
   return { key, node };
 }
 
-export function readRoutePack(buf: Uint8Array): RoutePack {
+function* readSteps(buf: Uint8Array, slice: Slice): Steps<RoutePack> {
   const view = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
   const table = readTable(buf, view);
   const nodeCount = view.getUint32(8, true);
@@ -196,6 +202,7 @@ export function readRoutePack(buf: Uint8Array): RoutePack {
   let x = 0;
   let y = 0;
   for (let i = 0; i < baseCount; i++) {
+    if ((i & 1023) === 1023 && slice()) yield;
     x += nodes.z();
     y += nodes.z();
     lon[i] = x;
@@ -215,6 +222,7 @@ export function readRoutePack(buf: Uint8Array): RoutePack {
   const shapeOffset = new Uint32Array(edgeCount + 1);
   let previousTail = 0;
   for (let i = 0; i < edgeCount; i++) {
+    if ((i & 1023) === 1023 && slice()) yield;
     previousTail += e.z();
     const t = previousTail;
     const h = t + e.z();
@@ -243,12 +251,14 @@ export function readRoutePack(buf: Uint8Array): RoutePack {
   const first = new Uint32Array(cols * rows + 1);
   let total = 0;
   for (let i = 0; i < cols * rows; i++) {
+    if ((i & 1023) === 1023 && slice()) yield;
     total += g.u();
     if (total > gridEnd - gridStart) throw packError('grid edge');
     first[i + 1] = total;
   }
   const members = new Uint32Array(total);
   for (let i = 0; i < cols * rows; i++) {
+    if ((i & 1023) === 1023 && slice()) yield;
     let previous = 0;
     for (let k = first[i] as number; k < (first[i + 1] as number); k++) {
       previous += g.u();
@@ -257,15 +267,39 @@ export function readRoutePack(buf: Uint8Array): RoutePack {
     }
   }
 
+  const hierarchy = yield* readHierarchy(buf, table, nodeCount, view.getUint16(4, true), slice);
+  const entry = yield* readPairs(buf, table, SECTION.entry, nodeCount, slice);
+  const exits = yield* readPairs(buf, table, SECTION.exits, nodeCount, slice);
   return {
     bbox,
-    hierarchy: readHierarchy(buf, table, nodeCount, view.getUint16(4, true)),
+    hierarchy,
     base: { count: baseCount, lon, lat, node: hid },
     edges: { count: edgeCount, tail, head, flags, length, travel, shapeOffset, shapes: buf.slice(shapesStart, shapesEnd) },
-    entry: readPairs(buf, table, SECTION.entry, nodeCount),
-    exits: readPairs(buf, table, SECTION.exits, nodeCount),
+    entry,
+    exits,
     grid: { originLon, originLat, cell, cols, rows, first, edges: members },
   };
+}
+
+export function readRoutePack(buf: Uint8Array): RoutePack {
+  const steps = readSteps(buf, () => false);
+  for (;;) {
+    const next = steps.next();
+    if (next.done) return next.value;
+  }
+}
+
+const SLICE_MS = 8;
+
+export async function readRoutePackAsync(buf: Uint8Array, pause: () => Promise<void>): Promise<RoutePack> {
+  let began = Date.now();
+  const steps = readSteps(buf, () => Date.now() - began >= SLICE_MS);
+  for (;;) {
+    const next = steps.next();
+    if (next.done) return next.value;
+    await pause();
+    began = Date.now();
+  }
 }
 
 export function edgeLine(pack: RoutePack, edge: number): number[] {
