@@ -1,5 +1,5 @@
 {
- "digest": "feeb20ae4e1426bc",
+ "digest": "76f3b239499ee0eb",
  "maxzoom": {"overview":8,"tiles":15,"places":16},
  "labels": ["addr_housenumber","b","name","name2","name3","name:ar","name:bg","name:cs","name:da","name:de","name:el","name:en","name:es","name:et","name:fa","name:fi","name:fr","name:ga","name:he","name:hi","name:hr","name:hu","name:id","name:it","name:ja","name:ko","name:lt","name:lv","name:mr","name:mt","name:ne","name:nl","name:no","name:pl","name:pt","name:ro","name:ru","name:sk","name:sl","name:sv","name:tr","name:uk","name:ur","name:vi","name:xx","name:zh","ns","pgf:name","pgf:name2","pgf:name3","pgf:name:hi","pgf:name:mr","pgf:name:ne","ref","ref:en","script","script2","script3"],
  "named": ["overview/earth","overview/places","overview/roads","overview/water","places/places","tiles/earth","tiles/places","tiles/pois","tiles/roads","tiles/water"],

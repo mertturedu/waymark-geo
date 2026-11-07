@@ -85,6 +85,11 @@ describe('keepsKey', () => {
     expect(['name:de', 'min_zoom'].map(keep)).toEqual([false, false]);
   });
 
+  it('keeps the landmark flag the legend toggle filters on', () => {
+    const keep = keepsKey(profile, 'tiles', 'places') as (key: string) => boolean;
+    expect(keep('lm')).toBe(true);
+  });
+
   it('has nothing to keep for a layer no style reads', () => {
     expect(keepsKey(profile, 'tiles', 'landcover')).toBeNull();
     expect(keepsKey(profile, 'places', 'places')).toBeNull();

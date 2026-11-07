@@ -22,7 +22,7 @@ export type UsageProfile = {
 export type ProfileSummary = { props: [string, string[]][]; rules: [string, string[]][]; named: string[]; labels: string[]; maxzoom: Partial<Record<SourceKind, number>>; runtime: string[]; nameLike: string; topZoom: number };
 
 export const TOP_ZOOM = 25;
-export const RUNTIME_PROPS = ['name', 'name:tr', 'kind', 'grp', 'g'];
+export const RUNTIME_PROPS = ['name', 'name:tr', 'kind', 'grp', 'g', 'lm'];
 export const NAME_LIKE = /^name:[a-z]{2}$/;
 const LEGACY_OPS = new Set(['==', '!=', '<', '<=', '>', '>=', 'in', '!in', 'has', '!has']);
 const BRAND_MODES: BrandMode[] = ['category', 'badge', 'ladder', 'logo', 'hidden'];
