@@ -21,7 +21,7 @@ function walk(dir: string, base: string): string[] {
 export function buildPackage(options: { tsc?: (cwd: string) => void } = {}): { files: number; copied: number } {
   const lib = join(root, 'lib');
   rmSync(lib, { recursive: true, force: true });
-  (options.tsc ?? ((cwd) => void execFileSync('npx', ['tsc', '-p', 'tsconfig.build.json'], { cwd, stdio: 'inherit' })))(root);
+  (options.tsc ?? ((cwd) => void execFileSync('npx', ['tsc', '-p', 'tsconfig.build.json'], { cwd, stdio: 'inherit', shell: process.platform === 'win32' })))(root);
   const wanted = assetsToCopy(walk(join(root, 'src'), root));
   for (const file of wanted) {
     const target = join(lib, file.slice('src/'.length));
