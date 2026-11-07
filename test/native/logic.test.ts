@@ -22,7 +22,7 @@ const region: ManifestRegion = {
   ],
 };
 
-const status = (extra: Partial<RegionStatus> = {}): RegionStatus => ({ id: '34', state: 'none', progress: null, error: null, waitingWifi: false, installedVersion: null, availableVersion: null, installedParts: [], ...extra });
+const status = (extra: Partial<RegionStatus> = {}): RegionStatus => ({ id: '34', state: 'none', progress: null, error: null, waitingWifi: false, installedVersion: null, availableVersion: null, installedParts: [], updateBytes: null, lastUpdate: null, ...extra });
 
 describe('formatMegabytes', () => {
   it('shows one decimal below ten megabytes and whole numbers above', () => {
@@ -57,6 +57,18 @@ describe('plannedBytes', () => {
 
   it('leaves out parts the manifest does not have', () => {
     expect(plannedBytes({ ...region, files: [region.files[0] as ManifestRegion['files'][number]] }, status(), 12_600_000)).toBe(13_350_000);
+  });
+});
+
+describe('describeRegion for an update', () => {
+  const base = { region, baseBytes: 12_600_000, lang: 'tr' };
+
+  it('shows what the update will really download when that is known, and the plan otherwise', () => {
+    const update = { state: 'update-available' as const, installedParts: ['address' as const] };
+    expect(describeRegion({ ...base, status: status({ ...update, updateBytes: 2_400_000 }) }).sizeText).toBe('2.4 MB');
+    expect(describeRegion({ ...base, status: status({ ...update, updateBytes: 0 }) }).sizeText).toBe('0 MB');
+    expect(describeRegion({ ...base, status: status({ ...update, updateBytes: null }) }).sizeText).toBe('13 MB');
+    expect(describeRegion({ ...base, status: status({ state: 'none', updateBytes: 2_400_000 }) }).sizeText).toBe('110 MB');
   });
 });
 

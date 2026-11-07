@@ -19,7 +19,7 @@ export type { Place, Precision, ResolveResult, SearchOptions, StructuredQuery } 
 export { createLearning, memoryStore } from './learn';
 export type { ConfirmInput, ConfirmResult, ConfirmSource, LearnStore } from './learn';
 export { createPackManager } from './packs/manager';
-export type { CheckResult, DownloadOptions, PackConfig, PackEnv, PackManager, RegionStatus } from './packs/manager';
+export type { CheckResult, DownloadOptions, PackConfig, PackEnv, PackManager, RegionStatus, UpdateReport } from './packs/manager';
 export type { ClockPort, ConnectionKind, ConnectivityPort, FsPort, HashPort, NetPort, NetResponse } from './packs/ports';
 export type { PartKind } from './packs/state-file';
 export { PACK_ERROR_CODES, isPackError } from './packs/types';

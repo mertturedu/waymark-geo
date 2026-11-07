@@ -3,7 +3,7 @@ import { bytesToHex } from '@noble/hashes/utils';
 import { generateKeyPairSync } from 'node:crypto';
 import { zstdCompressSync } from 'node:zlib';
 import { signManifest } from '../../pipeline/build/manifest';
-import { serializeManifest, type Manifest, type ManifestFile, type ManifestRegion } from '../../src/core/region/manifest';
+import { serializeManifest, type Manifest, type ManifestFile, type ManifestPatch, type ManifestRegion } from '../../src/core/region/manifest';
 import { createFakeEnv, type FakeEnv } from './fake-env';
 
 type Part = 'address' | 'tiles' | 'buildings' | 'places' | 'route';
@@ -24,6 +24,7 @@ export type World = {
   base: Record<string, Uint8Array>;
   publish(patch?: { format?: number; minSdk?: string; tamper?: boolean }): Manifest;
   setPart(id: string, kind: Part, bytes: Uint8Array): void;
+  addPatch(id: string, kind: Part, fromBytes: Uint8Array, patch: Uint8Array): ManifestPatch;
   setBuild(build: string): void;
   pathOf(id: string, kind: Part): string;
   signWith(text: string): string;
@@ -40,6 +41,7 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
     { id: '06', tier: 'basic', parts: { address: blob(10_000, 6), tiles: blob(25_000, 7) } },
   ];
   const base = options.base ?? { 'overview.pmtiles': blob(9_000, 8), 'sprites/v4/light.json': blob(300, 9) };
+  const patches: { id: string; kind: Part; to: string; entry: ManifestPatch; bytes: Uint8Array }[] = [];
   let day = 20261020;
   let build = '20261022';
 
@@ -47,10 +49,13 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
     const sha = bytesToHex(sha256(bytes));
     const path = `${id}/${kind}-${sha.slice(0, 8)}.${EXTENSION[kind]}`;
     env.server.put(`${BASE_URL}/${path}`, bytes);
-    if (!options.encode?.includes(kind)) return { kind, path, size: bytes.length, sha256: sha };
+    const mine = patches.filter((item) => item.id === id && item.kind === kind && item.to === sha);
+    for (const item of mine) env.server.put(`${BASE_URL}/${item.entry.path}`, item.bytes);
+    const withPatches = mine.length > 0 ? { patches: mine.map((item) => item.entry) } : {};
+    if (!options.encode?.includes(kind)) return { kind, path, size: bytes.length, sha256: sha, ...withPatches };
     const packed = new Uint8Array(zstdCompressSync(bytes));
     env.server.put(`${BASE_URL}/${path}.zst`, packed);
-    return { kind, path, size: bytes.length, sha256: sha, encoded: { codec: 'zstd', path: `${path}.zst`, size: packed.length, sha256: bytesToHex(sha256(packed)) } };
+    return { kind, path, size: bytes.length, sha256: sha, encoded: { codec: 'zstd', path: `${path}.zst`, size: packed.length, sha256: bytesToHex(sha256(packed)) }, ...withPatches };
   };
 
   const world: World = {
@@ -66,6 +71,13 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
       if (!region) throw new Error(`no region ${id}`);
       region.parts[kind] = bytes;
       day += 1;
+    },
+    addPatch(id, kind, fromBytes, patch) {
+      const to = bytesToHex(sha256(regions.find((r) => r.id === id)?.parts[kind] as Uint8Array));
+      const from = bytesToHex(sha256(fromBytes));
+      const entry: ManifestPatch = { from, codec: 'zstd-patch-seg', path: `${id}/patches/${kind}-${to.slice(0, 8)}-from-${from.slice(0, 8)}.zpatch`, size: patch.length, sha256: bytesToHex(sha256(patch)), segment: 8 * 1024 * 1024, margin: 4 * 1024 * 1024 };
+      patches.push({ id, kind, to, entry, bytes: patch });
+      return entry;
     },
     setBuild(next) {
       build = next;

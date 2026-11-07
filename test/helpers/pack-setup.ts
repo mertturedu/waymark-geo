@@ -2,7 +2,7 @@ import { createPackManager, type PackManager } from '../../src/core/packs/manage
 import type { DecodePort, NetPort } from '../../src/core/packs/ports';
 import { makeWorld, type World } from './pack-world';
 
-export type SetupOptions = { autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; net?: NetPort; decode?: DecodePort };
+export type SetupOptions = { autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; patches?: boolean; net?: NetPort; decode?: DecodePort };
 
 export async function setup(world: World = makeWorld(), options: SetupOptions = {}): Promise<{ world: World; manager: PackManager }> {
   const { net, decode, ...rest } = options;

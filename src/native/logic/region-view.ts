@@ -71,7 +71,7 @@ export function describeRegion(input: { region: ManifestRegion; status: RegionSt
   return {
     id: region.id,
     name: region.names[code] ?? region.names.en ?? region.names.tr ?? region.id,
-    sizeText: status.state === 'installed' ? t(lang, 'installed.size', { size: formatMegabytes(installedBytes(region, status)) }) : t(lang, 'size.mb', { size: formatMegabytes(plannedBytes(region, status, input.baseBytes)) }),
+    sizeText: status.state === 'installed' ? t(lang, 'installed.size', { size: formatMegabytes(installedBytes(region, status)) }) : t(lang, 'size.mb', { size: formatMegabytes(status.state === 'update-available' && status.updateBytes !== null ? status.updateBytes : plannedBytes(region, status, input.baseBytes)) }),
     statusText: t(lang, statusKey),
     errorText: status.error ? t(lang, `error.${status.error.code}` as MessageKey) : null,
     progressPercent: percent,

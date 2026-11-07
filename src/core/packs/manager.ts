@@ -1,14 +1,17 @@
-import type { Manifest, ManifestFile, ManifestRegion } from '../region/manifest';
+import type { Manifest, ManifestFile, ManifestPatch, ManifestRegion } from '../region/manifest';
 import { step, type RegionEvent, type RegionState } from './machine';
 import { downloadFile } from './download';
-import { encodedPaths, finalPath, installedPaths, manifestPaths, partPath, partsOf } from './paths';
+import { applyPatchFile } from './patch-apply';
+import { encodedPaths, finalPath, installedPaths, manifestPaths, partPath, partsOf, patchPaths } from './paths';
 import type { ClockPort, ConnectionKind, ConnectivityPort, DecodePort, FsPort, HashPort, NetPort } from './ports';
 import { PART_KINDS, emptyState, loadState, saveState, type InstalledFile, type PackState, type PartKind, type RegionRecord } from './state-file';
 import { isPackError, packError, type PackError, type PackErrorCode } from './types';
 import { diffManifest, inspectManifest, verifyManifest, type ManifestDiff } from './verify';
 
 export type PackEnv = { fs: FsPort; net: NetPort; hash: HashPort; clock: ClockPort; connectivity: ConnectivityPort; decode?: DecodePort };
-export type PackConfig = { manifestUrl: string; publicKeys: string[]; sdkVersion: string; autoDownload?: 'ask' | 'wifi' | 'always' | 'never' };
+export type PackConfig = { manifestUrl: string; publicKeys: string[]; sdkVersion: string; autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; patches?: boolean };
+
+export type UpdateReport = { patched: number; fellBack: number; bytes: number };
 
 export type RegionStatus = {
   id: string;
@@ -19,6 +22,8 @@ export type RegionStatus = {
   installedVersion: string | null;
   availableVersion: string | null;
   installedParts: PartKind[];
+  updateBytes: number | null;
+  lastUpdate: UpdateReport | null;
 };
 
 export type CheckResult = { ok: true; updates: string[]; diff: ManifestDiff | null; skipped?: true } | { ok: false; code: PackErrorCode };
@@ -55,8 +60,9 @@ const SIGNATURE_PATH = 'manifest-v1.json.sig';
 const PARALLEL_FILES = 8;
 const PARALLEL_BELOW_BYTES = 1_000_000;
 const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory'];
+const SPACE_MARGIN = 1.2;
 
-type Mutable = { state: RegionState; progress: { done: number; total: number } | null; error: { code: PackErrorCode; message: string } | null; waitingWifi: boolean };
+type Mutable = { state: RegionState; progress: { done: number; total: number } | null; error: { code: PackErrorCode; message: string } | null; waitingWifi: boolean; lastUpdate: UpdateReport | null };
 
 type Job = {
   id: string;
@@ -129,7 +135,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     let entry = statuses.get(id);
     if (!entry) {
       const initial: RegionState = state.pending[id] ? 'paused' : hasParts(id) ? (outdated(id) ? 'update-available' : 'installed') : 'none';
-      entry = { state: initial, progress: null, error: null, waitingWifi: false };
+      entry = { state: initial, progress: null, error: null, waitingWifi: false, lastUpdate: null };
       statuses.set(id, entry);
     }
     return entry;
@@ -235,7 +241,15 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     entry.waitingWifi = false;
   };
 
-  type PlanItem = { file: ManifestFile; installed: boolean; build: string; version: string };
+  type PlanItem = { file: ManifestFile; installed: boolean; build: string; version: string; patch?: { entry: ManifestPatch; from: InstalledFile } };
+
+  const patchFor = (id: string, file: ManifestFile): { entry: ManifestPatch; from: InstalledFile } | undefined => {
+    if (config.patches === false || file.kind === 'base') return undefined;
+    const have = state.regions[id]?.files[file.kind as PartKind];
+    if (!have || have.sha256 === file.sha256) return undefined;
+    const entry = file.patches?.find((patch) => patch.from === have.sha256);
+    return entry ? { entry, from: have } : undefined;
+  };
 
   const planFor = (job: Job): PlanItem[] => {
     const manifest = (current as { manifest: Manifest }).manifest;
@@ -251,7 +265,8 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     for (const kind of job.parts) {
       const file = fileOfKind(region, kind) as ManifestFile;
       const have = state.regions[job.id]?.files[kind];
-      plan.push({ file, installed: have?.sha256 === file.sha256, build, version: region.version });
+      const patch = patchFor(job.id, file);
+      plan.push({ file, installed: have?.sha256 === file.sha256, build, version: region.version, ...(patch ? { patch } : {}) });
     }
     return plan;
   };
@@ -314,7 +329,9 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       transition(job.id, 'start');
       const plan = planFor(job);
       const pendingFiles = plan.filter((p) => !p.installed);
-      const total = pendingFiles.reduce((sum, p) => sum + p.file.size, 0);
+      const weight = new Map<PlanItem, number>(pendingFiles.map((item) => [item, item.patch ? item.patch.entry.size : item.file.size]));
+      let total = [...weight.values()].reduce((sum, value) => sum + value, 0);
+      const report0 = { patched: 0, fellBack: 0, bytes: 0 };
       let finished = 0;
       const report = (done: number): void => {
         entry.progress = { done, total };
@@ -344,7 +361,61 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         });
         if (!existed) job.placed.push(target);
       };
-      const isSmall = ({ file }: { file: ManifestFile }): boolean => file.kind === 'base' && file.size <= PARALLEL_BELOW_BYTES;
+      const fetchWhole = async (item: PlanItem, signal: AbortSignal, onProgress: (done: number) => void, onVerify?: () => void): Promise<void> => {
+        await fetchFile(item.file, signal, onProgress, onVerify);
+        report0.bytes += item.file.encoded && env.decode ? item.file.encoded.size : item.file.size;
+      };
+      const tryPatch = async (item: PlanItem, signal: AbortSignal, onProgress: (done: number) => void, onVerify?: () => void): Promise<boolean> => {
+        const { entry: patch, from } = item.patch as NonNullable<PlanItem['patch']>;
+        const { file } = item;
+        const patchFinal = finalPath(patch.path);
+        const target = finalPath(file.path);
+        const discard = async (): Promise<boolean> => {
+          await fs.remove(patchFinal).catch(noop);
+          await fs.remove(partPath(file.path)).catch(noop);
+          return false;
+        };
+        if ((await fs.size(finalPath(from.path))) !== from.size) return false;
+        const existed = await fs.exists(target);
+        try {
+          await downloadFile({ fs, net, hash, clock, url: urlOf(patch.path), partPath: partPath(patch.path), finalPath: patchFinal, size: patch.size, sha256: patch.sha256, signal, onProgress });
+        } catch (error) {
+          if (isPackError(error) && (error.code === 'cancelled' || error.code === 'network')) throw error;
+          return discard();
+        }
+        report0.bytes += patch.size;
+        onVerify?.();
+        if ((await fs.freeBytes()) < Math.ceil(file.size * SPACE_MARGIN)) return discard();
+        const applied = await applyPatchFile({ fs, hash, oldPath: finalPath(from.path), patchPath: patchFinal, outPath: partPath(file.path), sha256: file.sha256, pause: () => clock.sleep(0), signal });
+        if (!applied.ok) {
+          if (applied.reason === 'cancelled') throw packError('cancelled');
+          return discard();
+        }
+        try {
+          await fs.move(partPath(file.path), target);
+          if ((await fs.size(target)) !== file.size) throw packError('storage', 'file incomplete after move');
+        } catch {
+          await fs.remove(target).catch(noop);
+          return discard();
+        }
+        await fs.remove(patchFinal).catch(noop);
+        if (!existed) job.placed.push(target);
+        return true;
+      };
+      const fetchItem = async (item: PlanItem, signal: AbortSignal, onProgress: (done: number) => void, onVerify?: () => void): Promise<void> => {
+        if (item.patch) {
+          if (await tryPatch(item, signal, onProgress, onVerify)) {
+            report0.patched += 1;
+            return;
+          }
+          report0.fellBack += 1;
+          const before = weight.get(item) as number;
+          weight.set(item, item.file.size);
+          total += item.file.size - before;
+        }
+        await fetchWhole(item, signal, onProgress, onVerify);
+      };
+      const isSmall = ({ file }: PlanItem): boolean => file.kind === 'base' && file.size <= PARALLEL_BELOW_BYTES;
       const small = pendingFiles.filter(isSmall);
       const rest = pendingFiles.filter((item) => !isSmall(item));
       if (small.length > 0) {
@@ -356,8 +427,9 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         let taken = 0;
         const worker = async (): Promise<void> => {
           while (taken < small.length && !gate.signal.aborted) {
-            const { file } = small[taken++] as { file: ManifestFile };
-            await fetchFile(file, gate.signal, (done) => {
+            const item = small[taken++] as PlanItem;
+            const { file } = item;
+            await fetchWhole(item, gate.signal, (done) => {
               partial.set(file.path, done);
               report(finished + [...partial.values()].reduce((sum, value) => sum + value, 0));
             });
@@ -379,14 +451,15 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         if (job.controller.signal.aborted) throw packError('cancelled');
       }
       for (let index = 0; index < rest.length; index++) {
-        const { file } = rest[index] as { file: ManifestFile };
+        const item = rest[index] as PlanItem;
         const last = index === rest.length - 1;
-        await fetchFile(file, job.controller.signal, (done) => report(finished + done), last ? () => void transition(job.id, 'verify') : undefined);
-        finished += file.size;
+        await fetchItem(item, job.controller.signal, (done) => report(finished + done), last ? () => void transition(job.id, 'verify') : undefined);
+        finished += weight.get(item) as number;
         report(finished);
       }
       transition(job.id, 'verify');
       await commit(job, plan);
+      entry.lastUpdate = report0;
       entry.progress = null;
       entry.error = null;
       transition(job.id, 'complete');
@@ -560,6 +633,8 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         installedVersion: record?.version ?? null,
         availableVersion: record && region && outdated(id) ? region.version : null,
         installedParts: PART_KINDS.filter((kind) => record?.files[kind] !== undefined),
+        updateBytes: record && region && outdated(id) ? manager.downloadBytes(id, PART_KINDS.filter((kind) => record.files[kind] !== undefined)) : null,
+        lastUpdate: entry.lastUpdate,
       };
     },
     downloadBytes(id, parts) {
@@ -568,7 +643,8 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       const wanted = parts ?? DEFAULT_PARTS.filter((kind) => fileOfKind(region, kind));
       const files = wanted.reduce((sum, kind) => {
         const file = fileOfKind(region, kind);
-        return file && state.regions[id]?.files[kind]?.sha256 !== file.sha256 ? sum + (file.encoded && env.decode ? file.encoded.size : file.size) : sum;
+        if (!file || state.regions[id]?.files[kind]?.sha256 === file.sha256) return sum;
+        return sum + (patchFor(id, file)?.entry.size ?? (file.encoded && env.decode ? file.encoded.size : file.size));
       }, 0);
       return files + (wanted.includes('tiles') ? manager.missingBaseBytes() : 0);
     },
@@ -641,7 +717,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       if (region) {
         for (const file of region.files) {
           if (!kinds.includes(file.kind as PartKind)) continue;
-          leftovers.push(partPath(file.path), ...encodedPaths(file));
+          leftovers.push(partPath(file.path), ...encodedPaths(file), ...patchPaths(file));
           if (!doomed.includes(finalPath(file.path))) doomed.push(finalPath(file.path));
         }
       }
