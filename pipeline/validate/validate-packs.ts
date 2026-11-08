@@ -5,6 +5,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defaultRunner, parseBounds, pmtilesBin, type Runner } from '../build/tiles';
+import { blocksOf } from '../build/blocks';
 import { nameMatchesFormat } from '../build/tile-encode';
 import type { Borders } from '../../src/core/region/borders';
 import { cellOf, cellsOfLine } from '../../src/core/geo/cells';
@@ -348,6 +349,7 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
       if (!existsSync(patchFull)) addPatch('error', 'yama dosyası yok');
       else if (statSync(patchFull).size !== patch.size) addPatch('error', `yama boyutu uyuşmuyor (manifest ${patch.size}, dosya ${statSync(patchFull).size})`);
       else if ((await hashFile(patchFull)) !== patch.sha256) addPatch('error', 'yama sha256 uyuşmuyor');
+      else if (JSON.stringify(blocksOf(patchFull)) !== JSON.stringify(patch.blocks)) addPatch('error', 'yama blok özetleri uyuşmuyor ya da eksik');
       else {
         const index = readPatchIndex(new Uint8Array(readFileSync(patchFull)));
         if (index === null) addPatch('error', 'yama başlığı ya da dilim dizini geçersiz');

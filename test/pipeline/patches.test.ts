@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { blocksOf } from '../../pipeline/build/blocks';
 import { assemblePacks, type RegionInput } from '../../pipeline/build/manifest';
 import { applyPatch, archivePack, compareVersions, encodePatch, listArchive, makePatches, patchKeep, PATCH_KEEP_BELOW, pruneArchive, zstdPatchTool, type PatchFile, type PatchTool } from '../../pipeline/build/patches';
 import { validatePacks } from '../../pipeline/validate/validate-packs';
@@ -198,6 +199,7 @@ describe('patches in the published packs', () => {
     expect(statSync(join(out, patch.path)).size).toBe(patch.size);
     expect(sha(readFileSync(join(out, patch.path)))).toBe(patch.sha256);
     expect(patch.size).toBeLessThan(tilesFile.size * PATCH_KEEP_BELOW);
+    expect(patch.blocks).toBeUndefined();
     expect(files.find((f) => f.kind === 'route')!.patches).toBeUndefined();
     expect(files.find((f) => f.kind === 'address')!.patches).toBeUndefined();
 
@@ -317,6 +319,34 @@ describe('patches in the published packs', () => {
     rmSync(path);
     expect((await about()).some((f) => f.level === 'error' && /yok/.test(f.message))).toBe(true);
   });
+});
+
+describe('block hashes of big patches', () => {
+  const big = { segment: MB, margin: MB / 2 };
+
+  it('lists the block hashes of a patch over 8 MiB, which the validator checks', async () => {
+    const w = rig();
+    const tiles = noise(12 * MB, 'big');
+    await w.publish(w.packs, '20261022', w.regionOf(tiles, noise(2000, 'r'), noise(2000, 's'), 'a'));
+    archivePack(w.packs, w.archive);
+    const out = join(w.dir, 'next');
+    await w.publish(out, '20261029', w.regionOf(Buffer.concat([tiles, noise(9 * MB, 'tail')]), noise(2000, 'r'), noise(2000, 's'), 'b'), { patches: { archiveDir: w.archive, cacheDir: w.cache, tmpDir: w.tmp, shape: big } });
+    const manifest = parseManifest(readFileSync(join(out, 'manifest-v1.json'), 'utf8'));
+    const patch = manifest.regions[0]!.files.find((f) => f.kind === 'tiles')!.patches![0]!;
+    expect(patch.size).toBeGreaterThan(8 * MB);
+    expect(patch.blocks).toEqual(blocksOf(join(out, patch.path)));
+    expect(patch.blocks!.sha256).toHaveLength(Math.ceil(patch.size / patch.blocks!.size));
+    const about = async () => (await validatePacks(out)).findings.filter((f) => f.where.includes('/patches/'));
+    expect(await about()).toEqual([]);
+
+    const text = readFileSync(join(out, 'manifest-v1.json'), 'utf8');
+    writeFileSync(join(out, 'manifest-v1.json'), text.replace(patch.blocks!.sha256[0]!, 'f'.repeat(64)));
+    expect((await about()).some((f) => f.level === 'error' && /blok/.test(f.message))).toBe(true);
+    const without = JSON.parse(text) as { regions: { files: { kind: string; patches?: { blocks?: unknown }[] }[] }[] };
+    delete without.regions[0]!.files.find((f) => f.kind === 'tiles')!.patches![0]!.blocks;
+    writeFileSync(join(out, 'manifest-v1.json'), JSON.stringify(without));
+    expect((await about()).some((f) => f.level === 'error' && /blok/.test(f.message))).toBe(true);
+  }, 120_000);
 });
 
 describe('archivePack, listArchive and pruneArchive', () => {

@@ -283,6 +283,31 @@ describe('patches', () => {
     expect(file.path).toBe('34/t.pmtiles');
   });
 
+  describe('block hashes of a patch', () => {
+    const blocks = { size: 20, sha256: ['d'.repeat(64), 'e'.repeat(64)] };
+
+    it('keeps them and survives a round trip', () => {
+      expect(read([{ ...good, blocks }]).patches).toEqual([{ ...good, blocks }]);
+      const first = parseManifest(JSON.stringify(doc([{ ...good, blocks }])));
+      expect(parseManifest(serializeManifest(first))).toEqual(first);
+    });
+
+    it.each([
+      ['a block count that does not fit the size', { size: 20, sha256: ['d'.repeat(64)] }],
+      ['too many blocks', { size: 20, sha256: ['d'.repeat(64), 'e'.repeat(64), 'f'.repeat(64)] }],
+      ['a malformed block hash', { size: 20, sha256: ['d'.repeat(64), 'xyz'] }],
+      ['a zero block size', { size: 0, sha256: [] }],
+      ['a fractional block size', { size: 1.5, sha256: ['d'.repeat(64)] }],
+      ['hashes that are not a list', { size: 20, sha256: 'd'.repeat(64) }],
+      ['no hashes', { size: 20 }],
+      ['text instead of an object', 'blocks'],
+      ['null', null],
+    ])('drops the patch with %s', (_name, bad) => {
+      const other = { ...good, from: 'd'.repeat(64), path: '34/patches/a-from-d.zpatch' };
+      expect(read([{ ...good, blocks: bad }, other]).patches).toEqual([other]);
+    });
+  });
+
   it('leaves no patches field when none are usable', () => {
     expect(read([{ ...good, size: 0 }]).patches).toBeUndefined();
     expect(read('nope').patches).toBeUndefined();

@@ -5,6 +5,7 @@ import { cpus } from 'node:os';
 import { dirname, join } from 'node:path';
 import { buildPatch, readPatchIndex, type PatchPart } from '../../src/core/packs/patch';
 import { parseManifest, type Manifest, type ManifestPatch } from '../../src/core/region/manifest';
+import { blocksOf } from './blocks';
 
 export const PATCH_SEGMENT = 8 * 1024 * 1024;
 export const PATCH_MARGIN = 4 * 1024 * 1024;
@@ -235,7 +236,8 @@ export async function makePatches(files: PatchFile[], options: PatchOptions): Pr
     link(cached, target);
     stats.bytes += bytes.length;
     const list = result.get(job.file.path) ?? [];
-    list.push({ from: job.oldSha, codec: 'zstd-patch-seg', path, size: bytes.length, sha256: sha256(bytes), segment: shape.segment, margin: shape.margin });
+    const blocks = blocksOf(target);
+    list.push({ from: job.oldSha, codec: 'zstd-patch-seg', path, size: bytes.length, sha256: sha256(bytes), ...(blocks ? { blocks } : {}), segment: shape.segment, margin: shape.margin });
     result.set(job.file.path, list);
   });
   for (const list of result.values()) list.sort((a, b) => (a.from < b.from ? -1 : a.from > b.from ? 1 : 0));

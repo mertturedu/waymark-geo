@@ -3,7 +3,7 @@ export type Tier = 'full' | 'basic';
 export type FileBlocks = { size: number; sha256: string[] };
 export type EncodedFile = { codec: 'zstd'; path: string; size: number; sha256: string };
 export const MLT_SUFFIX = '.mlt.pmtiles';
-export type ManifestPatch = { from: string; codec: 'zstd-patch-seg'; path: string; size: number; sha256: string; segment: number; margin: number };
+export type ManifestPatch = { from: string; codec: 'zstd-patch-seg'; path: string; size: number; sha256: string; blocks?: FileBlocks; segment: number; margin: number };
 export type ManifestFile = { kind: FileKind; path: string; size: number; sha256: string; blocks?: FileBlocks; encoded?: EncodedFile; patches?: ManifestPatch[] };
 export type Box = [number, number, number, number];
 export type ManifestRegion = {
@@ -98,7 +98,17 @@ function patch(value: unknown, owner: ManifestFile): ManifestPatch | null {
   if (codec !== 'zstd-patch-seg' || !hash(from) || from === owner.sha256 || !hash(sha256)) return null;
   if (typeof path !== 'string' || badPath(path) || path === owner.path || path === owner.encoded?.path) return null;
   if (!whole(size, 1) || !whole(segment, 1) || !whole(margin, 0)) return null;
-  return { from, codec, path, size, sha256, segment, margin };
+  const given = (value as Record<string, unknown>).blocks;
+  if (given === undefined) return { from, codec, path, size, sha256, segment, margin };
+  const checked = patchBlocks(given, size);
+  return checked === null ? null : { from, codec, path, size, sha256, blocks: checked, segment, margin };
+}
+
+function patchBlocks(value: unknown, fileSize: number): FileBlocks | null {
+  if (!(value instanceof Object)) return null;
+  const { size, sha256 } = value as Record<string, unknown>;
+  if (!whole(size, 1) || !Array.isArray(sha256) || sha256.length !== Math.ceil(fileSize / size) || !sha256.every(hash)) return null;
+  return { size, sha256: sha256 as string[] };
 }
 
 function patchList(value: unknown, owner: ManifestFile): ManifestPatch[] {
