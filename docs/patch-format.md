@@ -13,7 +13,7 @@ Dosya kaydına (`files[]`, `base[]` dışında bölge dosyaları) isteğe bağl�
   "size": 47090000,
   "sha256": "<yeni dosya>",
   "patches": [
-    { "from": "<eski dosyanın sha256'sı>", "codec": "zstd-patch-seg", "path": "34/patches/6f086fc5-from-e54e9d46.zpatch", "size": 8200000, "sha256": "<yama dosyası>", "segment": 8388608, "margin": 4194304 }
+    { "from": "<eski dosyanın sha256'sı>", "codec": "zstd-patch-seg", "path": "34/patches/6f086fc5-from-e54e9d46.zpatch", "size": 8200000, "sha256": "<yama dosyası>", "blocks": { "size": 4194304, "sha256": ["<blok 1>", "<blok 2>"] }, "segment": 8388608, "margin": 4194304 }
   ]
 }
 ```
@@ -24,6 +24,7 @@ Dosya kaydına (`files[]`, `base[]` dışında bölge dosyaları) isteğe bağl�
 | `codec` | Şimdilik yalnızca `zstd-patch-seg`. Başka değer yamayı geçersiz sayar. |
 | `path` | Yama dosyasının yolu (`checkPath` kuralları, dosyanın kendi ya da `encoded` yoluyla aynı olamaz). |
 | `size`, `sha256` | Yama dosyasının boyutu (> 0) ve özeti. |
+| `blocks` | İsteğe bağlı. Yama dosyasının 4 MiB'lık blok özetleri (`{ size, sha256[] }`, dosya kaydındaki `blocks` ile aynı biçim); yalnızca 8 MiB'tan büyük yamalarda yazılır. Blok sayısı `ceil(size / blocks.size)` olmak zorundadır; tutmazsa yama kaydı düşer. Telefon büyük yamayı bu bloklarla (native özet) doğrular, JS'te tam dosya özeti çıkarmaz. |
 | `segment` | Çıktı dilim boyu (bayt, > 0). Varsayılan 8 MiB. |
 | `margin` | Eski dosyada referansa eklenen pay (bayt, >= 0). Varsayılan 4 MiB. |
 
@@ -82,7 +83,7 @@ Hemen ardından `n` kayıtlık dizin, her kayıt 16 bayt: `u32 çıktı uzunluğ
 2. Çıktı dosyası sıfırlanır. Her dilimde referans aralığı eski dosyadan, çerçeve yama dosyasından 1 MiB'lık parçalarla tek bir **yeniden kullanılan** çalışma tamponuna okunur (`en büyük referans + en büyük dilim`, bu biçimde en çok 24 MiB) ve çerçeve tamponun referans sonrasına açılır. Her dilim için yeni tampon ayrılmaz: Hermes'te büyük tamponlar çöp toplayıcı yetişmeden birikir (16 dilimde ~115 MB, yeniden kullanımda ~35 MB).
 3. Açma blok başına (en çok 128 KB) duraklayabilir: `budgetMs` (varsayılan 8 ms) dolunca `pause()` çağrılır, böylece JS iş parçacığı serbest kalır. Dilim bitince ayrıca `pause()` çağrılır.
 4. Açılan dilim çıktı dosyasına eklenir (`append`), ilerleme `onProgress(done, total)` ile bildirilir.
-5. Tüm dilimlerden sonra çıktının sha256'sı (`HashPort.sha256File`, native) beklenenle karşılaştırılır. Herhangi bir adımda hata olursa çıktı dosyası silinir ve neden döner: `patch` (yama bozuk/eksik), `old` (eski dosya yok ya da yamanın kaynağı değil), `decode` (zstd hatası), `sha256`, `io`. Çağıran bu durumda tam indirmeye düşer (Faz 4).
+5. Tüm dilimlerden sonra çıktının özeti beklenenle karşılaştırılır: dosya kaydında `blocks` varsa blok özetleriyle (`HashPort.sha256Blocks`, native), yoksa tam dosya özetiyle. Büyük dosyada tam dosya özeti JavaScript'te hesaplanır ve her 2 MB için JS iş parçacığını yaklaşık 1,3 sn kilitler (iPhone 11), bu yüzden büyük dosyalar için blok yolu şarttır. Herhangi bir adımda hata olursa çıktı dosyası silinir ve neden döner: `patch` (yama bozuk/eksik), `old` (eski dosya yok ya da yamanın kaynağı değil), `decode` (zstd hatası), `sha256`, `io`. Çağıran bu durumda tam indirmeye düşer (Faz 4).
 
 Tepe bellek: çalışma tamponu + en büyük çerçeve (8 MiB'a kadar) + 1 MiB'lık okuma parçaları, yaklaşık 40 MiB.
 
