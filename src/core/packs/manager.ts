@@ -59,6 +59,7 @@ const MANIFEST_PATH = 'manifest-v1.json';
 const SIGNATURE_PATH = 'manifest-v1.json.sig';
 const PARALLEL_FILES = 8;
 const PARALLEL_BELOW_BYTES = 1_000_000;
+const BREATHE_AFTER_MS = 12;
 const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory'];
 const SPACE_MARGIN = 1.2;
 
@@ -282,6 +283,15 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     }
   };
 
+  const makeBreather = (): (() => Promise<void>) => {
+    let since = clock.now();
+    return async () => {
+      if (clock.now() - since < BREATHE_AFTER_MS) return;
+      await clock.sleep(0);
+      since = clock.now();
+    };
+  };
+
   const commit = async (job: Job, plan: PlanItem[]): Promise<void> => {
     const manifest = (current as { manifest: Manifest }).manifest;
     const region = regionOf(job.id) as ManifestRegion;
@@ -311,7 +321,11 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     state = { ...state, regions: { ...state.regions, [job.id]: record }, base, pending };
     await persist();
     await runDeleteHooks(superseded);
-    for (const path of superseded) await fs.remove(path);
+    const breathe = makeBreather();
+    for (const path of superseded) {
+      await fs.remove(path);
+      await breathe();
+    }
   };
 
   const finishJob = (job: Job): void => {
@@ -425,6 +439,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         job.controller.signal.addEventListener('abort', forward);
         let firstError: unknown;
         let taken = 0;
+        const breathe = makeBreather();
         const worker = async (): Promise<void> => {
           while (taken < small.length && !gate.signal.aborted) {
             const item = small[taken++] as PlanItem;
@@ -436,6 +451,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
             partial.delete(file.path);
             finished += file.size;
             report(finished + [...partial.values()].reduce((sum, value) => sum + value, 0));
+            await breathe();
           }
         };
         await Promise.allSettled(
