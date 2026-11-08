@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.2 (2026-11-08)
+
+- Patch updates: when a province is updated, a file that changed is downloaded as a patch against the installed file instead of in full. The manifest lists the patches of a file in the optional `patches` field (`from` is the sha256 of the old file); the build keeps the last 3 releases (`GEO_PATCHES`, `0` turns it off) and writes only patches that apply back to the exact new file and are smaller than 85% of the full download. On the real releases an update from the previous week downloads 1900 → 220 MB over 81 provinces. Older SDKs ignore the field.
+- The patch file (`.zpatch`, `docs/patch-format.md`) holds 8 MiB slices, each compressed against a range of the old file. The phone applies it in JavaScript (`applyPatchFile`) with one reused work buffer and a pause every few milliseconds, then checks the sha256 of the result. If a patch cannot be fetched or applied, only that file is downloaded in full; a lost connection or a cancel is not retried as a full download. The old file stays readable until the update is committed.
+- `RegionStatus.updateBytes` is the real download size of an update and `RegionStatus.lastUpdate` (`UpdateReport`: `patched`, `fellBack`, `bytes`) tells how the last update went. `PackConfig.patches: false` turns patching off. The update line of the region list shows `updateBytes`.
+- The zstd decoder can start with a prefix (`decompressInPlaceSteps`, `decompressPrefix`); long copies are faster and `rzfh` no longer compares a typed array with `==`.
+
 ## 0.7.1 (2026-11-07)
 
 - `useMapStyle({ traffic: true })` shows from far away: below zoom 8 the slow roads are drawn as a soft translucent glow (`traffic-glow@` layers from zoom 6, highways and main roads first), the sharp line starts at zoom 8 and is thicker. In the rush hour a main road is orange and a highway red. `traffic` also takes a time in milliseconds to pin the hour.

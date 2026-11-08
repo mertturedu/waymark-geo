@@ -54,7 +54,7 @@ describe('the packed package', () => {
 
   it('stays small and has the version of the SDK', () => {
     expect(packed.size).toBeLessThan(4_000_000);
-    expect(pkg.version).toBe('0.7.1');
+    expect(pkg.version).toBe('0.7.2');
     expect(readFileSync(join(root, 'lib/core/create-geo.js'), 'utf8')).toContain(`'${pkg.version}'`);
   });
 

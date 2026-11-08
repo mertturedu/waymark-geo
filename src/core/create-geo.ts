@@ -20,7 +20,7 @@ import { directionsOf, type DirectionStep } from './route/directions';
 import { createRouter, type MatrixResult, type RouteOptions, type RouteResult } from './route/router';
 import type { Lang } from './text/types';
 
-export const SDK_VERSION = '0.7.1';
+export const SDK_VERSION = '0.7.2';
 
 export type GeoConfig = {
   manifestUrl: string;
