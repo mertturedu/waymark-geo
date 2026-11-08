@@ -20,6 +20,7 @@ import { ROTATION_TESTS } from './tests/rotation';
 import { SIM_TESTS } from './tests/simulation';
 import { ICON_TESTS } from './tests/map-icons';
 import { sdkUpdateKeepsLearning } from './tests/update';
+import { PATCH_TESTS } from './tests/patch-update';
 import { ROUTE_TESTS } from './tests/route';
 import { OFFLINE_TESTS } from './tests/offline';
 import { PERF_TESTS } from './tests/perf';
@@ -51,4 +52,4 @@ export const AUTO_TESTS: DeviceTest[] = [
 export const OFFLINE_AUTO_TESTS: DeviceTest[] = OFFLINE_TESTS;
 export const RESTART_TESTS: DeviceTest[] = [sdkLearnPersistB];
 
-export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS, ...PROBE_TESTS, ...REAL_LOCATION_TESTS, ...PERF_REGION_TESTS, ...PERF_PROPS_TESTS, ...SHOT_TESTS, ...MAP_LABEL_TESTS, ...MAP_LOOK6_TESTS, ...F8_TESTS, ...ZSTD_TESTS, ...FORMAT_TESTS];
+export const sdkRegistry: DeviceTest[] = [...AUTO_TESTS, ...RESTART_TESTS, ...OFFLINE_AUTO_TESTS, ...PROBE_TESTS, ...REAL_LOCATION_TESTS, ...PERF_REGION_TESTS, ...PERF_PROPS_TESTS, ...SHOT_TESTS, ...MAP_LABEL_TESTS, ...MAP_LOOK6_TESTS, ...F8_TESTS, ...ZSTD_TESTS, ...FORMAT_TESTS, ...PATCH_TESTS];
