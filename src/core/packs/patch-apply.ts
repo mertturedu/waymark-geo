@@ -1,5 +1,6 @@
 import { decompressInPlaceSteps } from './fzstd';
 import { patchIndexBytes, PATCH_HEADER_BYTES, readPatchIndex } from './patch';
+import type { FileBlocks } from '../region/manifest';
 import type { FsPort, HashPort } from './ports';
 
 export type PatchFailure = 'patch' | 'old' | 'decode' | 'sha256' | 'io' | 'cancelled';
@@ -7,11 +8,12 @@ export type PatchResult = { ok: true; bytes: number; slices: number } | { ok: fa
 
 export type PatchInput = {
   fs: Pick<FsPort, 'size' | 'read' | 'append' | 'truncate' | 'remove'>;
-  hash: Pick<HashPort, 'sha256File'>;
+  hash: Pick<HashPort, 'sha256File' | 'sha256Blocks'>;
   oldPath: string;
   patchPath: string;
   outPath: string;
   sha256: string;
+  blocks?: FileBlocks;
   pause: () => Promise<void>;
   now?: () => number;
   budgetMs?: number;
@@ -31,6 +33,15 @@ async function readInto(fs: PatchInput['fs'], path: string, offset: number, leng
     into.set(chunk, at + done);
   }
   return true;
+}
+
+async function matches(input: PatchInput): Promise<boolean> {
+  const { blocks, hash } = input;
+  if (blocks && hash.sha256Blocks) {
+    const found = await hash.sha256Blocks(input.outPath, blocks.size);
+    return found.length === blocks.sha256.length && found.every((h, i) => h === blocks.sha256[i]);
+  }
+  return (await hash.sha256File(input.outPath)) === input.sha256;
 }
 
 export async function applyPatchFile(input: PatchInput): Promise<PatchResult> {
@@ -82,7 +93,7 @@ export async function applyPatchFile(input: PatchInput): Promise<PatchResult> {
       await input.pause();
       last = now();
     }
-    if ((await input.hash.sha256File(input.outPath)) !== input.sha256) return await fail('sha256');
+    if (!(await matches(input))) return await fail('sha256');
     return { ok: true, bytes: written, slices: index.slices.length };
   } catch {
     return await fail('io');

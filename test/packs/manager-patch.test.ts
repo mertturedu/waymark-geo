@@ -36,7 +36,7 @@ async function patchOf(older: Uint8Array, newer: Uint8Array): Promise<Uint8Array
 
 type Rig = Awaited<ReturnType<typeof rigUp>>;
 
-async function rigUp(options: { patch?: boolean; encode?: boolean; capacity?: number; setup?: SetupOptions; patchTiles?: boolean } = {}) {
+async function rigUp(options: { blocksFor?: (patch: Uint8Array) => { size: number; sha256: string[] }; patch?: boolean; encode?: boolean; capacity?: number; setup?: SetupOptions; patchTiles?: boolean } = {}) {
   const world = makeWorld({ regions: [{ id: '34', parts: { address: ADDRESS_OLD, tiles: TILES_OLD } }], ...(options.capacity === undefined ? {} : { capacity: options.capacity }), ...(options.encode ? { encode: ['address'] as ('address')[] } : {}) });
   const ready = await setup(world, options.setup);
   await ready.manager.download('34');
@@ -46,6 +46,7 @@ async function rigUp(options: { patch?: boolean; encode?: boolean; capacity?: nu
   const addressPatch = await patchOf(ADDRESS_OLD, ADDRESS_NEW);
   const tilesPatch = await patchOf(TILES_OLD, TILES_NEW);
   const entries = options.patch === false ? [] : [world.addPatch('34', 'address', ADDRESS_OLD, addressPatch), ...(options.patchTiles === false ? [] : [world.addPatch('34', 'tiles', TILES_OLD, tilesPatch)])];
+  if (options.blocksFor) for (const [i, entry] of entries.entries()) entry.blocks = options.blocksFor(i === 0 ? addressPatch : tilesPatch);
   world.publish();
   await ready.manager.checkUpdates();
   world.env.server.log.length = 0;
@@ -55,6 +56,37 @@ async function rigUp(options: { patch?: boolean; encode?: boolean; capacity?: nu
 const file = (rig: Rig, kind: 'address' | 'tiles'): Uint8Array | undefined => rig.world.env.fs.files.get(rig.manager.installedFile('34', kind) as string);
 const patchUrls = (world: World): string[] => requested(world).filter((url) => url.includes('/patches/'));
 const wholeUrls = (world: World): string[] => requested(world).filter((url) => !url.includes('/patches/') && !url.endsWith('manifest-v1.json') && !url.endsWith('.sig'));
+
+describe('patches with block hashes', () => {
+  const BLOCK = 100_000;
+  const blocksFor = (bytes: Uint8Array) => ({ size: BLOCK, sha256: Array.from({ length: Math.ceil(bytes.length / BLOCK) }, (_, i) => sha(bytes.subarray(i * BLOCK, (i + 1) * BLOCK))) });
+  const arm = (rig: Rig): string[] => {
+    const hash = rig.world.env.hash as { sha256File: (path: string) => Promise<string>; sha256Blocks?: (path: string, size: number) => Promise<string[]> };
+    const whole = hash.sha256File.bind(hash);
+    const hashed: string[] = [];
+    hash.sha256File = async (path) => (hashed.push(path), whole(path));
+    hash.sha256Blocks = async (path, size) => blocksFor2(rig.world.env.fs.files.get(path) as Uint8Array, size);
+    return hashed;
+  };
+  const blocksFor2 = (bytes: Uint8Array, size: number): string[] => Array.from({ length: Math.ceil(bytes.length / size) }, (_, i) => sha(bytes.subarray(i * size, (i + 1) * size)));
+
+  it('checks a downloaded patch by its blocks instead of hashing the whole file', async () => {
+    const rig = await rigUp({ blocksFor });
+    const hashed = arm(rig);
+    await rig.manager.download('34');
+    expect(hashed.filter((path) => path.includes('zpatch'))).toEqual([]);
+    expect(rig.manager.status('34').lastUpdate).toMatchObject({ patched: 2, fellBack: 0 });
+    expect(Buffer.from(file(rig, 'tiles')!).equals(TILES_NEW)).toBe(true);
+  });
+
+  it('falls back to the whole file when a patch block does not match', async () => {
+    const rig = await rigUp({ blocksFor: (patch) => ({ ...blocksFor(patch), sha256: blocksFor(patch).sha256.map(() => 'f'.repeat(64)) }) });
+    arm(rig);
+    await rig.manager.download('34');
+    expect(rig.manager.status('34').lastUpdate).toMatchObject({ patched: 0, fellBack: 2 });
+    expect(Buffer.from(file(rig, 'address')!).equals(ADDRESS_NEW)).toBe(true);
+  });
+});
 
 describe('updating with patches (selection and cleanup)', () => {
   it('picks the patch that starts from the installed file among several', async () => {

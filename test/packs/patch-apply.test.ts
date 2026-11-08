@@ -57,6 +57,49 @@ describe('applyPatchFile', () => {
     for (let i = 1; i < progress.length; i++) expect(progress[i]![0]).toBeGreaterThan(progress[i - 1]![0]);
   });
 
+  describe('block hashes', () => {
+    const BLOCK = 100_000;
+    const blocksOf = (bytes: Uint8Array): { size: number; sha256: string[] } => ({ size: BLOCK, sha256: Array.from({ length: Math.ceil(bytes.length / BLOCK) }, (_, i) => sha(bytes.subarray(i * BLOCK, (i + 1) * BLOCK))) });
+    const withBlocks = (env: FakeEnv, wholeCalls: { n: number }): PatchInput['hash'] => ({
+      sha256File: async (path) => (wholeCalls.n++, env.hash.sha256File(path)),
+      sha256Blocks: async (path, size) => {
+        const bytes = env.fs.files.get(path)!;
+        return Array.from({ length: Math.ceil(bytes.length / size) }, (_, i) => sha(bytes.subarray(i * size, (i + 1) * size)));
+      },
+    });
+
+    it('checks the output by its blocks and never hashes the whole file', async () => {
+      const { env, input } = rig(OLD, await goodPatch());
+      const whole = { n: 0 };
+      const result = await applyPatchFile({ ...input, hash: withBlocks(env, whole), blocks: blocksOf(NEW) });
+      expect(result.ok).toBe(true);
+      expect(whole.n).toBe(0);
+    });
+
+    it('fails and removes the output when a block differs', async () => {
+      const { env, input } = rig(OLD, await goodPatch());
+      const wrong = blocksOf(NEW);
+      wrong.sha256[1] = sha(new Uint8Array([9]));
+      expect(await applyPatchFile({ ...input, hash: withBlocks(env, { n: 0 }), blocks: wrong })).toEqual({ ok: false, reason: 'sha256' });
+      expect(env.fs.files.has('/out')).toBe(false);
+    });
+
+    it('fails when the block list has a different length', async () => {
+      const { env, input } = rig(OLD, await goodPatch());
+      const short = blocksOf(NEW);
+      short.sha256.pop();
+      expect(await applyPatchFile({ ...input, hash: withBlocks(env, { n: 0 }), blocks: short })).toEqual({ ok: false, reason: 'sha256' });
+    });
+
+    it('falls back to the whole file hash when the platform has no block hashing', async () => {
+      const { env, input } = rig(OLD, await goodPatch());
+      const whole = { n: 0 };
+      const plain: PatchInput['hash'] = { sha256File: withBlocks(env, whole).sha256File };
+      expect((await applyPatchFile({ ...input, hash: plain, blocks: blocksOf(NEW) })).ok).toBe(true);
+      expect(whole.n).toBe(1);
+    });
+  });
+
   it('starts from an empty output even if a half written one is there', async () => {
     const { env, input } = rig(OLD, await goodPatch());
     env.fs.files.set('/out', new Uint8Array([1, 2, 3]));

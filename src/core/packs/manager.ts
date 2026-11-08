@@ -378,7 +378,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         if ((await fs.size(finalPath(from.path))) !== from.size) return false;
         const existed = await fs.exists(target);
         try {
-          await downloadFile({ fs, net, hash, clock, url: urlOf(patch.path), partPath: partPath(patch.path), finalPath: patchFinal, size: patch.size, sha256: patch.sha256, signal, onProgress });
+          await downloadFile({ fs, net, hash, clock, url: urlOf(patch.path), partPath: partPath(patch.path), finalPath: patchFinal, size: patch.size, sha256: patch.sha256, ...(patch.blocks ? { blocks: patch.blocks } : {}), signal, onProgress });
         } catch (error) {
           if (isPackError(error) && (error.code === 'cancelled' || error.code === 'network')) throw error;
           return discard();
@@ -386,7 +386,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
         report0.bytes += patch.size;
         onVerify?.();
         if ((await fs.freeBytes()) < Math.ceil(file.size * SPACE_MARGIN)) return discard();
-        const applied = await applyPatchFile({ fs, hash, oldPath: finalPath(from.path), patchPath: patchFinal, outPath: partPath(file.path), sha256: file.sha256, pause: () => clock.sleep(0), signal });
+        const applied = await applyPatchFile({ fs, hash, oldPath: finalPath(from.path), patchPath: patchFinal, outPath: partPath(file.path), sha256: file.sha256, ...(file.blocks ? { blocks: file.blocks } : {}), pause: () => clock.sleep(0), signal });
         if (!applied.ok) {
           if (applied.reason === 'cancelled') throw packError('cancelled');
           return discard();
