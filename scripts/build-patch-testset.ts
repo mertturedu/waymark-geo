@@ -17,6 +17,8 @@ const oldTag = argument('--old', '20261028.20261029');
 const ids = argument('--regions', '16,34').split(',');
 const out = argument('--out', join(repoRoot, 'dist', 'patch-test'));
 const before = join(out, 'before');
+const withBase = process.argv.includes('--base');
+const baseTag = argument('--base-from', newTag);
 
 const read = (tag: string): Manifest => parseManifest(readFileSync(join(releases, tag, 'packs', 'manifest-v1.json'), 'utf8'));
 const link = (source: string, target: string): void => {
@@ -27,7 +29,7 @@ const link = (source: string, target: string): void => {
     copyFileSync(source, target);
   }
 };
-const only = (manifest: Manifest): Manifest => ({ ...manifest, base: [], regions: manifest.regions.filter((region) => ids.includes(region.id)) });
+const only = (manifest: Manifest): Manifest => ({ ...manifest, base: withBase ? manifest.base : [], regions: manifest.regions.filter((region) => ids.includes(region.id)) });
 const privateKey = readFileSync(join(defaultKeyDir(), 'dev-signing.key'), 'utf8');
 const write = (dir: string, manifest: Manifest): void => {
   const text = serializeManifest(manifest);
@@ -40,7 +42,13 @@ mkdirSync(before, { recursive: true });
 
 const fresh = only(read(newTag));
 const older = only(read(oldTag));
+if (withBase) {
+  const shared = read(baseTag).base;
+  older.base = shared;
+  fresh.base = shared;
+}
 for (const [manifest, tag, dir] of [[older, oldTag, before], [fresh, newTag, out]] as const) {
+  for (const file of manifest.base) link(join(releases, baseTag, 'packs', file.path), join(dir, file.path));
   for (const region of manifest.regions) {
     for (const file of region.files) {
       link(join(releases, tag, 'packs', file.path), join(dir, file.path));
