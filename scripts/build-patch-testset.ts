@@ -19,6 +19,7 @@ const out = argument('--out', join(repoRoot, 'dist', 'patch-test'));
 const before = join(out, 'before');
 const withBase = process.argv.includes('--base');
 const baseTag = argument('--base-from', newTag);
+const splitBase = process.argv.includes('--base-split');
 
 const read = (tag: string): Manifest => parseManifest(readFileSync(join(releases, tag, 'packs', 'manifest-v1.json'), 'utf8'));
 const link = (source: string, target: string): void => {
@@ -42,13 +43,13 @@ mkdirSync(before, { recursive: true });
 
 const fresh = only(read(newTag));
 const older = only(read(oldTag));
-if (withBase) {
+if (withBase && !splitBase) {
   const shared = read(baseTag).base;
   older.base = shared;
   fresh.base = shared;
 }
 for (const [manifest, tag, dir] of [[older, oldTag, before], [fresh, newTag, out]] as const) {
-  for (const file of manifest.base) link(join(releases, baseTag, 'packs', file.path), join(dir, file.path));
+  for (const file of manifest.base) link(join(releases, splitBase ? tag : baseTag, 'packs', file.path), join(dir, file.path));
   for (const region of manifest.regions) {
     for (const file of region.files) {
       link(join(releases, tag, 'packs', file.path), join(dir, file.path));
