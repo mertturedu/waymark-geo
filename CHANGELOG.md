@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Own visual design:** a new palette (cool grey-blue ground, sage parks, slate water, amber motorways; its own dark side), group colours that are no longer system colours, rounded-square category badges with the name below, new location mark (`locate-*` images), rounded-square `LocateButton` and `CompassButton` in the brand colour, new `PlaceCard`, `ScaleBar` and `HereStrip`, flat extrusion shading for 3D buildings and a flat default camera (`DEFAULT_PITCH` is 0). Comparison gates no longer measure against another map; `KF6.2` checks label contrast. Layer ids and the public API are unchanged.
+
 ## 0.7.2 (2026-11-08)
 
 - Patch updates: when a province is updated, a file that changed is downloaded as a patch against the installed file instead of in full. The manifest lists the patches of a file in the optional `patches` field (`from` is the sha256 of the old file); the build keeps the last 3 releases (`GEO_PATCHES`, `0` turns it off) and writes only patches that apply back to the exact new file and are smaller than 85% of the full download. On the real releases an update from the previous week downloads 1900 → 220 MB over 81 provinces. Older SDKs ignore the field.
@@ -83,7 +87,7 @@
 
 ## 0.4.0
 
-- Map badges in the system map style: one round category badge per place (52 glyphs from Maki and Temaki, CC0), name next to the badge, Apple-like tiers by zoom; chains show their category badge by default (`brands.mode: 'category'`).
+- Map badges: one category badge per place (52 glyphs, CC0), tiers by zoom; chains show their category badge by default (`brands.mode: 'category'`).
 - Light base map recoloured (cream earth, white roads, light green parks, blue water); every base colour can be changed with `map.base` in the theme.
 - 17 icon groups (added nature, culture, transit, education) and a legend with the same badges.
 - Camera tilt: `DEFAULT_PITCH` (20), `MAX_PITCH` (60), `tilted(view)`.

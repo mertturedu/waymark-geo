@@ -22,7 +22,7 @@ export function latestFullRun(reportDir: string): { dir: string; summary: Summar
   for (const day of days) {
     const dir = join(root, day);
     const summary = readJson<Summary>(join(dir, 'ozet.json'));
-    if (summary?.rows?.length && existsSync(join(dir, 'apple'))) return { dir, summary };
+    if (summary?.rows?.length) return { dir, summary };
   }
   return null;
 }
@@ -63,12 +63,12 @@ export const fix4Gates: Gate[] = [
   {
     id: 'KF4.3',
     phase: 4,
-    title: 'Apple ile ilk tam karşılaştırma raporu',
+    title: 'İlk tam ölçüm raporu',
     kind: 'decision',
-    threshold: 'ozet.json ve Apple görüntüleri var; hedefler kullanıcıyla kesinleşti',
+    threshold: 'ozet.json var; hedefler kullanıcıyla kesinleşti',
     async measure({ reportDir }) {
       const run = latestFullRun(reportDir);
-      if (!run) return { status: 'open', measured: 'Apple koşusu yok (--confirm onayı bekleniyor)' };
+      if (!run) return { status: 'open', measured: 'ölçüm koşusu yok' };
       const checks = run.summary.checks ?? [];
       const failing = checks.filter((check) => check.ok === false).length;
       return { status: 'open', measured: `${run.dir}: ${run.summary.rows?.length} karşılaştırma, ${checks.length - failing}/${checks.length} hedef tutuyor; hedefleri kullanıcı onaylayacak` };

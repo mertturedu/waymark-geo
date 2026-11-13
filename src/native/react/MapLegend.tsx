@@ -45,7 +45,7 @@ export function MapLegend({ visible, onClose, lang = 'tr', hidden, onToggle }: {
   const theme = useGeoTheme();
   const side = dark ? theme.dark : theme.light;
   const colorOf = (group: Row['group']): string => iconColor(side.map, group === 'brands' ? 'market' : group, dark ? 'dark' : 'light', side.colors.accent);
-  const palette = dark ? { bg: '#1b1b1d', fg: '#f2f2f2', line: '#333', accent: '#ff7a2f' } : { bg: '#ffffff', fg: '#16161a', line: '#e3e3e8', accent: '#ff5b04' };
+  const palette = dark ? { bg: '#171a22', fg: '#eef1f7', line: '#2c3240', accent: '#ff7a2f' } : { bg: '#ffffff', fg: '#14171f', line: '#dde1ea', accent: '#ff5b04' };
   return (
     <Modal visible={visible} animationType="fade" transparent onRequestClose={onClose}>
       <View style={styles.backdrop}>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   header: { justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   title: { fontSize: 18, fontWeight: '700' },
   row: { alignItems: 'center', gap: 12, paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth },
-  badge: { width: 30, height: 30, borderRadius: 15, borderWidth: 1.5, borderColor: '#FFFFFF', alignItems: 'center', justifyContent: 'center' },
+  badge: { width: 30, height: 30, borderRadius: 9, borderWidth: 1.5, borderColor: '#FFFFFF', alignItems: 'center', justifyContent: 'center' },
   glyph: { width: 18, height: 18 },
   label: { flex: 1, fontSize: 14 },
 });

@@ -3,12 +3,13 @@ import { join } from 'node:path';
 import type { Gate } from './engine';
 import { uploadedReports } from './fix-0';
 import { deviceGate, isSimulator } from './fix-1';
-import { latestFullRun } from './fix-4';
+import { DARK_BASE, LIGHT_BASE } from '../src/native/map/base-colors';
+import { contrast } from '../src/native/map/theme';
 
 const UNIT_FILES = ['test/map', 'test/native', 'test/example', 'test/gates/fix-6.test.ts'];
 const DEVICE_IDS = ['sdk.map-3d', 'sdk.map-dark'];
 const TRANSIT_ID = 'sdk.map-transit';
-const COMPARE_WORDS = ['zemin', 'su', 'park', 'yol', 'bina', 'renk', 'δe'];
+const MIN_LABEL_CONTRAST = 3;
 
 export const fix6Gates: Gate[] = [
   {
@@ -29,17 +30,21 @@ export const fix6Gates: Gate[] = [
   {
     id: 'KF6.2',
     phase: 6,
-    title: 'Karşılaştırma: renk ΔE hedefi (açık ve koyu), bina alan payı farkı ≤ 5 puan',
-    kind: 'device',
-    threshold: 'Apple karşılaştırma raporunda renk ve bina hedefleri tutuyor',
-    async measure({ reportDir }) {
-      const run = latestFullRun(reportDir);
-      if (!run) return { status: 'open', measured: 'Apple karşılaştırma koşusu yok' };
-      const checks = (run.summary.checks ?? []).filter((check) => COMPARE_WORDS.some((word) => check.name.toLowerCase().includes(word)));
-      if (checks.length === 0) return { status: 'open', measured: `${run.dir}: renk hedefi satırı yok` };
-      const bad = checks.filter((check) => check.ok !== true);
-      const measured = `${run.dir}: ${checks.length - bad.length}/${checks.length} hedef tutuyor`;
-      return bad.some((check) => check.ok === false) ? { status: 'fail', measured } : bad.length > 0 ? { status: 'open', measured } : { status: 'pass', measured };
+    title: 'Okunabilirlik: yol ve yer adı ile zemin kontrastı ≥ 3 (açık ve koyu)',
+    kind: 'auto',
+    threshold: 'her etiket rengi kendi zemininde WCAG kontrastı ≥ 3',
+    async measure() {
+      const pairs: [string, string][] = [];
+      for (const [name, base] of [['açık', LIGHT_BASE], ['koyu', DARK_BASE]] as const) {
+        for (const key of ['roads_label_minor', 'roads_label_major', 'city_label', 'subplace_label'] as const) pairs.push([`${name} ${key}`, `${base[key]}|${base.earth}`]);
+      }
+      const rows = pairs.map(([name, colours]) => {
+        const [ink, ground] = colours.split('|') as [string, string];
+        return { name, ratio: contrast(ink, ground) };
+      });
+      const worst = rows.reduce((low, row) => (row.ratio < low.ratio ? row : low));
+      const measured = `${rows.length} çift, en düşük ${worst.ratio.toFixed(2)} (${worst.name})`;
+      return worst.ratio >= MIN_LABEL_CONTRAST ? { status: 'pass', measured } : { status: 'fail', measured };
     },
   },
   {

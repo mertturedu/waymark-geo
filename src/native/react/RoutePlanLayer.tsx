@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import type { PlanResult } from '../../core/plan/types';
 import { planFeatures, type PlanState } from '../logic/plan-view';
 
-const COLORS = { light: { line: '#2b6cff', done: '#9aa5b8', mark: '#ffffff', text: '#16161a' }, dark: { line: '#6aa0ff', done: '#5b6577', mark: '#2a2a30', text: '#f2f2f2' } };
+const COLORS = { light: { line: '#2b6cff', done: '#9aa5b8', mark: '#ffffff', text: '#14171f' }, dark: { line: '#6aa0ff', done: '#5b6577', mark: '#2a2a30', text: '#eef1f7' } };
 
 export function RoutePlanLayer({ state, result, nextLeg = 0, theme = 'light' }: { state: PlanState; result: PlanResult | null; nextLeg?: number; theme?: 'light' | 'dark' }) {
   const { legs, stops } = useMemo(() => planFeatures(state, result, nextLeg), [state, result, nextLeg]);

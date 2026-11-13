@@ -35,7 +35,9 @@ func badge(_ glyph: [Bool]) -> [UInt8] {
   for y in 0..<size {
     for x in 0..<size {
       let dx = Double(x) + 0.5 - centre, dy = Double(y) + 0.5 - centre
-      let inside = (dx * dx + dy * dy).squareRoot() <= half
+      let corner = half * 0.46
+      let ex = max(abs(dx) - (half - corner), 0), ey = max(abs(dy) - (half - corner), 0)
+      let inside = (ex * ex + ey * ey).squareRoot() <= corner
       disc[y * size + x] = inside
       fill[y * size + x] = inside && !glyph[y * size + x]
     }

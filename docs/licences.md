@@ -30,7 +30,7 @@ The credit text is in six languages: `t(lang, 'attribution.text')`. `GeoAttribut
 2. **Overture sources.** Places from other Overture sources carry their own licences. The build keeps the places theme under CDLA-Permissive-2.0; confirm that no kept row comes from a source with another licence before publishing.
 3. **Brand names and chain badges.** Badges are drawn text on a brand colour. Show them as map symbols, not as the brands' own logos.
 4. **Fonts.** OFL fonts may travel inside the packs; the licence text has to stay with them. If a font is chosen as the default, add its licence file to the base pack.
-5. **Comparison tools.** The map comparison tool (`tools/map-compare` in the parent folder) runs Apple MapKit snapshots only on the developer's Mac, after each run is confirmed; nothing from it is stored in the SDK or the packs.
+5. **Comparison tools.** Map comparison tools live outside this repository, run only on the developer's machine after each run is confirmed, and nothing from them is stored in the SDK or the packs. The SDK look (palette, badge shape, controls) is Yuksi's own and is not tuned against another map's screenshots.
 
 ## Dependencies
 

@@ -105,7 +105,7 @@ const ROAD_LABELS: Record<string, { minzoom?: number; spacing: number }> = {
   roads_labels_minor: { minzoom: 14.5, spacing: 280 },
   roads_labels_major: { spacing: 320 },
 };
-export const ROAD_LETTER_SPACING = 0.1;
+export const ROAD_LETTER_SPACING = 0.08;
 
 const tuneRoadLabels = (layers: StyleLayer[]): StyleLayer[] =>
   layers.map((layer) => {
@@ -147,8 +147,9 @@ const buildingsExtrusion = (sourceName: string, paint: Paint): StyleLayer => ({
   minzoom: BUILDINGS_3D_FROM,
   filter: ['in', 'kind', 'building', 'building_part'],
   paint: {
-    'fill-extrusion-color': paint.look.base.buildings ?? '#E0E4EC',
-    'fill-extrusion-opacity': 0.85,
+    'fill-extrusion-color': paint.look.base.buildings ?? '#DCE0EA',
+    'fill-extrusion-opacity': 0.9,
+    'fill-extrusion-vertical-gradient': false,
     'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], BUILDINGS_3D_FROM, 0, BUILDINGS_3D_FROM + 0.6, ['coalesce', ['get', 'height'], BUILDING_DEFAULT_HEIGHT]],
     'fill-extrusion-base': ['interpolate', ['linear'], ['zoom'], BUILDINGS_3D_FROM, 0, BUILDINGS_3D_FROM + 0.6, ['coalesce', ['get', 'min_height'], 0]],
   },
@@ -229,8 +230,8 @@ function transitLayers(sourceName: string, theme: 'light' | 'dark'): StyleLayer[
     { ...base, id: `transit-casing@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['!=', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': dark ? '#1A1A1D' : '#FFFFFF', 'line-width': width(6), 'line-opacity': 0.9 } },
     { ...base, id: `transit-lines@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['!=', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': colour, 'line-width': width(3.4) } },
     { ...base, id: `transit-ferry@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['==', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'butt' }, paint: { 'line-color': colour, 'line-width': width(2.4), 'line-dasharray': [2, 2] } },
-    { ...base, id: `transit-stations@${sourceName}`, type: 'circle', minzoom: TRANSIT_STATIONS_FROM, filter: ['==', ['get', 'kind'], 'station'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], TRANSIT_STATIONS_FROM, 3, 17, 6], 'circle-color': dark ? '#242428' : '#FFFFFF', 'circle-stroke-color': ['match', ['get', 'mode'], ...Object.entries(TRANSIT_COLOURS).flat(), '#546E7A'], 'circle-stroke-width': 2 } },
-    { ...base, id: `transit-names@${sourceName}`, type: 'symbol', minzoom: TRANSIT_STATIONS_FROM + 1, filter: ['==', ['get', 'kind'], 'station'], layout: { 'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': 10, 'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 7, 'text-optional': true }, paint: { 'text-color': dark ? '#C8C8D0' : '#4A4A4E', 'text-halo-color': dark ? '#242428' : '#FFFFFF', 'text-halo-width': 1.2 } },
+    { ...base, id: `transit-stations@${sourceName}`, type: 'circle', minzoom: TRANSIT_STATIONS_FROM, filter: ['==', ['get', 'kind'], 'station'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], TRANSIT_STATIONS_FROM, 3, 17, 6], 'circle-color': dark ? '#1A1E27' : '#FFFFFF', 'circle-stroke-color': ['match', ['get', 'mode'], ...Object.entries(TRANSIT_COLOURS).flat(), '#546E7A'], 'circle-stroke-width': 2 } },
+    { ...base, id: `transit-names@${sourceName}`, type: 'symbol', minzoom: TRANSIT_STATIONS_FROM + 1, filter: ['==', ['get', 'kind'], 'station'], layout: { 'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': 10, 'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 7, 'text-optional': true }, paint: { 'text-color': dark ? '#B8BFD0' : '#3B4152', 'text-halo-color': dark ? '#1A1E27' : '#FFFFFF', 'text-halo-width': 1.2 } },
   ] as StyleLayer[];
 }
 
@@ -267,7 +268,7 @@ const EMPHASIS_SIZE = { strong: 1.1, normal: 1, quiet: 0.88 };
 const EMPHASIS_ORDER = { strong: 0, normal: 100, quiet: 200 };
 const QUIET_FROM_ZOOM = 16;
 const ICON_PADDING = 4;
-const BADGE = { size: 0.33, text: 11, offset: 1.1, padding: 2 };
+const BADGE = { size: 0.33, text: 11, offset: 1.05, padding: 2 };
 const TIER_STEPS: Record<number, [number, number][]> = {
   1: [[15, 0]],
   2: [[15, 98], [16, 88], [16.5, 0]],
@@ -300,7 +301,7 @@ const quietGate = (look: ResolvedMapLook, input: unknown): unknown[] => {
   return quiet.length === 0 ? ['literal', true] : ['any', ['!', ['in', input, ['literal', quiet]]], ['>=', ['zoom'], QUIET_FROM_ZOOM]];
 };
 
-const halo = (theme: 'light' | 'dark') => ({ 'icon-halo-color': theme === 'dark' ? '#1B1B1D' : '#FFFFFF', 'icon-halo-width': 1.2 });
+const halo = (theme: 'light' | 'dark') => ({ 'icon-halo-color': theme === 'dark' ? '#171A22' : '#FFFFFF', 'icon-halo-width': 1.2 });
 
 const letterSize = (text: string): number => {
   const length = [...text].length;
@@ -388,9 +389,9 @@ function badgeLayer(from: BadgeSource, paint: Paint, lang: string): StyleLayer {
       'text-field': lang === 'tr' && from.shortNames ? ['coalesce', ['get', 'ns'], ...nameOf(lang).slice(1)] : nameOf(lang),
       'text-font': ['NotoSansMedium'],
       'text-size': BADGE.text,
-      'text-anchor': 'left',
-      'text-offset': [BADGE.offset, 0],
-      'text-max-width': 7,
+      'text-anchor': 'top',
+      'text-offset': [0, BADGE.offset],
+      'text-max-width': 6,
       'text-optional': false,
       'symbol-sort-key': from.wrap(['+', ['*', ['var', 't'], 100], from.order]),
     },
@@ -399,7 +400,7 @@ function badgeLayer(from: BadgeSource, paint: Paint, lang: string): StyleLayer {
       'icon-halo-color': '#FFFFFF',
       'icon-halo-width': 1,
       'text-color': from.wrap(color((g) => inkColor(look, g, theme, paint.accent))),
-      'text-halo-color': theme === 'dark' ? '#1B1B1D' : '#FFFFFF',
+      'text-halo-color': theme === 'dark' ? '#171A22' : '#FFFFFF',
       'text-halo-width': 1.2,
     },
   };
@@ -411,8 +412,8 @@ function businessLayers(sourceName: string, paint: Paint, lang: string): StyleLa
   const logos = look.brands.mode !== 'category' && look.brands.mode !== 'hidden';
   const poi = badgeLayer({ shortNames: true, id: `ov-icon@${sourceName}`, source: sourceName, sourceLayer: 'places', wrap: withPlace, confidence: ['get', 'c'], order: ['-', 100, ['get', 'c']], extra: logos ? [['!', ['has', 'b']]] : [] }, paint, lang);
   if (!logos) return [poi];
-  const haloColor = dark ? '#1b1b1d' : '#ffffff';
-  const textPaint = { 'text-color': dark ? '#b4b4bd' : '#55555e', 'text-halo-color': haloColor, 'text-halo-width': 1.2 };
+  const haloColor = dark ? '#171a22' : '#ffffff';
+  const textPaint = { 'text-color': dark ? '#a9b0c2' : '#4f566a', 'text-halo-color': haloColor, 'text-halo-width': 1.2 };
   const nameLayout = { 'text-field': ['step', ['zoom'], '', NAME_MIN_ZOOM, nameOf(lang)], 'text-font': ['NotoSansRegular'], 'text-size': 10, 'text-anchor': 'top', 'text-offset': [0, 0.9], 'text-max-width': 7, 'text-optional': true };
   return [poi, ...brandLayers(sourceName, paint, nameLayout, textPaint)];
 }
@@ -440,7 +441,7 @@ export function hoodLabelLayer(theme: 'light' | 'dark', font: MapFont = 'noto'):
     type: 'symbol',
     minzoom: HOOD_MIN_ZOOM,
     layout: { 'text-field': ['get', 'label'], 'text-font': FONT_STACKS[font]('Medium'), 'text-size': ['interpolate', ['linear'], ['zoom'], HOOD_MIN_ZOOM, 9, 16, 13], 'text-max-width': 7, 'text-letter-spacing': HOOD_LETTER_SPACING },
-    paint: { 'text-color': dark ? '#b4b4bd' : '#7A7A7D', 'text-halo-color': dark ? '#1b1b1d' : '#F8F4EC', 'text-halo-width': 1.3 },
+    paint: { 'text-color': dark ? '#a9b0c2' : '#6A7080', 'text-halo-color': dark ? '#171a22' : '#ECEFF4', 'text-halo-width': 1.3 },
   };
 }
 

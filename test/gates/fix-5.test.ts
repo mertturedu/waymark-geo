@@ -27,7 +27,7 @@ describe('fix 5 gates', () => {
     const d = dir();
     expect((await gate('KF5.2').measure(ctx(d))).status).toBe('open');
     const day = join(d, 'harita-karsilastirma', '2026-11-05');
-    mkdirSync(join(day, 'apple'), { recursive: true });
+    mkdirSync(day, { recursive: true });
     const write = (checks: unknown[]) => writeFileSync(join(day, 'ozet.json'), JSON.stringify({ rows: [{}], checks }));
     write([{ name: 'Sokak adı görünme oranı', ok: true }, { name: '3 satırlık ad', ok: true }, { name: 'Çakışan yazı', ok: true }, { name: 'Zemin ΔE', ok: false }]);
     expect((await gate('KF5.2').measure(ctx(d))).status).toBe('pass');

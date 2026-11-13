@@ -31,7 +31,7 @@ describe('3D buildings', () => {
     expect(height[5]).toBeCloseTo(16.6);
     expect(height[6]).toEqual(['coalesce', ['get', 'height'], 6]);
     expect(paint['fill-extrusion-base']![6]).toEqual(['coalesce', ['get', 'min_height'], 0]);
-    expect(paint['fill-extrusion-opacity']).toBe(0.85);
+    expect(paint['fill-extrusion-opacity']).toBe(0.9);
   });
 
   it('follows the base colour of the theme', () => {
@@ -80,16 +80,16 @@ describe('terrain tones', () => {
 
   it('gives cemeteries and sports grounds their own colour without adding layers', () => {
     const light = JSON.stringify(park('light').paint);
-    expect(light).toContain('#D6E3CC');
-    expect(light).toContain('#C4E6B8');
+    expect(light).toContain('#D3E0DA');
+    expect(light).toContain('#BFE0D4');
     const filter = park('light').filter as string[];
     for (const kind of ['cemetery', 'pitch', 'stadium', 'track', 'sports_centre']) expect(filter).toContain(kind);
   });
 
   it('has darker versions on the dark map', () => {
     const dark = JSON.stringify(park('dark').paint);
-    expect(dark).toContain('#27342B');
-    expect(dark).not.toContain('#D6E3CC');
+    expect(dark).toContain('#22332F');
+    expect(dark).not.toContain('#D3E0DA');
   });
 
   it('can be changed from the theme', () => {

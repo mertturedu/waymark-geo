@@ -21,7 +21,7 @@ describe('street names', () => {
   it('keeps repeats apart and uses a grey that is lighter than the place names', () => {
     const style = buildStyle(input());
     expect(layer(style, 'roads_labels_minor@r34').layout).toMatchObject({ 'symbol-spacing': expect.any(Number), 'text-padding': expect.any(Number) });
-    expect(layer(style, 'roads_labels_minor@r34').paint?.['text-color']).toBe('#7A7A7D');
+    expect(layer(style, 'roads_labels_minor@r34').paint?.['text-color']).toBe('#6A7080');
   });
 });
 
@@ -34,7 +34,7 @@ describe('place names', () => {
       const width = l.layout?.['text-max-width'];
       if (typeof width === 'number' && l.id.includes('@ov')) expect(width).toBeLessThanOrEqual(7);
     }
-    expect(badge('light').layout?.['text-max-width']).toBe(7);
+    expect(badge('light').layout?.['text-max-width']).toBe(6);
   });
 
   it('colours the name from the group colour and differently on the dark map', () => {
@@ -63,7 +63,7 @@ describe('neighbourhood names', () => {
     expect(light.layout['text-letter-spacing']).toBe(HOOD_LETTER_SPACING);
     expect(light.layout['text-letter-spacing']).toBeGreaterThanOrEqual(0.08);
     expect(light.layout['text-transform']).toBeUndefined();
-    expect(light.paint['text-color']).toBe('#7A7A7D');
+    expect(light.paint['text-color']).toBe('#6A7080');
     expect(hoodLabelLayer('dark').paint['text-color']).not.toBe(light.paint['text-color']);
   });
 

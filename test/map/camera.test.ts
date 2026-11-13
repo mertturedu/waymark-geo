@@ -2,8 +2,8 @@ import { clampPitch, DEFAULT_PITCH, jumpTilted, MAX_PITCH, normalBearing, safeVi
 
 describe('map camera', () => {
   it('leans the map about twenty degrees by default', () => {
-    expect(DEFAULT_PITCH).toBe(20);
-    expect(tilted({ center: [29, 41] as [number, number], zoom: 15 })).toEqual({ center: [29, 41], zoom: 15, pitch: 20 });
+    expect(DEFAULT_PITCH).toBe(0);
+    expect(tilted({ center: [29, 41] as [number, number], zoom: 15 })).toEqual({ center: [29, 41], zoom: 15, pitch: 0 });
   });
 
   it('keeps a pitch the app asked for and stays between flat and the maximum', () => {
@@ -35,7 +35,7 @@ describe('safe camera views', () => {
     expect(clampPitch(Number.POSITIVE_INFINITY)).toBe(0);
     expect(safeView({ pitch: 90, bearing: -90, zoom: 3 })).toEqual({ pitch: 60, bearing: 270, zoom: 3 });
     expect(safeView({ zoom: 3 })).toEqual({ zoom: 3 });
-    expect(tilted({ bearing: -10 })).toEqual({ bearing: 350, pitch: 20 });
+    expect(tilted({ bearing: -10 })).toEqual({ bearing: 350, pitch: 0 });
   });
 });
 

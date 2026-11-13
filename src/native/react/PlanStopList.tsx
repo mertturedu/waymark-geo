@@ -15,7 +15,7 @@ export function planSummary(lang: string, result: PlanResult | null): string {
 export function PlanStopList({ controls, lang = 'tr', dark = false, onCurrentPosition }: { controls: PlanControls; lang?: string; dark?: boolean; onCurrentPosition?: () => Promise<[number, number] | null> }) {
   const { state, result, busy } = controls;
   const rows = rowsOf(state, result);
-  const palette = dark ? { fg: '#f2f2f2', sub: '#a0a0ab', line: '#333', chip: '#2a2a30', accent: '#6aa0ff' } : { fg: '#16161a', sub: '#666672', line: '#e3e3e8', chip: '#f1f2f6', accent: '#2b6cff' };
+  const palette = dark ? { fg: '#eef1f7', sub: '#a0a0ab', line: '#2c3240', chip: '#2a2a30', accent: '#6aa0ff' } : { fg: '#14171f', sub: '#666672', line: '#dde1ea', chip: '#f1f2f6', accent: '#2b6cff' };
   const dir = isRtl(lang) ? 'row-reverse' : 'row';
   const endLabel = state.end === 'free' ? t(lang, 'plan.free') : state.end === 'return' ? t(lang, 'plan.return') : t(lang, 'plan.end');
   const nextEnd = (): PlanState['end'] => (state.end === 'free' ? 'return' : 'free');

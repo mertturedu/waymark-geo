@@ -217,10 +217,10 @@ describe('service badges the base style no longer draws', () => {
     expect(shown(layer, { kind: 'hospital', min_zoom: 0 }, 17)).toBe(false);
   });
 
-  it('writes the name in the map language, to the right of the badge', () => {
+  it('writes the name in the map language, below the badge', () => {
     const layout = layerOf('service@r20', { lang: 'de' })?.layout as Record<string, unknown>;
     expect(JSON.stringify(layout['text-field'])).toContain('name:de');
-    expect(layout).toMatchObject({ 'text-anchor': 'left', 'text-optional': false, 'icon-allow-overlap': false, 'text-font': ['NotoSansMedium'] });
+    expect(layout).toMatchObject({ 'text-anchor': 'top', 'text-optional': false, 'icon-allow-overlap': false, 'text-font': ['NotoSansMedium'] });
   });
 
   it('draws them above the base layers and below the neighbourhood names, with unique ids', () => {
@@ -245,12 +245,12 @@ describe('businesses from the places overlay', () => {
     expect(built.layers.filter((l) => l.source === 'ov20').map((l) => l.id)).toEqual(['ov-icon@ov20']);
   });
 
-  it('draws a round badge with the glyph of the category and the name beside it', () => {
+  it('draws a rounded badge with the glyph of the category and the name below it', () => {
     const layer = layerOf('ov-icon@ov20');
     expect(value(layer, 'layout', 'icon-image', { cat: 'cafe', g: 'food', name: 'x', c: 90 })).toBe('geo-badge-cafe');
     expect(value(layer, 'layout', 'icon-image', { cat: 'muslim_place_of_worship', g: 'worship', name: 'x', c: 90 })).toBe('geo-badge-mosque');
     expect(value(layer, 'layout', 'icon-image', { cat: 'osm_chain', g: 'market', b: 'migros', name: 'x', c: 90 })).toBe('geo-badge-grocery');
-    expect(layer?.layout).toMatchObject({ 'icon-size': expect.anything(), 'text-size': 11, 'text-anchor': 'left', 'text-optional': false, 'icon-allow-overlap': false, 'text-font': ['NotoSansMedium'] });
+    expect(layer?.layout).toMatchObject({ 'icon-size': expect.anything(), 'text-size': 11, 'text-anchor': 'top', 'text-optional': false, 'icon-allow-overlap': false, 'text-font': ['NotoSansMedium'] });
     expect(layer?.paint).toMatchObject({ 'icon-halo-color': '#FFFFFF', 'icon-halo-width': 1 });
   });
 
@@ -315,10 +315,10 @@ describe('businesses from the places overlay', () => {
     const pharmacy = { cat: 'pharmacy', g: 'pharmacy', name: 'x', c: 90 };
     const sum = (hex: unknown) => [1, 3, 5].reduce((total, at) => total + parseInt((hex as string).slice(at, at + 2), 16), 0);
     const fill = value(light, 'paint', 'icon-color', pharmacy);
-    expect(fill).toBe('#EB4D6E');
+    expect(fill).toBe('#E2506A');
     expect(sum(value(light, 'paint', 'text-color', pharmacy))).toBeLessThan(sum(fill));
     expect(sum(value(dark, 'paint', 'text-color', pharmacy))).toBeGreaterThan(sum(fill));
-    expect(dark?.paint?.['text-halo-color']).toBe('#1B1B1D');
+    expect(dark?.paint?.['text-halo-color']).toBe('#171A22');
   });
 
   it('keeps chains in the same layer in category mode and gives them their own layers when logos are asked for', () => {

@@ -1,4 +1,4 @@
-import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fix6Gates } from '../../gates/fix-6';
@@ -23,19 +23,14 @@ describe('fix 6 gates', () => {
     expect(pytestFails.status).toBe('fail');
   });
 
-  it('keeps the comparison, device, performance and size gates open without evidence', async () => {
-    for (const id of ['KF6.2', 'KF6.3', 'KF6.4', 'KF6.5']) expect((await gate(id).measure(ctx(dir()))).status).toBe('open');
+  it('keeps the device, performance and size gates open without evidence', async () => {
+    for (const id of ['KF6.3', 'KF6.4', 'KF6.5']) expect((await gate(id).measure(ctx(dir()))).status).toBe('open');
   });
 
-  it('judges the colour targets from the newest full run', async () => {
-    const d = dir();
-    const day = join(d, 'harita-karsilastirma', '2026-11-06');
-    mkdirSync(join(day, 'apple'), { recursive: true });
-    const write = (checks: unknown[]) => writeFileSync(join(day, 'ozet.json'), JSON.stringify({ rows: [{}], checks }));
-    write([{ name: 'Zemin ΔE açık', ok: true }, { name: 'Bina alan payı', ok: true }, { name: 'Sokak adı', ok: false }]);
-    expect((await gate('KF6.2').measure(ctx(d))).status).toBe('pass');
-    write([{ name: 'Zemin ΔE açık', ok: false }]);
-    expect((await gate('KF6.2').measure(ctx(d))).status).toBe('fail');
+  it('measures label contrast against the ground of both themes', async () => {
+    const result = await gate('KF6.2').measure(ctx(dir()));
+    expect(result.status).toBe('pass');
+    expect(result.measured).toContain('8 çift');
   });
 
   it('passes the cleanliness gate on empty output', async () => {

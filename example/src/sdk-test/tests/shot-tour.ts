@@ -26,7 +26,7 @@ export const sdkShotTour: DeviceTest = test('sdk.shot-tour', 'Ekran görüntüs�
       await fetch(`${ctx.packServerUrl}/mark/${spot.id}-z${SHOT_ZOOM + 1}`).catch(() => undefined);
       await pause(HOLD_MS);
     }
-    return { outcome: 'info', note: `${SHOT_SPOTS.length} nokta, Apple z${SHOT_ZOOM + 1} eşdeğeri (bizim z${SHOT_ZOOM})` };
+    return { outcome: 'info', note: `${SHOT_SPOTS.length} nokta, z${SHOT_ZOOM}` };
   }),
 );
 

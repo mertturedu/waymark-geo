@@ -38,12 +38,12 @@ export const fix5Gates: Gate[] = [
   {
     id: 'KF5.2',
     phase: 5,
-    title: 'Karşılaştırma hedefleri: sokak adı ≥ %80, 3 satırlık ad 0, çakışma 0',
+    title: 'Ölçüm hedefleri: sokak adı ≥ %80, 3 satırlık ad 0, çakışma 0',
     kind: 'device',
-    threshold: 'Apple karşılaştırma raporunda ilgili hedefler tutuyor',
+    threshold: 'ölçüm raporunda ilgili hedefler tutuyor',
     async measure({ reportDir }) {
       const run = latestFullRun(reportDir);
-      if (!run) return { status: 'open', measured: 'Apple karşılaştırma koşusu yok' };
+      if (!run) return { status: 'open', measured: 'ölçüm koşusu yok' };
       const checks = (run.summary.checks ?? []).filter((check) => TARGET_CHECKS.some((word) => check.name.toLowerCase().includes(word)));
       if (checks.length === 0) return { status: 'open', measured: `${run.dir}: hedef satırı yok` };
       const bad = checks.filter((check) => check.ok !== true);

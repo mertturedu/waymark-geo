@@ -44,7 +44,7 @@ The package is private. See [Access and licence](#access-and-licence).
 | Map | `@maplibre/maplibre-react-native` 11.5 or newer |
 | Expo modules | `expo-crypto`, `expo-file-system`, `expo-network`, `expo-sqlite` |
 
-A development build is needed (MapLibre is native code), Expo Go is not enough. `@rnmapbox/maps` and MapLibre do not build together in one app.
+A development build is needed (MapLibre is native code), Expo Go is not enough.
 
 ## Installation
 
@@ -121,7 +121,7 @@ Ready-made pieces for the common screens: `RegionDownloadSheet`, `MapLegend`, `G
 
 ## Map and theme
 
-`useMapStyle({ theme, language, hide, look })` returns a MapLibre style built from the installed packs: the Protomaps base map, per-province service layers and the overlay of businesses. The style changes by itself when a province is installed or removed.
+`useMapStyle({ theme, language, hide, look })` returns a MapLibre style built from the installed packs: the base map, per-province service layers and the overlay of businesses. The style changes by itself when a province is installed or removed.
 
 **Many provinces.** Every installed province adds about 70 layers to the style (12 provinces: 922 layers and 1.8 MB of style, 81 provinces: 5821 layers and 12 MB). Pass the part of the map that is on screen and only the provinces near it go into the style:
 
@@ -135,9 +135,9 @@ The provinces under the view are always in the style, and neighbours within 30 k
 
 The place classification (badge glyph, tier and group) is baked into the business tiles as the properties `k`, `t` and `grp`; tiles built before that still work, the style works the values out itself.
 
-Places are drawn as **round category badges with the name beside them**: a coloured circle, a white glyph cut out of it and a thin white ring, in the colour of its group (food orange, shops amber, health and pharmacies red, parks green, culture magenta, transport blue, and so on). A chain store gets the badge of its category, so every supermarket shows the same basket; chain logos and letters are an option (see `brands.mode`). The base map's own sprite icons are left out so nothing is drawn twice.
+Places are drawn as **rounded-square category badges with the name below them**: a coloured rounded square, a white glyph cut out of it and a thin white ring, in the colour of its group (food orange, shops amber, health and pharmacies red, parks green, culture magenta, transport blue, and so on). A chain store gets the badge of its category, so every supermarket shows the same basket; chain logos and letters are an option (see `brands.mode`). The base map's own sprite icons are left out so nothing is drawn twice.
 
-The map thins out like a printed map: the further out, the fewer places. Places are ranked in four tiers by kind and by how sure the data is about them.
+The map thins out the further out you zoom, the fewer places. Places are ranked in four tiers by kind and by how sure the data is about them.
 
 | Zoom | What shows |
 |---|---|
@@ -146,11 +146,11 @@ The map thins out like a printed map: the further out, the fewer places. Places 
 | from 17 | Cafes, restaurants and shops, the surest ones first |
 | from 18.5 | Almost everything with a name |
 
-Places with no name are not drawn, and neither are office-type businesses (real estate, advertising, manufacturing, legal and similar). The glyph is chosen from the category of the place (`src/native/map/poi-glyphs.ts`, 52 glyphs from Maki and Temaki, see `docs/icons.md`). Icons are small distance fields tinted at draw time, so one picture works in every colour, in light and dark.
+Places with no name are not drawn, and neither are office-type businesses (real estate, advertising, manufacturing, legal and similar). The glyph is chosen from the category of the place (`src/native/map/poi-glyphs.ts`, 52 glyphs from two open CC0 icon sets, see `docs/icons.md`). Icons are small distance fields tinted at draw time, so one picture works in every colour, in light and dark.
 
 `MapLegend` explains the groups and can switch each of them on and off.
 
-The map looks best leaned back a little, about 20 degrees, like a printed map held at an angle. `DEFAULT_PITCH` (20) and `tilted(view)` give the app that value for the camera; the user can still flatten or tilt it with two fingers (up to `MAX_PITCH`, 60). Names and badges stay upright when the map is tilted.
+The camera starts flat. `DEFAULT_PITCH` (0) and `tilted(view)` give the app that value; the user can still tilt it with two fingers (up to `MAX_PITCH`, 60), and an app that wants a leaned-back map passes its own `pitch`. Names and badges stay upright when the map is tilted.
 
 ```tsx
 import { DEFAULT_PITCH, tilted } from '@yuksi/geo/native';
@@ -187,8 +187,8 @@ Neighbourhood names are written in capitals with `upperTr` and street names are 
 
 Three parts show the user on the map and move the camera to them, like the location button of a system map:
 
-- `GeoUserLocation` draws the blue location dot (with the accuracy ring and, in heading mode, the direction cone).
-- `LocateButton` is a round button with an arrow: outline when idle, filled while following, upright arrow while the map turns with the compass.
+- `GeoUserLocation` draws the location dot (with the accuracy ring and, in heading mode, the direction cone).
+- `LocateButton` is a rounded-square button with a target mark: a ring and four ticks when idle, with a filled centre while following, and a pointer on top while the map turns with the compass. It uses the brand colour.
 - `useLocateMe` ties them to the map camera. A press asks for permission if needed, zooms in to street level (it never zooms out), and follows the user. Another press turns the map with the compass, and the next one goes back to plain follow. Dragging the map stops following.
 
 ```tsx
@@ -243,7 +243,7 @@ const theme = createGeoTheme({
 | `brands.mode` | `category` (default, chains get their category badge), `badge`, `ladder`, `logo` (chain badges and logos from the older design), `hidden` |
 | `brands.chains.<id>` | `fill`, `ink`, `text`, `visible` for one of the 65 known chains (used by the chain modes) |
 | `colors` | `accent`, `bg`, `fg`, `mute`, `line`, `danger`, `success`, `radius`, `font` |
-| `base` | Colours of the map itself by name (`earth`, `water`, `buildings`, `park_a`, `major`, `roads_label_major`, ... the colour names of the Protomaps flavor). Light is warm cream with white roads and light green parks; dark keeps the stock dark map |
+| `base` | Colours of the map itself by name (`earth`, `water`, `buildings`, `park_a`, `major`, `roads_label_major`, ... the base colour names). Light is a cool grey-blue ground with white roads, amber motorways and sage parks; dark keeps the stock dark map |
 
 Groups: health, pharmacy, safety, money, fuel, worship, lodging, education, market, food, shop, culture, nature, transit, public, cargo, landmark.
 
@@ -415,7 +415,7 @@ Requirements for the server:
 4. Caching: file names contain a content hash, so everything except the manifest can be cached for a year (`Cache-Control: public, max-age=31536000, immutable`). The manifest and its `.sig` should be cached for a few minutes at most (`max-age=300`), otherwise updates are not seen.
 5. About 2.5 GB of storage for all 81 provinces (about 5 GB while two versions overlap). Traffic is the first install per phone; later updates download only the files whose hash changed.
 
-Any of these works: an object store with a CDN in front (S3, Cloudflare R2, Google Cloud Storage), or nginx on a small VPS:
+Any of these works: an object store with a CDN in front (any S3-compatible store), or nginx on a small VPS:
 
 ```nginx
 location /packs/ {
@@ -437,7 +437,7 @@ The manifest is signed with an Ed25519 key. The **private key stays outside this
 
 ## Building the packs
 
-The packs are built from a dated OpenStreetMap extract (Geofabrik), a Protomaps daily build and Overture Maps places. The same input gives the same bytes.
+The packs are built from a dated open map extract, a daily base map build and open places data. The same input gives the same bytes.
 
 ```
 cd pipeline && ./setup.sh                          # Python environment and tools, once
@@ -450,7 +450,7 @@ npm run serve:packs -- dist/packs                  # check on a phone
 - `data:build` builds borders, addresses, street segments, places, building points, SQLite address packs, embedded province borders, map tile extracts, checks them and writes the signed manifest into `dist/packs`. Work files land in `dist/work/<yymmdd>`.
 - The tile, business and overview tiles keep only what the map style can draw (step `karo budama`): every theme, brand mode and label language of the SDK style is checked at the whole zoom each tile is drawn at, and properties no layer reads are dropped. Glyph ranges no label uses are emptied. `GEO_PRUNE=0` builds without it.
 - `GEO_TILE_FORMAT=mlt` (step `karo kodlama`) turns the map and business tiles into MapLibre Tiles with the pinned `mlt` tool (`pipeline/tools.lock.json`, installed by `pipeline/setup.sh`). Archives are named `*.mlt.pmtiles`; the style marks them `encoding: 'mlt'` and the manifest asks for SDK 0.6.0. MapLibre Native reads them (Android 13.6.1, iOS 6.31.0 and newer); MapLibre GL JS before 6 does not, so web previews of such packs need GL JS 6. Feature ids are dropped first (the style never reads them) because the MapLibre Native decoders in Android 13.6.1 and iOS 6.31.0 cannot read the plain integer streams the encoder uses for large ids; FastPFOR and FSST are switched off for the same reason. `npm run mlt:check -- dist/packs` fetches that decoder's sources (pinned and hash-checked in `pipeline/mlt-native.lock.json`), builds it with FastPFOR off like the phone libraries and decodes every tile of every `*.mlt.pmtiles` in the manifest; run it whenever the `mlt` tool or the MapLibre Native version changes. Not the default: build it, run the check, look at it on a device, then switch. When the style starts to read something new, `test/map/prune-profile.test.ts` fails: rebuild the packs and run `npx tsx scripts/prune-profile.ts --write`.
-- The tile extract is tied to the 7-day window of the Protomaps builds; pin the build date and fetch before the window closes.
+- The tile extract is tied to the 7-day window of the base map builds; pin the build date and fetch before the window closes.
 - `data:release` builds a numbered release into `dist/releases` with checks and a regression report; `data:publish` copies a release into a data repository or folder (dry run unless `--confirm`).
 - `pipeline/` holds the Python extractors (`extract_admin.py`, `extract_address_records.py`, `extract_roads.py`, `overture_places.py`), the builders and their tests (`pipeline/.venv/bin/pytest pipeline/tests`).
 

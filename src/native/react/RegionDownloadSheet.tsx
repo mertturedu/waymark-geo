@@ -21,7 +21,7 @@ export function RegionDownloadSheet({ visible, onClose, lang = 'tr', only, conse
   const geo = useGeo();
   const { regions, statusOf, missingBaseBytes } = useRegions();
   const dark = useColorScheme() === 'dark';
-  const palette = dark ? { bg: '#1b1b1d', fg: '#f2f2f2', mute: '#9a9aa0', line: '#333', accent: '#ff7a2f' } : { bg: '#ffffff', fg: '#16161a', mute: '#6b6b73', line: '#e3e3e8', accent: '#ff5b04' };
+  const palette = dark ? { bg: '#171a22', fg: '#eef1f7', mute: '#9aa1b4', line: '#2c3240', accent: '#ff7a2f' } : { bg: '#ffffff', fg: '#14171f', mute: '#667085', line: '#dde1ea', accent: '#ff5b04' };
   const shown = orderRegions(only ? regions.filter((region) => only.includes(region.id)) : regions, statusOf);
 
   const run = (action: RowAction, region: ManifestRegion): void => {

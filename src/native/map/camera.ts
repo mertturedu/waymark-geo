@@ -1,4 +1,4 @@
-export const DEFAULT_PITCH = 20;
+export const DEFAULT_PITCH = 0;
 export const MAX_PITCH = 60;
 export const FAR_JUMP_DEG = 0.3;
 export const ZOOM_SLACK = 0.05;

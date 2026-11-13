@@ -32,33 +32,33 @@ export type GeoTheme = { version: 1; light: ResolvedTheme; dark: ResolvedTheme; 
 export const ICON_GROUPS: IconGroup[] = ['health', 'pharmacy', 'safety', 'money', 'fuel', 'worship', 'lodging', 'market', 'public', 'food', 'shop', 'cargo', 'landmark', 'nature', 'culture', 'transit', 'education'];
 
 const GROUP_COLORS: Record<IconGroup, string> = {
-  health: '#EB4D6E',
-  pharmacy: '#EB4D6E',
-  safety: '#4A7CE0',
-  money: '#3E9E7E',
-  fuel: '#5E7CE2',
-  worship: '#6E72E0',
-  lodging: '#A66BD6',
-  market: '#F5B108',
-  public: '#8E8E93',
-  food: '#F28C28',
-  shop: '#F0A30A',
-  cargo: '#6C7A89',
-  landmark: '#B24FA3',
-  nature: '#34C759',
-  culture: '#D6459E',
-  transit: '#3C82E6',
-  education: '#C98A3B',
+  health: '#D63B5F',
+  pharmacy: '#E2506A',
+  safety: '#3F63C9',
+  money: '#1F9E8A',
+  fuel: '#4C5BD4',
+  worship: '#7C5CC4',
+  lodging: '#A24BBF',
+  market: '#E8A317',
+  public: '#6F7A8F',
+  food: '#EE7A1F',
+  shop: '#E39B12',
+  cargo: '#5B6B80',
+  landmark: '#B5438F',
+  nature: '#2E9E6B',
+  culture: '#CC3F8E',
+  transit: '#2F7FD1',
+  education: '#B97A2E',
 };
 
 const GROUP_EMPHASIS: Partial<Record<IconGroup, Emphasis>> = {};
 
 const COLORS: Record<'light' | 'dark', ResolvedColors> = {
-  light: { accent: '#FF5B04', bg: '#FFFFFF', fg: '#16161A', mute: '#6B6B73', line: '#E3E3E8', danger: '#DD3333', success: '#2E9E5B', radius: 16, font: null },
-  dark: { accent: '#FF7A2F', bg: '#1B1B1D', fg: '#F2F2F2', mute: '#9A9AA0', line: '#333333', danger: '#FF5A5A', success: '#4CC07F', radius: 16, font: null },
+  light: { accent: '#FF5B04', bg: '#FFFFFF', fg: '#14171F', mute: '#667085', line: '#DDE1EA', danger: '#DD3333', success: '#2E9E5B', radius: 16, font: null },
+  dark: { accent: '#FF7A2F', bg: '#171A22', fg: '#EEF1F7', mute: '#9AA1B4', line: '#2C3240', danger: '#FF5A5A', success: '#4CC07F', radius: 16, font: null },
 };
 
-const MUTED_TARGET = { light: '#9A9AA2', dark: '#7C7C86' };
+const MUTED_TARGET = { light: '#9499AB', dark: '#7A8196' };
 const LADDER = { badgeFrom: 16, logoFrom: 17.5 };
 const SCALE_RANGE: [number, number] = [0.5, 2];
 const ZOOM_RANGE: [number, number] = [10, 22];

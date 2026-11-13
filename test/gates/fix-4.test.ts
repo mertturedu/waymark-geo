@@ -20,20 +20,20 @@ describe('fix 4 gates', () => {
     expect((await gate('KF4.2').measure(ctx(d))).status).toBe('fail');
   });
 
-  it('finds the newest run that has Apple images and a summary', async () => {
+  it('finds the newest run that has a summary with rows', async () => {
     const d = dir();
     const root = join(d, 'harita-karsilastirma');
-    mkdirSync(join(root, '2026-11-01', 'apple'), { recursive: true });
+    mkdirSync(join(root, '2026-11-01'), { recursive: true });
     writeFileSync(join(root, '2026-11-01', 'ozet.json'), JSON.stringify({ rows: [{}, {}], checks: [{ name: 'a', ok: true }, { name: 'b', ok: false }] }));
     mkdirSync(join(root, '2026-11-02'), { recursive: true });
-    writeFileSync(join(root, '2026-11-02', 'ozet.json'), JSON.stringify({ rows: [{}] }));
+    writeFileSync(join(root, '2026-11-02', 'ozet.json'), JSON.stringify({ rows: [] }));
     expect(latestFullRun(d)?.dir).toBe(join(root, '2026-11-01'));
     const result = await gate('KF4.3').measure(ctx(d));
     expect(result.status).toBe('open');
     expect(result.measured).toContain('2 karşılaştırma, 1/2 hedef');
   });
 
-  it('opens the report gate with no Apple run', async () => {
+  it('opens the report gate with no run', async () => {
     expect((await gate('KF4.3').measure(ctx(dir()))).status).toBe('open');
   });
 
