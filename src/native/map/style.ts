@@ -19,7 +19,8 @@ export type MapStyle = {
 export type StyleInput = {
   rootUrl: string;
   baseDir: string | null;
-  regions: { id: string; tilesPath: string; placesPath?: string; transitPath?: string }[];
+  regions: { id: string; tilesPath: string; placesPath?: string; transitPath?: string; remote?: [number, number, number, number] }[];
+  tileUrl?: string;
   theme: 'light' | 'dark';
   lang: string;
   hide?: string[];
@@ -45,6 +46,20 @@ const vectorSource = (root: string, path: string, maxzoom: number): Record<strin
   maxzoom,
   ...(path.endsWith(MLT_SUFFIX) ? { encoding: 'mlt' } : {}),
 });
+
+const streamSource = (tileUrl: string, path: string, maxzoom: number, bounds: [number, number, number, number]): Record<string, unknown> => {
+  const mlt = path.endsWith(MLT_SUFFIX);
+  const name = path.replace(/\.pmtiles$/, '').split('/').map(encodeURIComponent).join('/');
+  return {
+    type: 'vector',
+    tiles: [`${tileUrl.replace(/\/+$/, '')}/${name}/{z}/{x}/{y}.${mlt ? 'mlt' : 'mvt'}`],
+    bounds,
+    minzoom: 0,
+    maxzoom,
+    attribution: ATTRIBUTION,
+    ...(mlt ? { encoding: 'mlt' } : {}),
+  };
+};
 
 const fileUrl = (value: string): string => {
   if (value.startsWith('file://')) return value.replace(/[^\x21-\x7e]+/g, (run) => encodeURIComponent(run));
@@ -495,7 +510,8 @@ function assembleStyle(input: StyleInput): MapStyle {
   clone('base', 'base');
   for (const region of [...input.regions].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     const name = `r${region.id}`;
-    sources[name] = vectorSource(root, region.tilesPath, REGION_MAX_ZOOM);
+    const source = (path: string, maxzoom: number) => (region.remote && input.tileUrl ? streamSource(input.tileUrl, path, maxzoom, region.remote) : vectorSource(root, path, maxzoom));
+    sources[name] = source(region.tilesPath, REGION_MAX_ZOOM);
     const before = layers.length;
     clone(name, 'region');
     if (input.traffic) {
@@ -507,12 +523,12 @@ function assembleStyle(input: StyleInput): MapStyle {
     layers.push(...serviceLayers(name, paint, lang));
     if (region.transitPath) {
       const transit = `tr${region.id}`;
-      sources[transit] = vectorSource(root, region.transitPath, OVERLAY_MAX_ZOOM);
+      sources[transit] = source(region.transitPath, OVERLAY_MAX_ZOOM);
       layers.push(...transitLayers(transit, input.theme));
     }
     if (region.placesPath) {
       const overlay = `ov${region.id}`;
-      sources[overlay] = vectorSource(root, region.placesPath, OVERLAY_MAX_ZOOM);
+      sources[overlay] = source(region.placesPath, OVERLAY_MAX_ZOOM);
       layers.push(...businessLayers(overlay, paint, lang));
     }
   }

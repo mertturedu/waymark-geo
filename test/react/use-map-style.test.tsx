@@ -20,7 +20,7 @@ function fakeGeo(installed: string[]) {
   const geo = {
     regions: { list: () => REGIONS, installed: () => installed, baseDir: () => 'base', subscribe: () => () => undefined },
     search: { hoods: async () => [] },
-    map: { style },
+    map: { style, stream: { active: () => [], subscribe: () => () => undefined } },
   } as never;
   return { geo, style };
 }

@@ -27,3 +27,48 @@ describe('MLT tiles in the style', () => {
     expect(validateStyleMin(built as never).map((e) => e.message)).toEqual([]);
   });
 });
+
+describe('streamed regions', () => {
+  const remote = (tilesPath: string, placesPath?: string) =>
+    buildStyle({
+      rootUrl: 'file:///docs/',
+      baseDir: 'files/base-20261030',
+      tileUrl: 'https://tiles.example.com/',
+      regions: [{ id: '34', tilesPath, ...(placesPath ? { placesPath } : {}), remote: [27.97, 40.74, 29.96, 41.67] }],
+      theme: 'light',
+      lang: 'tr',
+    });
+
+  it('reads an MLT region from the tile server by z/x/y', () => {
+    const built = remote(`34/tiles-6f086fc5${MLT_SUFFIX}`, `34/places-4f90a14b${MLT_SUFFIX}`);
+    expect(built.sources.r34).toMatchObject({ type: 'vector', encoding: 'mlt', minzoom: 0, maxzoom: 15, bounds: [27.97, 40.74, 29.96, 41.67], tiles: ['https://tiles.example.com/34/tiles-6f086fc5.mlt/{z}/{x}/{y}.mlt'] });
+    expect(built.sources.r34).not.toHaveProperty('url');
+    expect(built.sources.ov34).toMatchObject({ maxzoom: 16, tiles: ['https://tiles.example.com/34/places-4f90a14b.mlt/{z}/{x}/{y}.mlt'] });
+    expect(validateStyleMin(built as never).map((e) => e.message)).toEqual([]);
+  });
+
+  it('asks for .mvt when the archive is plain vector tiles', () => {
+    const built = remote('34/tiles-6f086fc5.pmtiles');
+    expect(built.sources.r34).toMatchObject({ tiles: ['https://tiles.example.com/34/tiles-6f086fc5/{z}/{x}/{y}.mvt'] });
+    expect(built.sources.r34).not.toHaveProperty('encoding');
+  });
+
+  it('keeps the base and the installed regions on local files', () => {
+    const built = buildStyle({
+      rootUrl: 'file:///docs/',
+      baseDir: 'files/base-20261030',
+      tileUrl: 'https://tiles.example.com',
+      regions: [{ id: '16', tilesPath: `files/16/t${MLT_SUFFIX}` }, { id: '34', tilesPath: `34/t${MLT_SUFFIX}`, remote: [27.97, 40.74, 29.96, 41.67] }],
+      theme: 'light',
+      lang: 'tr',
+    });
+    expect(built.sources.base).toHaveProperty('url');
+    expect(built.sources.r16).toHaveProperty('url');
+    expect(built.sources.r34).toHaveProperty('tiles');
+  });
+
+  it('falls back to the file when no tile server is configured', () => {
+    const built = buildStyle({ rootUrl: 'file:///docs/', baseDir: 'files/base-20261030', regions: [{ id: '34', tilesPath: `34/t${MLT_SUFFIX}`, remote: [27.97, 40.74, 29.96, 41.67] }], theme: 'light', lang: 'tr' });
+    expect(built.sources.r34).toHaveProperty('url');
+  });
+});

@@ -50,6 +50,17 @@ export function useRegionStatus(id: string): RegionStatus {
 }
 
 export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean | number };
+function useStreamKey(): string {
+  const geo = useGeo();
+  const [key, setKey] = useState(() => geo.map.stream.active().join(','));
+  useEffect(() => {
+    const sync = () => setKey(geo.map.stream.active().join(','));
+    sync();
+    return geo.map.stream.subscribe(sync);
+  }, [geo]);
+  return key;
+}
+
 
 const TRAFFIC_TICK_MS = 60_000;
 
@@ -88,6 +99,7 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   const look = useMemo(() => resolveMapLook(side.map, options.look), [side, lookKey]);
   const installed = useInstalledKey();
   const trafficAt = useTrafficTime(given.traffic);
+  const streaming = useStreamKey();
   const hideKey = (options.hide ?? []).join(',');
   const current = useRef<string[] | null>(null);
   if (options.view === undefined) current.current = null;
@@ -98,7 +110,7 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   }
   const only = current.current;
   const onlyKey = only === null ? '*' : only.join(',');
-  return useMemo(() => geo.map.style({ theme: options.theme, ...(options.language ? { language: options.language } : {}), ...(options.hide ? { hide: options.hide } : {}), ...(only ? { only } : {}), look, accent: side.colors.accent, ...(options.font ? { font: options.font } : {}), ...(trafficAt !== undefined ? { traffic: trafficAt } : {}) }), [geo, options.theme, options.language, options.font, hideKey, installed, onlyKey, look, side, trafficAt]);
+  return useMemo(() => geo.map.style({ theme: options.theme, ...(options.language ? { language: options.language } : {}), ...(options.hide ? { hide: options.hide } : {}), ...(only ? { only } : {}), look, accent: side.colors.accent, ...(options.font ? { font: options.font } : {}), ...(trafficAt !== undefined ? { traffic: trafficAt } : {}) }), [geo, options.theme, options.language, options.font, hideKey, installed, streaming, onlyKey, look, side, trafficAt]);
 }
 
 export function useHoodLabels(language?: string): { name: string; lng: number; lat: number }[] {
