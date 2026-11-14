@@ -43,8 +43,22 @@ describe('streamed regions', () => {
     const built = remote(`34/tiles-6f086fc5${MLT_SUFFIX}`, `34/places-4f90a14b${MLT_SUFFIX}`);
     expect(built.sources.r34).toMatchObject({ type: 'vector', encoding: 'mlt', minzoom: 0, maxzoom: 15, bounds: [27.97, 40.74, 29.96, 41.67], tiles: ['https://tiles.example.com/34/tiles-6f086fc5.mlt/{z}/{x}/{y}.mlt'] });
     expect(built.sources.r34).not.toHaveProperty('url');
-    expect(built.sources.ov34).toMatchObject({ maxzoom: 16, tiles: ['https://tiles.example.com/34/places-4f90a14b.mlt/{z}/{x}/{y}.mlt'] });
+    expect(built.sources.ov34).toMatchObject({ minzoom: 13, maxzoom: 16, tiles: ['https://tiles.example.com/34/places-4f90a14b.mlt/{z}/{x}/{y}.mlt'] });
     expect(validateStyleMin(built as never).map((e) => e.message)).toEqual([]);
+  });
+
+  it('does not ask for places or transit tiles below the zoom where they are drawn', () => {
+    const built = buildStyle({
+      rootUrl: 'file:///docs/',
+      baseDir: 'files/base-20261030',
+      tileUrl: 'https://tiles.example.com',
+      regions: [{ id: '34', tilesPath: `34/t${MLT_SUFFIX}`, placesPath: `34/p${MLT_SUFFIX}`, transitPath: `34/r${MLT_SUFFIX}`, remote: [27.97, 40.74, 29.96, 41.67] }],
+      theme: 'light',
+      lang: 'tr',
+    });
+    expect(built.sources.r34).toMatchObject({ minzoom: 0 });
+    expect(built.sources.ov34).toMatchObject({ minzoom: 13 });
+    expect(built.sources.tr34).toMatchObject({ minzoom: 11 });
   });
 
   it('asks for .mvt when the archive is plain vector tiles', () => {

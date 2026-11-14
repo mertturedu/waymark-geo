@@ -37,6 +37,7 @@ export const SEMI_TRANSPARENT_FROM_ZOOM = 9;
 const BASE_MAX_ZOOM = 8;
 const REGION_MAX_ZOOM = 15;
 const OVERLAY_MAX_ZOOM = 16;
+const PLACES_MIN_ZOOM = 13;
 const ATTRIBUTION = '© OpenStreetMap contributors, Overture Maps';
 
 const vectorSource = (root: string, path: string, maxzoom: number): Record<string, unknown> => ({
@@ -47,14 +48,14 @@ const vectorSource = (root: string, path: string, maxzoom: number): Record<strin
   ...(path.endsWith(MLT_SUFFIX) ? { encoding: 'mlt' } : {}),
 });
 
-const streamSource = (tileUrl: string, path: string, maxzoom: number, bounds: [number, number, number, number]): Record<string, unknown> => {
+const streamSource = (tileUrl: string, path: string, maxzoom: number, bounds: [number, number, number, number], minzoom = 0): Record<string, unknown> => {
   const mlt = path.endsWith(MLT_SUFFIX);
   const name = path.replace(/\.pmtiles$/, '').split('/').map(encodeURIComponent).join('/');
   return {
     type: 'vector',
     tiles: [`${tileUrl.replace(/\/+$/, '')}/${name}/{z}/{x}/{y}.${mlt ? 'mlt' : 'mvt'}`],
     bounds,
-    minzoom: 0,
+    minzoom,
     maxzoom,
     attribution: ATTRIBUTION,
     ...(mlt ? { encoding: 'mlt' } : {}),
@@ -511,7 +512,7 @@ function assembleStyle(input: StyleInput): MapStyle {
   clone('base', 'base');
   for (const region of [...input.regions].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     const name = `r${region.id}`;
-    const source = (path: string, maxzoom: number) => (region.remote && input.tileUrl ? streamSource(input.tileUrl, path, maxzoom, region.remote) : vectorSource(root, path, maxzoom));
+    const source = (path: string, maxzoom: number, minzoom = 0) => (region.remote && input.tileUrl ? streamSource(input.tileUrl, path, maxzoom, region.remote, minzoom) : vectorSource(root, path, maxzoom));
     sources[name] = source(region.tilesPath, REGION_MAX_ZOOM);
     const before = layers.length;
     clone(name, 'region');
@@ -524,12 +525,12 @@ function assembleStyle(input: StyleInput): MapStyle {
     layers.push(...serviceLayers(name, paint, lang));
     if (region.transitPath) {
       const transit = `tr${region.id}`;
-      sources[transit] = source(region.transitPath, OVERLAY_MAX_ZOOM);
+      sources[transit] = source(region.transitPath, OVERLAY_MAX_ZOOM, TRANSIT_LINES_FROM);
       layers.push(...transitLayers(transit, input.theme));
     }
     if (region.placesPath) {
       const overlay = `ov${region.id}`;
-      sources[overlay] = source(region.placesPath, OVERLAY_MAX_ZOOM);
+      sources[overlay] = source(region.placesPath, OVERLAY_MAX_ZOOM, PLACES_MIN_ZOOM);
       layers.push(...businessLayers(overlay, paint, lang));
     }
   }
