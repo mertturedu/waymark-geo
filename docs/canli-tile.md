@@ -21,6 +21,9 @@ geo.map.stream.set([[lng, lat], ...]);
 ```
 
 Noktayı içeren, indirilmemiş ve manifestte `tiles` dosyası olan bölgeler okunur (en çok `MAX_STREAMED`, 3).
+Haritanın yazı tipleri, simgeleri ve genel görünümü "taban paketi"nde durur (yaklaşık 16 MB) ve her zaman yereldir.
+Canlı okuma ayarlıysa ve taban inmemişse `stream.set` onu kendiliğinden indirir (mobil veriyle de), hiçbir bölge indirilmemiş olsa bile.
+Elle de istenebilir: `geo.regions.downloadBase()`, hazır mı diye `geo.regions.baseReady()`. Canlı okuma açıkken son bölge silinse de taban silinmez.
 Bölge sonradan indirilince stil kendiliğinden dosyaya geçer. `useMapStyle` değişikliği izler, ayrıca bir şey gerekmez.
 `only` verilmişse liste uygulamanın kendisidir, canlı okuma eklenmez.
 

@@ -13,7 +13,7 @@ import { createExpoLearnStore } from './learn-store';
 import { createExpoNet } from './network';
 import { createExpoOpener } from './sqlite';
 
-export type GeoNativeConfig = GeoConfig & { zstd?: boolean; directory?: Directory; borders?: Borders; net?: NetPort; connectivity?: ConnectivityPort; wrapOpener?: (open: (path: string) => Promise<SqlDb>) => (path: string) => Promise<SqlDb>; tiles?: { url: string } };
+export type GeoNativeConfig = GeoConfig & { zstd?: boolean; directory?: Directory; borders?: Borders; net?: NetPort; connectivity?: ConnectivityPort; wrapOpener?: (open: (path: string) => Promise<SqlDb>) => (path: string) => Promise<SqlDb> };
 
 export type MapStyleOptions = { theme: 'light' | 'dark'; language?: string; hoods?: { name: string; lng: number; lat: number }[]; hide?: string[]; look?: ResolvedMapLook; accent?: string; only?: string[]; font?: MapFont; traffic?: number };
 
@@ -74,6 +74,7 @@ export async function createGeoNative(config: GeoNativeConfig): Promise<GeoNativ
           focusKey = key;
           focus = points;
           listeners.forEach((listener) => listener());
+          if (config.tiles && points.length > 0 && !geo.regions.baseReady()) geo.regions.downloadBase({ allowCellular: true }).catch(() => undefined);
         },
         active: () => streamed().map((region) => region.id),
         subscribe: (listener) => {

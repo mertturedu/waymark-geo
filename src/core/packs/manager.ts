@@ -9,7 +9,7 @@ import { isPackError, packError, type PackError, type PackErrorCode } from './ty
 import { diffManifest, inspectManifest, verifyManifest, type ManifestDiff } from './verify';
 
 export type PackEnv = { fs: FsPort; net: NetPort; hash: HashPort; clock: ClockPort; connectivity: ConnectivityPort; decode?: DecodePort };
-export type PackConfig = { manifestUrl: string; publicKeys: string[]; sdkVersion: string; autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; patches?: boolean };
+export type PackConfig = { manifestUrl: string; publicKeys: string[]; sdkVersion: string; autoDownload?: 'ask' | 'wifi' | 'always' | 'never'; patches?: boolean; keepBase?: boolean };
 
 export type UpdateReport = { patched: number; fellBack: number; bytes: number };
 
@@ -39,6 +39,8 @@ export type PackManager = {
   installedRegions(): string[];
   missingBaseBytes(): number;
   downloadBytes(id: string, parts?: PartKind[]): number;
+  downloadBase(options?: DownloadOptions): Promise<void>;
+  baseReady(): boolean;
   connection(): Promise<ConnectionKind>;
   onConnection(listener: (kind: ConnectionKind) => void): () => void;
   checkUpdates(options?: CheckOptions): Promise<CheckResult>;
@@ -62,6 +64,7 @@ const PARALLEL_BELOW_BYTES = 1_000_000;
 const BREATHE_AFTER_MS = 12;
 const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory'];
 const SPACE_MARGIN = 1.2;
+const BASE_ID = '@base';
 
 type Mutable = { state: RegionState; progress: { done: number; total: number } | null; error: { code: PackErrorCode; message: string } | null; waitingWifi: boolean; lastUpdate: UpdateReport | null };
 
@@ -254,9 +257,16 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
 
   const planFor = (job: Job): PlanItem[] => {
     const manifest = (current as { manifest: Manifest }).manifest;
-    const region = regionOf(job.id) as ManifestRegion;
     const plan: PlanItem[] = [];
     const build = manifest.tiles.build;
+    if (job.id === BASE_ID) {
+      for (const file of manifest.base) {
+        const have = state.base?.files.find((f) => f.path === file.path);
+        plan.push({ file, installed: have?.sha256 === file.sha256, build, version: build });
+      }
+      return plan;
+    }
+    const region = regionOf(job.id) as ManifestRegion;
     if (job.parts.includes('tiles')) {
       for (const file of manifest.base) {
         const have = state.base?.files.find((f) => f.path === file.path);
@@ -292,7 +302,19 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     };
   };
 
+  const commitBase = async (plan: PlanItem[]): Promise<void> => {
+    const manifest = (current as { manifest: Manifest }).manifest;
+    const baseFiles: InstalledFile[] = plan.map((p) => ({ path: p.file.path, size: p.file.size, sha256: p.file.sha256 }));
+    const superseded: string[] = [];
+    for (const old of state.base?.files ?? []) if (!baseFiles.some((f) => f.path === old.path)) superseded.push(finalPath(old.path));
+    state = { ...state, base: { build: plan[0]?.build ?? manifest.tiles.build, files: baseFiles } };
+    await persist();
+    await runDeleteHooks(superseded);
+    for (const path of superseded) await fs.remove(path);
+  };
+
   const commit = async (job: Job, plan: PlanItem[]): Promise<void> => {
+    if (job.id === BASE_ID) return commitBase(plan);
     const manifest = (current as { manifest: Manifest }).manifest;
     const region = regionOf(job.id) as ManifestRegion;
     const previous = state.regions[job.id];
@@ -601,6 +623,20 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     }
   };
 
+  const baseComplete = (): boolean => {
+    const files = current?.manifest.base ?? [];
+    return files.length > 0 && files.every((f) => state.base?.files.some((b) => b.path === f.path && b.sha256 === f.sha256));
+  };
+
+  const beginBase = (options: DownloadOptions): Promise<void> => {
+    if (baseComplete()) return Promise.resolve();
+    transition(BASE_ID, 'request');
+    ensure(BASE_ID).error = null;
+    const job = makeJob(BASE_ID, [], options);
+    enqueue(job);
+    return job.promise;
+  };
+
   const beginDownload = (id: string, options: DownloadOptions): Promise<void> => {
     const region = regionOf(id);
     if (!region) throw packError('malformed', `unknown region ${id}`);
@@ -669,6 +705,16 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     missingBaseBytes: () => (current?.manifest.base ?? []).filter((f) => !state.base?.files.some((b) => b.path === f.path && b.sha256 === f.sha256)).reduce((sum, f) => sum + f.size, 0),
     installedRegions: () => Object.keys(state.regions).filter((id) => state.regions[id]?.files.address !== undefined).sort(),
     checkUpdates: (options) => fetchManifest(options),
+    baseReady: baseComplete,
+    downloadBase(options = {}) {
+      const running = jobs.get(BASE_ID);
+      if (running) return running.promise;
+      if (current) return attempt(() => beginBase(options));
+      return fetchManifest().then((fetched) => {
+        if (!fetched.ok) throw packError(fetched.code);
+        return beginBase(options);
+      });
+    },
     download(id, options = {}) {
       const running = jobs.get(id);
       if (running && options.parts?.some((part) => !running.parts.includes(part))) return running.promise.then(() => manager.download(id, options));
@@ -745,7 +791,7 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
       delete pending[id];
       let base = state.base;
       const deletedBase: string[] = [];
-      const baseWanted = Object.values(regions).some((r) => r.files.tiles !== undefined) || [...jobs.values()].some((other) => other.id !== id && other.parts.includes('tiles'));
+      const baseWanted = config.keepBase === true || Object.values(regions).some((r) => r.files.tiles !== undefined) || [...jobs.values()].some((other) => other.id !== id && other.parts.includes('tiles'));
       if (!baseWanted) {
         deletedBase.push(...(base?.files ?? []).map((f) => finalPath(f.path)), ...(current?.manifest.base ?? []).map((f) => finalPath(f.path)));
         leftovers.push(...(current?.manifest.base ?? []).flatMap((f) => [partPath(f.path), ...encodedPaths(f)]));

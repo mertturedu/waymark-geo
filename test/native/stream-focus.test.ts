@@ -7,6 +7,8 @@ const mockRegions = [
   { id: '77', bbox: [29.0, 40.0, 29.5, 40.5], files: [{ kind: 'places', path: '77/places-bb.mlt.pmtiles' }] },
 ];
 let mockInstalled: string[] = [];
+let mockBaseReady = true;
+const mockDownloadBase = jest.fn(async () => undefined);
 
 jest.mock('expo-file-system', () => ({
   Directory: class {
@@ -29,6 +31,8 @@ jest.mock('../../src/core/create-geo', () => ({
       list: () => mockRegions,
       installed: () => mockInstalled,
       baseDir: () => 'base-20261030',
+      baseReady: () => mockBaseReady,
+      downloadBase: (...args: unknown[]) => mockDownloadBase(...(args as [])),
       installedFile: (id: string, kind: string) => (mockInstalled.includes(id) ? `files/${id}/${kind}-x.mlt.pmtiles` : null),
     },
   }),
@@ -41,6 +45,8 @@ const ISTANBUL: [number, number] = [28.98, 41.01];
 describe('map.stream', () => {
   beforeEach(() => {
     mockInstalled = [];
+    mockBaseReady = true;
+    mockDownloadBase.mockClear();
   });
 
   it('streams nothing until the app says where it is looking', async () => {
@@ -109,5 +115,35 @@ describe('map.stream', () => {
     off();
     geo.map.stream.set([ISTANBUL]);
     expect(listener).toHaveBeenCalledTimes(2);
+  });
+
+  it('fetches the base when streaming starts without one', async () => {
+    mockBaseReady = false;
+    const geo = await make();
+    geo.map.stream.set([ISTANBUL]);
+    expect(mockDownloadBase).toHaveBeenCalledWith({ allowCellular: true });
+  });
+
+  it('leaves the base alone when it is there already', async () => {
+    const geo = await make();
+    geo.map.stream.set([ISTANBUL]);
+    expect(mockDownloadBase).not.toHaveBeenCalled();
+  });
+
+  it('does not fetch the base without a tile server or without a focus', async () => {
+    mockBaseReady = false;
+    const plain = await make(false);
+    plain.map.stream.set([ISTANBUL]);
+    const geo = await make();
+    geo.map.stream.set([]);
+    expect(mockDownloadBase).not.toHaveBeenCalled();
+  });
+
+  it('survives a failed base download', async () => {
+    mockBaseReady = false;
+    mockDownloadBase.mockRejectedValueOnce(new Error('network'));
+    const geo = await make();
+    expect(() => geo.map.stream.set([ISTANBUL])).not.toThrow();
+    await Promise.resolve();
   });
 });

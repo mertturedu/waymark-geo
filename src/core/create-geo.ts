@@ -30,6 +30,7 @@ export type GeoConfig = {
   autoDownload?: 'ask' | 'wifi' | 'always' | 'never';
   cellularAskMb?: number;
   learning?: { enabled: boolean };
+  tiles?: { url: string };
 };
 
 export type GeoEnv = PackEnv & {
@@ -64,6 +65,8 @@ export type Geo = {
     installedFile(id: string, kind: PartKind): string | null;
     baseDir(): string | null;
     missingBaseBytes(): number;
+    downloadBase(options?: DownloadOptions): Promise<void>;
+    baseReady(): boolean;
     subscribe(listener: () => void): () => void;
   };
   search: {
@@ -101,7 +104,7 @@ export async function createGeo(config: GeoConfig, env: GeoEnv): Promise<Geo> {
   const askBytes = Number.isFinite(askMb) && askMb >= 0 ? askMb * 1024 * 1024 : Number.POSITIVE_INFINITY;
   const BUSY = ['queued', 'downloading', 'verifying'];
   const borders = env.borders ?? embeddedBorders();
-  const manager = await createPackManager(env, { manifestUrl: config.manifestUrl, publicKeys: config.publicKeys, sdkVersion: config.sdkVersion ?? SDK_VERSION, autoDownload });
+  const manager = await createPackManager(env, { manifestUrl: config.manifestUrl, publicKeys: config.publicKeys, sdkVersion: config.sdkVersion ?? SDK_VERSION, autoDownload, ...(config.tiles ? { keepBase: true } : {}) });
   const store = createManagedPackStore({ manager, opener: env.opener, clock: env.clock, ...(env.graceMs !== undefined ? { graceMs: env.graceMs } : {}) });
   const learning = config.learning?.enabled === false ? null : await createLearning({ store: env.learnStore, ...(env.now ? { now: env.now } : {}) });
   const search: Search = createSearch({ store, borders, layers: learning ? [learning.layer] : [], clock: env.clock });
@@ -142,6 +145,8 @@ export async function createGeo(config: GeoConfig, env: GeoEnv): Promise<Geo> {
       installedFile: (id, kind) => manager.installedFile(id, kind),
       baseDir: () => manager.baseDir(),
       missingBaseBytes: () => manager.missingBaseBytes(),
+      downloadBase: (options) => manager.downloadBase(options),
+      baseReady: () => manager.baseReady(),
       subscribe: (listener) => manager.subscribe(listener),
     },
     search: {
