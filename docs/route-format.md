@@ -1,49 +1,49 @@
-# Rota paketi biçimi (sürüm 1 ve 2)
+# Route pack format (versions 1 and 2)
 
-Her il için tek dosya (`route-<özet>.bin`, manifestte `kind: route`). Sayılar küçük endian. "varint" 7 bitlik gruplarla yazılan işaretsiz tam sayıdır (en çok 5 bayt, 32 bit), "zigzag" işaretli sayının `v >= 0 ? 2v : -2v - 1` ile varint'e çevrilmiş halidir. Koordinatlar mikro derece (derece x 1e6).
+One file per province (`route-<digest>.bin`, `kind: route` in the manifest). Numbers are little endian. A "varint" is an unsigned integer written in 7-bit groups (at most 5 bytes, 32 bits); a "zigzag" is a signed number turned into a varint with `v >= 0 ? 2v : -2v - 1`. Coordinates are in micro degrees (degrees x 1e6).
 
-## Başlık (44 bayt)
+## Header (44 bytes)
 
-| Konum | Boyut | Anlam |
+| Offset | Size | Meaning |
 |---|---|---|
-| 0 | u32 | sihirli sayı `0x54524759` (`YGRT`) |
-| 4 | u16 | sürüm (1 ya da 2) |
-| 6 | u16 | bayraklar (0) |
-| 8 | u32 | hiyerarşi düğüm sayısı (kavşaklar + dönüş kopyaları) |
-| 12 | u32 | temel kavşak sayısı |
-| 16 | u32 | yol parçası sayısı (yönsüz) |
-| 20 | 4 x i32 | kutu: batı, güney, doğu, kuzey |
-| 36 | u32 | ayrılmış |
-| 40 | u32 | bölüm sayısı |
+| 0 | u32 | magic number `0x54524759` (`YGRT`) |
+| 4 | u16 | version (1 or 2) |
+| 6 | u16 | flags (0) |
+| 8 | u32 | number of hierarchy nodes (junctions + turn copies) |
+| 12 | u32 | number of base junctions |
+| 16 | u32 | number of road segments (undirected) |
+| 20 | 4 x i32 | box: west, south, east, north |
+| 36 | u32 | reserved |
+| 40 | u32 | number of sections |
 
-Hemen ardından bölüm tablosu: her bölüm için `u8 kimlik, u32 başlangıç, u32 uzunluk` (9 bayt). Bölümler dosyanın başından başlayan mutlak konumlardadır. Okuyucu her bölümün dosya içinde kaldığını doğrular.
+The section table follows immediately: for each section `u8 id, u32 start, u32 length` (9 bytes). Sections are at absolute offsets counted from the start of the file. The reader checks that every section stays inside the file.
 
-## Bölümler
+## Sections
 
-1. **Düğümler.** Her temel kavşak için: `zigzag Δboylam`, `zigzag Δenlem` (öncekine göre), `varint hiyerarşi düğümü`.
-2. **Yol parçaları.** Her parça için: `zigzag Δbaşlangıç` (önceki parçanın başlangıcına göre), `zigzag (bitiş - başlangıç)`, `varint bayraklar`, `varint uzunluk (m)`, `varint ileri süre`, `varint geri süre` (desisaniye, kavşak cezası olmadan; yön yoksa 0), `varint şekil bayt sayısı`.
-   Bayraklar: bit 0 ileri geçilebilir, bit 1 geri geçilebilir, bit 2 ana ağda, bit 3 ileri yönde kavşak cezası var, bit 4 geri yönde kavşak cezası var, bit 5 ve üstü yol sınıfı (`src/core/route/speeds.ts` içindeki `ROAD_CLASSES` sırası).
-   Yönlü yay kimliği `pa = 2 x parça + yön` (yön 0: başlangıçtan bitişe, 1: tersi).
-3. **Şekiller.** Parçaların ara noktaları arka arkaya: `varint nokta sayısı`, sonra her nokta için `zigzag Δboylam`, `zigzag Δenlem` (başlangıç düğümünden başlayarak). Parçanın bayt aralığı yol parçaları bölümündeki şekil bayt sayılarından bulunur.
-4. **Yukarı yaylar** ve 5. **Aşağı yaylar** (contraction hierarchies). Düğüm kimliği sıralama sırasıdır: yukarı yayın hedefi her zaman daha büyük kimliklidir. Önce `varint toplam yay sayısı`, sonra her düğüm için `varint sayı` ve o kadar kayıt: `varint hedef farkı` (ilk kayıtta `hedef - düğüm - 1`, sonrakilerde önceki hedefe göre), `varint süre`, `varint uzunluk (m)`, `varint via`. `via` düşük bitte 1 ise özgün yaydır ve `via >> 1` yönlü yay kimliğidir; 0 ise kısayoldur ve `via >> 1` ortadaki düğümdür (her zaman bu düğümden küçük).
-   Yukarı listede düğümden daha yüksek sıralı düğüme giden yaylar, aşağı listede daha yüksek sıralı düğümden bu düğüme gelen yaylar durur (geriye doğru arama için).
-6. **Giriş tablosu.** Dönüş yasağı yüzünden kopyası olan yönlü yaylar: `varint sayı`, sonra `varint Δyay kimliği`, `varint düğüm` (yayı bitirince varılan düğüm).
-7. **Çıkış tablosu.** Bir yaya başlanabilecek kopya düğümler (kök düğüm dışında): `varint sayı`, sonra `varint Δyay kimliği`, `varint düğüm`.
-8. **Izgara.** `zigzag başlangıç boylamı`, `zigzag başlangıç enlemi`, `varint hücre boyu (5000)`, `varint sütun`, `varint satır`, sonra her hücre için `varint kayıt sayısı`, sonra her hücrenin yol parçası kimlikleri (`varint` artan fark).
+1. **Nodes.** For each base junction: `zigzag Δlongitude`, `zigzag Δlatitude` (relative to the previous one), `varint hierarchy node`.
+2. **Road segments.** For each segment: `zigzag Δstart` (relative to the start of the previous segment), `zigzag (end - start)`, `varint flags`, `varint length (m)`, `varint forward time`, `varint backward time` (deciseconds, without the junction penalty; 0 if there is no direction), `varint shape byte count`.
+   Flags: bit 0 passable forward, bit 1 passable backward, bit 2 in the main network, bit 3 junction penalty in the forward direction, bit 4 junction penalty in the backward direction, bit 5 and up road class (the order of `ROAD_CLASSES` in `src/core/route/speeds.ts`).
+   The directed arc id is `pa = 2 x segment + direction` (direction 0: start to end, 1: the reverse).
+3. **Shapes.** The intermediate points of the segments one after another: `varint point count`, then for each point `zigzag Δlongitude`, `zigzag Δlatitude` (starting from the start node). The byte range of a segment is found from the shape byte counts in the road segments section.
+4. **Up arcs** and 5. **down arcs** (contraction hierarchies). The node id is the ordering rank: the target of an up arc always has a larger id. First `varint total arc count`, then for each node `varint count` and that many records: `varint target delta` (`target - node - 1` in the first record, relative to the previous target in the following ones), `varint time`, `varint length (m)`, `varint via`. If the low bit of `via` is 1 it is an original arc and `via >> 1` is the directed arc id; if 0 it is a shortcut and `via >> 1` is the middle node (always smaller than this node).
+   The up list holds the arcs going from the node to a higher-ranked node, the down list the arcs coming from a higher-ranked node to this node (for the backward search).
+6. **Entry table.** Directed arcs that have a copy because of a turn restriction: `varint count`, then `varint Δarc id`, `varint node` (the node reached when the arc ends).
+7. **Exit table.** Copy nodes from which an arc can be started (except the root node): `varint count`, then `varint Δarc id`, `varint node`.
+8. **Grid.** `zigzag start longitude`, `zigzag start latitude`, `varint cell size (5000)`, `varint columns`, `varint rows`, then for each cell `varint record count`, then the road segment ids of each cell (`varint` increasing delta).
 
-## Sürüm 2: ayna yaylar
+## Version 2: mirror arcs
 
-Yukarı ve aşağı yay bölümleri dışında her şey sürüm 1 ile aynıdır.
+Everything except the up and down arc sections is the same as in version 1.
 
-- Yukarı yay kaydındaki `via` bir bit daha taşır: yazılan değer `2 x via + ayna`. `ayna` 1 ise bu yayın tersi aynı düğümün aşağı listesindedir ve aşağı bölüme yazılmaz. Tersi: aynı uç düğüm, aynı süre ve uzunluk; özgün yayda yönlü yay kimliğinin yön biti çevrilir (`pa ^ 1`), kısayolda ortadaki düğüm aynı kalır.
-- Aşağı bölümde yalnızca aynası olmayan yaylar durur (toplam sayı da onların sayısıdır).
-- Okuyucu her düğümün aşağı listesini uç düğüme göre sıralı birleştirerek kurar; sonuç sürüm 1 dosyasının listesiyle birebir aynıdır. Ayna yalnızca aşağı listede o uç düğüme giden tek yay varsa kullanılır; aynı uç düğüm iki kez çıkarsa dosya bozuk sayılır.
-- Sürüm 2 paketi içeren manifestin `minSdk` değeri en az `0.6.0`'dır. Paket hattı sürüm 2'yi SDK sürümü 0.6.0 ya da üstündeyse yazar; `GEO_ROUTE_FORMAT=1|2` bunu zorlar. `rewriteRoutePack` (`pipeline/build/route-pack.ts`) bir dosyayı yeniden kurmadan iki sürüm arasında çevirir.
+- The `via` in an up arc record carries one more bit: the written value is `2 x via + mirror`. If `mirror` is 1, the reverse of this arc is in the down list of the same node and is not written to the down section. The reverse: the same end node, the same time and length; for an original arc the direction bit of the directed arc id is flipped (`pa ^ 1`), for a shortcut the middle node stays the same.
+- The down section holds only arcs that have no mirror (the total count is also their count).
+- The reader builds each node's down list by merging, ordered by end node; the result is identical to the list of a version 1 file. A mirror is used only if the down list has a single arc to that end node; if the same end node appears twice the file is considered corrupt.
+- The `minSdk` of a manifest that contains a version 2 pack is at least `0.6.0`. The pack pipeline writes version 2 when the SDK version is 0.6.0 or above; `GEO_ROUTE_FORMAT=1|2` forces it. `rewriteRoutePack` (`pipeline/build/route-pack.ts`) converts a file between the two versions without rebuilding it.
 
-## Süre ve ağırlık
+## Time and weight
 
-Ağırlıklar desisaniyedir (0,1 sn). Bir yönlü yayın ağırlığı yol türü, `maxspeed`, çevredeki kavşak yoğunluğu ve kavşaklar arası uzunlukla hesaplanan süre (`roadKmh`) artı, varış kavşağında en az üç yol buluşuyorsa, yol türüne göre kavşak cezasıdır (`speeds.ts`). Dönüş yasakları yerel kopya düğümlerle uygulanır; sola dönüş cezası yoktur.
+Weights are in deciseconds (0.1 s). The weight of a directed arc is the time computed from road type, `maxspeed`, nearby junction density and the length between junctions (`roadKmh`), plus, if at least three roads meet at the arrival junction, a junction penalty by road type (`speeds.ts`). Turn restrictions are applied with local copy nodes; there is no left-turn penalty.
 
-## Okuyucu kuralları
+## Reader rules
 
-Bozuk girdi için okuyucu `route_pack_corrupt` kodlu hata fırlatır; asla sonsuz döngüye girmez. Sayılar dosya boyutundan büyük olamaz, her düğüm ve yol parçası kimliği aralıkta olmalı, kısayolun ortası kendi düğümünden küçük olmalıdır.
+For corrupt input the reader throws an error with the code `route_pack_corrupt`; it never enters an infinite loop. Counts cannot be larger than the file size, every node and road segment id must be in range, and the middle of a shortcut must be smaller than its own node.
