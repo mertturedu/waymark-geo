@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.check.json",
+  "compilerOptions": {
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": [
+    "../src/native",
+    "../test/react",
+    "../test/helpers/render-hook.tsx",
+    "../test/helpers/native-mocks.ts",
+    "../test/native/location.test.ts"
+  ]
+}

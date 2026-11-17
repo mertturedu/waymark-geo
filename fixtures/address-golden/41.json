@@ -1,0 +1,4644 @@
+{
+ "version": 1,
+ "plate": "41",
+ "queries": [
+  {
+   "id": "41-full-1",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Sultan Selim Caddesi No:31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604320425",
+    "number": "31",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-2",
+   "text": "Kazım Karabekir Caddesi No:40 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604240764",
+    "number": "40",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-3",
+   "text": "Hacıhalil Mah. Hükümet Caddesi 11, Gebze, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719045",
+    "number": "11",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-4",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Yavuz Sultan Selim Caddesi, Kapı No: 37",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604316983",
+    "number": "37",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-5",
+   "text": "Kocaeli Başiskele Ovacık Mah. Gafur Sokak No:10/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w979466642",
+    "number": "10/1",
+    "streetName": "Gafur Sokak"
+   }
+  },
+  {
+   "id": "41-full-6",
+   "text": "İlyas Bey Caddesi No:21 Sultan Orhan Mahallesi Gebze/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1174571174",
+    "number": "21",
+    "streetName": "İlyas Bey Caddesi"
+   }
+  },
+  {
+   "id": "41-full-7",
+   "text": "Körfez Mah. Salim Dervişoğlu Cad. 174, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018943",
+    "number": "174",
+    "streetName": "Salim Dervişoğlu Cad."
+   }
+  },
+  {
+   "id": "41-full-8",
+   "text": "Kocaeli, Gebze, Mustafapaşa Mahallesi, Yeni Bağdat Caddesi, Kapı No: 581",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2380579599",
+    "number": "581",
+    "streetName": "Yeni Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-full-9",
+   "text": "Kocaeli Gebze Hacıhalil Mah. Hükümet Caddesi No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719019",
+    "number": "4",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-10",
+   "text": "Bağdat Caddesi No:19 Köseköy Mahallesi Kartepe/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w985990650",
+    "number": "19",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-full-11",
+   "text": "Çayırova Mah. Fatih Caddesi 58, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603837011",
+    "number": "58",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-12",
+   "text": "Kocaeli, Gebze, Sultan Orhan Mahallesi, İlyasbey Caddesi, Kapı No: 43/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10199657608",
+    "number": "43/2",
+    "streetName": "İlyasbey Caddesi"
+   }
+  },
+  {
+   "id": "41-full-13",
+   "text": "Kocaeli Gölcük Merkez Mah. preveze No:2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10002645955",
+    "number": "2",
+    "streetName": "preveze"
+   }
+  },
+  {
+   "id": "41-full-14",
+   "text": "Rıza Paşa Sokak No:4 Körfez Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n14247879301",
+    "number": "4",
+    "streetName": "Rıza Paşa Sokak"
+   }
+  },
+  {
+   "id": "41-full-15",
+   "text": "Osmangazi Mah. Aşıroğlu Caddesi 158, Darıca, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020956",
+    "number": "158",
+    "streetName": "Aşıroğlu Caddesi"
+   }
+  },
+  {
+   "id": "41-full-16",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Orta Caddesi, Kapı No: 23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454574",
+    "number": "23",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-full-17",
+   "text": "Kocaeli Gebze Tatlıkuyu Mah. Körfez Caddesi No:64/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12433687077",
+    "number": "64/A",
+    "streetName": "Körfez Caddesi"
+   }
+  },
+  {
+   "id": "41-full-18",
+   "text": "Özden Sokak No:33 Yenişehir Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w379067040",
+    "number": "33",
+    "streetName": "Özden Sokak"
+   }
+  },
+  {
+   "id": "41-full-19",
+   "text": "Şekerpınar Mah. Ayçiçek Sokak 19, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1001974835",
+    "number": "19",
+    "streetName": "Ayçiçek Sokak"
+   }
+  },
+  {
+   "id": "41-full-20",
+   "text": "Kocaeli, İzmit, Kozluk Mahallesi, Orhanveli Sokak, Kapı No: 26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1092176741",
+    "number": "26",
+    "streetName": "Orhanveli Sokak"
+   }
+  },
+  {
+   "id": "41-full-21",
+   "text": "Kocaeli Kartepe Maşukiye Mah. Suadiye Yolu No:755",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w898550042",
+    "number": "755",
+    "streetName": "Suadiye Yolu"
+   }
+  },
+  {
+   "id": "41-full-22",
+   "text": "Çalık Sokak No:76 Barbaros Mahallesi Başiskele/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1550285457",
+    "number": "76",
+    "streetName": "Çalık Sokak"
+   }
+  },
+  {
+   "id": "41-full-23",
+   "text": "Çayırova Mah. Kazım Karabekir Caddesi 31, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548457593",
+    "number": "31",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-24",
+   "text": "Kocaeli, Gölcük, Dumlupınar Mahallesi, Preveze Caddesi, Kapı No: 96",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10776999396",
+    "number": "96",
+    "streetName": "Preveze Caddesi"
+   }
+  },
+  {
+   "id": "41-full-25",
+   "text": "Kocaeli İzmit Yenişehir Mah. Turan Güneş Caddesi No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w784774510",
+    "number": "1",
+    "streetName": "Turan Güneş Caddesi"
+   }
+  },
+  {
+   "id": "41-full-26",
+   "text": "Hacı Hızır Sk No:6 Hacıhızır Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1091570428",
+    "number": "6",
+    "streetName": "Hacı Hızır Sk"
+   }
+  },
+  {
+   "id": "41-full-27",
+   "text": "Körfez Mah. Gazanfer Bilge Bulvarı 2, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13149745569",
+    "number": "2",
+    "streetName": "Gazanfer Bilge Bulvarı"
+   }
+  },
+  {
+   "id": "41-full-28",
+   "text": "Kocaeli, Başiskele, Yeniköy Merkez Mahallesi, Vatan Caddesi, Kapı No: 730",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12153486536",
+    "number": "730",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "41-full-29",
+   "text": "Kocaeli İzmit Yeni Mah. İnkılap Caddesi No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w785105813",
+    "number": "7",
+    "streetName": "İnkılap Caddesi"
+   }
+  },
+  {
+   "id": "41-full-30",
+   "text": "Hükümet Caddesi No:5 Hacıhalil Mahallesi Gebze/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719043",
+    "number": "5",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-31",
+   "text": "Çayırova Mah. Yavuz Sultan Selim Caddesi 45, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604331757",
+    "number": "45",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-32",
+   "text": "Kocaeli, Gölcük, Yüzbaşılar Mahallesi, Poyraz Caddesi, Kapı No: 3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w699909561",
+    "number": "3",
+    "streetName": "Poyraz Caddesi"
+   }
+  },
+  {
+   "id": "41-full-33",
+   "text": "Kocaeli İzmit Körfez Mah. Yüce Rıfat Sokak No:40",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12922695340",
+    "number": "40",
+    "streetName": "Yüce Rıfat Sokak"
+   }
+  },
+  {
+   "id": "41-full-34",
+   "text": "Elif Sokak No:6 Çınarlı Mahallesi Derince/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1179773583",
+    "number": "6",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "41-full-35",
+   "text": "Bekirdere Mah. Ayça Sokak 90/2, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1154009690",
+    "number": "90/2",
+    "streetName": "Ayça Sokak"
+   }
+  },
+  {
+   "id": "41-full-36",
+   "text": "Kocaeli, İzmit, Eseler Mahallesi, Kuzey Marmara Otoyolu, Kapı No: 3169",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12876529401",
+    "number": "3169",
+    "streetName": "Kuzey Marmara Otoyolu"
+   }
+  },
+  {
+   "id": "41-full-37",
+   "text": "Kocaeli Gebze Hacıhalil Mah. Hükümet Caddesi No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10795562412",
+    "number": "8",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-38",
+   "text": "Vatan Caddesi No:73D Yeniköy Merkez Mahallesi Başiskele/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1123590749",
+    "number": "73D",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "41-full-39",
+   "text": "Yeniyalı Mah. Milli Egemenlik Caddesi 103, Körfez, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1420928995",
+    "number": "103",
+    "streetName": "Milli Egemenlik Caddesi"
+   }
+  },
+  {
+   "id": "41-full-40",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Fatih Caddesi, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454587",
+    "number": "18",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-41",
+   "text": "Kocaeli İzmit Kemalpaşa Mah. Ankara Karayolu No:24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020208",
+    "number": "24",
+    "streetName": "Ankara Karayolu"
+   }
+  },
+  {
+   "id": "41-full-42",
+   "text": "Kevser Sk No:5 Erenler Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1067009998",
+    "number": "5",
+    "streetName": "Kevser Sk"
+   }
+  },
+  {
+   "id": "41-full-43",
+   "text": "Çayırova Mah. Kazım Karabekir Caddesi 21/A, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306743",
+    "number": "21/A",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-44",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Yavuz Sultan Selim Caddesi, Kapı No: 49",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604331759",
+    "number": "49",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-45",
+   "text": "Kocaeli Çayırova Çayırova Mah. Fatih Caddesi No:44",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454648",
+    "number": "44",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-46",
+   "text": "Şehit Numan Dede Caddesi No:7/A Osman Yılmaz Mahallesi Gebze/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125179",
+    "number": "7/A",
+    "streetName": "Şehit Numan Dede Caddesi"
+   }
+  },
+  {
+   "id": "41-full-47",
+   "text": "Kavaklı Mah. Sahil Caddesi 40, Gölcük, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1340552920",
+    "number": "40",
+    "streetName": "Sahil Caddesi"
+   }
+  },
+  {
+   "id": "41-full-48",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Orta Caddesi, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454555",
+    "number": "18",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-full-49",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Sultan Selim Caddesi No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604240760",
+    "number": "19",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-50",
+   "text": "Fatih Caddesi No:52 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603836987",
+    "number": "52",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-51",
+   "text": "Çayırova Mah. Ali Haydar Efendi Caddesi 7, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223854",
+    "number": "7",
+    "streetName": "Ali Haydar Efendi Caddesi"
+   }
+  },
+  {
+   "id": "41-full-52",
+   "text": "Kocaeli, Derince, Çınarlı Mahallesi, İstiklal Caddesi, Kapı No: 70",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1257420897",
+    "number": "70",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "41-full-53",
+   "text": "Kocaeli Gebze Köşklü Çeşme Mah. Yeni Bağdat Caddesi No:459/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125180",
+    "number": "459/A",
+    "streetName": "Yeni Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-full-54",
+   "text": "Yüce Rıfat Sokak No:51/A Körfez Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12922713221",
+    "number": "51/A",
+    "streetName": "Yüce Rıfat Sokak"
+   }
+  },
+  {
+   "id": "41-full-55",
+   "text": "Cedit Mah. Devlet Hastanesi Sokak 30, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13798473930",
+    "number": "30",
+    "streetName": "Devlet Hastanesi Sokak"
+   }
+  },
+  {
+   "id": "41-full-56",
+   "text": "Kocaeli, İzmit, Yeşilova Mahallesi, Erciyes Sokak, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093376408",
+    "number": "18",
+    "streetName": "Erciyes Sokak"
+   }
+  },
+  {
+   "id": "41-full-57",
+   "text": "Kocaeli Gebze Gaziler Mah. Issıkgöl Caddesi No:100/3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11329048202",
+    "number": "100/3",
+    "streetName": "Issıkgöl Caddesi"
+   }
+  },
+  {
+   "id": "41-full-58",
+   "text": "Ağa Dere Caddesi No:88/B Esentepe Mahallesi Körfez/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13096181650",
+    "number": "88/B",
+    "streetName": "Ağa Dere Caddesi"
+   }
+  },
+  {
+   "id": "41-full-59",
+   "text": "Çayırova Mah. Orta Caddesi 37, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604239787",
+    "number": "37",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-full-60",
+   "text": "Kocaeli, Gebze, Hacıhalil Mahallesi, Hükümet Caddesi, Kapı No: 13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719046",
+    "number": "13",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-61",
+   "text": "Kocaeli İzmit Sanayi Mah. Yeni Gölcük Yolu No:89/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4686940777",
+    "number": "89/A",
+    "streetName": "Yeni Gölcük Yolu"
+   }
+  },
+  {
+   "id": "41-full-62",
+   "text": "Ahmet İhsan Sokak No:4 Değirmendere Merkez Mahallesi Gölcük/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385023",
+    "number": "4",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-full-63",
+   "text": "Çayırova Mah. Fatih Caddesi 48, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603832449",
+    "number": "48",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-64",
+   "text": "Kocaeli, Başiskele, Yaylacık Mahallesi, Köydışı Sokak, Kapı No: 16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1133579026",
+    "number": "16",
+    "streetName": "Köydışı Sokak"
+   }
+  },
+  {
+   "id": "41-full-65",
+   "text": "Kocaeli Gebze Hacıhalil Mah. Hükümet Caddesi No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719044",
+    "number": "7",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-66",
+   "text": "Öter Sokak No:16/A Uzunçiftlik Mahallesi Kartepe/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1134160922",
+    "number": "16/A",
+    "streetName": "Öter Sokak"
+   }
+  },
+  {
+   "id": "41-full-67",
+   "text": "Çınarlı Mah. Elif Sokak 8/1, Derince, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1208332736",
+    "number": "8/1",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "41-full-68",
+   "text": "Kocaeli, Çayırova, Şekerpınar Mahallesi, 1. Cadde 14, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5022302429",
+    "number": "1",
+    "streetName": "1. Cadde 14"
+   }
+  },
+  {
+   "id": "41-full-69",
+   "text": "Kocaeli Darıca Cami Mah. Tuzla Caddesi No:105",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8153575441",
+    "number": "105",
+    "streetName": "Tuzla Caddesi"
+   }
+  },
+  {
+   "id": "41-full-70",
+   "text": "Kazım Karabekir Caddesi No:19 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306742",
+    "number": "19",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-71",
+   "text": "Cumhuriyet Mah. Yavuz Sultan Selim Caddesi 2, Gebze, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603526935",
+    "number": "2",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-72",
+   "text": "Kocaeli, Çayırova, Akse Mahallesi, Rahmi Dibek Caddesi, Kapı No: 295",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1153490239",
+    "number": "295",
+    "streetName": "Rahmi Dibek Caddesi"
+   }
+  },
+  {
+   "id": "41-full-73",
+   "text": "Kocaeli Gebze Yenikent Mah. Fırat Caddesi No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10581481482",
+    "number": "5",
+    "streetName": "Fırat Caddesi"
+   }
+  },
+  {
+   "id": "41-full-74",
+   "text": "Fatih Caddesi No:52 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12751913803",
+    "number": "52",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-full-75",
+   "text": "Damlar Mah. Koca Orman Caddesi 192, Başiskele, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1056192549",
+    "number": "192",
+    "streetName": "Koca Orman Caddesi"
+   }
+  },
+  {
+   "id": "41-full-76",
+   "text": "Kocaeli, Darıca, Cami Mahallesi, Biçer Sokağı, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w543766140",
+    "number": "2",
+    "streetName": "Biçer Sokağı"
+   }
+  },
+  {
+   "id": "41-full-77",
+   "text": "Kocaeli İzmit Körfez Mah. Yüce Rıfat Sokak No:53",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12922691066",
+    "number": "53",
+    "streetName": "Yüce Rıfat Sokak"
+   }
+  },
+  {
+   "id": "41-full-78",
+   "text": "Funda Sokak No:17 Barbaros Mahallesi Körfez/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w226607369",
+    "number": "17",
+    "streetName": "Funda Sokak"
+   }
+  },
+  {
+   "id": "41-full-79",
+   "text": "Yenişehir Mah. Turan Güneş Caddesi 290, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1072732550",
+    "number": "290",
+    "streetName": "Turan Güneş Caddesi"
+   }
+  },
+  {
+   "id": "41-full-80",
+   "text": "Kocaeli, Başiskele, Damlar Mahallesi, Koca Orman Caddesi, Kapı No: 182/1B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1062373449",
+    "number": "182/1B",
+    "streetName": "Koca Orman Caddesi"
+   }
+  },
+  {
+   "id": "41-full-81",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Sultan Selim Caddesi No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603522536",
+    "number": "11",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-82",
+   "text": "Oramiral Salim Dervişoğllu Caddesi No:82/51 Karabaş Mahallesi İzmit/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13150604548",
+    "number": "82/51",
+    "streetName": "Oramiral Salim Dervişoğllu Caddesi"
+   }
+  },
+  {
+   "id": "41-full-83",
+   "text": "Yeni Mah. Yüce Sokak 8/B, İzmit, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1211532618",
+    "number": "8/B",
+    "streetName": "Yüce Sokak"
+   }
+  },
+  {
+   "id": "41-full-84",
+   "text": "Kocaeli, Gölcük, Değirmendere Merkez Mahallesi, Ahmet İhsan Sokak, Kapı No: 6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385024",
+    "number": "6",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-full-85",
+   "text": "Kocaeli Çayırova Çayırova Mah. Kazım Karabekir Caddesi No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223866",
+    "number": "5",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-86",
+   "text": "Kaptan Sokak No:18 Bayramoğlu Mahallesi Darıca/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1066707058",
+    "number": "18",
+    "streetName": "Kaptan Sokak"
+   }
+  },
+  {
+   "id": "41-full-87",
+   "text": "Çayırova Mah. Orta Caddesi 19, Çayırova, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454598",
+    "number": "19",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-full-88",
+   "text": "Kocaeli, Derince, Sırrıpaşa Mahallesi, Çavdar Caddesi, Kapı No: 36/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n9086099679",
+    "number": "36/B",
+    "streetName": "Çavdar Caddesi"
+   }
+  },
+  {
+   "id": "41-full-89",
+   "text": "Kocaeli Gölcük Şehitler Mah. Kocatepe Cd. No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1245177248",
+    "number": "19",
+    "streetName": "Kocatepe Cd."
+   }
+  },
+  {
+   "id": "41-full-90",
+   "text": "Kazım Karabekir Caddesi No:4 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454644",
+    "number": "4",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-full-91",
+   "text": "Osman Yılmaz Mah. Şehit Numan Dede Caddesi 35, Gebze, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125176",
+    "number": "35",
+    "streetName": "Şehit Numan Dede Caddesi"
+   }
+  },
+  {
+   "id": "41-full-92",
+   "text": "Kocaeli, Dilovası, Çerkeşli Mahallesi, Refik Oral Caddesi, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5579841426",
+    "number": "11",
+    "streetName": "Refik Oral Caddesi"
+   }
+  },
+  {
+   "id": "41-full-93",
+   "text": "Kocaeli Gebze Gaziler Mah. İbrahim Ağa Caddesi No:206",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "r15532752",
+    "number": "206",
+    "streetName": "İbrahim Ağa Caddesi"
+   }
+  },
+  {
+   "id": "41-full-94",
+   "text": "Hükümet Caddesi No:18 Hacıhalil Mahallesi Gebze/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719025",
+    "number": "18",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-full-95",
+   "text": "Yüzbaşılar Mah. Poyraz Caddesi 1, Gölcük, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w699909560",
+    "number": "1",
+    "streetName": "Poyraz Caddesi"
+   }
+  },
+  {
+   "id": "41-full-96",
+   "text": "Kocaeli, İzmit, Alikahya Cumhuriyet Mahallesi, Albay Karaosmanoğlu Caddesi, Kapı No: 23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8439598567",
+    "number": "23",
+    "streetName": "Albay Karaosmanoğlu Caddesi"
+   }
+  },
+  {
+   "id": "41-full-97",
+   "text": "Kocaeli İzmit Ömerağa Mah. Dündar Çiğit Sokak No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1064677877",
+    "number": "8",
+    "streetName": "Dündar Çiğit Sokak"
+   }
+  },
+  {
+   "id": "41-full-98",
+   "text": "Yavuz Sultan Selim Caddesi No:51 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5734640527",
+    "number": "51",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-full-99",
+   "text": "Muallim Mah. Deniz Caddesi 143/5, Gebze, Kocaeli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w845000493",
+    "number": "143/5",
+    "streetName": "Deniz Caddesi"
+   }
+  },
+  {
+   "id": "41-full-100",
+   "text": "Kocaeli, Gebze, Barış Mahallesi, Dr. Zeki Acar Cadde, Kapı No: 64/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11537841569",
+    "number": "64/B",
+    "streetName": "Dr. Zeki Acar Cadde"
+   }
+  },
+  {
+   "id": "41-full-101",
+   "text": "Kocaeli Gebze Cumhuriyet Mah. Mimar Sinan Caddesi No:2208/2",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "41",
+    "osm": "w649468540",
+    "number": "2208/2",
+    "streetName": "Mimar Sinan Caddesi"
+   }
+  },
+  {
+   "id": "41-full-102",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5203. Sokak No:20",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "41",
+    "osm": "w604234753",
+    "number": "20",
+    "streetName": "5203. Sokak",
+    "streetNumber": 5203
+   }
+  },
+  {
+   "id": "41-full-103",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5201. Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "41",
+    "osm": "w604306737",
+    "number": "7",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-full-104",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5203. Sokak No:21",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "41",
+    "osm": "w548454612",
+    "number": "21",
+    "streetName": "5203. Sokak",
+    "streetNumber": 5203
+   }
+  },
+  {
+   "id": "41-full-105",
+   "text": "Kocaeli Çayırova Çayırova Mah. Kazım Karabekir Caddesi No:23",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "41",
+    "osm": "w604240762",
+    "number": "23",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-1",
+   "text": "kocaeli gebze hacihalil mah hurriyet cad. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w659915685",
+    "number": "9",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-2",
+   "text": "kocaeli basiskele fatih mah cumhuriyet cd no 168/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13050894661",
+    "number": "168/A",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-3",
+   "text": "kocaeli gebze yenikent mah dicle cd no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1149668600",
+    "number": "11",
+    "streetName": "Dicle Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-4",
+   "text": "kocaeli cayirova cayirova mah orta cad. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454565",
+    "number": "16",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-5",
+   "text": "KOCAELI GEBZE OSMAN YILMAZ MAH MILLET CD NO 8/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125671",
+    "number": "8/A",
+    "streetName": "Millet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-6",
+   "text": "kocaeli izmit kadikoy mah nigiz sk. no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13144689626",
+    "number": "19",
+    "streetName": "Nigiz Sokak"
+   }
+  },
+  {
+   "id": "41-folded-7",
+   "text": "KOCAELI IZMIT CEDIT MAH TURAN GUNES CD NO 32",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n3734860658",
+    "number": "32",
+    "streetName": "Turan Güneş Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-8",
+   "text": "kocaeli cayirova cayirova mah orta cad. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603816231",
+    "number": "5",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-9",
+   "text": "kocaeli gebze adem yavuz mah necip fazil cd no 52",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w656325247",
+    "number": "52",
+    "streetName": "Necip Fazıl Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-10",
+   "text": "kocaeli basiskele fatih mah hastane cd no 55",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1214789492",
+    "number": "55",
+    "streetName": "hastane cd"
+   }
+  },
+  {
+   "id": "41-folded-11",
+   "text": "kocaeli izmit yenisehir mah turan gunes cad. no 286",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1072732548",
+    "number": "286",
+    "streetName": "Turan Güneş Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-12",
+   "text": "kocaeli darica baglarbasi mah tuzla cd no 77",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w459202572",
+    "number": "77",
+    "streetName": "Tuzla Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-13",
+   "text": "kocaeli darica nenehatun mah bereketli sk. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w317629004",
+    "number": "3",
+    "streetName": "Bereketli Sokak"
+   }
+  },
+  {
+   "id": "41-folded-14",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH KAZIM KARABEKIR CD NO 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306744",
+    "number": "21",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-15",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH FATIH CD NO 34",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454641",
+    "number": "34",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-16",
+   "text": "kocaeli izmit karabas mah belde sok. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11505454026",
+    "number": "5",
+    "streetName": "Belde Sokak"
+   }
+  },
+  {
+   "id": "41-folded-17",
+   "text": "kocaeli dilovasi cerkesli mah imes-16 cd. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w896159691",
+    "number": "14",
+    "streetName": "İMES-16 Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-18",
+   "text": "kocaeli gebze osman yilmaz mah millet cd. no 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125178",
+    "number": "24",
+    "streetName": "Millet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-19",
+   "text": "KOCAELI IZMIT SANAYI MAH SEFA SIRMEN BULV. NO 691",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699019289",
+    "number": "691",
+    "streetName": "Sefa Sirmen Bulvarı"
+   }
+  },
+  {
+   "id": "41-folded-20",
+   "text": "KOCAELI DARICA PIRI REIS MAH YELKAN KAYA CD NO 69",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13912032201",
+    "number": "69",
+    "streetName": "Yelkan Kaya Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-21",
+   "text": "KOCAELI GEBZE GUZELLER MAH BAHAR CD. NO 70/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12243940701",
+    "number": "70/A",
+    "streetName": "Bahar Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-22",
+   "text": "kocaeli izmit yenisehir mah gazi mustafa kemal blv. no 165",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699022525",
+    "number": "165",
+    "streetName": "Gazi Mustafa Kemal Bulvarı"
+   }
+  },
+  {
+   "id": "41-folded-23",
+   "text": "KOCAELI DERINCE CINARLI MAH ELIF SOK. NO 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1178811500",
+    "number": "5",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "41-folded-24",
+   "text": "kocaeli cayirova cayirova mah ali haydar efendi cad. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548457601",
+    "number": "3",
+    "streetName": "Ali Haydar Efendi Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-25",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH YAVUZ SULTAN SELIM CAD. NO 33",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5734554864",
+    "number": "33",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-26",
+   "text": "kocaeli cayirova cayirova mah ali haydar efendi cad. no 12/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5730942843",
+    "number": "12/A",
+    "streetName": "Ali Haydar Efendi Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-27",
+   "text": "kocaeli gebze balcik mah ihsandede cd. no 111",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n9489380448",
+    "number": "111",
+    "streetName": "İhsandede Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-28",
+   "text": "KOCAELI KARTEPE KOSEKOY MAH ALSANCAK SK NO 46",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1420928238",
+    "number": "46",
+    "streetName": "Alsancak Sokak"
+   }
+  },
+  {
+   "id": "41-folded-29",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH FATIH CD NO 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603836995",
+    "number": "54",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-30",
+   "text": "kocaeli cayirova cayirova mah orta cd. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454614",
+    "number": "11",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-31",
+   "text": "kocaeli cayirova cayirova mah fatih cd. no 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-32",
+   "text": "kocaeli kartepe masukiye mah sakarya cd no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-33",
+   "text": "kocaeli cayirova cayirova mah orta cad. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-34",
+   "text": "kocaeli izmit yenisehir mah turan gunes cd no 284",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1072732547",
+    "number": "284",
+    "streetName": "Turan Güneş Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-35",
+   "text": "KOCAELI GEBZE TAVSANLI MAH SAKARYA C. NO 50",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-folded-36",
+   "text": "kocaeli korfez yeniyali mah malik akbas cad. no 40",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-folded-37",
+   "text": "kocaeli gebze baris mah dr. zeki acar cd no 48/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11537841571",
+    "number": "48/A",
+    "streetName": "Dr. Zeki Acar Cadde"
+   }
+  },
+  {
+   "id": "41-folded-38",
+   "text": "kocaeli gebze hacihalil mah hurriyet cad. no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w648437775",
+    "number": "37",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-39",
+   "text": "KOCAELI GOLCUK DEGIRMENDERE MERKEZ MAH AHMET IHSAN SOK. NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-folded-40",
+   "text": "KOCAELI BASISKELE SAHIL MAH ORHAN GAZI CAD NO 02",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13186354514",
+    "number": "02",
+    "streetName": "Orhan Gazi cad"
+   }
+  },
+  {
+   "id": "41-folded-41",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH YAVUZ SULTAN SELIM CD NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603531545",
+    "number": "3",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-42",
+   "text": "kocaeli gebze sultan orhan mah terminal cad. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11572168441",
+    "number": "4",
+    "streetName": "Terminal Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-43",
+   "text": "kocaeli golcuk degirmendere merkez mah ahmet ihsan sk no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385026",
+    "number": "10",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-folded-44",
+   "text": "kocaeli izmit kemalpasa mah gumrukculer cd no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12584650536",
+    "number": "13",
+    "streetName": "Gümrükçüler Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-45",
+   "text": "KOCAELI GEBZE GUZELLER MAH BAHAR CD. NO 63",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12243940602",
+    "number": "63",
+    "streetName": "Bahar Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-46",
+   "text": "kocaeli darica piri reis mah tuzla cd no 297",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w356164174",
+    "number": "297",
+    "streetName": "Tuzla Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-47",
+   "text": "kocaeli darica cami mah aliarican cd. no 42",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w459215928",
+    "number": "42",
+    "streetName": "Aliarıcan Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-48",
+   "text": "kocaeli derince cinarli mah ozkok sk. no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1180220461",
+    "number": "29",
+    "streetName": "ÖZKÖK SOKAK"
+   }
+  },
+  {
+   "id": "41-folded-49",
+   "text": "kocaeli kartepe arslanbey mah sabit sk. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1134128855",
+    "number": "2",
+    "streetName": "Sabit Sokak"
+   }
+  },
+  {
+   "id": "41-folded-50",
+   "text": "kocaeli cayirova cayirova mah orta cd. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454615",
+    "number": "13",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-51",
+   "text": "kocaeli gebze sultan orhan mah menzilhane cad. no 42",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12230709801",
+    "number": "42",
+    "streetName": "Menzilhane Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-52",
+   "text": "kocaeli cayirova ozgurluk mah murat cobanoglu no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w257455555",
+    "number": "21",
+    "streetName": "Murat Çobanoğlu"
+   }
+  },
+  {
+   "id": "41-folded-53",
+   "text": "kocaeli izmit cedit mah leyla atakan cad. no 75",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n3128156624",
+    "number": "75",
+    "streetName": "Leyla Atakan Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-54",
+   "text": "kocaeli gebze hacihalil mah hukumet cd no 16a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719024",
+    "number": "16A",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-55",
+   "text": "KOCAELI KARTEPE RAHMIYE MAH IZMIT CD. NO 332",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1083550415",
+    "number": "332",
+    "streetName": "İzmit Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-56",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH YAVUZ SULTAN SELIM CD. NO 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5734640522",
+    "number": "49",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-57",
+   "text": "kocaeli izmit sanayi mah kozali sok. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n14076920567",
+    "number": "10",
+    "streetName": "Kozalı Sokak"
+   }
+  },
+  {
+   "id": "41-folded-58",
+   "text": "kocaeli cayirova ozgurluk mah ugur mumcu cd no 52/2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10199670408",
+    "number": "52/2",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-59",
+   "text": "KOCAELI CAYIROVA CAYIROVA MAH ALI HAYDAR EFENDI CAD. NO 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n9283133181",
+    "number": "1",
+    "streetName": "Ali Haydar Efendi Caddesi"
+   }
+  },
+  {
+   "id": "41-folded-60",
+   "text": "kocaeli cayirova sekerpinar mah 1. cadde 14 no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w173033762",
+    "number": "4",
+    "streetName": "1. Cadde 14"
+   }
+  },
+  {
+   "id": "41-typo-1",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Sulran Selim Caddesi No:31",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604320425",
+    "number": "31",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-2",
+   "text": "Kazım Karabekr Caddesi No:40 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604240764",
+    "number": "40",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-3",
+   "text": "Hacıhalil Mah. Hküümet Caddesi 11, Gebze, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719045",
+    "number": "11",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-4",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Yavuz Sultsan Selim Caddesi, Kapı No: 37",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604316983",
+    "number": "37",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-5",
+   "text": "Kocaeli İzmit Körfez Mah. Salim Dervişuoğlu Cad. No:174",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018943",
+    "number": "174",
+    "streetName": "Salim Dervişoğlu Cad."
+   }
+  },
+  {
+   "id": "41-typo-6",
+   "text": "Yeni Bağsdat Caddesi No:581 Mustafapaşa Mahallesi Gebze/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2380579599",
+    "number": "581",
+    "streetName": "Yeni Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-7",
+   "text": "Hacıhalil Mah. Hskümet Caddesi 4, Gebze, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719019",
+    "number": "4",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-8",
+   "text": "Kocaeli, Kartepe, Köseköy Mahallesi, Bağdeat Caddesi, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w985990650",
+    "number": "19",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-9",
+   "text": "Kocaeli Gebze Sultan Orhan Mah. İlyaseby Caddesi No:43/2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10199657608",
+    "number": "43/2",
+    "streetName": "İlyasbey Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-10",
+   "text": "prveze No:2 Merkez Mahallesi Gölcük/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10002645955",
+    "number": "2",
+    "streetName": "preveze"
+   }
+  },
+  {
+   "id": "41-typo-11",
+   "text": "Osmangazi Mah. Aşıroğu Caddesi 158, Darıca, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020956",
+    "number": "158",
+    "streetName": "Aşıroğlu Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-12",
+   "text": "Kocaeli, Gebze, Tatlıkuyu Mahallesi, Köfez Caddesi, Kapı No: 64/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12433687077",
+    "number": "64/A",
+    "streetName": "Körfez Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-13",
+   "text": "Kocaeli Çayırova Şekerpınar Mah. Ayiççek Sokak No:19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1001974835",
+    "number": "19",
+    "streetName": "Ayçiçek Sokak"
+   }
+  },
+  {
+   "id": "41-typo-14",
+   "text": "Orhianveli Sokak No:26 Kozluk Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1092176741",
+    "number": "26",
+    "streetName": "Orhanveli Sokak"
+   }
+  },
+  {
+   "id": "41-typo-15",
+   "text": "Maşukiye Mah. Suaiiye Yolu 755, Kartepe, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w898550042",
+    "number": "755",
+    "streetName": "Suadiye Yolu"
+   }
+  },
+  {
+   "id": "41-typo-16",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Kazım Kraabekir Caddesi, Kapı No: 31",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548457593",
+    "number": "31",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-17",
+   "text": "Kocaeli Gölcük Dumlupınar Mah. Pleveze Caddesi No:96",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10776999396",
+    "number": "96",
+    "streetName": "Preveze Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-18",
+   "text": "Gazanofer Bilge Bulvarı No:2 Körfez Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13149745569",
+    "number": "2",
+    "streetName": "Gazanfer Bilge Bulvarı"
+   }
+  },
+  {
+   "id": "41-typo-19",
+   "text": "Yeni Mah. İmnkılap Caddesi 7, İzmit, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w785105813",
+    "number": "7",
+    "streetName": "İnkılap Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-20",
+   "text": "Kocaeli, Gebze, Hacıhalil Mahallesi, Hükümt Caddesi, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719043",
+    "number": "5",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-21",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Siultan Selim Caddesi No:45",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604331757",
+    "number": "45",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-22",
+   "text": "Poynaz Caddesi No:3 Yüzbaşılar Mahallesi Gölcük/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w699909561",
+    "number": "3",
+    "streetName": "Poyraz Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-23",
+   "text": "Eseler Mah. Kuzey Maarmara Otoyolu 3169, İzmit, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12876529401",
+    "number": "3169",
+    "streetName": "Kuzey Marmara Otoyolu"
+   }
+  },
+  {
+   "id": "41-typo-24",
+   "text": "Kocaeli, Gebze, Hacıhalil Mahallesi, Hüknümet Caddesi, Kapı No: 8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10795562412",
+    "number": "8",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-25",
+   "text": "Kocaeli Körfez Yeniyalı Mah. Milli Egeimenlik Caddesi No:103",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1420928995",
+    "number": "103",
+    "streetName": "Milli Egemenlik Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-26",
+   "text": "Ankara Karyaolu No:24 Kemalpaşa Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020208",
+    "number": "24",
+    "streetName": "Ankara Karayolu"
+   }
+  },
+  {
+   "id": "41-typo-27",
+   "text": "Erenler Mah. Kevsre Sk 5, İzmit, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1067009998",
+    "number": "5",
+    "streetName": "Kevser Sk"
+   }
+  },
+  {
+   "id": "41-typo-28",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, Kazım Karaebkir Caddesi, Kapı No: 21/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306743",
+    "number": "21/A",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-29",
+   "text": "Kocaeli Çayırova Çayırova Mah. Yavuz Sultfan Selim Caddesi No:49",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604331759",
+    "number": "49",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-30",
+   "text": "Yavuz Sltan Selim Caddesi No:19 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604240760",
+    "number": "19",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-31",
+   "text": "Çayırova Mah. Ali Haydsar Efendi Caddesi 7, Çayırova, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223854",
+    "number": "7",
+    "streetName": "Ali Haydar Efendi Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-32",
+   "text": "Kocaeli, Derince, Çınarlı Mahallesi, İstziklal Caddesi, Kapı No: 70",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1257420897",
+    "number": "70",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-33",
+   "text": "Kocaeli Gebze Köşklü Çeşme Mah. Yeni Bağadt Caddesi No:459/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125180",
+    "number": "459/A",
+    "streetName": "Yeni Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-34",
+   "text": "Devlet Hastnanesi Sokak No:30 Cedit Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13798473930",
+    "number": "30",
+    "streetName": "Devlet Hastanesi Sokak"
+   }
+  },
+  {
+   "id": "41-typo-35",
+   "text": "Yeşilova Mah. Eriyes Sokak 18, İzmit, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093376408",
+    "number": "18",
+    "streetName": "Erciyes Sokak"
+   }
+  },
+  {
+   "id": "41-typo-36",
+   "text": "Kocaeli, Gebze, Gaziler Mahallesi, Icssıkgöl Caddesi, Kapı No: 100/3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11329048202",
+    "number": "100/3",
+    "streetName": "Issıkgöl Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-37",
+   "text": "Kocaeli Gebze Hacıhalil Mah. Hpükümet Caddesi No:13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719046",
+    "number": "13",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-38",
+   "text": "Yeni Gölück Yolu No:89/A Sanayi Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4686940777",
+    "number": "89/A",
+    "streetName": "Yeni Gölcük Yolu"
+   }
+  },
+  {
+   "id": "41-typo-39",
+   "text": "Yaylacık Mah. Köyhdışı Sokak 16, Başiskele, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1133579026",
+    "number": "16",
+    "streetName": "Köydışı Sokak"
+   }
+  },
+  {
+   "id": "41-typo-40",
+   "text": "Kocaeli, Gebze, Hacıhalil Mahallesi, Hüküdmet Caddesi, Kapı No: 7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719044",
+    "number": "7",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-41",
+   "text": "Kocaeli Çayırova Çayırova Mah. Kazım Karaekir Caddesi No:19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306742",
+    "number": "19",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-42",
+   "text": "Yavuz Sutlan Selim Caddesi No:2 Cumhuriyet Mahallesi Gebze/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603526935",
+    "number": "2",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-43",
+   "text": "Çayırova Mah. Yavuz Slutan Selim Caddesi 11, Çayırova, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603522536",
+    "number": "11",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-44",
+   "text": "Kocaeli, İzmit, Karabaş Mahallesi, Oramiral Salim Dernvişoğllu Caddesi, Kapı No: 82/51",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13150604548",
+    "number": "82/51",
+    "streetName": "Oramiral Salim Dervişoğllu Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-45",
+   "text": "Kocaeli Çayırova Çayırova Mah. Kazım Karabegkir Caddesi No:5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223866",
+    "number": "5",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-46",
+   "text": "Katpan Sokak No:18 Bayramoğlu Mahallesi Darıca/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1066707058",
+    "number": "18",
+    "streetName": "Kaptan Sokak"
+   }
+  },
+  {
+   "id": "41-typo-47",
+   "text": "Sırrıpaşa Mah. Çavdvr Caddesi 36/B, Derince, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n9086099679",
+    "number": "36/B",
+    "streetName": "Çavdar Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-48",
+   "text": "Kocaeli, Gölcük, Şehitler Mahallesi, Kocaztepe Cd., Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1245177248",
+    "number": "19",
+    "streetName": "Kocatepe Cd."
+   }
+  },
+  {
+   "id": "41-typo-49",
+   "text": "Kocaeli Çayırova Çayırova Mah. Kazım Karabekyir Caddesi No:4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454644",
+    "number": "4",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-50",
+   "text": "İrahim Ağa Caddesi No:206 Gaziler Mahallesi Gebze/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "r15532752",
+    "number": "206",
+    "streetName": "İbrahim Ağa Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-51",
+   "text": "Hacıhalil Mah. Hükcmet Caddesi 18, Gebze, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719025",
+    "number": "18",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-52",
+   "text": "Kocaeli, Gölcük, Yüzbaşılar Mahallesi, Poyroz Caddesi, Kapı No: 1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w699909560",
+    "number": "1",
+    "streetName": "Poyraz Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-53",
+   "text": "Kocaeli İzmit Alikahya Cumhuriyet Mah. Albay Karoasmanoğlu Caddesi No:23",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8439598567",
+    "number": "23",
+    "streetName": "Albay Karaosmanoğlu Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-54",
+   "text": "Düncar Çiğit Sokak No:8 Ömerağa Mahallesi İzmit/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1064677877",
+    "number": "8",
+    "streetName": "Dündar Çiğit Sokak"
+   }
+  },
+  {
+   "id": "41-typo-55",
+   "text": "Çayırova Mah. Yavuz Sudltan Selim Caddesi 51, Çayırova, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5734640527",
+    "number": "51",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-56",
+   "text": "Kocaeli, Gebze, Hacıhalil Mahallesi, Hürriyte Caddesi, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w659915685",
+    "number": "9",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-57",
+   "text": "Kocaeli Başiskele Fatih Mah. Cumhurieyt Caddesi No:168/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13050894661",
+    "number": "168/A",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-58",
+   "text": "Millt Caddesi No:8/A Osman Yılmaz Mahallesi Gebze/Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125671",
+    "number": "8/A",
+    "streetName": "Millet Caddesi"
+   }
+  },
+  {
+   "id": "41-typo-59",
+   "text": "Fatih Mah. hatane cd 55, Başiskele, Kocaeli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1214789492",
+    "number": "55",
+    "streetName": "hastane cd"
+   }
+  },
+  {
+   "id": "41-typo-60",
+   "text": "Kocaeli, Darıca, Nenehatun Mahallesi, Biereketli Sokak, Kapı No: 3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w317629004",
+    "number": "3",
+    "streetName": "Bereketli Sokak"
+   }
+  },
+  {
+   "id": "41-numbered-1",
+   "text": "Kocaeli Derince Çınarlı Mah. 7. Sokak No:23",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1179773589",
+    "number": "23",
+    "streetName": "7. Sokak",
+    "streetNumber": 7
+   }
+  },
+  {
+   "id": "41-numbered-2",
+   "text": "947. Sokak No:15 Güzeller Mahallesi Gebze/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12243915501",
+    "number": "15",
+    "streetName": "947. Sokak",
+    "streetNumber": 947
+   }
+  },
+  {
+   "id": "41-numbered-3",
+   "text": "Çayırova Mah. 5203. Sokak 22, Çayırova, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604234754",
+    "number": "22",
+    "streetName": "5203. Sokak",
+    "streetNumber": 5203
+   }
+  },
+  {
+   "id": "41-numbered-4",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5201. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454548",
+    "number": "5",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-numbered-5",
+   "text": "Kocaeli Dilovası Diliskelesi Mah. 735. Sokak No:50/1A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206701",
+    "number": "50/1A",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-6",
+   "text": "5208. Sokak No:7 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223861",
+    "number": "7",
+    "streetName": "5208. Sokak",
+    "streetNumber": 5208
+   }
+  },
+  {
+   "id": "41-numbered-7",
+   "text": "Çayırova Mah. 5204. Sokak 22, Çayırova, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223867",
+    "number": "22",
+    "streetName": "5204. Sokak",
+    "streetNumber": 5204
+   }
+  },
+  {
+   "id": "41-numbered-8",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5206. Sokak, Kapı No: 12",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454631",
+    "number": "12",
+    "streetName": "5206. Sokak",
+    "streetNumber": 5206
+   }
+  },
+  {
+   "id": "41-numbered-9",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5205. Sokak No:8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5730545793",
+    "number": "8",
+    "streetName": "5205. Sokak",
+    "streetNumber": 5205
+   }
+  },
+  {
+   "id": "41-numbered-10",
+   "text": "5203. Sokak No:17 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604233264",
+    "number": "17",
+    "streetName": "5203. Sokak",
+    "streetNumber": 5203
+   }
+  },
+  {
+   "id": "41-numbered-11",
+   "text": "Çayırova Mah. 5206. Sokak 9, Çayırova, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454638",
+    "number": "9",
+    "streetName": "5206. Sokak",
+    "streetNumber": 5206
+   }
+  },
+  {
+   "id": "41-numbered-12",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5205. Sokak, Kapı No: 17",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454628",
+    "number": "17",
+    "streetName": "5205. Sokak",
+    "streetNumber": 5205
+   }
+  },
+  {
+   "id": "41-numbered-13",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5202. Sokak No:18",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454571",
+    "number": "18",
+    "streetName": "5202. Sokak",
+    "streetNumber": 5202
+   }
+  },
+  {
+   "id": "41-numbered-14",
+   "text": "5206. Sokak No:5 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454635",
+    "number": "5",
+    "streetName": "5206. Sokak",
+    "streetNumber": 5206
+   }
+  },
+  {
+   "id": "41-numbered-15",
+   "text": "Çayırova Mah. 5203. Sokak 25, Çayırova, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454610",
+    "number": "25",
+    "streetName": "5203. Sokak",
+    "streetNumber": 5203
+   }
+  },
+  {
+   "id": "41-numbered-16",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5202. Sokak, Kapı No: 25",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454556",
+    "number": "25",
+    "streetName": "5202. Sokak",
+    "streetNumber": 5202
+   }
+  },
+  {
+   "id": "41-numbered-17",
+   "text": "Kocaeli Dilovası Diliskelesi Mah. 735. Sokak No:50/F",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206714",
+    "number": "50/F",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-18",
+   "text": "5204. Sokak No:33 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604223879",
+    "number": "33",
+    "streetName": "5204. Sokak",
+    "streetNumber": 5204
+   }
+  },
+  {
+   "id": "41-numbered-19",
+   "text": "Çayırova Mah. 5201. Sokak 1, Çayırova, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603531546",
+    "number": "1",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-numbered-20",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5201. Sokak, Kapı No: 10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603526933",
+    "number": "10",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-numbered-21",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5201. Sokak No:15",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454553",
+    "number": "15",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-numbered-22",
+   "text": "5204. Sokak No:17 Çayırova Mahallesi Çayırova/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454624",
+    "number": "17",
+    "streetName": "5204. Sokak",
+    "streetNumber": 5204
+   }
+  },
+  {
+   "id": "41-numbered-23",
+   "text": "Diliskelesi Mah. 735. Sokak 50/3A, Dilovası, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206706",
+    "number": "50/3A",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-24",
+   "text": "Kocaeli, Dilovası, Diliskelesi Mahallesi, 748. Sokak, Kapı No: 11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1155289034",
+    "number": "11",
+    "streetName": "748. Sokak",
+    "streetNumber": 748
+   }
+  },
+  {
+   "id": "41-numbered-25",
+   "text": "Kocaeli Dilovası Diliskelesi Mah. 735. Sokak No:50/4A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206703",
+    "number": "50/4A",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-26",
+   "text": "735. Sokak No:50/1B Diliskelesi Mahallesi Dilovası/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206704",
+    "number": "50/1B",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-27",
+   "text": "Diliskelesi Mah. 735. Sokak 50/1C, Dilovası, Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10743206708",
+    "number": "50/1C",
+    "streetName": "735. Sokak",
+    "streetNumber": 735
+   }
+  },
+  {
+   "id": "41-numbered-28",
+   "text": "Kocaeli, Çayırova, Çayırova Mahallesi, 5201. Sokak, Kapı No: 12",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603532211",
+    "number": "12",
+    "streetName": "5201. Sokak",
+    "streetNumber": 5201
+   }
+  },
+  {
+   "id": "41-numbered-29",
+   "text": "Kocaeli Çayırova Çayırova Mah. 5207. Sokak No:5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604316989",
+    "number": "5",
+    "streetName": "5207. Sokak",
+    "streetNumber": 5207
+   }
+  },
+  {
+   "id": "41-numbered-30",
+   "text": "4. Sokak No:3 Yeni Mahallesi Gölcük/Kocaeli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11332772069",
+    "number": "3",
+    "streetName": "4. Sokak",
+    "streetNumber": 4
+   }
+  },
+  {
+   "id": "41-hide-1",
+   "text": "Barış Mah. Dr. Zeki Acar Cadde 50/B, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11537841570",
+    "number": "50/B",
+    "streetName": "Dr. Zeki Acar Cadde",
+    "truth": [
+     29.43646,
+     40.784871
+    ]
+   }
+  },
+  {
+   "id": "41-hide-2",
+   "text": "Yavuz Sultan Selim Mah. Mevlana Caddesi 242, Körfez, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018901",
+    "number": "242",
+    "streetName": "Mevlana Caddesi",
+    "truth": [
+     29.803214,
+     40.774537
+    ]
+   }
+  },
+  {
+   "id": "41-hide-3",
+   "text": "İstasyon Mah. Güney Yanyol Caddesi 172, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020955",
+    "number": "172",
+    "streetName": "Güney Yanyol Caddesi",
+    "truth": [
+     29.423902,
+     40.786493
+    ]
+   }
+  },
+  {
+   "id": "41-hide-4",
+   "text": "Hacıhalil Mah. Hükümet Caddesi 2, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2380579591",
+    "number": "2",
+    "streetName": "Hükümet Caddesi",
+    "truth": [
+     29.431954,
+     40.798969
+    ]
+   }
+  },
+  {
+   "id": "41-hide-5",
+   "text": "Çayırova Mah. Fatih Caddesi 36, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454642",
+    "number": "36",
+    "streetName": "Fatih Caddesi",
+    "truth": [
+     29.367695,
+     40.814889
+    ]
+   }
+  },
+  {
+   "id": "41-hide-6",
+   "text": "Emek Mah. Veysel Karani Caddesi 93, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "r15533188",
+    "number": "93",
+    "streetName": "Veysel Karani Caddesi",
+    "truth": [
+     29.414068,
+     40.825949
+    ]
+   }
+  },
+  {
+   "id": "41-hide-7",
+   "text": "Emek Mah. Atik Sokağı 10, Darıca, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w545555304",
+    "number": "10",
+    "streetName": "Atik Sokağı",
+    "truth": [
+     29.371266,
+     40.79728
+    ]
+   }
+  },
+  {
+   "id": "41-hide-8",
+   "text": "Tavşantepe Mah. Akif Sokak 63/6, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1154009653",
+    "number": "63/6",
+    "streetName": "Akif Sokak",
+    "truth": [
+     29.957239,
+     40.781024
+    ]
+   }
+  },
+  {
+   "id": "41-hide-9",
+   "text": "Çayırova Mah. Orta Caddesi 20, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603674103",
+    "number": "20",
+    "streetName": "Orta Caddesi",
+    "truth": [
+     29.369409,
+     40.813344
+    ]
+   }
+  },
+  {
+   "id": "41-hide-10",
+   "text": "Çayırova Mah. Ali Haydar Efendi Caddesi 4, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5734761258",
+    "number": "4",
+    "streetName": "Ali Haydar Efendi Caddesi",
+    "truth": [
+     29.372448,
+     40.814887
+    ]
+   }
+  },
+  {
+   "id": "41-hide-11",
+   "text": "Yenişehir Mah. Yeni Turgut Reis Sokak 33, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1251560213",
+    "number": "33",
+    "streetName": "Yeni Turgut Reis Sokak",
+    "truth": [
+     29.962014,
+     40.774401
+    ]
+   }
+  },
+  {
+   "id": "41-hide-12",
+   "text": "Köseköy Mah. Bağdat Caddesi 21, Kartepe, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1056328399",
+    "number": "21",
+    "streetName": "Bağdat Caddesi",
+    "truth": [
+     30.005825,
+     40.737584
+    ]
+   }
+  },
+  {
+   "id": "41-hide-13",
+   "text": "Cumhuriyet Mah. İstanbul Caddesi 5, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12536649053",
+    "number": "5",
+    "streetName": "İstanbul Caddesi",
+    "truth": [
+     29.375421,
+     40.806563
+    ]
+   }
+  },
+  {
+   "id": "41-hide-14",
+   "text": "Çayırova Mah. Kazım Karabekir Caddesi 25/A, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306749",
+    "number": "25/A",
+    "streetName": "Kazım Karabekir Caddesi",
+    "truth": [
+     29.37056,
+     40.814363
+    ]
+   }
+  },
+  {
+   "id": "41-hide-15",
+   "text": "Çayırova Mah. Orta Caddesi 25, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454575",
+    "number": "25",
+    "streetName": "Orta Caddesi",
+    "truth": [
+     29.369774,
+     40.81346
+    ]
+   }
+  },
+  {
+   "id": "41-hide-16",
+   "text": "Çiftlik Mah. İhsaniye Adnan Menderes Cad. 56, Gölcük, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5858680686",
+    "number": "56",
+    "streetName": "İhsaniye Adnan Menderes Cad.",
+    "truth": [
+     29.842259,
+     40.702167
+    ]
+   }
+  },
+  {
+   "id": "41-hide-17",
+   "text": "Emek Mah. Veysel Karani Caddesi 164/1, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10765592664",
+    "number": "164/1",
+    "streetName": "Veysel Karani Caddesi",
+    "truth": [
+     29.415267,
+     40.820752
+    ]
+   }
+  },
+  {
+   "id": "41-hide-18",
+   "text": "Çayırova Mah. Orta Caddesi 35, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604239784",
+    "number": "35",
+    "streetName": "Orta Caddesi",
+    "truth": [
+     29.370776,
+     40.813013
+    ]
+   }
+  },
+  {
+   "id": "41-hide-19",
+   "text": "Bağlarbaşı Mah. Tuzla Caddesi 78, Darıca, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w459202571",
+    "number": "78",
+    "streetName": "Tuzla Caddesi",
+    "truth": [
+     29.384653,
+     40.761968
+    ]
+   }
+  },
+  {
+   "id": "41-hide-20",
+   "text": "Yeşilyurt Mah. Çuhadar Cd. 33B, Başiskele, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n14235879377",
+    "number": "33B",
+    "streetName": "Çuhadar Cd.",
+    "truth": [
+     29.949966,
+     40.722266
+    ]
+   }
+  },
+  {
+   "id": "41-hide-21",
+   "text": "Barbaros Mah. eşrefbitlis caddesi 155, Körfez, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8328946020",
+    "number": "155",
+    "streetName": "eşrefbitlis caddesi",
+    "truth": [
+     29.781876,
+     40.762901
+    ]
+   }
+  },
+  {
+   "id": "41-hide-22",
+   "text": "Körfez Mah. Liman Caddesi 167, Başiskele, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n7785570034",
+    "number": "167",
+    "streetName": "Liman Caddesi",
+    "truth": [
+     29.919315,
+     40.713175
+    ]
+   }
+  },
+  {
+   "id": "41-hide-23",
+   "text": "Beylikbağı Mah. Güney Yan Yol 52, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w499545469",
+    "number": "52",
+    "streetName": "Güney Yan Yol",
+    "truth": [
+     29.387271,
+     40.79585
+    ]
+   }
+  },
+  {
+   "id": "41-hide-24",
+   "text": "Güzeller Mah. Yeni Bağdat Caddesi 583, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12230718101",
+    "number": "583",
+    "streetName": "Yeni Bağdat Caddesi",
+    "truth": [
+     29.431734,
+     40.801021
+    ]
+   }
+  },
+  {
+   "id": "41-hide-25",
+   "text": "Balaban Mah. Dizdaroğlu caddesi 14, Kartepe, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2906431733",
+    "number": "14",
+    "streetName": "Dizdaroğlu caddesi",
+    "truth": [
+     30.084957,
+     40.688125
+    ]
+   }
+  },
+  {
+   "id": "41-hide-26",
+   "text": "Güzeller Mah. Yeni Bağdat Caddesi 623/B, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12230712901",
+    "number": "623/B",
+    "streetName": "Yeni Bağdat Caddesi",
+    "truth": [
+     29.435106,
+     40.801541
+    ]
+   }
+  },
+  {
+   "id": "41-hide-27",
+   "text": "Çerkeşli Mah. Fuat Ergenç Caddesi 7, Dilovası, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5579839234",
+    "number": "7",
+    "streetName": "Fuat Ergenç Caddesi",
+    "truth": [
+     29.568208,
+     40.793966
+    ]
+   }
+  },
+  {
+   "id": "41-hide-28",
+   "text": "Fevzi Çakmak Mah. Akik Sokak 7A, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1420929785",
+    "number": "7A",
+    "streetName": "Akik Sokak",
+    "truth": [
+     29.992606,
+     40.776474
+    ]
+   }
+  },
+  {
+   "id": "41-hide-29",
+   "text": "Çayırova Mah. Fatih Caddesi 50, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454653",
+    "number": "50",
+    "streetName": "Fatih Caddesi",
+    "truth": [
+     29.368424,
+     40.815866
+    ]
+   }
+  },
+  {
+   "id": "41-hide-30",
+   "text": "Çayırova Mah. Orta Caddesi 12, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454585",
+    "number": "12",
+    "streetName": "Orta Caddesi",
+    "truth": [
+     29.368503,
+     40.813719
+    ]
+   }
+  },
+  {
+   "id": "41-hide-31",
+   "text": "Hacıhalil Mah. Hükümet Caddesi 17, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1160719048",
+    "number": "17",
+    "streetName": "Hükümet Caddesi",
+    "truth": [
+     29.432653,
+     40.798942
+    ]
+   }
+  },
+  {
+   "id": "41-hide-32",
+   "text": "Sanayi Mah. Kozalı 10, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10713155747",
+    "number": "10",
+    "streetName": "Kozalı",
+    "truth": [
+     29.954413,
+     40.752688
+    ]
+   }
+  },
+  {
+   "id": "41-hide-33",
+   "text": "Yenişehir Mah. Turan Güneş Caddesi 292, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1072732551",
+    "number": "292",
+    "streetName": "Turan Güneş Caddesi",
+    "truth": [
+     29.960957,
+     40.77418
+    ]
+   }
+  },
+  {
+   "id": "41-hide-34",
+   "text": "Çayırova Mah. Kazım Karabekir Caddesi 33, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604306753",
+    "number": "33",
+    "streetName": "Kazım Karabekir Caddesi",
+    "truth": [
+     29.371053,
+     40.814085
+    ]
+   }
+  },
+  {
+   "id": "41-hide-35",
+   "text": "Alikahya Cumhuriyet Mah. Albay Karaosmanoğlu Caddesi 20, İzmit, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8439598568",
+    "number": "20",
+    "streetName": "Albay Karaosmanoğlu Caddesi",
+    "truth": [
+     29.985087,
+     40.773357
+    ]
+   }
+  },
+  {
+   "id": "41-hide-36",
+   "text": "Çayırova Mah. Fatih Caddesi 38, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454646",
+    "number": "38",
+    "streetName": "Fatih Caddesi",
+    "truth": [
+     29.367746,
+     40.815013
+    ]
+   }
+  },
+  {
+   "id": "41-hide-37",
+   "text": "Çayırova Mah. Yavuz Sultan Selim Caddesi 35, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w604316982",
+    "number": "35",
+    "streetName": "Yavuz Sultan Selim Caddesi",
+    "truth": [
+     29.371874,
+     40.814249
+    ]
+   }
+  },
+  {
+   "id": "41-hide-38",
+   "text": "Osman Yılmaz Mah. Millet Caddesi 10/C, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n11538125177",
+    "number": "10/C",
+    "streetName": "Millet Caddesi",
+    "truth": [
+     29.428406,
+     40.794394
+    ]
+   }
+  },
+  {
+   "id": "41-hide-39",
+   "text": "Sultan Orhan Mah. Yeni Bağdat Caddesi 528/2, Gebze, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10199668565",
+    "number": "528/2",
+    "streetName": "Yeni Bağdat Caddesi",
+    "truth": [
+     29.453735,
+     40.809176
+    ]
+   }
+  },
+  {
+   "id": "41-hide-40",
+   "text": "Çayırova Mah. Orta Caddesi 6, Çayırova, Kocaeli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w603751336",
+    "number": "6",
+    "streetName": "Orta Caddesi",
+    "truth": [
+     29.367905,
+     40.814073
+    ]
+   }
+  },
+  {
+   "id": "41-lang-1",
+   "text": "Çayırova Kocaeli, Çayırova Mah., 26 Fatih Avenue floor 8 apartment 6",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-2",
+   "text": "çayırova/kocaeli çayırova viertel fatih straße nummer 26",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-3",
+   "text": "чайырова микрорайон чайырова проспект фатих 26 этаж 8 кв. 3",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-4",
+   "text": "τσαγιιροβα/Kocaeli, γειτονιά τσαγιιροβα, Λεωφόρος Fatih αριθμός 26",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-5",
+   "text": "حي Çayırova، جادة Fatih رقم 26 طابق 7 شقة 29، Çayırova Kocaeli",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "w603778112",
+    "number": "26",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-6",
+   "text": "Sakarya Street 23, Kocaeli Kartepe, 41408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-7",
+   "text": "KARTEPE/KOCAELİ MASUKİYE ORTSTEİL SAKARYA STRASSE NR. 23",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-8",
+   "text": "машукийе, проспект сакарья дом 23, коджаэли картепе",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-9",
+   "text": "Λεωφόρος Sakarya αρ. 23, καρτεπε/κοτζαελι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-10",
+   "text": "Kartepe Kocaeli, جادة Sakarya رقم 23, 41334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699018897",
+    "number": "23",
+    "streetName": "Sakarya Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-11",
+   "text": "ÇAYIROVA KOCAELİ ÇAYIROVA NEİGHBOURHOOD 10 ORTA AVENUE, 41280",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-12",
+   "text": "CAYİROVA/, CAYİROVA VİERTEL, ORTA STRASSE 10",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-13",
+   "text": "чайырова коджаэли мкр. чайырова проспект орта д. 10",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-14",
+   "text": "λεωφ. ορτα αριθμός 10, τσαγιιροβα κοτζαελι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-15",
+   "text": "Kocaeli Çayırova حي Çayırova شارع Orta رقم 10 طابق 4 بلوك D شقة 2",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454584",
+    "number": "10",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-lang-16",
+   "text": "Tavşanlı Neighbourhood, 50 Sakarya C.,  Gebze",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-lang-17",
+   "text": "Tavşanlı Ortsteil, Sakarya C. Nummer 50, Gebze/Kocaeli",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-lang-18",
+   "text": "гебзе коджаэли мкр. тавшанлы Sakarya C. д. 50 этаж 3 корпус D кв. 10",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-lang-19",
+   "text": "γειτονιά Tavşanlı, Sakarya C. αριθμός 50 μπλοκ B διαμέρισμα 16, Kocaeli ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-lang-20",
+   "text": "حي Tavşanlı, Sakarya C. رقم 50 طابق 2 شقة 6,  Kocaeli",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "n2645372895",
+    "number": "50",
+    "streetName": "Sakarya C."
+   }
+  },
+  {
+   "id": "41-lang-21",
+   "text": "Kocaeli Korfez Yeniyali Mah. Malik Akbas cad. number 40, 41639",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-lang-22",
+   "text": "Yeniyalı Viertel, Malik Akbaş cad. Nr. 40, Körfez Kocaeli, 41152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-lang-23",
+   "text": "кёрфез/коджаэли, мкр. йениялы, Malik Akbaş cad. 40",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-lang-24",
+   "text": "κοτζαελι, Malik Akbaş cad. 40 μπλοκ D διαμέρισμα 8",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-lang-25",
+   "text": "Malik Akbaş cad. رقم 40 طابق 2 بلوك B شقة 9,  Körfez",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "n4294584392",
+    "number": "40",
+    "streetName": "Malik Akbaş cad."
+   }
+  },
+  {
+   "id": "41-lang-26",
+   "text": "Değirmendere Merkez Neighbourhood, Ahmet İhsan St number 3, Gölcük/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-lang-27",
+   "text": "Golcuk, Degirmendere Merkez Ortsteil, Ahmet Ihsan Str. 3",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-lang-28",
+   "text": "гёлджюк, ул. ахмет ихсан д. 3 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-lang-29",
+   "text": "Kocaeli γκολτζουκ Οδός αχμετ ιχσαν αριθμός 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-lang-30",
+   "text": "حي Değirmendere Merkez، شارع Ahmet İhsan رقم 3، Kocaeli Gölcük",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "41",
+    "osm": "w1093385019",
+    "number": "3",
+    "streetName": "Ahmet İhsan Sokak"
+   }
+  },
+  {
+   "id": "41-hard-1",
+   "text": "Aşıroğlu Caddesi 158 Osmangazi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n4699020956",
+    "number": "158",
+    "streetName": "Aşıroğlu Caddesi"
+   }
+  },
+  {
+   "id": "41-hard-2",
+   "text": "Çayırova mah Orta Caddesi no:23 d:3 kat:2 Çayırova",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548454574",
+    "number": "23",
+    "streetName": "Orta Caddesi"
+   }
+  },
+  {
+   "id": "41-hard-3",
+   "text": "Gebze Körfez Caddesi no64/A",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n12433687077",
+    "number": "64/A",
+    "streetName": "Körfez Caddesi"
+   }
+  },
+  {
+   "id": "41-hard-4",
+   "text": "33 Özden Sokak Yenişehir İzmit",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w379067040",
+    "number": "33",
+    "streetName": "Özden Sokak"
+   }
+  },
+  {
+   "id": "41-hard-5",
+   "text": "SEKERPINAR AYCICEK SOKAK 19",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1001974835",
+    "number": "19",
+    "streetName": "Ayçiçek Sokak"
+   }
+  },
+  {
+   "id": "41-hard-6",
+   "text": "İzmit Orhanveli Sokak apartmanı 26 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1092176741",
+    "number": "26",
+    "streetName": "Orhanveli Sokak"
+   }
+  },
+  {
+   "id": "41-hard-7",
+   "text": "Maşukiye mahallesi Suadiye Yolu 755 nolu bina Kartepe/Kocaeli",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w898550042",
+    "number": "755",
+    "streetName": "Suadiye Yolu"
+   }
+  },
+  {
+   "id": "41-hard-8",
+   "text": "Çalık 76 Barbaros Başiskele",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1550285457",
+    "number": "76",
+    "streetName": "Çalık Sokak"
+   }
+  },
+  {
+   "id": "41-hard-9",
+   "text": "Çcayırova mah Kazım Karabekir Caddesi 31 Çayırova",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548457593",
+    "number": "31",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "41-hard-10",
+   "text": "Preveze Caddesi 96 Dumlupınar mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10776999396",
+    "number": "96",
+    "streetName": "Preveze Caddesi"
+   }
+  },
+  {
+   "id": "41-hard-11",
+   "text": "İzmit Hacıhızır Hacı Hızır Sk 6, 34137",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1091570428",
+    "number": "6",
+    "streetName": "Hacı Hızır Sk"
+   }
+  },
+  {
+   "id": "41-hard-12",
+   "text": "Kocaeli İzmit Gazanfer Bilge Bulvarı 2 Körfez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n13149745569",
+    "number": "2",
+    "streetName": "Gazanfer Bilge Bulvarı"
+   }
+  },
+  {
+   "id": "41-poi-1",
+   "text": "SENLER AVM İzmit Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2841444223",
+    "kind": "mall",
+    "streetName": "SENLER AVM"
+   }
+  },
+  {
+   "id": "41-poi-2",
+   "text": "Gölcük Necati Çelik Devlet hastane Gölcük",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w701902214",
+    "kind": "hospital",
+    "streetName": "Gölcük Necati Çelik Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-3",
+   "text": "dilovasi devlet hastanesi dilovasi kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w228442723",
+    "kind": "hospital",
+    "streetName": "Dilovası Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-4",
+   "text": "Hasanpaşa İlkokulu Kartepe",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1134164624",
+    "kind": "school",
+    "streetName": "Hasanpaşa İlkokulu"
+   }
+  },
+  {
+   "id": "41-poi-5",
+   "text": "Kandıra Belediyesi Kandıra",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w386096985",
+    "kind": "townhall",
+    "streetName": "Kandıra Belediyesi"
+   }
+  },
+  {
+   "id": "41-poi-6",
+   "text": "ozel yuzyil hastanesi gebze kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w548465834",
+    "kind": "hospital",
+    "streetName": "Özel Yüzyıl Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-7",
+   "text": "gebze mesleki ve teknik anadolu lisesi gebze kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w374261958",
+    "kind": "school",
+    "streetName": "Gebze Mesleki Ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "41-poi-8",
+   "text": "Tüpraş Anadolu Lisesi Körfez",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1304215609",
+    "kind": "school",
+    "streetName": "Tüpraş Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "41-poi-9",
+   "text": "Özel Bilgili Kültür Okulları Başiskele",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1025454240",
+    "kind": "school",
+    "streetName": "Özel Bilgili Kültür Okulları"
+   }
+  },
+  {
+   "id": "41-poi-10",
+   "text": "fatih ilk ve orta ogretim okulu derince kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1241591284",
+    "kind": "school",
+    "streetName": "FATİH İLK VE ORTA ÖĞRETİM OKULU"
+   }
+  },
+  {
+   "id": "41-poi-11",
+   "text": "Çınarlı Ortaokulu Derince",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1202489706",
+    "kind": "school",
+    "streetName": "Çınarlı Ortaokulu"
+   }
+  },
+  {
+   "id": "41-poi-12",
+   "text": "Şehit Öğretmen Erkan Aydın İlkokulu-Ortaokulu İzmit Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w227682469",
+    "kind": "school",
+    "streetName": "Şehit Öğretmen Erkan Aydın İlkokulu-Ortaokulu"
+   }
+  },
+  {
+   "id": "41-poi-13",
+   "text": "galatasaray kocaeli futbol okulu izmit kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8507747817",
+    "kind": "school",
+    "streetName": "Galatasaray Kocaeli Futbol Okulu"
+   }
+  },
+  {
+   "id": "41-poi-14",
+   "text": "Yahya Kaptan Atılım Lisesi İzmit",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w205802846",
+    "kind": "school",
+    "streetName": "Yahya Kaptan Atılım Lisesi"
+   }
+  },
+  {
+   "id": "41-poi-15",
+   "text": "Turgut Reis İlköğretim Okulu Derince",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1148687823",
+    "kind": "school",
+    "streetName": "Turgut Reis İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "41-poi-16",
+   "text": "darica belediyesi ek hizmet binasi darica kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w543511086",
+    "kind": "townhall",
+    "streetName": "Darıca Belediyesi Ek Hizmet Binası"
+   }
+  },
+  {
+   "id": "41-poi-17",
+   "text": "gebze center avm gebze kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w165140213",
+    "kind": "mall",
+    "streetName": "Gebze Center AVM"
+   }
+  },
+  {
+   "id": "41-poi-18",
+   "text": "Kılıçlar AVM Darıca Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5292675399",
+    "kind": "mall",
+    "streetName": "Kılıçlar AVM"
+   }
+  },
+  {
+   "id": "41-poi-19",
+   "text": "darica yeni agiz ve dis hastane darica kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n14094146302",
+    "kind": "hospital",
+    "streetName": "Darıca Yeni Ağız ve Diş Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-20",
+   "text": "ÖZEL DENGE TIP MERKEZİ İzmit Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n8509142417",
+    "kind": "hospital",
+    "streetName": "ÖZEL DENGE TIP MERKEZİ"
+   }
+  },
+  {
+   "id": "41-poi-21",
+   "text": "Karamürsel Devlet hastane Karamürsel",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w687590567",
+    "kind": "hospital",
+    "streetName": "Karamürsel Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-22",
+   "text": "Seyyit Savaş Sağlık Ocağı Darıca Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n14091731001",
+    "kind": "hospital",
+    "streetName": "Seyyit Savaş Sağlık Ocağı"
+   }
+  },
+  {
+   "id": "41-poi-23",
+   "text": "Metropol AVM Gebze Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n10778111599",
+    "kind": "mall",
+    "streetName": "Metropol AVM"
+   }
+  },
+  {
+   "id": "41-poi-24",
+   "text": "Korkmaz AVM Darıca",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n5296542677",
+    "kind": "mall",
+    "streetName": "Korkmaz AVM"
+   }
+  },
+  {
+   "id": "41-poi-25",
+   "text": "Darıca Farabi Eğitim ve Araştırma Hastanesi Darıca Kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w692425693",
+    "kind": "hospital",
+    "streetName": "Darıca Farabi Eğitim ve Araştırma Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-26",
+   "text": "SEKA Devlet hastane İzmit",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w228299256",
+    "kind": "hospital",
+    "streetName": "SEKA Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "41-poi-27",
+   "text": "ncity izmit kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w227682437",
+    "kind": "mall",
+    "streetName": "NCity"
+   }
+  },
+  {
+   "id": "41-poi-28",
+   "text": "sarnichan korfez kocaeli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1424430707",
+    "kind": "mall",
+    "streetName": "Sarnıçhan"
+   }
+  },
+  {
+   "id": "41-poi-29",
+   "text": "ÖZÜER Mobilya AVM İzmit",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w871955340",
+    "kind": "mall",
+    "streetName": "ÖZÜER Mobilya AVM"
+   }
+  },
+  {
+   "id": "41-poi-30",
+   "text": "Gebze Şifa Tıp Merkezi Gebze",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "n2252902520",
+    "kind": "hospital",
+    "streetName": "Gebze Şifa Tıp Merkezi"
+   }
+  },
+  {
+   "id": "41-poi-31",
+   "text": "gebze belediye binasi gebze",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w1137810178",
+    "kind": "townhall",
+    "streetName": "Gebze Belediyesi"
+   }
+  },
+  {
+   "id": "41-poi-32",
+   "text": "cayirova belediye binasi cayirova",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w257455555",
+    "kind": "townhall",
+    "streetName": "Çayırova Belediyesi"
+   }
+  },
+  {
+   "id": "41-poi-33",
+   "text": "dilovasi belediye binasi dilovasi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "41",
+    "osm": "w892742751",
+    "kind": "townhall",
+    "streetName": "Dilovası Belediyesi"
+   }
+  }
+ ]
+}

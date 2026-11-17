@@ -1,0 +1,43 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "expo": [
+        "./node_modules/expo"
+      ],
+      "expo-file-system": [
+        "./node_modules/expo-file-system"
+      ],
+      "expo-sqlite": [
+        "./node_modules/expo-sqlite"
+      ],
+      "expo-crypto": [
+        "./node_modules/expo-crypto"
+      ],
+      "expo-network": [
+        "./node_modules/expo-network"
+      ],
+      "react-native": [
+        "./node_modules/react-native"
+      ],
+      "@maplibre/maplibre-react-native": [
+        "./node_modules/@maplibre/maplibre-react-native"
+      ],
+      "@protomaps/basemaps": [
+        "./node_modules/@protomaps/basemaps"
+      ],
+      "expo-location": [
+        "./node_modules/expo-location"
+      ],
+      "expo/*": [
+        "./node_modules/expo/*"
+      ],
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "react/*": [
+        "./node_modules/@types/react/*"
+      ]
+    }
+  }
+}

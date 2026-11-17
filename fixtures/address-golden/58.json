@@ -1,0 +1,4617 @@
+{
+ "version": 1,
+ "plate": "58",
+ "queries": [
+  {
+   "id": "58-full-1",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Pazar Sokak No:17/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12949418275",
+    "number": "17/1",
+    "streetName": "Pazar Sokak"
+   }
+  },
+  {
+   "id": "58-full-2",
+   "text": "70-115. Sokak No:2 Karşıyaka Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13096990273",
+    "number": "2",
+    "streetName": "70-115. Sokak"
+   }
+  },
+  {
+   "id": "58-full-3",
+   "text": "Diriliş Mah. Şehit Kenan Ardıç Caddesi 23, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1338282364",
+    "number": "23",
+    "streetName": "Şehit Kenan Ardıç Caddesi"
+   }
+  },
+  {
+   "id": "58-full-4",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-32. Sokak, Kapı No: 13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13186258598",
+    "number": "13",
+    "streetName": "68-32. Sokak"
+   }
+  },
+  {
+   "id": "58-full-5",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-12. Sokak No:32",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662115470",
+    "number": "32",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-full-6",
+   "text": "Atakent Caddesi No:26 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1394395904",
+    "number": "26",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-full-7",
+   "text": "Yenişehir Mah. Merve Caddesi 9, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512017",
+    "number": "9",
+    "streetName": "Merve Caddesi"
+   }
+  },
+  {
+   "id": "58-full-8",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-48. Sokak, Kapı No: 21",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014143219",
+    "number": "21",
+    "streetName": "68-48. Sokak"
+   }
+  },
+  {
+   "id": "58-full-9",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-12. Sokak No:34",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12971192691",
+    "number": "34",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-full-10",
+   "text": "68-41. Sokak No:12 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12978254094",
+    "number": "12",
+    "streetName": "68-41. Sokak"
+   }
+  },
+  {
+   "id": "58-full-11",
+   "text": "Diriliş Mah. 68-60. Sokak 6/1, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339540336",
+    "number": "6/1",
+    "streetName": "68-60. Sokak"
+   }
+  },
+  {
+   "id": "58-full-12",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-26. Sokak, Kapı No: 11/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12971448315",
+    "number": "11/1",
+    "streetName": "68-26. Sokak"
+   }
+  },
+  {
+   "id": "58-full-13",
+   "text": "Sivas Sivas Merkez Eskikale Mah. 13-3. Sokak No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084270",
+    "number": "12",
+    "streetName": "13-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-14",
+   "text": "39-3. Sokak No:12 Aydoğan Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363846092",
+    "number": "12",
+    "streetName": "39-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-15",
+   "text": "Diriliş Mah. 68-2. Sokak 10, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662184785",
+    "number": "10",
+    "streetName": "68-2. Sokak"
+   }
+  },
+  {
+   "id": "58-full-16",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Şehit Akif Çiftçi Sokak, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017915437",
+    "number": "14",
+    "streetName": "Şehit Akif Çiftçi Sokak"
+   }
+  },
+  {
+   "id": "58-full-17",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-14. Sokak No:6/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662158790",
+    "number": "6/1",
+    "streetName": "68-14. Sokak"
+   }
+  },
+  {
+   "id": "58-full-18",
+   "text": "Recep Tayyip Erdoğan Bulvarı No:8 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512070",
+    "number": "8",
+    "streetName": "Recep Tayyip Erdoğan Bulvarı"
+   }
+  },
+  {
+   "id": "58-full-19",
+   "text": "Mimar Sinan Mah. 67-5. Sokak 2/B, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13041599757",
+    "number": "2/B",
+    "streetName": "67-5. Sokak"
+   }
+  },
+  {
+   "id": "58-full-20",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Rüzgarlı Sokak, Kapı No: 20/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416372229",
+    "number": "20/1",
+    "streetName": "Rüzgarlı Sokak"
+   }
+  },
+  {
+   "id": "58-full-21",
+   "text": "Sivas Sivas Merkez Kümbet Mah. 65-3. Sokak No:34",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13416410607",
+    "number": "34",
+    "streetName": "65-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-22",
+   "text": "68-13. Sokak No:3 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12846993482",
+    "number": "3",
+    "streetName": "68-13. Sokak"
+   }
+  },
+  {
+   "id": "58-full-23",
+   "text": "Diriliş Mah. Derya Sokak 6/A, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12944650361",
+    "number": "6/A",
+    "streetName": "Derya Sokak"
+   }
+  },
+  {
+   "id": "58-full-24",
+   "text": "Sivas, Sivas Merkez, Eskikale Mahallesi, Osman Paşa Caddesi, Kapı No: 7/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084331",
+    "number": "7/A",
+    "streetName": "Osman Paşa Caddesi"
+   }
+  },
+  {
+   "id": "58-full-25",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-15. Sokak No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977808649",
+    "number": "5",
+    "streetName": "68-15. Sokak"
+   }
+  },
+  {
+   "id": "58-full-26",
+   "text": "68-12. Sokak No:21 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12957128862",
+    "number": "21",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-full-27",
+   "text": "Diriliş Mah. 68-62. Sokak 8, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804709",
+    "number": "8",
+    "streetName": "68-62. Sokak"
+   }
+  },
+  {
+   "id": "58-full-28",
+   "text": "Sivas, Sivas Merkez, Kaleardı Mahallesi, Fevzi Çakmak Caddesi, Kapı No: 43",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n11900503999",
+    "number": "43",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "58-full-29",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-48. Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014143196",
+    "number": "11",
+    "streetName": "68-48. Sokak"
+   }
+  },
+  {
+   "id": "58-full-30",
+   "text": "Osman Paşa Caddesi No:11/F Eskikale Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084187",
+    "number": "11/F",
+    "streetName": "Osman Paşa Caddesi"
+   }
+  },
+  {
+   "id": "58-full-31",
+   "text": "Diriliş Mah. 68-79. Sokak 11, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339607454",
+    "number": "11",
+    "streetName": "68-79. Sokak"
+   }
+  },
+  {
+   "id": "58-full-32",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-56. Sokak, Kapı No: 14/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339540348",
+    "number": "14/2",
+    "streetName": "68-56. Sokak"
+   }
+  },
+  {
+   "id": "58-full-33",
+   "text": "Sivas Sivas Merkez Eskikale Mah. Sirer Caddesi No:1/G",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084321",
+    "number": "1/G",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-full-34",
+   "text": "67-14. Sokak No:3 Mimar Sinan Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1338652051",
+    "number": "3",
+    "streetName": "67-14. Sokak"
+   }
+  },
+  {
+   "id": "58-full-35",
+   "text": "Diriliş Mah. 68-12. Sokak 40, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339124654",
+    "number": "40",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-full-36",
+   "text": "Sivas, Sivas Merkez, Selçuklu Mahallesi, 66-21. Sokak, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n14125512682",
+    "number": "10",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-full-37",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-34. Sokak No:18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662089359",
+    "number": "18",
+    "streetName": "68-34. Sokak"
+   }
+  },
+  {
+   "id": "58-full-38",
+   "text": "52-2. Sokak No:29 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231387943",
+    "number": "29",
+    "streetName": "52-2. Sokak"
+   }
+  },
+  {
+   "id": "58-full-39",
+   "text": "Mimar Sinan Mah. Mengücekgazi Caddesi 4/5, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w468365586",
+    "number": "4/5",
+    "streetName": "Mengücekgazi Caddesi"
+   }
+  },
+  {
+   "id": "58-full-40",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-51. Sokak, Kapı No: 24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017856686",
+    "number": "24",
+    "streetName": "68-51. Sokak"
+   }
+  },
+  {
+   "id": "58-full-41",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-12. Sokak No:38",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12971192696",
+    "number": "38",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-full-42",
+   "text": "Sıla Caddesi No:17 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907912212",
+    "number": "17",
+    "streetName": "Sıla Caddesi"
+   }
+  },
+  {
+   "id": "58-full-43",
+   "text": "Diriliş Mah. 68-37. Sokak 23, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662184830",
+    "number": "23",
+    "streetName": "68-37. Sokak"
+   }
+  },
+  {
+   "id": "58-full-44",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-62. Sokak, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804694",
+    "number": "9",
+    "streetName": "68-62. Sokak"
+   }
+  },
+  {
+   "id": "58-full-45",
+   "text": "Sivas Sivas Merkez Yenişehir Mah. Esnaflar Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w460611599",
+    "number": "7",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-full-46",
+   "text": "Atatürk Caddesi No:4 Eskikale Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1413590836",
+    "number": "4",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-full-47",
+   "text": "Diriliş Mah. 68-69. Sokak 5/1, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339607491",
+    "number": "5/1",
+    "streetName": "68-69. Sokak"
+   }
+  },
+  {
+   "id": "58-full-48",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Plevne Caddesi, Kapı No: 57",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804805",
+    "number": "57",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-full-49",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. 39-7. Sokak No:21",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13283605860",
+    "number": "21",
+    "streetName": "39-7. Sokak"
+   }
+  },
+  {
+   "id": "58-full-50",
+   "text": "Sigorta Sokak No:3 Örtülüpınar Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w519303130",
+    "number": "3",
+    "streetName": "Sigorta Sokak"
+   }
+  },
+  {
+   "id": "58-full-51",
+   "text": "Diriliş Mah. Atakent Caddesi 21/H, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12949465515",
+    "number": "21/H",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-full-52",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-52. Sokak, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13016176705",
+    "number": "9",
+    "streetName": "68-52. Sokak"
+   }
+  },
+  {
+   "id": "58-full-53",
+   "text": "Sivas Sivas Merkez Eskikale Mah. 13-3. Sokak No:26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084223",
+    "number": "26",
+    "streetName": "13-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-54",
+   "text": "68-69. Sokak No:5/1 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017628703",
+    "number": "5/1",
+    "streetName": "68-69. Sokak"
+   }
+  },
+  {
+   "id": "58-full-55",
+   "text": "Diriliş Mah. Plevne Caddesi 68/A, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017628630",
+    "number": "68/A",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-full-56",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Salkım Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178311",
+    "number": "2",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "58-full-57",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. 39-27. Sokak No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014606",
+    "number": "9",
+    "streetName": "39-27. Sokak"
+   }
+  },
+  {
+   "id": "58-full-58",
+   "text": "39-4. Sokak No:1 Aydoğan Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363845985",
+    "number": "1",
+    "streetName": "39-4. Sokak"
+   }
+  },
+  {
+   "id": "58-full-59",
+   "text": "Aydoğan Mah. 39-1. Sokak 4, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838661",
+    "number": "4",
+    "streetName": "39-1. Sokak"
+   }
+  },
+  {
+   "id": "58-full-60",
+   "text": "Sivas, Sivas Merkez, Aydoğan Mahallesi, 39-3. Sokak, Kapı No: 16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363846015",
+    "number": "16",
+    "streetName": "39-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-61",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. 39-21. Sokak No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1448289558",
+    "number": "1",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-full-62",
+   "text": "68-36. Sokak No:37 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662073346",
+    "number": "37",
+    "streetName": "68-36. Sokak"
+   }
+  },
+  {
+   "id": "58-full-63",
+   "text": "Yenişehir Mah. 52-2. Sokak 1, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391240",
+    "number": "1",
+    "streetName": "52-2. Sokak"
+   }
+  },
+  {
+   "id": "58-full-64",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-7. Sokak, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977296817",
+    "number": "11",
+    "streetName": "68-7. Sokak"
+   }
+  },
+  {
+   "id": "58-full-65",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-48. Sokak No:32",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015669415",
+    "number": "32",
+    "streetName": "68-48. Sokak"
+   }
+  },
+  {
+   "id": "58-full-66",
+   "text": "52-4. Sokak No:18 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231511958",
+    "number": "18",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-full-67",
+   "text": "Yenişehir Mah. Esnaflar Sokak 5, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231387973",
+    "number": "5",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-full-68",
+   "text": "Sivas, Sivas Merkez, Kaleardı Mahallesi, 33. Kiliçaslan, Kapı No: 17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n11900557997",
+    "number": "17",
+    "streetName": "33. Kiliçaslan"
+   }
+  },
+  {
+   "id": "58-full-69",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. Başmimar Sokak No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408819",
+    "number": "4",
+    "streetName": "Başmimar Sokak"
+   }
+  },
+  {
+   "id": "58-full-70",
+   "text": "68-62. Sokak No:15 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339540339",
+    "number": "15",
+    "streetName": "68-62. Sokak"
+   }
+  },
+  {
+   "id": "58-full-71",
+   "text": "Diriliş Mah. 68-76. Sokak 9, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017628735",
+    "number": "9",
+    "streetName": "68-76. Sokak"
+   }
+  },
+  {
+   "id": "58-full-72",
+   "text": "Sivas, Sivas Merkez, Mimar Sinan Mahallesi, 67-1. Sokak, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408806",
+    "number": "7",
+    "streetName": "67-1. Sokak"
+   }
+  },
+  {
+   "id": "58-full-73",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. Hayri Sığırcı Bulvarı No:60/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288003728",
+    "number": "60/A",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-full-74",
+   "text": "Esnaflar Sokak No:1 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231387975",
+    "number": "1",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-full-75",
+   "text": "Diriliş Mah. 68-36. Sokak 35, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017503743",
+    "number": "35",
+    "streetName": "68-36. Sokak"
+   }
+  },
+  {
+   "id": "58-full-76",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-48. Sokak, Kapı No: 8/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416336566",
+    "number": "8/1",
+    "streetName": "68-48. Sokak"
+   }
+  },
+  {
+   "id": "58-full-77",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-25. Sokak No:6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662115466",
+    "number": "6",
+    "streetName": "68-25. Sokak"
+   }
+  },
+  {
+   "id": "58-full-78",
+   "text": "Şehit Kenan Ardıç Caddesi No:17/A Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13028496901",
+    "number": "17/A",
+    "streetName": "Şehit Kenan Ardıç Caddesi"
+   }
+  },
+  {
+   "id": "58-full-79",
+   "text": "Diriliş Mah. 68-1. Sokak 20, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907912214",
+    "number": "20",
+    "streetName": "68-1. Sokak"
+   }
+  },
+  {
+   "id": "58-full-80",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-52. Sokak, Kapı No: 8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416603702",
+    "number": "8",
+    "streetName": "68-52. Sokak"
+   }
+  },
+  {
+   "id": "58-full-81",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. 67-16. Sokak No:1/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13043738946",
+    "number": "1/1",
+    "streetName": "67-16. Sokak"
+   }
+  },
+  {
+   "id": "58-full-82",
+   "text": "68-9. Sokak No:10 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12944650387",
+    "number": "10",
+    "streetName": "68-9. Sokak"
+   }
+  },
+  {
+   "id": "58-full-83",
+   "text": "Mimar Sinan Mah. 67-2. Sokak 29, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13043738973",
+    "number": "29",
+    "streetName": "67-2. Sokak"
+   }
+  },
+  {
+   "id": "58-full-84",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Buhara Caddesi, Kapı No: 98/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12911456612",
+    "number": "98/2",
+    "streetName": "Buhara Caddesi"
+   }
+  },
+  {
+   "id": "58-full-85",
+   "text": "Sivas Sivas Merkez Sularbaşı Mah. Hikmet Işık Caddesi No:4/C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291328205",
+    "number": "4/C",
+    "streetName": "Hikmet Işık Caddesi"
+   }
+  },
+  {
+   "id": "58-full-86",
+   "text": "12-2. Sokak No:5 Çarşıbaşı Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12863268430",
+    "number": "5",
+    "streetName": "12-2. Sokak"
+   }
+  },
+  {
+   "id": "58-full-87",
+   "text": "Yenişehir Mah. 52-3. Sokak 6, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231511885",
+    "number": "6",
+    "streetName": "52-3. Sokak"
+   }
+  },
+  {
+   "id": "58-full-88",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-34. Sokak, Kapı No: 35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017271625",
+    "number": "35",
+    "streetName": "68-34. Sokak"
+   }
+  },
+  {
+   "id": "58-full-89",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Asırlık Sokak No:6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015733031",
+    "number": "6",
+    "streetName": "Asırlık Sokak"
+   }
+  },
+  {
+   "id": "58-full-90",
+   "text": "68-13. Sokak No:7 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12952038844",
+    "number": "7",
+    "streetName": "68-13. Sokak"
+   }
+  },
+  {
+   "id": "58-full-91",
+   "text": "Diriliş Mah. 68-15. Sokak 5/1, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662115441",
+    "number": "5/1",
+    "streetName": "68-15. Sokak"
+   }
+  },
+  {
+   "id": "58-full-92",
+   "text": "Sivas, Sivas Merkez, Aydoğan Mahallesi, Hayri Sığırcı Bulvarı, Kapı No: 12/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838559",
+    "number": "12/A",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-full-93",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. 67-18. Sokak No:2/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045605482",
+    "number": "2/1",
+    "streetName": "67-18. Sokak"
+   }
+  },
+  {
+   "id": "58-full-94",
+   "text": "Tuzlugöl Caddesi No:13/8 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339607449",
+    "number": "13/8",
+    "streetName": "Tuzlugöl Caddesi"
+   }
+  },
+  {
+   "id": "58-full-95",
+   "text": "Diriliş Mah. 4. Küme Evler Sokak 53, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1446782156",
+    "number": "53",
+    "streetName": "4. Küme Evler Sokak"
+   }
+  },
+  {
+   "id": "58-full-96",
+   "text": "Sivas, Sivas Merkez, Selçuklu Mahallesi, Mehmetçik Caddesi, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357666",
+    "number": "9",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "58-full-97",
+   "text": "Sivas Sivas Merkez Eskikale Mah. Bankalar Caddesi No:8/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084316",
+    "number": "8/A",
+    "streetName": "Bankalar Caddesi"
+   }
+  },
+  {
+   "id": "58-full-98",
+   "text": "68-52. Sokak No:13 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662115499",
+    "number": "13",
+    "streetName": "68-52. Sokak"
+   }
+  },
+  {
+   "id": "58-full-99",
+   "text": "Diriliş Mah. Gülendam Sokak 3/1, Sivas Merkez, Sivas",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907907479",
+    "number": "3/1",
+    "streetName": "Gülendam Sokak"
+   }
+  },
+  {
+   "id": "58-full-100",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, 68-43. Sokak, Kapı No: 28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014143234",
+    "number": "28",
+    "streetName": "68-43. Sokak"
+   }
+  },
+  {
+   "id": "58-full-101",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. Muhsin Yazıcıoğlu Bulvarı No:184",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "58",
+    "osm": "w1420191566",
+    "number": "184",
+    "streetName": "Muhsin Yazıcıoğlu Bulvarı"
+   }
+  },
+  {
+   "id": "58-full-102",
+   "text": "Sivas Sivas Merkez Diriliş Mah. 68-33. Sokak No:4",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "58",
+    "osm": "n13015651557",
+    "number": "4",
+    "streetName": "68-33. Sokak"
+   }
+  },
+  {
+   "id": "58-full-103",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. Servet Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "58",
+    "osm": "n13042770982",
+    "number": "3",
+    "streetName": "Servet Sokak"
+   }
+  },
+  {
+   "id": "58-full-104",
+   "text": "Sivas Sivas Merkez Mimar Sinan Mah. 67-1. Sokak No:4",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "58",
+    "osm": "w1341603974",
+    "number": "4",
+    "streetName": "67-1. Sokak"
+   }
+  },
+  {
+   "id": "58-full-105",
+   "text": "Sivas Sivas Merkez Yenişehir Mah. Safa Caddesi No:13",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "58",
+    "osm": "w1441995579",
+    "number": "13",
+    "streetName": "Safa Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-1",
+   "text": "sivas sivas merkez dirilis mah 68-18. sok. no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977039969",
+    "number": "29",
+    "streetName": "68-18. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-2",
+   "text": "sivas sivas merkez yenisehir mah 52-4. sk no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512272",
+    "number": "10",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-3",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-54. SK NO 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017915442",
+    "number": "7",
+    "streetName": "68-54. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-4",
+   "text": "sivas sivas merkez sularbasi mah kizilay sk no 1/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291302394",
+    "number": "1/A",
+    "streetName": "Kızılay Sokak"
+   }
+  },
+  {
+   "id": "58-folded-5",
+   "text": "sivas sivas merkez dirilis mah 68-21. sok. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662089315",
+    "number": "4",
+    "streetName": "68-21. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-6",
+   "text": "sivas sivas merkez dirilis mah sila cad. no 9/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662181502",
+    "number": "9/1",
+    "streetName": "Sıla Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-7",
+   "text": "sivas sivas merkez gokmedrese mah fevzi cakmak cad. no 2/2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12628177638",
+    "number": "2/2",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-8",
+   "text": "SIVAS SIVAS MERKEZ FATIH MAH ALSANCAK CD. NO 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1144930009",
+    "number": "24",
+    "streetName": "Alsancak Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-9",
+   "text": "SIVAS SIVAS MERKEZ ESKIKALE MAH SIRER CD. NO 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-10",
+   "text": "SIVAS SIVAS MERKEZ AYDOGAN MAH 39-21. SK NO 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-11",
+   "text": "SIVAS SIVAS MERKEZ ESKIKALE MAH ELIF SK NO 1/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-folded-12",
+   "text": "sivas sivas merkez selcuklu mah 66-21. sk no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-13",
+   "text": "sivas sivas merkez yenisehir mah 52-4. sok. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-14",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-44. SK. NO 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-15",
+   "text": "SIVAS SIVAS MERKEZ MIMAR SINAN MAH IHSAN OGER CD NO 7/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13048820812",
+    "number": "7/B",
+    "streetName": "İhsan Öğer Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-16",
+   "text": "sivas sivas merkez carsibasi mah nalbantlarbasi cad. no 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12863268405",
+    "number": "24",
+    "streetName": "Nalbantlarbaşı Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-17",
+   "text": "sivas sivas merkez dirilis mah 68-54. sk no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017915441",
+    "number": "9",
+    "streetName": "68-54. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-18",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH PLEVNE CD NO 55/D",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13274577672",
+    "number": "55/D",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-19",
+   "text": "sivas sivas merkez dirilis mah 68-62. sok. no 1/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804814",
+    "number": "1/A",
+    "streetName": "68-62. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-20",
+   "text": "sivas sivas merkez dirilis mah atakent cd. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12847266179",
+    "number": "5",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-21",
+   "text": "sivas sivas merkez dirilis mah 68-66. sk. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416589774",
+    "number": "14",
+    "streetName": "68-66. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-22",
+   "text": "sivas sivas merkez eskikale mah sirer cad. no 25/e",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084215",
+    "number": "25/E",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-23",
+   "text": "SIVAS SIVAS MERKEZ MIMAR SINAN MAH 67-1. SOK. NO 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045406588",
+    "number": "16",
+    "streetName": "67-1. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-24",
+   "text": "sivas sivas merkez dirilis mah salkim sk no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907907496",
+    "number": "6",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "58-folded-25",
+   "text": "sivas sivas merkez aydogan mah 39-21. sok. no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363845964",
+    "number": "37",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-26",
+   "text": "sivas sivas merkez yenisehir mah 52-1. sk. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391274",
+    "number": "6",
+    "streetName": "52-1. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-27",
+   "text": "sivas sivas merkez eskikale mah ataturk cad. no 6/d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13203205410",
+    "number": "6/D",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-28",
+   "text": "sivas sivas merkez dirilis mah 68-1. sk. no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977296852",
+    "number": "7",
+    "streetName": "68-1. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-29",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-61. SK NO 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339540312",
+    "number": "18",
+    "streetName": "68-61. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-30",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-31. SK. NO 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015651513",
+    "number": "8",
+    "streetName": "68-31. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-31",
+   "text": "sivas sivas merkez mimar sinan mah mengucekgazi cad. no 4/10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13093194533",
+    "number": "4/10",
+    "streetName": "Mengücekgazi Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-32",
+   "text": "sivas sivas merkez eskikale mah bankalar cad. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13203205451",
+    "number": "4",
+    "streetName": "Bankalar Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-33",
+   "text": "sivas sivas merkez dirilis mah 68-31. sk. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015651515",
+    "number": "4",
+    "streetName": "68-31. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-34",
+   "text": "sivas sivas merkez mimar sinan mah 67-1. sok. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408808",
+    "number": "11",
+    "streetName": "67-1. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-35",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH SEHIT KENAN ARDIC CD. NO 33",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13625550081",
+    "number": "33",
+    "streetName": "Şehit Kenan Ardıç Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-36",
+   "text": "sivas sivas merkez yenisehir mah safa cd. no 4/f",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391219",
+    "number": "4/F",
+    "streetName": "Safa Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-37",
+   "text": "SIVAS SIVAS MERKEZ AYDOGAN MAH HAYRI SIGIRCI BLV. NO 12/D",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838555",
+    "number": "12/D",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-folded-38",
+   "text": "sivas sivas merkez carsibasi mah semsi sivasi cd no 13/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12628177642",
+    "number": "13/1",
+    "streetName": "Şemsi Sivasi Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-39",
+   "text": "sivas sivas merkez dirilis mah 68-35. sk. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015651599",
+    "number": "5",
+    "streetName": "68-35. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-40",
+   "text": "sivas sivas merkez dirilis mah 68-19. sk no 1/1g",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12949465599",
+    "number": "1/1G",
+    "streetName": "68-19. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-41",
+   "text": "SIVAS SIVAS MERKEZ ESKIKALE MAH 13-7. SK NO 4/D",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084159",
+    "number": "4/D",
+    "streetName": "13-7. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-42",
+   "text": "SIVAS SIVAS MERKEZ KARSIYAKA MAH BULUT SOK. NO 76",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13096990265",
+    "number": "76",
+    "streetName": "Bulut Sokak"
+   }
+  },
+  {
+   "id": "58-folded-43",
+   "text": "SIVAS SIVAS MERKEZ MIMAR SINAN MAH 67-13. SK. NO 9/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13043738711",
+    "number": "9/A",
+    "streetName": "67-13. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-44",
+   "text": "sivas sivas merkez yenisehir mah safa cd. no 4/d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391221",
+    "number": "4/D",
+    "streetName": "Safa Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-45",
+   "text": "sivas sivas merkez dirilis mah 68-37. sk no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1362913271",
+    "number": "2",
+    "streetName": "68-37. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-46",
+   "text": "sivas sivas merkez dirilis mah 68-15. sok. no 5/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977808630",
+    "number": "5/A",
+    "streetName": "68-15. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-47",
+   "text": "sivas sivas merkez mimar sinan mah ihsan oger cad. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662181477",
+    "number": "3",
+    "streetName": "İhsan Öğer Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-48",
+   "text": "sivas sivas merkez selcuklu mah 66-23. sk. no 14/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13504835203",
+    "number": "14/B",
+    "streetName": "66-23. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-49",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-34. SK. NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015651578",
+    "number": "3",
+    "streetName": "68-34. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-50",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-68. SK. NO 2/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017628669",
+    "number": "2/B",
+    "streetName": "68-68. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-51",
+   "text": "SIVAS SIVAS MERKEZ DIRILIS MAH 68-53. SK NO 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416596614",
+    "number": "6",
+    "streetName": "68-53. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-52",
+   "text": "sivas sivas merkez selcuklu mah mehmetcik cd. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13504835239",
+    "number": "3",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "58-folded-53",
+   "text": "sivas sivas merkez aydogan mah 39-4. sk no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838610",
+    "number": "3",
+    "streetName": "39-4. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-54",
+   "text": "sivas sivas merkez dirilis mah 68-2. sok. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977296856",
+    "number": "12",
+    "streetName": "68-2. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-55",
+   "text": "sivas sivas merkez yenisehir mah 52-4. sok. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391228",
+    "number": "2",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-56",
+   "text": "sivas sivas merkez danismentgazi mah 69-17. sok. no 13/7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339861623",
+    "number": "13/7",
+    "streetName": "69-17. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-57",
+   "text": "sivas sivas merkez aydogan mah hayri sigirci blv. no 46",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288003785",
+    "number": "46",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-folded-58",
+   "text": "sivas sivas merkez dirilis mah 68-18. sk no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1334677982",
+    "number": "17",
+    "streetName": "68-18. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-59",
+   "text": "sivas sivas merkez kardesler mah 51-35. sok. no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1424100438",
+    "number": "20",
+    "streetName": "51-35. Sokak"
+   }
+  },
+  {
+   "id": "58-folded-60",
+   "text": "sivas sivas merkez dirilis mah 68-9. sok. no 2/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1338272629",
+    "number": "2/1",
+    "streetName": "68-9. Sokak"
+   }
+  },
+  {
+   "id": "58-typo-1",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Aetakent Caddesi No:26",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1394395904",
+    "number": "26",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-2",
+   "text": "Şehit Akif Çftçi Sokak No:14 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017915437",
+    "number": "14",
+    "streetName": "Şehit Akif Çiftçi Sokak"
+   }
+  },
+  {
+   "id": "58-typo-3",
+   "text": "Yenişehir Mah. Recep Tayyip Erdoan Bulvarı 8, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512070",
+    "number": "8",
+    "streetName": "Recep Tayyip Erdoğan Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-4",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Rüzgmarlı Sokak, Kapı No: 20/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416372229",
+    "number": "20/1",
+    "streetName": "Rüzgarlı Sokak"
+   }
+  },
+  {
+   "id": "58-typo-5",
+   "text": "Sivas Sivas Merkez Kaleardı Mah. Fevzi Çkmak Caddesi No:43",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n11900503999",
+    "number": "43",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-6",
+   "text": "Mengücekgaoi Caddesi No:4/5 Mimar Sinan Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w468365586",
+    "number": "4/5",
+    "streetName": "Mengücekgazi Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-7",
+   "text": "Yenişehir Mah. Esanflar Sokak 7, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w460611599",
+    "number": "7",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-typo-8",
+   "text": "Sivas, Sivas Merkez, Eskikale Mahallesi, Atatrük Caddesi, Kapı No: 4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1413590836",
+    "number": "4",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-9",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Pelvne Caddesi No:57",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804805",
+    "number": "57",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-10",
+   "text": "Sigotra Sokak No:3 Örtülüpınar Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w519303130",
+    "number": "3",
+    "streetName": "Sigorta Sokak"
+   }
+  },
+  {
+   "id": "58-typo-11",
+   "text": "Diriliş Mah. Ataket Caddesi 21/H, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12949465515",
+    "number": "21/H",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-12",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Plevzne Caddesi, Kapı No: 68/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017628630",
+    "number": "68/A",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-13",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Sakım Sokak No:2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178311",
+    "number": "2",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "58-typo-14",
+   "text": "Esnafar Sokak No:5 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231387973",
+    "number": "5",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-typo-15",
+   "text": "Kaleardı Mah. 33. Kiliçasalan 17, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n11900557997",
+    "number": "17",
+    "streetName": "33. Kiliçaslan"
+   }
+  },
+  {
+   "id": "58-typo-16",
+   "text": "Sivas, Sivas Merkez, Mimar Sinan Mahallesi, Bşamimar Sokak, Kapı No: 4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408819",
+    "number": "4",
+    "streetName": "Başmimar Sokak"
+   }
+  },
+  {
+   "id": "58-typo-17",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. Hayri Sığırı Bulvarı No:60/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288003728",
+    "number": "60/A",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-18",
+   "text": "Esnaflra Sokak No:1 Yenişehir Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231387975",
+    "number": "1",
+    "streetName": "Esnaflar Sokak"
+   }
+  },
+  {
+   "id": "58-typo-19",
+   "text": "Diriliş Mah. Bhara Caddesi 98/2, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12911456612",
+    "number": "98/2",
+    "streetName": "Buhara Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-20",
+   "text": "Sivas, Sivas Merkez, Sularbaşı Mahallesi, Hikzmet Işık Caddesi, Kapı No: 4/C",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291328205",
+    "number": "4/C",
+    "streetName": "Hikmet Işık Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-21",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Asırık Sokak No:6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015733031",
+    "number": "6",
+    "streetName": "Asırlık Sokak"
+   }
+  },
+  {
+   "id": "58-typo-22",
+   "text": "Hayri Sığıraı Bulvarı No:12/A Aydoğan Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838559",
+    "number": "12/A",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-23",
+   "text": "Diriliş Mah. Tuzluögl Caddesi 13/8, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339607449",
+    "number": "13/8",
+    "streetName": "Tuzlugöl Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-24",
+   "text": "Sivas, Sivas Merkez, Selçuklu Mahallesi, Mehdmetçik Caddesi, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357666",
+    "number": "9",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-25",
+   "text": "Sivas Sivas Merkez Eskikale Mah. Bankvalar Caddesi No:8/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084316",
+    "number": "8/A",
+    "streetName": "Bankalar Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-26",
+   "text": "Gülendzm Sokak No:3/1 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907907479",
+    "number": "3/1",
+    "streetName": "Gülendam Sokak"
+   }
+  },
+  {
+   "id": "58-typo-27",
+   "text": "Sularbaşı Mah. Kızoılay Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291302394",
+    "number": "1/A",
+    "streetName": "Kızılay Sokak"
+   }
+  },
+  {
+   "id": "58-typo-28",
+   "text": "Sivas, Sivas Merkez, Gökmedrese Mahallesi, Fevzi Çkmak Caddesi, Kapı No: 2/2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12628177638",
+    "number": "2/2",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-29",
+   "text": "Sivas Sivas Merkez Fatih Mah. Aslancak Caddesi No:24",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1144930009",
+    "number": "24",
+    "streetName": "Alsancak Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-30",
+   "text": "Nalbanytlarbaşı Caddesi No:24 Çarşıbaşı Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12863268405",
+    "number": "24",
+    "streetName": "Nalbantlarbaşı Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-31",
+   "text": "Diriliş Mah. Plyevne Caddesi 55/D, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13274577672",
+    "number": "55/D",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-32",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Aakent Caddesi, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12847266179",
+    "number": "5",
+    "streetName": "Atakent Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-33",
+   "text": "Sivas Sivas Merkez Diriliş Mah. Salrım Sokak No:6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12907907496",
+    "number": "6",
+    "streetName": "Salkım Sokak"
+   }
+  },
+  {
+   "id": "58-typo-34",
+   "text": "Ataütrk Caddesi No:6/D Eskikale Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13203205410",
+    "number": "6/D",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-35",
+   "text": "Mimar Sinan Mah. Mengücekgaiz Caddesi 4/10, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13093194533",
+    "number": "4/10",
+    "streetName": "Mengücekgazi Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-36",
+   "text": "Sivas, Sivas Merkez, Eskikale Mahallesi, Bvankalar Caddesi, Kapı No: 4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13203205451",
+    "number": "4",
+    "streetName": "Bankalar Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-37",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. Hayri Sığuırcı Bulvarı No:12/D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838555",
+    "number": "12/D",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-38",
+   "text": "Şemsi Siuasi Caddesi No:13/1 Çarşıbaşı Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12628177642",
+    "number": "13/1",
+    "streetName": "Şemsi Sivasi Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-39",
+   "text": "Selçuklu Mah. Mehmetdik Caddesi 3, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13504835239",
+    "number": "3",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-40",
+   "text": "Sivas, Sivas Merkez, Aydoğan Mahallesi, Hayri Sbığırcı Bulvarı, Kapı No: 46",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288003785",
+    "number": "46",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-41",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. Ayışrığı Sokak No:12",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13283605879",
+    "number": "12",
+    "streetName": "Ayışığı Sokak"
+   }
+  },
+  {
+   "id": "58-typo-42",
+   "text": "Seviunç Sokak No:4 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662181413",
+    "number": "4",
+    "streetName": "Sevinç Sokak"
+   }
+  },
+  {
+   "id": "58-typo-43",
+   "text": "Aydoğan Mah. Hayri Sığıdrcı Bulvarı 56/A, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4615681101",
+    "number": "56/A",
+    "streetName": "Hayri Sığırcı Bulvarı"
+   }
+  },
+  {
+   "id": "58-typo-44",
+   "text": "Sivas, Sivas Merkez, Dörteylül Mahallesi, Necip Fazıl Kıusakürek Caddesi, Kapı No: 15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13416385418",
+    "number": "15",
+    "streetName": "Necip Fazıl Kısakürek Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-45",
+   "text": "Sivas Sivas Merkez Aydoğan Mah. Yneidoğan Caddesi No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363846256",
+    "number": "11",
+    "streetName": "Yenidoğan Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-46",
+   "text": "Mehemtçik Caddesi No:16 Selçuklu Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357514",
+    "number": "16",
+    "streetName": "Mehmetçik Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-47",
+   "text": "Mimar Sinan Mah. Başimmar Sokak 14, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408818",
+    "number": "14",
+    "streetName": "Başmimar Sokak"
+   }
+  },
+  {
+   "id": "58-typo-48",
+   "text": "Sivas, Sivas Merkez, Diriliş Mahallesi, Tuzluglöl Caddesi, Kapı No: 13/9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416567314",
+    "number": "13/9",
+    "streetName": "Tuzlugöl Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-49",
+   "text": "Sivas Sivas Merkez Sularbaşı Mah. Aliauğa Camii Sokak No:4/D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291328276",
+    "number": "4/D",
+    "streetName": "Aliağa Camii Sokak"
+   }
+  },
+  {
+   "id": "58-typo-50",
+   "text": "Asrılık Sokak No:4 Diriliş Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13015732960",
+    "number": "4",
+    "streetName": "Asırlık Sokak"
+   }
+  },
+  {
+   "id": "58-typo-51",
+   "text": "Sularbaşı Mah. Atatprk Caddesi 3/C, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291328356",
+    "number": "3/C",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-52",
+   "text": "Sivas, Sivas Merkez, Emek Mahallesi, Pleven Caddesi, Kapı No: 3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1462644992",
+    "number": "3",
+    "streetName": "Plevne Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-53",
+   "text": "Sivas Sivas Merkez Selçuklu Mah. Buhra Caddesi No:105/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13192452643",
+    "number": "105/A",
+    "streetName": "Buhara Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-54",
+   "text": "Siborta Sokak No:3/A Örtülüpınar Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n5063949380",
+    "number": "3/A",
+    "streetName": "Sigorta Sokak"
+   }
+  },
+  {
+   "id": "58-typo-55",
+   "text": "Aydoğan Mah. Bevram Caddesi 32, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13283537828",
+    "number": "32",
+    "streetName": "Behram Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-56",
+   "text": "Sivas, Sivas Merkez, Yenişehir Mahallesi, Cumhuriyet Üniversitsi Yerleşkesi Sokak, Kapı No: 71/2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1122856142",
+    "number": "71/2",
+    "streetName": "Cumhuriyet Üniversitesi Yerleşkesi Sokak"
+   }
+  },
+  {
+   "id": "58-typo-57",
+   "text": "Sivas Sivas Merkez Eskikale Mah. Atasürk Caddesi No:4/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13203205419",
+    "number": "4/A",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-58",
+   "text": "Bankalsr Caddesi No:9/D Eskikale Mahallesi Sivas Merkez/Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084286",
+    "number": "9/D",
+    "streetName": "Bankalar Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-59",
+   "text": "Çarşıbaşı Mah. Şemsi Sviasi Caddesi 9F, Sivas Merkez, Sivas",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12863268393",
+    "number": "9F",
+    "streetName": "Şemsi Sivasi Caddesi"
+   }
+  },
+  {
+   "id": "58-typo-60",
+   "text": "Sivas, Sivas Merkez, Eskikale Mahallesi, Saeayyolu, Kapı No: 5A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n11900480330",
+    "number": "5A",
+    "streetName": "Sarayyolu"
+   }
+  },
+  {
+   "id": "58-numbered-1",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-2",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-3",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-4",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-5",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-6",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-7",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-8",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-9",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-10",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-11",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-12",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-13",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-14",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-15",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-16",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-17",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-18",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-19",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-20",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-21",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-22",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-23",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-24",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-25",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-26",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-27",
+   "text": "Demircilerardı Mah. 22. Sokak 1/A, Sivas Merkez, Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-28",
+   "text": "Sivas, Sivas Merkez, Demircilerardı Mahallesi, 22. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-29",
+   "text": "Sivas Sivas Merkez Demircilerardı Mah. 22. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-numbered-30",
+   "text": "22. Sokak No:1/A Demircilerardı Mahallesi Sivas Merkez/Sivas",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4699022910",
+    "number": "1/A",
+    "streetName": "22. Sokak",
+    "streetNumber": 22
+   }
+  },
+  {
+   "id": "58-hide-1",
+   "text": "Diriliş Mah. 68-42. Sokak 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014134524",
+    "number": "9",
+    "streetName": "68-42. Sokak",
+    "truth": [
+     36.971735,
+     39.734253
+    ]
+   }
+  },
+  {
+   "id": "58-hide-2",
+   "text": "Diriliş Mah. 68-21. Sokak 7, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662115467",
+    "number": "7",
+    "streetName": "68-21. Sokak",
+    "truth": [
+     36.969468,
+     39.730796
+    ]
+   }
+  },
+  {
+   "id": "58-hide-3",
+   "text": "Aydoğan Mah. Ayışığı Sokak 12, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13283605879",
+    "number": "12",
+    "streetName": "Ayışığı Sokak",
+    "truth": [
+     37.007726,
+     39.749276
+    ]
+   }
+  },
+  {
+   "id": "58-hide-4",
+   "text": "Diriliş Mah. Sevinç Sokak 4, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662181413",
+    "number": "4",
+    "streetName": "Sevinç Sokak",
+    "truth": [
+     36.974941,
+     39.732803
+    ]
+   }
+  },
+  {
+   "id": "58-hide-5",
+   "text": "Aydoğan Mah. 39-21. Sokak 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014615",
+    "number": "9",
+    "streetName": "39-21. Sokak",
+    "truth": [
+     37.00472,
+     39.751102
+    ]
+   }
+  },
+  {
+   "id": "58-hide-6",
+   "text": "Aydoğan Mah. 39-8. Sokak 1, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838517",
+    "number": "1",
+    "streetName": "39-8. Sokak",
+    "truth": [
+     37.006222,
+     39.749311
+    ]
+   }
+  },
+  {
+   "id": "58-hide-7",
+   "text": "Diriliş Mah. Pazar Sokak 17, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1409210138",
+    "number": "17",
+    "streetName": "Pazar Sokak",
+    "truth": [
+     36.96915,
+     39.7321
+    ]
+   }
+  },
+  {
+   "id": "58-hide-8",
+   "text": "Aydoğan Mah. Hayri Sığırcı Bulvarı 56/A, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n4615681101",
+    "number": "56/A",
+    "streetName": "Hayri Sığırcı Bulvarı",
+    "truth": [
+     37.00314,
+     39.751735
+    ]
+   }
+  },
+  {
+   "id": "58-hide-9",
+   "text": "Diriliş Mah. 68-74. Sokak 4, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416567318",
+    "number": "4",
+    "streetName": "68-74. Sokak",
+    "truth": [
+     36.974481,
+     39.745036
+    ]
+   }
+  },
+  {
+   "id": "58-hide-10",
+   "text": "Mimar Sinan Mah. Şeyh Şamil Caddesi 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w460821054",
+    "number": "9",
+    "streetName": "Şeyh Şamil Caddesi",
+    "truth": [
+     36.973228,
+     39.730072
+    ]
+   }
+  },
+  {
+   "id": "58-hide-11",
+   "text": "Dörteylül Mah. Necip Fazıl Kısakürek Caddesi 15, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13416385418",
+    "number": "15",
+    "streetName": "Necip Fazıl Kısakürek Caddesi",
+    "truth": [
+     37.00025,
+     39.741956
+    ]
+   }
+  },
+  {
+   "id": "58-hide-12",
+   "text": "Diriliş Mah. 68-43. Sokak 15, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014134600",
+    "number": "15",
+    "streetName": "68-43. Sokak",
+    "truth": [
+     36.971274,
+     39.734567
+    ]
+   }
+  },
+  {
+   "id": "58-hide-13",
+   "text": "Diriliş Mah. 68-18. Sokak 16, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w301617248",
+    "number": "16",
+    "streetName": "68-18. Sokak",
+    "truth": [
+     36.968649,
+     39.731792
+    ]
+   }
+  },
+  {
+   "id": "58-hide-14",
+   "text": "Diriliş Mah. 68-24. Sokak 4, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12977048624",
+    "number": "4",
+    "streetName": "68-24. Sokak",
+    "truth": [
+     36.969734,
+     39.729961
+    ]
+   }
+  },
+  {
+   "id": "58-hide-15",
+   "text": "Diriliş Mah. Şehit Kenan Ardıç Caddesi 4/A, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12944650385",
+    "number": "4/A",
+    "streetName": "Şehit Kenan Ardıç Caddesi",
+    "truth": [
+     36.974445,
+     39.731257
+    ]
+   }
+  },
+  {
+   "id": "58-hide-16",
+   "text": "Aydoğan Mah. 39-1. Sokak 2, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838665",
+    "number": "2",
+    "streetName": "39-1. Sokak",
+    "truth": [
+     37.009811,
+     39.7491
+    ]
+   }
+  },
+  {
+   "id": "58-hide-17",
+   "text": "Diriliş Mah. 68-17. Sokak 2/2, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1409472958",
+    "number": "2/2",
+    "streetName": "68-17. Sokak",
+    "truth": [
+     36.971196,
+     39.732129
+    ]
+   }
+  },
+  {
+   "id": "58-hide-18",
+   "text": "Aydoğan Mah. 39-4. Sokak 3/1, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13287838609",
+    "number": "3/1",
+    "streetName": "39-4. Sokak",
+    "truth": [
+     37.007959,
+     39.749
+    ]
+   }
+  },
+  {
+   "id": "58-hide-19",
+   "text": "Mimar Sinan Mah. 67-4. Sokak 17/C, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13041590965",
+    "number": "17/C",
+    "streetName": "67-4. Sokak",
+    "truth": [
+     36.974515,
+     39.730562
+    ]
+   }
+  },
+  {
+   "id": "58-hide-20",
+   "text": "Aydoğan Mah. Yenidoğan Caddesi 11, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363846256",
+    "number": "11",
+    "streetName": "Yenidoğan Caddesi",
+    "truth": [
+     37.002343,
+     39.752388
+    ]
+   }
+  },
+  {
+   "id": "58-hide-21",
+   "text": "Yenişehir Mah. 52-3. Sokak 2, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231391241",
+    "number": "2",
+    "streetName": "52-3. Sokak",
+    "truth": [
+     37.01891,
+     39.738843
+    ]
+   }
+  },
+  {
+   "id": "58-hide-22",
+   "text": "Selçuklu Mah. Mehmetçik Caddesi 16, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357514",
+    "number": "16",
+    "streetName": "Mehmetçik Caddesi",
+    "truth": [
+     36.979137,
+     39.730835
+    ]
+   }
+  },
+  {
+   "id": "58-hide-23",
+   "text": "Halil Rıfat Paşa Mah. Halil Rıfat Paşa Caddesi 49, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w551584957",
+    "number": "49",
+    "streetName": "Halil Rıfat Paşa Caddesi",
+    "truth": [
+     37.006967,
+     39.74524
+    ]
+   }
+  },
+  {
+   "id": "58-hide-24",
+   "text": "Diriliş Mah. 68-2. Sokak 25, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1394008187",
+    "number": "25",
+    "streetName": "68-2. Sokak",
+    "truth": [
+     36.975757,
+     39.734298
+    ]
+   }
+  },
+  {
+   "id": "58-hide-25",
+   "text": "Diriliş Mah. 68-60. Sokak 6/A, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017804704",
+    "number": "6/A",
+    "streetName": "68-60. Sokak",
+    "truth": [
+     36.975985,
+     39.740366
+    ]
+   }
+  },
+  {
+   "id": "58-hide-26",
+   "text": "Mimar Sinan Mah. Başmimar Sokak 14, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13045408818",
+    "number": "14",
+    "streetName": "Başmimar Sokak",
+    "truth": [
+     36.974587,
+     39.727958
+    ]
+   }
+  },
+  {
+   "id": "58-hide-27",
+   "text": "Diriliş Mah. 68-28. Sokak 5, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662089297",
+    "number": "5",
+    "streetName": "68-28. Sokak",
+    "truth": [
+     36.967391,
+     39.730933
+    ]
+   }
+  },
+  {
+   "id": "58-hide-28",
+   "text": "Diriliş Mah. 68-15. Sokak 24/C, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12951741855",
+    "number": "24/C",
+    "streetName": "68-15. Sokak",
+    "truth": [
+     36.970365,
+     39.731904
+    ]
+   }
+  },
+  {
+   "id": "58-hide-29",
+   "text": "Diriliş Mah. 68-48. Sokak 13, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416149792",
+    "number": "13",
+    "streetName": "68-48. Sokak",
+    "truth": [
+     36.971052,
+     39.734994
+    ]
+   }
+  },
+  {
+   "id": "58-hide-30",
+   "text": "Diriliş Mah. Tuzlugöl Caddesi 13/9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1416567314",
+    "number": "13/9",
+    "streetName": "Tuzlugöl Caddesi",
+    "truth": [
+     36.975422,
+     39.744592
+    ]
+   }
+  },
+  {
+   "id": "58-hide-31",
+   "text": "Yenişehir Mah. 52-3. Sokak 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1441995630",
+    "number": "9",
+    "streetName": "52-3. Sokak",
+    "truth": [
+     37.020283,
+     39.737638
+    ]
+   }
+  },
+  {
+   "id": "58-hide-32",
+   "text": "Selçuklu Mah. 66-24. Sokak 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357529",
+    "number": "9",
+    "streetName": "66-24. Sokak",
+    "truth": [
+     36.978907,
+     39.731516
+    ]
+   }
+  },
+  {
+   "id": "58-hide-33",
+   "text": "Mimar Sinan Mah. Şeyh Şamil Caddesi 7, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w460821057",
+    "number": "7",
+    "streetName": "Şeyh Şamil Caddesi",
+    "truth": [
+     36.974178,
+     39.730406
+    ]
+   }
+  },
+  {
+   "id": "58-hide-34",
+   "text": "Sularbaşı Mah. Aliağa Camii Sokak 4/D, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13291328276",
+    "number": "4/D",
+    "streetName": "Aliağa Camii Sokak",
+    "truth": [
+     37.016911,
+     39.750724
+    ]
+   }
+  },
+  {
+   "id": "58-hide-35",
+   "text": "Diriliş Mah. 68-42. Sokak 16, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014134581",
+    "number": "16",
+    "streetName": "68-42. Sokak",
+    "truth": [
+     36.971393,
+     39.734238
+    ]
+   }
+  },
+  {
+   "id": "58-hide-36",
+   "text": "Halil Rıfat Paşa Mah. İnönü Bulvarı 55, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w458111277",
+    "number": "55",
+    "streetName": "İnönü Bulvarı",
+    "truth": [
+     37.009659,
+     39.743467
+    ]
+   }
+  },
+  {
+   "id": "58-hide-37",
+   "text": "Diriliş Mah. 68-40. Sokak 3, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178315",
+    "number": "3",
+    "streetName": "68-40. Sokak",
+    "truth": [
+     36.974863,
+     39.735484
+    ]
+   }
+  },
+  {
+   "id": "58-hide-38",
+   "text": "Yenişehir Mah. 52-4. Sokak 11, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512020",
+    "number": "11",
+    "streetName": "52-4. Sokak",
+    "truth": [
+     37.020414,
+     39.736536
+    ]
+   }
+  },
+  {
+   "id": "58-hide-39",
+   "text": "Mimar Sinan Mah. 67-9. Sokak 9, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13042699089",
+    "number": "9",
+    "streetName": "67-9. Sokak",
+    "truth": [
+     36.972771,
+     39.728749
+    ]
+   }
+  },
+  {
+   "id": "58-hide-40",
+   "text": "Eskikale Mah. 13-3. Sokak 10, Sivas Merkez, Sivas",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846816",
+    "number": "10",
+    "streetName": "13-3. Sokak",
+    "truth": [
+     37.017239,
+     39.749453
+    ]
+   }
+  },
+  {
+   "id": "58-lang-1",
+   "text": "Eskikale, 15 Sirer Avenue floor 8 apartment 6, Sivas Merkez/Sivas",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-lang-2",
+   "text": "Sivas Merkez, Eskikale Ortsteil, Sirer Straße Nummer 15, 58919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-lang-3",
+   "text": "сивас сивас меркез, проспект сирер д. 15",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-lang-4",
+   "text": "Λεωφόρος Sirer αρ. 15 όροφος 2 διαμέρισμα 2, σιβας σιβας μερκεζ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-lang-5",
+   "text": "Eskikale، جادة Sirer رقم 15،  Sivas Merkez",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "w1452846813",
+    "number": "15",
+    "streetName": "Sirer Caddesi"
+   }
+  },
+  {
+   "id": "58-lang-6",
+   "text": "39-21. St 13, Sivas Sivas Merkez, 58408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-7",
+   "text": "SİVAS MERKEZ/SİVAS AYDOGAN ORTSTEİL 39-21. GASSE NR. 13",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-8",
+   "text": "айдоган, ул. 39-21. дом 13, сивас сивас меркез",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-9",
+   "text": "Οδός 39-21. αρ. 13, σιβας μερκεζ/σιβας",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-10",
+   "text": "Sivas Merkez Sivas, شارع 39-21. رقم 13, 58334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "n13288014617",
+    "number": "13",
+    "streetName": "39-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-11",
+   "text": "Eskikale Neighbourhood, 1/A Elif Street floor 2 apartment 6, Sivas Merkez/Sivas, 58715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-lang-12",
+   "text": "Sivas Sivas Merkez Elif Str. Nummer 1/A Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-lang-13",
+   "text": "микрорайон эскикале, улица элиф 1/A, сивас меркез/сивас",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-lang-14",
+   "text": "Sivas Sivas Merkez γειτονιά Eskikale Οδ. ελιφ 1/A όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-lang-15",
+   "text": "زقاق Elif رقم 1/A، Sivas Merkez Sivas، 58988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084111",
+    "number": "1/A",
+    "streetName": "Elif Sokak"
+   }
+  },
+  {
+   "id": "58-lang-16",
+   "text": "Sivas Sivas Merkez Selçuklu Neighbourhood 2 66-21. St",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-17",
+   "text": "Selçuklu, 66-21. Str. Nummer 2, Sivas Merkez ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-18",
+   "text": "сивас сивас меркез, микрорайон селчуклу, ул. 66-21. д. 2 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΣΕΛΤΣΟΥΚΛΟΥ, ΟΔΌΣ 66-21. ΑΡΙΘΜΌΣ 2, ΣΙΒΑΣ SIVAS MERKEZ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-20",
+   "text": "حي Selçuklu, شارع 66-21. رقم 2,  Sivas Merkez",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "w1341357567",
+    "number": "2",
+    "streetName": "66-21. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-21",
+   "text": "Yenisehir, 52-4. St no 6, Sivas Sivas Merkez",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-22",
+   "text": "Yenişehir Ortsteil, 52-4. Str. Nr. 6, Sivas Sivas Merkez, 58152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-23",
+   "text": "сивас меркез/сивас, микрорайон йенишехир, улица 52-4. д. 6",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-24",
+   "text": "Yenişehir, Οδ. 52-4. 6, σιβας μερκεζ Sivas",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-25",
+   "text": "Yenişehir، شارع 52-4. رقم 6،  Sivas Merkez",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512332",
+    "number": "6",
+    "streetName": "52-4. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-26",
+   "text": "Diriliş Neighbourhood, 68-44. St number 1, Sivas Merkez/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-27",
+   "text": "Sivas Merkez, Dirilis Ortsteil, 68-44. Str. 1",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-28",
+   "text": "сивас меркез, ул. 68-44. д. 1 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-29",
+   "text": "Sivas σιβας μερκεζ Οδός 68-44. αριθμός 1",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-lang-30",
+   "text": "حي Diriliş، شارع 68-44. رقم 1، Sivas Sivas Merkez",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "58",
+    "osm": "w662178338",
+    "number": "1",
+    "streetName": "68-44. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-1",
+   "text": "68-48. Sokak 21 Diriliş",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13014143219",
+    "number": "21",
+    "streetName": "68-48. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-2",
+   "text": "Diriliş mah 68-12. Sokak no:34 d:3 kat:2 Sivas Merkez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12971192691",
+    "number": "34",
+    "streetName": "68-12. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-3",
+   "text": "Sivas Merkez 68-41. Sokak no12",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12978254094",
+    "number": "12",
+    "streetName": "68-41. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-4",
+   "text": "6/1 68-60. Sokak Diriliş Sivas Merkez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1339540336",
+    "number": "6/1",
+    "streetName": "68-60. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-5",
+   "text": "DIRILIS 68-26. SOKAK 11/1",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12971448315",
+    "number": "11/1",
+    "streetName": "68-26. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-6",
+   "text": "Sivas Merkez 13-3. Sokak apartmanı 12 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13324084270",
+    "number": "12",
+    "streetName": "13-3. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-7",
+   "text": "Aydoğan mahallesi 39-3. Sokak 12 nolu bina Sivas Merkez/Sivas",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1363846092",
+    "number": "12",
+    "streetName": "39-3. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-8",
+   "text": "68-2. 10 Diriliş Sivas Merkez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662184785",
+    "number": "10",
+    "streetName": "68-2. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-9",
+   "text": "Dirilniş mah Şehit Akif Çiftçi Sokak 14 Sivas Merkez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13017915437",
+    "number": "14",
+    "streetName": "Şehit Akif Çiftçi Sokak"
+   }
+  },
+  {
+   "id": "58-hard-10",
+   "text": "68-14. Sokak 6/1 Diriliş mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w662158790",
+    "number": "6/1",
+    "streetName": "68-14. Sokak"
+   }
+  },
+  {
+   "id": "58-hard-11",
+   "text": "Sivas Merkez Yenişehir Recep Tayyip Erdoğan Bulvarı 8, 34137",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13231512070",
+    "number": "8",
+    "streetName": "Recep Tayyip Erdoğan Bulvarı"
+   }
+  },
+  {
+   "id": "58-hard-12",
+   "text": "Sivas Sivas Merkez 67-5. Sokak 2/B Mimar Sinan",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n13041599757",
+    "number": "2/B",
+    "streetName": "67-5. Sokak"
+   }
+  },
+  {
+   "id": "58-poi-1",
+   "text": "gundogan ilkokulu sivas merkez sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1384066721",
+    "kind": "school",
+    "streetName": "Gündoğan İlkokulu"
+   }
+  },
+  {
+   "id": "58-poi-2",
+   "text": "4 Eylül Spor Salonu Sivas Merkez Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1384069835",
+    "kind": "school",
+    "streetName": "4 Eylül Spor Salonu"
+   }
+  },
+  {
+   "id": "58-poi-3",
+   "text": "Cumhuriyet ortaokul Kangal",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1410587852",
+    "kind": "school",
+    "streetName": "Cumhuriyet Ortaokulu"
+   }
+  },
+  {
+   "id": "58-poi-4",
+   "text": "Mimar Sinan Anaokulu Sivas Merkez Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1342983623",
+    "kind": "school",
+    "streetName": "Mimar Sinan Anaokulu"
+   }
+  },
+  {
+   "id": "58-poi-5",
+   "text": "Mehmet Salih Şirin Ortaokulu Kangal",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1410588424",
+    "kind": "school",
+    "streetName": "Mehmet Salih Şirin Ortaokulu"
+   }
+  },
+  {
+   "id": "58-poi-6",
+   "text": "kanuni ilkogretim okulu sivas merkez sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w469516852",
+    "kind": "school",
+    "streetName": "Kanuni İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "58-poi-7",
+   "text": "Anafartalar İlköğretim Okulu Şarkışla",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w457504085",
+    "kind": "school",
+    "streetName": "Anafartalar İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "58-poi-8",
+   "text": "ulku imam hatip ortaokulu sivas merkez sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1425288858",
+    "kind": "school",
+    "streetName": "Ülkü İmam Hatip Ortaokulu"
+   }
+  },
+  {
+   "id": "58-poi-9",
+   "text": "Mevlana Vali Zübeyir Kemelek Ortaokulu Sivas Merkez",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1382847212",
+    "kind": "school",
+    "streetName": "Mevlana Vali Zübeyir Kemelek Ortaokulu"
+   }
+  },
+  {
+   "id": "58-poi-10",
+   "text": "Mehmet Salih Şirin İlkokulu Kangal Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1410589698",
+    "kind": "school",
+    "streetName": "Mehmet Salih Şirin İlkokulu"
+   }
+  },
+  {
+   "id": "58-poi-11",
+   "text": "Park City AVM Sivas Merkez",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1418179438",
+    "kind": "mall",
+    "streetName": "Park City AVM"
+   }
+  },
+  {
+   "id": "58-poi-12",
+   "text": "Şarkışla belediye binası Şarkışla",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w449074265",
+    "kind": "townhall",
+    "streetName": "Şarkışla Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-13",
+   "text": "Yıldız Belediyesi Sivas Merkez Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1375680074",
+    "kind": "townhall",
+    "streetName": "Yıldız Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-14",
+   "text": "Migros Alışveriş Merkezi Sivas Merkez",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w443114300",
+    "kind": "mall",
+    "streetName": "Migros Alışveriş Merkezi"
+   }
+  },
+  {
+   "id": "58-poi-15",
+   "text": "İva Park Avm Sivas Merkez",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w302794725",
+    "kind": "mall",
+    "streetName": "İva Park Avm"
+   }
+  },
+  {
+   "id": "58-poi-16",
+   "text": "Akmar Avm Suşehri Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n10181607689",
+    "kind": "mall",
+    "streetName": "Akmar Avm"
+   }
+  },
+  {
+   "id": "58-poi-17",
+   "text": "Hafik Belediyesi Hafik Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w753693556",
+    "kind": "townhall",
+    "streetName": "Hafik Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-18",
+   "text": "Sivas ÇAGEM Sivas Merkez Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12431461409",
+    "kind": "hospital",
+    "streetName": "Sivas ÇAGEM"
+   }
+  },
+  {
+   "id": "58-poi-19",
+   "text": "Susehri Devlet hastane Suşehri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w192463972",
+    "kind": "hospital",
+    "streetName": "Susehri Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-20",
+   "text": "Gürün Belediyesi Gürün Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w269890594",
+    "kind": "townhall",
+    "streetName": "Gürün Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-21",
+   "text": "sivas devlet hastane sivas merkez sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w377354922",
+    "kind": "hospital",
+    "streetName": "Sivas Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-22",
+   "text": "yildizeli devlet hastanesi yildizeli sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w575201638",
+    "kind": "hospital",
+    "streetName": "Yıldızeli Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-23",
+   "text": "Hafik Hacı Esma Kocacık İlçe Hastanesi Hafik Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w858394391",
+    "kind": "hospital",
+    "streetName": "Hafik Hacı Esma Kocacık İlçe Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-24",
+   "text": "Şarkışla Devlet hastane Şarkışla",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w449071635",
+    "kind": "hospital",
+    "streetName": "Şarkışla Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-25",
+   "text": "Kangal Devlet Hastanesi Kangal Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1410587054",
+    "kind": "hospital",
+    "streetName": "Kangal Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-26",
+   "text": "imranli devlet hastanesi imranli sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w471977270",
+    "kind": "hospital",
+    "streetName": "İmranlı Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-27",
+   "text": "Kangal Belediyesi Kangal Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w500121872",
+    "kind": "townhall",
+    "streetName": "Kangal Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-28",
+   "text": "divrigi sadik ozgur devlet hastanesi divrigi sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w781364621",
+    "kind": "hospital",
+    "streetName": "Divriği Sadık Özgür Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "58-poi-29",
+   "text": "Korkut Köyü Sağlık Ocağı Zara Sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "n12941971604",
+    "kind": "hospital",
+    "streetName": "Korkut Köyü Sağlık Ocağı"
+   }
+  },
+  {
+   "id": "58-poi-30",
+   "text": "deliilyas belediyesi altinyayla sivas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1370286809",
+    "kind": "townhall",
+    "streetName": "Deliilyas Belediyesi"
+   }
+  },
+  {
+   "id": "58-poi-33",
+   "text": "cepni belediye binasi gemerek",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "58",
+    "osm": "w1375924427",
+    "kind": "townhall",
+    "streetName": "Çepni Belediyesi"
+   }
+  }
+ ]
+}

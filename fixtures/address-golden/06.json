@@ -1,0 +1,4630 @@
+{
+ "version": 1,
+ "plate": "06",
+ "queries": [
+  {
+   "id": "06-full-1",
+   "text": "Ankara Keçiören Çiçekli Mah. Yunus Emre Caddesi No:114",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417458102",
+    "number": "114",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "06-full-2",
+   "text": "Yunus Emre Caddesi No:141 19 Mayıs Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227957060",
+    "number": "141",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "06-full-3",
+   "text": "İkipınar Mah. İkipınar Kümeevleri Sokağı 739, Çubuk, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11333541169",
+    "number": "739",
+    "streetName": "İkipınar Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-full-4",
+   "text": "Ankara, Pursaklar, Yunus Emre Mahallesi, Sezdirmez Sokak, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272997754",
+    "number": "10",
+    "streetName": "Sezdirmez Sokak"
+   }
+  },
+  {
+   "id": "06-full-5",
+   "text": "Ankara Keçiören Tepebaşı Mah. Çaldağ Sokak No:23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274230905",
+    "number": "23",
+    "streetName": "Çaldağ Sokak"
+   }
+  },
+  {
+   "id": "06-full-6",
+   "text": "Turgut Reis Sokak No:7 Yunus Emre Mahallesi Pursaklar/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272420808",
+    "number": "7",
+    "streetName": "Turgut Reis Sokak"
+   }
+  },
+  {
+   "id": "06-full-7",
+   "text": "Yunus Emre Mah. Sağlık Sokak 20, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272316797",
+    "number": "20",
+    "streetName": "Sağlık Sokak"
+   }
+  },
+  {
+   "id": "06-full-8",
+   "text": "Ankara, Çankaya, Çamlıtepe Mahallesi, Ozanlar Caddesi, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13171697854",
+    "number": "9",
+    "streetName": "Ozanlar Caddesi"
+   }
+  },
+  {
+   "id": "06-full-9",
+   "text": "Ankara Çankaya Tınaztepe Mah. Yaprak Sokağı No:45",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w226144717",
+    "number": "45",
+    "streetName": "Yaprak Sokağı"
+   }
+  },
+  {
+   "id": "06-full-10",
+   "text": "Erdem Caddesi No:1 Fakülteler Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13478759701",
+    "number": "1",
+    "streetName": "Erdem Caddesi"
+   }
+  },
+  {
+   "id": "06-full-11",
+   "text": "Yakacık Mah. Cem Sokak 11, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408159765",
+    "number": "11",
+    "streetName": "Cem Sokak"
+   }
+  },
+  {
+   "id": "06-full-12",
+   "text": "Ankara, Pursaklar, Merkez Mahallesi, Gümüş Sokak, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274518233",
+    "number": "10",
+    "streetName": "Gümüş Sokak"
+   }
+  },
+  {
+   "id": "06-full-13",
+   "text": "Ankara Çankaya Güvenevler Mah. Alaçam Sokak No:29",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724059",
+    "number": "29",
+    "streetName": "Alaçam Sokak"
+   }
+  },
+  {
+   "id": "06-full-14",
+   "text": "Güngörmüş Sokak No:19 Atapark Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w424063984",
+    "number": "19",
+    "streetName": "Güngörmüş Sokak"
+   }
+  },
+  {
+   "id": "06-full-15",
+   "text": "Fatih Mah. Fatih Caddesi 35, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459528043",
+    "number": "35",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "06-full-16",
+   "text": "Ankara, Pursaklar, Fatih Mahallesi, Ara Sokak, Kapı No: 66",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636433",
+    "number": "66",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-full-17",
+   "text": "Ankara Sincan Fatih Mah. Kuyu Sokağı No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w428897326",
+    "number": "3",
+    "streetName": "Kuyu Sokağı"
+   }
+  },
+  {
+   "id": "06-full-18",
+   "text": "Kuyuyazısı Caddesi No:40/A Etlik Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4584008789",
+    "number": "40/A",
+    "streetName": "Kuyuyazısı Caddesi"
+   }
+  },
+  {
+   "id": "06-full-19",
+   "text": "Fatih Mah. Menekşe Sokak 26, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459565220",
+    "number": "26",
+    "streetName": "Menekşe Sokak"
+   }
+  },
+  {
+   "id": "06-full-20",
+   "text": "Ankara, Altındağ, Hacı Bayram Mahallesi, Anafartalar Caddesi, Kapı No: 42",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11901185527",
+    "number": "42",
+    "streetName": "Anafartalar Caddesi"
+   }
+  },
+  {
+   "id": "06-full-21",
+   "text": "Ankara Pursaklar Merkez Mah. Yunus Emre Caddesi No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w218837613",
+    "number": "11",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "06-full-22",
+   "text": "Çarşı Caddesi No:5 Ragıp Tüzün Mahallesi Yenimahalle/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n12032707954",
+    "number": "5",
+    "streetName": "Çarşı Caddesi"
+   }
+  },
+  {
+   "id": "06-full-23",
+   "text": "Yunus Emre Mah. Farabi Caddesi 15, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w263866487",
+    "number": "15",
+    "streetName": "Farabi Caddesi"
+   }
+  },
+  {
+   "id": "06-full-24",
+   "text": "Ankara, Çankaya, Emek Mahallesi, Bosna Hersek Caddesi, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w224961572",
+    "number": "22",
+    "streetName": "Bosna Hersek Caddesi"
+   }
+  },
+  {
+   "id": "06-full-25",
+   "text": "Ankara Pursaklar Merkez Mah. Şehit Salim Akgül Caddesi No:80",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554376854",
+    "number": "80",
+    "streetName": "Şehit Salim Akgül Caddesi"
+   }
+  },
+  {
+   "id": "06-full-26",
+   "text": "Aşık Veysel Caddesi No:58/B Atapark Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13015037601",
+    "number": "58/B",
+    "streetName": "Aşık Veysel Caddesi"
+   }
+  },
+  {
+   "id": "06-full-27",
+   "text": "Fatih Mah. Bosna Sokak 13, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w458895689",
+    "number": "13",
+    "streetName": "Bosna Sokak"
+   }
+  },
+  {
+   "id": "06-full-28",
+   "text": "Ankara, Çankaya, Mutlukent Mahallesi, Angora Bulvarı, Kapı No: 52",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1264492220",
+    "number": "52",
+    "streetName": "Angora Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-29",
+   "text": "Ankara Keçiören Yakacık Mah. Sedefçiler Sokak No:47",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w407729729",
+    "number": "47",
+    "streetName": "Sedefçiler Sokak"
+   }
+  },
+  {
+   "id": "06-full-30",
+   "text": "Cengaver Sokak No:55 Mimar Sinan Mahallesi Pursaklar/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273031058",
+    "number": "55",
+    "streetName": "Cengaver Sokak"
+   }
+  },
+  {
+   "id": "06-full-31",
+   "text": "Adnan Menderes Mah. Kızlarpınarı Caddesi 178, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405648945",
+    "number": "178",
+    "streetName": "Kızlarpınarı Caddesi"
+   }
+  },
+  {
+   "id": "06-full-32",
+   "text": "Ankara, Sincan, Maraşal Çakmak Mahallesi, Seven Sokak, Kapı No: 28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406760918",
+    "number": "28",
+    "streetName": "Seven Sokak"
+   }
+  },
+  {
+   "id": "06-full-33",
+   "text": "Ankara Keçiören Ayvalı Mah. Cevahir Sokak No:8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702233",
+    "number": "8",
+    "streetName": "Cevahir Sokak"
+   }
+  },
+  {
+   "id": "06-full-34",
+   "text": "Yılmaz Çolpan Sokağı No:27 Or-An Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w738511464",
+    "number": "27",
+    "streetName": "Yılmaz Çolpan Sokağı"
+   }
+  },
+  {
+   "id": "06-full-35",
+   "text": "Macun Mah. Batı Bulvarı 1/63, Yenimahalle, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n5564801527",
+    "number": "1/63",
+    "streetName": "Batı Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-36",
+   "text": "Ankara, Pursaklar, Fatih Mahallesi, Yavuz Bulvarı, Kapı No: 19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459970676",
+    "number": "19",
+    "streetName": "Yavuz Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-37",
+   "text": "Ankara Keçiören Kavacık Subayevleri Mah. Cihangir Cad. No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w421734044",
+    "number": "9",
+    "streetName": "Cihangir Cad."
+   }
+  },
+  {
+   "id": "06-full-38",
+   "text": "Cinnah Caddesi No:77 Çankaya Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w22946385",
+    "number": "77",
+    "streetName": "Cinnah Caddesi"
+   }
+  },
+  {
+   "id": "06-full-39",
+   "text": "19 Mayıs Mah. 19 Mayıs Caddesi 19, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227958155",
+    "number": "19",
+    "streetName": "19 Mayıs Caddesi"
+   }
+  },
+  {
+   "id": "06-full-40",
+   "text": "Ankara, Keçiören, Pınarbaşı Mahallesi, Beşiktaş Sokak, Kapı No: 38",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405607183",
+    "number": "38",
+    "streetName": "Beşiktaş Sokak"
+   }
+  },
+  {
+   "id": "06-full-41",
+   "text": "Ankara Sincan Maraşal Çakmak Mah. Serdar Sokak No:2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409107103",
+    "number": "2",
+    "streetName": "Serdar Sokak"
+   }
+  },
+  {
+   "id": "06-full-42",
+   "text": "Büklüm Caddesi No:16 Kavaklıdere Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11262814983",
+    "number": "16",
+    "streetName": "Büklüm Caddesi"
+   }
+  },
+  {
+   "id": "06-full-43",
+   "text": "Hacı Bayram Mah. Çankırı Caddesi 14, Altındağ, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "r18565460",
+    "number": "14",
+    "streetName": "Çankırı Caddesi"
+   }
+  },
+  {
+   "id": "06-full-44",
+   "text": "Ankara, Sincan, Maraşal Çakmak Mahallesi, Yavuz Sokak, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110447",
+    "number": "1",
+    "streetName": "Yavuz Sokak"
+   }
+  },
+  {
+   "id": "06-full-45",
+   "text": "Ankara Çankaya Alacaatlı Mah. Şht. Hayrettin Eren Cd. No:16/32",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1206911734",
+    "number": "16/32",
+    "streetName": "Şht. Hayrettin Eren Cd."
+   }
+  },
+  {
+   "id": "06-full-46",
+   "text": "Altay Sokak No:47 İleri Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w462549237",
+    "number": "47",
+    "streetName": "Altay Sokak"
+   }
+  },
+  {
+   "id": "06-full-47",
+   "text": "Kamil Ocak Mah. Alınteri Sokak 11, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w391880220",
+    "number": "11",
+    "streetName": "Alınteri Sokak"
+   }
+  },
+  {
+   "id": "06-full-48",
+   "text": "Ankara, Pursaklar, Yunus Emre Mahallesi, Akçam Sokak, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273845448",
+    "number": "10",
+    "streetName": "Akçam Sokak"
+   }
+  },
+  {
+   "id": "06-full-49",
+   "text": "Ankara Pursaklar Fatih Mah. Kadıoğlu Sokak No:13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554663637",
+    "number": "13",
+    "streetName": "Kadıoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-full-50",
+   "text": "Etlik Cad. No:115 Etlik Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702318",
+    "number": "115",
+    "streetName": "Etlik Cad."
+   }
+  },
+  {
+   "id": "06-full-51",
+   "text": "Remzi Oğuz Arık Mah. Ali Dede Sokak 11, Çankaya, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741750546",
+    "number": "11",
+    "streetName": "Ali Dede Sokak"
+   }
+  },
+  {
+   "id": "06-full-52",
+   "text": "Ankara, Çankaya, Yücetepe Mahallesi, İlk Sokak, Kapı No: 21/6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n12625876732",
+    "number": "21/6",
+    "streetName": "İlk Sokak"
+   }
+  },
+  {
+   "id": "06-full-53",
+   "text": "Ankara Yenimahalle Işınlar Mah. Yahya Kemal Caddesi No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w426123651",
+    "number": "14",
+    "streetName": "Yahya Kemal Caddesi"
+   }
+  },
+  {
+   "id": "06-full-54",
+   "text": "Yıldız Kümeevler Sokağı No:124 Muhsin Yazıcıoğlu Mahallesi Çubuk/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11421013324",
+    "number": "124",
+    "streetName": "Yıldız Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-full-55",
+   "text": "Köşk Mah. Kırker Sokak 2, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w412697712",
+    "number": "2",
+    "streetName": "Kırker Sokak"
+   }
+  },
+  {
+   "id": "06-full-56",
+   "text": "Ankara, Pursaklar, Fatih Mahallesi, Aydos Sokak, Kapı No: 21",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406194588",
+    "number": "21",
+    "streetName": "Aydos Sokak"
+   }
+  },
+  {
+   "id": "06-full-57",
+   "text": "Ankara Keçiören Tepebaşı Mah. Çığ Sokak No:23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w415802935",
+    "number": "23",
+    "streetName": "Çığ Sokak"
+   }
+  },
+  {
+   "id": "06-full-58",
+   "text": "Güneşli Sokak No:20 Bağlarbaşı Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w415066768",
+    "number": "20",
+    "streetName": "Güneşli Sokak"
+   }
+  },
+  {
+   "id": "06-full-59",
+   "text": "Maraşal Çakmak Mah. Zafer Sokak 6, Sincan, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110483",
+    "number": "6",
+    "streetName": "Zafer Sokak"
+   }
+  },
+  {
+   "id": "06-full-60",
+   "text": "Ankara, Pursaklar, Merkez Mahallesi, Uysal Sokak, Kapı No: 15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w457907888",
+    "number": "15",
+    "streetName": "Uysal Sokak"
+   }
+  },
+  {
+   "id": "06-full-61",
+   "text": "Ankara Keçiören İncirli Mah. 19 Mayıs Caddesi No:67",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w425548489",
+    "number": "67",
+    "streetName": "19 Mayıs Caddesi"
+   }
+  },
+  {
+   "id": "06-full-62",
+   "text": "Rüya Sokak No:2 Maraşal Çakmak Mahallesi Sincan/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409111882",
+    "number": "2",
+    "streetName": "Rüya Sokak"
+   }
+  },
+  {
+   "id": "06-full-63",
+   "text": "Yakacık Mah. Baldıran Sokak 6, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405652124",
+    "number": "6",
+    "streetName": "Baldıran Sokak"
+   }
+  },
+  {
+   "id": "06-full-64",
+   "text": "Ankara, Keçiören, Pınarbaşı Mahallesi, Şht. Hakan Turan Caddesi, Kapı No: 28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409277871",
+    "number": "28",
+    "streetName": "Şht. Hakan Turan Caddesi"
+   }
+  },
+  {
+   "id": "06-full-65",
+   "text": "Ankara Sincan Maraşal Çakmak Mah. Zafer Sokak No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110487",
+    "number": "4",
+    "streetName": "Zafer Sokak"
+   }
+  },
+  {
+   "id": "06-full-66",
+   "text": "Tunalı Hilmi Caddesi No:56 Kavaklıdere Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225740332",
+    "number": "56",
+    "streetName": "Tunalı Hilmi Caddesi"
+   }
+  },
+  {
+   "id": "06-full-67",
+   "text": "Güçlükaya Mah. Evrim Sokak 7, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408191378",
+    "number": "7",
+    "streetName": "Evrim Sokak"
+   }
+  },
+  {
+   "id": "06-full-68",
+   "text": "Ankara, Çubuk, Kuruçay Mahallesi, Kuruçay Kümeevleri Sokağı, Kapı No: 137",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10237986525",
+    "number": "137",
+    "streetName": "Kuruçay Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-full-69",
+   "text": "Ankara Yenimahalle Işınlar Mah. Yahya Kemal Caddesi No:32A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13236085151",
+    "number": "32A",
+    "streetName": "Yahya Kemal Caddesi"
+   }
+  },
+  {
+   "id": "06-full-70",
+   "text": "Bilkent Bulvarı No:19 Üniversiteler Mahallesi Çankaya/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n1432430838",
+    "number": "19",
+    "streetName": "Bilkent Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-71",
+   "text": "Mimar Sinan Mah. Çandarlı Sokağı 5, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w458013026",
+    "number": "5",
+    "streetName": "Çandarlı Sokağı"
+   }
+  },
+  {
+   "id": "06-full-72",
+   "text": "Ankara, Etimesgut, Göksu Mahallesi, 2. İnönü Caddesi, Kapı No: 25",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w872786321",
+    "number": "25",
+    "streetName": "2. İnönü Caddesi"
+   }
+  },
+  {
+   "id": "06-full-73",
+   "text": "Ankara Keçiören Şenlik Mah. Ürgüp Sokak No:13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405607210",
+    "number": "13",
+    "streetName": "Ürgüp Sokak"
+   }
+  },
+  {
+   "id": "06-full-74",
+   "text": "Alparslan Bulvarı No:8 Merkez Mahallesi Pursaklar/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1503810272",
+    "number": "8",
+    "streetName": "Alparslan Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-75",
+   "text": "Maraşal Çakmak Mah. Ümit Sokak 15, Sincan, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110352",
+    "number": "15",
+    "streetName": "Ümit Sokak"
+   }
+  },
+  {
+   "id": "06-full-76",
+   "text": "Ankara, Pursaklar, Merkez Mahallesi, Hürol Sokak, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274536076",
+    "number": "7",
+    "streetName": "Hürol Sokak"
+   }
+  },
+  {
+   "id": "06-full-77",
+   "text": "Ankara Keçiören Pınarbaşı Mah. Böğürtlen Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405601390",
+    "number": "11",
+    "streetName": "Böğürtlen Sokak"
+   }
+  },
+  {
+   "id": "06-full-78",
+   "text": "Akkuzulu Kümeevler Sokağı No:111 Akkuzulu Mahallesi Çubuk/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447482342",
+    "number": "111",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-full-79",
+   "text": "İkipınar Mah. İkipınar Kümeevleri Sokağı 63/D, Çubuk, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11291575415",
+    "number": "63/D",
+    "streetName": "İkipınar Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-full-80",
+   "text": "Ankara, Çankaya, Güvenevler Mahallesi, Farabi Sokağı, Kapı No: 42",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724147",
+    "number": "42",
+    "streetName": "Farabi Sokağı"
+   }
+  },
+  {
+   "id": "06-full-81",
+   "text": "Ankara Pursaklar Mimar Sinan Mah. Karaca Caddesi No:44",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1508008899",
+    "number": "44",
+    "streetName": "Karaca Caddesi"
+   }
+  },
+  {
+   "id": "06-full-82",
+   "text": "Etlik Cad. No:88 Aşağı Eğlence Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702674",
+    "number": "88",
+    "streetName": "Etlik Cad."
+   }
+  },
+  {
+   "id": "06-full-83",
+   "text": "Ayyıldız Mah. Dilek Sokak 1, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272466599",
+    "number": "1",
+    "streetName": "Dilek Sokak"
+   }
+  },
+  {
+   "id": "06-full-84",
+   "text": "Ankara, Keçiören, Etlik Mahallesi, Varto Sokak, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227703093",
+    "number": "9",
+    "streetName": "Varto Sokak"
+   }
+  },
+  {
+   "id": "06-full-85",
+   "text": "Ankara Keçiören İncirli Mah. Sezgin Caddesi No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227957391",
+    "number": "4",
+    "streetName": "Sezgin Caddesi"
+   }
+  },
+  {
+   "id": "06-full-86",
+   "text": "Demet Sokak No:15 Şefkat Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w414421063",
+    "number": "15",
+    "streetName": "Demet Sokak"
+   }
+  },
+  {
+   "id": "06-full-87",
+   "text": "Remzi Oğuz Arık Mah. Tunalı Hilmi Caddesi 90, Çankaya, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225734173",
+    "number": "90",
+    "streetName": "Tunalı Hilmi Caddesi"
+   }
+  },
+  {
+   "id": "06-full-88",
+   "text": "Ankara, Keçiören, Şenlik Mahallesi, Baldıran Sokak, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w407965708",
+    "number": "20",
+    "streetName": "Baldıran Sokak"
+   }
+  },
+  {
+   "id": "06-full-89",
+   "text": "Ankara Pursaklar Merkez Mah. Şehit Salim Akgül Caddesi No:74",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459970701",
+    "number": "74",
+    "streetName": "Şehit Salim Akgül Caddesi"
+   }
+  },
+  {
+   "id": "06-full-90",
+   "text": "Emek Caddesi No:33A Fatih Mahallesi Pursaklar/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459759487",
+    "number": "33A",
+    "streetName": "Emek Caddesi"
+   }
+  },
+  {
+   "id": "06-full-91",
+   "text": "Tevfik İleri Mah. Cemil Bey Sokak 7, Pursaklar, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1555340159",
+    "number": "7",
+    "streetName": "Cemil Bey Sokak"
+   }
+  },
+  {
+   "id": "06-full-92",
+   "text": "Ankara, Çankaya, Harbiye Mahallesi, Şehit Alaattin Yakupoğlu Sokak, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w224367276",
+    "number": "7",
+    "streetName": "Şehit Alaattin Yakupoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-full-93",
+   "text": "Ankara Keçiören Etlik Mah. Etlik Cad. No:119",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702688",
+    "number": "119",
+    "streetName": "Etlik Cad."
+   }
+  },
+  {
+   "id": "06-full-94",
+   "text": "Divrik Caddesi No:34 Kamil Ocak Mahallesi Keçiören/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w413882268",
+    "number": "34",
+    "streetName": "Divrik Caddesi"
+   }
+  },
+  {
+   "id": "06-full-95",
+   "text": "Pınarbaşı Mah. Avşar Sokak 28, Keçiören, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408847378",
+    "number": "28",
+    "streetName": "Avşar Sokak"
+   }
+  },
+  {
+   "id": "06-full-96",
+   "text": "Ankara, Pursaklar, Mimar Sinan Mahallesi, İçel Sokağı, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1555355161",
+    "number": "1",
+    "streetName": "İçel Sokağı"
+   }
+  },
+  {
+   "id": "06-full-97",
+   "text": "Ankara Sincan Maraşal Çakmak Mah. Şimşek Sokak No:6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110402",
+    "number": "6",
+    "streetName": "Şimşek Sokak"
+   }
+  },
+  {
+   "id": "06-full-98",
+   "text": "Şehit Rafet Sever Caddesi No:81 Ulubey Mahallesi Altındağ/Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1304973565",
+    "number": "81",
+    "streetName": "Şehit Rafet Sever Caddesi"
+   }
+  },
+  {
+   "id": "06-full-99",
+   "text": "Kuruçay Mah. Kuruçay Kümeevleri Sokağı 138, Çubuk, Ankara",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10237986510",
+    "number": "138",
+    "streetName": "Kuruçay Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-full-100",
+   "text": "Ankara, Keçiören, Şenlik Mahallesi, Buket Sokak, Kapı No: 24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405664260",
+    "number": "24",
+    "streetName": "Buket Sokak"
+   }
+  },
+  {
+   "id": "06-full-101",
+   "text": "Ankara Yenimahalle Serhat Mah. Melih Gökçek Bulvarı No:83/38",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "06",
+    "osm": "w1269104825",
+    "number": "83/38",
+    "streetName": "Melih Gökçek Bulvarı"
+   }
+  },
+  {
+   "id": "06-full-102",
+   "text": "Ankara Keçiören İncirli Mah. Sezgin Caddesi No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "06",
+    "osm": "w227958238",
+    "number": "3",
+    "streetName": "Sezgin Caddesi"
+   }
+  },
+  {
+   "id": "06-full-103",
+   "text": "Ankara Çankaya Alacaatlı Mah. Şehit Eren Bülbül Caddesi No:39/A",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "06",
+    "osm": "n10298158532",
+    "number": "39/A",
+    "streetName": "Şehit Eren Bülbül Caddesi"
+   }
+  },
+  {
+   "id": "06-full-104",
+   "text": "Ankara Etimesgut Bağlıca Mah. Eskibağlar Cd. No:59",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "06",
+    "osm": "w1227724854",
+    "number": "59",
+    "streetName": "Eskibağlar Cd."
+   }
+  },
+  {
+   "id": "06-full-105",
+   "text": "Ankara Keçiören Yeşiltepe Mah. 2000. Sokak No:16",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "06",
+    "osm": "w411352769",
+    "number": "16",
+    "streetName": "2000. Sokak",
+    "streetNumber": 2000
+   }
+  },
+  {
+   "id": "06-folded-1",
+   "text": "ANKARA PURSAKLAR MERKEZ MAH BASAK SOK. NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273456227",
+    "number": "3",
+    "streetName": "Başak Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-2",
+   "text": "ankara cankaya metin oktay mah cat sok. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w226298850",
+    "number": "4",
+    "streetName": "Çat Sokak"
+   }
+  },
+  {
+   "id": "06-folded-3",
+   "text": "ankara kecioren kamil ocak mah divrik cad. no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w391880210",
+    "number": "54",
+    "streetName": "Divrik Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-4",
+   "text": "ankara polatli istiklal mah besikkuyu sk. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1314579913",
+    "number": "9",
+    "streetName": "Beşikkuyu Sokak"
+   }
+  },
+  {
+   "id": "06-folded-5",
+   "text": "ankara cubuk akkuzulu mah akkuzulu kumeevler sk no 737",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447482354",
+    "number": "737",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-6",
+   "text": "ANKARA KECIOREN 19 MAYIS MAH 19 MAYIS CD. NO 48",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227958076",
+    "number": "48",
+    "streetName": "19 Mayıs Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-7",
+   "text": "ankara pursaklar fatih mah kadioglu sk. no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459970672",
+    "number": "37",
+    "streetName": "Kadıoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-folded-8",
+   "text": "ankara kecioren asagi eglence mah mercimek sk. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227580022",
+    "number": "9",
+    "streetName": "Mercimek Sokak"
+   }
+  },
+  {
+   "id": "06-folded-9",
+   "text": "ANKARA PURSAKLAR FATIH MAH MERVE SK NO 2G",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w275321611",
+    "number": "2G",
+    "streetName": "Merve Sokak"
+   }
+  },
+  {
+   "id": "06-folded-10",
+   "text": "ankara cankaya guvenevler mah alacam sk. no 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724088",
+    "number": "30",
+    "streetName": "Alaçam Sokak"
+   }
+  },
+  {
+   "id": "06-folded-11",
+   "text": "ankara pursaklar merkez mah yavuz bulv. no 93",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554532776",
+    "number": "93",
+    "streetName": "Yavuz Bulvarı"
+   }
+  },
+  {
+   "id": "06-folded-12",
+   "text": "ankara kecioren tepebasi mah cura sok. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w415975019",
+    "number": "4",
+    "streetName": "Cura Sokak"
+   }
+  },
+  {
+   "id": "06-folded-13",
+   "text": "ankara kecioren senlik mah duz sok. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274233144",
+    "number": "9",
+    "streetName": "Düz Sokak"
+   }
+  },
+  {
+   "id": "06-folded-14",
+   "text": "ankara mamak bahcelerustu mah arif yildiz cd no 111",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w433781907",
+    "number": "111",
+    "streetName": "Arif Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-15",
+   "text": "ankara cankaya ayranci mah hosdere cad. no 31",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741502006",
+    "number": "31",
+    "streetName": "Hoşdere Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-16",
+   "text": "ankara gudul yukari mah inkilap cad. no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1381450053",
+    "number": "1",
+    "streetName": "İnkılap Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-17",
+   "text": "ankara mamak aksemsettin mah dogukent cd. no 211",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018193",
+    "number": "211",
+    "streetName": "Doğukent Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-18",
+   "text": "ANKARA KECIOREN AYVALI MAH NIHAN SOK. NO 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702036",
+    "number": "24",
+    "streetName": "Nihan Sokak"
+   }
+  },
+  {
+   "id": "06-folded-19",
+   "text": "ANKARA PURSAKLAR YUNUS EMRE MAH KOZAN SOK. NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272430001",
+    "number": "9",
+    "streetName": "Kozan Sokak"
+   }
+  },
+  {
+   "id": "06-folded-20",
+   "text": "ankara sincan marasal cakmak mah serin sk no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406760871",
+    "number": "20",
+    "streetName": "Serin Sokak"
+   }
+  },
+  {
+   "id": "06-folded-21",
+   "text": "ankara kecioren kavacik subayevleri mah guzin sk no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w416426398",
+    "number": "12",
+    "streetName": "Güzin Sokak"
+   }
+  },
+  {
+   "id": "06-folded-22",
+   "text": "ankara cankaya prof. dr. ahmet taner kislali mah bozova sk. no 2/4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1125432361",
+    "number": "2/4",
+    "streetName": "Bozova Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-23",
+   "text": "ANKARA CUBUK AKKUZULU MAH AKKUZULU KUMEEVLER SK. NO 486",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11444999996",
+    "number": "486",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-24",
+   "text": "ankara pursaklar merkez mah sehit yunus yilmaz sok. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w457907898",
+    "number": "12",
+    "streetName": "Şehit Yunus Yılmaz Sokak"
+   }
+  },
+  {
+   "id": "06-folded-25",
+   "text": "ANKARA KECIOREN PINARBASI MAH BESIKTAS SK. NO 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405601357",
+    "number": "14",
+    "streetName": "Beşiktaş Sokak"
+   }
+  },
+  {
+   "id": "06-folded-26",
+   "text": "ANKARA ETIMESGUT YENI BAGLICA MAH KARATUZ CAD. NO 75A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w872137403",
+    "number": "75A",
+    "streetName": "Karatuz Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-27",
+   "text": "ankara kecioren kamil ocak mah yasin sk no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w413634742",
+    "number": "8",
+    "streetName": "Yasin Sk"
+   }
+  },
+  {
+   "id": "06-folded-28",
+   "text": "ANKARA PURSAKLAR MERKEZ MAH YILDIRIM BEYAZIT CD. NO 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273244943",
+    "number": "30",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-29",
+   "text": "ankara kecioren etlik mah kiraz sk. no 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702305",
+    "number": "26",
+    "streetName": "Kiraz Sokak"
+   }
+  },
+  {
+   "id": "06-folded-30",
+   "text": "ankara pursaklar mimar sinan mah bahar sok. no 13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273011624",
+    "number": "13",
+    "streetName": "Bahar Sokak"
+   }
+  },
+  {
+   "id": "06-folded-31",
+   "text": "ankara pursaklar merkez mah menekse sk no 35",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w318290655",
+    "number": "35",
+    "streetName": "Menekşe Sokak"
+   }
+  },
+  {
+   "id": "06-folded-32",
+   "text": "ankara etimesgut turkuaz mah akyatak cd. no 4/14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1203760071",
+    "number": "4/14",
+    "streetName": "Akyatak Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-33",
+   "text": "ankara kecioren yayla mah sht. mustafa ercigez cd no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406384177",
+    "number": "9",
+    "streetName": "Şht. Mustafa Ercigez Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-34",
+   "text": "ankara pursaklar merkez mah koroglu sk no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459499760",
+    "number": "4",
+    "streetName": "Köroğlu Sokak"
+   }
+  },
+  {
+   "id": "06-folded-35",
+   "text": "ankara pursaklar merkez mah tirebolu sk. no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273249531",
+    "number": "9",
+    "streetName": "Tirebolu Sokak"
+   }
+  },
+  {
+   "id": "06-folded-36",
+   "text": "ANKARA KECIOREN ETLIK MAH ETLIK CAD. NO 129",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702596",
+    "number": "129",
+    "streetName": "Etlik Cad."
+   }
+  },
+  {
+   "id": "06-folded-37",
+   "text": "ankara kecioren etlik mah ayvali cad. no 56",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702940",
+    "number": "56",
+    "streetName": "Ayvalı Cad."
+   }
+  },
+  {
+   "id": "06-folded-38",
+   "text": "ankara kecioren adnan menderes mah kizlarpinari cad. no 212",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405601402",
+    "number": "212",
+    "streetName": "Kızlarpınarı Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-39",
+   "text": "ankara kecioren asagi eglence mah uludere sk no 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227580490",
+    "number": "30",
+    "streetName": "Uludere Sokak"
+   }
+  },
+  {
+   "id": "06-folded-40",
+   "text": "ankara kecioren kamil ocak mah divrik cd no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w391880212",
+    "number": "58",
+    "streetName": "Divrik Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-41",
+   "text": "ankara cankaya kavaklidere mah konur sk no 65/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n14264918801",
+    "number": "65/B",
+    "streetName": "Konur Sokak"
+   }
+  },
+  {
+   "id": "06-folded-42",
+   "text": "ankara kecioren kavacik subayevleri mah ucyildiz cad. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417150693",
+    "number": "3",
+    "streetName": "Üçyıldız Cad."
+   }
+  },
+  {
+   "id": "06-folded-43",
+   "text": "ankara cankaya buyukesat mah turgutlu sok. no 36",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w228356167",
+    "number": "36",
+    "streetName": "Turgutlu Sokak"
+   }
+  },
+  {
+   "id": "06-folded-44",
+   "text": "ankara pursaklar mimar sinan mah saglam sk no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273028857",
+    "number": "7",
+    "streetName": "Sağlam Sokak"
+   }
+  },
+  {
+   "id": "06-folded-45",
+   "text": "ankara pursaklar ayyildiz mah ziya gokalp sk no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w269124549",
+    "number": "5",
+    "streetName": "Ziya Gökalp Sokak"
+   }
+  },
+  {
+   "id": "06-folded-46",
+   "text": "ankara kecioren kavacik subayevleri mah kemalettin sami pasa cad. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w416878025",
+    "number": "16",
+    "streetName": "Kemalettin Sami Paşa Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-47",
+   "text": "ankara pursaklar merkez mah bayindir sk no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274539717",
+    "number": "11",
+    "streetName": "Bayındır Sokak"
+   }
+  },
+  {
+   "id": "06-folded-48",
+   "text": "ANKARA PURSAKLAR MIMAR SINAN MAH KARACA CD. NO 41",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273654068",
+    "number": "41",
+    "streetName": "Karaca Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-49",
+   "text": "ANKARA KECIOREN TEPEBASI MAH BAYRAK SOK. NO 37-39",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408118904",
+    "number": "37-39",
+    "streetName": "Bayrak Sokak"
+   }
+  },
+  {
+   "id": "06-folded-50",
+   "text": "ankara sincan plevne mah ceyhan sk. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w426603405",
+    "number": "2",
+    "streetName": "Ceyhan Sokak"
+   }
+  },
+  {
+   "id": "06-folded-51",
+   "text": "ankara kecioren etlik mah kivrimli cad. no 33",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702372",
+    "number": "33",
+    "streetName": "Kıvrımlı Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-52",
+   "text": "ankara kecioren osmangazi mah bastug sk no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409937670",
+    "number": "29",
+    "streetName": "Baştuğ Sokak"
+   }
+  },
+  {
+   "id": "06-folded-53",
+   "text": "ankara etimesgut turkuaz mah akyatak cd no 4/5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1203760072",
+    "number": "4/5",
+    "streetName": "Akyatak Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-54",
+   "text": "ankara pursaklar tevfik ileri mah saltukhan sk. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1555340140",
+    "number": "5",
+    "streetName": "Saltukhan Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-55",
+   "text": "ANKARA PURSAKLAR FATIH MAH EMEK CD. NO 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459806745",
+    "number": "23",
+    "streetName": "Emek Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-56",
+   "text": "ANKARA KECIOREN SENLIK MAH KIZLARPINARI CD. NO 109",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405669777",
+    "number": "109",
+    "streetName": "Kızlarpınarı Caddesi"
+   }
+  },
+  {
+   "id": "06-folded-57",
+   "text": "ANKARA KECIOREN OSMANGAZI MAH ATLILAR SK NO 33",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409305768",
+    "number": "33",
+    "streetName": "Atlılar Sokak"
+   }
+  },
+  {
+   "id": "06-folded-58",
+   "text": "ANKARA CANKAYA KAVAKLIDERE MAH YALIM SK NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225740341",
+    "number": "9",
+    "streetName": "Yalım Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-59",
+   "text": "ankara cankaya kavaklidere mah haciyolu sk. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10638285331",
+    "number": "11",
+    "streetName": "Hacıyolu Sokağı"
+   }
+  },
+  {
+   "id": "06-folded-60",
+   "text": "ankara pursaklar fatih mah ara sk. no 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w345512900",
+    "number": "49",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-typo-1",
+   "text": "Ankara Çubuk İkipınar Mah. İkipınar Kgmeevleri Sokağı No:739",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11333541169",
+    "number": "739",
+    "streetName": "İkipınar Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-2",
+   "text": "Sezdirez Sokak No:10 Yunus Emre Mahallesi Pursaklar/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272997754",
+    "number": "10",
+    "streetName": "Sezdirmez Sokak"
+   }
+  },
+  {
+   "id": "06-typo-3",
+   "text": "Tepebaşı Mah. Çadlağ Sokak 23, Keçiören, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w274230905",
+    "number": "23",
+    "streetName": "Çaldağ Sokak"
+   }
+  },
+  {
+   "id": "06-typo-4",
+   "text": "Ankara, Pursaklar, Yunus Emre Mahallesi, Turgt Reis Sokak, Kapı No: 7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272420808",
+    "number": "7",
+    "streetName": "Turgut Reis Sokak"
+   }
+  },
+  {
+   "id": "06-typo-5",
+   "text": "Ankara Pursaklar Yunus Emre Mah. Stğlık Sokak No:20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272316797",
+    "number": "20",
+    "streetName": "Sağlık Sokak"
+   }
+  },
+  {
+   "id": "06-typo-6",
+   "text": "Ozanlsar Caddesi No:9 Çamlıtepe Mahallesi Çankaya/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13171697854",
+    "number": "9",
+    "streetName": "Ozanlar Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-7",
+   "text": "Tınaztepe Mah. Yapak Sokağı 45, Çankaya, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w226144717",
+    "number": "45",
+    "streetName": "Yaprak Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-8",
+   "text": "Ankara, Çankaya, Güvenevler Mahallesi, Alaiçam Sokak, Kapı No: 29",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724059",
+    "number": "29",
+    "streetName": "Alaçam Sokak"
+   }
+  },
+  {
+   "id": "06-typo-9",
+   "text": "Ankara Keçiören Atapark Mah. Güngrmüş Sokak No:19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w424063984",
+    "number": "19",
+    "streetName": "Güngörmüş Sokak"
+   }
+  },
+  {
+   "id": "06-typo-10",
+   "text": "Kuyuyzısı Caddesi No:40/A Etlik Mahallesi Keçiören/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4584008789",
+    "number": "40/A",
+    "streetName": "Kuyuyazısı Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-11",
+   "text": "Fatih Mah. Menkşe Sokak 26, Pursaklar, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459565220",
+    "number": "26",
+    "streetName": "Menekşe Sokak"
+   }
+  },
+  {
+   "id": "06-typo-12",
+   "text": "Ankara, Altındağ, Hacı Bayram Mahallesi, Anafaralar Caddesi, Kapı No: 42",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11901185527",
+    "number": "42",
+    "streetName": "Anafartalar Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-13",
+   "text": "Ankara Pursaklar Yunus Emre Mah. Ferabi Caddesi No:15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w263866487",
+    "number": "15",
+    "streetName": "Farabi Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-14",
+   "text": "Bosna Hhersek Caddesi No:22 Emek Mahallesi Çankaya/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w224961572",
+    "number": "22",
+    "streetName": "Bosna Hersek Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-15",
+   "text": "Atapark Mah. Aşık Veyszel Caddesi 58/B, Keçiören, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13015037601",
+    "number": "58/B",
+    "streetName": "Aşık Veysel Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-16",
+   "text": "Ankara, Çankaya, Mutlukent Mahallesi, Agora Bulvarı, Kapı No: 52",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1264492220",
+    "number": "52",
+    "streetName": "Angora Bulvarı"
+   }
+  },
+  {
+   "id": "06-typo-17",
+   "text": "Ankara Keçiören Yakacık Mah. Sedefçilier Sokak No:47",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w407729729",
+    "number": "47",
+    "streetName": "Sedefçiler Sokak"
+   }
+  },
+  {
+   "id": "06-typo-18",
+   "text": "Cengmver Sokak No:55 Mimar Sinan Mahallesi Pursaklar/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w273031058",
+    "number": "55",
+    "streetName": "Cengaver Sokak"
+   }
+  },
+  {
+   "id": "06-typo-19",
+   "text": "Adnan Menderes Mah. Kızlarpınadrı Caddesi 178, Keçiören, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405648945",
+    "number": "178",
+    "streetName": "Kızlarpınarı Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-20",
+   "text": "Ankara, Keçiören, Ayvalı Mahallesi, Cevmhir Sokak, Kapı No: 8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702233",
+    "number": "8",
+    "streetName": "Cevahir Sokak"
+   }
+  },
+  {
+   "id": "06-typo-21",
+   "text": "Ankara Çankaya Or-An Mah. Yınlmaz Çolpan Sokağı No:27",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w738511464",
+    "number": "27",
+    "streetName": "Yılmaz Çolpan Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-22",
+   "text": "Civhangir Cad. No:9 Kavacık Subayevleri Mahallesi Keçiören/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w421734044",
+    "number": "9",
+    "streetName": "Cihangir Cad."
+   }
+  },
+  {
+   "id": "06-typo-23",
+   "text": "Çankaya Mah. Cinndh Caddesi 77, Çankaya, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w22946385",
+    "number": "77",
+    "streetName": "Cinnah Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-24",
+   "text": "Ankara, Keçiören, Pınarbaşı Mahallesi, Beşiktşa Sokak, Kapı No: 38",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405607183",
+    "number": "38",
+    "streetName": "Beşiktaş Sokak"
+   }
+  },
+  {
+   "id": "06-typo-25",
+   "text": "Ankara Sincan Maraşal Çakmak Mah. Serear Sokak No:2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409107103",
+    "number": "2",
+    "streetName": "Serdar Sokak"
+   }
+  },
+  {
+   "id": "06-typo-26",
+   "text": "Büvklüm Caddesi No:16 Kavaklıdere Mahallesi Çankaya/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11262814983",
+    "number": "16",
+    "streetName": "Büklüm Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-27",
+   "text": "Hacı Bayram Mah. Çfankırı Caddesi 14, Altındağ, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "r18565460",
+    "number": "14",
+    "streetName": "Çankırı Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-28",
+   "text": "Ankara, Çankaya, Alacaatlı Mahallesi, Şht. Hayrtetin Eren Cd., Kapı No: 16/32",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1206911734",
+    "number": "16/32",
+    "streetName": "Şht. Hayrettin Eren Cd."
+   }
+  },
+  {
+   "id": "06-typo-29",
+   "text": "Ankara Keçiören Kamil Ocak Mah. Aılnteri Sokak No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w391880220",
+    "number": "11",
+    "streetName": "Alınteri Sokak"
+   }
+  },
+  {
+   "id": "06-typo-30",
+   "text": "Kadığlu Sokak No:13 Fatih Mahallesi Pursaklar/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554663637",
+    "number": "13",
+    "streetName": "Kadıoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-typo-31",
+   "text": "Muhsin Yazıcıoğlu Mah. Yıldız Kümeevelr Sokağı 124, Çubuk, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11421013324",
+    "number": "124",
+    "streetName": "Yıldız Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-32",
+   "text": "Ankara, Keçiören, Köşk Mahallesi, Kıurker Sokak, Kapı No: 2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w412697712",
+    "number": "2",
+    "streetName": "Kırker Sokak"
+   }
+  },
+  {
+   "id": "06-typo-33",
+   "text": "Ankara Keçiören Bağlarbaşı Mah. Güneşlli Sokak No:20",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w415066768",
+    "number": "20",
+    "streetName": "Güneşli Sokak"
+   }
+  },
+  {
+   "id": "06-typo-34",
+   "text": "Baldımran Sokak No:6 Yakacık Mahallesi Keçiören/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405652124",
+    "number": "6",
+    "streetName": "Baldıran Sokak"
+   }
+  },
+  {
+   "id": "06-typo-35",
+   "text": "Kavaklıdere Mah. Tunarlı Hilmi Caddesi 56, Çankaya, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225740332",
+    "number": "56",
+    "streetName": "Tunalı Hilmi Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-36",
+   "text": "Ankara, Çubuk, Kuruçay Mahallesi, Kuruçay Kümegevleri Sokağı, Kapı No: 137",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10237986525",
+    "number": "137",
+    "streetName": "Kuruçay Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-37",
+   "text": "Ankara Çankaya Üniversiteler Mah. Bileknt Bulvarı No:19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n1432430838",
+    "number": "19",
+    "streetName": "Bilkent Bulvarı"
+   }
+  },
+  {
+   "id": "06-typo-38",
+   "text": "Çandarıl Sokağı No:5 Mimar Sinan Mahallesi Pursaklar/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w458013026",
+    "number": "5",
+    "streetName": "Çandarlı Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-39",
+   "text": "Merkez Mah. Alparslen Bulvarı 8, Pursaklar, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1503810272",
+    "number": "8",
+    "streetName": "Alparslan Bulvarı"
+   }
+  },
+  {
+   "id": "06-typo-40",
+   "text": "Ankara, Keçiören, Pınarbaşı Mahallesi, Böğrtlen Sokak, Kapı No: 11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405601390",
+    "number": "11",
+    "streetName": "Böğürtlen Sokak"
+   }
+  },
+  {
+   "id": "06-typo-41",
+   "text": "Ankara Çubuk Akkuzulu Mah. Akkuzulu Küeevler Sokağı No:111",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447482342",
+    "number": "111",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-42",
+   "text": "İkipınar Kümoevleri Sokağı No:63/D İkipınar Mahallesi Çubuk/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11291575415",
+    "number": "63/D",
+    "streetName": "İkipınar Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-43",
+   "text": "Güvenevler Mah. Faravbi Sokağı 42, Çankaya, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724147",
+    "number": "42",
+    "streetName": "Farabi Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-44",
+   "text": "Ankara, Pursaklar, Mimar Sinan Mahallesi, Karraca Caddesi, Kapı No: 44",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1508008899",
+    "number": "44",
+    "streetName": "Karaca Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-45",
+   "text": "Ankara Keçiören İncirli Mah. Sezsin Caddesi No:4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227957391",
+    "number": "4",
+    "streetName": "Sezgin Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-46",
+   "text": "Tunlı Hilmi Caddesi No:90 Remzi Oğuz Arık Mahallesi Çankaya/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225734173",
+    "number": "90",
+    "streetName": "Tunalı Hilmi Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-47",
+   "text": "Şenlik Mah. Badlıran Sokak 20, Keçiören, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w407965708",
+    "number": "20",
+    "streetName": "Baldıran Sokak"
+   }
+  },
+  {
+   "id": "06-typo-48",
+   "text": "Ankara, Çankaya, Harbiye Mahallesi, Şehit Alaattin Yakupoğzlu Sokak, Kapı No: 7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w224367276",
+    "number": "7",
+    "streetName": "Şehit Alaattin Yakupoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-typo-49",
+   "text": "Ankara Keçiören Kamil Ocak Mah. Divrvik Caddesi No:34",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w413882268",
+    "number": "34",
+    "streetName": "Divrik Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-50",
+   "text": "Şidmşek Sokak No:6 Maraşal Çakmak Mahallesi Sincan/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409110402",
+    "number": "6",
+    "streetName": "Şimşek Sokak"
+   }
+  },
+  {
+   "id": "06-typo-51",
+   "text": "Kuruçay Mah. Kuruçay Kümeevleuri Sokağı 138, Çubuk, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10237986510",
+    "number": "138",
+    "streetName": "Kuruçay Kümeevleri Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-52",
+   "text": "Ankara, Keçiören, Kamil Ocak Mahallesi, Divik Caddesi, Kapı No: 54",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w391880210",
+    "number": "54",
+    "streetName": "Divrik Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-53",
+   "text": "Ankara Polatlı İstiklal Mah. Beşikkyuu Sokak No:9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1314579913",
+    "number": "9",
+    "streetName": "Beşikkuyu Sokak"
+   }
+  },
+  {
+   "id": "06-typo-54",
+   "text": "Akkuzulu Küeevler Sokağı No:737 Akkuzulu Mahallesi Çubuk/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447482354",
+    "number": "737",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-typo-55",
+   "text": "Fatih Mah. Kaıdoğlu Sokak 37, Pursaklar, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459970672",
+    "number": "37",
+    "streetName": "Kadıoğlu Sokak"
+   }
+  },
+  {
+   "id": "06-typo-56",
+   "text": "Ankara, Keçiören, Aşağı Eğlence Mahallesi, Mrecimek Sokak, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227580022",
+    "number": "9",
+    "streetName": "Mercimek Sokak"
+   }
+  },
+  {
+   "id": "06-typo-57",
+   "text": "Ankara Çankaya Güvenevler Mah. Alçam Sokak No:30",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741724088",
+    "number": "30",
+    "streetName": "Alaçam Sokak"
+   }
+  },
+  {
+   "id": "06-typo-58",
+   "text": "Arif Yılcız Caddesi No:111 Bahçelerüstü Mahallesi Mamak/Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w433781907",
+    "number": "111",
+    "streetName": "Arif Yıldız Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-59",
+   "text": "Ayrancı Mah. Hloşdere Caddesi 31, Çankaya, Ankara",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w741502006",
+    "number": "31",
+    "streetName": "Hoşdere Caddesi"
+   }
+  },
+  {
+   "id": "06-typo-60",
+   "text": "Ankara, Güdül, Yukarı Mahallesi, İnklap Caddesi, Kapı No: 1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1381450053",
+    "number": "1",
+    "streetName": "İnkılap Caddesi"
+   }
+  },
+  {
+   "id": "06-numbered-1",
+   "text": "Ankara Etimesgut Balıkuyumcu Mah. 5231. Cadde No:15/E",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11445222148",
+    "number": "15/E",
+    "streetName": "5231. Cadde",
+    "streetNumber": 5231
+   }
+  },
+  {
+   "id": "06-numbered-2",
+   "text": "1901. Cadde No:31/5 İlkyerleşim Mahallesi Yenimahalle/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w429480417",
+    "number": "31/5",
+    "streetName": "1901. Cadde",
+    "streetNumber": 1901
+   }
+  },
+  {
+   "id": "06-numbered-3",
+   "text": "Yaşamkent Mah. 3263. Cd. 7, Çankaya, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13722965781",
+    "number": "7",
+    "streetName": "3263. Cd.",
+    "streetNumber": 3263
+   }
+  },
+  {
+   "id": "06-numbered-4",
+   "text": "Ankara, Yenimahalle, Ostim OSB Mahallesi, 1189. Sokak, Kapı No: 4A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10280832595",
+    "number": "4A",
+    "streetName": "1189. Sokak",
+    "streetNumber": 1189
+   }
+  },
+  {
+   "id": "06-numbered-5",
+   "text": "Ankara Yenimahalle Demetevler Mah. 357. Cd. No:13",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w461145590",
+    "number": "13",
+    "streetName": "357. Cd.",
+    "streetNumber": 357
+   }
+  },
+  {
+   "id": "06-numbered-6",
+   "text": "12. Cadde No:11 Saray Mahallesi Kahramankazan/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10304105017",
+    "number": "11",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "06-numbered-7",
+   "text": "Aşağı Öveçler Mah. 1308. Cadde 12, Çankaya, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w228793565",
+    "number": "12",
+    "streetName": "1308. Cadde",
+    "streetNumber": 1308
+   }
+  },
+  {
+   "id": "06-numbered-8",
+   "text": "Ankara, Keçiören, Çaldıran Mahallesi, 529. Sokak, Kapı No: 5",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w422574588",
+    "number": "5",
+    "streetName": "529. Sokak",
+    "streetNumber": 529
+   }
+  },
+  {
+   "id": "06-numbered-9",
+   "text": "Ankara Çankaya Alacaatlı Mah. 5060. Cd. No:3/22",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1202539877",
+    "number": "3/22",
+    "streetName": "5060. Cd.",
+    "streetNumber": 5060
+   }
+  },
+  {
+   "id": "06-numbered-10",
+   "text": "3159. Sk. No:1/91 Yaşamkent Mahallesi Çankaya/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1202545242",
+    "number": "1/91",
+    "streetName": "3159. Sk.",
+    "streetNumber": 3159
+   }
+  },
+  {
+   "id": "06-numbered-11",
+   "text": "Demetevler Mah. 357. Cd. 8, Yenimahalle, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405068609",
+    "number": "8",
+    "streetName": "357. Cd.",
+    "streetNumber": 357
+   }
+  },
+  {
+   "id": "06-numbered-12",
+   "text": "Ankara, Yenimahalle, Demetevler Mahallesi, 357. Cd., Kapı No: 32/D",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n12055585769",
+    "number": "32/D",
+    "streetName": "357. Cd.",
+    "streetNumber": 357
+   }
+  },
+  {
+   "id": "06-numbered-13",
+   "text": "Ankara Çankaya Birlik Mah. 448. Cadde No:10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w443727163",
+    "number": "10",
+    "streetName": "448. Cadde",
+    "streetNumber": 448
+   }
+  },
+  {
+   "id": "06-numbered-14",
+   "text": "377. Sokak No:5 Gaziosmanpaşa Mahallesi Gölbaşı/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w479354995",
+    "number": "5",
+    "streetName": "377. Sokak",
+    "streetNumber": 377
+   }
+  },
+  {
+   "id": "06-numbered-15",
+   "text": "Karapürçek Mah. 452. Cadde 7, Altındağ, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417877136",
+    "number": "7",
+    "streetName": "452. Cadde",
+    "streetNumber": 452
+   }
+  },
+  {
+   "id": "06-numbered-16",
+   "text": "Ankara, Yenimahalle, Demetevler Mahallesi, 372. Sokak, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w461329012",
+    "number": "8",
+    "streetName": "372. Sokak",
+    "streetNumber": 372
+   }
+  },
+  {
+   "id": "06-numbered-17",
+   "text": "Ankara Çankaya Alacaatlı Mah. 5060. Cd. No:3/25",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1202539882",
+    "number": "3/25",
+    "streetName": "5060. Cd.",
+    "streetNumber": 5060
+   }
+  },
+  {
+   "id": "06-numbered-18",
+   "text": "1419. Cadde No:28 Serhat Mahallesi Yenimahalle/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1567598285",
+    "number": "28",
+    "streetName": "1419. Cadde",
+    "streetNumber": 1419
+   }
+  },
+  {
+   "id": "06-numbered-19",
+   "text": "Ayyıldız Mah. 1666. Cadde 21, Etimesgut, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1412999788",
+    "number": "21",
+    "streetName": "1666. Cadde",
+    "streetNumber": 1666
+   }
+  },
+  {
+   "id": "06-numbered-20",
+   "text": "Ankara, Kahramankazan, Saray Mahallesi, 3 Nolu Cadde, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10304004424",
+    "number": "8",
+    "streetName": "3 Nolu Cadde",
+    "streetNumber": 3
+   }
+  },
+  {
+   "id": "06-numbered-21",
+   "text": "Ankara Çankaya Mutlukent Mah. 2073. Sokak No:11-13",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1138993278",
+    "number": "11-13",
+    "streetName": "2073. Sokak",
+    "streetNumber": 2073
+   }
+  },
+  {
+   "id": "06-numbered-22",
+   "text": "489. Sk No:4 Bağlarbaşı Mahallesi Keçiören/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w415225395",
+    "number": "4",
+    "streetName": "489. Sk",
+    "streetNumber": 489
+   }
+  },
+  {
+   "id": "06-numbered-23",
+   "text": "Seğmenler Mah. 961. Sokak 2/3, Gölbaşı, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w554443299",
+    "number": "2/3",
+    "streetName": "961. Sokak",
+    "streetNumber": 961
+   }
+  },
+  {
+   "id": "06-numbered-24",
+   "text": "Ankara, Altındağ, Karacaören Mahallesi, 2101. Cadde, Kapı No: 16",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4835586877",
+    "number": "16",
+    "streetName": "2101. Cadde",
+    "streetNumber": 2101
+   }
+  },
+  {
+   "id": "06-numbered-25",
+   "text": "Ankara Altındağ Karapürçek Mah. 450. Sokak No:16",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417872400",
+    "number": "16",
+    "streetName": "450. Sokak",
+    "streetNumber": 450
+   }
+  },
+  {
+   "id": "06-numbered-26",
+   "text": "2152. Cadde No:2/8 Mustafa Kemal Mahallesi Çankaya/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n12290541921",
+    "number": "2/8",
+    "streetName": "2152. Cadde",
+    "streetNumber": 2152
+   }
+  },
+  {
+   "id": "06-numbered-27",
+   "text": "Karapürçek Mah. 503. Sokak 9, Altındağ, Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417783418",
+    "number": "9",
+    "streetName": "503. Sokak",
+    "streetNumber": 503
+   }
+  },
+  {
+   "id": "06-numbered-28",
+   "text": "Ankara, Çankaya, Yaşamkent Mahallesi, 3037. Sokak, Kapı No: 3",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1493751193",
+    "number": "3",
+    "streetName": "3037. Sokak",
+    "streetNumber": 3037
+   }
+  },
+  {
+   "id": "06-numbered-29",
+   "text": "Ankara Keçiören Çaldıran Mah. 520. Sokak No:17",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w422423242",
+    "number": "17",
+    "streetName": "520. Sokak",
+    "streetNumber": 520
+   }
+  },
+  {
+   "id": "06-numbered-30",
+   "text": "757 Caddesi No:1 Gültepe Mahallesi Altındağ/Ankara",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13569818873",
+    "number": "1",
+    "streetName": "757 Caddesi",
+    "streetNumber": 757
+   }
+  },
+  {
+   "id": "06-hide-1",
+   "text": "Merkez Mah. Melikşah Caddesi 8, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1376980892",
+    "number": "8",
+    "streetName": "Melikşah Caddesi",
+    "truth": [
+     32.902016,
+     40.038258
+    ]
+   }
+  },
+  {
+   "id": "06-hide-2",
+   "text": "Bağlarbaşı Mah. Duman Sokak 15, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w413937885",
+    "number": "15",
+    "streetName": "Duman Sokak",
+    "truth": [
+     32.877948,
+     39.98767
+    ]
+   }
+  },
+  {
+   "id": "06-hide-3",
+   "text": "Kavacık Subayevleri Mah. Kemalettin Sami Paşa Caddesi 8, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w416878033",
+    "number": "8",
+    "streetName": "Kemalettin Sami Paşa Caddesi",
+    "truth": [
+     32.8691,
+     39.970061
+    ]
+   }
+  },
+  {
+   "id": "06-hide-4",
+   "text": "Turkuaz Mah. Akyatak Caddesi 4/13, Etimesgut, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1203760070",
+    "number": "4/13",
+    "streetName": "Akyatak Caddesi",
+    "truth": [
+     32.56014,
+     39.796561
+    ]
+   }
+  },
+  {
+   "id": "06-hide-5",
+   "text": "Hacı Bayram Mah. İstiklal Caddesi 10, Altındağ, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w67624849",
+    "number": "10",
+    "streetName": "İstiklal Caddesi",
+    "truth": [
+     32.852566,
+     39.939117
+    ]
+   }
+  },
+  {
+   "id": "06-hide-6",
+   "text": "Akkuzulu Mah. Akkuzulu Kümeevler Sokağı 232, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11445226316",
+    "number": "232",
+    "streetName": "Akkuzulu Kümeevler Sokağı",
+    "truth": [
+     33.137197,
+     40.21005
+    ]
+   }
+  },
+  {
+   "id": "06-hide-7",
+   "text": "Fatih Mah. Fatih Caddesi 23, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w459528038",
+    "number": "23",
+    "streetName": "Fatih Caddesi",
+    "truth": [
+     32.904343,
+     40.041709
+    ]
+   }
+  },
+  {
+   "id": "06-hide-8",
+   "text": "Aşağı Eğlence Mah. Küçükbahçe Sokağı 12, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227580265",
+    "number": "12",
+    "streetName": "Küçükbahçe Sokağı",
+    "truth": [
+     32.839557,
+     39.96948
+    ]
+   }
+  },
+  {
+   "id": "06-hide-9",
+   "text": "Aydınlıkevler Mah. Uzayan Sokak 89, Altındağ, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w422339163",
+    "number": "89",
+    "streetName": "Uzayan Sokak",
+    "truth": [
+     32.881101,
+     39.962071
+    ]
+   }
+  },
+  {
+   "id": "06-hide-10",
+   "text": "Yıldırım Beyazıt Mah. İbni Sina Caddesi 37, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w228657504",
+    "number": "37",
+    "streetName": "İbni Sina Caddesi",
+    "truth": [
+     33.039908,
+     40.211991
+    ]
+   }
+  },
+  {
+   "id": "06-hide-11",
+   "text": "Etlik Mah. Ayvalı Cad. 96, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702707",
+    "number": "96",
+    "streetName": "Ayvalı Cad.",
+    "truth": [
+     32.824942,
+     39.977586
+    ]
+   }
+  },
+  {
+   "id": "06-hide-12",
+   "text": "Kamil Ocak Mah. Felek Caddesi 47, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w413901812",
+    "number": "47",
+    "streetName": "Felek Caddesi",
+    "truth": [
+     32.881298,
+     39.984097
+    ]
+   }
+  },
+  {
+   "id": "06-hide-13",
+   "text": "Yıldırım Beyazıt Mah. Beşik Sokak 4, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w221568276",
+    "number": "4",
+    "streetName": "Beşik Sokak",
+    "truth": [
+     33.049263,
+     40.233859
+    ]
+   }
+  },
+  {
+   "id": "06-hide-14",
+   "text": "Alacaatlı Mah. Şht. Eren Bülbül Cd. 43, Çankaya, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w392715804",
+    "number": "43",
+    "streetName": "Şht. Eren Bülbül Cd.",
+    "truth": [
+     32.660265,
+     39.854158
+    ]
+   }
+  },
+  {
+   "id": "06-hide-15",
+   "text": "Emrah Mah. Basın Caddesi 162, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w424869783",
+    "number": "162",
+    "streetName": "Basın Caddesi",
+    "truth": [
+     32.847742,
+     39.977753
+    ]
+   }
+  },
+  {
+   "id": "06-hide-16",
+   "text": "Turkuaz Mah. Akyatak Caddesi 4/8, Etimesgut, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1203761006",
+    "number": "4/8",
+    "streetName": "Akyatak Caddesi",
+    "truth": [
+     32.560887,
+     39.796176
+    ]
+   }
+  },
+  {
+   "id": "06-hide-17",
+   "text": "Kuruçay Mah. Kuruçay Kümeevleri Sokağı 61, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10261394644",
+    "number": "61",
+    "streetName": "Kuruçay Kümeevleri Sokağı",
+    "truth": [
+     32.957634,
+     40.365774
+    ]
+   }
+  },
+  {
+   "id": "06-hide-18",
+   "text": "Mimar Sinan Mah. Granit Sokak 4, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1555347602",
+    "number": "4",
+    "streetName": "Granit Sokak",
+    "truth": [
+     32.900915,
+     40.052911
+    ]
+   }
+  },
+  {
+   "id": "06-hide-19",
+   "text": "Kocatepe Mah. Hatay Sokak 22, Çankaya, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225919871",
+    "number": "22",
+    "streetName": "Hatay Sokak",
+    "truth": [
+     32.858547,
+     39.917348
+    ]
+   }
+  },
+  {
+   "id": "06-hide-20",
+   "text": "Tevfik İleri Mah. Leman Sokak 4, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1555340144",
+    "number": "4",
+    "streetName": "Leman Sokak",
+    "truth": [
+     32.913888,
+     40.043728
+    ]
+   }
+  },
+  {
+   "id": "06-hide-21",
+   "text": "Karşıyaka Mah. Haymana Yolu 262, Gölbaşı, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu",
+    "truth": [
+     32.768368,
+     39.767607
+    ]
+   }
+  },
+  {
+   "id": "06-hide-22",
+   "text": "Fatih Mah. Ara Sokak 62, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak",
+    "truth": [
+     32.906462,
+     40.040049
+    ]
+   }
+  },
+  {
+   "id": "06-hide-23",
+   "text": "Şenlik Mah. Sedefçiler Sokak 20, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405664255",
+    "number": "20",
+    "streetName": "Sedefçiler Sokak",
+    "truth": [
+     32.871719,
+     39.99096
+    ]
+   }
+  },
+  {
+   "id": "06-hide-24",
+   "text": "Yıldırım Beyazıt Mah. Kerkük Sokak 3, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak",
+    "truth": [
+     33.034414,
+     40.210751
+    ]
+   }
+  },
+  {
+   "id": "06-hide-25",
+   "text": "Dodurga Mah. Güvengir Caddesi 9/20B, Çankaya, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi",
+    "truth": [
+     32.657019,
+     39.825716
+    ]
+   }
+  },
+  {
+   "id": "06-hide-26",
+   "text": "Küçükesat Mah. Esat Caddesi 141/B, Çankaya, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4517775289",
+    "number": "141/B",
+    "streetName": "Esat Caddesi",
+    "truth": [
+     32.868128,
+     39.905426
+    ]
+   }
+  },
+  {
+   "id": "06-hide-27",
+   "text": "Yayla Mah. Porsuk sok. 57, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok.",
+    "truth": [
+     32.821946,
+     39.993944
+    ]
+   }
+  },
+  {
+   "id": "06-hide-28",
+   "text": "Akkuzulu Mah. Akkuzulu Kümeevler Sokağı 43, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı",
+    "truth": [
+     33.13162,
+     40.211485
+    ]
+   }
+  },
+  {
+   "id": "06-hide-29",
+   "text": "Yücetepe Mah. İlk Sokak 32, Çankaya, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4491033290",
+    "number": "32",
+    "streetName": "İlk Sokak",
+    "truth": [
+     32.840058,
+     39.921071
+    ]
+   }
+  },
+  {
+   "id": "06-hide-30",
+   "text": "Baraj Mah. Kılıçarslan Sokağı 2F, Altındağ, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1298508540",
+    "number": "2F",
+    "streetName": "Kılıçarslan Sokağı",
+    "truth": [
+     32.902798,
+     40.014133
+    ]
+   }
+  },
+  {
+   "id": "06-hide-31",
+   "text": "Yunus Emre Mah. Mithatpaşa Sokak 5, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w272988092",
+    "number": "5",
+    "streetName": "Mithatpaşa Sokak",
+    "truth": [
+     32.889234,
+     40.031927
+    ]
+   }
+  },
+  {
+   "id": "06-hide-32",
+   "text": "Kafkas Mah. Bağcılar Sokağı 8, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w978698381",
+    "number": "8",
+    "streetName": "Bağcılar Sokağı",
+    "truth": [
+     32.849002,
+     40.035727
+    ]
+   }
+  },
+  {
+   "id": "06-hide-33",
+   "text": "Güçlükaya Mah. Kaya Sokak 24, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w414321709",
+    "number": "24",
+    "streetName": "Kaya Sokak",
+    "truth": [
+     32.872238,
+     39.986006
+    ]
+   }
+  },
+  {
+   "id": "06-hide-34",
+   "text": "Akkuzulu Mah. Akkuzulu Kümeevler Sokağı 214, Çubuk, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447084244",
+    "number": "214",
+    "streetName": "Akkuzulu Kümeevler Sokağı",
+    "truth": [
+     33.133902,
+     40.210969
+    ]
+   }
+  },
+  {
+   "id": "06-hide-35",
+   "text": "Fatih Mah. Aydos Sokak 23, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406194589",
+    "number": "23",
+    "streetName": "Aydos Sokak",
+    "truth": [
+     32.902789,
+     40.043754
+    ]
+   }
+  },
+  {
+   "id": "06-hide-36",
+   "text": "Kamil Ocak Mah. Emirdağ Sokak 18, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w416426436",
+    "number": "18",
+    "streetName": "Emirdağ Sokak",
+    "truth": [
+     32.884019,
+     39.982001
+    ]
+   }
+  },
+  {
+   "id": "06-hide-37",
+   "text": "Ayyıldız Mah. Mevlana Sokak 5, Pursaklar, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w269125286",
+    "number": "5",
+    "streetName": "Mevlana Sokak",
+    "truth": [
+     32.891082,
+     40.026692
+    ]
+   }
+  },
+  {
+   "id": "06-hide-38",
+   "text": "Aydınlıkevler Mah. Kara Ahmet Sokak 20, Altındağ, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w424704601",
+    "number": "20",
+    "streetName": "Kara Ahmet Sokak",
+    "truth": [
+     32.874405,
+     39.960994
+    ]
+   }
+  },
+  {
+   "id": "06-hide-39",
+   "text": "Tepebaşı Mah. Cuma Sokak 10, Keçiören, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408262723",
+    "number": "10",
+    "streetName": "Cuma Sokak",
+    "truth": [
+     32.8644,
+     39.991502
+    ]
+   }
+  },
+  {
+   "id": "06-hide-40",
+   "text": "Turkuaz Mah. Akyatak Caddesi 1/C, Etimesgut, Ankara",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1203758666",
+    "number": "1/C",
+    "streetName": "Akyatak Caddesi",
+    "truth": [
+     32.559602,
+     39.7979
+    ]
+   }
+  },
+  {
+   "id": "06-lang-1",
+   "text": "Karsiyaka, 262 Haymana Road floor 8 apartment 6, Golbasi/Ankara",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu"
+   }
+  },
+  {
+   "id": "06-lang-2",
+   "text": "Gölbaşı, Karşıyaka Ortsteil, Haymana Weg Nummer 262, 06919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu"
+   }
+  },
+  {
+   "id": "06-lang-3",
+   "text": "анкара гёлбашы, дорога хаймана д. 262",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu"
+   }
+  },
+  {
+   "id": "06-lang-4",
+   "text": "Δρόμος Haymana αρ. 262 όροφος 5 μπλοκ D διαμέρισμα 29, Ankara γκολμπασι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu"
+   }
+  },
+  {
+   "id": "06-lang-5",
+   "text": "حي Karşıyaka، طريق Haymana رقم 262،  ",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "n4699018055",
+    "number": "262",
+    "streetName": "Haymana Yolu"
+   }
+  },
+  {
+   "id": "06-lang-6",
+   "text": "Ara St 62, Ankara Pursaklar, 06408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-lang-7",
+   "text": "PURSAKLAR/ANKARA FATİH ORTSTEİL ARA GASSE NR. 62",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-lang-8",
+   "text": "фатих, ул. ара дом 62, анкара пурсаклар",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-lang-9",
+   "text": "Ankara πουρσακλαρ, Οδ. Ara αρ. 62",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-lang-10",
+   "text": "حي Fatih, شارع Ara رقم 62, Ankara Pursaklar",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "w1554636432",
+    "number": "62",
+    "streetName": "Ara Sokak"
+   }
+  },
+  {
+   "id": "06-lang-11",
+   "text": "Yıldırım Beyazıt Neighbourhood, 3 Kerkük Street floor 2 apartment 6, Çubuk/Ankara, 06715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak"
+   }
+  },
+  {
+   "id": "06-lang-12",
+   "text": "Ankara Çubuk Kerkük Str. Nummer 3 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak"
+   }
+  },
+  {
+   "id": "06-lang-13",
+   "text": "микрорайон йылдырым беязыт, улица керкюк 3, чубук/анкара",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak"
+   }
+  },
+  {
+   "id": "06-lang-14",
+   "text": "γειτονιά Yıldırım Beyazıt, Οδ. κερκουκ 3 όροφος 1 μπλοκ C διαμέρισμα 9, Ankara Çubuk",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak"
+   }
+  },
+  {
+   "id": "06-lang-15",
+   "text": "Yıldırım Beyazıt، شارع Kerkük رقم 3 طابق 5 بلوك A شقة 30، Çubuk/Ankara، 06497",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "w228496785",
+    "number": "3",
+    "streetName": "Kerkük Sokak"
+   }
+  },
+  {
+   "id": "06-lang-16",
+   "text": "Ankara Çankaya Dodurga Neighbourhood 9/20B Güvengir Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi"
+   }
+  },
+  {
+   "id": "06-lang-17",
+   "text": "Dodurga, Güvengir Straße Nummer 9/20B, Çankaya ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi"
+   }
+  },
+  {
+   "id": "06-lang-18",
+   "text": "анкара чанкая, микрорайон додурга, проспект гювенгир д. 9/20B корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi"
+   }
+  },
+  {
+   "id": "06-lang-19",
+   "text": "γειτονιά Dodurga, Λεωφόρος Güvengir αρ. 9/20B, Ankara Çankaya",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi"
+   }
+  },
+  {
+   "id": "06-lang-20",
+   "text": "حي Dodurga، شارع Güvengir رقم 9/20B، Ankara Çankaya",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "w1513870254",
+    "number": "9/20B",
+    "streetName": "Güvengir Caddesi"
+   }
+  },
+  {
+   "id": "06-lang-21",
+   "text": "Ankara Kecioren Yayla Mah. Porsuk sok. number 57, 06639",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok."
+   }
+  },
+  {
+   "id": "06-lang-22",
+   "text": "Yayla Viertel, Porsuk sok. Nr. 57, Keçiören Ankara, 06152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok."
+   }
+  },
+  {
+   "id": "06-lang-23",
+   "text": "кечиёрен/анкара, мкр. яйла, Porsuk sok. 57",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok."
+   }
+  },
+  {
+   "id": "06-lang-24",
+   "text": "/Ankara, Porsuk sok. 57 όροφος 7 μπλοκ D διαμέρισμα 21",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok."
+   }
+  },
+  {
+   "id": "06-lang-25",
+   "text": "حي Yayla، Porsuk sok. رقم 57،  Keçiören",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "w405272029",
+    "number": "57",
+    "streetName": "Porsuk sok."
+   }
+  },
+  {
+   "id": "06-lang-26",
+   "text": "Akkuzulu Neighbourhood, Akkuzulu Kümeevler St number 43, Çubuk/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-lang-27",
+   "text": "Cubuk, Akkuzulu Ortsteil, Akkuzulu Kumeevler Str. 43",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-lang-28",
+   "text": "чубук, ул. аккузулу кюмеэвлер д. 43 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-lang-29",
+   "text": "Çubuk Ankara Οδός Akkuzulu Kümeevler 43",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-lang-30",
+   "text": "حي Akkuzulu، شارع Akkuzulu Kümeevler رقم 43، Ankara Çubuk",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "06",
+    "osm": "n11447568972",
+    "number": "43",
+    "streetName": "Akkuzulu Kümeevler Sokağı"
+   }
+  },
+  {
+   "id": "06-hard-1",
+   "text": "Kuyu Sokağı 3 Fatih",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w428897326",
+    "number": "3",
+    "streetName": "Kuyu Sokağı"
+   }
+  },
+  {
+   "id": "06-hard-2",
+   "text": "Etlik mah Kuyuyazısı Caddesi no:40/A d:3 kat:2 Keçiören",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4584008789",
+    "number": "40/A",
+    "streetName": "Kuyuyazısı Caddesi"
+   }
+  },
+  {
+   "id": "06-hard-3",
+   "text": "Altındağ Anafartalar Caddesi no42",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11901185527",
+    "number": "42",
+    "streetName": "Anafartalar Caddesi"
+   }
+  },
+  {
+   "id": "06-hard-4",
+   "text": "5 Çarşı Caddesi Ragıp Tüzün Yenimahalle",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n12032707954",
+    "number": "5",
+    "streetName": "Çarşı Caddesi"
+   }
+  },
+  {
+   "id": "06-hard-5",
+   "text": "YUNUS EMRE FARABI CADDESI 15",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w263866487",
+    "number": "15",
+    "streetName": "Farabi Caddesi"
+   }
+  },
+  {
+   "id": "06-hard-6",
+   "text": "Pursaklar Bosna Sokak apartmanı 13 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w458895689",
+    "number": "13",
+    "streetName": "Bosna Sokak"
+   }
+  },
+  {
+   "id": "06-hard-7",
+   "text": "Maraşal Çakmak mahallesi Seven Sokak 28 nolu bina Sincan/Ankara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406760918",
+    "number": "28",
+    "streetName": "Seven Sokak"
+   }
+  },
+  {
+   "id": "06-hard-8",
+   "text": "Cevahir 8 Ayvalı Keçiören",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w227702233",
+    "number": "8",
+    "streetName": "Cevahir Sokak"
+   }
+  },
+  {
+   "id": "06-hard-9",
+   "text": "Or-n mah Yılmaz Çolpan Sokağı 27 Çankaya",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w738511464",
+    "number": "27",
+    "streetName": "Yılmaz Çolpan Sokağı"
+   }
+  },
+  {
+   "id": "06-hard-10",
+   "text": "Cihangir Cad. 9 Kavacık Subayevleri mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w421734044",
+    "number": "9",
+    "streetName": "Cihangir Cad."
+   }
+  },
+  {
+   "id": "06-hard-11",
+   "text": "Keçiören Pınarbaşı Beşiktaş Sokak 38, 34174",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w405607183",
+    "number": "38",
+    "streetName": "Beşiktaş Sokak"
+   }
+  },
+  {
+   "id": "06-hard-12",
+   "text": "Ankara Sincan Serdar Sokak 2 Maraşal Çakmak",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w409107103",
+    "number": "2",
+    "streetName": "Serdar Sokak"
+   }
+  },
+  {
+   "id": "06-poi-1",
+   "text": "Veysel Tiryaki İmam Hatip ortaokul Altındağ",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w440280079",
+    "kind": "school",
+    "streetName": "Veysel Tiryaki İmam Hatip Ortaokulu"
+   }
+  },
+  {
+   "id": "06-poi-2",
+   "text": "plevne ilkokulu sincan ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w408451744",
+    "kind": "school",
+    "streetName": "Plevne İlkokulu"
+   }
+  },
+  {
+   "id": "06-poi-3",
+   "text": "ataturk egitim ve arastirma hastanesi semt poliklinigi cankaya ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w417670214",
+    "kind": "hospital",
+    "streetName": "Atatürk Eğitim Ve Araştırma Hastanesi Semt Polikliniği"
+   }
+  },
+  {
+   "id": "06-poi-4",
+   "text": "Serdar Tosun Ortaokulu Mamak",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n11593675367",
+    "kind": "school",
+    "streetName": "Serdar Tosun Ortaokulu"
+   }
+  },
+  {
+   "id": "06-poi-5",
+   "text": "haymana belediyesi haymana ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1328914249",
+    "kind": "townhall",
+    "streetName": "Haymana Belediyesi"
+   }
+  },
+  {
+   "id": "06-poi-6",
+   "text": "Hacı Mustafa Tarman İlköğretim Okulu Keçiören Ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w385642304",
+    "kind": "school",
+    "streetName": "Hacı Mustafa Tarman İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "06-poi-7",
+   "text": "barisyolu ilkogretim okulu kecioren ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w424874383",
+    "kind": "school",
+    "streetName": "Barışyolu İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "06-poi-8",
+   "text": "ali agaoglu anaokulu kecioren ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w888180978",
+    "kind": "school",
+    "streetName": "Ali Ağaoğlu Anaokulu"
+   }
+  },
+  {
+   "id": "06-poi-9",
+   "text": "layika akbilek kiz teknik ve meslek lisesi sincan ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w226084550",
+    "kind": "school",
+    "streetName": "Layika Akbilek Kız Teknik ve Meslek Lisesi"
+   }
+  },
+  {
+   "id": "06-poi-10",
+   "text": "ozel eryaman hastane etimesgut ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w475832644",
+    "kind": "hospital",
+    "streetName": "Özel Eryaman Hastanesi"
+   }
+  },
+  {
+   "id": "06-poi-11",
+   "text": "Türk Telekom İlköğretim Okulu Çubuk",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1236289798",
+    "kind": "school",
+    "streetName": "Türk Telekom İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "06-poi-12",
+   "text": "Fatih Özcan Sabancı Mesleki ve Teknik Anadolu Lisesi Sincan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w225997490",
+    "kind": "school",
+    "streetName": "Fatih Özcan Sabancı Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "06-poi-13",
+   "text": "imkb alpaslan imam hatip ortaokul cankaya ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w458680964",
+    "kind": "school",
+    "streetName": "İMKB Alpaslan İmam Hatip Ortaokulu"
+   }
+  },
+  {
+   "id": "06-poi-14",
+   "text": "altindag belediyesi altindag ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w456937418",
+    "kind": "townhall",
+    "streetName": "Altındağ Belediyesi"
+   }
+  },
+  {
+   "id": "06-poi-15",
+   "text": "Ankara Eğitim ve Araştırma Hastanesi Hüseyingazi Semt Polikliniği Mamak Ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1262809083",
+    "kind": "hospital",
+    "streetName": "Ankara Eğitim ve Araştırma Hastanesi Hüseyingazi Semt Polikliniği"
+   }
+  },
+  {
+   "id": "06-poi-16",
+   "text": "Genel Hastane Yenimahalle",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n10077457879",
+    "kind": "hospital",
+    "streetName": "Genel Hastane"
+   }
+  },
+  {
+   "id": "06-poi-17",
+   "text": "Ümitköy Site Çarşısı Çankaya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n8727253380",
+    "kind": "mall",
+    "streetName": "Ümitköy Site Çarşısı"
+   }
+  },
+  {
+   "id": "06-poi-18",
+   "text": "pursaklar belediye binasi pursaklar ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1304661018",
+    "kind": "townhall",
+    "streetName": "Pursaklar Belediye Binası"
+   }
+  },
+  {
+   "id": "06-poi-19",
+   "text": "albir gross altindag ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1313210528",
+    "kind": "mall",
+    "streetName": "Albir Gross"
+   }
+  },
+  {
+   "id": "06-poi-20",
+   "text": "gimsa park eryaman etimesgut ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w421789879",
+    "kind": "mall",
+    "streetName": "Gimsa Park Eryaman"
+   }
+  },
+  {
+   "id": "06-poi-21",
+   "text": "ozel 19 mayis hastane cankaya ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w443137380",
+    "kind": "hospital",
+    "streetName": "Özel 19 Mayıs Hastanesi"
+   }
+  },
+  {
+   "id": "06-poi-22",
+   "text": "Özel Ankara Cerrahi Tıp Merkezi Çankaya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n4406513697",
+    "kind": "hospital",
+    "streetName": "Özel Ankara Cerrahi Tıp Merkezi"
+   }
+  },
+  {
+   "id": "06-poi-23",
+   "text": "sincan belediyesi sincan ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w226001100",
+    "kind": "townhall",
+    "streetName": "Sincan Belediyesi"
+   }
+  },
+  {
+   "id": "06-poi-24",
+   "text": "Güven Çayyolu Sağlık Kampüsü Çankaya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w387478850",
+    "kind": "hospital",
+    "streetName": "Güven Çayyolu Sağlık Kampüsü"
+   }
+  },
+  {
+   "id": "06-poi-25",
+   "text": "Dolphin AVM Etimesgut",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w192518124",
+    "kind": "mall",
+    "streetName": "Dolphin AVM"
+   }
+  },
+  {
+   "id": "06-poi-26",
+   "text": "Ankuva AVM Çankaya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w267154216",
+    "kind": "mall",
+    "streetName": "Ankuva AVM"
+   }
+  },
+  {
+   "id": "06-poi-27",
+   "text": "yelli mahallesi muhtarligi gudul ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "n13891180359",
+    "kind": "townhall",
+    "streetName": "Yelli Mahallesi Muhtarlığı"
+   }
+  },
+  {
+   "id": "06-poi-28",
+   "text": "forum ankara alisveris merkezi kecioren ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1007476424",
+    "kind": "mall",
+    "streetName": "Forum Ankara Alışveriş Merkezi"
+   }
+  },
+  {
+   "id": "06-poi-29",
+   "text": "Kazan Devlet Hastanesi Hamdi Eriş Yerleşkesi Kahramankazan Ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w406716431",
+    "kind": "hospital",
+    "streetName": "Kazan Devlet Hastanesi Hamdi Eriş Yerleşkesi"
+   }
+  },
+  {
+   "id": "06-poi-30",
+   "text": "Özel Odak Göz Hastalıkları Merkezi Sincan Ankara",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w452019864",
+    "kind": "hospital",
+    "streetName": "Özel Odak Göz Hastalıkları Merkezi"
+   }
+  },
+  {
+   "id": "06-poi-31",
+   "text": "ankara buyuksehir belediye binasi yenimahalle",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w418356134",
+    "kind": "townhall",
+    "streetName": "Ankara Büyükşehir Belediyesi"
+   }
+  },
+  {
+   "id": "06-poi-33",
+   "text": "polatli belediye binasi polatli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "06",
+    "osm": "w1269123471",
+    "kind": "townhall",
+    "streetName": "Polatlı Belediyesi"
+   }
+  }
+ ]
+}

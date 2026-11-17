@@ -1,0 +1,17 @@
+{
+  "pmtiles": {
+    "version": "1.31.2",
+    "url": "https://github.com/protomaps/go-pmtiles/releases/download/v1.31.2/go-pmtiles-1.31.2_Darwin_arm64.zip",
+    "sha256": "40528f7f616fcbf91207cd48c8fc023d213f6d86c0cbf1f748732803d1880f3d"
+  },
+  "hermes": {
+    "version": "0.13.0",
+    "url": "https://github.com/facebook/hermes/releases/download/v0.13.0/hermes-cli-darwin.tar.gz",
+    "sha256": "f16b0214f7b96eccbd47766f5a3914e847a4387649b2f6b60820d309879200bd"
+  },
+  "mlt": {
+    "version": "0.6.1",
+    "url": "https://github.com/maplibre/maplibre-tile-spec/releases/download/rust-mlt-v0.6.1/mlt-aarch64-apple-darwin.tar.gz",
+    "sha256": "e7c55a072d6b95ad25687bae1de427b43ca49343bef93dd5e5925d5b03dd0c63"
+  }
+}

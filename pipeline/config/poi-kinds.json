@@ -1,0 +1,20 @@
+{
+  "bank": [{ "amenity": "bank" }],
+  "clinic": [{ "amenity": "clinic" }],
+  "courthouse": [{ "amenity": "courthouse" }],
+  "fire_station": [{ "amenity": "fire_station" }],
+  "fuel": [{ "amenity": "fuel" }],
+  "hospital": [{ "amenity": "hospital" }],
+  "hotel": [{ "tourism": "hotel" }],
+  "mall": [{ "shop": "mall" }],
+  "mosque": [{ "amenity": "place_of_worship", "religion": "muslim" }, { "building": "mosque" }],
+  "pharmacy": [{ "amenity": "pharmacy" }],
+  "police": [{ "amenity": "police" }],
+  "post_office": [{ "amenity": "post_office" }],
+  "school": [{ "amenity": "school" }],
+  "stadium": [{ "leisure": "stadium" }],
+  "station": [{ "railway": "station" }, { "amenity": "bus_station" }, { "amenity": "ferry_terminal" }],
+  "supermarket": [{ "shop": "supermarket" }],
+  "townhall": [{ "amenity": "townhall" }],
+  "university": [{ "amenity": "university" }, { "amenity": "college" }]
+}

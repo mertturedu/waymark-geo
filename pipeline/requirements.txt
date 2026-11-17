@@ -1,0 +1,6 @@
+osmium==4.3.2
+shapely==2.2.0
+networkx==3.7
+ortools==9.15.6755
+pytest==9.1.1
+duckdb==2.0.0
