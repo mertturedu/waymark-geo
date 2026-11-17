@@ -8,12 +8,17 @@ const place = (extra: Partial<Place> = {}): Place => ({
 
 const fake = (overrides: Partial<Search> = {}): Search => ({
   resolve: async () => ({ status: 'resolved', best: place(), candidates: [place()] }),
+  lookup: async () => null, admin: async () => null,
+  validate: async () => { throw new Error('unused'); },
   autocomplete: async () => [place()],
   reverse: async () => place(),
   nearby: async () => [],
   invalidate: () => undefined,
   hoods: async () => [],
   coverage: async () => null,
+  arrival: async (p) => ({ door: p.coordinate }),
+  warm: async () => true,
+  geometry: async () => null,
   ...overrides,
 });
 

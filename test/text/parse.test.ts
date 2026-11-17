@@ -428,7 +428,7 @@ describe('review follow-ups', () => {
 
   it('joins a house number written with spaces around the slash', () => {
     expect(parsed('Moda Mah. Bahariye Cad. No: 12 / 3 Kadıköy')).toMatchObject({ houseNumber: '12/3', leftover: [] });
-    expect(parsed('Bahariye Cad. No 12 / A Kadıköy').houseNumber).toBe('12');
+    expect(parsed('Bahariye Cad. No 12 / A Kadıköy').houseNumber).toBe('12a');
   });
 
   it('reads a block named by a letter and a digit', () => {

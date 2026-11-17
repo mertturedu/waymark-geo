@@ -30,9 +30,17 @@ def names_of(tags):
     return names
 
 
+ALT_KEYS = ("alt_name", "old_name", "loc_name", "short_name", "official_name")
+
+
 def alt_names_of(tags):
-    raw = tags.get("alt_name") or ""
-    return [part.strip() for part in raw.split(";") if part.strip()]
+    found = []
+    for key in ALT_KEYS:
+        for part in (tags.get(key) or "").split(";"):
+            part = part.strip()
+            if part and part not in found:
+                found.append(part)
+    return found
 
 
 def link_parents(rows):

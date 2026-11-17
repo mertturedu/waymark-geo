@@ -7,6 +7,7 @@ export type VerifyResult = { ok: true; manifest: Manifest } | { ok: false; code:
 
 const SPKI_PREFIX = [0x30, 0x2a, 0x30, 0x05, 0x06, 0x03, 0x2b, 0x65, 0x70, 0x03, 0x21, 0x00];
 const VERSION = /^\d+\.\d+\.\d+$/;
+export const MAX_MANIFEST_FORMAT = 2;
 
 function publicKeyBytes(key: string): Uint8Array | null {
   const body = key.replace(/-----[^-]+-----/g, '');
@@ -62,7 +63,7 @@ export function inspectManifest(text: string, sdkVersion: string): VerifyResult 
   }
   if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) return { ok: false, code: 'malformed' };
   const { format, minSdk } = raw as { format?: unknown; minSdk?: unknown };
-  if (typeof format === 'number' && format > 1) return { ok: false, code: 'manifest-newer' };
+  if (typeof format === 'number' && format > MAX_MANIFEST_FORMAT) return { ok: false, code: 'manifest-newer' };
   if (typeof minSdk === 'string' && VERSION.test(minSdk) && compareVersions(minSdk, sdkVersion) > 0) return { ok: false, code: 'sdk-too-old' };
   try {
     return { ok: true, manifest: parseManifest(text) };

@@ -18,7 +18,7 @@ export type FakeEnv = {
   hash: HashPort;
   clock: ClockPort & { advance(ms: number): void };
   connectivity: ConnectivityPort & { set(kind: ConnectionKind): void };
-  server: { put(url: string, bytes: Uint8Array): void; inject(rule: Rule): void; clear(): void; log: { url: string; rangeStart: number | null; signal?: AbortSignal }[] };
+  server: { put(url: string, bytes: Uint8Array): void; read(url: string): Uint8Array; remove(url: string): void; inject(rule: Rule): void; clear(): void; log: { url: string; rangeStart: number | null; signal?: AbortSignal }[] };
 };
 
 const encode = (text: string): Uint8Array => new TextEncoder().encode(text);
@@ -182,6 +182,8 @@ export function createFakeEnv(options: { capacity?: number } = {}): FakeEnv {
     connectivity,
     server: {
       put: (url, bytes) => void served.set(url, bytes),
+      read: (url) => served.get(url) ?? new Uint8Array(),
+      remove: (url) => void [url, `${url}.sig`].forEach((key) => served.delete(key)),
       inject: (rule) => void rules.push({ ...rule }),
       clear: () => void (rules.length = 0),
       log,

@@ -1,4 +1,4 @@
-export type FileKind = 'address' | 'tiles' | 'route' | 'buildings' | 'places' | 'directory' | 'base';
+export type FileKind = 'address' | 'tiles' | 'route' | 'buildings' | 'buildings2' | 'places' | 'directory' | 'learned' | 'base';
 export type Tier = 'full' | 'basic';
 export type FileBlocks = { size: number; sha256: string[] };
 export type EncodedFile = { codec: 'zstd'; path: string; size: number; sha256: string };
@@ -15,8 +15,10 @@ export type ManifestRegion = {
   stats: { addresses: number; streets: number; neighbourhoods: number };
   files: ManifestFile[];
 };
+export const MANIFEST_FORMATS: readonly (1 | 2)[] = [1, 2];
+
 export type Manifest = {
-  format: 1;
+  format: 1 | 2;
   minSdk: string;
   osm: { file: string; time: string };
   tiles: { build: string; time: string };
@@ -24,7 +26,8 @@ export type Manifest = {
   regions: ManifestRegion[];
 };
 
-const REGION_KINDS: readonly string[] = ['address', 'tiles', 'route', 'buildings', 'places', 'directory'];
+const REGION_KINDS: readonly string[] = ['address', 'tiles', 'route', 'buildings', 'buildings2', 'places', 'directory', 'learned'];
+const KNOWN_KINDS: readonly string[] = [...REGION_KINDS, 'base'];
 const SHA = /^[0-9a-f]{64}$/;
 
 function sorted(value: unknown): unknown {
@@ -71,9 +74,10 @@ function checkPath(path: string): void {
   if (badPath(path)) fail(`yol geçersiz: ${path}`);
 }
 
-function file(value: unknown, kinds: readonly string[], seen: Set<string>): ManifestFile {
+function file(value: unknown, kinds: readonly string[], seen: Set<string>): ManifestFile | null {
   const row = object(value, 'dosya');
   const kind = text(row.kind, 'dosya türü');
+  if (!KNOWN_KINDS.includes(kind)) return null;
   if (!kinds.includes(kind)) fail(`dosya türü geçersiz: ${kind}`);
   const path = text(row.path, 'dosya yolu');
   checkPath(path);
@@ -158,11 +162,12 @@ export function parseManifest(source: string): Manifest {
     return fail('JSON okunamadı');
   }
   const root = object(raw, 'kök');
-  if (root.format !== 1) fail('biçim sürümü desteklenmiyor');
+  if (root.format !== 1 && root.format !== 2) fail('biçim sürümü desteklenmiyor');
   const osm = object(root.osm, 'osm');
   const tiles = object(root.tiles, 'tiles');
   const seen = new Set<string>();
-  const base = list(root.base, 'base').map((f) => file(f, ['base'], seen));
+  const present = <T>(item: T | null): item is T => item !== null;
+  const base = list(root.base, 'base').map((f) => file(f, ['base'], seen)).filter(present);
   const ids = new Set<string>();
   const regions = list(root.regions, 'regions').map((value): ManifestRegion => {
     const row = object(value, 'bölge');
@@ -175,7 +180,7 @@ export function parseManifest(source: string): Manifest {
     for (const [lang, name] of Object.entries(names)) text(name, `ad ${lang}`);
     if (!('tr' in names)) fail('Türkçe ad yok');
     const stats = object(row.stats, 'sayılar');
-    const files = list(row.files, 'dosyalar').map((f) => file(f, REGION_KINDS, seen));
+    const files = list(row.files, 'dosyalar').map((f) => file(f, REGION_KINDS, seen)).filter(present);
     if (tier === 'basic' && files.some((f) => f.kind === 'buildings')) fail(`basic bölgede buildings dosyası olamaz: ${id}`);
     return {
       id,
@@ -188,7 +193,7 @@ export function parseManifest(source: string): Manifest {
     };
   });
   return {
-    format: 1,
+    format: root.format as 1 | 2,
     minSdk: text(root.minSdk, 'minSdk', /^\d+\.\d+\.\d+$/),
     osm: { file: text(osm.file, 'osm dosyası'), time: text(osm.time, 'osm zamanı') },
     tiles: { build: text(tiles.build, 'karo derlemesi', /^\d{8}$/), time: text(tiles.time, 'karo zamanı') },

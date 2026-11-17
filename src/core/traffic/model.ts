@@ -9,26 +9,32 @@ const DAY_MS = 86_400_000;
 const MAX_SLOWDOWN = 0.75;
 
 const PROFILE: Record<DayKind, number[]> = {
+  weekday: [0.1, 0.04, 0.03, 0.03, 0.02, 0.1, 0.32, 0.66, 0.82, 0.71, 0.62, 0.61, 0.62, 0.61, 0.68, 0.74, 0.8, 0.91, 1, 0.82, 0.51, 0.33, 0.26, 0.18, 0.1],
+  saturday: [0.16, 0.06, 0.03, 0.02, 0.03, 0.09, 0.17, 0.23, 0.32, 0.43, 0.51, 0.57, 0.66, 0.75, 0.79, 0.8, 0.77, 0.78, 0.79, 0.69, 0.5, 0.4, 0.39, 0.33, 0.16],
+  sunday: [0.22, 0.07, 0.02, 0.02, 0.02, 0.07, 0.09, 0.09, 0.1, 0.12, 0.16, 0.22, 0.34, 0.47, 0.57, 0.61, 0.61, 0.6, 0.59, 0.52, 0.4, 0.37, 0.34, 0.22, 0.22],
+};
+
+const MAP_PROFILE: Record<DayKind, number[]> = {
   weekday: [0.02, 0.01, 0.01, 0.01, 0.03, 0.08, 0.25, 0.6, 0.95, 0.85, 0.5, 0.4, 0.45, 0.5, 0.5, 0.55, 0.7, 0.95, 1, 0.85, 0.55, 0.3, 0.15, 0.06, 0.02],
   saturday: [0.04, 0.02, 0.02, 0.01, 0.01, 0.02, 0.05, 0.1, 0.18, 0.28, 0.38, 0.45, 0.5, 0.52, 0.52, 0.52, 0.52, 0.5, 0.45, 0.38, 0.3, 0.22, 0.12, 0.06, 0.04],
   sunday: [0.03, 0.02, 0.01, 0.01, 0.01, 0.01, 0.02, 0.04, 0.07, 0.12, 0.18, 0.24, 0.28, 0.3, 0.3, 0.3, 0.32, 0.35, 0.35, 0.3, 0.22, 0.14, 0.08, 0.04, 0.03],
 };
 
 const CLASS_SLOWDOWN: Record<RoadClass, number> = {
-  motorway: 0.8,
-  motorway_link: 0.65,
-  trunk: 0.75,
-  trunk_link: 0.6,
-  primary: 0.65,
-  primary_link: 0.55,
-  secondary: 0.5,
-  secondary_link: 0.45,
-  tertiary: 0.3,
-  tertiary_link: 0.28,
-  unclassified: 0.15,
-  residential: 0.1,
-  living_street: 0.05,
-  service: 0.08,
+  motorway: 0.334,
+  motorway_link: 0.271,
+  trunk: 0.313,
+  trunk_link: 0.251,
+  primary: 0.271,
+  primary_link: 0.23,
+  secondary: 0.209,
+  secondary_link: 0.188,
+  tertiary: 0.125,
+  tertiary_link: 0.117,
+  unclassified: 0.063,
+  residential: 0.042,
+  living_street: 0.021,
+  service: 0.033,
   ferry: 0,
 };
 
@@ -44,13 +50,15 @@ export function localTime(at: number): { hour: number; day: DayKind } {
   return { hour: into / 3_600_000, day: weekday === 6 ? 'saturday' : weekday === 0 ? 'sunday' : 'weekday' };
 }
 
-export function congestion(at: number): number {
+function curveAt(tables: Record<DayKind, number[]>, at: number): number {
   const { hour, day } = localTime(at);
-  const table = PROFILE[day];
+  const table = tables[day];
   const low = Math.floor(hour);
   const share = hour - low;
   return (table[low] as number) * (1 - share) + (table[low + 1] as number) * share;
 }
+
+export const congestion = (at: number): number => curveAt(PROFILE, at);
 
 export const regionBusyness = (plate: string): number => BUSY[plate] ?? DEFAULT_BUSY;
 
@@ -60,7 +68,15 @@ export const slowdownOf = (cls: RoadClass, at: number, busyness: number): number
 
 export const slowdownOfIndex = (classIndex: number, at: number, busyness: number): number => slowdownOf(ROAD_CLASSES[classIndex] ?? 'residential', at, busyness);
 
-export const mapSlowdown = (kind: MapRoadKind, at: number, busyness: number): number => bound(congestion(at) * MAP_SLOWDOWN[kind] * busyness);
+const TOP_CLASS_SLOWDOWN = CLASS_SLOWDOWN.motorway;
+
+export const observedSlowdownOf = (cls: RoadClass, observed: number): number => bound((observed * CLASS_SLOWDOWN[cls]) / TOP_CLASS_SLOWDOWN);
+
+const MAP_CLASS: Record<MapRoadKind, RoadClass> = { highway: 'motorway', major_road: 'secondary', medium_road: 'tertiary', minor_road: 'residential' };
+
+export const observedMapSlowdown = (kind: MapRoadKind, observed: number): number => observedSlowdownOf(MAP_CLASS[kind], observed);
+
+export const mapSlowdown = (kind: MapRoadKind, at: number, busyness: number): number => bound(curveAt(MAP_PROFILE, at) * MAP_SLOWDOWN[kind] * busyness);
 
 export type TrafficBand = 'smooth' | 'busy' | 'heavy' | 'jam';
 

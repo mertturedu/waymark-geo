@@ -57,12 +57,12 @@ export type PackManager = {
   idle(): Promise<void>;
 };
 
-const MANIFEST_PATH = 'manifest-v1.json';
-const SIGNATURE_PATH = 'manifest-v1.json.sig';
+const MANIFEST_V1 = 'manifest-v1.json';
+const MANIFEST_V2 = 'manifest-v2.json';
 const PARALLEL_FILES = 8;
 const PARALLEL_BELOW_BYTES = 1_000_000;
 const BREATHE_AFTER_MS = 12;
-const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory'];
+const DEFAULT_PARTS: PartKind[] = ['address', 'tiles', 'places', 'directory', 'buildings2', 'learned'];
 const SPACE_MARGIN = 1.2;
 const BASE_ID = '@base';
 
@@ -89,6 +89,8 @@ const noop = (): void => undefined;
 export async function createPackManager(env: PackEnv, config: PackConfig): Promise<PackManager> {
   const { fs, net, hash, clock, connectivity } = env;
   const baseUrl = config.manifestUrl.slice(0, config.manifestUrl.lastIndexOf('/'));
+  const named = config.manifestUrl.slice(config.manifestUrl.lastIndexOf('/') + 1);
+  const sources: { url: string; path: string }[] = named === MANIFEST_V1 ? [{ url: `${baseUrl}/${MANIFEST_V2}`, path: MANIFEST_V2 }, { url: config.manifestUrl, path: MANIFEST_V1 }] : [{ url: config.manifestUrl, path: named === MANIFEST_V2 ? MANIFEST_V2 : MANIFEST_V1 }];
   const urlOf = (path: string): string => `${baseUrl}/${path.split('/').map(encodeURIComponent).join('/')}`;
 
   const loaded = await loadState(fs);
@@ -191,13 +193,18 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
   };
 
   const readStoredManifest = async (): Promise<void> => {
-    const text = await fs.readText(MANIFEST_PATH);
-    const signature = await fs.readText(SIGNATURE_PATH);
-    if (text === null || signature === null) return;
-    const sameKeys = state.checked !== null && state.checked.keys.length === config.publicKeys.length && state.checked.keys.every((key, index) => key === config.publicKeys[index]);
-    const unchanged = sameKeys && (await hash.sha256File(MANIFEST_PATH)) === state.checked?.manifest && (await hash.sha256File(SIGNATURE_PATH)) === state.checked?.signature;
-    const result = unchanged ? inspectManifest(text, config.sdkVersion) : verifyManifest({ text, signature, publicKeys: config.publicKeys, sdkVersion: config.sdkVersion });
-    if (result.ok) current = { manifest: result.manifest, text };
+    for (const source of sources) {
+      const text = await fs.readText(source.path);
+      const signature = await fs.readText(`${source.path}.sig`);
+      if (text === null || signature === null) continue;
+      const sameKeys = state.checked !== null && state.checked.keys.length === config.publicKeys.length && state.checked.keys.every((key, index) => key === config.publicKeys[index]);
+      const unchanged = sameKeys && (await hash.sha256File(source.path)) === state.checked?.manifest && (await hash.sha256File(`${source.path}.sig`)) === state.checked?.signature;
+      const result = unchanged ? inspectManifest(text, config.sdkVersion) : verifyManifest({ text, signature, publicKeys: config.publicKeys, sdkVersion: config.sdkVersion });
+      if (result.ok) {
+        current = { manifest: result.manifest, text };
+        return;
+      }
+    }
   };
 
   await readStoredManifest();
@@ -574,12 +581,17 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     if (options.minIntervalMs !== undefined && state.checkedAt !== undefined && clock.now() - state.checkedAt < options.minIntervalMs) {
       return { ok: true, updates: Object.keys(state.regions).filter((id) => outdated(id)).sort(), diff: null, skipped: true };
     }
-    let body: { status: number; text: string };
-    let signature: { status: number; text: string };
+    let body: { status: number; text: string } = { status: 404, text: '' };
+    let signature: { status: number; text: string } = { status: 200, text: '' };
+    let used = sources[sources.length - 1] as (typeof sources)[number];
     try {
-      body = await net.getText(config.manifestUrl);
-      if (body.status === 200) signature = await net.getText(`${config.manifestUrl}.sig`);
-      else signature = { status: 200, text: '' };
+      for (const source of sources) {
+        used = source;
+        body = await net.getText(source.url);
+        if (body.status === 200) signature = await net.getText(`${source.url}.sig`);
+        else signature = { status: 200, text: '' };
+        if (body.status !== 404 || source === sources[sources.length - 1]) break;
+      }
     } catch {
       return { ok: false, code: 'network' };
     }
@@ -590,15 +602,15 @@ export async function createPackManager(env: PackEnv, config: PackConfig): Promi
     const result = verifyManifest({ text: body.text, signature: signature.text, publicKeys: config.publicKeys, sdkVersion: config.sdkVersion });
     if (!result.ok) return { ok: false, code: result.code };
     try {
-      await fs.writeAtomic(SIGNATURE_PATH, signature.text);
-      await fs.writeAtomic(MANIFEST_PATH, body.text);
+      await fs.writeAtomic(`${used.path}.sig`, signature.text);
+      await fs.writeAtomic(used.path, body.text);
     } catch (error) {
       return { ok: false, code: isPackError(error) ? error.code : 'storage' };
     }
     const previous = current?.manifest ?? null;
     current = { manifest: result.manifest, text: body.text };
     try {
-      state = { ...state, checkedAt: clock.now(), checked: { manifest: await hash.sha256File(MANIFEST_PATH), signature: await hash.sha256File(SIGNATURE_PATH), keys: [...config.publicKeys] } };
+      state = { ...state, checkedAt: clock.now(), checked: { manifest: await hash.sha256File(used.path), signature: await hash.sha256File(`${used.path}.sig`), keys: [...config.publicKeys] } };
       await persist();
     } catch {
       state = { ...state, checked: null };

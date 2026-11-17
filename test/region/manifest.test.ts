@@ -62,6 +62,40 @@ describe('the places overlay file kind', () => {
   });
 });
 
+describe('manifest format 2 and kinds this SDK does not know', () => {
+  it('reads format 2 and keeps it', () => {
+    const m = valid();
+    (m as { format: number }).format = 2;
+    expect(parseManifest(serializeManifest(m)).format).toBe(2);
+  });
+
+  it('skips a file of a kind it does not know, in the base list and in a region, and keeps the rest', () => {
+    const m = valid();
+    const text = JSON.parse(serializeManifest(m));
+    text.base.push({ kind: 'video', path: 'base-1/v.bin', size: 1, sha256: 'a'.repeat(64) });
+    text.regions[0].files.push({ kind: 'holograms', path: '34/holograms-1.bin', size: 1, sha256: 'b'.repeat(64) });
+    const parsed = parseManifest(JSON.stringify(text));
+    expect(parsed.base).toEqual(m.base);
+    expect(parsed.regions[0]?.files).toEqual(m.regions[0]?.files);
+  });
+
+  it('reads the learned kind in a region', () => {
+    const m = valid();
+    const text = JSON.parse(serializeManifest(m));
+    text.regions[0].files.push({ kind: 'learned', path: '34/learned-1.sqlite', size: 5, sha256: 'd'.repeat(64) });
+    expect(parseManifest(JSON.stringify(text)).regions[0]?.files.map((f) => f.kind)).toContain('learned');
+  });
+
+  it('reads the buildings2 kind in a full or a basic region', () => {
+    const m = valid();
+    const text = JSON.parse(serializeManifest(m));
+    text.regions[0].files.push({ kind: 'buildings2', path: '34/buildings2-1.sqlite', size: 5, sha256: 'c'.repeat(64) });
+    expect(parseManifest(JSON.stringify(text)).regions[0]?.files.some((f) => f.kind === 'buildings2')).toBe(true);
+    text.regions[0].tier = 'basic';
+    expect(parseManifest(JSON.stringify(text)).regions[0]?.files.some((f) => f.kind === 'buildings2')).toBe(true);
+  });
+});
+
 describe('serializeManifest and parseManifest', () => {
   it('write keys in sorted order with a closing newline and read back the same manifest', () => {
     const text = serializeManifest(valid());
@@ -86,7 +120,7 @@ describe('serializeManifest and parseManifest', () => {
     ['text that is not JSON', () => 'oops', /^manifest: JSON okunamadı$/],
     ['an array', () => '[]', /^manifest: kök nesne olmalı$/],
     ['null', () => 'null', /^manifest: kök nesne olmalı$/],
-    ['another format', () => edit((m) => (m.format = 2)), /^manifest: biçim sürümü desteklenmiyor$/],
+    ['another format', () => edit((m) => (m.format = 3 as never)), /^manifest: biçim sürümü desteklenmiyor$/],
     ['no format', () => edit((m) => delete m.format), /^manifest: biçim sürümü desteklenmiyor$/],
     ['a short minSdk', () => edit((m) => (m.minSdk = '1.0')), /^manifest: minSdk geçersiz$/],
     ['a minSdk with a fourth part', () => edit((m) => (m.minSdk = '1.0.0.0')), /^manifest: minSdk geçersiz$/],
@@ -107,7 +141,6 @@ describe('serializeManifest and parseManifest', () => {
     ['files that are not a list', () => edit((m) => (m.regions[0].files = {})), /^manifest: dosyalar dizi olmalı$/],
     ['a file that is not an object', () => edit((m) => (m.base = ['x'])), /^manifest: dosya nesne olmalı$/],
     ['a file with no kind', () => edit((m) => delete m.base[0].kind), /^manifest: dosya türü geçersiz$/],
-    ['an unknown file kind', () => edit((m) => (m.base[0].kind = 'video')), /^manifest: dosya türü geçersiz: video$/],
     ['a base kind in a region', () => edit((m) => (m.regions[0].files[0].kind = 'base')), /^manifest: dosya türü geçersiz: base$/],
     ['an address kind in the base list', () => edit((m) => (m.base[0].kind = 'address')), /^manifest: dosya türü geçersiz: address$/],
     ['an empty path', () => edit((m) => (m.base[0].path = '')), /^manifest: dosya yolu geçersiz$/],

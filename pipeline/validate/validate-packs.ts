@@ -15,6 +15,11 @@ import { readPatchIndex } from '../../src/core/packs/patch';
 import { parseManifest, type Box, type ManifestFile, type ManifestRegion } from '../../src/core/region/manifest';
 import { APPLICATION_ID, FORMAT_VERSION } from '../build/address-pack';
 import { APPLICATION_ID as BUILDING_APPLICATION_ID, BUILDING_FORMAT, CELL_E6 } from '../build/building-pack';
+import { BUILDING2_APPLICATION_ID, namedBuildings } from '../build/building-pack-v2';
+import { BUILDING_FORMAT_V2 } from '../../src/core/address/buildings2';
+import { auditLearned } from './learned-audit';
+import { MANIFEST_V1_KINDS, MANIFEST_V2_MIN_SDK } from '../build/manifest';
+import { compareVersions } from '../../src/core/packs/verify';
 import { CENTROID_MIN } from '../build/building-select';
 import { createReader } from '../../src/core/region/geom';
 import { createSearcher } from '../../src/core/route/ch-query';
@@ -257,6 +262,64 @@ function checkBuildings(path: string, region: ManifestRegion, add: (level: 'erro
   }
 }
 
+const BUILDING2_MIN_LEVELS = 1;
+const BUILDING2_MAX_LEVELS = 200;
+const CHAIN_MISSING_SHARE = 0.001;
+
+function checkBuildings2(path: string, region: ManifestRegion, addressPath: string | null, add: (level: 'error' | 'warn', message: string) => void): number {
+  let db: DatabaseSync;
+  try {
+    db = new DatabaseSync(path, { readOnly: true });
+  } catch (error) {
+    add('error', `SQLite açılamadı: ${String(error)}`);
+    return 0;
+  }
+  try {
+    const all = (sql: string): Rows => db.prepare(sql).all() as Rows;
+    const one = (sql: string): Record<string, unknown> => (all(sql)[0] ?? {}) as Record<string, unknown>;
+    const integrity = String((one('PRAGMA integrity_check') as { integrity_check: string }).integrity_check);
+    if (integrity !== 'ok') add('error', `SQLite bütünlük denetimi: ${integrity.slice(0, 200)}`);
+    if (Number(one('PRAGMA user_version').user_version) !== Number(BUILDING_FORMAT_V2)) add('error', 'user_version beklenen sürümde değil');
+    if (Number(one('PRAGMA application_id').application_id) !== BUILDING2_APPLICATION_ID) add('error', 'application_id beklenen değerde değil');
+    const meta = new Map(all('SELECT k, v FROM meta').map((r) => [String(r.k), String(r.v)]));
+    if (meta.get('format') !== BUILDING_FORMAT_V2) add('error', `biçim sürümü beklenen değil: ${String(meta.get('format'))}`);
+    if (meta.get('province') !== region.id) add('error', `il uyuşmuyor (dosya ${String(meta.get('province'))}, bölge ${region.id})`);
+    const total = Number(one('SELECT COUNT(*) AS n FROM building').n);
+    if (total === 0) add('error', 'parçada hiç bina yok');
+    if (Number(meta.get('buildings')) !== total) add('error', `bina sayısı uyuşmuyor (meta ${String(meta.get('buildings'))}, tablo ${total})`);
+    const box = region.bbox;
+    const outside = Number(one(`SELECT COUNT(*) AS n FROM building WHERE lon < ${Math.round((box[0] - BOX_PAD) * 1e6)} OR lon > ${Math.round((box[2] + BOX_PAD) * 1e6)} OR lat < ${Math.round((box[1] - BOX_PAD) * 1e6)} OR lat > ${Math.round((box[3] + BOX_PAD) * 1e6)}`).n);
+    if (outside > 0) add('error', `${outside} bina bölgenin dışında`);
+    const badLevels = Number(one(`SELECT COUNT(*) AS n FROM building WHERE levels < ${BUILDING2_MIN_LEVELS} OR levels > ${BUILDING2_MAX_LEVELS} OR lsrc NOT BETWEEN 1 AND 4 OR area <= 0 OR length(ring) = 0`).n);
+    if (badLevels > 0) add('error', `${badLevels} binada kat sayısı, kaynak, alan ya da çizgi geçersiz`);
+    const orphans = Number(one('SELECT COUNT(*) AS n FROM entrance WHERE building NOT IN (SELECT id FROM building)').n);
+    if (orphans > 0) add('error', `${orphans} giriş olmayan bir binaya bağlı`);
+    if (all("SELECT name FROM sqlite_schema WHERE type = 'table' AND name = 'building_name'").length > 0) {
+      const expected = namedBuildings(all('SELECT name FROM building WHERE name IS NOT NULL ORDER BY id').map((r) => ({ trace: { name: String(r.name) } }))).length;
+      const written = Number(one('SELECT COUNT(*) AS n FROM building_name').n);
+      const stray = Number(one('SELECT COUNT(*) AS n FROM building_name WHERE id NOT IN (SELECT id FROM building)').n);
+      if (stray > 0) add('error', `${stray} bina adı olmayan bir binaya bağlı`);
+      if (written > expected) add('error', `bina adı tablosu beklenenden büyük (${written} > ${expected})`);
+    }
+    const cellless = Number(one('SELECT COUNT(*) AS n FROM building_cell').n);
+    if (cellless === 0) add('error', 'hücre dizini boş');
+    if (addressPath !== null && existsSync(addressPath)) {
+      const chains = all('SELECT DISTINCT chain FROM building WHERE chain IS NOT NULL').map((r) => Number(r.chain));
+      const address = new DatabaseSync(addressPath, { readOnly: true });
+      try {
+        const known = new Set((address.prepare('SELECT id FROM street_name').all() as { id: number }[]).map((r) => r.id));
+        const missing = chains.filter((id) => !known.has(id)).length;
+        if (chains.length > 0 && missing / chains.length > CHAIN_MISSING_SHARE) add('error', `${missing} / ${chains.length} sokak zinciri adres paketinde yok (paketler aynı adres paketinden kurulmamış)`);
+      } finally {
+        address.close();
+      }
+    }
+    return cellless;
+  } finally {
+    db.close();
+  }
+}
+
 const ROUTE_PAIRS = 12;
 
 function checkRoute(path: string, region: ManifestRegion, add: (level: 'error' | 'warn', message: string) => void): number {
@@ -300,27 +363,44 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
   const findings: Finding[] = [];
   const summary: Record<string, number> = { regions: 0, files: 0, bytes: 0, addressRows: 0, addressInHoodPolygon: 1, independentChecked: 0 };
   const report = (where: string) => (level: 'error' | 'warn', message: string): void => void findings.push({ level, where, message });
-  const manifestPath = join(root, 'manifest-v1.json');
-  if (!existsSync(manifestPath)) {
+  const v1Path = join(root, 'manifest-v1.json');
+  const v2Path = join(root, 'manifest-v2.json');
+  if (!existsSync(v1Path)) {
     report('manifest-v1.json')('error', 'manifest-v1.json yok');
     return { findings, summary };
   }
-  const text = readFileSync(manifestPath, 'utf8');
-  let manifest;
-  try {
-    manifest = parseManifest(text);
-  } catch (error) {
-    report('manifest-v1.json')('error', String(error));
-    return { findings, summary };
+  const readManifest = (name: string, path: string) => {
+    const text = readFileSync(path, 'utf8');
+    let parsed;
+    try {
+      parsed = parseManifest(text);
+    } catch (error) {
+      report(name)('error', String(error));
+      return null;
+    }
+    if (options.publicKeyPem === undefined) report(name)('warn', 'açık anahtar paketin yanından okundu, güvenilir değil');
+    try {
+      const key = options.publicKeyPem ?? readFileSync(join(root, 'dev-public-key.pem'), 'utf8');
+      const signature = Buffer.from(readFileSync(`${path}.sig`, 'utf8').trim(), 'base64');
+      if (!verify(null, Buffer.from(text), createPublicKey(key), signature)) report(name)('error', 'imza geçersiz');
+    } catch {
+      report(name)('error', 'imza okunamadı ya da açık anahtar yok');
+    }
+    return parsed;
+  };
+  const first = readManifest('manifest-v1.json', v1Path);
+  if (!first) return { findings, summary };
+  const second = existsSync(v2Path) ? readManifest('manifest-v2.json', v2Path) : null;
+  if (first.format !== 1) report('manifest-v1.json')('error', 'manifest-v1.json biçimi 1 olmalı');
+  if (first.regions.some((r) => r.files.some((f) => !MANIFEST_V1_KINDS.includes(f.kind)))) report('manifest-v1.json')('error', 'manifest-v1.json yalnız eski türleri içerebilir (eski SDK yeni türde kırılıyordu)');
+  if (second) {
+    if (second.format !== 2) report('manifest-v2.json')('error', 'manifest-v2.json biçimi 2 olmalı');
+    if (compareVersions(second.minSdk, MANIFEST_V2_MIN_SDK) < 0) report('manifest-v2.json')('error', `minSdk ${MANIFEST_V2_MIN_SDK} altında`);
+    const fingerprints = new Map(second.regions.flatMap((r) => r.files.map((f) => [`${r.id}/${f.kind}`, `${f.path}:${f.sha256}`] as const)));
+    for (const r of first.regions) for (const f of r.files) if (fingerprints.get(`${r.id}/${f.kind}`) !== `${f.path}:${f.sha256}`) report('manifest-v2.json')('error', `${r.id} ${f.kind} dosyası v1 ile v2 arasında farklı ya da v2'de yok`);
+    if (JSON.stringify(first.base) !== JSON.stringify(second.base)) report('manifest-v2.json')('error', 'taban dosyaları v1 ile v2 arasında farklı');
   }
-  if (options.publicKeyPem === undefined) report('manifest-v1.json')('warn', 'açık anahtar paketin yanından okundu, güvenilir değil');
-  try {
-    const key = options.publicKeyPem ?? readFileSync(join(root, 'dev-public-key.pem'), 'utf8');
-    const signature = Buffer.from(readFileSync(`${manifestPath}.sig`, 'utf8').trim(), 'base64');
-    if (!verify(null, Buffer.from(text), createPublicKey(key), signature)) report('manifest-v1.json')('error', 'imza geçersiz');
-  } catch {
-    report('manifest-v1.json')('error', 'imza okunamadı ya da açık anahtar yok');
-  }
+  const manifest = second ?? first;
 
   const listed = new Set<string>();
   const sound = new Set<string>();
@@ -370,7 +450,7 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
       if (file.encoded.size >= file.size) addEncoded('warn', 'sıkıştırılmış dosya asıl dosyadan küçük değil');
     }
   }
-  for (const path of listFiles(root)) if (!listed.has(path) && !['manifest-v1.json', 'manifest-v1.json.sig', 'dev-public-key.pem'].includes(path)) report(path)('warn', `manifestte olmayan dosya: ${path}`);
+  for (const path of listFiles(root)) if (!listed.has(path) && !['manifest-v1.json', 'manifest-v1.json.sig', 'manifest-v2.json', 'manifest-v2.json.sig', 'dev-public-key.pem'].includes(path)) report(path)('warn', `manifestte olmayan dosya: ${path}`);
 
   summary.regions = manifest.regions.length;
   let checked = 0;
@@ -396,6 +476,13 @@ export async function validatePacks(root: string, options: ValidateOptions = {})
       summary.routeEdges = (summary.routeEdges ?? 0) + checkRoute(full, region, add);
     } else if (file.kind === 'buildings' && region) {
       summary.buildingCells = (summary.buildingCells ?? 0) + checkBuildings(full, region, add);
+    } else if (file.kind === 'buildings2' && region) {
+      const addressFile = region.files.find((f) => f.kind === 'address');
+      summary.buildings2Cells = (summary.buildings2Cells ?? 0) + checkBuildings2(full, region, addressFile ? join(root, addressFile.path) : null, add);
+    } else if (file.kind === 'learned' && region) {
+      const audit = auditLearned(full, region.id, region.bbox);
+      for (const message of audit.errors) add('error', message);
+      summary.learnedDoors = (summary.learnedDoors ?? 0) + audit.counts.doors;
     } else if (file.kind === 'tiles' && region) {
       await checkTiles(full, region.bbox, run, add);
     } else if (file.path.endsWith('.pmtiles')) {

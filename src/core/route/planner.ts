@@ -3,12 +3,12 @@ import { edgeLine, type RoutePack } from './format';
 import { sameEdgeCost, sourceLabels, targetLabels, type ArcLabel } from './labels';
 import { join, reverse, slice } from './line';
 import { createMatrixSolver, type Matrix } from './matrix';
-import { snapPoint, type Snap, type SnapResult } from './snap';
+import { snapPoint, type Prefer, type Snap, type SnapResult } from './snap';
 
 export type RouteLeg = { durationDs: number; distanceM: number; line: number[]; arcs: number[] };
 
 export type Planner = {
-  snap(lng: number, lat: number): SnapResult;
+  snap(lng: number, lat: number, prefer?: Prefer): SnapResult;
   route(from: Snap, to: Snap): RouteLeg | null;
   matrix(from: ReadonlyArray<Snap>, to: ReadonlyArray<Snap>): Matrix;
 };
@@ -36,7 +36,7 @@ export function createPlanner(pack: RoutePack): Planner {
   };
 
   return {
-    snap: (lng, lat) => snapPoint(pack, lng, lat),
+    snap: (lng, lat, prefer) => snapPoint(pack, lng, lat, prefer),
 
     route(from, to) {
       const here = direct(from, to);

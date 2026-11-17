@@ -28,7 +28,7 @@ export function createManagedPackStore(config: { manager: PackManager; opener: (
     });
   };
 
-  const KINDS = ['address', 'buildings', 'directory'] as const;
+  const KINDS = ['address', 'buildings', 'buildings2', 'directory', 'learned'] as const;
   const seen = new Map<string, string | null>();
   const snapshot = (): void => {
     for (const plate of manager.installedRegions()) for (const kind of KINDS) seen.set(keyOf(plate, kind), manager.installedFile(plate, kind));
@@ -67,7 +67,7 @@ export function createManagedPackStore(config: { manager: PackManager; opener: (
   };
   manager.subscribe(sync);
 
-  const openKind = async (plate: string, kind: 'address' | 'buildings' | 'directory'): Promise<SqlDb | null> => {
+  const openKind = async (plate: string, kind: 'address' | 'buildings' | 'buildings2' | 'directory' | 'learned'): Promise<SqlDb | null> => {
     const path = manager.installedFile(plate, kind);
     if (!path) return null;
     const key = keyOf(plate, kind);

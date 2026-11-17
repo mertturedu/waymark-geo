@@ -1,17 +1,17 @@
 import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { parseFlags } from '../../scripts/data-release';
+import { mayPromote, parseFlags } from '../../scripts/data-release';
 import { planPublish } from '../../scripts/data-publish';
 import { latestRelease } from '../../scripts/release-lib';
 
 describe('release flags', () => {
   it('defaults to the 12 provinces and promotes the release', () => {
-    expect(parseFlags([])).toEqual({ regions: '12il', keepSources: false, allowStale: false, approveRegressions: false, promote: true });
+    expect(parseFlags([])).toEqual({ skipWeekly: false, regions: '12il', keepSources: false, allowStale: false, approveRegressions: false, promote: true });
   });
 
   it('reads every flag', () => {
-    expect(parseFlags(['--regions=all', '--pbf', 'a.pbf', '--allow-stale', '--approve-regressions', '--no-promote'])).toEqual({ regions: 'all', pbf: 'a.pbf', keepSources: false, allowStale: true, approveRegressions: true, promote: false });
+    expect(parseFlags(['--regions=all', '--pbf', 'a.pbf', '--allow-stale', '--approve-regressions', '--no-promote'])).toEqual({ skipWeekly: false, regions: 'all', pbf: 'a.pbf', keepSources: false, allowStale: true, approveRegressions: true, promote: false });
     expect(parseFlags(['--keep-sources', '--revision', '2'])).toMatchObject({ keepSources: true, revision: 2 });
     expect(parseFlags(['--revision', '1'])).not.toHaveProperty('revision');
     expect(parseFlags(['--revision', 'x'])).not.toHaveProperty('revision');
@@ -43,5 +43,18 @@ describe('release archive', () => {
     expect(planPublish(dir)).toMatchObject({ tag: '20261029.20261030', total: 24 });
     expect(planPublish(dir, '20261020.20261022')?.files.map((f) => f.path)).toEqual(['34/address.sqlite', 'manifest-v1.json']);
     expect(planPublish(dir, 'yok')).toBeNull();
+  });
+});
+
+describe('mayPromote', () => {
+  it('haftalık ölçüm ya da veri karşılaştırması kalırsa yayın durur, onayla geçer', () => {
+    expect(mayPromote({ comparisonFailed: false, weeklyFailed: false, approve: false })).toBe(true);
+    expect(mayPromote({ comparisonFailed: false, weeklyFailed: true, approve: false })).toBe(false);
+    expect(mayPromote({ comparisonFailed: true, weeklyFailed: false, approve: false })).toBe(false);
+    expect(mayPromote({ comparisonFailed: true, weeklyFailed: true, approve: true })).toBe(true);
+  });
+
+  it('--skip-weekly bayrağını okur', () => {
+    expect(parseFlags(['--skip-weekly']).skipWeekly).toBe(true);
   });
 });

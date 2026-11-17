@@ -1,4 +1,6 @@
-import { regionBusyness, slowdownOfIndex } from '../traffic/model';
+import { bandOf, observedSlowdownOf, regionBusyness, slowdownOfIndex, type TrafficBand } from '../traffic/model';
+import type { Sampler } from '../traffic/istanbul';
+import { ROAD_CLASSES } from './speeds';
 import { FLAG, type RoutePack } from './format';
 import { join } from './line';
 import type { Planner, RouteLeg } from './planner';
@@ -15,19 +17,50 @@ const MIN_GAIN = 0.95;
 const MAX_VIA_SNAP_M = 200;
 const MIN_DELAY_SHARE = 0.12;
 
+export type BandSpan = { band: TrafficBand; from: number; to: number };
+
 export type TrafficLeg = { leg: RouteLeg; freeFlowDs: number; delayDs: number; detour: boolean };
 
-export function delayDs(pack: RoutePack, arcs: ReadonlyArray<number>, durationDs: number, at: number, busyness: number): number {
-  const { flags, travel } = pack.edges;
+function arcSlowdown(pack: RoutePack, pa: number, at: number, busyness: number, sample: Sampler | null): number {
+  const { flags, tail, head } = pack.edges;
+  const edge = pa >> 1;
+  const index = (flags[edge] as number) >> FLAG.classShift;
+  if (sample === null) return slowdownOfIndex(index, at, busyness);
+  const { lon, lat } = pack.base;
+  const a = tail[edge] as number;
+  const b = head[edge] as number;
+  const seen = sample(((lat[a] as number) + (lat[b] as number)) / (2 * MICRO), ((lon[a] as number) + (lon[b] as number)) / (2 * MICRO));
+  return seen === null ? slowdownOfIndex(index, at, busyness) : observedSlowdownOf(ROAD_CLASSES[index] ?? 'residential', seen);
+}
+
+export function delayDs(pack: RoutePack, arcs: ReadonlyArray<number>, durationDs: number, at: number, busyness: number, sample: Sampler | null = null): number {
+  const { travel } = pack.edges;
   const last = arcs.length - 1;
   let delay = 0;
   for (let i = 0; i <= last; i++) {
     const pa = arcs[i] as number;
-    const slow = slowdownOfIndex((flags[pa >> 1] as number) >> FLAG.classShift, at, busyness);
+    const slow = arcSlowdown(pack, pa, at, busyness, sample);
     const weight = arcs.length === 1 ? durationDs : i === 0 || i === last ? (travel[pa] as number) * 0.5 : (travel[pa] as number);
     delay += weight * (1 / (1 - slow) - 1);
   }
   return Math.round(delay);
+}
+
+export function bandSpans(pack: RoutePack, arcs: ReadonlyArray<number>, at: number, busyness: number, sample: Sampler | null = null): BandSpan[] {
+  const { length } = pack.edges;
+  const lengths = arcs.map((pa) => Math.max(1, length[pa >> 1] as number));
+  const total = lengths.reduce((sum, value) => sum + value, 0);
+  const spans: BandSpan[] = [];
+  let start = 0;
+  arcs.forEach((pa, index) => {
+    const band = bandOf(arcSlowdown(pack, pa, at, busyness, sample));
+    const end = start + (lengths[index] as number);
+    const last = spans[spans.length - 1];
+    if (last && last.band === band) last.to = end / total;
+    else spans.push({ band, from: start / total, to: end / total });
+    start = end;
+  });
+  return spans;
 }
 
 function pointAt(line: number[], share: number): [number, number] {
@@ -62,9 +95,9 @@ function viaPoints(base: RouteLeg, from: Snap, to: Snap): [number, number][] {
   });
 }
 
-export function trafficLeg(pack: RoutePack, planner: Planner, from: Snap, to: Snap, base: RouteLeg, at: number, region: string): TrafficLeg {
+export function trafficLeg(pack: RoutePack, planner: Planner, from: Snap, to: Snap, base: RouteLeg, at: number, region: string, sample: Sampler | null = null): TrafficLeg {
   const busyness = regionBusyness(region);
-  const baseDelay = delayDs(pack, base.arcs, base.durationDs, at, busyness);
+  const baseDelay = delayDs(pack, base.arcs, base.durationDs, at, busyness, sample);
   const stay: TrafficLeg = { leg: base, freeFlowDs: base.durationDs, delayDs: baseDelay, detour: false };
   const index = baseDelay / Math.max(1, base.durationDs);
   if (index < MIN_DELAY_SHARE || base.distanceM < 2000) return stay;
@@ -80,7 +113,7 @@ export function trafficLeg(pack: RoutePack, planner: Planner, from: Snap, to: Sn
     const distanceM = first.distanceM + second.distanceM;
     if (distanceM > base.distanceM * MAX_DISTANCE_STRETCH || durationDs > base.durationDs * MAX_TIME_STRETCH) continue;
     const arcs = [...first.arcs, ...second.arcs];
-    const delay = delayDs(pack, arcs, durationDs, at, busyness);
+    const delay = delayDs(pack, arcs, durationDs, at, busyness, sample);
     if (durationDs + delay < (best.freeFlowDs + best.delayDs) * (best === stay ? MIN_GAIN : 1)) best = { leg: { durationDs, distanceM, line: join([first.line, second.line]), arcs }, freeFlowDs: durationDs, delayDs: delay, detour: true };
   }
   return best;

@@ -3,6 +3,7 @@ import { EXACT_LIMIT, solveExact } from './exact';
 import { solveHeuristic } from './heuristic';
 import type { Problem } from './problem';
 import { feasibleOrder, obeys, type Rules } from './rules';
+import type { Arrival } from '../route/arrival';
 import { MAX_STOPS, type PlanDeps, type PlanLeg, type PlanRequest, type PlanResult, type PlanWarning, type StopInput, type Unreachable } from './types';
 
 const SAME_SPOT = 1e-5;
@@ -41,7 +42,7 @@ function check(request: PlanRequest): PlanResult | null {
   return null;
 }
 
-type Node = { id: string; point: LngLat; followers: string[] };
+type Node = { id: string; point: LngLat; followers: string[]; arrive?: Arrival };
 
 export async function planStops(request: PlanRequest, deps: PlanDeps): Promise<PlanResult> {
   const invalid = check(request);
@@ -79,7 +80,7 @@ export async function planStops(request: PlanRequest, deps: PlanDeps): Promise<P
       merged.push({ id: stop.id, into: twin.id });
       continue;
     }
-    const node: Node = { id: stop.id, point: stop.point, followers: [] };
+    const node: Node = { id: stop.id, point: stop.point, followers: [], ...(stop.arrive ? { arrive: stop.arrive } : {}) };
     atSpot.set(key, node);
     nodes.push(node);
   }
@@ -97,7 +98,8 @@ export async function planStops(request: PlanRequest, deps: PlanDeps): Promise<P
   let usable: Node[] = sorted;
 
   if (pointsForMatrix.length >= 2) {
-    const result = await deps.matrix(pointsForMatrix, vehicleOption);
+    const arrives = [...(startPoint ? [undefined] : []), ...sorted.map((n) => n.arrive)];
+    const result = await deps.matrix(pointsForMatrix, { ...vehicleOption, ...(arrives.some((a) => a !== undefined) ? { arrives } : {}) });
     if (!result.ok) {
       if (result.code === 'START_OUTSIDE_REGION' || result.code === 'PACK_DAMAGED') return { ok: false, code: result.code };
       return { ok: false, code: 'ROUTE_FAILED', detail: result.code };
@@ -234,11 +236,11 @@ export async function planStops(request: PlanRequest, deps: PlanDeps): Promise<P
   } else {
     order.push(...head.followers);
   }
-  const visits: { id: string; point: LngLat }[] = [];
+  const visits: { id: string; point: LngLat; arrive?: Arrival }[] = [];
   for (const index of sequence) {
     const node = usable[index] as Node;
     order.push(node.id, ...node.followers);
-    visits.push({ id: node.id, point: node.point });
+    visits.push({ id: node.id, point: node.point, ...(node.arrive ? { arrive: node.arrive } : {}) });
   }
 
   const legs: PlanLeg[] = [];
@@ -246,12 +248,12 @@ export async function planStops(request: PlanRequest, deps: PlanDeps): Promise<P
   let totalDurationS = 0;
   let previous: { id: string | null; point: LngLat } | null = startPoint ? { id: startIsStop ? (startStopId as string) : null, point: startPoint } : null;
   const closing = endKind === 'return' && startPoint ? { id: startIsStop ? (startStopId as string) : null, point: startPoint } : null;
-  const targets: { id: string | null; point: LngLat }[] = [...visits, ...(closing && visits.length > 0 ? [{ id: closing.id, point: closing.point }] : [])];
+  const targets: { id: string | null; point: LngLat; arrive?: Arrival }[] = [...visits, ...(closing && visits.length > 0 ? [{ id: closing.id, point: closing.point }] : [])];
   for (const target of targets) {
     if (previous) {
-      const route = await deps.route(previous.point, target.point, vehicleOption);
+      const route = await deps.route(previous.point, target.point, { ...vehicleOption, ...(target.arrive ? { arrive: target.arrive } : {}) });
       if (!route.ok) return { ok: false, code: 'ROUTE_FAILED', detail: route.code };
-      legs.push({ from: previous.id, to: target.id, distanceM: route.distanceM, durationS: route.durationS, geometry: route.geometry });
+      legs.push({ from: previous.id, to: target.id, distanceM: route.distanceM, durationS: route.durationS, geometry: route.geometry, ...(route.arrival ? { arrival: route.arrival } : {}) });
       totalDistanceM += route.distanceM;
       totalDurationS += route.durationS;
       if (route.approximate) approximate = true;

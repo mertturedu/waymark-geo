@@ -2,7 +2,7 @@ import type { FileKind } from '../region/manifest';
 import type { FsPort } from './ports';
 
 export type InstalledFile = { path: string; size: number; sha256: string };
-export type PartKind = Extract<FileKind, 'address' | 'tiles' | 'buildings' | 'places' | 'directory' | 'route'>;
+export type PartKind = Extract<FileKind, 'address' | 'tiles' | 'buildings' | 'buildings2' | 'places' | 'directory' | 'learned' | 'route'>;
 export type RegionRecord = { version: string; files: Partial<Record<PartKind, InstalledFile>> };
 export type PackState = {
   v: 1;
@@ -16,7 +16,7 @@ export type PackState = {
 
 export const STATE_PATH = 'state.json';
 export const BACKUP_PATH = 'state.json.bak';
-export const PART_KINDS: readonly PartKind[] = ['address', 'tiles', 'buildings', 'places', 'directory', 'route'];
+export const PART_KINDS: readonly PartKind[] = ['address', 'tiles', 'buildings', 'buildings2', 'places', 'directory', 'learned', 'route'];
 
 const SHA = /^[0-9a-f]{64}$/;
 const PLATE = /^\d{2}$/;

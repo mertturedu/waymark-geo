@@ -10,6 +10,7 @@ import { formatParsed } from './try-parse';
 import { planCommands } from './try-plan';
 import { routeCommands } from './try-route';
 import { searchCommands } from './try-search';
+import { voiceCommands } from './try-voice';
 
 export type TryCommands = Record<string, (args: string[]) => Promise<void>>;
 
@@ -29,6 +30,7 @@ export const commands: TryCommands = {
   ...searchCommands(openSearch),
   ...routeCommands(openRoute),
   ...planCommands(openRoute),
+  ...voiceCommands(),
   async parse(args) {
     const json = args.includes('--json');
     const parsed = parseAddress(args.filter((arg) => arg !== '--json').join(' '));

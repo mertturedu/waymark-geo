@@ -8,6 +8,9 @@ import { createBorders, type Borders } from '../../src/core/region/borders';
 import { validatePacks } from '../validate/validate-packs';
 import { buildAddressPack, type PackStats } from './address-pack';
 import { buildBuildingPack } from './building-pack';
+import { buildBuildingPack2 } from './building-pack2';
+import { loadOfficial, loadSeeds, writeNationalRows } from './admin-national-step';
+import { writeDerivedStreetNames } from './street-names-step';
 import { buildDirectoryPack } from './directory';
 import { PACK_OPTIONS, graphOptionsFor, parseRoadRows } from './route-graph';
 import { buildRoutePack, routeFormat, routeMinSdk } from './route-pack';
@@ -182,12 +185,16 @@ export function buildSteps(input: StepInput): Step[] {
   const placesKey = digest({ textKey, code: fingerprint(repoRoot, [...extract(['extract_places.py']), 'pipeline/config/poi-kinds.json']) });
   const binalarKey = digest({ boundaryKey, priority, code: fingerprint(repoRoot, extract(['extract_buildings.py'])) });
   const businessKey = digest({ boundaryKey, plates, release: overtureRelease(), code: fingerprint(repoRoot, ['pipeline/extract/overture_places.py', 'pipeline/extract/chains.py', 'pipeline/extract/osm_chains.py', 'pipeline/extract/place_names.py', 'pipeline/extract/osm_names.py', 'pipeline/extract/building_index.py', 'src/native/map/abbreviate.ts', 'src/native/map/chains.json', 'pipeline/build/overture.ts', 'pipeline/build/places-annotate.ts', 'src/native/map/poi-glyphs.ts', 'pipeline/config/overture.json']), pbf: input.pbf });
-  const directoryKey = digest({ businessKey, code: fingerprint(repoRoot, ['pipeline/build/directory.ts', 'pipeline/build/directory-read.ts', 'pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'src/core/geo/distance.ts']) });
+  const directoryKey = digest({ businessKey, code: fingerprint(repoRoot, ['pipeline/build/directory.ts', 'pipeline/build/directory-read.ts', 'pipeline/build/address-pack.ts', 'pipeline/data/category-groups-model.json', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'src/core/geo/distance.ts']) });
   const roadsKey = digest({ osm, plates, boundaryKey, code: fingerprint(repoRoot, extract(['extract_roads.py', 'road_rules.py'])) });
   const format = routeFormat();
   const routeKey = digest({ roadsKey, format, code: fingerprint(repoRoot, ['pipeline/build/route-graph.ts', 'pipeline/build/route-turns.ts', 'pipeline/build/route-ch.ts', 'pipeline/build/route-scc.ts', 'pipeline/build/route-pack.ts', 'src/core/route', 'src/core/geo/distance.ts', 'src/core/region/data/borders.bin']) });
   const routeBorders = (): Borders => createBorders(readFileSync(join(repoRoot, 'src', 'core', 'region', 'data', 'borders.bin')));
-  const packKey = digest({ addressesKey, streetsKey, placesKey, code: fingerprint(repoRoot, ['pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'pipeline/config/poi-kinds.json']) });
+  const unnamedKey = digest({ boundaryKey, plates, pbf: input.pbf, code: fingerprint(repoRoot, extract(['extract_unnamed_roads.py', 'assign.py', 'common.py'])) });
+  const namesKey = digest({ unnamedKey, businessKey, streetsKey, addressesKey, code: fingerprint(repoRoot, ['pipeline/build/street-names.ts', 'pipeline/build/street-names-step.ts', 'src/core/text', 'src/core/address/names.ts']) });
+  const traceKey = digest({ boundaryKey, plates, release: overtureRelease(), pbf: input.pbf, code: fingerprint(repoRoot, extract(['extract_building_traces.py', 'extract_osm_building_tags.py', 'assign.py', 'common.py'])) });
+  const nationalKey = digest({ traceKey, code: fingerprint(repoRoot, ['pipeline/build/admin-national.ts', 'pipeline/build/admin-national-step.ts', 'pipeline/build/sid.ts', 'pipeline/data/official', 'src/core/text', 'src/core/address/names.ts']) });
+  const packKey = digest({ nationalKey, addressesKey, streetsKey, placesKey, namesKey, code: fingerprint(repoRoot, ['pipeline/build/address-pack.ts', 'src/core/text', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', 'pipeline/config/poi-kinds.json']) });
   const tilesKey = digest({ build: sources.tilesBuild, plates, boundaryKey, code: fingerprint(repoRoot, ['pipeline/build/tiles.ts']) });
   const pruned = pruneEnabled();
   const pruneKey = digest({ tilesKey, businessKey, packKey, pruned, code: fingerprint(repoRoot, ['pipeline/build/tile-prune.ts', 'pipeline/build/tile-usage.ts', 'pipeline/build/mvt.ts', 'pipeline/build/pmtiles-file.ts', 'src/native/map', 'node_modules/@protomaps/basemaps/package.json', 'node_modules/@maplibre/maplibre-gl-style-spec/package.json']) });
@@ -213,6 +220,48 @@ export function buildSteps(input: StepInput): Step[] {
   }
   steps.push(
     {
+      name: 'işletmeler',
+      key: businessKey,
+      async run() {
+        await buildOverturePlaces({ release: overtureRelease(), plates, workDir, cacheDir: join(repoRoot, 'pipeline', 'data', 'overture'), python: input.python, script: script('overture_places.py'), borders: join(workDir, 'borders.jsonl'), pbf: input.pbf, run: input.run, log: input.log });
+      },
+    },
+    {
+      name: 'adsız yollar',
+      key: unnamedKey,
+      run: () => python('extract_unnamed_roads.py', [input.pbf, adminFull, hoods, join(workDir, 'unnamed'), '--provinces', plates.join(',')]),
+    },
+    {
+      name: 'sokak adları',
+      key: namesKey,
+      async run() {
+        for (const plate of plates) {
+          const stats = writeDerivedStreetNames(workDir, plate);
+          if (stats.derived > 0) input.log?.(`sokak adı ${plate}: ${stats.derived} / ${stats.unnamed} adsız yola ad verildi`);
+        }
+      },
+    },
+    {
+      name: 'bina izleri',
+      key: traceKey,
+      async run() {
+        await python('extract_osm_building_tags.py', [input.pbf, join(workDir, 'building-tags')]);
+        await python('extract_building_traces.py', [join(repoRoot, 'pipeline', 'data', 'overture', overtureRelease()), adminFull, join(workDir, 'building-traces'), '--provinces', plates.join(',')]);
+      },
+    },
+    {
+      name: 'ulusal omurga',
+      key: nationalKey,
+      async run() {
+        const official = loadOfficial(repoRoot);
+        const seeds = loadSeeds(workDir);
+        for (const plate of plates) {
+          const stats = await writeNationalRows({ workDir, plate, official, seeds });
+          input.log?.(`ulusal omurga ${plate}: ${stats.units} yeni birim`);
+        }
+      },
+    },
+    {
       name: 'adres paketleri',
       key: packKey,
       async run() {
@@ -220,6 +269,16 @@ export function buildSteps(input: StepInput): Step[] {
           mkdirSync(join(workDir, 'packs', plate), { recursive: true });
           const stats = await buildAddressPack({ province: plate, workDir, outFile: join(workDir, 'packs', plate, 'address.sqlite'), osmTimestamp: sources.osmTimestamp });
           writeAtomic(join(workDir, 'packs', plate, 'stats.json'), JSON.stringify(stats));
+        }
+      },
+    },
+    {
+      name: 'bina paketleri 2',
+      key: digest({ boundaryKey, plates, packKey, businessKey, release: overtureRelease(), pbf: input.pbf, code: fingerprint(repoRoot, ['pipeline/build/building-pack2.ts', 'pipeline/build/building-pack-v2.ts', 'pipeline/build/building-link.ts', 'pipeline/build/building-numbers.ts', 'pipeline/build/unnamed-roads.ts', 'pipeline/build/hood-index.ts', 'pipeline/build/street-names.ts', 'src/core/address/sequence.ts', 'src/core/address/buildings2.ts', 'src/core/region/geom.ts', 'src/core/geo/cells.ts', ...extract(['extract_building_traces.py', 'extract_osm_building_tags.py'])]) }),
+      async run() {
+        for (const plate of plates) {
+          const result = buildBuildingPack2({ province: plate, workDir, addressFile: join(workDir, 'packs', plate, 'address.sqlite'), outFile: join(workDir, 'packs', plate, 'buildings2.sqlite'), osmTimestamp: sources.osmTimestamp });
+          if (result.written) input.log?.(`bina paketi 2 ${plate}: ${result.buildings} bina, ${result.linked} bağlı, ${result.entrances} giriş, ${result.bytes} bayt`);
         }
       },
     },
@@ -237,13 +296,6 @@ export function buildSteps(input: StepInput): Step[] {
           },
         ]
       : []),
-    {
-      name: 'işletmeler',
-      key: businessKey,
-      async run() {
-        await buildOverturePlaces({ release: overtureRelease(), plates, workDir, cacheDir: join(repoRoot, 'pipeline', 'data', 'overture'), python: input.python, script: script('overture_places.py'), borders: join(workDir, 'borders.jsonl'), pbf: input.pbf, run: input.run, log: input.log });
-      },
-    },
     {
       name: 'rehber paketleri',
       key: directoryKey,
@@ -335,6 +387,7 @@ export function buildSteps(input: StepInput): Step[] {
               { kind: 'address' as const, source: join(workDir, 'packs', plate, 'address.sqlite') },
               { kind: 'tiles' as const, source: files.tiles(plate) },
               ...(PRIORITY_PLATES.includes(plate) && existsSync(join(workDir, 'packs', plate, 'buildings.sqlite')) ? [{ kind: 'buildings' as const, source: join(workDir, 'packs', plate, 'buildings.sqlite') }] : []),
+              ...(existsSync(join(workDir, 'packs', plate, 'buildings2.sqlite')) ? [{ kind: 'buildings2' as const, source: join(workDir, 'packs', plate, 'buildings2.sqlite') }] : []),
               ...(existsSync(files.places(plate)) ? [{ kind: 'places' as const, source: files.places(plate) }] : []),
               ...(existsSync(join(workDir, 'packs', plate, 'directory.sqlite')) ? [{ kind: 'directory' as const, source: join(workDir, 'packs', plate, 'directory.sqlite') }] : []),
               ...(existsSync(join(workDir, 'packs', plate, 'route.bin')) ? [{ kind: 'route' as const, source: join(workDir, 'packs', plate, 'route.bin') }] : []),
@@ -357,6 +410,9 @@ export function buildSteps(input: StepInput): Step[] {
   return steps;
 }
 
-export async function runBuild(input: StepInput & { markers?: string; force?: boolean }): Promise<BuildResult> {
-  return runSteps(buildSteps({ ...input, run: input.run ?? defaultRunner }), { markers: input.markers ?? join(input.workDir, '.markers'), force: input.force, log: input.log });
+export const ADDRESS_STEPS = ['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'işletmeler', 'adsız yollar', 'sokak adları', 'bina izleri', 'ulusal omurga', 'adres paketleri', 'bina paketleri', 'bina paketleri 2'];
+
+export async function runBuild(input: StepInput & { markers?: string; force?: boolean; only?: string[] }): Promise<BuildResult> {
+  const steps = buildSteps({ ...input, run: input.run ?? defaultRunner }).filter((step) => !input.only || input.only.includes(step.name));
+  return runSteps(steps, { markers: input.markers ?? join(input.workDir, '.markers'), force: input.force, log: input.log });
 }

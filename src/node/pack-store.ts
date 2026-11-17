@@ -27,7 +27,7 @@ export async function createNodePackStore(packsDir: string): Promise<PackStore> 
   const manifestPath = join(packsDir, 'manifest-v1.json');
   if (!existsSync(manifestPath)) throw new Error(`${manifestPath} yok`);
   const manifest = parseManifest(readFileSync(manifestPath, 'utf8'));
-  const fileOf = (region: string, kind: 'address' | 'buildings' | 'directory'): string | null => {
+  const fileOf = (region: string, kind: 'address' | 'buildings' | 'directory' | 'learned'): string | null => {
     const path = manifest.regions.find((r) => r.id === region)?.files.find((f) => f.kind === kind)?.path;
     return path && existsSync(join(packsDir, path)) ? join(packsDir, path) : null;
   };
@@ -42,7 +42,8 @@ export async function createNodePackStore(packsDir: string): Promise<PackStore> 
       const file = addressFile(region);
       return file ? openSqlite(file) : null;
     },
-    async openPart(region: string, kind: 'buildings' | 'directory'): Promise<SqlDb | null> {
+    async openPart(region: string, kind: 'buildings' | 'directory' | 'buildings2' | 'learned'): Promise<SqlDb | null> {
+      if (kind === 'buildings2') return null;
       const file = fileOf(region, kind);
       return file ? openSqlite(file) : null;
     },

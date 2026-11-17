@@ -4,7 +4,7 @@ import { existsSync, linkSync, mkdirSync, readFileSync, readdirSync as list, rmS
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assemblePacks, type RegionInput } from '../pipeline/build/manifest';
-import { buildSteps, encodeInput, pruneEnabled, pruneInput, resolvePlates, runSteps, tileFiles, type Step } from '../pipeline/build/orchestrate';
+import { ADDRESS_STEPS, buildSteps, encodeInput, pruneEnabled, pruneInput, resolvePlates, runSteps, tileFiles, type Step } from '../pipeline/build/orchestrate';
 import { encodeAll, tileFormat } from '../pipeline/build/tile-encode';
 import { pruneBuild } from '../pipeline/build/tile-prune';
 import { PRIORITY_PLATES, buildBasePack, buildProvinceTiles, defaultRunner } from '../pipeline/build/tiles';
@@ -118,4 +118,18 @@ export async function runDeterminism(sources: Sources, log: (line: string) => vo
   rmSync(stageB, { recursive: true, force: true });
   const tilesCompared = PRIORITY_PLATES.filter((plate) => existsSync(join(first, `${tileDir}${plate}.pmtiles`)) && existsSync(join(second, `${tileDir}${plate}.pmtiles`))).length;
   return { ...tree, bordersEqual, manifestsEqual, tilesCompared };
+}
+
+const ADDRESS_COMPARED = /^(packs\/\d{2}\/(address|buildings2|buildings)\.sqlite|(street-names|unnamed|building-traces|building-tags)\/.+)$/;
+
+export async function runAddressDeterminism(sources: Sources, log: (line: string) => void = () => undefined): Promise<TreeComparison> {
+  const first = join(repoRoot, 'dist', 'work', sources.osmFile.slice(7, 13));
+  const second = `${first}-adres2`;
+  rmSync(second, { recursive: true, force: true });
+  mkdirSync(second, { recursive: true });
+  const plates = resolvePlates('all');
+  const steps = buildSteps({ plates, sources, workDir: second, outDir: join(second, 'unused'), pbf: join(repoRoot, 'pipeline', 'data', sources.osmFile), python: join(repoRoot, 'pipeline', '.venv', 'bin', 'python'), run: defaultRunner, repoRoot, bordersOut: join(second, 'borders.bin'), log }).filter((s) => ADDRESS_STEPS.includes(s.name));
+  const built = await runSteps(steps, { markers: join(second, '.markers'), force: true, log });
+  if (!built.ok) throw new Error(`ikinci adres kurulumu kırıldı: ${built.failed?.name}: ${built.failed?.message}`);
+  return compareTrees(first, second, (path) => ADDRESS_COMPARED.test(path));
 }

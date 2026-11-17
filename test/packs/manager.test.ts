@@ -23,7 +23,7 @@ describe('first run', () => {
     expect(manager.regions().map((r) => r.id)).toEqual(['06', '34', '35']);
     expect(world.env.fs.files.has('manifest-v1.json')).toBe(true);
     expect(world.env.fs.files.has('manifest-v1.json.sig')).toBe(true);
-    expect(requested(world)).toEqual(['manifest-v1.json', 'manifest-v1.json.sig']);
+    expect(requested(world)).toEqual(['manifest-v2.json', 'manifest-v1.json', 'manifest-v1.json.sig']);
   });
 
   it('shows every region as none before anything is installed', async () => {
@@ -129,7 +129,7 @@ describe('download', () => {
   it('fetches the manifest by itself when none is stored yet', async () => {
     const { world, manager } = await setup();
     await manager.download('06', { parts: ['address'] });
-    expect(requested(world)[0]).toBe('manifest-v1.json');
+    expect(requested(world).slice(0, 2)).toEqual(['manifest-v2.json', 'manifest-v1.json']);
   });
 
   it('fails with network when the manifest cannot be fetched and nothing is stored', async () => {
@@ -205,7 +205,7 @@ describe('failures leave nothing half installed', () => {
 
   it.each([
     ['a bad signature', (w: World) => w.publish({ tamper: true }), 'signature'],
-    ['a newer manifest format', (w: World) => w.publish({ format: 2 }), 'manifest-newer'],
+    ['a newer manifest format', (w: World) => w.publish({ format: 3 }), 'manifest-newer'],
     ['an SDK that is too old', (w: World) => w.publish({ minSdk: '9.0.0' }), 'sdk-too-old'],
   ])('refuses %s and keeps the stored manifest and the install', async (_name, publish, code) => {
     const { world, manager } = await setup();
@@ -228,7 +228,7 @@ describe('failures leave nothing half installed', () => {
 
   it('answers http-404 and http for bad manifest responses', async () => {
     const { world, manager } = await setup();
-    world.env.server.inject({ effect: { kind: 'status', status: 404 }, times: 1 });
+    world.env.server.inject({ effect: { kind: 'status', status: 404 }, times: 2 });
     expect(await manager.checkUpdates()).toEqual({ ok: false, code: 'http-404' });
     world.env.server.inject({ effect: { kind: 'status', status: 503 }, times: 1 });
     expect(await manager.checkUpdates()).toEqual({ ok: false, code: 'http' });

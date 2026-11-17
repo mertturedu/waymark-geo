@@ -96,6 +96,6 @@ export function dueCue(toNextM: number, spoken: number): number | null {
 export function cueText(step: DirectionStep, toNextM: number, level: number, lang: string): string {
   if (level >= CUES_M.length - 1) return step.action;
   const dist = formatDistance(toNextM, lang);
-  if (step.kind === 'arrive') return t(lang, 'turn.arrive-in', { dist });
+  if (step.kind === 'arrive') return t(lang, step.side === 'left' ? 'turn.arrive-in-left' : step.side === 'right' ? 'turn.arrive-in-right' : 'turn.arrive-in', { dist });
   return t(lang, 'turn.in', { dist, action: step.action });
 }

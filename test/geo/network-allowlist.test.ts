@@ -10,7 +10,7 @@ const envOf = (world: World): GeoEnv => ({ fs: world.env.fs, net: world.env.net,
 function allowed(world: World): Set<string> {
   const manifestPaths = world.regions.flatMap((r) => Object.keys(r.parts).map((kind) => `${world.baseUrl}/${world.pathOf(r.id, kind as 'address')}`));
   const base = Object.keys(world.base).map((rel) => `${world.baseUrl}/base-20261022/${rel}`);
-  return new Set([world.manifestUrl, `${world.manifestUrl}.sig`, ...manifestPaths, ...base]);
+  return new Set([world.manifestUrl, `${world.manifestUrl}.sig`, world.manifestV2Url, `${world.manifestV2Url}.sig`, ...manifestPaths, ...base]);
 }
 
 describe('network use (K5.6)', () => {
@@ -64,7 +64,7 @@ describe('network use (K5.6)', () => {
     const geo = await createGeo(world.config, envOf(world));
     expect(await geo.regions.checkUpdates()).toEqual({ ok: false, code: 'malformed' });
     await expect(geo.regions.download('34')).rejects.toBeDefined();
-    expect(world.env.server.log.map((r) => r.url).every((u) => u === world.manifestUrl || u === `${world.manifestUrl}.sig`)).toBe(true);
+    expect(world.env.server.log.map((r) => r.url).every((u) => [world.manifestUrl, `${world.manifestUrl}.sig`, world.manifestV2Url, `${world.manifestV2Url}.sig`].includes(u))).toBe(true);
     void blob;
     await geo.dispose();
   });

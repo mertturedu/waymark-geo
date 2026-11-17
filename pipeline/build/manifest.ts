@@ -3,6 +3,7 @@ import { createHash, createPrivateKey, createPublicKey, generateKeyPairSync, sig
 import { copyFileSync, createReadStream, existsSync, linkSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join, relative } from 'node:path';
+import { compareVersions } from '../../src/core/packs/verify';
 import { MLT_SUFFIX, serializeManifest, type Box, type EncodedFile, type FileBlocks, type Manifest, type ManifestFile, type ManifestRegion, type Tier } from '../../src/core/region/manifest';
 import { revisionSuffix, type Sources } from '../../scripts/fetch-sources';
 import { blocksOf } from './blocks';
@@ -15,11 +16,13 @@ export type RegionInput = {
   names: Record<string, string>;
   bbox: Box;
   stats: { addresses: number; streets: number; neighbourhoods: number };
-  files: { kind: 'address' | 'tiles' | 'route' | 'buildings' | 'places' | 'directory'; source: string }[];
+  files: { kind: 'address' | 'tiles' | 'route' | 'buildings' | 'buildings2' | 'places' | 'directory' | 'learned'; source: string }[];
 };
 
 export const defaultKeyDir = (): string => join(homedir(), '.yuksi-geo');
-const EXTENSION: Record<string, string> = { address: 'sqlite', tiles: 'pmtiles', route: 'bin', buildings: 'sqlite', places: 'pmtiles', directory: 'sqlite' };
+const EXTENSION: Record<string, string> = { address: 'sqlite', tiles: 'pmtiles', route: 'bin', buildings: 'sqlite', buildings2: 'sqlite', learned: 'sqlite', places: 'pmtiles', directory: 'sqlite' };
+export const MANIFEST_V1_KINDS: readonly string[] = ['address', 'tiles', 'route', 'buildings', 'places', 'directory'];
+export const MANIFEST_V2_MIN_SDK = '0.8.0';
 
 export function ensureDevKey(dir: string): { publicKeyPem: string; created: boolean } {
   mkdirSync(dir, { recursive: true, mode: 0o700 });
@@ -58,7 +61,7 @@ function listFiles(root: string, dir = root): string[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => (entry.isDirectory() ? listFiles(root, join(dir, entry.name)) : [relative(root, join(dir, entry.name)).split('\\').join('/')]));
 }
 
-export const ZSTD_KINDS = new Set(['address', 'buildings', 'directory', 'route']);
+export const ZSTD_KINDS = new Set(['address', 'buildings', 'buildings2', 'directory', 'learned', 'route']);
 export const ZSTD_LEVEL = 19;
 export const ZSTD_KEEP_BELOW = 0.9;
 
@@ -158,21 +161,27 @@ export async function assemblePacks(input: { outDir: string; sources: Sources; r
     }
   }
 
-  const manifest: Manifest = {
-    format: 1,
-    minSdk: input.minSdk,
+  const manifestOf = (format: 1 | 2, minSdk: string, kept: (kind: string) => boolean): Manifest => ({
+    format,
+    minSdk,
     osm: { file: input.sources.osmFile, time: input.sources.osmTimestamp },
     tiles: { build: input.sources.tilesBuild, time: input.sources.tilesOsmTime },
     base,
-    regions,
-  };
-  const text = serializeManifest(manifest);
+    regions: regions.map((r) => ({ ...r, files: r.files.filter((f) => kept(f.kind)) })),
+  });
   writeFileSync(join(input.outDir, 'dev-public-key.pem'), publicKeyPem);
-  const manifestPath = join(input.outDir, 'manifest-v1.json');
-  writeFileSync(`${manifestPath}.sig.tmp`, signManifest(text, privateKeyPem));
-  writeFileSync(`${manifestPath}.tmp`, text);
-  renameSync(`${manifestPath}.sig.tmp`, `${manifestPath}.sig`);
-  renameSync(`${manifestPath}.tmp`, manifestPath);
-  rmSync(`${manifestPath}.sig.tmp`, { force: true });
+  const publish = (name: string, manifest: Manifest): string => {
+    const text = serializeManifest(manifest);
+    const manifestPath = join(input.outDir, name);
+    writeFileSync(`${manifestPath}.sig.tmp`, signManifest(text, privateKeyPem));
+    writeFileSync(`${manifestPath}.tmp`, text);
+    renameSync(`${manifestPath}.sig.tmp`, `${manifestPath}.sig`);
+    renameSync(`${manifestPath}.tmp`, manifestPath);
+    rmSync(`${manifestPath}.sig.tmp`, { force: true });
+    return text;
+  };
+  const text = publish('manifest-v1.json', manifestOf(1, input.minSdk, (kind) => MANIFEST_V1_KINDS.includes(kind)));
+  const hasNew = regions.some((r) => r.files.some((f) => !MANIFEST_V1_KINDS.includes(f.kind)));
+  if (hasNew) publish('manifest-v2.json', manifestOf(2, compareVersions(input.minSdk, MANIFEST_V2_MIN_SDK) > 0 ? input.minSdk : MANIFEST_V2_MIN_SDK, () => true));
   return { files: count, manifestBytes: Buffer.byteLength(text), ...(patchStats ? { patchStats } : {}) };
 }

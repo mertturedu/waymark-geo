@@ -1,4 +1,4 @@
-import { appendFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, truncateSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, truncateSync, writeFileSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -7,8 +7,11 @@ import { assemblePacks, ensureDevKey, signManifest } from '../../pipeline/build/
 import { encodeBorders, createBorders } from '../../src/core/region/borders';
 import { encodePostings } from '../../src/core/text/trigram';
 import type { Runner } from '../../pipeline/build/tiles';
+import { buildLearned } from '../../pipeline/build/learned';
+import type { DeliveryRecord } from '../../pipeline/real/records';
 import { validatePacks } from '../../pipeline/validate/validate-packs';
 import { buildBuildingPack } from '../../pipeline/build/building-pack';
+import { buildBuildingPack2 } from '../../pipeline/build/building-pack2';
 import { buildRoutePack } from '../../pipeline/build/route-pack';
 import { rows as roadRows, way } from '../helpers/road-world';
 import { buildingFile } from './helpers/building-fixture';
@@ -23,7 +26,7 @@ const runner = (options: { verifyCode?: number; bounds?: string } = {}): Runner 
 
 type Setup = { root: string; work: string; pack: string; tiles: string; key: string; stats: Awaited<ReturnType<typeof buildAddressPack>> };
 
-async function setup(change?: (pack: string) => void, extra?: (work: string, pack: string) => Promise<string>): Promise<Setup & { part: string | null }> {
+async function setup(change?: (pack: string) => void, extra?: (work: string, pack: string) => Promise<string>, kind: 'buildings' | 'buildings2' | 'learned' = 'buildings'): Promise<Setup & { part: string | null }> {
   const work = writeWork(baseRows());
   const pack = join(work, 'pack.sqlite');
   const stats = await buildAddressPack({ province: '34', workDir: work, outFile: pack, osmTimestamp: sources.osmTimestamp });
@@ -38,7 +41,7 @@ async function setup(change?: (pack: string) => void, extra?: (work: string, pac
   await assemblePacks({
     outDir: root,
     sources,
-    regions: [{ id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox, stats: { addresses: stats.rows, streets: stats.streets, neighbourhoods: stats.neighbourhoods }, files: [{ kind: 'address', source: pack }, { kind: 'tiles', source: tiles }, ...(part ? [{ kind: 'buildings' as const, source: part }] : [])] }],
+    regions: [{ id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox, stats: { addresses: stats.rows, streets: stats.streets, neighbourhoods: stats.neighbourhoods }, files: [{ kind: 'address', source: pack }, { kind: 'tiles', source: tiles }, ...(part ? [{ kind, source: part }] : [])] }],
     baseDir,
     keyDir: join(work, 'keys'),
     minSdk: '0.1.0',
@@ -383,5 +386,112 @@ describe('validatePacks building parts', () => {
       });
       expect(errors((await validatePacks(s.root, { publicKeyPem: s.key, run: runner() })).findings).join('\n')).toMatch(/directory-.*province/);
     });
+  });
+});
+
+
+describe('validatePacks buildings2 part and the two manifests', () => {
+  async function buildings2(work: string, pack: string): Promise<string> {
+    const addresses = baseRows().addresses as { lon: number; lat: number }[];
+    const traces = [...addresses.slice(0, 3).map((a, i) => ({ id: `w${i}`, lon: a.lon, lat: a.lat, area: 120, ring: [[a.lon - 0.00004, a.lat - 0.00003], [a.lon + 0.00004, a.lat - 0.00003], [a.lon + 0.00004, a.lat + 0.00003], [a.lon - 0.00004, a.lat + 0.00003]], height: null, floors: i === 0 ? 5 : null, name: null, cls: null, src: null, rec: null }))];
+    mkdirSync(join(work, 'building-traces'), { recursive: true });
+    mkdirSync(join(work, 'building-tags'), { recursive: true });
+    writeFileSync(join(work, 'building-traces', '34.jsonl'), traces.map((t) => JSON.stringify(t)).join('\n') + '\n');
+    for (const name of ['osm-buildings.jsonl', 'entrances.jsonl', 'settlements.jsonl']) writeFileSync(join(work, 'building-tags', name), '');
+    const out = join(work, 'buildings2.sqlite');
+    expect(buildBuildingPack2({ province: '34', workDir: work, addressFile: pack, outFile: out, osmTimestamp: sources.osmTimestamp })).toMatchObject({ written: true, buildings: 3 });
+    return out;
+  }
+  const manifestFile = (root: string, name: string) => JSON.parse(readFileSync(join(root, name), 'utf8')) as { format: number; minSdk: string; regions: { files: { kind: string; path: string; sha256: string }[] }[] };
+  const messages = async (s: Setup): Promise<string> => errors((await validatePacks(s.root, { publicKeyPem: s.key, run: runner() })).findings).join('\n');
+  const change = (path: string, sql: string): void => {
+    const db = new DatabaseSync(path);
+    db.exec(sql);
+    db.close();
+  };
+
+  it('writes manifest-v1 without the new part and manifest-v2 with it, and finds nothing wrong', async () => {
+    const s = await setup(undefined, buildings2, 'buildings2');
+    expect(manifestFile(s.root, 'manifest-v1.json').regions[0]?.files.map((f) => f.kind)).toEqual(['address', 'tiles']);
+    expect(manifestFile(s.root, 'manifest-v2.json').regions[0]?.files.map((f) => f.kind)).toEqual(['address', 'buildings2', 'tiles']);
+    expect(manifestFile(s.root, 'manifest-v2.json')).toMatchObject({ format: 2, minSdk: '0.8.0' });
+    const result = await validatePacks(s.root, { publicKeyPem: s.key, run: runner() });
+    expect(result.findings).toEqual([]);
+    expect(result.summary).toMatchObject({ files: 4, buildings2Cells: expect.any(Number) });
+  });
+
+  it('writes no manifest-v2 when there is nothing new in the release', async () => {
+    const s = await setup();
+    expect(existsSync(join(s.root, 'manifest-v2.json'))).toBe(false);
+  });
+
+  it('reports a part with the wrong format, count, region, levels or chain', async () => {
+    const run = async (sql: string): Promise<string> => messages(await setup(undefined, async (work, pack) => { const out = await buildings2(work, pack); change(out, sql); return out; }, 'buildings2'));
+    expect(await run("UPDATE meta SET v = '3' WHERE k = 'format'")).toMatch(/biçim sürümü beklenen değil/);
+    expect(await run("UPDATE meta SET v = '9' WHERE k = 'buildings'")).toMatch(/bina sayısı uyuşmuyor/);
+    expect(await run("UPDATE meta SET v = '06' WHERE k = 'province'")).toMatch(/il uyuşmuyor/);
+    expect(await run('UPDATE building SET levels = 500')).toMatch(/kat sayısı/);
+    expect(await run('UPDATE building SET lon = lon + 20000000')).toMatch(/bölgenin dışında/);
+    expect(await run('UPDATE building SET chain = 999999')).toMatch(/sokak zinciri adres paketinde yok/);
+    expect(await run('PRAGMA user_version = 7')).toMatch(/user_version/);
+    expect(await run('PRAGMA application_id = 5')).toMatch(/application_id/);
+    expect(await run('INSERT INTO entrance (id, building, lon, lat) VALUES (99, 12345, 1, 1)')).toMatch(/olmayan bir binaya bağlı/);
+    expect(await run('DELETE FROM building_cell')).toMatch(/hücre dizini boş/);
+    expect(await run('DELETE FROM building')).toMatch(/hiç bina yok/);
+  });
+
+  it('reports a manifest-v1 that carries a new kind, a v2 that disagrees with v1, and a wrong format or minSdk', async () => {
+    const s = await setup(undefined, buildings2, 'buildings2');
+    const v1 = manifestFile(s.root, 'manifest-v1.json');
+    const v2 = manifestFile(s.root, 'manifest-v2.json');
+    const signed = (name: string, value: unknown): void => {
+      const text = `${JSON.stringify(value, null, 2)}\n`;
+      writeFileSync(join(s.root, name), text);
+      writeFileSync(join(s.root, `${name}.sig`), signManifest(text, readFileSync(join(s.work, 'keys', 'dev-signing.key'), 'utf8')));
+    };
+    signed('manifest-v2.json', { ...v2, minSdk: '0.7.0', regions: v2.regions.map((r) => ({ ...r, files: r.files.map((f) => (f.kind === 'address' ? { ...f, sha256: 'e'.repeat(64) } : f)) })) });
+    const text = await messages(s);
+    expect(text).toMatch(/minSdk 0\.8\.0 altında/);
+    expect(text).toMatch(/v1 ile v2 arasında farklı/);
+    signed('manifest-v1.json', { ...v1, regions: v2.regions });
+    signed('manifest-v2.json', { ...v2, format: 1 });
+    const second = await messages(s);
+    expect(second).toMatch(/yalnız eski türleri içerebilir/);
+    expect(second).toMatch(/manifest-v2\.json biçimi 2 olmalı/);
+  });
+});
+
+describe('validatePacks learned part', () => {
+  const centre = (): [number, number] => [(bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2];
+  async function learned(work: string): Promise<string> {
+    const [lng, lat] = centre();
+    const record = (src: string): DeliveryRecord => ({ v: 1, src, week: 2800, region: '34', district: 'Kadıköy', neighbourhood: 'Moda', street: 'Gül Sokak', houseNumber: '5', coordSource: 'gps', gps: { lng, lat, accuracyM: 8 } });
+    const out = join(work, 'learned.sqlite');
+    await buildLearned({ plate: '34', nowWeek: 2800, outFile: out, records: [record('a'), record('b')] });
+    return out;
+  }
+  const change = (path: string, sql: string): void => {
+    const db = new DatabaseSync(path);
+    db.exec(sql);
+    db.close();
+  };
+  const messages = async (s: Setup): Promise<string> => errors((await validatePacks(s.root, { publicKeyPem: s.key, run: runner() })).findings).join('\n');
+
+  it('keeps the part out of manifest-v1, puts it in manifest-v2 and finds nothing wrong', async () => {
+    const s = await setup(undefined, learned, 'learned');
+    const files = (name: string) => (JSON.parse(readFileSync(join(s.root, name), 'utf8')) as { regions: { files: { kind: string }[] }[] }).regions[0]?.files.map((f) => f.kind);
+    expect(files('manifest-v1.json')).toEqual(['address', 'tiles']);
+    expect(files('manifest-v2.json')).toEqual(['address', 'learned', 'tiles']);
+    const result = await validatePacks(s.root, { publicKeyPem: s.key, run: runner() });
+    expect(result.findings).toEqual([]);
+    expect(result.summary).toMatchObject({ learnedDoors: 1 });
+  });
+
+  it('reports a part with a person column, a wrong province or a point outside the region', async () => {
+    const run = async (sql: string): Promise<string> => messages(await setup(undefined, async (work) => { const out = await learned(work); change(out, sql); return out; }, 'learned'));
+    expect(await run('ALTER TABLE door ADD COLUMN courier TEXT')).toMatch(/kişi ya da zaman alanı/);
+    expect(await run("UPDATE meta SET value = '06' WHERE key = 'region'")).toMatch(/il uyuşmuyor/);
+    expect(await run('UPDATE door SET lng = lng + 20000000')).toMatch(/bölgenin dışında/);
+    expect(await run('PRAGMA user_version = 4')).toMatch(/user_version/);
   });
 });

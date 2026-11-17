@@ -62,6 +62,24 @@ describe('geo.route', () => {
     await geo.dispose();
   });
 
+  it('reports the arrival side and the unit when the destination is a place', async () => {
+    const w = await world();
+    const geo = await createGeo(w.config, envOf(w));
+    await geo.regions.checkUpdates();
+    await geo.regions.download('34', { parts: ['address', 'route'] });
+    const from: [number, number] = [X + lon(300), Y + deg(10)];
+    const door: [number, number] = [X + lon(1500), Y + deg(40)];
+    const toPlace = { id: '34:a:1', label: 'x', components: { street: 'Yok Sokak' }, coordinate: door, precision: 'address' as const, approximate: false, source: 'osm' as const, confidence: 1, region: '34', unit: { block: { name: 'C Blok', building: 1, center: null }, entrance: { id: 1, ref: '2', kind: 'main', flats: null, building: 1, unit: null, point: [X + lon(1500), Y + deg(40)] as [number, number] }, floor: null, door: null, levels: null, perFloor: null, notes: [] } };
+    const got = await geo.route.route(from, door, { toPlace });
+    expect(got.ok && got.arrival).toMatchObject({ side: 'left', target: 'entrance', onChain: false });
+    const steps = await geo.route.directions(from, door, { toPlace, language: 'en' });
+    expect(steps.ok && steps.steps[steps.steps.length - 1]!.text).toBe('Destination on the left, Block C, Entrance 2');
+    const plan = await geo.plan.plan({ stops: [{ id: 'a', place: toPlace }, { id: 'b', point: [X + lon(1800), Y + deg(10)] }], start: { point: from }, mode: 'keep' });
+    expect(plan.ok && plan.legs[0]?.arrival?.target).toBe('entrance');
+    expect(await geo.plan.plan(null as never)).toMatchObject({ ok: false, code: 'INVALID_REQUEST' });
+    await geo.dispose();
+  });
+
   it('lists what is near a point from the installed address pack', async () => {
     const w = await world();
     const geo = await createGeo({ ...w.config, language: 'en' }, envOf(w));

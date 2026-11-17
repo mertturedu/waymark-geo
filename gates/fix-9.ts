@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { Gate } from './engine';
 import { uploadedReports } from './fix-0';
 
-export const TARGET_VERSION = '0.7.2';
+export const TARGET_VERSION = '0.8.0';
 const DOCS = ['docs/licences.md', 'CHANGELOG.md', 'README.md'];
 
 export const sdkCheckFile = (reportDir: string, expo: string): string => join(reportDir, `fix-9-sdk-${expo}.json`);

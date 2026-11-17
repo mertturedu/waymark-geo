@@ -174,6 +174,32 @@ function rig() {
 
 const tilesOf = (seed: string) => noise(Math.round(1.1 * MB), seed);
 
+describe('patches for a kind that only manifest-v2 lists', () => {
+  it('archives manifest-v2 with the release and patches the new kind against it', async () => {
+    const w = rig();
+    const part = (seed: string, tag: string): RegionInput => {
+      const file = join(w.dir, `buildings2-${tag}.sqlite`);
+      writeFileSync(file, seed === 'a' ? noise(Math.round(1.1 * MB), 'b2') : edited(noise(Math.round(1.1 * MB), 'b2'), 500_000, noise(300, 'edit')));
+      return { id: '34', tier: 'full', names: { tr: 'İstanbul' }, bbox: [27.9, 40.7, 30, 41.7], stats: { addresses: 1, streets: 1, neighbourhoods: 1 }, files: [{ kind: 'address', source: join(w.dir, `a-${tag}.sqlite`) }, { kind: 'buildings2', source: file }] };
+    };
+    for (const tag of ['a', 'b']) writeFileSync(join(w.dir, `a-${tag}.sqlite`), noise(5000, 'addr'));
+    await w.publish(w.packs, '20261022', [part('a', 'a')]);
+    expect(archivePack(w.packs, w.archive)).toBe('20261020.20261022');
+    const archived = readdirSync(join(w.archive, '20261020.20261022', '34'));
+    expect(archived.some((f) => f.startsWith('buildings2-'))).toBe(true);
+    expect(existsSync(join(w.archive, '20261020.20261022', 'manifest-v2.json'))).toBe(true);
+
+    const out = join(w.dir, 'next');
+    const result = await w.publish(out, '20261029', [part('b', 'b')], { patches: { archiveDir: w.archive, cacheDir: w.cache, tmpDir: w.tmp, shape, concurrency: 2 } });
+    expect(result.patchStats).toMatchObject({ made: 1, unverified: 0 });
+    const v2 = parseManifest(readFileSync(join(out, 'manifest-v2.json'), 'utf8'));
+    expect(v2.regions[0]?.files.find((f) => f.kind === 'buildings2')?.patches).toHaveLength(1);
+    const v1 = parseManifest(readFileSync(join(out, 'manifest-v1.json'), 'utf8'));
+    expect(v1.regions[0]?.files.map((f) => f.kind)).toEqual(['address']);
+    expect(listArchive(w.archive)[0]?.manifest.format).toBe(2);
+  });
+});
+
 describe('patches in the published packs', () => {
   it('adds a verified patch beside a changed file, and leaves tiny or unchanged files alone', async () => {
     const w = rig();

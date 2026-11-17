@@ -18,11 +18,17 @@ const first = async (text: string) => {
 };
 
 describe('a street the asked area does not have', () => {
-  it('answers with the district, not with the same street name in another district', async () => {
-    const { status, best } = await first('Atatürk Sokağı 3 Üsküdar İstanbul');
+  it('answers with the district, not with the same street name in another district, when no house number is given', async () => {
+    const { status, best } = await first('Atatürk Sokağı Üsküdar İstanbul');
     expect(status).toBe('resolved');
     expect(best).toMatchObject({ precision: 'district', approximate: true, source: 'derived', components: { district: 'Üsküdar' } });
     expect(best?.components.street).toBeUndefined();
+  });
+
+  it('finds the street in the one other district that has it and says the district did not match', async () => {
+    const { best } = await first('Atatürk Sokağı 3 Üsküdar İstanbul');
+    expect(best).toMatchObject({ approximate: true, notes: ['district_mismatch'], components: { district: 'Kadıköy', street: 'Atatürk Sokağı' } });
+    expect(best?.confidence).toBeLessThan(0.9);
   });
 
   it('answers with the neighbourhood when the street is not in the asked neighbourhood', async () => {
@@ -44,14 +50,14 @@ describe('a street the asked area does not have', () => {
   });
 
   it('keeps the other district street as a lower candidate', async () => {
-    const result = await search.resolve('Atatürk Sokağı 3 Üsküdar İstanbul');
+    const result = await search.resolve('Atatürk Sokağı Üsküdar İstanbul');
     const ids = result.status === 'region_missing' ? [] : result.candidates.map((c) => c.components.district);
     expect(ids[0]).toBe('Üsküdar');
     expect(ids).toContain('Kadıköy');
   });
 
   it('never calls the area answer an exact address', async () => {
-    for (const text of ['Atatürk Sokağı 3 Üsküdar İstanbul', 'Kadıköy Moda Mah. Olmayan Sokak No:5', 'Fener Mah. Üsküdar Hiç Yok Caddesi 7']) {
+    for (const text of ['Atatürk Sokağı Üsküdar İstanbul', 'Kadıköy Moda Mah. Olmayan Sokak No:5', 'Fener Mah. Üsküdar Hiç Yok Caddesi 7']) {
       const { best } = await first(text);
       expect(best?.precision).not.toBe('address');
       expect(best?.approximate).toBe(true);

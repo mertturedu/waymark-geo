@@ -190,7 +190,7 @@ export function tableOf(plates: string[], runs: RunResult[]): string {
   return ['| İl | Önce adet | Önce ortanca m | Önce p90 m | Sonra adet | Sonra ortanca m | Sonra p90 m | Bulunamayan | Öğrenilmiş sonuç |', '|---|---|---|---|---|---|---|---|---|', ...rows, all].join('\n');
 }
 
-async function sources(packsDir: string, plates: string[]): Promise<Source[]> {
+export async function sources(packsDir: string, plates: string[]): Promise<Source[]> {
   const manifest = parseManifest(readFileSync(join(packsDir, 'manifest-v1.json'), 'utf8'));
   const base = await createNodePackStore(packsDir);
   const borders = createBorders(readFileSync(join(repoRoot, 'src', 'core', 'region', 'data', 'borders.bin')));

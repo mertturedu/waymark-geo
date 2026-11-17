@@ -1,3 +1,4 @@
+import aliases from './data/admin-aliases.json';
 import data from './data/admin.json';
 import { nameKey } from './fold';
 import type { AdminData, AdminDistrict, AdminMatch, AdminNames, AdminProvince } from './types';
@@ -19,20 +20,23 @@ function push<T>(map: Map<string, T[]>, key: string, value: T): void {
   else map.set(key, [value]);
 }
 
-export function createAdmin(source: AdminData) {
+export function createAdmin(source: AdminData, extra: { province: unknown; district: unknown } = { province: {}, district: {} }) {
   const provinceByKey = new Map<string, AdminProvince[]>();
   const districtByKey = new Map<string, AdminDistrict[]>();
   const names = new Map<string, string>();
   const provinceNamesOf = new Map<string, AdminNames>();
   const districtNamesOf = new Map<string, AdminNames>();
+  const provinceAliases = extra.province as Record<string, string[]>;
+  const districtAliases = extra.district as Record<string, Record<string, string[]>>;
   for (const province of source.provinces) {
     names.set(province.plate, province.names.tr);
     provinceNamesOf.set(province.plate, province.names);
-    for (const key of keysOf(province.names, province.alt)) push(provinceByKey, key, province);
+    for (const key of new Set([...keysOf(province.names, province.alt), ...(provinceAliases[province.plate] ?? [])])) push(provinceByKey, key, province);
   }
   for (const district of source.districts) {
     districtNamesOf.set(districtId(district), district.names);
-    for (const key of keysOf(district.names, district.alt)) push(districtByKey, key, district);
+    const own = districtAliases[district.province]?.[nameKey(district.names.tr)] ?? [];
+    for (const key of new Set([...keysOf(district.names, district.alt), ...own])) push(districtByKey, key, district);
   }
 
   const provinceMatch = (province: AdminProvince, ambiguous: boolean): AdminMatch => ({ id: province.plate, name: province.names.tr, plate: province.plate, ambiguous });
@@ -62,7 +66,7 @@ export function createAdmin(source: AdminData) {
 }
 
 let instance: ReturnType<typeof createAdmin> | null = null;
-const admin = () => (instance ??= createAdmin(data as AdminData));
+const admin = () => (instance ??= createAdmin(data as AdminData, aliases));
 
 export const findProvince = (text: string): AdminMatch | null => admin().findProvince(text);
 export const findDistrict = (text: string, plate?: string): AdminMatch[] => admin().findDistrict(text, plate);

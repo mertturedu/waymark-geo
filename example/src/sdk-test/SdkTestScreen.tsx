@@ -1,5 +1,6 @@
 import { reportList } from '../device-test/report-list';
 import * as Clipboard from 'expo-clipboard';
+import { Directory, File, Paths } from 'expo-file-system';
 import * as Network from 'expo-network';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -114,8 +115,9 @@ export function SdkTestScreen() {
   useRunPolling(server.ready ? server.url : null, running === null);
 
   useEffect(() => {
-    if (!request || !server.ready || !server.url || running !== null) return;
-    const target = server.url;
+    const handedIn = request !== null && request.ids !== 'auto' && request.ids.length === 1 && request.ids[0] === 'sdk.addr-hints' && new File(new Directory(Paths.document, 'hints-input'), 'hints.json').exists;
+    if (!request || (!handedIn && (!server.ready || !server.url)) || running !== null) return;
+    const target = server.ready && server.url ? server.url : null;
     const { tests, missing } = pickTests(request, sdkRegistry, AUTO_TESTS);
     setRequest(null);
     void (async () => {
@@ -123,6 +125,7 @@ export function SdkTestScreen() {
       const report = buildReport([...done, ...missing], { device: deviceInfo(), sdk: sdkInfo(null), now: new Date() });
       const text = formatReport(report);
       saveReport(report.reportId, text);
+      if (!target) return;
       try {
         const response = await fetch(reportEndpoint(target), { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: text });
         setStatus(response.ok ? `Rapor sunucuya gönderildi: ${report.reportId}` : `Rapor gönderilemedi (${response.status})`);

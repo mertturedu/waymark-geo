@@ -1,6 +1,8 @@
 import { findDistrict, findProvince, provinceByPlate } from './admin';
 import { numberWordsToDigits } from './digits';
 import { truncateInput } from './fold';
+import { alternativesOf } from './alternatives';
+import { stripNotes, stripPhones } from './noise';
 import { LANGS, isPoiWord, lookupWords } from './lexicon';
 import { streetKey } from './street';
 import { tokenize, type Token } from './tokenize';
@@ -18,19 +20,31 @@ const ADMIN_WORDS = new Set(['il', 'ili', 'ilce', 'ilcesi', 'province', 'distric
 const COMMON_DISTRICTS = new Set(['fatih', 'yildirim', 'selcuk', 'celebi']);
 const FLOOR_WORDS = new Set(['bodrum', 'zemin', 'cati']);
 const MAX_SPAN = 8;
+const NAMED_NUMBER_FOLLOWERS = new Set(['ocak', 'subat', 'mart', 'nisan', 'mayis', 'haziran', 'temmuz', 'agustos', 'eylul', 'ekim', 'kasim', 'aralik', 'yil', 'evler', 'evleri']);
+const ABBREVIATED = new Set(['sk', 'sok', 'cd', 'cad', 'blv', 'bulv', 'cmz']);
 const GERMAN_ENDINGS: [string, string][] = [['strasse', 'strasse'], ['gasse', 'gasse'], ['allee', 'allee'], ['weg', 'weg'], ['platz', 'platz']];
-const NUM = /^\d+[a-z]?(?:[/-][a-z0-9]+)*$/;
+const NUM = /^(?:\d+[a-z]{0,2}|\d+[a-z]{1,2}\d+[a-z]{0,2})(?:[/-][a-z0-9]+)*$/;
 const DIGITS = /^\d+$/;
 const GLUED_AFTER = /^([a-z]+)(\d[a-z0-9/-]*)$/;
 const GLUED_BEFORE = /^(\d+)([a-z]{2,})$/;
 const BLOCK_NAME = /^[a-z]\d{1,2}$/;
 const VALUE_ROLES: ReadonlySet<Role> = new Set(['no', 'door', 'floor', 'block']);
+const NUMBERED = new Set(['nolu', 'numarali']);
+const UNIT_JOIN = /(\d)\s*\/\s*(?=(?:(?:daire|dairesi|kat|blok|blk)\s*[:.]?|[dk]\s*[:.])\s*\d)/gi;
+const BASEMENT = /(^|[\s:,;])(?:(?:kat|k)\s*[:.]?\s*[-−]\s*([12])|[-−]\s*([12])\s*\.?\s*kat)\b/gi;
+const LETTER = 'a-z\\d\\u00c0-\\u024f\\u0370-\\u03ff\\u0400-\\u04ff\\u0600-\\u06ff';
+const BASEMENT_NAMED = new RegExp(`(^|[\\s:,;])([12])\\s*\\.\\s*bodrum(?:\\s+kat[${LETTER}]*)?(?![${LETTER}])`, 'gi');
+const ENTRANCE_WORD = '(?:g[iıİI]r[iıİI][sşSŞ][iıİI]?|entrance|eingang|вход|подъезд|είσοδος|مدخل)';
+const ENTRANCE_AFTER = new RegExp(`(^|[\\s:,;])${ENTRANCE_WORD}\\s*(?:no|numara|nolu)?\\s*[:.]?\\s*(\\d{1,2}|[a-z])(?![${LETTER}])(?!\\s*\\.?\\s*(?:blok|blk|block))`, 'gi');
+const GROUND_ONLY = `(?!\\s*kat[${LETTER}]*(?!\\s*[:.]?\\s*[-−]?\\d))`;
+const ENTRANCE_BEFORE = new RegExp(`(^|[\\s:,;])(\\d{1,2})\\s*\\.\\s*${ENTRANCE_WORD}(?![${LETTER}])${GROUND_ONLY}`, 'gi');
+const GROUND_FLOOR = new RegExp(`(^|[\\s:,;])g[iıİI]r[iıİI][sşSŞ]\\s+kat[${LETTER}]*(?!\\s*[:.]?\\s*[-−]?\\d)`, 'gi');
 
 const streetNumberLike = (token: Token | undefined): boolean => !!token && NUM.test(token.t) && (token.t.length >= 4 || /[/-]/.test(token.t));
 
 const empty = (input: string): ParsedAddress => ({
   input, language: null, province: null, district: null, neighbourhood: null, street: null, secondStreet: null, houseNumber: null,
-  building: null, block: null, floor: null, door: null, poiName: null, postcode: null, leftover: [],
+  building: null, block: null, entrance: null, floor: null, door: null, poiName: null, postcode: null, leftover: [], dropped: [], alternatives: [],
 });
 
 const SCRIPT_LANG: Partial<Record<ReturnType<typeof scriptOf>, Lang>> = { cyrillic: 'ru', greek: 'el', arabic: 'ar' };
@@ -71,7 +85,27 @@ function convertNumberWords(tokens: Token[]): Token[] {
 export function parseAddress(text: string): ParsedAddress {
   const input = truncateInput(text);
   const result = empty(input);
-  let tokens = tokenize(input);
+  const stripped = stripPhones(input);
+  result.dropped = stripped.dropped;
+  let deepBasement = false;
+  const basement = (lead: string, depth: string | undefined): string => {
+    if (depth === '2') deepBasement = true;
+    return `${lead}bodrum kat`;
+  };
+  let entrance: string | null = null;
+  const entranceOf = (lead: string, value: string): string => {
+    entrance ??= value.replace(/[a-z]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 32));
+    return `${lead} `;
+  };
+  const prepared = stripped.text
+    .replace(UNIT_JOIN, '$1 ')
+    .replace(BASEMENT, (_m, lead: string, a?: string, b?: string) => basement(lead, a ?? b))
+    .replace(BASEMENT_NAMED, (_m, lead: string, depth: string) => basement(lead, depth))
+    .replace(GROUND_FLOOR, '$1zemin kat')
+    .replace(ENTRANCE_AFTER, (_m, lead: string, value: string) => entranceOf(lead, value))
+    .replace(ENTRANCE_BEFORE, (_m, lead: string, value: string) => entranceOf(lead, value));
+  result.entrance = entrance;
+  let tokens = tokenize(prepared);
   if (tokens.length === 0) return result;
 
   const script = scriptOf(input);
@@ -94,7 +128,7 @@ export function parseAddress(text: string): ParsedAddress {
     if (after && ['numara', 'daire', 'kat', 'blok'].includes(wordKind(after[1] as string) ?? '')) {
       return [{ ...token, t: after[1] as string, dotted: false }, { ...token, t: after[2] as string }];
     }
-    if (before && ['kat', 'daire', 'blok'].includes(wordKind(before[2] as string) ?? '')) {
+    if (before && ['kat', 'daire', 'blok', 'sokak', 'cadde', 'bulvar'].includes(wordKind(before[2] as string) ?? '')) {
       return [{ ...token, t: before[1] as string, dotted: true }, { ...token, t: before[2] as string, dotted: false }];
     }
     return [token];
@@ -106,6 +140,18 @@ export function parseAddress(text: string): ParsedAddress {
     return [{ ...token, t: token.t.slice(0, token.t.length - ending[0].length) }, { ...token, t: ending[1], dotted: false }];
   });
   tokens = convertNumberWords(tokens);
+  const noted = stripNotes(tokens);
+  tokens = noted.tokens;
+  result.dropped = [...stripped.dropped, ...noted.dropped];
+  tokens = tokens.reduce<Token[]>((out, token, i) => {
+    const prev = out[out.length - 1];
+    const before = ROLE[kindOf(out[out.length - 2]?.t ?? '') as WordKind];
+    const next = tokens[i + 1];
+    const suffix = /^[a-z]$/.test(token.t) && prev && prev.seg === token.seg && DIGITS.test(prev.t) && !prev.dotted && (before === 'no' || before === 'street') && !(next && next.seg === token.seg && (NUM.test(next.t) || ROLE[kindOf(next.t) as WordKind] === 'block'));
+    if (suffix) out[out.length - 1] = { ...prev, t: `${prev.t}${token.t}` };
+    else out.push(token);
+    return out;
+  }, []);
   tokens = tokens.filter((token, i) => !(token.t === 'nolu' && NUM.test(tokens[i - 1]?.t ?? '') && token.seg === tokens[i - 1]?.seg && (ROLE[kindOf(tokens[i + 1]?.t ?? '') as WordKind] === 'street' || (kindOf(tokens[i + 1]?.t ?? '') === null && !NUM.test(tokens[i + 1]?.t ?? '') && ROLE[kindOf(tokens[i + 2]?.t ?? '') as WordKind] === 'no' && token.seg === tokens[i + 2]?.seg)) && token.seg === tokens[i + 1]?.seg));
 
   const language = detectLanguage(tokens, script);
@@ -114,6 +160,7 @@ export function parseAddress(text: string): ParsedAddress {
   const n = tokens.length;
   const used = new Array<boolean>(n).fill(false);
   const plain = new Set<number>();
+  const echo = new Set<number>();
   const rawRole = (i: number): Role | null => {
     const t = tokens[i]?.t;
     if (t === undefined) return null;
@@ -128,11 +175,15 @@ export function parseAddress(text: string): ParsedAddress {
   for (let i = 0; i < n; i++) {
     const role = rawRole(i);
     const neighbour = markerFirst ? i - 1 : i + 1;
-    if ((role === 'street' || role === 'hood') && rawRole(neighbour) === role && same(i, neighbour)) plain.add(i);
+    const echoed = !markerFirst && role === 'street' && ABBREVIATED.has(tokens[i]?.t ?? '') && rawRole(i + 1) === 'street' && same(i, i + 1);
+    if (echoed) echo.add(i + 1);
+    else if ((role === 'street' || role === 'hood') && rawRole(neighbour) === role && same(i, neighbour)) plain.add(i);
     if ((role === 'building' || role === 'site') && rawRole(i + 1) === 'street' && same(i, i + 1)) plain.add(i);
     if (role === 'no' && tokens[i]?.t === 'kapi' && rawRole(i + 1) === 'street' && same(i, i + 1)) plain.add(i);
     if (!markerFirst && role === 'street' && rawRole(i + 1) === 'hood' && same(i, i + 1)) plain.add(i);
   }
+
+  for (const i of echo) used[i] = true;
 
   const postcodeAt = tokens.findIndex((token, i) => {
     const plate = Number(token.t.slice(0, 2));
@@ -144,6 +195,7 @@ export function parseAddress(text: string): ParsedAddress {
     used[postcodeAt] = true;
   }
 
+  let numberAt = -1;
   const take = (i: number): string => {
     used[i] = true;
     return tokens[i]?.t ?? '';
@@ -175,6 +227,7 @@ export function parseAddress(text: string): ParsedAddress {
       else value = ok(next) ? next : before ? i - 1 : -1;
     }
     else if (role === 'no' && nextIsStreet) value = -2;
+    else if (role === 'block' && !isNumber(i - 1) && ok(i - 1) && isNumber(next)) value = i - 1;
     else if (ok(next) && !nextBeforeStreet) value = next;
     else if (ok(i - 1) && (role !== 'door' || !single)) value = i - 1;
     if (value === -1 && single) continue;
@@ -182,16 +235,27 @@ export function parseAddress(text: string): ParsedAddress {
     if (value < 0) continue;
     if (value === next && skipNo) used[i + 1] = true;
     const text = take(value);
-    if (role === 'no') {
+    const owner = role === 'no' && value === i - 1 && NUMBERED.has(tokens[i]?.t ?? '') && same(i, i + 1) ? roleAt(i + 1) : null;
+    if (owner === 'door' || owner === 'floor') {
+      used[i + 1] = true;
+      if (owner === 'door') result.door ??= text;
+      else result.floor ??= text;
+    }
+    else if (role === 'no' && value === next && result.houseNumber !== null && roleAt(i - 1) === 'floor') result.door ??= text;
+    else if (role === 'no') {
       const prefix = doorPrefix(i);
       if (prefix) used[prefix.at] = true;
       if (prefix?.inner) result.door ??= text;
-      else result.houseNumber ??= text;
+      else if (result.houseNumber === null) {
+        result.houseNumber = text;
+        numberAt = value;
+      }
     }
     else if (role === 'door') result.door ??= text;
     else if (role === 'floor') result.floor ??= text;
     else result.block ??= text;
   }
+  if (deepBasement && result.floor === 'bodrum') result.floor = '-2';
 
   type Match = { from: number; to: number; province: AdminMatch | null; districts: AdminMatch[] };
   const matches: Match[] = [];
@@ -284,11 +348,16 @@ export function parseAddress(text: string): ParsedAddress {
     return first.length > 0 ? first : markerFirst ? spanBefore(marker) : spanAfter(marker);
   };
 
+  const streetNumberToken = (i: number): boolean => DIGITS.test(tokens[i]?.t ?? '') && Number(tokens[i]?.t) >= 1000 && (tokens[i]?.t.length ?? 0) <= 6;
   let streetStart = -1;
   for (let i = 0; i < n; i++) {
     if (used[i] || roleAt(i) !== 'hood') continue;
-    const span = nameSpan(i);
+    let span = nameSpan(i);
     used[i] = true;
+    if (!markerFirst) {
+      while (span.length > 1 && isNumber(span[0] as number) && rawRole((span[0] as number) - 1) === 'street' && same((span[0] as number) - 1, span[0] as number) && !NAMED_NUMBER_FOLLOWERS.has(tokens[(span[0] as number) + 1]?.t ?? '')) span = span.slice(1);
+      while (span.length > 1 && tokens[span[0] as number]?.dotted && streetNumberToken(span[0] as number)) span = span.slice(1);
+    }
     if (span.length === 0) continue;
     const text = span.map(take).join(' ');
     result.neighbourhood ??= text;
@@ -303,6 +372,7 @@ export function parseAddress(text: string): ParsedAddress {
     const kind = kindIn(tokens[i]?.t ?? '', allowed);
     const leading = span[0] as number;
     if (span.length > 1 && !tokens[leading]?.dotted && isNumber(leading) && language === 'en' && !result.houseNumber) {
+      numberAt = leading;
       result.houseNumber = take(leading);
       span = span.slice(1);
     }
@@ -314,7 +384,10 @@ export function parseAddress(text: string): ParsedAddress {
     if (isSecond) result.secondStreet = street;
     else result.street = street;
     const after = markerFirst ? (span[span.length - 1] as number) + 1 : i + 1;
-    if (!result.houseNumber && free(after, i) && isNumber(after) && roleAt(after) === null) result.houseNumber = take(after);
+    if (!result.houseNumber && free(after, i) && isNumber(after) && roleAt(after) === null) {
+      numberAt = after;
+      result.houseNumber = take(after);
+    }
   }
 
   for (let i = 0; i < n; i++) {
@@ -338,9 +411,20 @@ export function parseAddress(text: string): ParsedAddress {
   if (!result.houseNumber) {
     for (let i = n - 1; i >= 0; i--) {
       if (!used[i] && isNumber(i)) {
+        numberAt = i;
         result.houseNumber = take(i);
         break;
       }
+    }
+  }
+
+  if (!result.street && !markerFirst && (language === 'tr' || language === null)) {
+    const beforeNo = (i: number): boolean => rawRole(i + 1) === 'no' && same(i, i + 1);
+    const at = tokens.findIndex((token, i) => !used[i] && DIGITS.test(token.t) && (token.dotted || streetNumberToken(i) || (beforeNo(i) && result.houseNumber !== null)) && roleAt(i) === null);
+    if (at >= 0) {
+      const text = take(at);
+      const key = streetKey(text);
+      result.street = { text, key: key.key, compact: key.compact, kind: null, number: key.number };
     }
   }
 
@@ -361,11 +445,12 @@ export function parseAddress(text: string): ParsedAddress {
   } else if (!result.street && (result.houseNumber || result.district)) {
     const rest = wordRuns.filter((run) => run.some((i) => !used[i]));
     if (result.houseNumber && rest.length > 0) {
-      const streetRun = rest[rest.length - 1] as number[];
+      const beforeNumber = rest.filter((run) => (run[run.length - 1] as number) < numberAt);
+      const streetRun = (beforeNumber.length > 0 ? beforeNumber[beforeNumber.length - 1] : rest[rest.length - 1]) as number[];
       const text = claim(streetRun);
       const key = streetKey(text);
       result.street = { text, key: key.key, compact: key.compact, kind: null, number: key.number };
-      const earlier = rest.slice(0, -1).filter((run) => run.some((i) => !used[i]));
+      const earlier = rest.filter((run) => run !== streetRun && run.some((i) => !used[i]) && (run[run.length - 1] as number) < (streetRun[0] as number));
       if (!result.neighbourhood && earlier.length > 0) result.neighbourhood = claim(earlier[earlier.length - 1] as number[]);
     } else if (!result.neighbourhood && result.district && rest.length === 1) {
       result.neighbourhood = claim(rest[0] as number[]);
@@ -373,5 +458,6 @@ export function parseAddress(text: string): ParsedAddress {
   }
 
   result.leftover = tokens.filter((_, i) => !used[i]).map((token) => token.t);
+  result.alternatives = alternativesOf(result);
   return result;
 }

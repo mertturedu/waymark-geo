@@ -11,6 +11,7 @@
     "../test/react",
     "../test/helpers/render-hook.tsx",
     "../test/helpers/native-mocks.ts",
-    "../test/native/location.test.ts"
+    "../test/native/location.test.ts",
+    "../test/native/stream-focus.test.ts"
   ]
 }

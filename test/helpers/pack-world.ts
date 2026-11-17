@@ -6,19 +6,21 @@ import { signManifest } from '../../pipeline/build/manifest';
 import { serializeManifest, type Manifest, type ManifestFile, type ManifestPatch, type ManifestRegion } from '../../src/core/region/manifest';
 import { createFakeEnv, type FakeEnv } from './fake-env';
 
-type Part = 'address' | 'tiles' | 'buildings' | 'places' | 'route';
+type Part = 'address' | 'tiles' | 'buildings' | 'buildings2' | 'places' | 'route';
+const V1_PARTS: readonly string[] = ['address', 'tiles', 'buildings', 'places', 'route', 'directory'];
 
 export type WorldRegion = { id: string; tier?: 'full' | 'basic'; parts: Partial<Record<Part, Uint8Array>> };
 
 export const blob = (size: number, seed = 1): Uint8Array => Uint8Array.from({ length: size }, (_, i) => (i * 13 + seed * 7 + (i >> 7)) & 255);
 
-const EXTENSION: Record<Part, string> = { address: 'sqlite', tiles: 'pmtiles', buildings: 'sqlite', places: 'pmtiles', route: 'bin' };
+const EXTENSION: Record<Part, string> = { address: 'sqlite', tiles: 'pmtiles', buildings: 'sqlite', buildings2: 'sqlite', places: 'pmtiles', route: 'bin' };
 const BASE_URL = 'https://packs.example/v1';
 
 export type World = {
   env: FakeEnv;
   baseUrl: string;
   manifestUrl: string;
+  manifestV2Url: string;
   config: { manifestUrl: string; publicKeys: string[]; sdkVersion: string };
   regions: WorldRegion[];
   base: Record<string, Uint8Array>;
@@ -62,6 +64,7 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
     env,
     baseUrl: BASE_URL,
     manifestUrl: `${BASE_URL}/manifest-v1.json`,
+    manifestV2Url: `${BASE_URL}/manifest-v2.json`,
     config: { manifestUrl: `${BASE_URL}/manifest-v1.json`, publicKeys: [publicPem], sdkVersion: '0.1.0' },
     regions,
     base,
@@ -115,10 +118,14 @@ export function makeWorld(options: { regions?: WorldRegion[]; base?: Record<stri
         base: baseFiles,
         regions: manifestRegions,
       };
-      const text = serializeManifest({ ...manifest, format: (patch.format ?? 1) as 1 });
-      const signature = world.signWith(text);
-      env.server.put(world.manifestUrl, new TextEncoder().encode(patch.tamper ? `${text} ` : text));
-      env.server.put(`${world.manifestUrl}.sig`, new TextEncoder().encode(signature));
+      const put = (url: string, value: Manifest): void => {
+        const text = serializeManifest(value);
+        const signature = world.signWith(text);
+        env.server.put(url, new TextEncoder().encode(patch.tamper ? `${text} ` : text));
+        env.server.put(`${url}.sig`, new TextEncoder().encode(signature));
+      };
+      put(world.manifestUrl, { ...manifest, format: (patch.format ?? 1) as 1, regions: manifest.regions.map((r) => ({ ...r, files: r.files.filter((f) => V1_PARTS.includes(f.kind)) })) });
+      if (manifest.regions.some((r) => r.files.some((f) => !V1_PARTS.includes(f.kind)))) put(world.manifestV2Url, { ...manifest, format: 2, minSdk: patch.minSdk ?? '0.1.0' });
       return manifest;
     },
   };

@@ -10,7 +10,7 @@ import { compareReleases, freshnessProblems, latestRelease, renderChangeReport, 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 const LATEST_URL = 'https://download.geofabrik.de/europe/turkey-latest.osm.pbf';
 
-export type ReleaseFlags = { regions: string; pbf?: string; allowStale: boolean; approveRegressions: boolean; promote: boolean; keepSources: boolean; revision?: number };
+export type ReleaseFlags = { skipWeekly: boolean; regions: string; pbf?: string; allowStale: boolean; approveRegressions: boolean; promote: boolean; keepSources: boolean; revision?: number };
 
 export function parseFlags(argv: string[]): ReleaseFlags {
   const value = (name: string): string | undefined => {
@@ -21,7 +21,7 @@ export function parseFlags(argv: string[]): ReleaseFlags {
   };
   const pbf = value('--pbf');
   const revision = Number(value('--revision'));
-  return { regions: value('--regions') ?? '12il', ...(pbf ? { pbf } : {}), keepSources: argv.includes('--keep-sources'), ...(Number.isInteger(revision) && revision > 1 ? { revision } : {}), allowStale: argv.includes('--allow-stale'), approveRegressions: argv.includes('--approve-regressions'), promote: !argv.includes('--no-promote') };
+  return { skipWeekly: argv.includes('--skip-weekly'), regions: value('--regions') ?? '12il', ...(pbf ? { pbf } : {}), keepSources: argv.includes('--keep-sources'), ...(Number.isInteger(revision) && revision > 1 ? { revision } : {}), allowStale: argv.includes('--allow-stale'), approveRegressions: argv.includes('--approve-regressions'), promote: !argv.includes('--no-promote') };
 }
 
 const run = (cmd: string, args: string[]): number => spawnSync(cmd, args, { cwd: repoRoot, stdio: 'inherit' }).status ?? 1;
@@ -32,6 +32,8 @@ async function download(target: string): Promise<void> {
   const bytes = Buffer.from(await response.arrayBuffer());
   writeFileSync(target, bytes);
 }
+
+export const mayPromote = (input: { comparisonFailed: boolean; weeklyFailed: boolean; approve: boolean }): boolean => input.approve || (!input.comparisonFailed && !input.weeklyFailed);
 
 export async function main(argv: string[]): Promise<number> {
   const flags = parseFlags(argv);
@@ -75,8 +77,9 @@ export async function main(argv: string[]): Promise<number> {
     failed = comparison.violations.length > 0;
     log(`önceki yayın ${previous.tag}: ${comparison.violations.length} gerileme farkı, rapor faz-8-degisim-${tag}.md`);
   } else log('önceki yayın yok, bu yayın başlangıç noktası');
-  if (failed && !flags.approveRegressions) {
-    console.error('gerileme kapısı (K8.2) tutmadı; farklar açıklanıp onaylanana kadar yayın dist/packs içine alınmadı (--approve-regressions)');
+  const weeklyFailed = flags.skipWeekly ? false : run('npx', ['tsx', 'scripts/weekly.ts', '--tag', tag, ...(flags.approveRegressions ? ['--approve-regressions'] : [])]) !== 0;
+  if (!mayPromote({ comparisonFailed: failed, weeklyFailed, approve: flags.approveRegressions })) {
+    console.error(`gerileme kapısı (${failed ? 'K8.2' : 'K18.2'}) tutmadı; farklar açıklanıp onaylanana kadar yayın dist/packs içine alınmadı (--approve-regressions)`);
     return 1;
   }
   if (flags.promote) {

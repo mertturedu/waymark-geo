@@ -1,6 +1,6 @@
 {
   "name": "@yuksi/geo",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Offline maps, door-level address search and route planning for React Native",
   "license": "UNLICENSED",
   "type": "module",
@@ -33,10 +33,13 @@
     "device-report": "tsx scripts/device-report.ts",
     "device-run": "tsx scripts/device-run.ts",
     "serve:packs": "tsx scripts/serve-packs.ts",
+    "serve:geo": "tsx scripts/serve-geo.ts",
+    "build:server": "esbuild scripts/serve-geo.ts --bundle --platform=node --format=esm --target=node24 --external:node:* --outfile=dist/geo-server.mjs",
     "make:test-data": "tsx scripts/make-test-data.ts",
     "data:blocks": "tsx scripts/add-block-hashes.ts",
     "mlt:check": "tsx scripts/check-mlt-native.ts",
     "data:sources": "tsx scripts/fetch-sources.ts",
+    "data:neighbourhoods": "tsx scripts/build-neighbourhoods.ts",
     "data:build": "tsx scripts/data-build.ts",
     "corrections": "tsx scripts/corrections.ts",
     "sim": "tsx scripts/sim.ts",
@@ -51,7 +54,10 @@
     "icons:shields": "xcrun swiftc -O scripts/make-shield-icons.swift -o ${TMPDIR:-/tmp}/make-shield-icons -framework AppKit && ${TMPDIR:-/tmp}/make-shield-icons src/native/map/icons",
     "build:package": "tsx scripts/build-package.ts",
     "prepack": "npm run build:package",
-    "prepare": "node -e \"process.exit(require('fs').existsSync('lib/index.js')?0:1)\" || npm run build:package"
+    "prepare": "node -e \"process.exit(require('fs').existsSync('lib/index.js')?0:1)\" || npm run build:package",
+    "weekly": "tsx scripts/weekly.ts",
+    "weekly:simulate": "tsx scripts/weekly-simulate.ts",
+    "monthly": "tsx scripts/monthly.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
@@ -68,6 +74,7 @@
     "eslint": "^9.39.5",
     "fast-check": "^4.10.2",
     "jest": "^30.5.2",
+    "onnxruntime-node": "^1.31.1",
     "react-test-renderer": "^19.3.1",
     "tsx": "^4.23.15",
     "typescript": "~6.0.3",

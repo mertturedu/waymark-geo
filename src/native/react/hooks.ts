@@ -11,6 +11,7 @@ import { resolveScheme, type ThemePreference } from '../logic/scheme';
 import { hereText, type PlaceCardData } from '../logic/place-card';
 import { loadPlaceCard, type MapFeature } from '../logic/place-pick-load';
 import type { NearbyHit } from '../../core/address/search';
+import type { Place } from '../../core/address/types';
 import type { NearbyGroup } from '../../core/address/nearby';
 import type { MapFont, MapStyle } from '../map/style';
 import { MAX_STYLED_REGIONS, regionsForView, type ViewPoint } from '../map/region-window';
@@ -49,7 +50,6 @@ export function useRegionStatus(id: string): RegionStatus {
   return useMemo(() => geo.regions.status(id), [geo, id, tick]);
 }
 
-export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean | number };
 function useStreamKey(): string {
   const geo = useGeo();
   const [key, setKey] = useState(() => geo.map.stream.active().join(','));
@@ -61,6 +61,7 @@ function useStreamKey(): string {
   return key;
 }
 
+export type MapStyleHookOptions = { theme: ThemePreference; language?: string; hide?: string[]; look?: MapLook; view?: ViewPoint; maxRegions?: number; font?: MapFont; traffic?: boolean | number };
 
 const TRAFFIC_TICK_MS = 60_000;
 
@@ -98,8 +99,8 @@ export function useMapStyle(given: MapStyleHookOptions): MapStyle {
   const side = geoTheme[options.theme];
   const look = useMemo(() => resolveMapLook(side.map, options.look), [side, lookKey]);
   const installed = useInstalledKey();
-  const trafficAt = useTrafficTime(given.traffic);
   const streaming = useStreamKey();
+  const trafficAt = useTrafficTime(given.traffic);
   const hideKey = (options.hide ?? []).join(',');
   const current = useRef<string[] | null>(null);
   if (options.view === undefined) current.current = null;
@@ -261,5 +262,31 @@ export function useNearby(point: [number, number] | null, group: NearbyGroup | n
       live = false;
     };
   }, [geo, key]);
+  return state;
+}
+
+export function usePlaceGeometry(place: Place | null): { shape: Place | null; loading: boolean } {
+  const geo = useGeo();
+  const [state, setState] = useState<{ shape: Place | null; loading: boolean }>({ shape: null, loading: false });
+  const id = place?.id ?? '';
+  useEffect(() => {
+    if (!place) {
+      setState({ shape: null, loading: false });
+      return undefined;
+    }
+    if (place.geometry || place.bbox) {
+      setState({ shape: place, loading: false });
+      return undefined;
+    }
+    let live = true;
+    setState({ shape: null, loading: true });
+    geo.search.geometry(place).then(
+      (found) => live && setState({ shape: found ? { ...place, ...(found.bbox ? { bbox: found.bbox } : {}), ...(found.geometry ? { geometry: found.geometry } : {}) } : place, loading: false }),
+      () => live && setState({ shape: place, loading: false }),
+    );
+    return () => {
+      live = false;
+    };
+  }, [geo, id]);
   return state;
 }

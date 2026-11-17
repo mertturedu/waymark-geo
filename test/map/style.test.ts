@@ -318,7 +318,7 @@ describe('businesses from the places overlay', () => {
     expect(fill).toBe('#E2506A');
     expect(sum(value(light, 'paint', 'text-color', pharmacy))).toBeLessThan(sum(fill));
     expect(sum(value(dark, 'paint', 'text-color', pharmacy))).toBeGreaterThan(sum(fill));
-    expect(dark?.paint?.['text-halo-color']).toBe('#171A22');
+    expect(dark?.paint?.['text-halo-color']).toBe('#1B2433');
   });
 
   it('keeps chains in the same layer in category mode and gives them their own layers when logos are asked for', () => {

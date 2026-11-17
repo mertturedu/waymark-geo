@@ -5,7 +5,8 @@ import { layers as protomapsLayers, namedFlavor } from '@protomaps/basemaps';
 import { MLT_SUFFIX } from '../../core/region/manifest';
 import { upperTr } from '../../core/text/upper';
 import { SHIELD_MAX_LENGTH, shieldImageExpression } from './shields';
-import { bandOf, mapSlowdown, regionBusyness, type MapRoadKind, type TrafficBand } from '../../core/traffic/model';
+import { observedCells } from '../../core/traffic/istanbul';
+import { bandOf, mapSlowdown, observedMapSlowdown, regionBusyness, type MapRoadKind, type TrafficBand } from '../../core/traffic/model';
 
 export type StyleLayer = { id: string; type: string; source?: string; minzoom?: number; maxzoom?: number; paint?: Record<string, unknown>; layout?: Record<string, unknown>; [key: string]: unknown };
 export type MapStyle = {
@@ -198,24 +199,79 @@ const withShields = (layers: StyleLayer[]): StyleLayer[] =>
 
 export const TRAFFIC_FROM = 8;
 export const TRAFFIC_GLOW_FROM = 6;
-export const TRAFFIC_COLOURS: Record<Exclude<TrafficBand, 'smooth'>, string> = { busy: '#F5B800', heavy: '#F26B21', jam: '#E0050F' };
+export const TRAFFIC_COLOURS: Record<Exclude<TrafficBand, 'smooth'>, string> = { busy: '#F5A524', heavy: '#F26B21', jam: '#D4142C' };
+export const TRAFFIC_SMOOTH = '#46C28A';
 const TRAFFIC_KINDS: MapRoadKind[] = ['highway', 'major_road', 'medium_road', 'minor_road'];
-const TRAFFIC_WIDTH: Record<MapRoadKind, number[]> = { highway: [1.6, 3.4, 6.5, 12], major_road: [1.2, 2.8, 5.5, 10], medium_road: [0.6, 1.8, 3.8, 8], minor_road: [0, 0.7, 2.6, 6] };
+const SMOOTH_KINDS: MapRoadKind[] = ['highway', 'major_road'];
+const TRAFFIC_WIDTH: Record<MapRoadKind, number[]> = { highway: [1.4, 3, 5.5, 10], major_road: [1, 2.2, 4.5, 8], medium_road: [0, 0, 2, 4.5], minor_road: [0, 0, 0.8, 3] };
 const TRAFFIC_ZOOMS = [8, 12, 15, 18];
-const GLOW_WIDTH: Record<MapRoadKind, number[]> = { highway: [4, 7, 11, 15], major_road: [0, 4, 8, 13], medium_road: [0, 0, 3, 8], minor_road: [0, 0, 0, 4] };
+const GLOW_WIDTH: Record<MapRoadKind, number[]> = { highway: [4, 6, 9, 12], major_road: [0, 3, 6, 10], medium_road: [0, 0, 0, 0], minor_road: [0, 0, 0, 0] };
+const GLOW_KINDS: MapRoadKind[] = ['highway', 'major_road'];
 const GLOW_ZOOMS = [6, 9, 12, 15];
+const FLOW_DASH = [1.4, 4.6];
+const SLOW_DASH = [9, 13];
+const DENSE_DASH = [11, 9];
+const SLOW_SHARE: Record<MapRoadKind, number> = { highway: 1.1, major_road: 0.8, medium_road: 0.4, minor_road: 0.2 };
+const MAX_SLOW_SHARE = 0.5;
+const JAM_SHARE: Record<Exclude<TrafficBand, 'smooth'>, number> = { busy: 0.05, heavy: 0.25, jam: 0.5 };
+
+const roadHash: unknown[] = [
+  '/',
+  ['%', ['+', ['*', ['length', ['to-string', ['coalesce', ['get', 'name'], '']]], 7], ['*', ['length', ['to-string', ['coalesce', ['get', 'kind_detail'], '']]], 3], ['*', ['coalesce', ['to-number', ['get', 'min_zoom']], 0], 13]], 10],
+  10,
+];
+
+type KindBand = { kind: MapRoadKind; band: TrafficBand; slowdown: number };
+
+const OBSERVED_STEP = 0.1;
+
+function trafficSet(sourceName: string, suffix: string, slowdownOf: (kind: MapRoadKind) => number, scope: unknown[] | null): StyleLayer[] {
+  const all: KindBand[] = TRAFFIC_KINDS.map((kind) => {
+    const slowdown = slowdownOf(kind);
+    return { kind, band: bandOf(slowdown), slowdown };
+  });
+  const scoped = (filter: unknown[]): unknown[] => (scope === null ? filter : ['all', scope, filter]);
+  const slow = all.filter((entry): entry is KindBand & { band: Exclude<TrafficBand, 'smooth'> } => entry.band !== 'smooth');
+  const flowing = all.filter((entry) => entry.band === 'smooth' && SMOOTH_KINDS.includes(entry.kind));
+  const slowShare = (entry: KindBand): number => Math.min(MAX_SLOW_SHARE, entry.slowdown * SLOW_SHARE[entry.kind]);
+  const jamShare = (entry: KindBand & { band: Exclude<TrafficBand, 'smooth'> }): number => slowShare(entry) * JAM_SHARE[entry.band];
+  const widths = (table: Record<MapRoadKind, number[]>, zooms: number[], entries: KindBand[], scale = 1): unknown[] => ['interpolate', ['linear'], ['zoom'], ...zooms.flatMap((zoom, step) => [zoom, ['match', ['get', 'kind'], ...entries.flatMap((entry) => [entry.kind, (table[entry.kind][step] as number) * scale]), 0]])];
+  const kindsOf = (entries: KindBand[]): unknown[] => ['in', ['get', 'kind'], ['literal', entries.map((entry) => entry.kind)]];
+  const byKind = (entries: KindBand[], value: (entry: KindBand) => number): unknown[] => ['match', ['get', 'kind'], ...entries.flatMap((entry) => [entry.kind, value(entry)]), 0];
+  const colourOf = (entries: KindBand[]): unknown[] => ['match', ['get', 'kind'], ...entries.flatMap((entry) => [entry.kind, entry.band === 'smooth' ? TRAFFIC_SMOOTH : TRAFFIC_COLOURS[entry.band as Exclude<TrafficBand, 'smooth'>]]), '#00000000'];
+  const stretchOf = (entries: KindBand[]): unknown[] => ['all', kindsOf(entries), ['<', roadHash, byKind(entries, slowShare)], ['>=', roadHash, byKind(entries, (entry) => jamShare(entry as KindBand & { band: Exclude<TrafficBand, 'smooth'> }))]];
+  const base = { type: 'line' as const, source: sourceName, 'source-layer': 'roads' };
+  const layout = { 'line-cap': 'butt', 'line-join': 'round' };
+  const layers: StyleLayer[] = [];
+  const glowing = slow.filter((entry) => GLOW_KINDS.includes(entry.kind));
+  if (glowing.length > 0) {
+    layers.push({ ...base, id: `traffic-glow${suffix}@${sourceName}`, maxzoom: 16, minzoom: TRAFFIC_GLOW_FROM, filter: scoped(['all', kindsOf(glowing), ['<', roadHash, byKind(glowing, slowShare)]]), layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': colourOf(glowing), 'line-width': widths(GLOW_WIDTH, GLOW_ZOOMS, glowing), 'line-blur': ['interpolate', ['linear'], ['zoom'], 6, 3, 12, 6, 15, 8], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 6, 0.3, 9, 0.2, 12, 0.1, 15, 0.05, 16, 0] } });
+  }
+  if (flowing.length > 0) {
+    layers.push({ ...base, id: `traffic-flow${suffix}@${sourceName}`, minzoom: 11, filter: scoped(kindsOf(flowing)), layout, paint: { 'line-color': TRAFFIC_SMOOTH, 'line-width': widths(TRAFFIC_WIDTH, TRAFFIC_ZOOMS, flowing, 0.7), 'line-dasharray': FLOW_DASH, 'line-opacity': 0.4 } });
+  }
+  if (slow.length > 0) {
+    layers.push({ ...base, id: `traffic${suffix}@${sourceName}`, minzoom: TRAFFIC_FROM, filter: scoped(stretchOf(slow)), layout, paint: { 'line-color': colourOf(slow), 'line-width': widths(TRAFFIC_WIDTH, TRAFFIC_ZOOMS, slow), 'line-dasharray': SLOW_DASH, 'line-opacity': 0.9 } });
+    const dense = slow.filter((entry) => entry.band !== 'busy');
+    if (dense.length > 0) layers.push({ ...base, id: `traffic-dense${suffix}@${sourceName}`, minzoom: TRAFFIC_FROM, filter: scoped(['all', kindsOf(dense), ['<', roadHash, byKind(dense, (entry) => jamShare(entry as KindBand & { band: Exclude<TrafficBand, 'smooth'> }))]]), layout, paint: { 'line-color': TRAFFIC_COLOURS.jam, 'line-width': widths(TRAFFIC_WIDTH, TRAFFIC_ZOOMS, dense, 1.05), 'line-dasharray': DENSE_DASH, 'line-opacity': 0.95 } });
+  }
+  return layers;
+}
 
 export function trafficLayers(sourceName: string, plate: string, at: number): StyleLayer[] {
   const busyness = regionBusyness(plate);
-  const slow = TRAFFIC_KINDS.map((kind) => ({ kind, band: bandOf(mapSlowdown(kind, at, busyness)) })).filter((entry): entry is { kind: MapRoadKind; band: Exclude<TrafficBand, 'smooth'> } => entry.band !== 'smooth');
-  if (slow.length === 0) return [];
-  const colour = ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, TRAFFIC_COLOURS[entry.band]]), '#00000000'];
-  const widths = (table: Record<MapRoadKind, number[]>, zooms: number[]): unknown[] => ['interpolate', ['linear'], ['zoom'], ...zooms.flatMap((zoom, step) => [zoom, ['match', ['get', 'kind'], ...slow.flatMap((entry) => [entry.kind, table[entry.kind][step] as number]), 0]])];
-  const filter = ['in', ['get', 'kind'], ['literal', slow.map((entry) => entry.kind)]];
-  const layout = { 'line-cap': 'round', 'line-join': 'round' };
-  const glow: StyleLayer = { id: `traffic-glow@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_GLOW_FROM, maxzoom: 16, filter, layout, paint: { 'line-color': colour, 'line-width': widths(GLOW_WIDTH, GLOW_ZOOMS), 'line-blur': ['interpolate', ['linear'], ['zoom'], 6, 3, 12, 6, 15, 8], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 6, 0.4, 9, 0.32, 12, 0.22, 15, 0.1, 16, 0] } };
-  const line: StyleLayer = { id: `traffic@${sourceName}`, type: 'line', source: sourceName, 'source-layer': 'roads', minzoom: TRAFFIC_FROM, filter, layout, paint: { 'line-color': colour, 'line-width': widths(TRAFFIC_WIDTH, TRAFFIC_ZOOMS), 'line-opacity': 0.9 } };
-  return [glow, line];
+  const model = (kind: MapRoadKind): number => mapSlowdown(kind, at, busyness);
+  const cells = observedCells(plate, at);
+  if (cells === null) return trafficSet(sourceName, '', model, null);
+  const levels = new Map<number, string[]>();
+  for (const [cell, value] of Object.entries(cells)) {
+    const level = Math.round(value / OBSERVED_STEP);
+    const list = levels.get(level);
+    if (list) list.push(cell);
+    else levels.set(level, [cell]);
+  }
+  const seen = [...levels.entries()].sort((a, b) => a[0] - b[0]).flatMap(([level, list]) => trafficSet(sourceName, `-o${level}`, (kind) => observedMapSlowdown(kind, level * OBSERVED_STEP), ['in', ['coalesce', ['get', 'cell'], ''], ['literal', list]]));
+  return [...trafficSet(sourceName, '-m', model, ['!', ['in', ['coalesce', ['get', 'cell'], ''], ['literal', Object.keys(cells)]]]), ...seen];
 }
 
 export const TRANSIT_LINES_FROM = 11;
@@ -231,8 +287,8 @@ function transitLayers(sourceName: string, theme: 'light' | 'dark'): StyleLayer[
     { ...base, id: `transit-casing@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['!=', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': dark ? '#1A1A1D' : '#FFFFFF', 'line-width': width(6), 'line-opacity': 0.9 } },
     { ...base, id: `transit-lines@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['!=', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': colour, 'line-width': width(3.4) } },
     { ...base, id: `transit-ferry@${sourceName}`, type: 'line', minzoom: TRANSIT_LINES_FROM, filter: ['all', ['==', ['get', 'kind'], 'line'], ['==', ['get', 'mode'], 'ferry']], layout: { 'line-cap': 'butt' }, paint: { 'line-color': colour, 'line-width': width(2.4), 'line-dasharray': [2, 2] } },
-    { ...base, id: `transit-stations@${sourceName}`, type: 'circle', minzoom: TRANSIT_STATIONS_FROM, filter: ['==', ['get', 'kind'], 'station'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], TRANSIT_STATIONS_FROM, 3, 17, 6], 'circle-color': dark ? '#1A1E27' : '#FFFFFF', 'circle-stroke-color': ['match', ['get', 'mode'], ...Object.entries(TRANSIT_COLOURS).flat(), '#546E7A'], 'circle-stroke-width': 2 } },
-    { ...base, id: `transit-names@${sourceName}`, type: 'symbol', minzoom: TRANSIT_STATIONS_FROM + 1, filter: ['==', ['get', 'kind'], 'station'], layout: { 'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': 10, 'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 7, 'text-optional': true }, paint: { 'text-color': dark ? '#B8BFD0' : '#3B4152', 'text-halo-color': dark ? '#1A1E27' : '#FFFFFF', 'text-halo-width': 1.2 } },
+    { ...base, id: `transit-stations@${sourceName}`, type: 'circle', minzoom: TRANSIT_STATIONS_FROM, filter: ['==', ['get', 'kind'], 'station'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], TRANSIT_STATIONS_FROM, 3, 17, 6], 'circle-color': dark ? '#1B2433' : '#FFFFFF', 'circle-stroke-color': ['match', ['get', 'mode'], ...Object.entries(TRANSIT_COLOURS).flat(), '#546E7A'], 'circle-stroke-width': 2 } },
+    { ...base, id: `transit-names@${sourceName}`, type: 'symbol', minzoom: TRANSIT_STATIONS_FROM + 1, filter: ['==', ['get', 'kind'], 'station'], layout: { 'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': 10, 'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 7, 'text-optional': true }, paint: { 'text-color': dark ? '#B8BFD0' : '#3B4152', 'text-halo-color': dark ? '#1B2433' : '#FFFFFF', 'text-halo-width': 1.2 } },
   ] as StyleLayer[];
 }
 
@@ -302,7 +358,7 @@ const quietGate = (look: ResolvedMapLook, input: unknown): unknown[] => {
   return quiet.length === 0 ? ['literal', true] : ['any', ['!', ['in', input, ['literal', quiet]]], ['>=', ['zoom'], QUIET_FROM_ZOOM]];
 };
 
-const halo = (theme: 'light' | 'dark') => ({ 'icon-halo-color': theme === 'dark' ? '#171A22' : '#FFFFFF', 'icon-halo-width': 1.2 });
+const halo = (theme: 'light' | 'dark') => ({ 'icon-halo-color': theme === 'dark' ? '#1B2433' : '#FFFFFF', 'icon-halo-width': 1.2 });
 
 const letterSize = (text: string): number => {
   const length = [...text].length;
@@ -401,7 +457,7 @@ function badgeLayer(from: BadgeSource, paint: Paint, lang: string): StyleLayer {
       'icon-halo-color': '#FFFFFF',
       'icon-halo-width': 1,
       'text-color': from.wrap(color((g) => inkColor(look, g, theme, paint.accent))),
-      'text-halo-color': theme === 'dark' ? '#171A22' : '#FFFFFF',
+      'text-halo-color': theme === 'dark' ? '#1B2433' : '#FFFFFF',
       'text-halo-width': 1.2,
     },
   };
@@ -442,7 +498,7 @@ export function hoodLabelLayer(theme: 'light' | 'dark', font: MapFont = 'noto'):
     type: 'symbol',
     minzoom: HOOD_MIN_ZOOM,
     layout: { 'text-field': ['get', 'label'], 'text-font': FONT_STACKS[font]('Medium'), 'text-size': ['interpolate', ['linear'], ['zoom'], HOOD_MIN_ZOOM, 9, 16, 13], 'text-max-width': 7, 'text-letter-spacing': HOOD_LETTER_SPACING },
-    paint: { 'text-color': dark ? '#a9b0c2' : '#6A7080', 'text-halo-color': dark ? '#171a22' : '#ECEFF4', 'text-halo-width': 1.3 },
+    paint: { 'text-color': dark ? '#a9b0c2' : '#515A70', 'text-halo-color': dark ? '#171a22' : '#E7EDF7', 'text-halo-width': 1.3 },
   };
 }
 

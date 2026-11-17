@@ -147,4 +147,14 @@ describe('mergeDirectory knows streets by neighbourhood and kind', () => {
     const extra = [make('34:s:2', { precision: 'street', source: 'derived', hood: 'Fener' })];
     expect(ids(mergeDirectory('34', own, extra))).toEqual(['34:s:1', '34+:s:2']);
   });
+
+  it('lists a building name once when the directory has it twice nearby', () => {
+    const twice = [
+      item({ id: '34:p:1', precision: 'poi', poi: 'Başakkent Sitesi', at: [29, 41], score: 0.9 }),
+      item({ id: '34:p:2', precision: 'poi', poi: 'BAŞAKKENT SİTESİ', at: [29.0004, 41], score: 0.85 }),
+      item({ id: '34:p:3', precision: 'poi', poi: 'Başakkent Sitesi', at: [29.1, 41], score: 0.8 }),
+      item({ id: '34:p:4', precision: 'poi', poi: 'Ateş Apartmanı', at: [29, 41], score: 0.8 }),
+    ];
+    expect(ids(mergeDirectory('34', [], twice))).toEqual(['34+:p:1', '34+:p:3', '34+:p:4']);
+  });
 });

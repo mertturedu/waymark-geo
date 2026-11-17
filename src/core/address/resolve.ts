@@ -5,12 +5,16 @@ import { numberAsWords } from '../text/digits';
 import { nameKey } from '../text/fold';
 import { houseNumberKey, type HouseNumber } from '../text/number';
 import type { BuildingSnap } from './buildings';
+import type { Buildings2 } from './buildings2';
+import { bracketed, predictFromBuildings } from './sequence';
 import { cachedStreetKey } from './key-cache';
 import { editDistance, kindFactor, nameScore } from './names';
 import type { AddressRow, DistrictInfo, HoodInfo, PartRow, Region, StreetRow } from './pack';
 import { ONE_SIDED_FLOOR, predictNumber, streetMiddle, type Variant } from './predict';
 import { streetKey, streetLabel, type StreetKey } from '../text/street';
 import type { Lang, ParsedAddress } from '../text/types';
+import { hoodAliases } from './aliases';
+import { fuzzyStreetNames } from './fuzzy';
 import { formatLabel } from './label';
 import { localizeComponents } from './localize';
 import type { Components, Hints, LayerKey, LayerNeighbour, LayerPoint, Place, PointLayer, Precision, Source } from './types';
@@ -27,6 +31,7 @@ export type RegionContext = {
   findDistrictId: (name: string) => string | null;
   variant?: Variant;
   snap?: BuildingSnap;
+  buildings2?: Buildings2;
 };
 
 const SAME_DOOR_M = 30;
@@ -39,6 +44,10 @@ const NUMBER_MISSING = 0.7;
 const NUMBER_GUESSED = 0.85;
 const NUMBER_ONE_SIDED = 0.75;
 const HOOD_MISSING = 0.8;
+const ALIAS_SCORE = 0.95;
+const HOOD_NOT_FOUND = 0.8;
+const FUZZY_BELOW = 0.85;
+const FUZZY_MAX_WORDS = 4;
 const DISTRICT_MISMATCH = 0.55;
 const round = (value: number): number => Math.round(Math.min(1, Math.max(0, value)) * 1000) / 1000;
 
@@ -72,6 +81,13 @@ export function matchHoods(ctx: RegionContext, text: string, within: Set<number>
     else if (compact.length >= 5 && editDistance(compact, other, 1) <= 1) score = 0.85;
     if (score > 0) found.set(h.id, score);
   }
+  if (found.size === 0) {
+    const former = hoodAliases(ctx.region);
+    for (const id of former.get(key) ?? former.get(compact) ?? []) {
+      const h = ctx.region.hoods.find((candidate) => candidate.id === id);
+      if (h && (!within || within.size === 0 || within.has(h.districtId))) found.set(id, ALIAS_SCORE);
+    }
+  }
   return found;
 }
 
@@ -88,7 +104,7 @@ export function components(ctx: RegionContext, districtId: number, hoodId: numbe
   return out;
 }
 
-export type Make = { id: string; components: Components; coordinate: LngLat; precision: Precision; approximate: boolean; source: Source; score: number; area: string };
+export type Make = { id: string; components: Components; coordinate: LngLat; precision: Precision; approximate: boolean; source: Source; score: number; area: string; notes?: string[]; radiusM?: number; entrance?: LngLat };
 
 export function scored(ctx: RegionContext, make: Make): Scored {
   const shown = localizeComponents(ctx, make.components);
@@ -106,6 +122,9 @@ export function scored(ctx: RegionContext, make: Make): Scored {
       source: make.source,
       confidence: round(make.score),
       region: ctx.region.id,
+      ...(make.notes && make.notes.length > 0 ? { notes: make.notes } : {}),
+      ...(make.radiusM !== undefined ? { radiusM: make.radiusM } : {}),
+      ...(make.entrance ? { entrance: make.entrance } : {}),
     },
   };
 }
@@ -155,11 +174,18 @@ async function viaStreet(ctx: RegionContext, parsed: ParsedAddress, hn: HouseNum
       if (value > (best.get(c.ref) ?? 0)) best.set(c.ref, value);
     }
   }
+  if (!query.numberOnly && (query.kind !== null || hn !== null) && query.key.split(' ').length < FUZZY_MAX_WORDS && Math.max(0, ...best.values()) < FUZZY_BELOW) {
+    for (const c of await fuzzyStreetNames(ctx.region, query.compact)) {
+      const value = nameScore(query, cachedStreetKey(c.key)).score;
+      if (value > (best.get(c.ref) ?? 0)) best.set(c.ref, value);
+    }
+  }
   const refs = [...best].filter((s) => s[1] >= MIN_NAME).sort((a, b) => b[1] - a[1] || a[0] - b[0]).slice(0, STREETS_KEPT);
   if (refs.length === 0) return;
   const ids = refs.map((r) => r[0]);
   const rows = new Map((await ctx.region.streetsByIds(ids)).map((r) => [r.id, r]));
   const places = await ctx.region.hoodsOfStreet(ids);
+  await ctx.region.prefetch?.(ids, hn !== null);
   for (const [ref, baseValue] of refs) {
     const street = rows.get(ref);
     if (!street) continue;
@@ -169,6 +195,26 @@ async function viaStreet(ctx: RegionContext, parsed: ParsedAddress, hn: HouseNum
 }
 
 export type StreetPlace = { districtId: number; hoodId: number | null };
+
+const SEQUENCE_BASE = 0.9;
+const SEQUENCE_FLOOR = 0.6;
+const SEQUENCE_RADIUS_M = 400;
+
+async function guessFromBuildings(ctx: RegionContext, street: number, loc: StreetPlace, number: number, extra: LayerNeighbour[]): Promise<{ coordinate: LngLat; value: number; radiusM: number; notes: string[]; entrance?: LngLat } | null> {
+  const reader = ctx.buildings2;
+  if (!reader) return null;
+  const rows = (await ctx.region.neighbours(street, null, loc.districtId)).filter((r) => r.num !== null && r.districtId === loc.districtId);
+  const anchors = [
+    ...rows.map((r) => ({ number: r.num as number, point: [r.lng, r.lat] as LngLat, weight: 0.9 })),
+    ...extra.map((n) => ({ number: n.int, point: n.coordinate, weight: n.trusted ? 1 : 0.8 })),
+  ];
+  if (anchors.length === 0 || bracketed(number, anchors)) return null;
+  const result = predictFromBuildings({ number, anchors, buildings: reader.trackOf ? await reader.trackOf(street) : await reader.ofStreet(street) });
+  if (!result) return null;
+  const entrances = await reader.entrances(result.building.id);
+  const door = entrances.find((e) => e.kind === 'main' || e.kind === 'yes') ?? entrances[0];
+  return { coordinate: result.building.center, value: Math.max(SEQUENCE_FLOOR, SEQUENCE_BASE - Math.min(0.3, result.radiusM / SEQUENCE_RADIUS_M)), radiusM: result.radiusM, notes: result.notes, ...(door ? { entrance: door.point } : {}) };
+}
 
 export async function emitStreet(ctx: RegionContext, street: StreetRow, nameValue: number, locs: StreetPlace[], hn: HouseNumber | null, districts: Set<number> | null, hoods: Map<number, number> | null, out: Scored[]): Promise<void> {
   const ref = street.id;
@@ -209,6 +255,25 @@ export async function emitStreet(ctx: RegionContext, street: StreetRow, nameValu
       continue;
     }
     const extra = asked && hn && hn.int !== null && hn.int > 0 ? await neighboursOf(ctx, asked) : [];
+    const sequenced = hn && hn.int !== null && hn.int > 0 ? await guessFromBuildings(ctx, ref, loc, hn.int, extra) : null;
+    if (hn && sequenced) {
+      out.push(
+        scored(ctx, {
+          id: `${ctx.region.id}:q:${ref}:${hn.key}:${loc.hoodId ?? 0}`,
+          components: components(ctx, loc.districtId, loc.hoodId, street, hn.raw),
+          coordinate: sequenced.coordinate,
+          precision: 'interpolated',
+          approximate: true,
+          source: 'interpolated',
+          score: factor * sequenced.value,
+          area,
+          notes: sequenced.notes,
+          radiusM: sequenced.radiusM,
+          ...(sequenced.entrance ? { entrance: sequenced.entrance } : {}),
+        }),
+      );
+      continue;
+    }
     const guess = hn && hn.int !== null && hn.int > 0 ? await predictNumber(ctx.region, { id: ref, hoodId: loc.hoodId, districtId: loc.districtId }, { int: hn.int, key: hn.key, parity: hn.parity === 'odd' ? 1 : 0 }, { parts, variant: ctx.variant, snap: ctx.snap, extra }) : null;
     if (hn && guess && guess.precision === 'interpolated' && !(guess.variant === 'one-sided' && guess.confidence <= ONE_SIDED_FLOOR)) {
       out.push(
@@ -345,15 +410,56 @@ function inAskedArea(item: Scored, districts: Set<number> | null, hoods: Map<num
   return districts !== null && districts.has(district);
 }
 
+const POSTCODE_FIT = 1.08;
+const POSTCODE_MISS = 0.92;
+
+async function favourPostcode(ctx: RegionContext, postcode: string, items: Scored[]): Promise<Scored[]> {
+  const hoods = new Set(await ctx.region.hoodsOfPostcode(postcode));
+  if (hoods.size === 0) return items;
+  return items.map((item) => {
+    const hood = Number(item.area.split('/')[1]);
+    const score = Math.min(1, item.score * (hoods.has(hood) ? POSTCODE_FIT : POSTCODE_MISS));
+    return { ...item, score, place: { ...item.place, confidence: round(score) } };
+  });
+}
+
+const MISMATCH_NOTE = 'district_mismatch';
+const MISMATCH_TIE = 0.06;
+
+function onlyDistrictOutside(out: Scored[]): Scored[] | null {
+  if (out.length === 0) return null;
+  const top = Math.max(...out.map((item) => item.score));
+  const near = out.filter((item) => item.score >= top - MISMATCH_TIE);
+  const exact = near.filter((item) => item.place.precision === 'address');
+  const districts = new Set((exact.length > 0 ? exact : near).map((item) => item.area.split('/')[0]));
+  return districts.size === 1 ? collapseDoors(exact.length > 0 ? exact : out) : null;
+}
+const MISMATCH_SOFT = 0.92;
+
+function markMismatch(items: Scored[]): Scored[] {
+  return items.map((item) => ({ ...item, score: item.score * MISMATCH_SOFT, place: { ...item.place, approximate: true, confidence: round(item.score * MISMATCH_SOFT), notes: [...(item.place.notes ?? []), MISMATCH_NOTE] } }));
+}
+
 export async function resolveInRegion(ctx: RegionContext, parsed: ParsedAddress): Promise<Scored[]> {
+  const asked = matchDistricts(ctx, parsed);
+  const inDistrict = parsed.neighbourhood ? matchHoods(ctx, parsed.neighbourhood, asked) : null;
+  if (parsed.district && asked && asked.size > 0 && parsed.neighbourhood && inDistrict && inDistrict.size === 0 && matchHoods(ctx, parsed.neighbourhood, null).size > 0) {
+    return markMismatch(await resolveWith(ctx, parsed, null, matchHoods(ctx, parsed.neighbourhood, null)));
+  }
+  const results = await resolveWith(ctx, parsed, asked, inDistrict);
+  if (parsed.postcode && !parsed.neighbourhood) return favourPostcode(ctx, parsed.postcode, results);
+  return parsed.neighbourhood && asked === null && inDistrict && inDistrict.size === 0 ? results.map((item) => ({ ...item, score: item.score * HOOD_NOT_FOUND, place: { ...item.place, confidence: round(item.score * HOOD_NOT_FOUND) } })) : results;
+}
+
+async function resolveWith(ctx: RegionContext, parsed: ParsedAddress, districts: Set<number> | null, hoods: Map<number, number> | null): Promise<Scored[]> {
   const out: Scored[] = [];
   const hn = parsed.houseNumber ? houseNumberKey(parsed.houseNumber) : null;
-  const districts = matchDistricts(ctx, parsed);
-  const hoods = parsed.neighbourhood ? matchHoods(ctx, parsed.neighbourhood, districts) : null;
   if (parsed.street) {
     await viaStreet(ctx, parsed, hn, districts, hoods, out);
     const asked = (hoods !== null && hoods.size > 0) || (districts !== null && districts.size > 0);
     if (asked && !out.some((item) => inAskedArea(item, districts, hoods))) {
+      const only = hn && (hoods === null || hoods.size === 0) ? onlyDistrictOutside(out) : null;
+      if (only) return markMismatch(only.map((item) => ({ ...item, score: item.score / DISTRICT_MISMATCH })));
       const split = out.length === 0 ? splitHood(ctx, parsed, districts) : null;
       if (split) return resolveInRegion(ctx, split);
       await viaLearnedStreet(ctx, parsed, hn, districts, hoods, out);

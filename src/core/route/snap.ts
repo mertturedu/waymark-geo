@@ -1,6 +1,9 @@
+import { lineLengthM, pointAlong, projectOnLine } from '../geo/distance';
 import { FLAG, edgeLine, type RoutePack } from './format';
 
-export type Snap = { edge: number; offsetM: number; distanceM: number; point: [number, number] };
+export type Snap = { edge: number; offsetM: number; distanceM: number; point: [number, number]; onChain?: boolean };
+
+export type Prefer = { lines: ReadonlyArray<ReadonlyArray<[number, number]>>; reachM?: number };
 
 export type SnapResult = { ok: true; snap: Snap; farSnap: boolean } | { ok: false; reason: 'no_road' };
 
@@ -10,6 +13,8 @@ const RAD = Math.PI / 180;
 const MAX_SNAP_M = 500;
 const FAR_SNAP_M = 150;
 const AVOID_RADIUS_M = 200;
+export const CHAIN_REACH_M = 150;
+export const CHAIN_TOL_M = 10;
 const MAIN_SLACK_M = 100;
 const HEAVY_CLASSES = 4;
 const FERRY_CLASS = 14;
@@ -38,7 +43,18 @@ export function project(line: number[], px: number, py: number, mLon: number, mL
   return { ...best, total: walked };
 }
 
-export function snapPoint(pack: RoutePack, lng: number, lat: number): SnapResult {
+const nearChain = (point: [number, number], lines: Prefer['lines']): boolean => {
+  for (const line of lines) if (line.length >= 2 && projectOnLine(point, line as [number, number][]).distanceM <= CHAIN_TOL_M) return true;
+  return false;
+};
+
+const midpoint = (line: number[]): [number, number] => {
+  const points: [number, number][] = [];
+  for (let i = 0; i + 1 < line.length; i += 2) points.push([(line[i] as number) / MICRO, (line[i + 1] as number) / MICRO]);
+  return pointAlong(points, lineLengthM(points) / 2);
+};
+
+export function snapPoint(pack: RoutePack, lng: number, lat: number, prefer?: Prefer): SnapResult {
   if (!Number.isFinite(lng) || !Number.isFinite(lat) || Math.abs(lat) > MAX_LAT || Math.abs(lng) > MAX_LNG) return { ok: false, reason: 'no_road' };
   const px = Math.round(lng * MICRO);
   const py = Math.round(lat * MICRO);
@@ -109,6 +125,12 @@ export function snapPoint(pack: RoutePack, lng: number, lat: number): SnapResult
   }
   let chosen = nearest(found);
   if (chosen === undefined) return { ok: false, reason: 'no_road' };
+  if (prefer && prefer.lines.length > 0) {
+    const reachM = Math.min(MAX_SNAP_M, prefer.reachM ?? CHAIN_REACH_M);
+    reach(reachM);
+    const onChain = nearest(found.filter((c) => !c.ferry && c.distanceM <= reachM && nearChain(c.point, prefer.lines) && nearChain(midpoint(edgeLine(pack, c.edge)), prefer.lines)));
+    if (onChain) return { ok: true, snap: { edge: onChain.edge, offsetM: onChain.offsetM, distanceM: onChain.distanceM, point: onChain.point, onChain: true }, farSnap: onChain.distanceM > FAR_SNAP_M };
+  }
   if (chosen.ferry) {
     reach(MAX_SNAP_M);
     chosen = nearest(found.filter((c) => !c.ferry)) ?? chosen;

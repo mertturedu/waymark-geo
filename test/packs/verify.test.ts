@@ -89,7 +89,7 @@ describe('verifyManifest', () => {
 
   it('reports a newer format as manifest-newer once the signature holds', () => {
     const k = keys();
-    const text = serializeManifest({ ...manifest(), format: 2 } as unknown as Manifest);
+    const text = serializeManifest({ ...manifest(), format: 3 } as unknown as Manifest);
     expect(verify(text, signManifest(text, k.privatePem), [k.publicPem])).toEqual({ ok: false, code: 'manifest-newer' });
     expect(verify(text, signManifest(text, k.privatePem), [keys().publicPem])).toEqual({ ok: false, code: 'signature' });
   });
