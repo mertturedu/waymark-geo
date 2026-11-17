@@ -98,12 +98,17 @@ export function compareVersions(a: string, b: string): number {
 
 export type Archived = { version: string; dir: string; manifest: Manifest };
 
+const MANIFEST_NAMES = ['manifest-v2.json', 'manifest-v1.json'];
+
 function readManifest(dir: string): Manifest | null {
-  try {
-    return parseManifest(readFileSync(join(dir, 'manifest-v1.json'), 'utf8'));
-  } catch {
-    return null;
+  for (const name of MANIFEST_NAMES) {
+    try {
+      return parseManifest(readFileSync(join(dir, name), 'utf8'));
+    } catch {
+      continue;
+    }
   }
+  return null;
 }
 
 export const versionOf = (manifest: Manifest): string | null => manifest.regions[0]?.version ?? null;
@@ -125,7 +130,7 @@ export function archivePack(packs: string, archiveDir: string): string | null {
   if (existsSync(target)) return version;
   const staging = `${target}.tmp`;
   rmSync(staging, { recursive: true, force: true });
-  link(join(packs, 'manifest-v1.json'), join(staging, 'manifest-v1.json'));
+  for (const name of MANIFEST_NAMES) if (existsSync(join(packs, name))) link(join(packs, name), join(staging, name));
   for (const region of manifest.regions) for (const file of region.files) if (existsSync(join(packs, file.path))) link(join(packs, file.path), join(staging, file.path));
   renameSync(staging, target);
   return version;

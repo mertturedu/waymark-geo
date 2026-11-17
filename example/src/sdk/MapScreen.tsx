@@ -6,11 +6,13 @@ import { CompassButton, DEFAULT_PITCH, GeoHoodLabels, GeoUserLocation, LocateBut
 import * as Location from 'expo-location';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { NativeSyntheticEvent } from 'react-native';
-import { Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Platform, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import type { Showing } from './SearchScreen';
+import { fitBounds, PlaceGeometryLayer, usePlaceGeometry } from '../../../src/native';
 import { useAutoRegionState } from './AutoRegion';
 import { savedPoints, type SavedPoint } from './saved';
 import { Chip, Row, usePalette } from './ui';
+import { setLastTap } from './lastTap';
 
 const ISTANBUL: [number, number] = [29.0287, 40.9903];
 const LANGS = ['tr', 'en', 'de', 'ar', 'ru', 'el'];
@@ -30,6 +32,8 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   const style = useMapStyle({ theme, language: lang, hide: hidden, view: mapView, ...(trafficMode === 1 ? { traffic: true } : trafficMode === 2 ? { traffic: RUSH_HOUR } : {}) });
   const { regions } = useRegions();
   const camera = useRef<CameraRef>(null);
+  const size = useWindowDimensions();
+  const { shape } = usePlaceGeometry(showing?.place ?? null);
   const view = useRef<MapView>({ center: ISTANBUL, zoom: 12, pitch: DEFAULT_PITCH });
   const [tilt, setTilt] = useState(true);
   const [bearing, setBearing] = useState(0);
@@ -59,10 +63,12 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
 
   useEffect(() => {
     if (!visible || !showing) return undefined;
-    view.current = { ...view.current, center: showing.point, zoom: 17 };
-    const timer = setTimeout(() => camera.current?.flyTo({ center: showing.point, zoom: 17, duration: 500 }), 350);
+    const fit = shape?.bbox ? fitBounds(shape.bbox, { width: size.width, height: size.height, padding: 48 }) : null;
+    const target = fit ?? { center: showing.point, zoom: 17 };
+    view.current = { ...view.current, center: target.center, zoom: target.zoom };
+    const timer = setTimeout(() => camera.current?.flyTo({ center: target.center, zoom: target.zoom, duration: 500 }), 350);
     return () => clearTimeout(timer);
-  }, [visible, showing]);
+  }, [visible, showing, shape?.bbox]);
 
   useEffect(() => {
     setPicked(null);
@@ -93,6 +99,7 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
   const press = async (event: NativeSyntheticEvent<PressEvent>) => {
     const { lngLat } = event.nativeEvent;
     const point: [number, number] = [lngLat[0], lngLat[1]];
+    setLastTap(point);
     const started = performance.now();
     const reverse = await geo.search.reverse(point, { language: lang as Lang });
     const coverage = await geo.search.coverage(point);
@@ -142,6 +149,7 @@ export function MapScreen({ visible, lang, onLang, theme, onTheme, pending, clea
             <View style={styles.saved} />
           </Marker>
         ))}
+        <PlaceGeometryLayer place={shape} theme={theme} />
         {showing ? (
           <Marker lngLat={showing.point}>
             <View style={styles.shown} />

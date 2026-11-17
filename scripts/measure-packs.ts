@@ -246,6 +246,11 @@ export async function runCheck(check: string): Promise<{ check: string; pass: bo
       const same = r.differing.length === 0 && r.onlyA.length === 0 && r.onlyB.length === 0 && r.bordersEqual && r.manifestsEqual;
       return { check, pass: same, measured: `${r.equal}/${r.compared} dosya bayt bayt aynı (${r.tilesCompared} ilin karosu dahil), gömülü sınırlar ${r.bordersEqual ? 'aynı' : 'farklı'}, manifest ${r.manifestsEqual ? 'aynı' : 'farklı'}`, problems: [...r.differing.map((d) => `farklı: ${d}`), ...r.onlyA.map((d) => `yalnız ilkinde: ${d}`), ...r.onlyB.map((d) => `yalnız ikincisinde: ${d}`)].slice(0, 20) };
     }
+    case 'determinism-adres': {
+      const { runAddressDeterminism } = await import('./determinism-run');
+      const r = await runAddressDeterminism(sources, (line) => console.error(line));
+      return { check, pass: r.differing.length === 0 && r.onlyA.length === 0 && r.onlyB.length === 0 && r.compared > 0, measured: `${r.equal}/${r.compared} adres, bina ve ara dosya bayt bayt aynı`, problems: [...r.differing.map((d) => `farklı: ${d}`), ...r.onlyA.map((d) => `yalnız ilkinde: ${d}`), ...r.onlyB.map((d) => `yalnız ikincisinde: ${d}`)].slice(0, 20) };
+    }
     default:
       return null;
   }
@@ -256,7 +261,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const check = at >= 0 ? process.argv[at + 1] : undefined;
   (check ? runCheck(check) : Promise.resolve(null)).then((result) => {
     if (!result) {
-      console.error('kullanım: --check borders|accounting|assignment|counts|sizes|tiles|determinism');
+      console.error('kullanım: --check borders|accounting|assignment|counts|sizes|tiles|determinism|determinism-adres');
       process.exit(2);
     }
     console.log(JSON.stringify(result));

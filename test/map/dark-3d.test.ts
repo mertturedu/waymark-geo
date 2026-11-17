@@ -80,8 +80,8 @@ describe('terrain tones', () => {
 
   it('gives cemeteries and sports grounds their own colour without adding layers', () => {
     const light = JSON.stringify(park('light').paint);
-    expect(light).toContain('#D3E0DA');
-    expect(light).toContain('#BFE0D4');
+    expect(light).toContain('#C4E0D0');
+    expect(light).toContain('#A8E0C6');
     const filter = park('light').filter as string[];
     for (const kind of ['cemetery', 'pitch', 'stadium', 'track', 'sports_centre']) expect(filter).toContain(kind);
   });
@@ -89,7 +89,7 @@ describe('terrain tones', () => {
   it('has darker versions on the dark map', () => {
     const dark = JSON.stringify(park('dark').paint);
     expect(dark).toContain('#22332F');
-    expect(dark).not.toContain('#D3E0DA');
+    expect(dark).not.toContain('#C4E0D0');
   });
 
   it('can be changed from the theme', () => {

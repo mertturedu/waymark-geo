@@ -110,7 +110,8 @@ function MapScreen() {
 | Area | Calls |
 |---|---|
 | `geo.regions` | `list`, `installed`, `status`, `download`, `downloadBytes`, `pause`, `resume`, `remove`, `checkUpdates`, `connection`, `detect`, `suggest`, `subscribe` |
-| `geo.search` | `resolve`, `autocomplete`, `reverse`, `nearby`, `hoods`, `coverage` |
+| `createGeoClient` | `resolve`, `validate`, `autocomplete`, `reverse`, `nearby` over the address server, see `docs/server.md` |
+| `geo.search` | `warm`, `resolve`, `autocomplete`, `reverse`, `nearby`, `hoods`, `coverage` |
 | `geo.route` | `route`, `matrix`, `directions`, `installed` |
 | `geo.plan` | `plan` |
 | `geo.learn` | `confirm`, `export`, `import`, `clear`, `stats` |
@@ -175,7 +176,7 @@ Buildings are drawn flat below zoom 16 and as 3D blocks from zoom 16 (`map.build
 
 ### Place cards, nearby places, directions
 
-`geo.search.nearby({ point, group: 'pharmacy', limit: 5 })` lists the closest places of a group with their distance. `usePlaceAt(project)` returns a `card` for the badge under a tap (`pick(features, { x, y })`); show it with `<PlaceCard card={card} onRoute={...} onCopy={...} onClose={...} />`. `geo.route.directions(from, to, { language })` gives the route and its steps; the text is written for reading (no voice). Turns are found from the shape of the route: the street name of a step is the street found 15 m after the turn in the address pack, and the exit number of a roundabout is estimated from the entry and exit headings, so it can be wrong on unusual roundabouts. Put `<ScaleBar zoom latitude />` and `<CompassButton bearing onPress />` on the map; `useMapStyle({ theme: 'auto' })` follows the system appearance.
+`geo.search.nearby({ point, group: 'pharmacy', limit: 5 })` lists the closest places of a group with their distance. `usePlaceAt(project)` returns a `card` for the badge under a tap (`pick(features, { x, y })`); show it with `<PlaceCard card={card} onRoute={...} onCopy={...} onClose={...} />`. `geo.route.directions(from, to, { language })` gives the route and its steps; the text is written for reading (no voice). Pass `toPlace` (a resolved `Place`) to arrive on the road of the place's own street, at its entrance when known, with the side of the arrival (`arrival.side`, "Hedef sağda") in the last step. Turns are found from the shape of the route: the street name of a step is the street found 15 m after the turn in the address pack, and the exit number of a roundabout is estimated from the entry and exit headings, so it can be wrong on unusual roundabouts. Show a street, neighbourhood or district result as a shape: `resolve(text, { geometry: true })` (or `geo.search.geometry(place)`) gives `place.geometry` and `place.bbox`; draw it with `<PlaceGeometryLayer place={place} theme />` and move the camera with `fitBounds(place.bbox, { width, height, padding })`. Put `<ScaleBar zoom latitude />` and `<CompassButton bearing onPress />` on the map; `useMapStyle({ theme: 'auto' })` follows the system appearance.
 
 ### Fonts and labels
 
@@ -265,6 +266,7 @@ const place = await geo.search.reverse([29.0097, 41.0422]);
 - Labels follow `options.language` (province, district and neighbourhood names, English before Turkish as fallback). `place.local` keeps the Turkish components that learned points are keyed by.
 - Businesses come from a second pack, the directory (Overture Maps). Its doors are marked `precision: 'interpolated'`, `approximate: true`, `source: 'overture'` and are dropped when the address pack has the same door.
 - Provinces whose address points sit on building centres can install an optional `buildings` part that moves a guess to the nearest free building.
+- An optional neighbourhood and postcode directory (`GeoEnv.neighbourhoods`) fills the province from a postcode, flags a postcode that does not fit its neighbourhood (`postcode_mismatch`) and widens neighbourhood suggestions. The data is brought by the app, see `docs/neighbourhoods.md`.
 
 ```
 npm run try -- resolve "kadikoy moda mah bahariye cd no 14" --json
@@ -544,6 +546,7 @@ The command exits with 1 when a test fails or no report arrives. The phone must 
 - Map data © OpenStreetMap contributors, ODbL.
 - Base map tiles: Protomaps builds of OpenStreetMap.
 - Places: Overture Maps Foundation (CDLA-Permissive-2.0, Apache-2.0, CC0). Phone numbers, e-mail and web addresses are dropped at build time.
+- Buildings (`buildings2` part: footprints, floors, entrances): Overture Maps Foundation buildings theme, which carries OpenStreetMap data and is licensed ODbL, joined with OpenStreetMap building tags and entrances. The packs are a derived database; the credit line above covers it and the share-alike term applies to a published copy of the building data.
 - Fonts and sprites ship in the base pack.
 
 Apps that show the map decide where the credit line goes. `t(lang, 'attribution.text')` returns the text in six languages and `GeoAttribution` is an optional small overlay.

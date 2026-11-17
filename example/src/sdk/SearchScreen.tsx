@@ -13,7 +13,7 @@ function pendingOf(place: Place, query: string): Pending {
 
 type Shown = { places: Place[]; ms: number; status: string; suggestion?: Place };
 
-export type Showing = { label: string; point: [number, number] };
+export type Showing = { label: string; point: [number, number]; place?: Place };
 
 export function SearchScreen({ lang, onPick, onShow, visible }: { lang: string; onPick: (pending: Pending) => void; onShow: (showing: Showing) => void; visible: boolean }) {
   const geo = useGeo();
@@ -104,7 +104,7 @@ export function SearchScreen({ lang, onPick, onShow, visible }: { lang: string; 
           <View style={[styles.item, { borderColor: palette.line }]}>
             <Text style={{ color: palette.fg, fontWeight: '600' }}>{item.label}</Text>
             <Text style={{ color: palette.mute, fontSize: 12 }}>{`${item.precision}, ${item.approximate ? 'yaklaşık' : 'kesin'}, ${item.source}, güven ${item.confidence.toFixed(2)}${item.details?.category ? `, ${item.details.category}` : ''}`}</Text>
-            <Pressable onPress={() => onShow({ label: item.label, point: item.coordinate })} hitSlop={8}>
+            <Pressable onPress={() => onShow({ label: item.label, point: item.coordinate, place: item })} hitSlop={8}>
               <Text style={{ color: palette.accent, fontWeight: '600', marginTop: 4 }}>Haritada göster</Text>
             </Pressable>
             <Pressable onPress={() => onPick(pendingOf(item, text))} hitSlop={8}>

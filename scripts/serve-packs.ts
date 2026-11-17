@@ -1,14 +1,43 @@
 import http from 'node:http';
 import { execFileSync } from 'node:child_process';
-import { createReadStream, existsSync, realpathSync, statSync } from 'node:fs';
+import { createReadStream, existsSync, mkdirSync, realpathSync, statSync, writeFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { defaultReportDir, processReport } from './device-report';
 import { parseRunJob } from '../example/src/sdk-test/autorun';
 
-type Options = { root: string; port: number; host?: string; log?: (line: string) => void; reportDir?: string; now?: () => number; mounts?: Record<string, string> };
+type Options = { root: string; port: number; host?: string; log?: (line: string) => void; reportDir?: string; fieldDir?: string; now?: () => number; mounts?: Record<string, string> };
 
 export const REPORT_LIMIT = 5 * 1024 * 1024;
+export const FIELD_LIMIT = 2000;
+
+export type FieldRecord = { id: string; at: number; text: string; point: [number, number]; source: 'gps' | 'map'; accuracyM: number | null; floor?: string; door?: string; note?: string; device?: string };
+
+const shortText = (value: unknown, max: number): boolean => value === undefined || (typeof value === 'string' && value.length <= max);
+
+export function acceptField(text: string): { ok: true; records: FieldRecord[] } | { ok: false; error: string } {
+  let value: unknown;
+  try {
+    value = JSON.parse(text);
+  } catch {
+    return { ok: false, error: 'json değil' };
+  }
+  if (!Array.isArray(value) || value.length === 0 || value.length > FIELD_LIMIT) return { ok: false, error: 'kayıt listesi boş ya da çok uzun' };
+  for (const item of value as Record<string, unknown>[]) {
+    const point = item.point as unknown;
+    const valid =
+      typeof item.id === 'string' && item.id.length <= 64 &&
+      typeof item.at === 'number' &&
+      typeof item.text === 'string' && item.text.trim().length >= 3 && item.text.length <= 300 &&
+      Array.isArray(point) && point.length === 2 && typeof point[0] === 'number' && typeof point[1] === 'number' && point[0] >= 25 && point[0] <= 45.5 && point[1] >= 35.5 && point[1] <= 42.5 &&
+      (item.source === 'gps' || item.source === 'map') &&
+      (item.accuracyM === null || typeof item.accuracyM === 'number') &&
+      shortText(item.floor, 12) && shortText(item.door, 12) && shortText(item.note, 200) && shortText(item.device, 60);
+    if (!valid) return { ok: false, error: `geçersiz kayıt: ${typeof item.id === 'string' ? item.id : '?'}` };
+  }
+  return { ok: true, records: value as FieldRecord[] };
+}
 export const JOB_TTL_MS = 10 * 60 * 1000;
 
 export type JobTarget = 'sim' | 'phone';
@@ -130,6 +159,36 @@ export async function startServer(options: Options): Promise<{ url: string; clos
     });
   };
 
+  const receiveField = (req: http.IncomingMessage, res: http.ServerResponse): void => {
+    if (!options.fieldDir) return reply(res, 404, 'not found');
+    if (!isLocalAddress(req.socket.remoteAddress ?? '')) return reply(res, 403, 'forbidden');
+    const chunks: Buffer[] = [];
+    let size = 0;
+    let refused = false;
+    req.on('data', (chunk: Buffer) => {
+      if (refused) return;
+      size += chunk.length;
+      if (size > REPORT_LIMIT) {
+        refused = true;
+        reply(res, 413, 'too large', { Connection: 'close' });
+        req.destroy();
+        return;
+      }
+      chunks.push(chunk);
+    });
+    req.on('end', () => {
+      if (refused) return;
+      const result = acceptField(Buffer.concat(chunks).toString('utf8'));
+      if (!result.ok) return reply(res, 400, `field rejected: ${result.error}`);
+      mkdirSync(options.fieldDir!, { recursive: true });
+      const stamp = new Date(options.now ? options.now() : Date.now()).toISOString().replace(/[-:]/g, '').replace(/\..*/, '');
+      const path = join(options.fieldDir!, `${stamp}-${result.records.length}.json`);
+      writeFileSync(path, JSON.stringify(result.records, null, 1));
+      options.log?.(`field saved ${path}`);
+      reply(res, 200, String(result.records.length));
+    });
+  };
+
   const handle = (req: http.IncomingMessage, res: http.ServerResponse): void => {
     if (options.log) {
       const remote = (req.socket.remoteAddress ?? '?').replace(/^::ffff:/, '');
@@ -138,6 +197,7 @@ export async function startServer(options: Options): Promise<{ url: string; clos
     }
     const url = new URL(req.url ?? '/', 'http://local');
     if (req.method === 'POST' && url.pathname === '/report') return receiveReport(req, res);
+    if (req.method === 'POST' && url.pathname === '/saha') return receiveField(req, res);
     if (req.method === 'POST' && url.pathname === '/run') return receiveJob(req, res);
     if (options.reportDir && url.pathname.startsWith('/mark/') && isLocalAddress(req.socket.remoteAddress ?? '')) {
       marks.push({ id: decodeURIComponent(url.pathname.slice(6)).slice(0, 80), at: now() });
@@ -227,11 +287,17 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const root = process.argv[2] ?? join(repo, 'dist', 'test-data');
   const oldPacks = join(repo, 'dist', 'test-data', 'old');
   const altPacks = join(repo, 'dist', 'packs-k');
+  const evalSets = join(repo, 'dist', 'addr-eval');
+  const adresRelease = join(repo, 'dist', 'packs-0.8-adres');
+  const learnedRelease = join(repo, 'dist', 'packs-learned-test');
   const mounts: Record<string, string> = {
     ...(existsSync(oldPacks) && resolve(root) !== resolve(oldPacks) ? { '/old': oldPacks } : {}),
     ...(existsSync(altPacks) && resolve(root) !== resolve(altPacks) ? { '/k': altPacks } : {}),
+    ...(existsSync(evalSets) ? { '/addr-eval': evalSets } : {}),
+    ...(existsSync(adresRelease) && resolve(root) !== resolve(adresRelease) ? { '/adres-release': adresRelease } : {}),
+    ...(existsSync(learnedRelease) ? { '/learned-release': learnedRelease } : {}),
   };
-  startServer({ root, mounts, port: Number(process.env.PORT ?? 8090), reportDir: join(defaultReportDir(), 'cihaz'), log: (line) => console.log(`${new Date().toISOString().slice(11, 19)} ${line}`) }).then((server) => {
+  startServer({ root, mounts, port: Number(process.env.PORT ?? 8090), reportDir: join(defaultReportDir(), 'cihaz'), fieldDir: join(homedir(), '.yuksi-geo', 'saha'), log: (line) => console.log(`${new Date().toISOString().slice(11, 19)} ${line}`) }).then((server) => {
     console.log(`serving ${root}${Object.keys(mounts).map((prefix) => ` (+ ${prefix})`).join('')}`);
     console.log(`phone address: ${server.url}`);
   });

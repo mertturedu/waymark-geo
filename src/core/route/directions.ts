@@ -1,9 +1,10 @@
 import type { LngLat } from '../geo/cells';
 import { pointAlong } from '../geo/distance';
 import { t, type MessageKey } from '../i18n/messages';
+import type { ArrivalInfo } from './arrival';
 import { buildManeuvers, type Maneuver, type ManeuverKind } from './maneuvers';
 
-export type DirectionStep = Maneuver & { action: string; text: string; distanceText: string };
+export type DirectionStep = Maneuver & { action: string; text: string; distanceText: string; side?: 'left' | 'right' };
 
 const COMMA_LANGS = ['tr', 'de', 'ru', 'el'];
 export const STREET_PROBE_M = 15;
@@ -32,7 +33,14 @@ const KEYS: Record<Exclude<ManeuverKind, 'roundabout'>, MessageKey> = {
   uturn: 'turn.uturn',
 };
 
-export function describeStep(step: Maneuver, lang: string): DirectionStep {
+export type ArrivalNote = { side: ArrivalInfo['side']; unit?: string };
+
+export function describeStep(step: Maneuver, lang: string, arrival?: ArrivalNote): DirectionStep {
+  if (step.kind === 'arrive' && arrival && (arrival.side !== null || arrival.unit)) {
+    const head = t(lang, arrival.side === 'left' ? 'turn.arrive-left' : arrival.side === 'right' ? 'turn.arrive-right' : 'turn.arrive');
+    const action = arrival.unit ? `${head}, ${arrival.unit}` : head;
+    return { ...step, action, distanceText: formatDistance(step.legM, lang), text: action, ...(arrival.side ? { side: arrival.side } : {}) };
+  }
   const base = step.kind === 'roundabout' ? t(lang, 'turn.roundabout', { n: step.exit ?? 1 }) : t(lang, KEYS[step.kind]);
   const action = step.street && step.kind !== 'arrive' ? t(lang, 'turn.onto', { action: base, street: step.street }) : base;
   const distanceText = formatDistance(step.legM, lang);
@@ -42,7 +50,7 @@ export function describeStep(step: Maneuver, lang: string): DirectionStep {
 
 export type StreetAt = (point: LngLat) => Promise<string | null>;
 
-export async function directionsOf(geometry: readonly LngLat[], lang: string, streetAt?: StreetAt): Promise<DirectionStep[]> {
+export async function directionsOf(geometry: readonly LngLat[], lang: string, streetAt?: StreetAt, arrival?: ArrivalNote): Promise<DirectionStep[]> {
   const steps = buildManeuvers(geometry);
   if (streetAt) {
     const line = [...geometry];
@@ -52,5 +60,5 @@ export async function directionsOf(geometry: readonly LngLat[], lang: string, st
       if (street) step.street = street;
     }
   }
-  return steps.map((step) => describeStep(step, lang));
+  return steps.map((step) => describeStep(step, lang, arrival));
 }

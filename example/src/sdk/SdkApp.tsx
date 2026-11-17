@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Pending } from './MapScreen';
 import { GeoProvider } from '../../../src/native';
+import { AddressLab } from './AddressLab';
 import { AutoRegion } from './AutoRegion';
 import { MapScreen } from './MapScreen';
 import { PlanScreen } from './PlanScreen';
@@ -11,7 +12,7 @@ import { PUBLIC_KEY, manifestUrlOf, useServer } from './server';
 import { loadSettings, saveSettings, type Settings } from './settings';
 import { usePalette } from './ui';
 
-type Inner = 'map' | 'plan' | 'search' | 'settings';
+type Inner = 'map' | 'plan' | 'search' | 'lab' | 'settings';
 
 export function SdkApp() {
   const server = useServer();
@@ -71,13 +72,26 @@ export function SdkApp() {
               }}
             />
           </View>
+          <View style={[styles.body, inner !== 'lab' && styles.hidden]}>
+            {inner === 'lab' ? (
+              <AddressLab
+                lang={settings.lang}
+                server={server.url}
+                onShow={(next) => {
+                  setPending(null);
+                  setShowing(next);
+                  setInner('map');
+                }}
+              />
+            ) : null}
+          </View>
           <View style={[styles.body, inner !== 'settings' && styles.hidden]}>
             <SettingsScreen lang={settings.lang} onLang={(lang) => change({ lang })} theme={settings.theme} onTheme={(theme) => change({ theme })} server={server.url} onServer={server.set} serverNote={server.note} />
           </View>
           <View style={[styles.tabs, { borderColor: palette.line, backgroundColor: palette.bg }]}>
-            {(['map', 'plan', 'search', 'settings'] as const).map((id) => (
+            {(['map', 'plan', 'search', 'lab', 'settings'] as const).map((id) => (
               <Pressable key={id} onPress={() => setInner(id)} style={[styles.tab, inner === id && styles.tabOn]}>
-                <Text style={{ color: inner === id ? '#fff' : palette.fg, fontWeight: '600' }}>{id === 'map' ? 'Harita' : id === 'plan' ? 'Rota' : id === 'search' ? 'Ara' : 'Ayarlar'}</Text>
+                <Text style={{ color: inner === id ? '#fff' : palette.fg, fontWeight: '600' }}>{id === 'map' ? 'Harita' : id === 'plan' ? 'Rota' : id === 'search' ? 'Ara' : id === 'lab' ? 'Adres' : 'Ayarlar'}</Text>
               </Pressable>
             ))}
           </View>

@@ -1,3 +1,7 @@
+import { mkdtempSync, readFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { prepare, writeBuildingPack, type Trace } from '../../pipeline/build/building-pack-v2';
 import { createSearch } from '../../src/core/address/search';
 import { createManagedPackStore } from '../../src/core/packs/store';
 import { turkeyBorders } from '../address/helpers/search-fixture';
@@ -41,6 +45,24 @@ describe('managed pack store', () => {
     const store = createManagedPackStore({ manager, opener: nodeOpener(world), clock: world.env.clock });
     const part = await store.openPart?.('34', 'buildings');
     expect(await part?.all('SELECT v FROM meta WHERE k = ?', ['format'])).toEqual([{ v: '1' }]);
+    await store.closeAll();
+  });
+
+  it('opens the buildings2 part once it is installed, and it is null until then', async () => {
+    const { world } = await packWorld();
+    const file = join(mkdtempSync(join(tmpdir(), 'b2-')), 'buildings2.sqlite');
+    const trace: Trace = { id: 'w1', lon: 28.6, lat: 40.7, area: 120, ring: [[28.5999, 40.6999], [28.6001, 40.6999], [28.6001, 40.7001], [28.5999, 40.7001]], height: null, floors: 4, name: null, cls: null, src: null, rec: null };
+    writeBuildingPack(file, '34', prepare([trace], [], new Map()), new Map(), 't');
+    world.setPart('34', 'buildings2', new Uint8Array(readFileSync(file)));
+    world.publish();
+    const { manager } = await setup(world);
+    await manager.checkUpdates();
+    await manager.download('34', { parts: ['address'] });
+    const store = createManagedPackStore({ manager, opener: nodeOpener(world), clock: world.env.clock });
+    expect(await store.openPart?.('34', 'buildings2')).toBeNull();
+    await manager.download('34', { parts: ['address', 'buildings2'] });
+    const part = await store.openPart?.('34', 'buildings2');
+    expect(await part?.all('SELECT v FROM meta WHERE k = ?', ['format'])).toEqual([{ v: '2' }]);
     await store.closeAll();
   });
 

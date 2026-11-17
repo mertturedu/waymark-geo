@@ -36,3 +36,29 @@ export async function jumpTilted(camera: JumpCamera, view: MapView, read: () => 
     await wait(settleMs);
   }
 }
+
+export type Viewport = { width: number; height: number; padding?: number };
+export type FitOptions = { maxZoom?: number; minZoom?: number; tileSize?: number };
+
+export const FIT_MAX_ZOOM = 17;
+export const FIT_MIN_ZOOM = 5;
+const MAX_MERCATOR_LAT = 85.0511;
+
+const mercatorY = (lat: number): number => {
+  const clamped = Math.max(-MAX_MERCATOR_LAT, Math.min(MAX_MERCATOR_LAT, lat));
+  const sin = Math.sin((clamped * Math.PI) / 180);
+  return 0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI);
+};
+
+export function fitBounds(box: readonly [number, number, number, number], viewport: Viewport, options: FitOptions = {}): { center: [number, number]; zoom: number } {
+  const [west, south, east, north] = box;
+  const tile = options.tileSize ?? 512;
+  const padding = viewport.padding ?? 0;
+  const width = Math.max(1, viewport.width - 2 * padding);
+  const height = Math.max(1, viewport.height - 2 * padding);
+  const spanX = Math.max(1e-9, (east - west) / 360);
+  const spanY = Math.max(1e-9, Math.abs(mercatorY(south) - mercatorY(north)));
+  const fit = Math.min(Math.log2(width / (tile * spanX)), Math.log2(height / (tile * spanY)));
+  const zoom = Math.max(options.minZoom ?? FIT_MIN_ZOOM, Math.min(options.maxZoom ?? FIT_MAX_ZOOM, Number.isFinite(fit) ? fit : FIT_MAX_ZOOM));
+  return { center: [(west + east) / 2, (south + north) / 2], zoom };
+}

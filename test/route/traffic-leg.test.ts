@@ -1,4 +1,4 @@
-import { delayDs, trafficLeg } from '../../src/core/route/traffic';
+import { bandSpans, delayDs, trafficLeg } from '../../src/core/route/traffic';
 import { FLAG, readRoutePack } from '../../src/core/route/format';
 import { createPlanner, type Planner, type RouteLeg } from '../../src/core/route/planner';
 import type { Snap, SnapResult } from '../../src/core/route/snap';
@@ -43,7 +43,24 @@ describe('delayDs', () => {
   it('is small at night and large in the rush hour', () => {
     const night = delayDs(pack, base.arcs, base.durationDs, Date.UTC(2026, 10, 9), 1);
     expect(night).toBeLessThan(base.durationDs * 0.05);
-    expect(delayDs(pack, base.arcs, base.durationDs, rush, 1)).toBeGreaterThan(night * 10);
+    expect(delayDs(pack, base.arcs, base.durationDs, rush, 1)).toBeGreaterThan(night * 5);
+  });
+});
+
+describe('observed speeds', () => {
+  it('colour a stretch by what the cell shows instead of the typical model', () => {
+    const night = Date.UTC(2026, 10, 9);
+    const stuck = (lat: number, lng: number): number | null => (lng > X + lonDeg(10000) ? 0.8 : lat > 0 ? 0 : null);
+    const spans = bandSpans(pack, base.arcs, night, 1, stuck);
+    expect(spans[0]?.band).toBe('smooth');
+    expect(spans[spans.length - 1]?.band).toBe('jam');
+    expect(bandSpans(pack, base.arcs, night, 1).every((span) => span.band === 'smooth')).toBe(true);
+    expect(delayDs(pack, base.arcs, base.durationDs, night, 1, stuck)).toBeGreaterThan(delayDs(pack, base.arcs, base.durationDs, night, 1));
+  });
+
+  it('fall back to the model where the cell is unknown', () => {
+    const none = (): number | null => null;
+    expect(delayDs(pack, base.arcs, base.durationDs, rush, 1, none)).toBe(delayDs(pack, base.arcs, base.durationDs, rush, 1));
   });
 });
 

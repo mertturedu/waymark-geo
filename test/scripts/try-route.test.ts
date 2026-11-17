@@ -6,7 +6,7 @@ import { formatRoute, parseRouteFlags, runRouteCommand } from '../../scripts/try
 const place = (label: string, at: [number, number]): Place => ({ id: 'x', label, components: {}, coordinate: at, precision: 'address', approximate: false, source: 'osm', confidence: 1, region: '34' });
 
 const search = (answers: Record<string, ResolveResult>): Search =>
-  ({ resolve: async (text: string) => answers[text] ?? { status: 'not_found', candidates: [] }, autocomplete: async () => [], reverse: async () => null, nearby: async () => [], invalidate: () => undefined, hoods: async () => [], coverage: async () => null }) as Search;
+  ({ resolve: async (text: string) => answers[text] ?? { status: 'not_found', candidates: [] }, lookup: async () => null, admin: async () => null, validate: async () => { throw new Error('unused'); }, autocomplete: async () => [], reverse: async () => null, nearby: async () => [], invalidate: () => undefined, hoods: async () => [], coverage: async () => null, warm: async () => true, geometry: async () => null, arrival: async (p: Place) => ({ door: p.coordinate }) }) as Search;
 
 const ok: RouteResult = { ok: true, region: '34', distanceM: 12_340, durationS: 1500, approximate: false, geometry: [[29, 41], [29.1, 41.1]], from: [29, 41], to: [29.1, 41.1], warnings: [] };
 const router = (result: RouteResult): Router => ({ route: async () => result, matrix: async () => ({ ok: false, code: 'START_OUTSIDE_REGION' }), invalidate: () => undefined });

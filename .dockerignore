@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+example
+reports
+lib
+test
+.git

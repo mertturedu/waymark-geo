@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: yuksi-geo
+    runtime: docker
+    plan: standard
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: GEO_API_KEYS
+        sync: false
+      - key: GEO_PACKS_DIR
+        value: /data
+      - key: GEO_MAX_OPEN
+        value: "12"
+      - key: GEO_WORKERS
+        value: "2"
+      - key: PORT
+        value: "8096"
+    disk:
+      name: geo-packs
+      mountPath: /data
+      sizeGB: 10

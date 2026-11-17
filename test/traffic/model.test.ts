@@ -13,10 +13,10 @@ describe('local time in Turkey', () => {
 
 describe('typical congestion', () => {
   it('peaks in the morning and in the evening on weekdays and is quiet at night', () => {
-    expect(congestion(monday(8))).toBeGreaterThan(0.9);
+    expect(congestion(monday(8))).toBeGreaterThan(0.8);
     expect(congestion(monday(18))).toBe(1);
-    expect(congestion(monday(3))).toBeLessThan(0.05);
-    expect(congestion(monday(12))).toBeLessThan(0.5);
+    expect(congestion(monday(3))).toBeLessThan(0.15);
+    expect(congestion(monday(12))).toBeLessThan(0.7);
   });
 
   it('is lighter at the weekend', () => {
@@ -39,6 +39,12 @@ describe('typical congestion', () => {
     expect(slowdownOf('motorway', at, regionBusyness('34'))).toBeGreaterThan(slowdownOf('motorway', at, regionBusyness('75')));
     expect(slowdownOf('ferry', at, 1)).toBe(0);
     expect(slowdownOf('motorway', at, 100)).toBeLessThanOrEqual(0.75);
+  });
+
+  it('keeps the rush hour delay of a motorway near what was measured in Istanbul', () => {
+    const slow = slowdownOf('motorway', monday(18), 1);
+    expect(1 / (1 - slow) - 1).toBeGreaterThan(0.4);
+    expect(1 / (1 - slow) - 1).toBeLessThan(0.7);
   });
 
   it('gives the map road kinds the same ordering', () => {

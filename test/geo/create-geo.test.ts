@@ -34,6 +34,20 @@ describe('createGeo', () => {
     await second.dispose();
   });
 
+  it('downloads the address part of every region that is not installed yet', async () => {
+    const { world } = await packWorld();
+    const geo = await createGeo(world.config, envOf(world));
+    await geo.regions.checkUpdates();
+    const seen: number[] = [];
+    const first = await geo.regions.downloadCountry({ onProgress: (done) => seen.push(done) });
+    expect(first.failed).toEqual([]);
+    expect(first.installed).toEqual(geo.regions.list().map((r) => r.id).filter((id) => geo.regions.installed().includes(id)));
+    expect(geo.regions.installed()).toContain('34');
+    expect(seen.length === 0 || seen.every((n, i) => i === 0 || n >= (seen[i - 1] as number))).toBe(true);
+    expect(await geo.regions.downloadCountry()).toEqual({ installed: [], failed: [] });
+    await geo.dispose();
+  });
+
   it('closes the learning store when it is disposed', async () => {
     const { world } = await packWorld();
     let closed = 0;

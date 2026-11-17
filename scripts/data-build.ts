@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { resolvePlates, runBuild } from '../pipeline/build/orchestrate';
+import { ADDRESS_STEPS, resolvePlates, runBuild } from '../pipeline/build/orchestrate';
 import { defaultRunner } from '../pipeline/build/tiles';
 import type { Sources } from './fetch-sources';
 
@@ -18,7 +18,7 @@ async function main(): Promise<number> {
   const argv = process.argv.slice(2);
   const sources = JSON.parse(readFileSync(join(repoRoot, 'pipeline', 'data', 'sources.json'), 'utf8')) as Sources;
   const plates = resolvePlates(optionValue(argv, '--regions') ?? '12il');
-  const workDir = join(repoRoot, 'dist', 'work', sources.osmFile.slice(7, 13));
+  const workDir = join(repoRoot, 'dist', 'work', optionValue(argv, '--work') ?? sources.osmFile.slice(7, 13));
   const log = (line: string): void => console.log(`${new Date().toISOString().slice(11, 19)} ${line}`);
   log(`${plates.length} il: ${plates.join(',')}`);
   const result = await runBuild({
@@ -31,6 +31,7 @@ async function main(): Promise<number> {
     run: defaultRunner,
     repoRoot,
     force: argv.includes('--force'),
+    ...(optionValue(argv, '--steps') === 'adres' ? { only: ADDRESS_STEPS } : optionValue(argv, '--steps') === 'rehber' ? { only: ['rehber paketleri'] } : {}),
     log,
   });
   if (!result.ok) {

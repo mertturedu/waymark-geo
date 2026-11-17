@@ -258,9 +258,9 @@ describe('manifest storage problems', () => {
 
   it('does not fetch the signature when the manifest itself is missing', async () => {
     const { world, manager } = await setup();
-    world.env.server.inject({ effect: { kind: 'status', status: 404 }, times: 1 });
+    world.env.server.inject({ effect: { kind: 'status', status: 404 }, times: 2 });
     await manager.checkUpdates();
-    expect(requested(world)).toEqual(['manifest-v1.json']);
+    expect(requested(world)).toEqual(['manifest-v2.json', 'manifest-v1.json']);
   });
 });
 

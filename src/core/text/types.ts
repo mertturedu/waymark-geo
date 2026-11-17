@@ -27,9 +27,12 @@ export type ParsedAddress = {
   houseNumber: string | null;
   building: string | null;
   block: string | null;
+  entrance: string | null;
   floor: string | null;
   door: string | null;
   poiName: string | null;
   postcode: string | null;
   leftover: string[];
+  dropped: string[];
+  alternatives: ParsedAddress[];
 };

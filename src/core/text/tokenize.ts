@@ -4,7 +4,8 @@ import { transliterate } from './translit';
 
 export type Token = { t: string; seg: number; dotted: boolean };
 
-const SPACED_SLASH = /(\d) +\/ +(\d)/g;
+const CAMEL = /([a-zçğıöşü])([A-ZÇĞİÖŞÜ])/g;
+const SPACED_SLASH = /(\d) +\/ *(\d)|(\d) *\/ +(\d)/g;
 const isDigit = (code: number): boolean => code >= 48 && code <= 57;
 const isWordCode = (code: number): boolean => (code >= 97 && code <= 122) || isDigit(code) || (code >= 0x621 && code <= 0x64a) || (code >= 0x671 && code <= 0x6d3);
 
@@ -40,7 +41,7 @@ export function tokenize(raw: string): Token[] {
   const tokens: Token[] = [];
   let seg = 0;
   for (const part of truncateInput(raw).split(/[,;\n\r|\u2028\u2029\u060C\uFF0C\uFF1B]+/)) {
-    const words = wordsOf(transliterate(toAsciiDigits(foldText(part))).replace(SPACED_SLASH, '$1/$2'));
+    const words = wordsOf(transliterate(toAsciiDigits(foldText(part.replace(CAMEL, '$1 $2')))).replace(SPACED_SLASH, (_, a: string | undefined, b: string | undefined, c: string | undefined, d: string | undefined) => `${a ?? c}/${b ?? d}`));
     for (const { word, dotted } of words) tokens.push({ t: word, seg, dotted });
     if (words.length > 0) seg++;
   }

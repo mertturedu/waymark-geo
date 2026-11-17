@@ -105,7 +105,7 @@ describe('compressed files in the manifest', () => {
   });
 
   it('only compresses the database and route kinds', () => {
-    expect([...ZSTD_KINDS].sort()).toEqual(['address', 'buildings', 'directory', 'route']);
+    expect([...ZSTD_KINDS].sort()).toEqual(['address', 'buildings', 'buildings2', 'directory', 'learned', 'route']);
     expect(ZSTD_KEEP_BELOW).toBe(0.9);
   });
 

@@ -65,5 +65,13 @@ export function mergeDirectory(plate: string, primary: Scored[], extra: Scored[]
         return false;
     }
   });
-  return [...primary, ...kept.map((s) => relabel(plate, s))];
+  const listed: Scored[] = [];
+  const unique = kept.filter((s) => {
+    if (s.place.precision !== 'poi') return true;
+    const name = nameKey(s.place.components.poiName ?? '');
+    if (listed.some((p) => nameKey(p.place.components.poiName ?? '') === name && distanceM(p.place.coordinate, s.place.coordinate) <= POI_NEAR_M)) return false;
+    listed.push(s);
+    return true;
+  });
+  return [...primary, ...unique.map((s) => relabel(plate, s))];
 }

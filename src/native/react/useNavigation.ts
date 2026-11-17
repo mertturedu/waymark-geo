@@ -4,6 +4,7 @@ import type { LngLat } from '../../core/geo/cells';
 import { distanceM } from '../../core/geo/distance';
 import { t } from '../../core/i18n/messages';
 import type { DirectionStep } from '../../core/route/directions';
+import type { BandSpan } from '../../core/route/traffic';
 import type { Lang } from '../../core/text/types';
 import { ARRIVE_M, cueText, dueCue, headingTo, trackRoute, type RouteProgress } from '../../core/route/progress';
 
@@ -17,7 +18,7 @@ export type NavCue = { id: number; text: string };
 export type Navigation =
   | { state: 'idle' }
   | { state: 'routing' }
-  | { state: 'active'; rerouting: boolean; geometry: LngLat[]; steps: DirectionStep[]; progress: RouteProgress | null; cue: NavCue | null }
+  | { state: 'active'; rerouting: boolean; geometry: LngLat[]; spans?: BandSpan[]; steps: DirectionStep[]; progress: RouteProgress | null; cue: NavCue | null }
   | { state: 'birdseye'; distanceM: number; bearing: number; reason: string; cue: NavCue | null }
   | { state: 'arrived'; cue: NavCue | null };
 
@@ -30,7 +31,7 @@ export type NavigationOptions = {
   now?: () => number;
 };
 
-type Route = { geometry: LngLat[]; steps: DirectionStep[]; durationS: number };
+type Route = { geometry: LngLat[]; spans?: BandSpan[]; steps: DirectionStep[]; durationS: number };
 
 export function useNavigation({ directions, destination, fix, language = 'tr', enabled = true, now = Date.now }: NavigationOptions): Navigation {
   const [nav, setNav] = useState<Navigation>({ state: 'idle' });
@@ -73,7 +74,7 @@ export function useNavigation({ directions, destination, fix, language = 'tr', e
       void directions(fix.point, destination, { language, at: now() })
         .then((result) => {
           if (result.ok) {
-            route.current = { geometry: result.geometry, steps: result.steps, durationS: result.durationS };
+            route.current = { geometry: result.geometry, ...(result.traffic?.spans ? { spans: result.traffic.spans } : {}), steps: result.steps, durationS: result.durationS };
             failed.current = null;
           } else {
             route.current = null;
@@ -120,7 +121,7 @@ export function useNavigation({ directions, destination, fix, language = 'tr', e
         const level = dueCue(progress.toNextM, spoken.current.key === key ? spoken.current.level : -1);
         if (level !== null) cue = speak(key, level, cueText(progress.next, progress.toNextM, level, language));
       }
-      setNav({ state: 'active', rerouting: busy.current, geometry: current.geometry, steps: current.steps, progress, cue });
+      setNav({ state: 'active', rerouting: busy.current, geometry: current.geometry, ...(current.spans ? { spans: current.spans } : {}), steps: current.steps, progress, cue });
     };
 
     if (!route.current && failed.current === null) ask(false);

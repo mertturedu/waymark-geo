@@ -1,9 +1,10 @@
 import type { LngLat } from '../geo/cells';
+import type { Arrival, ArrivalInfo } from '../route/arrival';
 import type { MatrixResult, RouteResult, Vehicle } from '../route/router';
 
 export const MAX_STOPS = 100;
 
-export type StopInput = { id: string; point: LngLat; label?: string };
+export type StopInput = { id: string; point: LngLat; label?: string; arrive?: Arrival };
 
 export type PlanRequest = {
   stops: ReadonlyArray<StopInput>;
@@ -18,7 +19,7 @@ export type PlanRequest = {
   seed?: number;
 };
 
-export type PlanLeg = { from: string | null; to: string | null; distanceM: number; durationS: number; geometry: LngLat[] };
+export type PlanLeg = { from: string | null; to: string | null; distanceM: number; durationS: number; geometry: LngLat[]; arrival?: ArrivalInfo };
 
 export type PlanWarning =
   | { code: 'far_snap'; stopId: string }
@@ -46,7 +47,7 @@ export type PlanResult =
   | { ok: false; code: PlanFailure; detail?: string };
 
 export type PlanDeps = {
-  matrix(points: ReadonlyArray<LngLat>, options?: { vehicle?: Vehicle }): Promise<MatrixResult>;
-  route(from: LngLat, to: LngLat, options?: { vehicle?: Vehicle }): Promise<RouteResult>;
+  matrix(points: ReadonlyArray<LngLat>, options?: { vehicle?: Vehicle; arrives?: ReadonlyArray<Arrival | undefined> }): Promise<MatrixResult>;
+  route(from: LngLat, to: LngLat, options?: { vehicle?: Vehicle; arrive?: Arrival }): Promise<RouteResult>;
   now(): number;
 };

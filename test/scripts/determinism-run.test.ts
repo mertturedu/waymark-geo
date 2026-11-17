@@ -70,7 +70,7 @@ describe('stepsToRepeat', () => {
 
   it('repeats every step that makes a pack file, building parts included', () => {
     const names = stepsToRepeat(steps(['34', '06', '20'])).map((s) => s.name);
-    expect(names).toEqual(['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'adres paketleri', 'bina paketleri', 'işletmeler', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar']);
+    expect(names).toEqual(['sınırlar', 'adresler', 'sokaklar', 'yerler', 'binalar', 'işletmeler', 'adsız yollar', 'sokak adları', 'bina izleri', 'ulusal omurga', 'adres paketleri', 'bina paketleri 2', 'bina paketleri', 'rehber paketleri', 'yollar', 'rota paketleri', 'gömülü sınırlar']);
   });
 
   it('leaves out the tiles and the final publish step', () => {

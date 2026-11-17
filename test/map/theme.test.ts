@@ -210,10 +210,10 @@ describe('base map colours', () => {
   });
 
   it('is cool and light by default and has its own dark ground', () => {
-    expect(DEFAULT_THEME.light.map.base.earth).toBe('#ECEFF4');
+    expect(DEFAULT_THEME.light.map.base.earth).toBe('#E7EDF7');
     expect(DEFAULT_THEME.light.map.base.water).toBe('#A9C7E4');
-    expect(DEFAULT_THEME.dark.map.base.earth).toBe('#1A1E27');
-    expect(paintOf(buildStyle(input()), 'background', 'background-color')).toBe('#ECEFF4');
+    expect(DEFAULT_THEME.dark.map.base.earth).toBe('#1B2433');
+    expect(paintOf(buildStyle(input()), 'background', 'background-color')).toBe('#E7EDF7');
     expect(JSON.stringify(buildStyle(input()))).toContain('#A9C7E4');
     expect(JSON.stringify(buildStyle(input({ theme: 'dark', look: DEFAULT_THEME.dark.map })))).not.toContain('#A9C7E4');
   });
@@ -221,7 +221,7 @@ describe('base map colours', () => {
   it('lets the theme change colours and warns about names and values it does not know', () => {
     const theme = createGeoTheme({ map: { base: { water: '#112233', unicorn: '#FFFFFF', earth: 'sand' } } });
     expect(theme.light.map.base.water).toBe('#112233');
-    expect(theme.light.map.base.earth).toBe('#ECEFF4');
+    expect(theme.light.map.base.earth).toBe('#E7EDF7');
     expect(theme.warnings).toEqual(expect.arrayContaining(['map.base.unicorn', 'map.base.earth']));
     const style = buildStyle(input({ look: theme.light.map }));
     expect(JSON.stringify(style)).toContain('#112233');
@@ -231,6 +231,6 @@ describe('base map colours', () => {
   it('can recolour the dark side on its own', () => {
     const theme = createGeoTheme({ dark: { map: { base: { buildings: '#334455' } } } });
     expect(theme.dark.map.base.buildings).toBe('#334455');
-    expect(theme.light.map.base.buildings).toBe('#DCE0EA');
+    expect(theme.light.map.base.buildings).toBe('#D2DAEA');
   });
 });

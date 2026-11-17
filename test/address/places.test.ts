@@ -1,5 +1,6 @@
 import { createSearch, type Search } from '../../src/core/address/search';
-import { builtPack, memoryStore, turkeyBorders } from './helpers/search-fixture';
+import { poi } from '../pipeline/helpers/mini-work';
+import { builtPack, memoryStore, searchRows, turkeyBorders } from './helpers/search-fixture';
 
 let closeStore: () => Promise<void> = async () => undefined;
 let search: Search;
@@ -52,6 +53,21 @@ describe('named places', () => {
   it('prefers a street with the same words', async () => {
     expect(await best('hastane caddesi 1')).toMatchObject({ precision: 'address', components: { street: 'Hastane Caddesi', houseNumber: '1' } });
     expect(await best('hastane caddesi')).toMatchObject({ precision: 'street', components: { street: 'Hastane Caddesi' } });
+  });
+
+  it('finds a building name written together with its neighbourhood', async () => {
+    const rows = searchRows();
+    rows.places.push(poi('n47', 'mall', 'Yıldız Sitesi', 28.67, 40.77));
+    const { store, close } = await memoryStore({ '34': await builtPack(rows) });
+    const named = createSearch({ store, borders: turkeyBorders() });
+    const best = async (text: string) => {
+      const result = await named.resolve(text);
+      return result.status === 'resolved' ? result.best : null;
+    };
+    for (const text of ['Yıldız Sitesi Kadıköy', 'Moda Mahallesi Yıldız Sitesi Kadıköy', 'Yıldız Sitesi Moda Mah. Kadıköy']) {
+      expect(await best(text)).toMatchObject({ precision: 'poi', components: { poiName: 'Yıldız Sitesi', district: 'Kadıköy' } });
+    }
+    await close();
   });
 
   it('says nothing was found for a place that does not exist', async () => {

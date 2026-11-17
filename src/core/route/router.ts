@@ -2,14 +2,16 @@ import type { LngLat } from '../geo/cells';
 import type { ClockPort } from '../packs/ports';
 import type { RouteStore } from '../ports';
 import type { Borders } from '../region/borders';
+import { observedSampler, type Sampler } from '../traffic/istanbul';
 import { congestion, regionBusyness } from '../traffic/model';
+import { arrivalInfo, arrivalTarget, type Arrival, type ArrivalInfo } from './arrival';
 import { borderSamples, crossingsOf, pickChain, solveChain, type ChainPlace, type Crossing } from './chain';
 import { readRoutePackAsync, type RoutePack } from './format';
 import { MOTORCYCLE_FACTOR } from './speeds';
 import { createPlanner, type Planner } from './planner';
 import { UNREACHABLE } from './matrix';
-import type { Snap } from './snap';
-import { delayDs, trafficLeg } from './traffic';
+import type { Prefer, Snap } from './snap';
+import { bandSpans, delayDs, trafficLeg, type BandSpan } from './traffic';
 
 export type StopFailure = 'no_road' | 'outside_region' | 'disconnected';
 
@@ -17,12 +19,14 @@ export type Warning = { stop: number; code: 'far_snap' };
 
 export type Vehicle = 'car' | 'motorcycle';
 
-export type RouteOptions = { vehicle?: Vehicle; at?: number };
+export type RouteOptions = { vehicle?: Vehicle; at?: number; arrive?: Arrival };
 
-export type TrafficInfo = { index: number; freeFlowS: number; delayS: number; detour: boolean };
+export type MatrixOptions = { vehicle?: Vehicle; arrives?: ReadonlyArray<Arrival | undefined> };
+
+export type TrafficInfo = { index: number; freeFlowS: number; delayS: number; detour: boolean; spans?: BandSpan[] };
 
 export type RouteResult =
-  | { ok: true; region: string; regions?: string[]; distanceM: number; durationS: number; approximate: boolean; geometry: LngLat[]; from: LngLat; to: LngLat; warnings: Warning[]; traffic?: TrafficInfo }
+  | { ok: true; region: string; regions?: string[]; distanceM: number; durationS: number; approximate: boolean; geometry: LngLat[]; from: LngLat; to: LngLat; warnings: Warning[]; traffic?: TrafficInfo; arrival?: ArrivalInfo }
   | { ok: false; code: 'START_OUTSIDE_REGION' | 'PACK_DAMAGED' | StopFailure; stop?: number };
 
 export type StopState = { ok: true; point: LngLat; warnings: Warning[] } | { ok: false; reason: StopFailure };
@@ -33,11 +37,13 @@ export type MatrixResult =
 
 export type Router = {
   route(from: LngLat, to: LngLat, options?: RouteOptions): Promise<RouteResult>;
-  matrix(points: ReadonlyArray<LngLat>, options?: RouteOptions): Promise<MatrixResult>;
+  matrix(points: ReadonlyArray<LngLat>, options?: MatrixOptions): Promise<MatrixResult>;
   invalidate(region?: string): void;
 };
 
-export type RouterConfig = { store: RouteStore; borders: Borders; clock?: ClockPort; idleMs?: number };
+export type TrafficSource = (region: string, at: number) => Sampler | null;
+
+export type RouterConfig = { store: RouteStore; borders: Borders; clock?: ClockPort; idleMs?: number; traffic?: TrafficSource };
 
 const COVER_M = 10_000;
 const DEFAULT_IDLE_MS = 60_000;
@@ -47,6 +53,7 @@ const pause = (): Promise<void> => new Promise((resolve) => setTimeout(resolve, 
 type Loaded = { pack: RoutePack; planner: Planner };
 
 export function createRouter(config: RouterConfig): Router {
+  const samplerOf: TrafficSource = config.traffic ?? observedSampler;
   const { store, borders, clock } = config;
   const idleMs = config.idleMs ?? DEFAULT_IDLE_MS;
   const loading = new Map<string, Promise<Loaded | null | 'damaged'>>();
@@ -115,8 +122,10 @@ export function createRouter(config: RouterConfig): Router {
     return [...(own ? [own] : []), ...borders.nearBorder(point[0], point[1], COVER_M)].filter((id) => installed.has(id));
   };
 
-  const classify = (loaded: Loaded, region: string, point: LngLat): { ok: true; snap: Snap; far: boolean } | { ok: false; reason: StopFailure } => {
-    const got = loaded.planner.snap(point[0], point[1]);
+  const preferOf = (arrive: Arrival | undefined): Prefer | undefined => (arrive?.chain && arrive.chain.length > 0 ? { lines: arrive.chain as Prefer['lines'] } : undefined);
+
+  const classify = (loaded: Loaded, region: string, point: LngLat, prefer?: Prefer): { ok: true; snap: Snap; far: boolean } | { ok: false; reason: StopFailure } => {
+    const got = loaded.planner.snap(point[0], point[1], prefer);
     if (got.ok) return { ok: true, snap: got.snap, far: got.farSnap };
     return { ok: false, reason: covers(region, point) ? 'no_road' : 'outside_region' };
   };
@@ -151,9 +160,11 @@ export function createRouter(config: RouterConfig): Router {
     const opened = await open(from);
     if ('fail' in opened) return { ok: false, code: opened.fail };
     const failures: RouteResult[] = [];
+    const arrive = options?.arrive;
+    const aim = arrive ? arrivalTarget(arrive) : to;
     for (const { region, loaded } of opened.choices) {
       const a = classify(loaded, region, from);
-      const b = classify(loaded, region, to);
+      const b = classify(loaded, region, aim, preferOf(arrive));
       if (!a.ok || !b.ok) {
         failures.push({ ok: false, code: b.ok ? (a as { reason: StopFailure }).reason : b.reason, stop: b.ok ? 0 : 1 });
         continue;
@@ -164,21 +175,23 @@ export function createRouter(config: RouterConfig): Router {
         continue;
       }
       const warnings: Warning[] = [...(a.far ? [{ stop: 0, code: 'far_snap' as const }] : []), ...(b.far ? [{ stop: 1, code: 'far_snap' as const }] : [])];
-      const timed = options?.at === undefined ? null : trafficLeg(loaded.pack, loaded.planner, a.snap, b.snap, leg, options.at, region);
+      const timed = options?.at === undefined ? null : trafficLeg(loaded.pack, loaded.planner, a.snap, b.snap, leg, options.at, region, samplerOf(region, options.at));
       const chosen = timed ? timed.leg : leg;
       const factor = factorOf(options);
       const eta = timed ? timed.freeFlowDs + timed.delayDs : chosen.durationDs;
+      const geometry = toDegrees(chosen.line);
       return {
         ok: true,
         region,
         distanceM: chosen.distanceM,
         durationS: (eta / 10) * factor,
         approximate: options?.vehicle === 'motorcycle',
-        geometry: toDegrees(chosen.line),
+        geometry,
         from: a.snap.point,
         to: b.snap.point,
         warnings,
-        ...(timed && options?.at !== undefined ? { traffic: { index: congestion(options.at), freeFlowS: (timed.freeFlowDs / 10) * factor, delayS: (timed.delayDs / 10) * factor, detour: timed.detour } } : {}),
+        ...(arrive ? { arrival: arrivalInfo(geometry, arrive, b.snap.onChain === true) } : {}),
+        ...(timed && options?.at !== undefined ? { traffic: { index: congestion(options.at), freeFlowS: (timed.freeFlowDs / 10) * factor, delayS: (timed.delayDs / 10) * factor, detour: timed.detour, spans: bandSpans(loaded.pack, chosen.arcs, options.at, regionBusyness(region), samplerOf(region, options.at)) } } : {}),
       };
     }
     if (failures.some((f) => !f.ok && f.code === 'outside_region')) {
@@ -211,9 +224,11 @@ export function createRouter(config: RouterConfig): Router {
   const chainOnce = async (from: LngLat, to: LngLat, options: RouteOptions | undefined, starts: Choice[]): Promise<RouteResult | null> => {
     const installed = await store.installed();
     const ends: Choice[] = [];
-    for (const region of await candidates(to)) {
+    const arrive = options?.arrive;
+    const aim = arrive ? arrivalTarget(arrive) : to;
+    for (const region of await candidates(aim)) {
       const loaded = await load(region);
-      if (loaded !== null && loaded !== 'damaged' && loaded.planner.snap(to[0], to[1]).ok) ends.push({ region, loaded });
+      if (loaded !== null && loaded !== 'damaged' && loaded.planner.snap(aim[0], aim[1]).ok) ends.push({ region, loaded });
     }
     for (const start of starts) {
       for (const end of ends) {
@@ -235,14 +250,15 @@ export function createRouter(config: RouterConfig): Router {
         }
         if (between.some((list) => list.length === 0)) continue;
         const a = start.loaded.planner.snap(from[0], from[1]);
-        const b = end.loaded.planner.snap(to[0], to[1]);
+        const b = end.loaded.planner.snap(aim[0], aim[1], preferOf(arrive));
         if (!a.ok || !b.ok) continue;
         const solved = await solveChain(places, a.snap, b.snap, between, pause);
         if (solved === null) continue;
         const warnings: Warning[] = [...(a.farSnap ? [{ stop: 0, code: 'far_snap' as const }] : []), ...(b.farSnap ? [{ stop: 1, code: 'far_snap' as const }] : [])];
         const at = options?.at;
-        const delay = at === undefined ? 0 : solved.legs.reduce((sum, leg, i) => sum + delayDs((places[i] as ChainPlace).pack, leg.arcs, leg.durationDs, at, regionBusyness(leg.region)), 0);
+        const delay = at === undefined ? 0 : solved.legs.reduce((sum, leg, i) => sum + delayDs((places[i] as ChainPlace).pack, leg.arcs, leg.durationDs, at, regionBusyness(leg.region), samplerOf(leg.region, at)), 0);
         const factor = factorOf(options);
+        const geometry = toDegrees(solved.line);
         return {
           ok: true,
           region: start.region,
@@ -250,10 +266,11 @@ export function createRouter(config: RouterConfig): Router {
           distanceM: solved.distanceM,
           durationS: ((solved.durationDs + delay) / 10) * factor,
           approximate: options?.vehicle === 'motorcycle',
-          geometry: toDegrees(solved.line),
+          geometry,
           from: a.snap.point,
           to: b.snap.point,
           warnings,
+          ...(arrive ? { arrival: arrivalInfo(geometry, arrive, b.snap.onChain === true) } : {}),
           ...(at === undefined ? {} : { traffic: { index: congestion(at), freeFlowS: (solved.durationDs / 10) * factor, delayS: (delay / 10) * factor, detour: false } }),
         };
       }
@@ -261,12 +278,12 @@ export function createRouter(config: RouterConfig): Router {
     return null;
   };
 
-  const matrixOnce = async (points: ReadonlyArray<LngLat>, options?: RouteOptions): Promise<MatrixResult> => {
+  const matrixOnce = async (points: ReadonlyArray<LngLat>, options?: MatrixOptions): Promise<MatrixResult> => {
     const first = points[0];
     if (first === undefined) return { ok: false, code: 'START_OUTSIDE_REGION' };
     const opened = await open(first);
     if ('fail' in opened) return { ok: false, code: opened.fail };
-    const classified = opened.choices.map(({ region, loaded }) => ({ region, loaded, found: points.map((point) => classify(loaded, region, point)) }));
+    const classified = opened.choices.map(({ region, loaded }) => ({ region, loaded, found: points.map((point, i) => classify(loaded, region, point, preferOf(options?.arrives?.[i]))) }));
     const best = classified.reduce((top, c) => (c.found.filter((f) => f.ok).length > top.found.filter((f) => f.ok).length ? c : top));
     const { region, loaded } = best;
     const stops: StopState[] = [];

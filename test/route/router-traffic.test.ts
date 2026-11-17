@@ -6,11 +6,11 @@ import type { RoadClass } from '../../src/core/route/speeds';
 import { deg, rows, way, type Pt } from '../helpers/road-world';
 
 const square = (west: number, south: number, east: number, north: number): [number, number][][][] => [[[[west, south], [east, south], [east, north], [west, north], [west, south]]]];
-const borders = createBorders(encodeBorders([{ plate: '34', rings: square(28.5, 40.5, 29.5, 41.5) }]));
+const borders = createBorders(encodeBorders([{ plate: '34', rings: square(26.5, 40.5, 27.5, 41.5) }]));
 
 const lonDeg = (meters: number): number => deg(meters) / Math.cos((41 * Math.PI) / 180);
 const pt = (id: number, x: number, y: number): Pt => [id, x, y];
-const X = 29;
+const X = 27;
 const Y = 41;
 const rush = Date.UTC(2026, 10, 9) + 5 * 3_600_000;
 const night = Date.UTC(2026, 10, 9) + 0 * 3_600_000;
@@ -45,6 +45,21 @@ describe('routes with typical traffic', () => {
     expect(got.ok && got.traffic).toBeUndefined();
   });
 
+  it('says which parts of the route are slow so a map can colour them', async () => {
+    const router = createRouter({ store: storeOf(line('motorway')), borders });
+    const busy = await router.route(from, to, { at: rush });
+    const quiet = await router.route(from, to, { at: night });
+    expect(busy.ok && quiet.ok).toBe(true);
+    if (!(busy.ok && quiet.ok)) return;
+    const spans = busy.traffic?.spans ?? [];
+    expect(spans.length).toBeGreaterThan(0);
+    expect(spans[0]?.from).toBe(0);
+    expect(spans[spans.length - 1]?.to).toBeCloseTo(1, 6);
+    expect(spans.every((span, i) => i === 0 || span.from === (spans[i - 1] as { to: number }).to)).toBe(true);
+    expect(spans.some((span) => span.band !== 'smooth')).toBe(true);
+    expect(quiet.traffic?.spans?.every((span) => span.band === 'smooth')).toBe(true);
+  });
+
   it('adds a delay in the rush hour and none at night', async () => {
     const router = createRouter({ store: storeOf(line('motorway')), borders });
     const free = await router.route(from, to);
@@ -53,9 +68,10 @@ describe('routes with typical traffic', () => {
     expect(free.ok && busy.ok && quiet.ok).toBe(true);
     if (!(free.ok && busy.ok && quiet.ok)) return;
     expect(busy.traffic?.freeFlowS).toBeCloseTo(free.durationS, 3);
-    expect(busy.durationS).toBeGreaterThan(free.durationS * 1.8);
+    expect(busy.durationS).toBeGreaterThan(free.durationS * 1.3);
+    expect(busy.durationS).toBeLessThan(free.durationS * 1.6);
     expect(busy.durationS).toBeCloseTo((busy.traffic?.freeFlowS ?? 0) + (busy.traffic?.delayS ?? 0), 3);
-    expect(busy.traffic?.index).toBeGreaterThan(0.9);
+    expect(busy.traffic?.index).toBeGreaterThan(0.8);
     expect(quiet.durationS).toBeLessThan(free.durationS * 1.05);
     expect(busy.distanceM).toBeCloseTo(free.distanceM, 0);
   });
@@ -70,7 +86,8 @@ describe('routes with typical traffic', () => {
   });
 
   it('takes a calmer parallel road when that is quicker in the rush hour', async () => {
-    const router = createRouter({ store: storeOf(twoRoads()), borders });
+    const jammed = (at: number) => (lat: number) => (at === rush && Math.abs(lat - Y) < 0.001 ? 0.7 : 0);
+    const router = createRouter({ store: storeOf(twoRoads()), borders, traffic: (_region, at) => jammed(at) });
     const free = await router.route(from, to, { at: night });
     const busy = await router.route(from, to, { at: rush });
     expect(free.ok && busy.ok).toBe(true);
@@ -90,5 +107,16 @@ describe('routes with typical traffic', () => {
     const bike = await router.route(from, to, { at: rush, vehicle: 'motorcycle' });
     expect(car.ok && bike.ok).toBe(true);
     if (car.ok && bike.ok) expect(bike.durationS / car.durationS).toBeCloseTo(0.85, 3);
+  });
+
+  it('takes its slowdowns from the traffic source it is given', async () => {
+    const calm = await createRouter({ store: storeOf(line('motorway')), borders, traffic: () => () => 0 }).route(from, to, { at: rush });
+    const slow = await createRouter({ store: storeOf(line('motorway')), borders, traffic: () => () => 0.5 }).route(from, to, { at: rush });
+    expect(calm.ok && slow.ok).toBe(true);
+    if (!(calm.ok && slow.ok)) return;
+    expect(calm.traffic?.delayS).toBe(0);
+    expect(slow.durationS / (slow.traffic?.freeFlowS ?? 1)).toBeGreaterThan(1.9);
+    expect(slow.durationS / (slow.traffic?.freeFlowS ?? 1)).toBeLessThanOrEqual(2);
+    expect(slow.traffic?.spans?.every((span) => span.band === 'jam')).toBe(true);
   });
 });

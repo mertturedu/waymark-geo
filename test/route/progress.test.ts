@@ -86,6 +86,9 @@ describe('cues', () => {
     expect(cueText(right, 20, 2, 'tr')).toBe('Sağa dönün');
     const arrive = STEPS[STEPS.length - 1]!;
     expect(cueText(arrive, 480, 0, 'tr')).toBe('500 m sonra varış noktasındasınız');
+    expect(cueText({ ...arrive, side: 'left' }, 480, 0, 'tr')).toBe('500 m sonra hedef solda');
+    expect(cueText({ ...arrive, side: 'right' }, 480, 0, 'en')).toBe('In 500 m, your destination is on the right');
+    expect(cueText({ ...arrive, action: 'Hedef sağda', side: 'right' }, 20, 2, 'tr')).toBe('Hedef sağda');
   });
 
   it('measures headings clockwise from north', () => {
