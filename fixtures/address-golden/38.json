@@ -1,0 +1,4631 @@
+{
+ "version": 1,
+ "plate": "38",
+ "queries": [
+  {
+   "id": "38-full-1",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Seher Sokak No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12868768491",
+    "number": "14",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-2",
+   "text": "Çömlekçi Sokak No:30/10 Becen Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329096",
+    "number": "30/10",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-3",
+   "text": "Yeni Mah. Aşık Veysel Bulvarı 67, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n5426631463",
+    "number": "67",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-4",
+   "text": "Kayseri, Melikgazi, Esenyurt Mahallesi, Gediris Caddesi, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874757",
+    "number": "20",
+    "streetName": "Gediris Caddesi"
+   }
+  },
+  {
+   "id": "38-full-5",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Ahmet Paşa Caddesi No:67/1A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12868768499",
+    "number": "67/1A",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-6",
+   "text": "Taslak No:5 Mevlana Mahallesi Talas/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w550387937",
+    "number": "5",
+    "streetName": "Taslak"
+   }
+  },
+  {
+   "id": "38-full-7",
+   "text": "Mevlana Mah. Halef Hoca Caddesi 71, Talas, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9280107294",
+    "number": "71",
+    "streetName": "Halef Hoca Caddesi"
+   }
+  },
+  {
+   "id": "38-full-8",
+   "text": "Kayseri, Kocasinan, Yenipervane Mahallesi, Kocasinan Bulvarı, Kapı No: 167",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w892216830",
+    "number": "167",
+    "streetName": "Kocasinan Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-9",
+   "text": "Kayseri Kocasinan Fevzi Çakmak Mah. Çoruh Caddesi No:54",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317931313",
+    "number": "54",
+    "streetName": "Çoruh Caddesi"
+   }
+  },
+  {
+   "id": "38-full-10",
+   "text": "Fatih Sultan Mehmet Bulvarı No:18 Altınoluk Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w534612740",
+    "number": "18",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-11",
+   "text": "Esenyurt Mah. Kavaklık Caddesi 12, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428877480",
+    "number": "12",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-full-12",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Boylar Sokak, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407715925",
+    "number": "9",
+    "streetName": "Boylar Sokak"
+   }
+  },
+  {
+   "id": "38-full-13",
+   "text": "Kayseri Melikgazi Konaklar Mah. Avanos Caddesi No:174",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411379674",
+    "number": "174",
+    "streetName": "Avanos Caddesi"
+   }
+  },
+  {
+   "id": "38-full-14",
+   "text": "Aşık Veysel Bulvarı No:71 Yeni Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9269344738",
+    "number": "71",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-15",
+   "text": "Esenyurt Mah. Kimyon Sokak 8, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660121",
+    "number": "8",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-full-16",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Ahmet Paşa Caddesi, Kapı No: 69/1C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145725",
+    "number": "69/1C",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-17",
+   "text": "Kayseri Talas Mevlana Mah. 15 Temmuz Caddesi No:12D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14265474435",
+    "number": "12D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-full-18",
+   "text": "15 Temmuz Caddesi No:14 Mevlana Mahallesi Talas/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13506949001",
+    "number": "14",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-full-19",
+   "text": "Küçük Mustafa Mah. Bağlar Caddesi 10/A, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13337305131",
+    "number": "10/A",
+    "streetName": "Bağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-full-20",
+   "text": "Kayseri, Melikgazi, Mimarsinan Mahallesi, Seyrani Sokak, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260668219",
+    "number": "20",
+    "streetName": "Seyrani Sokak"
+   }
+  },
+  {
+   "id": "38-full-21",
+   "text": "Kayseri Melikgazi Altınoluk Mah. Ersözlü Sokağı No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738332",
+    "number": "5",
+    "streetName": "Ersözlü Sokağı"
+   }
+  },
+  {
+   "id": "38-full-22",
+   "text": "Hastane Caddesi No:10 Camiicedit Mahallesi Develi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10271025711",
+    "number": "10",
+    "streetName": "Hastane Caddesi"
+   }
+  },
+  {
+   "id": "38-full-23",
+   "text": "Becen Mah. Çömlekçi Sokak 30/12, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329094",
+    "number": "30/12",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-24",
+   "text": "Kayseri, Kocasinan, Mimarsinan Mahallesi, Gerede Caddesi, Kapı No: 16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256049503",
+    "number": "16",
+    "streetName": "Gerede Caddesi"
+   }
+  },
+  {
+   "id": "38-full-25",
+   "text": "Kayseri Melikgazi Becen Mah. Çömlekçi Sokak No:30/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329105",
+    "number": "30/1",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-26",
+   "text": "Nil Caddesi No:4 Fevzi Çakmak Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407707594",
+    "number": "4",
+    "streetName": "Nil Caddesi"
+   }
+  },
+  {
+   "id": "38-full-27",
+   "text": "Fevzi Çakmak Mah. Sivas Bulvarı 79, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317936739",
+    "number": "79",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-28",
+   "text": "Kayseri, Melikgazi, Kılıçaslan Mahallesi, Sivas Bulvarı, Kapı No: 80",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411746463",
+    "number": "80",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-29",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Seher Sokak No:12/1C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145716",
+    "number": "12/1C",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-30",
+   "text": "Istasyon Sk. No:38800 Cumhuriyet Mahallesi Yeşilhisar/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w521860267",
+    "number": "38800",
+    "streetName": "Istasyon Sk."
+   }
+  },
+  {
+   "id": "38-full-31",
+   "text": "Germir Mah. Sivas Caddesi 244, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n2664916002",
+    "number": "244",
+    "streetName": "Sivas Caddesi"
+   }
+  },
+  {
+   "id": "38-full-32",
+   "text": "Kayseri, Kocasinan, Mimarsinan Mahallesi, Köprülü Caddesi, Kapı No: 37",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256056385",
+    "number": "37",
+    "streetName": "Köprülü Caddesi"
+   }
+  },
+  {
+   "id": "38-full-33",
+   "text": "Kayseri Melikgazi Gesi Mah. Saffet Arıkan Bedük Caddesi No:67",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w879353724",
+    "number": "67",
+    "streetName": "Saffet Arıkan Bedük Caddesi"
+   }
+  },
+  {
+   "id": "38-full-34",
+   "text": "Akhan Sokak No:52 Osman Kavuncu Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1559250053",
+    "number": "52",
+    "streetName": "Akhan Sokak"
+   }
+  },
+  {
+   "id": "38-full-35",
+   "text": "Esenyurt Mah. Kavaklık Caddesi 13, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428478186",
+    "number": "13",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-full-36",
+   "text": "Kayseri, Talas, Bahçelievler Mahallesi, Tepebağlar Caddesi, Kapı No: 46/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10279425913",
+    "number": "46/A",
+    "streetName": "Tepebağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-full-37",
+   "text": "Kayseri Talas Yenidoğan Mah. Mehmet Akif Ersoy Caddesi No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662862134",
+    "number": "5",
+    "streetName": "Mehmet Akif Ersoy Caddesi"
+   }
+  },
+  {
+   "id": "38-full-38",
+   "text": "Karakuş Sokak No:13/614 Gülük Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n7725476820",
+    "number": "13/614",
+    "streetName": "Karakuş Sokak"
+   }
+  },
+  {
+   "id": "38-full-39",
+   "text": "Alsancak Mah. Yavuz Sultan Selim Caddesi 4, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13727321901",
+    "number": "4",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "38-full-40",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Seher Sokak, Kapı No: 16/1B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145738",
+    "number": "16/1B",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-41",
+   "text": "Kayseri Melikgazi Köşk Mah. Talas Bulvarı No:43",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w523421425",
+    "number": "43",
+    "streetName": "Talas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-42",
+   "text": "Çakır Sok. No:11 Yenidoğan Mahallesi Talas/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411417359",
+    "number": "11",
+    "streetName": "Çakır Sok."
+   }
+  },
+  {
+   "id": "38-full-43",
+   "text": "Yeşil Mah. İnevler Çıkmaz Sokağı 3E, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938678",
+    "number": "3E",
+    "streetName": "İnevler Çıkmaz Sokağı"
+   }
+  },
+  {
+   "id": "38-full-44",
+   "text": "Kayseri, Kocasinan, Fevzi Çakmak Mahallesi, Mesut Sokak, Kapı No: 26",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w865702868",
+    "number": "26",
+    "streetName": "Mesut Sokak"
+   }
+  },
+  {
+   "id": "38-full-45",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Seher Sokak No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1342698775",
+    "number": "10",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-46",
+   "text": "Osman Kavuncu Bulvarı No:98 Anbar Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260935266",
+    "number": "98",
+    "streetName": "Osman Kavuncu Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-47",
+   "text": "Yeni Mah. Aşık Veysel Bulvarı 71, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411714330",
+    "number": "71",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-48",
+   "text": "Kayseri, Talas, Mevlana Mahallesi, Velioğlu Caddesi, Kapı No: 31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w881561408",
+    "number": "31",
+    "streetName": "Velioğlu Caddesi"
+   }
+  },
+  {
+   "id": "38-full-49",
+   "text": "Kayseri Melikgazi Hunat Mah. Sivas Caddesi No:24/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w253029397",
+    "number": "24/1",
+    "streetName": "Sivas Caddesi"
+   }
+  },
+  {
+   "id": "38-full-50",
+   "text": "Kızılay Caddesi No:2/1 Cumhuriyet Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12025416058",
+    "number": "2/1",
+    "streetName": "Kızılay Caddesi"
+   }
+  },
+  {
+   "id": "38-full-51",
+   "text": "Tacettin Veli Mah. Deliklitaş Caddesi 31, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w320797353",
+    "number": "31",
+    "streetName": "Deliklitaş Caddesi"
+   }
+  },
+  {
+   "id": "38-full-52",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Ahmet Paşa Caddesi, Kapı No: 5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407163154",
+    "number": "5",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-53",
+   "text": "Kayseri Kocasinan Yenipervane Mah. Kocasinan Bulvarı No:161",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12584805158",
+    "number": "161",
+    "streetName": "Kocasinan Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-54",
+   "text": "Atatürk Bulvarı No:68 Bahçelievler Mahallesi Talas/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662887235",
+    "number": "68",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-55",
+   "text": "Tacettin Veli Mah. Tacettin Veli Bulvarı 28, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259418282",
+    "number": "28",
+    "streetName": "Tacettin Veli Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-56",
+   "text": "Kayseri, Melikgazi, Altınoluk Mahallesi, Ersözlü Sokağı, Kapı No: 4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738326",
+    "number": "4",
+    "streetName": "Ersözlü Sokağı"
+   }
+  },
+  {
+   "id": "38-full-57",
+   "text": "Kayseri Kocasinan Erciyesevler Mah. Şehit Yüzbaşı Levent Çetinkaya No:6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w415298917",
+    "number": "6",
+    "streetName": "Şehit Yüzbaşı Levent Çetinkaya"
+   }
+  },
+  {
+   "id": "38-full-58",
+   "text": "Seher Sokak No:16/1A Sahabiye Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145737",
+    "number": "16/1A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-59",
+   "text": "Cumhuriyet Mah. Tennuri Sokak 13/1, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938660",
+    "number": "13/1",
+    "streetName": "Tennuri Sokak"
+   }
+  },
+  {
+   "id": "38-full-60",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Sivas Bulvarı, Kapı No: 27",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12994907988",
+    "number": "27",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-61",
+   "text": "Kayseri Melikgazi Yeni Mah. Teknopark 4B No:58",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411714329",
+    "number": "58",
+    "streetName": "Teknopark 4B"
+   }
+  },
+  {
+   "id": "38-full-62",
+   "text": "Fatih Sultan Mehmet Bulvarı No:22/A Altınoluk Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1514721261",
+    "number": "22/A",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-63",
+   "text": "Erkilet Ertuğrul Gazi Mah. Hakikat Caddesi 15, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13260759701",
+    "number": "15",
+    "streetName": "Hakikat Caddesi"
+   }
+  },
+  {
+   "id": "38-full-64",
+   "text": "Kayseri, Melikgazi, Becen Mahallesi, Çömlekçi Sokak, Kapı No: 30/15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329091",
+    "number": "30/15",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-65",
+   "text": "Kayseri Melikgazi Cumhuriyet Mah. Mevlevi Caddesi No:21",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938664",
+    "number": "21",
+    "streetName": "Mevlevi Caddesi"
+   }
+  },
+  {
+   "id": "38-full-66",
+   "text": "Ahmet Paşa Caddesi No:65/C Sahabiye Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12992058029",
+    "number": "65/C",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-67",
+   "text": "Mimarsinan Mah. Gerede Caddesi 12, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256049492",
+    "number": "12",
+    "streetName": "Gerede Caddesi"
+   }
+  },
+  {
+   "id": "38-full-68",
+   "text": "Kayseri, Kocasinan, Düver Mahallesi, Kayseri Caddesi, Kapı No: 44",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w533204320",
+    "number": "44",
+    "streetName": "Kayseri Caddesi"
+   }
+  },
+  {
+   "id": "38-full-69",
+   "text": "Kayseri Kocasinan Erkilet Ertuğrul Gazi Mah. Lalepaşa Caddesi No:3/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12740944102",
+    "number": "3/A",
+    "streetName": "Lalepaşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-70",
+   "text": "Tekin Sokak No:10 Gevher Nesibe Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n5173368197",
+    "number": "10",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-full-71",
+   "text": "Mevlana Mah. Mehmet Timuçin Caddesi 4A, Talas, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14206102010",
+    "number": "4A",
+    "streetName": "Mehmet Timuçin Caddesi"
+   }
+  },
+  {
+   "id": "38-full-72",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Seher Sokak, Kapı No: 10/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145702",
+    "number": "10/A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-73",
+   "text": "Kayseri Melikgazi Tacettin Veli Mah. Seyyid Burhanettin Bulvarı No:58",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259416923",
+    "number": "58",
+    "streetName": "Seyyid Burhanettin Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-74",
+   "text": "Hes Caddesi No:22 Erciyes Mahallesi Hacılar/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883786043",
+    "number": "22",
+    "streetName": "Hes Caddesi"
+   }
+  },
+  {
+   "id": "38-full-75",
+   "text": "Sahabiye Mah. Seher Sokak 16/1E, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145741",
+    "number": "16/1E",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-76",
+   "text": "Kayseri, Melikgazi, Kılıçaslan Mahallesi, Sivas Bulvarı, Kapı No: 88",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411746500",
+    "number": "88",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-77",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Seher Sokak No:16/1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145734",
+    "number": "16/1",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-78",
+   "text": "Şehit Mehmet Erciyes Caddesi No:50 Tanpınar Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407115731",
+    "number": "50",
+    "streetName": "Şehit Mehmet Erciyes Caddesi"
+   }
+  },
+  {
+   "id": "38-full-79",
+   "text": "Sahabiye Mah. Seher Sokak 16/A, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145742",
+    "number": "16/A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-80",
+   "text": "Kayseri, Melikgazi, Esenyurt Mahallesi, Dumlupınar Caddesi, Kapı No: 23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428659507",
+    "number": "23",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "38-full-81",
+   "text": "Kayseri Kocasinan Yakut Mah. Mustafa Kemal Paşa Bulvarı No:103",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1281129965",
+    "number": "103",
+    "streetName": "Mustafa Kemal Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-82",
+   "text": "Tepebağlar Caddesi No:44/D Bahçelievler Mahallesi Talas/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10279426209",
+    "number": "44/D",
+    "streetName": "Tepebağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-full-83",
+   "text": "Mimarsinan Mah. Celal Bayar Caddesi 19, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259212948",
+    "number": "19",
+    "streetName": "Celal Bayar Caddesi"
+   }
+  },
+  {
+   "id": "38-full-84",
+   "text": "Kayseri, Melikgazi, Becen Mahallesi, Çömlekçi Sokak, Kapı No: 30/3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329103",
+    "number": "30/3",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-85",
+   "text": "Kayseri Kocasinan Sahabiye Mah. Seher Sokak No:10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12868768489",
+    "number": "10",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-full-86",
+   "text": "Sümbül Sokağı No:6 Emiruşağı Mahallesi Tomarza/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n6009432485",
+    "number": "6",
+    "streetName": "Sümbül Sokağı"
+   }
+  },
+  {
+   "id": "38-full-87",
+   "text": "Erenköy Mah. Erenköy Caddesi 44/1, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w406662878",
+    "number": "44/1",
+    "streetName": "Erenköy Caddesi"
+   }
+  },
+  {
+   "id": "38-full-88",
+   "text": "Kayseri, Melikgazi, Cumhuriyet Mahallesi, Park Bulvarı, Kapı No: 19/101",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938663",
+    "number": "19/101",
+    "streetName": "Park Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-89",
+   "text": "Kayseri Talas Yenidoğan Mah. İlham Sokağı No:27",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662445006",
+    "number": "27",
+    "streetName": "İlham Sokağı"
+   }
+  },
+  {
+   "id": "38-full-90",
+   "text": "Sivas Bulvarı No:72 Kılıçaslan Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411746525",
+    "number": "72",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-91",
+   "text": "Mevlana Mah. 15 Temmuz Caddesi 2B, Talas, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14269262038",
+    "number": "2B",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-full-92",
+   "text": "Kayseri, Kocasinan, Sümer Mahallesi, Erkilet Bulvarı, Kapı No: 8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w867990328",
+    "number": "8",
+    "streetName": "Erkilet Bulvarı"
+   }
+  },
+  {
+   "id": "38-full-93",
+   "text": "Kayseri Kocasinan Mimarsinan Mah. Fuzuli Caddesi No:66",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256056395",
+    "number": "66",
+    "streetName": "Fuzuli Caddesi"
+   }
+  },
+  {
+   "id": "38-full-94",
+   "text": "Hastane Caddesi No:78 Sanayi Mahallesi Kocasinan/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w957470519",
+    "number": "78",
+    "streetName": "Hastane Caddesi"
+   }
+  },
+  {
+   "id": "38-full-95",
+   "text": "Sahabiye Mah. Ahmet Paşa Caddesi 73/1A, Kocasinan, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145730",
+    "number": "73/1A",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-full-96",
+   "text": "Kayseri, Melikgazi, Becen Mahallesi, Çömlekçi Sokak, Kapı No: 30/9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329097",
+    "number": "30/9",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-full-97",
+   "text": "Kayseri Melikgazi Hunat Mah. Nuh Naci Yazgan Caddesi No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259413468",
+    "number": "3",
+    "streetName": "Nuh Naci Yazgan Caddesi"
+   }
+  },
+  {
+   "id": "38-full-98",
+   "text": "Gülnihal Sokak No:12 Gesi Mahallesi Melikgazi/Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w879346939",
+    "number": "12",
+    "streetName": "Gülnihal Sokak"
+   }
+  },
+  {
+   "id": "38-full-99",
+   "text": "Esenyurt Mah. Kimyon Sokak 6, Melikgazi, Kayseri",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660120",
+    "number": "6",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-full-100",
+   "text": "Kayseri, Kocasinan, Mimarsinan Mahallesi, Gerede Caddesi, Kapı No: 10",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256049484",
+    "number": "10",
+    "streetName": "Gerede Caddesi"
+   }
+  },
+  {
+   "id": "38-full-101",
+   "text": "Kayseri Kocasinan Erkilet Ertuğrul Gazi Mah. Düğmeli Sokak No:12",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "38",
+    "osm": "w1056448961",
+    "number": "12",
+    "streetName": "Düğmeli Sokak"
+   }
+  },
+  {
+   "id": "38-full-102",
+   "text": "Kayseri Melikgazi Altınoluk Mah. 1061. Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "38",
+    "osm": "w783086099",
+    "number": "3",
+    "streetName": "1061. Sokak",
+    "streetNumber": 1061
+   }
+  },
+  {
+   "id": "38-full-103",
+   "text": "Kayseri Kocasinan Fevzi Çakmak Mah. Fevzi Çakmak Caddesi No:16",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "38",
+    "osm": "w407708202",
+    "number": "16",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "38-full-104",
+   "text": "Kayseri Kocasinan Erkilet Ertuğrul Gazi Mah. Düğmeli Sokak No:12",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "38",
+    "osm": "w889174530",
+    "number": "12",
+    "streetName": "Düğmeli Sokak"
+   }
+  },
+  {
+   "id": "38-full-105",
+   "text": "Kayseri Melikgazi Altınoluk Mah. 1061. Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "38",
+    "osm": "w1514726282",
+    "number": "3",
+    "streetName": "1061. Sokak",
+    "streetNumber": 1061
+   }
+  },
+  {
+   "id": "38-folded-1",
+   "text": "kayseri kocasinan sahabiye mah ahmet pasa cd no 67/1b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145701",
+    "number": "67/1B",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-2",
+   "text": "kayseri melikgazi esenyurt mah gediris cad. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874754",
+    "number": "14",
+    "streetName": "Gediris Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-3",
+   "text": "kayseri kocasinan sahabiye mah seher sk. no 12/1a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145714",
+    "number": "12/1A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-folded-4",
+   "text": "kayseri kocasinan mimarsinan mah tuna cd no 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9717997263",
+    "number": "9",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-5",
+   "text": "kayseri melikgazi altinoluk mah ersozlu sk no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738327",
+    "number": "3",
+    "streetName": "Ersözlü Sokağı"
+   }
+  },
+  {
+   "id": "38-folded-6",
+   "text": "KAYSERI KOCASINAN YAVUZ SELIM MAH SIVAS BULV. NO 340",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w532567154",
+    "number": "340",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-7",
+   "text": "KAYSERI DEVELI ASAGIEVEREK MAH CUMHURIYET CAD. NO 113",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w673852867",
+    "number": "113",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-8",
+   "text": "kayseri kocasinan barbaros mah kaldirim cd. no 38/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10285796917",
+    "number": "38/A",
+    "streetName": "Kaldırım Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-9",
+   "text": "kayseri kocasinan sahabiye mah seher sk. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12993080512",
+    "number": "6",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-folded-10",
+   "text": "kayseri melikgazi esenyurt mah deliklikaya cd. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428659990",
+    "number": "16",
+    "streetName": "Deliklikaya Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-11",
+   "text": "KAYSERI KOCASINAN ERCIYESEVLER MAH 30 AGUSTOS BLV. NO 9A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13340444001",
+    "number": "9A",
+    "streetName": "30 Ağustos Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-12",
+   "text": "kayseri talas mevlana mah bilge kagan cd no 41",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w483887474",
+    "number": "41",
+    "streetName": "Bilge Kağan Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-13",
+   "text": "kayseri melikgazi hunat mah nuh naci yazgan cad. no 32",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662158573",
+    "number": "32",
+    "streetName": "Nuh Naci Yazgan Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-14",
+   "text": "kayseri melikgazi hunat mah ulug sk no 9/6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938667",
+    "number": "9/6",
+    "streetName": "Uluğ Sokak"
+   }
+  },
+  {
+   "id": "38-folded-15",
+   "text": "kayseri kocasinan ziya golkalp mah guvercin sok. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w373541410",
+    "number": "3",
+    "streetName": "Güvercin Sokak"
+   }
+  },
+  {
+   "id": "38-folded-16",
+   "text": "kayseri kocasinan sahabiye mah karacabey sk no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w318693644",
+    "number": "29",
+    "streetName": "Karacabey Sokak"
+   }
+  },
+  {
+   "id": "38-folded-17",
+   "text": "kayseri melikgazi esenyurt mah kavaklik cad. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874748",
+    "number": "11",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-18",
+   "text": "kayseri melikgazi anbar mah osman kavuncu bulv. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n11828359842",
+    "number": "5",
+    "streetName": "Osman Kavuncu Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-19",
+   "text": "kayseri yahyali gazibeyli mah gul sok. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w150242824",
+    "number": "5",
+    "streetName": "Gül Sokak"
+   }
+  },
+  {
+   "id": "38-folded-20",
+   "text": "kayseri talas bahcelievler mah ataturk bulv. no 74",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w414399603",
+    "number": "74",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-21",
+   "text": "kayseri melikgazi esenyurt mah deliklikaya cd no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w410937981",
+    "number": "20",
+    "streetName": "Deliklikaya Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-22",
+   "text": "kayseri kocasinan sahabiye mah ahmet pasa cd no 67/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12868768488",
+    "number": "67/A",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-23",
+   "text": "KAYSERI MELIKGAZI ESENYURT MAH KIMYON SK NO 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-folded-24",
+   "text": "KAYSERI KOCASINAN FEVZI CAKMAK MAH SIVAS BULV. NO 81",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317936746",
+    "number": "81",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-25",
+   "text": "kayseri talas bahcelievler mah ataturk bulv. no 26a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938668",
+    "number": "26A",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-26",
+   "text": "kayseri kocasinan sahabiye mah seher sok. no 12a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-folded-27",
+   "text": "kayseri kocasinan gevher nesibe mah tekin sk. no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-folded-28",
+   "text": "KAYSERI KOCASINAN GEVHER NESIBE MAH GUR SK. NO 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-folded-29",
+   "text": "kayseri talas mevlana mah 15 temmuz cd. no 6d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-30",
+   "text": "kayseri kocasinan fevzi cakmak mah billur cad. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-31",
+   "text": "kayseri kocasinan gevher nesibe mah mimar sinan cad. no 15/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n3274533378",
+    "number": "15/A",
+    "streetName": "Mimar Sinan Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-32",
+   "text": "kayseri talas tablakaya mah demirkalac sk no 10/2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9277715643",
+    "number": "10/2",
+    "streetName": "Demirkalaç Sokak"
+   }
+  },
+  {
+   "id": "38-folded-33",
+   "text": "kayseri melikgazi altinoluk mah fatih sultan mehmet blv. no 58",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405745561",
+    "number": "58",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-34",
+   "text": "kayseri melikgazi esenyurt mah kavaklik cd no 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428877479",
+    "number": "15",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-35",
+   "text": "KAYSERI MELIKGAZI GERMIR MAH SIVAS CAD. NO 242",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n2664916051",
+    "number": "242",
+    "streetName": "Sivas Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-36",
+   "text": "kayseri melikgazi becen mah comlekci sk. no 30/5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329101",
+    "number": "30/5",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-folded-37",
+   "text": "kayseri kocasinan mimarsinan mah batman sk no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w252195414",
+    "number": "11",
+    "streetName": "Batman Sokak"
+   }
+  },
+  {
+   "id": "38-folded-38",
+   "text": "kayseri kocasinan sahabiye mah ahmet pasa cd no 73/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145744",
+    "number": "73/A",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-39",
+   "text": "KAYSERI KOCASINAN YENISEHIR MAH IHYA CD NO 73",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412958602",
+    "number": "73",
+    "streetName": "İhya Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-40",
+   "text": "kayseri kocasinan fevzi cakmak mah billur cd no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w865663986",
+    "number": "1",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-41",
+   "text": "KAYSERI TALAS YENIDOGAN MAH MEHMET AKIF ERSOY CD NO 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662862135",
+    "number": "7",
+    "streetName": "Mehmet Akif Ersoy Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-42",
+   "text": "kayseri melikgazi esenyurt mah gediris cd. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874755",
+    "number": "16",
+    "streetName": "Gediris Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-43",
+   "text": "kayseri melikgazi esenyurt mah gediris cd no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874752",
+    "number": "10",
+    "streetName": "Gediris Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-44",
+   "text": "kayseri kocasinan sahabiye mah ahievran cd no 15/e",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n3251816453",
+    "number": "15/E",
+    "streetName": "Ahievran Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-45",
+   "text": "KAYSERI KOCASINAN SAHABIYE MAH SEHER SOK. NO 10/1C",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145708",
+    "number": "10/1C",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-folded-46",
+   "text": "kayseri melikgazi esenyurt mah hatmi sk. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428478020",
+    "number": "14",
+    "streetName": "Hatmi Sokak"
+   }
+  },
+  {
+   "id": "38-folded-47",
+   "text": "kayseri kocasinan fevzi cakmak mah olgun sk. no 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317775860",
+    "number": "25",
+    "streetName": "Olgun Sokak"
+   }
+  },
+  {
+   "id": "38-folded-48",
+   "text": "KAYSERI MELIKGAZI KILICASLAN MAH SIVAS BULV. NO 90",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411746479",
+    "number": "90",
+    "streetName": "Sivas Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-49",
+   "text": "kayseri melikgazi hunat mah nuh naci yazgan cd no 30b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n5215946347",
+    "number": "30B",
+    "streetName": "Nuh Naci Yazgan Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-50",
+   "text": "KAYSERI MELIKGAZI ANAFARTALAR MAH POSTANE SOK. NO 10/D",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14074826662",
+    "number": "10/D",
+    "streetName": "Postane Sokak"
+   }
+  },
+  {
+   "id": "38-folded-51",
+   "text": "kayseri kocasinan yemliha mah halil ozisik cd no 54",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1230250041",
+    "number": "54",
+    "streetName": "Halil Özışık Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-52",
+   "text": "KAYSERI KOCASINAN PLEVNE MAH SERIN SK. NO 10A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938674",
+    "number": "10A",
+    "streetName": "Serin Sokak"
+   }
+  },
+  {
+   "id": "38-folded-53",
+   "text": "kayseri melikgazi kucukburunguz mah agirnas sok. no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w590932856",
+    "number": "1",
+    "streetName": "Ağırnas Sokağı"
+   }
+  },
+  {
+   "id": "38-folded-54",
+   "text": "KAYSERI TALAS MEVLANA MAH 15 TEMMUZ CAD. NO 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14256540165",
+    "number": "18",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-folded-55",
+   "text": "kayseri melikgazi altinoluk mah karlik sk. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738329",
+    "number": "10",
+    "streetName": "Karlık Sokağı"
+   }
+  },
+  {
+   "id": "38-folded-56",
+   "text": "KAYSERI KOCASINAN SAHABIYE MAH SEHER SK NO 12/1D",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145717",
+    "number": "12/1D",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-folded-57",
+   "text": "kayseri talas bahcelievler mah ataturk bulv. no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w534276222",
+    "number": "8",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "38-folded-58",
+   "text": "kayseri melikgazi becen mah comlekci sk no 30/14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329092",
+    "number": "30/14",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-folded-59",
+   "text": "kayseri melikgazi becen mah comlekci sk no 30/13",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329093",
+    "number": "30/13",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-folded-60",
+   "text": "KAYSERI KOCASINAN ERKILET ERTUGRUL GAZI MAH HAKIKAT CD NO 37/C",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12657919601",
+    "number": "37/c",
+    "streetName": "Hakikat Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-1",
+   "text": "Kayseri Melikgazi Becen Mah. Çölmekçi Sokak No:30/10",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329096",
+    "number": "30/10",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-typo-2",
+   "text": "Aşık Veyhel Bulvarı No:67 Yeni Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n5426631463",
+    "number": "67",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-3",
+   "text": "Esenyurt Mah. Gedoris Caddesi 20, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874757",
+    "number": "20",
+    "streetName": "Gediris Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-4",
+   "text": "Kayseri, Talas, Mevlana Mahallesi, Tasak, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w550387937",
+    "number": "5",
+    "streetName": "Taslak"
+   }
+  },
+  {
+   "id": "38-typo-5",
+   "text": "Kayseri Kocasinan Yenipervane Mah. Kocbasinan Bulvarı No:167",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w892216830",
+    "number": "167",
+    "streetName": "Kocasinan Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-6",
+   "text": "Fatih Sultfan Mehmet Bulvarı No:18 Altınoluk Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w534612740",
+    "number": "18",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-7",
+   "text": "Esenyurt Mah. Kahaklık Caddesi 12, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428877480",
+    "number": "12",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-8",
+   "text": "Kayseri, Kocasinan, Sahabiye Mahallesi, Boybar Sokak, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407715925",
+    "number": "9",
+    "streetName": "Boylar Sokak"
+   }
+  },
+  {
+   "id": "38-typo-9",
+   "text": "Kayseri Melikgazi Konaklar Mah. Aavnos Caddesi No:174",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411379674",
+    "number": "174",
+    "streetName": "Avanos Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-10",
+   "text": "Aşık Vrysel Bulvarı No:71 Yeni Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9269344738",
+    "number": "71",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-11",
+   "text": "Esenyurt Mah. Kmiyon Sokak 8, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660121",
+    "number": "8",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-typo-12",
+   "text": "Kayseri, Talas, Mevlana Mahallesi, 15 Temmhuz Caddesi, Kapı No: 12D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14265474435",
+    "number": "12D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-13",
+   "text": "Kayseri Talas Mevlana Mah. 15 Tembuz Caddesi No:14",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13506949001",
+    "number": "14",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-14",
+   "text": "Bapğlar Caddesi No:10/A Küçük Mustafa Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13337305131",
+    "number": "10/A",
+    "streetName": "Bağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-15",
+   "text": "Mimarsinan Mah. Seyraoni Sokak 20, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260668219",
+    "number": "20",
+    "streetName": "Seyrani Sokak"
+   }
+  },
+  {
+   "id": "38-typo-16",
+   "text": "Kayseri, Melikgazi, Altınoluk Mahallesi, Ersöhzlü Sokağı, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738332",
+    "number": "5",
+    "streetName": "Ersözlü Sokağı"
+   }
+  },
+  {
+   "id": "38-typo-17",
+   "text": "Kayseri Develi Camiicedit Mah. Hastayne Caddesi No:10",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10271025711",
+    "number": "10",
+    "streetName": "Hastane Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-18",
+   "text": "Çömlkçi Sokak No:30/12 Becen Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329094",
+    "number": "30/12",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-typo-19",
+   "text": "Mimarsinan Mah. Gerdee Caddesi 16, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256049503",
+    "number": "16",
+    "streetName": "Gerede Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-20",
+   "text": "Kayseri, Melikgazi, Becen Mahallesi, Çlmlekçi Sokak, Kapı No: 30/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329105",
+    "number": "30/1",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-typo-21",
+   "text": "Kayseri Yeşilhisar Cumhuriyet Mah. Istasypn Sk. No:38800",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w521860267",
+    "number": "38800",
+    "streetName": "Istasyon Sk."
+   }
+  },
+  {
+   "id": "38-typo-22",
+   "text": "Köprüül Caddesi No:37 Mimarsinan Mahallesi Kocasinan/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256056385",
+    "number": "37",
+    "streetName": "Köprülü Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-23",
+   "text": "Gesi Mah. Sahffet Arıkan Bedük Caddesi 67, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w879353724",
+    "number": "67",
+    "streetName": "Saffet Arıkan Bedük Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-24",
+   "text": "Kayseri, Melikgazi, Esenyurt Mahallesi, Kaavklık Caddesi, Kapı No: 13",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428478186",
+    "number": "13",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-25",
+   "text": "Kayseri Talas Bahçelievler Mah. Tepebalar Caddesi No:46/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10279425913",
+    "number": "46/A",
+    "streetName": "Tepebağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-26",
+   "text": "Mehmte Akif Ersoy Caddesi No:5 Yenidoğan Mahallesi Talas/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662862134",
+    "number": "5",
+    "streetName": "Mehmet Akif Ersoy Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-27",
+   "text": "Gülük Mah. Kacrakuş Sokak 13/614, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n7725476820",
+    "number": "13/614",
+    "streetName": "Karakuş Sokak"
+   }
+  },
+  {
+   "id": "38-typo-28",
+   "text": "Kayseri, Kocasinan, Alsancak Mahallesi, Yavuz Sutlan Selim Caddesi, Kapı No: 4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13727321901",
+    "number": "4",
+    "streetName": "Yavuz Sultan Selim Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-29",
+   "text": "Kayseri Kocasinan Yeşil Mah. İnveler Çıkmaz Sokağı No:3E",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938678",
+    "number": "3E",
+    "streetName": "İnevler Çıkmaz Sokağı"
+   }
+  },
+  {
+   "id": "38-typo-30",
+   "text": "Osman Kvuncu Bulvarı No:98 Anbar Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260935266",
+    "number": "98",
+    "streetName": "Osman Kavuncu Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-31",
+   "text": "Yeni Mah. Aşık Veystl Bulvarı 71, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411714330",
+    "number": "71",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-32",
+   "text": "Kayseri, Talas, Mevlana Mahallesi, Veaioğlu Caddesi, Kapı No: 31",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w881561408",
+    "number": "31",
+    "streetName": "Velioğlu Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-33",
+   "text": "Kayseri Melikgazi Cumhuriyet Mah. Kmızılay Caddesi No:2/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12025416058",
+    "number": "2/1",
+    "streetName": "Kızılay Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-34",
+   "text": "Dliklitaş Caddesi No:31 Tacettin Veli Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w320797353",
+    "number": "31",
+    "streetName": "Deliklitaş Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-35",
+   "text": "Yenipervane Mah. Kocsinan Bulvarı 161, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12584805158",
+    "number": "161",
+    "streetName": "Kocasinan Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-36",
+   "text": "Kayseri, Talas, Bahçelievler Mahallesi, Aatürk Bulvarı, Kapı No: 68",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662887235",
+    "number": "68",
+    "streetName": "Atatürk Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-37",
+   "text": "Kayseri Melikgazi Tacettin Veli Mah. Taceptin Veli Bulvarı No:28",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259418282",
+    "number": "28",
+    "streetName": "Tacettin Veli Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-38",
+   "text": "Ersöslü Sokağı No:4 Altınoluk Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405738326",
+    "number": "4",
+    "streetName": "Ersözlü Sokağı"
+   }
+  },
+  {
+   "id": "38-typo-39",
+   "text": "Erciyesevler Mah. Şehit Yüzbaşı Levent Çztinkaya 6, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w415298917",
+    "number": "6",
+    "streetName": "Şehit Yüzbaşı Levent Çetinkaya"
+   }
+  },
+  {
+   "id": "38-typo-40",
+   "text": "Kayseri, Melikgazi, Cumhuriyet Mahallesi, Tnnuri Sokak, Kapı No: 13/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938660",
+    "number": "13/1",
+    "streetName": "Tennuri Sokak"
+   }
+  },
+  {
+   "id": "38-typo-41",
+   "text": "Kayseri Melikgazi Yeni Mah. Teknoprk 4B No:58",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411714329",
+    "number": "58",
+    "streetName": "Teknopark 4B"
+   }
+  },
+  {
+   "id": "38-typo-42",
+   "text": "Fatih Sulatn Mehmet Bulvarı No:22/A Altınoluk Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1514721261",
+    "number": "22/A",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-43",
+   "text": "Erkilet Ertuğrul Gazi Mah. Hakikta Caddesi 15, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13260759701",
+    "number": "15",
+    "streetName": "Hakikat Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-44",
+   "text": "Kayseri, Melikgazi, Becen Mahallesi, Çölekçi Sokak, Kapı No: 30/15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329091",
+    "number": "30/15",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-typo-45",
+   "text": "Kayseri Melikgazi Cumhuriyet Mah. Mevlelvi Caddesi No:21",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938664",
+    "number": "21",
+    "streetName": "Mevlevi Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-46",
+   "text": "Geerede Caddesi No:12 Mimarsinan Mahallesi Kocasinan/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256049492",
+    "number": "12",
+    "streetName": "Gerede Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-47",
+   "text": "Düver Mah. Kyaseri Caddesi 44, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w533204320",
+    "number": "44",
+    "streetName": "Kayseri Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-48",
+   "text": "Kayseri, Kocasinan, Erkilet Ertuğrul Gazi Mahallesi, Laepaşa Caddesi, Kapı No: 3/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12740944102",
+    "number": "3/A",
+    "streetName": "Lalepaşa Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-49",
+   "text": "Kayseri Talas Mevlana Mah. Mehmet Timçuin Caddesi No:4A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14206102010",
+    "number": "4A",
+    "streetName": "Mehmet Timuçin Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-50",
+   "text": "Seyyid Burhanettni Bulvarı No:58 Tacettin Veli Mahallesi Melikgazi/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259416923",
+    "number": "58",
+    "streetName": "Seyyid Burhanettin Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-51",
+   "text": "Tanpınar Mah. Şehit Mehmet Erciyfs Caddesi 50, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407115731",
+    "number": "50",
+    "streetName": "Şehit Mehmet Erciyes Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-52",
+   "text": "Kayseri, Melikgazi, Esenyurt Mahallesi, Dumlupınr Caddesi, Kapı No: 23",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428659507",
+    "number": "23",
+    "streetName": "Dumlupınar Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-53",
+   "text": "Kayseri Kocasinan Yakut Mah. Msutafa Kemal Paşa Bulvarı No:103",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1281129965",
+    "number": "103",
+    "streetName": "Mustafa Kemal Paşa Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-54",
+   "text": "Tpebağlar Caddesi No:44/D Bahçelievler Mahallesi Talas/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10279426209",
+    "number": "44/D",
+    "streetName": "Tepebağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-55",
+   "text": "Becen Mah. Çögmlekçi Sokak 30/3, Melikgazi, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w883329103",
+    "number": "30/3",
+    "streetName": "Çömlekçi Sokak"
+   }
+  },
+  {
+   "id": "38-typo-56",
+   "text": "Kayseri, Tomarza, Emiruşağı Mahallesi, Sümnbül Sokağı, Kapı No: 6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n6009432485",
+    "number": "6",
+    "streetName": "Sümbül Sokağı"
+   }
+  },
+  {
+   "id": "38-typo-57",
+   "text": "Kayseri Melikgazi Erenköy Mah. Erenkgöy Caddesi No:44/1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w406662878",
+    "number": "44/1",
+    "streetName": "Erenköy Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-58",
+   "text": "15 Temumz Caddesi No:2B Mevlana Mahallesi Talas/Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14269262038",
+    "number": "2B",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-typo-59",
+   "text": "Sümer Mah. Edkilet Bulvarı 8, Kocasinan, Kayseri",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w867990328",
+    "number": "8",
+    "streetName": "Erkilet Bulvarı"
+   }
+  },
+  {
+   "id": "38-typo-60",
+   "text": "Kayseri, Kocasinan, Mimarsinan Mahallesi, Fzuli Caddesi, Kapı No: 66",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256056395",
+    "number": "66",
+    "streetName": "Fuzuli Caddesi"
+   }
+  },
+  {
+   "id": "38-numbered-1",
+   "text": "Kayseri Kocasinan Kocasinan Mah. 780. Sokak No:29",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260625538",
+    "number": "29",
+    "streetName": "780. Sokak",
+    "streetNumber": 780
+   }
+  },
+  {
+   "id": "38-numbered-2",
+   "text": "12. Cadde No:83/A Yeni Mahallesi Kocasinan/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1278472297",
+    "number": "83/A",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-3",
+   "text": "Kocatepe Mah. 3025. Sokak 35, Melikgazi, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1073882285",
+    "number": "35",
+    "streetName": "3025. Sokak",
+    "streetNumber": 3025
+   }
+  },
+  {
+   "id": "38-numbered-4",
+   "text": "Kayseri, Melikgazi, Osman Kavuncu Mahallesi, 1028. Sokak, Kapı No: 2",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412119356",
+    "number": "2",
+    "streetName": "1028. Sokak",
+    "streetNumber": 1028
+   }
+  },
+  {
+   "id": "38-numbered-5",
+   "text": "Kayseri Kocasinan Yakut Mah. 3841.sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w415795094",
+    "number": "6",
+    "streetName": "3841.sokak",
+    "streetNumber": 3841
+   }
+  },
+  {
+   "id": "38-numbered-6",
+   "text": "12. Cadde No:5/11 Anbar Mahallesi Melikgazi/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938670",
+    "number": "5/11",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-7",
+   "text": "Karpuzsekisi Mah. 8. Sokak 73, Hacılar, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n7905384512",
+    "number": "73",
+    "streetName": "8. Sokak",
+    "streetNumber": 8
+   }
+  },
+  {
+   "id": "38-numbered-8",
+   "text": "Kayseri, Kocasinan, Yeni Mahallesi, 12. Cadde, Kapı No: 94",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405024899",
+    "number": "94",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-9",
+   "text": "Kayseri Talas Tablakaya Mah. 6181. Sokağı No:4A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13112254861",
+    "number": "4A",
+    "streetName": "6181. Sokağı",
+    "streetNumber": 6181
+   }
+  },
+  {
+   "id": "38-numbered-10",
+   "text": "23. Cadde No:60 Mimarsinan Mahallesi Melikgazi/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w737266508",
+    "number": "60",
+    "streetName": "23. Cadde",
+    "streetNumber": 23
+   }
+  },
+  {
+   "id": "38-numbered-11",
+   "text": "Anbar Mah. 16. Cadde 21, Melikgazi, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w255222898",
+    "number": "21",
+    "streetName": "16. Cadde",
+    "streetNumber": 16
+   }
+  },
+  {
+   "id": "38-numbered-12",
+   "text": "Kayseri, İncesu, Subaşı Mahallesi, 1699. Sokak, Kapı No: 115",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1567045799",
+    "number": "115",
+    "streetName": "1699. Sokak",
+    "streetNumber": 1699
+   }
+  },
+  {
+   "id": "38-numbered-13",
+   "text": "Kayseri Kocasinan Talatpaşa Mah. 4007. Sokak No:20",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9174122025",
+    "number": "20",
+    "streetName": "4007. Sokak",
+    "streetNumber": 4007
+   }
+  },
+  {
+   "id": "38-numbered-14",
+   "text": "6105. Cadde No:63D Şeker Mahallesi Kocasinan/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938672",
+    "number": "63D",
+    "streetName": "6105. Cadde",
+    "streetNumber": 6105
+   }
+  },
+  {
+   "id": "38-numbered-15",
+   "text": "Anbar Mah. 12. Cadde 11, Melikgazi, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w885127254",
+    "number": "11",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-16",
+   "text": "Kayseri, Melikgazi, Konaklar Mahallesi, 447. Sokağı, Kapı No: 51",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10844032305",
+    "number": "51",
+    "streetName": "447. Sokağı",
+    "streetNumber": 447
+   }
+  },
+  {
+   "id": "38-numbered-17",
+   "text": "Kayseri Kocasinan Yeni Mah. 5. Cadde No:4/2",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1278486945",
+    "number": "4/2",
+    "streetName": "5. Cadde",
+    "streetNumber": 5
+   }
+  },
+  {
+   "id": "38-numbered-18",
+   "text": "1475. Sokağı No:14/4 Erenköy Mahallesi Melikgazi/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662086199",
+    "number": "14/4",
+    "streetName": "1475. Sokağı",
+    "streetNumber": 1475
+   }
+  },
+  {
+   "id": "38-numbered-19",
+   "text": "Kocasinan Mah. 780. Sokak 29, Kocasinan, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260625538",
+    "number": "29",
+    "streetName": "780. Sokak",
+    "streetNumber": 780
+   }
+  },
+  {
+   "id": "38-numbered-20",
+   "text": "Kayseri, Kocasinan, Yeni Mahallesi, 12. Cadde, Kapı No: 83/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1278472297",
+    "number": "83/A",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-21",
+   "text": "Kayseri Melikgazi Kocatepe Mah. 3025. Sokak No:35",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1073882285",
+    "number": "35",
+    "streetName": "3025. Sokak",
+    "streetNumber": 3025
+   }
+  },
+  {
+   "id": "38-numbered-22",
+   "text": "1028. Sokak No:2 Osman Kavuncu Mahallesi Melikgazi/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412119356",
+    "number": "2",
+    "streetName": "1028. Sokak",
+    "streetNumber": 1028
+   }
+  },
+  {
+   "id": "38-numbered-23",
+   "text": "Yakut Mah. 3841.sokak 6, Kocasinan, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w415795094",
+    "number": "6",
+    "streetName": "3841.sokak",
+    "streetNumber": 3841
+   }
+  },
+  {
+   "id": "38-numbered-24",
+   "text": "Kayseri, Melikgazi, Anbar Mahallesi, 12. Cadde, Kapı No: 5/11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12128938670",
+    "number": "5/11",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-25",
+   "text": "Kayseri Hacılar Karpuzsekisi Mah. 8. Sokak No:73",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n7905384512",
+    "number": "73",
+    "streetName": "8. Sokak",
+    "streetNumber": 8
+   }
+  },
+  {
+   "id": "38-numbered-26",
+   "text": "12. Cadde No:94 Yeni Mahallesi Kocasinan/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405024899",
+    "number": "94",
+    "streetName": "12. Cadde",
+    "streetNumber": 12
+   }
+  },
+  {
+   "id": "38-numbered-27",
+   "text": "Tablakaya Mah. 6181. Sokağı 4A, Talas, Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13112254861",
+    "number": "4A",
+    "streetName": "6181. Sokağı",
+    "streetNumber": 6181
+   }
+  },
+  {
+   "id": "38-numbered-28",
+   "text": "Kayseri, Melikgazi, Mimarsinan Mahallesi, 23. Cadde, Kapı No: 60",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w737266508",
+    "number": "60",
+    "streetName": "23. Cadde",
+    "streetNumber": 23
+   }
+  },
+  {
+   "id": "38-numbered-29",
+   "text": "Kayseri Melikgazi Anbar Mah. 16. Cadde No:21",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w255222898",
+    "number": "21",
+    "streetName": "16. Cadde",
+    "streetNumber": 16
+   }
+  },
+  {
+   "id": "38-numbered-30",
+   "text": "1699. Sokak No:115 Subaşı Mahallesi İncesu/Kayseri",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1567045799",
+    "number": "115",
+    "streetName": "1699. Sokak",
+    "streetNumber": 1699
+   }
+  },
+  {
+   "id": "38-hide-1",
+   "text": "Cumhuriyet Mah. Meydan Küme Evler 1, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w544834870",
+    "number": "1",
+    "streetName": "Meydan Küme Evler",
+    "truth": [
+     35.488177,
+     38.721825
+    ]
+   }
+  },
+  {
+   "id": "38-hide-2",
+   "text": "Altınoluk Mah. Fatih Sultan Mehmet Bulvarı 60, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w405745518",
+    "number": "60",
+    "streetName": "Fatih Sultan Mehmet Bulvarı",
+    "truth": [
+     35.44009,
+     38.697669
+    ]
+   }
+  },
+  {
+   "id": "38-hide-3",
+   "text": "Mimarsinan Mah. Fuzuli Caddesi 64, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256056400",
+    "number": "64",
+    "streetName": "Fuzuli Caddesi",
+    "truth": [
+     35.505362,
+     38.733795
+    ]
+   }
+  },
+  {
+   "id": "38-hide-4",
+   "text": "Gülük Mah. Osman Kavuncu Bulvarı 3/105, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n6947259654",
+    "number": "3/105",
+    "streetName": "Osman Kavuncu Bulvarı",
+    "truth": [
+     35.48143,
+     38.720468
+    ]
+   }
+  },
+  {
+   "id": "38-hide-5",
+   "text": "Cumhuriyet Mah. Kaleönü Caddesi 26, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n4398799891",
+    "number": "26",
+    "streetName": "Kaleönü Caddesi",
+    "truth": [
+     35.487841,
+     38.720643
+    ]
+   }
+  },
+  {
+   "id": "38-hide-6",
+   "text": "Esenyurt Mah. Dumlupınar Caddesi 22, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428659875",
+    "number": "22",
+    "streetName": "Dumlupınar Caddesi",
+    "truth": [
+     35.491568,
+     38.69699
+    ]
+   }
+  },
+  {
+   "id": "38-hide-7",
+   "text": "Esenyurt Mah. Kavaklık Caddesi 2, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428876107",
+    "number": "2",
+    "streetName": "Kavaklık Caddesi",
+    "truth": [
+     35.49354,
+     38.698569
+    ]
+   }
+  },
+  {
+   "id": "38-hide-8",
+   "text": "Yeni Mah. Hülya Caddesi 4, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w388637838",
+    "number": "4",
+    "streetName": "Hülya Caddesi",
+    "truth": [
+     35.484244,
+     38.742299
+    ]
+   }
+  },
+  {
+   "id": "38-hide-9",
+   "text": "Bahçelievler Mah. Atatürk Bulvarı 1, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662593379",
+    "number": "1",
+    "streetName": "Atatürk Bulvarı",
+    "truth": [
+     35.551825,
+     38.690716
+    ]
+   }
+  },
+  {
+   "id": "38-hide-10",
+   "text": "Bahçelievler Mah. Bismil Caddesi 8, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w413689827",
+    "number": "8",
+    "streetName": "Bismil Caddesi",
+    "truth": [
+     35.546296,
+     38.684682
+    ]
+   }
+  },
+  {
+   "id": "38-hide-11",
+   "text": "Gevher Nesibe Mah. İstasyon Caddesi 49, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w254554664",
+    "number": "49",
+    "streetName": "İstasyon Caddesi",
+    "truth": [
+     35.48451,
+     38.72672
+    ]
+   }
+  },
+  {
+   "id": "38-hide-12",
+   "text": "Mevlana Mah. Anayurt Caddesi 21E, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w414225017",
+    "number": "21E",
+    "streetName": "Anayurt Caddesi",
+    "truth": [
+     35.561891,
+     38.704857
+    ]
+   }
+  },
+  {
+   "id": "38-hide-13",
+   "text": "Osman Kavuncu Mah. Osman Kavuncu Bulvarı 169E, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13568297177",
+    "number": "169E",
+    "streetName": "Osman Kavuncu Bulvarı",
+    "truth": [
+     35.452938,
+     38.726822
+    ]
+   }
+  },
+  {
+   "id": "38-hide-14",
+   "text": "Camiicedit Mah. Hastane Caddesi 8, Develi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10271031609",
+    "number": "8",
+    "streetName": "Hastane Caddesi",
+    "truth": [
+     35.487834,
+     38.383518
+    ]
+   }
+  },
+  {
+   "id": "38-hide-15",
+   "text": "Yenipervane Mah. Kocasinan Bulvarı 161, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12529651980",
+    "number": "161",
+    "streetName": "Kocasinan Bulvarı",
+    "truth": [
+     35.494834,
+     38.735271
+    ]
+   }
+  },
+  {
+   "id": "38-hide-16",
+   "text": "Yenipervane Mah. Kocasinan Bulvarı 161, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w403895450",
+    "number": "161",
+    "streetName": "Kocasinan Bulvarı",
+    "truth": [
+     35.494829,
+     38.735324
+    ]
+   }
+  },
+  {
+   "id": "38-hide-17",
+   "text": "Esenyurt Mah. Dumlupınar Caddesi 13, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428479280",
+    "number": "13",
+    "streetName": "Dumlupınar Caddesi",
+    "truth": [
+     35.491755,
+     38.697683
+    ]
+   }
+  },
+  {
+   "id": "38-hide-18",
+   "text": "Emiruşağı Mah. Cumhuriyet Caddesi 30, Tomarza, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n6015184004",
+    "number": "30",
+    "streetName": "Cumhuriyet Caddesi",
+    "truth": [
+     36.095439,
+     38.416327
+    ]
+   }
+  },
+  {
+   "id": "38-hide-19",
+   "text": "Fevzi Çakmak Mah. Çoruh Caddesi 52, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317931281",
+    "number": "52",
+    "streetName": "Çoruh Caddesi",
+    "truth": [
+     35.504346,
+     38.733081
+    ]
+   }
+  },
+  {
+   "id": "38-hide-20",
+   "text": "Sahabiye Mah. Ahmet Paşa Caddesi 65/B, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12993080515",
+    "number": "65/B",
+    "streetName": "Ahmet Paşa Caddesi",
+    "truth": [
+     35.492803,
+     38.727831
+    ]
+   }
+  },
+  {
+   "id": "38-hide-21",
+   "text": "Melikgazi Mah. Sivas Bulvarı 182, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w415287835",
+    "number": "182",
+    "streetName": "Sivas Bulvarı",
+    "truth": [
+     35.525688,
+     38.731917
+    ]
+   }
+  },
+  {
+   "id": "38-hide-22",
+   "text": "Mevlana Mah. Numune Sokağı 14, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662681844",
+    "number": "14",
+    "streetName": "Numune Sokağı",
+    "truth": [
+     35.562263,
+     38.700806
+    ]
+   }
+  },
+  {
+   "id": "38-hide-23",
+   "text": "Yeni Mah. Elbiz Caddesi 16, Develi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n10576645889",
+    "number": "16",
+    "streetName": "Elbiz Caddesi",
+    "truth": [
+     35.489296,
+     38.390118
+    ]
+   }
+  },
+  {
+   "id": "38-hide-24",
+   "text": "Sarımehmetli Mah. Vesile Özilhan Cadddesi 55, Tomarza, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w497404969",
+    "number": "55",
+    "streetName": "Vesile Özilhan Cadddesi",
+    "truth": [
+     35.752902,
+     38.461708
+    ]
+   }
+  },
+  {
+   "id": "38-hide-25",
+   "text": "Sahabiye Mah. Ahmet Paşa Caddesi 69/1A, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145723",
+    "number": "69/1A",
+    "streetName": "Ahmet Paşa Caddesi",
+    "truth": [
+     35.491388,
+     38.728522
+    ]
+   }
+  },
+  {
+   "id": "38-hide-26",
+   "text": "Esenyurt Mah. Gediris Caddesi 18, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428874756",
+    "number": "18",
+    "streetName": "Gediris Caddesi",
+    "truth": [
+     35.4925,
+     38.697054
+    ]
+   }
+  },
+  {
+   "id": "38-hide-27",
+   "text": "Mevlana Mah. Rüzgar Denizi Sokak 2, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w576569485",
+    "number": "2",
+    "streetName": "Rüzgar Denizi Sokak",
+    "truth": [
+     35.552149,
+     38.7144
+    ]
+   }
+  },
+  {
+   "id": "38-hide-28",
+   "text": "Altınoluk Mah. Neslihan Sokağı 8C, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13834000284",
+    "number": "8C",
+    "streetName": "Neslihan Sokağı",
+    "truth": [
+     35.439021,
+     38.696288
+    ]
+   }
+  },
+  {
+   "id": "38-hide-29",
+   "text": "Vali İhsan Aras Mah. İmam Hatip Sokak 18, İncesu, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w589380773",
+    "number": "18",
+    "streetName": "İmam Hatip Sokak",
+    "truth": [
+     35.1803,
+     38.621318
+    ]
+   }
+  },
+  {
+   "id": "38-hide-30",
+   "text": "Mustafa Asım Köksal Mah. Aşık Seyrani Caddesi 178, Develi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w396597789",
+    "number": "178",
+    "streetName": "Aşık Seyrani Caddesi",
+    "truth": [
+     35.49024,
+     38.40809
+    ]
+   }
+  },
+  {
+   "id": "38-hide-31",
+   "text": "Mevlana Mah. 15 Temmuz Caddesi 11/A, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13506981101",
+    "number": "11/A",
+    "streetName": "15 Temmuz Caddesi",
+    "truth": [
+     35.552968,
+     38.710612
+    ]
+   }
+  },
+  {
+   "id": "38-hide-32",
+   "text": "Altınoluk Mah. Veysel Caddesi 1, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1514726281",
+    "number": "1",
+    "streetName": "Veysel Caddesi",
+    "truth": [
+     35.442065,
+     38.699768
+    ]
+   }
+  },
+  {
+   "id": "38-hide-33",
+   "text": "Emiruşağı Mah. Sümbül Sokağı 2, Tomarza, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n6009402100",
+    "number": "2",
+    "streetName": "Sümbül Sokağı",
+    "truth": [
+     36.092701,
+     38.421231
+    ]
+   }
+  },
+  {
+   "id": "38-hide-34",
+   "text": "Mevlana Mah. Mehmet Timuçin 17, Talas, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662895061",
+    "number": "17",
+    "streetName": "Mehmet Timuçin",
+    "truth": [
+     35.559202,
+     38.708799
+    ]
+   }
+  },
+  {
+   "id": "38-hide-35",
+   "text": "Esenyurt Mah. Kavaklık Caddesi 9, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428876104",
+    "number": "9",
+    "streetName": "Kavaklık Caddesi",
+    "truth": [
+     35.492582,
+     38.698123
+    ]
+   }
+  },
+  {
+   "id": "38-hide-36",
+   "text": "Selimiye Mah. Ihlara Sokağı 9, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412013356",
+    "number": "9",
+    "streetName": "Ihlara Sokağı",
+    "truth": [
+     35.399164,
+     38.745183
+    ]
+   }
+  },
+  {
+   "id": "38-hide-37",
+   "text": "Melikgazi Mah. Sevgi Sokak 3, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259415536",
+    "number": "3",
+    "streetName": "Sevgi Sokak",
+    "truth": [
+     35.52602,
+     38.73117
+    ]
+   }
+  },
+  {
+   "id": "38-hide-38",
+   "text": "Esenyurt Mah. Kavaklık Caddesi 1, Melikgazi, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w410942193",
+    "number": "1",
+    "streetName": "Kavaklık Caddesi",
+    "truth": [
+     35.493637,
+     38.698292
+    ]
+   }
+  },
+  {
+   "id": "38-hide-39",
+   "text": "Sahabiye Mah. Seher Sokak 16/B, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145743",
+    "number": "16/B",
+    "streetName": "Seher Sokak",
+    "truth": [
+     35.490182,
+     38.72883
+    ]
+   }
+  },
+  {
+   "id": "38-hide-40",
+   "text": "Mimarsinan Mah. Gökçay Sokak 1, Kocasinan, Kayseri",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256051701",
+    "number": "1",
+    "streetName": "Gökçay Sokak",
+    "truth": [
+     35.507784,
+     38.73402
+    ]
+   }
+  },
+  {
+   "id": "38-lang-1",
+   "text": "Esenyurt, 4 Kimyon Street floor 8 apartment 6, Melikgazi/Kayseri",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-lang-2",
+   "text": "Melikgazi, Esenyurt Ortsteil, Kimyon Gasse Nummer 4, 38919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-lang-3",
+   "text": "кайсери меликгази, ул. кимйон д. 4",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-lang-4",
+   "text": "Οδός Kimyon αρ. 4 όροφος 2 διαμέρισμα 2, καϊσερι μελικγκαζι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-lang-5",
+   "text": "Esenyurt، شارع Kimyon رقم 4،  Melikgazi",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660119",
+    "number": "4",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-lang-6",
+   "text": "Seher St 12A, Kayseri Kocasinan, 38408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-lang-7",
+   "text": "KOCASİNAN/KAYSERİ SAHABİYE ORTSTEİL SEHER GASSE NR. 12A",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-lang-8",
+   "text": "сахабийе, ул. сехер дом 12A, кайсери коджасинан",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-lang-9",
+   "text": "Οδός Seher αρ. 12A, κοτζασιναν/καϊσερι",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-lang-10",
+   "text": "Kocasinan Kayseri, شارع Seher رقم 12A, 38334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145711",
+    "number": "12A",
+    "streetName": "Seher Sokak"
+   }
+  },
+  {
+   "id": "38-lang-11",
+   "text": "Gevher Nesibe Neighbourhood, 22 Tekin Street floor 2 apartment 6, Kocasinan/Kayseri, 38715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-lang-12",
+   "text": "Kayseri Kocasinan Tekin Str. Nummer 22 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-lang-13",
+   "text": "микрорайон гевхер несибе, улица текин 22, коджасинан/кайсери",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-lang-14",
+   "text": "Kayseri Kocasinan γειτονιά Gevher Nesibe Οδ. τεκιν 22 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-lang-15",
+   "text": "زقاق Tekin رقم 22، Kocasinan Kayseri، 38988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "w407203669",
+    "number": "22",
+    "streetName": "Tekin Sokak"
+   }
+  },
+  {
+   "id": "38-lang-16",
+   "text": "Kayseri Kocasinan Gevher Nesibe Neighbourhood 10 Gür St",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-lang-17",
+   "text": "Gevher Nesibe, Gür Str. Nummer 10, Kocasinan ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-lang-18",
+   "text": "кайсери коджасинан, микрорайон гевхер несибе, ул. гюр д. 10 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΓΚΕΒΧΕΡ ΝΕΣΙΜΠΕ, ΟΔΌΣ GÜR ΑΡΙΘΜΌΣ 10, ΚΑΪΣΕΡΙ KOCASINAN",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-lang-20",
+   "text": "حي Gevher Nesibe, شارع Gür رقم 10,  Kocasinan",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "n12588141046",
+    "number": "10",
+    "streetName": "Gür Sokak"
+   }
+  },
+  {
+   "id": "38-lang-21",
+   "text": "Mevlana, 15 Temmuz Ave no 6D, Kayseri Talas",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-22",
+   "text": "Mevlana Ortsteil, 15 Temmuz Straße Nr. 6D, Kayseri Talas, 38152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-23",
+   "text": "талас/кайсери, микрорайон мевлана, пр. 15 теммуз д. 6D",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-24",
+   "text": "Mevlana, Λεωφ. 15 τεμμουζ 6D, ταλας Kayseri",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-25",
+   "text": "Mevlana، جادة 15 Temmuz رقم 6D،  Talas",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "n14262286284",
+    "number": "6D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-26",
+   "text": "Fevzi Çakmak Neighbourhood, Billur Street number 2, Kocasinan/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-27",
+   "text": "Kocasinan, Fevzi Cakmak Ortsteil, Billur Straße 2",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-28",
+   "text": "коджасинан, проспект биллур д. 2 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-29",
+   "text": "Kayseri κοτζασιναν Λεωφόρος μπιλλουρ αριθμός 2",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-lang-30",
+   "text": "حي Fevzi Çakmak، جادة Billur رقم 2، Kayseri Kocasinan",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "38",
+    "osm": "w318205560",
+    "number": "2",
+    "streetName": "Billur Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-1",
+   "text": "Çoruh Caddesi 54 Fevzi Çakmak",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w317931313",
+    "number": "54",
+    "streetName": "Çoruh Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-2",
+   "text": "Altınoluk mah Fatih Sultan Mehmet Bulvarı no:18 d:3 kat:2 Melikgazi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w534612740",
+    "number": "18",
+    "streetName": "Fatih Sultan Mehmet Bulvarı"
+   }
+  },
+  {
+   "id": "38-hard-3",
+   "text": "Melikgazi Kavaklık Caddesi no12",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428877480",
+    "number": "12",
+    "streetName": "Kavaklık Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-4",
+   "text": "9 Boylar Sokak Sahabiye Kocasinan",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w407715925",
+    "number": "9",
+    "streetName": "Boylar Sokak"
+   }
+  },
+  {
+   "id": "38-hard-5",
+   "text": "KONAKLAR AVANOS CADDESI 174",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w411379674",
+    "number": "174",
+    "streetName": "Avanos Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-6",
+   "text": "Melikgazi Aşık Veysel Bulvarı apartmanı 71 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n9269344738",
+    "number": "71",
+    "streetName": "Aşık Veysel Bulvarı"
+   }
+  },
+  {
+   "id": "38-hard-7",
+   "text": "Esenyurt mahallesi Kimyon Sokak 8 nolu bina Melikgazi/Kayseri",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w428660121",
+    "number": "8",
+    "streetName": "Kimyon Sokak"
+   }
+  },
+  {
+   "id": "38-hard-8",
+   "text": "Ahmet Paşa 69/1C Sahabiye Kocasinan",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n12869145725",
+    "number": "69/1C",
+    "streetName": "Ahmet Paşa Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-9",
+   "text": "Mevana mah 15 Temmuz Caddesi 12D Talas",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n14265474435",
+    "number": "12D",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-10",
+   "text": "15 Temmuz Caddesi 14 Mevlana mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13506949001",
+    "number": "14",
+    "streetName": "15 Temmuz Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-11",
+   "text": "Melikgazi Küçük Mustafa Bağlar Caddesi 10/A, 34248",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n13337305131",
+    "number": "10/A",
+    "streetName": "Bağlar Caddesi"
+   }
+  },
+  {
+   "id": "38-hard-12",
+   "text": "Kayseri Melikgazi Seyrani Sokak 20 Mimarsinan",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260668219",
+    "number": "20",
+    "streetName": "Seyrani Sokak"
+   }
+  },
+  {
+   "id": "38-poi-1",
+   "text": "Feyyaz Mercan İlkokulu Hacılar Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1058304672",
+    "kind": "school",
+    "streetName": "Feyyaz Mercan İlkokulu"
+   }
+  },
+  {
+   "id": "38-poi-2",
+   "text": "Mehmet Ali Bakkaloğlu İlkokulu Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1054178208",
+    "kind": "school",
+    "streetName": "Mehmet Ali Bakkaloğlu İlkokulu"
+   }
+  },
+  {
+   "id": "38-poi-3",
+   "text": "Kocasinan İnovasyon Merkezi Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "n11941584869",
+    "kind": "townhall",
+    "streetName": "Kocasinan İnovasyon Merkezi"
+   }
+  },
+  {
+   "id": "38-poi-4",
+   "text": "İstikbal Lisesi Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w892707071",
+    "kind": "school",
+    "streetName": "İstikbal Lisesi"
+   }
+  },
+  {
+   "id": "38-poi-5",
+   "text": "Demir Karamancı Anadolu Lisesi Melikgazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260592328",
+    "kind": "school",
+    "streetName": "Demir Karamancı Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "38-poi-6",
+   "text": "Osman Hilmi Kalpaklıoğlu İlköğretim Okulu Talas Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w413689828",
+    "kind": "school",
+    "streetName": "Osman Hilmi Kalpaklıoğlu İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "38-poi-7",
+   "text": "Ibni Sina Hastanesi Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259413468",
+    "kind": "hospital",
+    "streetName": "Ibni Sina Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-8",
+   "text": "Ülfet Kızıklı İlköğretim Okulu Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w410302110",
+    "kind": "school",
+    "streetName": "Ülfet Kızıklı İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "38-poi-9",
+   "text": "Çocuk Hematoloji-Onkoloji ve Kemik İliği Nakli Hastanesi Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1058304647",
+    "kind": "hospital",
+    "streetName": "Çocuk Hematoloji-Onkoloji ve Kemik İliği Nakli Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-10",
+   "text": "Sadiye Nuhoğlu İlköğretim Okulu Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412798664",
+    "kind": "school",
+    "streetName": "Sadiye Nuhoğlu İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "38-poi-11",
+   "text": "Sema Yazar Anadolu Lisesi Melikgazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w406000279",
+    "kind": "school",
+    "streetName": "Sema Yazar Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "38-poi-12",
+   "text": "Tacettin Veli Kız Anadolu İHL Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1054369804",
+    "kind": "school",
+    "streetName": "Tacettin Veli Kız Anadolu İHL"
+   }
+  },
+  {
+   "id": "38-poi-13",
+   "text": "Şehit Piyade Astsubay Serkan Ciddioğlu İlköğretim Okulu Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w260726676",
+    "kind": "school",
+    "streetName": "Şehit Piyade Astsubay Serkan Ciddioğlu İlköğretim Okulu"
+   }
+  },
+  {
+   "id": "38-poi-14",
+   "text": "bunyan devlet hastanesi bunyan kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1369100585",
+    "kind": "hospital",
+    "streetName": "Bünyan Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-15",
+   "text": "maya goz hastanesi melikgazi kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w544840104",
+    "kind": "hospital",
+    "streetName": "Maya Göz Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-16",
+   "text": "optimall avm melikgazi kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w523281820",
+    "kind": "mall",
+    "streetName": "Optimall AVM"
+   }
+  },
+  {
+   "id": "38-poi-17",
+   "text": "Kaysermall Outlet Melikgazi Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w1005562956",
+    "kind": "mall",
+    "streetName": "Kaysermall Outlet"
+   }
+  },
+  {
+   "id": "38-poi-18",
+   "text": "emel mehmet tarman cocuk hastane kocasinan kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w957840102",
+    "kind": "hospital",
+    "streetName": "Emel Mehmet Tarman Çocuk Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-19",
+   "text": "Erciyes Kartal hastane Melikgazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259900116",
+    "kind": "hospital",
+    "streetName": "Erciyes Kartal Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-20",
+   "text": "Hacı Osman Çilsal Toplum Sağlığı Merkezi İncesu Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w876134009",
+    "kind": "hospital",
+    "streetName": "Hacı Osman Çilsal Toplum Sağlığı Merkezi"
+   }
+  },
+  {
+   "id": "38-poi-21",
+   "text": "Acıbadem hastane Melikgazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w259352268",
+    "kind": "hospital",
+    "streetName": "Acıbadem Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-22",
+   "text": "Yeşilhisar Devlet Hastanesi Yeşilhisar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w847962561",
+    "kind": "hospital",
+    "streetName": "Yeşilhisar Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "38-poi-23",
+   "text": "Memorial Hastanesi Kayseri Kocasinan Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w256941501",
+    "kind": "hospital",
+    "streetName": "Memorial Hastanesi Kayseri"
+   }
+  },
+  {
+   "id": "38-poi-24",
+   "text": "adam avm melikgazi kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w534266449",
+    "kind": "mall",
+    "streetName": "Adam avm"
+   }
+  },
+  {
+   "id": "38-poi-25",
+   "text": "mix melikgazi kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w896147224",
+    "kind": "mall",
+    "streetName": "Mix"
+   }
+  },
+  {
+   "id": "38-poi-26",
+   "text": "kumsmall factory alisveris merkezi kocasinan kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w741017282",
+    "kind": "mall",
+    "streetName": "Kumsmall Factory Alışveriş Merkezi"
+   }
+  },
+  {
+   "id": "38-poi-27",
+   "text": "İncesu Belediyesi İncesu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w168713701",
+    "kind": "townhall",
+    "streetName": "İncesu Belediyesi"
+   }
+  },
+  {
+   "id": "38-poi-28",
+   "text": "Erkilet Belediyesi Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w412518923",
+    "kind": "townhall",
+    "streetName": "Erkilet Belediyesi"
+   }
+  },
+  {
+   "id": "38-poi-29",
+   "text": "Kayseri Büyükşehir Belediyesi Kocasinan",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w489359482",
+    "kind": "townhall",
+    "streetName": "Kayseri Büyükşehir Belediyesi"
+   }
+  },
+  {
+   "id": "38-poi-30",
+   "text": "Kocasinan Belediyesi Kocasinan Kayseri",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w406605682",
+    "kind": "townhall",
+    "streetName": "Kocasinan Belediyesi"
+   }
+  },
+  {
+   "id": "38-poi-31",
+   "text": "melikgazi belediye binasi melikgazi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w662158567",
+    "kind": "townhall",
+    "streetName": "Melikgazi Belediyesi"
+   }
+  },
+  {
+   "id": "38-poi-33",
+   "text": "hacilar belediye binasi hacilar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "38",
+    "osm": "w531772343",
+    "kind": "townhall",
+    "streetName": "Hacılar Belediyesi"
+   }
+  }
+ ]
+}

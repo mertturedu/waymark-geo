@@ -1,0 +1,4632 @@
+{
+ "version": 1,
+ "plate": "20",
+ "queries": [
+  {
+   "id": "20-full-1",
+   "text": "Denizli Merkezefendi Mehmet Akif Ersoy Mah. Albayrak Bulvarı No:12A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3792383012",
+    "number": "12A",
+    "streetName": "Albayrak Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-2",
+   "text": "Orhan Gazi Caddesi No:7 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376517992",
+    "number": "7",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-3",
+   "text": "Merkezefendi Mah. 29 Ekim Bulvarı 60/B, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3791828482",
+    "number": "60/B",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-4",
+   "text": "Denizli, Honaz, Afşinbey Mahallesi, Yurtlar Sokağı, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w704744213",
+    "number": "22",
+    "streetName": "Yurtlar Sokağı"
+   }
+  },
+  {
+   "id": "20-full-5",
+   "text": "Denizli Merkezefendi Bereketler Mah. Mareşal Çakmak Caddesi No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906856",
+    "number": "11",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-6",
+   "text": "Barbaros Bulvarı No:108 Kervansaray Mahallesi Pamukkale/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w377604104",
+    "number": "108",
+    "streetName": "Barbaros Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-7",
+   "text": "Yazır Mah. Fatih 15, Acıpayam, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9252433873",
+    "number": "15",
+    "streetName": "Fatih"
+   }
+  },
+  {
+   "id": "20-full-8",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, Kazım Karabekir Caddesi, Kapı No: 35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376516395",
+    "number": "35",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-full-9",
+   "text": "Denizli Merkezefendi Adalet Mah. Vatan Caddesi No:22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887850",
+    "number": "22",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-10",
+   "text": "Tuna Caddesi No:34/A Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12631379838",
+    "number": "34/A",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "20-full-11",
+   "text": "Adalet Mah. Hasan Gönüllü Bulvarı 50, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374931736",
+    "number": "50",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-12",
+   "text": "Denizli, Merkezefendi, Merkezefendi Mahallesi, 29 Ekim Bulvarı, Kapı No: 62",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375840890",
+    "number": "62",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-13",
+   "text": "Denizli Pamukkale Fesleğen Mah. Kıbrıs Şehitleri Caddesi No:53/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597168505",
+    "number": "53/B",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "20-full-14",
+   "text": "Vatan Caddesi No:12 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375278744",
+    "number": "12",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-15",
+   "text": "Saraylar Mah. İzmir Asfaltı 123, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7472251637",
+    "number": "123",
+    "streetName": "İzmir Asfaltı"
+   }
+  },
+  {
+   "id": "20-full-16",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, Orhan Gazi Caddesi, Kapı No: 25",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399329",
+    "number": "25",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-17",
+   "text": "Denizli Merkezefendi Adalet Mah. Yunus Emre Caddesi No:16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1455952364",
+    "number": "16",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-full-18",
+   "text": "İnönü Caddesi No:33B 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373571873",
+    "number": "33B",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-19",
+   "text": "Şemikler Mah. Osman Gazi Caddesi 45, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372836040",
+    "number": "45",
+    "streetName": "Osman Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-20",
+   "text": "Denizli, Merkezefendi, Bahçelievler Mahallesi, Uğur Mumcu Caddesi, Kapı No: 19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416799",
+    "number": "19",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-21",
+   "text": "Denizli Merkezefendi Bereketler Mah. Mareşal Çakmak Caddesi No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906855",
+    "number": "9",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-22",
+   "text": "Vatan Caddesi No:24 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887849",
+    "number": "24",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-23",
+   "text": "Adalet Mah. Vatan Caddesi 3, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375038305",
+    "number": "3",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-24",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, Mevlana Caddesi, Kapı No: 4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395117",
+    "number": "4",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "20-full-25",
+   "text": "Denizli Merkezefendi Adalet Mah. Hasan Gönüllü Bulvarı No:64",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374250716",
+    "number": "64",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-26",
+   "text": "Vatan Caddesi No:21 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375888522",
+    "number": "21",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-27",
+   "text": "Saraylar Mah. 2. Ticari Yol 33, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6840324983",
+    "number": "33",
+    "streetName": "2. Ticari Yol"
+   }
+  },
+  {
+   "id": "20-full-28",
+   "text": "Denizli, Pamukkale, Zeytinköy Mahallesi, Yıldırım Beyazıt Caddesi, Kapı No: 42",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w911112343",
+    "number": "42",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "20-full-29",
+   "text": "Denizli Merkezefendi Yenişehir Mah. Şehit Piyade Çavuş Tuncay Özçoban Caddesi No:10/105",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9523524336",
+    "number": "10/105",
+    "streetName": "Şehit Piyade Çavuş Tuncay Özçoban Caddesi"
+   }
+  },
+  {
+   "id": "20-full-30",
+   "text": "Vatan Caddesi No:20 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887851",
+    "number": "20",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-31",
+   "text": "Merkezefendi Mah. 29 Ekim Bulvarı 60, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375840889",
+    "number": "60",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-32",
+   "text": "Denizli, Merkezefendi, Sümer Mahallesi, İzmir Bulvarı, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373796615",
+    "number": "18",
+    "streetName": "İzmir Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-33",
+   "text": "Denizli Merkezefendi 1200 Evler Mah. İnönü Caddesi No:17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574036",
+    "number": "17",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-34",
+   "text": "Orhan Gazi Caddesi No:27 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399330",
+    "number": "27",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-35",
+   "text": "Adalet Mah. Tuna Caddesi 27/A, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12399609564",
+    "number": "27/A",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "20-full-36",
+   "text": "Denizli, Merkezefendi, Sümer Mahallesi, Çal Caddesi, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w752327166",
+    "number": "18",
+    "streetName": "Çal Caddesi"
+   }
+  },
+  {
+   "id": "20-full-37",
+   "text": "Denizli Merkezefendi 1200 Evler Mah. İnönü Caddesi No:35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474232",
+    "number": "35",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-38",
+   "text": "Atatürk Caddesi No:2F 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474248",
+    "number": "2F",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-full-39",
+   "text": "Karataş Mah. Karataş Sokak 86, Pamukkale, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1064006688",
+    "number": "86",
+    "streetName": "Karataş Sokak"
+   }
+  },
+  {
+   "id": "20-full-40",
+   "text": "Denizli, Pamukkale, Korucuk Mahallesi, Pamukkale Bulvarı, Kapı No: 116",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w521294742",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-41",
+   "text": "Denizli Merkezefendi Bahçelievler Mah. Uğur Mumcu Caddesi No:25B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416794",
+    "number": "25B",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-42",
+   "text": "Uğur Mumcu Caddesi No:17 Bahçelievler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416800",
+    "number": "17",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-43",
+   "text": "Yenişehir Mah. Şehit Piyade Çavuş Tuncay Özçoban Caddesi 10, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1033732132",
+    "number": "10",
+    "streetName": "Şehit Piyade Çavuş Tuncay Özçoban Caddesi"
+   }
+  },
+  {
+   "id": "20-full-44",
+   "text": "Denizli, Çivril, Akpınar Mahallesi, Çamlık Caddesi, Kapı No: 29-F",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634842",
+    "number": "29-F",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-full-45",
+   "text": "Denizli Pamukkale Korucuk Mah. ırlıganlı cad. No:28",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w815716946",
+    "number": "28",
+    "streetName": "ırlıganlı cad."
+   }
+  },
+  {
+   "id": "20-full-46",
+   "text": "Hastane Caddesi No:3 Sırakapılar Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9157589269",
+    "number": "3",
+    "streetName": "Hastane Caddesi"
+   }
+  },
+  {
+   "id": "20-full-47",
+   "text": "Altıntop Mah. Lise Caddesi 4, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4331526334",
+    "number": "4",
+    "streetName": "Lise Caddesi"
+   }
+  },
+  {
+   "id": "20-full-48",
+   "text": "Denizli, Pamukkale, Fesleğen Mahallesi, Kıbrıs Şehitleri Caddesi, Kapı No: 34A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597160905",
+    "number": "34A",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "20-full-49",
+   "text": "Denizli Merkezefendi Bereketler Mah. Gaziler Caddesi No:43",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372973689",
+    "number": "43",
+    "streetName": "Gaziler Caddesi"
+   }
+  },
+  {
+   "id": "20-full-50",
+   "text": "Ahmet Nuri Erikoğlu Caddesi No:29 Bozburun Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w827910154",
+    "number": "29",
+    "streetName": "Ahmet Nuri Erikoğlu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-51",
+   "text": "Adalet Mah. Vatan Caddesi 40, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887844",
+    "number": "40",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-52",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, İnönü Caddesi, Kapı No: 31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373571875",
+    "number": "31",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-53",
+   "text": "Denizli Çivril Akpınar Mah. Çamlık Caddesi No:29-B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634844",
+    "number": "29-B",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-full-54",
+   "text": "Menderes Bulvarı No:185 Kayalar Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w518858870",
+    "number": "185",
+    "streetName": "Menderes Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-55",
+   "text": "Orta Mah. Hükümet Caddesi 90, Tavas, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4699020280",
+    "number": "90",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "20-full-56",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, Atatürk Caddesi, Kapı No: 2B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474243",
+    "number": "2B",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-full-57",
+   "text": "Denizli Merkezefendi Şemikler Mah. Cinkaya Bulvarı No:104",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1055344383",
+    "number": "104",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-58",
+   "text": "Uğur Mumcu Caddesi No:23C Bahçelievler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416795",
+    "number": "23C",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-59",
+   "text": "Adalet Mah. Vatan Caddesi 16, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375278745",
+    "number": "16",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-full-60",
+   "text": "Denizli, Merkezefendi, Bereketler Mahallesi, Mareşal Çakmak Caddesi, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906860",
+    "number": "18",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-61",
+   "text": "Denizli Pamukkale Kuşpınar Mah. Lise-1 Caddesi No:17/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9680506253",
+    "number": "17/A",
+    "streetName": "Lise-1 Caddesi"
+   }
+  },
+  {
+   "id": "20-full-62",
+   "text": "Atatürk Caddesi No:14 Pamukkale Mahallesi Pamukkale/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n5993312089",
+    "number": "14",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-full-63",
+   "text": "Bereketler Mah. Mareşal Çakmak Caddesi 19, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906859",
+    "number": "19",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-64",
+   "text": "Denizli, Merkezefendi, Bahçelievler Mahallesi, Uğur Mumcu Caddesi, Kapı No: 15",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416801",
+    "number": "15",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-65",
+   "text": "Denizli Merkezefendi Şemikler Mah. Cinkaya Bulvarı No:24",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067505",
+    "number": "24",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-66",
+   "text": "Doğan Demircioğlu Caddesi No:2 Mehmetçik Mahallesi Pamukkale/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n5911717546",
+    "number": "2",
+    "streetName": "Doğan Demircioğlu Caddesi"
+   }
+  },
+  {
+   "id": "20-full-67",
+   "text": "1200 Evler Mah. İnönü Caddesi 11, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574038",
+    "number": "11",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-68",
+   "text": "Denizli, Merkezefendi, Bahçelievler Mahallesi, 29 Ekim Bulvarı, Kapı No: 221",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9285169621",
+    "number": "221",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-69",
+   "text": "Denizli Merkezefendi Göveçlik Mah. Hürriyet Caddesi No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13807050501",
+    "number": "19",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-full-70",
+   "text": "Acıpayam Bulvarı No:9 Zeytinköy Mahallesi Pamukkale/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374047539",
+    "number": "9",
+    "streetName": "Acıpayam Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-71",
+   "text": "Zeytinköy Mah. Barbaros Bulvarı 69, Pamukkale, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12985533063",
+    "number": "69",
+    "streetName": "Barbaros Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-72",
+   "text": "Denizli, Pamukkale, Pamukkale Mahallesi, Çay Sokak, Kapı No: 7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w624092317",
+    "number": "7",
+    "streetName": "Çay Sokak"
+   }
+  },
+  {
+   "id": "20-full-73",
+   "text": "Denizli Merkezefendi Saraylar Mah. Cumhuriyet Caddesi No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7947409596",
+    "number": "19",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-full-74",
+   "text": "İncilipınar Caddesi No:98 Mehmetçik Mahallesi Pamukkale/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3787622380",
+    "number": "98",
+    "streetName": "İncilipınar Caddesi"
+   }
+  },
+  {
+   "id": "20-full-75",
+   "text": "Adalet Mah. Kazım Karabekir Caddesi 39, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374424147",
+    "number": "39",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-full-76",
+   "text": "Denizli, Merkezefendi, Servergazi Mahallesi, Fatih Sultan Mehmet Caddesi, Kapı No: 14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375082971",
+    "number": "14",
+    "streetName": "Fatih Sultan Mehmet Caddesi"
+   }
+  },
+  {
+   "id": "20-full-77",
+   "text": "Denizli Acıpayam Yeşilyuva Mah. Cumhuriyet Caddesi No:71",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4699022889",
+    "number": "71",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-full-78",
+   "text": "29 Ekim Bulvarı No:156 Mehmet Akif Ersoy Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374945259",
+    "number": "156",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-79",
+   "text": "Kayıhan Mah. Fevzi Çakmak Caddesi 10/A, Pamukkale, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n8917434712",
+    "number": "10/A",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-80",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, Atatürk Caddesi, Kapı No: 2C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474244",
+    "number": "2C",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-full-81",
+   "text": "Denizli Merkezefendi Adalet Mah. Kazım Karabekir Caddesi No:61",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395108",
+    "number": "61",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-full-82",
+   "text": "Atatürk Caddesi No:2E 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474246",
+    "number": "2E",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-full-83",
+   "text": "Adalet Mah. Mevlana Caddesi 6, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395116",
+    "number": "6",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "20-full-84",
+   "text": "Denizli, Pamukkale, Yunusemre Mahallesi, Süleyman Demirel Caddesi, Kapı No: 50/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10570828382",
+    "number": "50/A",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-full-85",
+   "text": "Denizli Çivril Akpınar Mah. Çamlık Caddesi No:29-D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634840",
+    "number": "29-D",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-full-86",
+   "text": "İzmir Bulvarı No:177 Saraylar Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4686944324",
+    "number": "177",
+    "streetName": "İzmir Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-87",
+   "text": "Sümer Mah. İzmir Asfaltı 1, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4686944384",
+    "number": "1",
+    "streetName": "İzmir Asfaltı"
+   }
+  },
+  {
+   "id": "20-full-88",
+   "text": "Denizli, Pamukkale, Yunusemre Mahallesi, Yunus Emre Caddesi, Kapı No: 45",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1132210187",
+    "number": "45",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-full-89",
+   "text": "Denizli Pamukkale Yunusemre Mah. Yunus Emre Caddesi No:47/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10978863873",
+    "number": "47/A",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-full-90",
+   "text": "Orhan Gazi Caddesi No:11 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376517994",
+    "number": "11",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-91",
+   "text": "Gültepe Mah. Cinkaya Bulvarı 161/2, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13711210289",
+    "number": "161/2",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-92",
+   "text": "Denizli, Pamukkale, Kınıklı Mahallesi, Çamlık Bulvarı, Kapı No: 30",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371187262",
+    "number": "30",
+    "streetName": "Çamlık Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-93",
+   "text": "Denizli Pamukkale Zeytinköy Mah. Acıpayam Bulvarı No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374047538",
+    "number": "7",
+    "streetName": "Acıpayam Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-94",
+   "text": "İnönü Caddesi No:33A 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373571874",
+    "number": "33A",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-95",
+   "text": "Adalet Mah. Tuna Caddesi 38, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12631379837",
+    "number": "38",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "20-full-96",
+   "text": "Denizli, Merkezefendi, Bereketler Mahallesi, Mareşal Çakmak Caddesi, Kapı No: 13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906857",
+    "number": "13",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-full-97",
+   "text": "Denizli Pamukkale Yunusemre Mah. Bursa Caddesi No:127",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13452720801",
+    "number": "127",
+    "streetName": "Bursa Caddesi"
+   }
+  },
+  {
+   "id": "20-full-98",
+   "text": "İnönü Caddesi No:43 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574026",
+    "number": "43",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-99",
+   "text": "1200 Evler Mah. İnönü Caddesi 39, Merkezefendi, Denizli",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574025",
+    "number": "39",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-full-100",
+   "text": "Denizli, Merkezefendi, Gültepe Mahallesi, Osman Gazi Caddesi, Kapı No: 31",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372841062",
+    "number": "31",
+    "streetName": "Osman Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-full-101",
+   "text": "Denizli Merkezefendi Hacıeyüplü Mah. Menderes Bulvarı No:22",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "20",
+    "osm": "w1042204315",
+    "number": "22",
+    "streetName": "Menderes Bulvarı"
+   }
+  },
+  {
+   "id": "20-full-102",
+   "text": "Denizli Merkezefendi Selçuk Bey Mah. 557. Sokak No:3B",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "20",
+    "osm": "w375227648",
+    "number": "3B",
+    "streetName": "557. Sokak",
+    "streetNumber": 557
+   }
+  },
+  {
+   "id": "20-full-103",
+   "text": "Denizli Pamukkale Siteler Mah. 6202 Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "20",
+    "osm": "n12837075146",
+    "number": "11",
+    "streetName": "6202 Sokak",
+    "streetNumber": 6202
+   }
+  },
+  {
+   "id": "20-full-104",
+   "text": "Denizli Pamukkale Kınıklı Mah. 2594 Sokak No:14",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "20",
+    "osm": "w1318788975",
+    "number": "14",
+    "streetName": "2594 Sokak",
+    "streetNumber": 2594
+   }
+  },
+  {
+   "id": "20-full-105",
+   "text": "Denizli Merkezefendi Hacıeyüplü Mah. Menderes Bulvarı No:22",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "20",
+    "osm": "w518844718",
+    "number": "22",
+    "streetName": "Menderes Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-1",
+   "text": "denizli merkezefendi servergazi mah uzum sk no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13767629101",
+    "number": "37",
+    "streetName": "Üzüm Sokak"
+   }
+  },
+  {
+   "id": "20-folded-2",
+   "text": "denizli merkezefendi bahcelievler mah bahcelievler cad. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10799099633",
+    "number": "3",
+    "streetName": "Bahçelievler Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-3",
+   "text": "denizli merkezefendi adalet mah yunus emre cad. no 2a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12631379840",
+    "number": "2A",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-4",
+   "text": "denizli merkezefendi 1200 evler mah ataturk cad. no 2g",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474238",
+    "number": "2G",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-5",
+   "text": "denizli merkezefendi adalet mah hasan gonullu bulv. no 38",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13439747432",
+    "number": "38",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-6",
+   "text": "DENIZLI MERKEZEFENDI SARAYLAR MAH SALTAK CD. NO 2/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4685810384",
+    "number": "2/1",
+    "streetName": "Saltak Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-7",
+   "text": "denizli merkezefendi mehmet akif ersoy mah 29 ekim blv. no 180",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375036851",
+    "number": "180",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-8",
+   "text": "denizli merkezefendi 1200 evler mah ataturk cd. no 2d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474235",
+    "number": "2D",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-9",
+   "text": "denizli merkezefendi 1200 evler mah inonu cd no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574044",
+    "number": "8",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-10",
+   "text": "denizli merkezefendi adalet mah vatan cd. no 38",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887845",
+    "number": "38",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-11",
+   "text": "denizli merkezefendi bereketler mah maresal cakmak cad. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906861",
+    "number": "16",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-12",
+   "text": "denizli merkezefendi adalet mah vatan cd no 36",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887846",
+    "number": "36",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-13",
+   "text": "denizli merkezefendi bahcelievler mah ugur mumcu cd. no 27a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416790",
+    "number": "27A",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-14",
+   "text": "DENIZLI MERKEZEFENDI ADALET MAH ORHAN GAZI CD NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376517993",
+    "number": "9",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-15",
+   "text": "DENIZLI MERKEZEFENDI MERKEZEFENDI MAH 29 EKIM BULV. NO 102",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n8640269417",
+    "number": "102",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-16",
+   "text": "denizli merkezefendi semikler mah cinkaya blv. no 109",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372841054",
+    "number": "109",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-17",
+   "text": "denizli merkezefendi mehmet akif ersoy mah albayrak blv. no 24",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375580436",
+    "number": "24",
+    "streetName": "Albayrak Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-18",
+   "text": "denizli merkezefendi 1200 evler mah inonu cd. no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574035",
+    "number": "23",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-19",
+   "text": "DENIZLI MERKEZEFENDI BEREKETLER MAH HASAN GONULLU BULV. NO 33",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374912194",
+    "number": "33",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-20",
+   "text": "DENIZLI PAMUKKALE ATALAR MAH EMEK CD NO 76/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4739962241",
+    "number": "76/A",
+    "streetName": "Emek Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-21",
+   "text": "DENIZLI PAMUKKALE YUNUSEMRE MAH YUNUS EMRE CD. NO 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1206804442",
+    "number": "49",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-22",
+   "text": "denizli pamukkale kuspinar mah lise cd. no 45/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9447183784",
+    "number": "45/A",
+    "streetName": "Lise Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-23",
+   "text": "DENIZLI MERKEZEFENDI ADALET MAH FATIH SULTAN MEHMET CAD. NO 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374402590",
+    "number": "28",
+    "streetName": "Fatih Sultan Mehmet Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-24",
+   "text": "denizli merkezefendi altintop mah lise cad. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w158597294",
+    "number": "2",
+    "streetName": "Lise Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-25",
+   "text": "denizli pamukkale pamukkale mah mehmet akif ersoy blv. no 73",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7090386667",
+    "number": "73",
+    "streetName": "Mehmet Akif Ersoy Blv."
+   }
+  },
+  {
+   "id": "20-folded-26",
+   "text": "denizli merkezefendi sirakapilar mah prof. dr. nusret h. fisek sk. no 12/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n14231918562",
+    "number": "12/A",
+    "streetName": "Prof. Dr. Nusret H. Fişek Sokak"
+   }
+  },
+  {
+   "id": "20-folded-27",
+   "text": "denizli merkezefendi saraylar mah izmir asfalti no 123",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519153996",
+    "number": "123",
+    "streetName": "İzmir Asfaltı"
+   }
+  },
+  {
+   "id": "20-folded-28",
+   "text": "denizli merkezefendi 1200 evler mah inonu cd. no 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574034",
+    "number": "25",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-29",
+   "text": "DENIZLI MERKEZEFENDI ALTINTOP MAH CAYBASI CD NO 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1123416421",
+    "number": "28",
+    "streetName": "Çaybaşı Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-30",
+   "text": "DENIZLI MERKEZEFENDI ADALET MAH VATAN CD NO 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887848",
+    "number": "26",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-31",
+   "text": "denizli merkezefendi adalet mah vatan cd. no 34",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887847",
+    "number": "34",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-32",
+   "text": "denizli merkezefendi adalet mah yunus emre cd. no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887852",
+    "number": "37",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-33",
+   "text": "denizli pamukkale yunusemre mah universite cd no 127",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614167",
+    "number": "127",
+    "streetName": "Üniversite Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-34",
+   "text": "denizli pamukkale kayihan mah eski acipayam cad. no 121",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w520355045",
+    "number": "121",
+    "streetName": "Eski Acıpayam Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-35",
+   "text": "denizli pamukkale kinikli mah camlik bulv. no 37/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3709776778",
+    "number": "37/A",
+    "streetName": "Çamlık Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-36",
+   "text": "denizli pamukkale bagbasi mah huzur cd. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1408783964",
+    "number": "3",
+    "streetName": "Huzur Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-37",
+   "text": "denizli merkezefendi saraylar mah 2. ticari yol no 32",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n8314647914",
+    "number": "32",
+    "streetName": "2. Ticari Yol"
+   }
+  },
+  {
+   "id": "20-folded-38",
+   "text": "denizli merkezefendi selcuk bey mah 15 temmuz sehitler yolu no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12071271405",
+    "number": "5",
+    "streetName": "15 Temmuz Şehitler Yolu"
+   }
+  },
+  {
+   "id": "20-folded-39",
+   "text": "denizli merkezefendi 1200 evler mah inonu cad. no 9b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574039",
+    "number": "9B",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-40",
+   "text": "DENIZLI PAMUKKALE FESLEGEN MAH ISTIKLAL CAD. NO 72",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13818669652",
+    "number": "72",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-41",
+   "text": "denizli merkezefendi 1200 evler mah inonu cd. no 9a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574040",
+    "number": "9A",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-42",
+   "text": "denizli pamukkale kinikli mah mevlana cd. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6976471286",
+    "number": "14",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-43",
+   "text": "denizli merkezefendi semikler mah cinkaya bulv. no 146",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372841047",
+    "number": "146",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-44",
+   "text": "denizli civril akpinar mah camlik cd no 29-c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634845",
+    "number": "29-C",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-45",
+   "text": "DENIZLI MERKEZEFENDI BEREKETLER MAH MARESAL CAKMAK CD NO 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906862",
+    "number": "14",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-46",
+   "text": "denizli merkezefendi saraylar mah cumhuriyet cd. no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n11983800683",
+    "number": "6",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-47",
+   "text": "DENIZLI MERKEZEFENDI ADALET MAH ORHAN GAZI CAD. NO 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374277585",
+    "number": "20",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-48",
+   "text": "DENIZLI CIVRIL AKPINAR MAH CAMLIK CD NO 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1076405027",
+    "number": "29",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-49",
+   "text": "denizli merkezefendi bahcelievler mah ugur mumcu cad. no 21",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416797",
+    "number": "21",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-50",
+   "text": "denizli merkezefendi mehmet akif ersoy mah 29 ekim bulv. no 178",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375036849",
+    "number": "178",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-51",
+   "text": "denizli tavas akyar mah akyar sok. no 115",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4699020196",
+    "number": "115",
+    "streetName": "Akyar Sokak"
+   }
+  },
+  {
+   "id": "20-folded-52",
+   "text": "denizli merkezefendi adalet mah kazim karabekir cad. no 60",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374400099",
+    "number": "60",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-53",
+   "text": "denizli merkezefendi bereketler mah hasan gonullu bulv. no 39",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374912195",
+    "number": "39",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-54",
+   "text": "denizli merkezefendi 1200 evler mah inonu cd no 37",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574029",
+    "number": "37",
+    "streetName": "İnönü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-55",
+   "text": "DENIZLI MERKEZEFENDI MEHMET AKIF ERSOY MAH 29 EKIM BLV. NO 168A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374945254",
+    "number": "168A",
+    "streetName": "29 Ekim Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-56",
+   "text": "DENIZLI PAMUKKALE HACIKAPLANLAR MAH FEVZI CAKMAK BLV. NO 116",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519118283",
+    "number": "116",
+    "streetName": "Fevzi Çakmak Bulvarı"
+   }
+  },
+  {
+   "id": "20-folded-57",
+   "text": "denizli merkezefendi adalet mah vatan cad. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375278748",
+    "number": "10",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-58",
+   "text": "denizli merkezefendi gerzele mah hakki derekoylu cd no 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n5309245979",
+    "number": "22",
+    "streetName": "Hakkı Dereköylü Caddesi"
+   }
+  },
+  {
+   "id": "20-folded-59",
+   "text": "DENIZLI PAMUKKALE PAMUKKALE MAH CAY SOK. NO 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w624092315",
+    "number": "7",
+    "streetName": "Çay Sokak"
+   }
+  },
+  {
+   "id": "20-folded-60",
+   "text": "denizli pamukkale yunusemre mah yunus emre cad. no 47",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1132210192",
+    "number": "47",
+    "streetName": "Yunus Emre Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-1",
+   "text": "Denizli Merkezefendi Mehmet Akif Ersoy Mah. Aylbayrak Bulvarı No:12A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3792383012",
+    "number": "12A",
+    "streetName": "Albayrak Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-2",
+   "text": "Yuttlar Sokağı No:22 Afşinbey Mahallesi Honaz/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w704744213",
+    "number": "22",
+    "streetName": "Yurtlar Sokağı"
+   }
+  },
+  {
+   "id": "20-typo-3",
+   "text": "Bereketler Mah. Mareşsal Çakmak Caddesi 11, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906856",
+    "number": "11",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-4",
+   "text": "Denizli, Pamukkale, Kervansaray Mahallesi, Barbauros Bulvarı, Kapı No: 108",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w377604104",
+    "number": "108",
+    "streetName": "Barbaros Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-5",
+   "text": "Denizli Merkezefendi Adalet Mah. Kazım Karabsekir Caddesi No:35",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376516395",
+    "number": "35",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-6",
+   "text": "Hasan Gsnüllü Bulvarı No:50 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374931736",
+    "number": "50",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-7",
+   "text": "Fesleğen Mah. Kıbrıs Şehitleeri Caddesi 53/B, Pamukkale, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597168505",
+    "number": "53/B",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-8",
+   "text": "Denizli, Merkezefendi, Saraylar Mahallesi, İzmir Asfalıt, Kapı No: 123",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7472251637",
+    "number": "123",
+    "streetName": "İzmir Asfaltı"
+   }
+  },
+  {
+   "id": "20-typo-9",
+   "text": "Denizli Merkezefendi Bereketler Mah. Maeşal Çakmak Caddesi No:9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906855",
+    "number": "9",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-10",
+   "text": "Meilana Caddesi No:4 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395117",
+    "number": "4",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-11",
+   "text": "Adalet Mah. Hasan Gönülü Bulvarı 64, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374250716",
+    "number": "64",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-12",
+   "text": "Denizli, Merkezefendi, Saraylar Mahallesi, 2. Tiari Yol, Kapı No: 33",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6840324983",
+    "number": "33",
+    "streetName": "2. Ticari Yol"
+   }
+  },
+  {
+   "id": "20-typo-13",
+   "text": "Denizli Pamukkale Zeytinköy Mah. Yıdlırım Beyazıt Caddesi No:42",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w911112343",
+    "number": "42",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-14",
+   "text": "Şehit Piyade Çavuş Tuncay Özçioban Caddesi No:10/105 Yenişehir Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9523524336",
+    "number": "10/105",
+    "streetName": "Şehit Piyade Çavuş Tuncay Özçoban Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-15",
+   "text": "1200 Evler Mah. Ataiürk Caddesi 2F, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474248",
+    "number": "2F",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-16",
+   "text": "Denizli, Pamukkale, Karataş Mahallesi, Kraataş Sokak, Kapı No: 86",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1064006688",
+    "number": "86",
+    "streetName": "Karataş Sokak"
+   }
+  },
+  {
+   "id": "20-typo-17",
+   "text": "Denizli Pamukkale Korucuk Mah. Plmukkale Bulvarı No:116",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w521294742",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-18",
+   "text": "Şehit Piyade Çavuş Tuncay Özçooban Caddesi No:10 Yenişehir Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1033732132",
+    "number": "10",
+    "streetName": "Şehit Piyade Çavuş Tuncay Özçoban Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-19",
+   "text": "Akpınar Mah. Çmamlık Caddesi 29-F, Çivril, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634842",
+    "number": "29-F",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-20",
+   "text": "Denizli, Pamukkale, Korucuk Mahallesi, ırlıganeı cad., Kapı No: 28",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w815716946",
+    "number": "28",
+    "streetName": "ırlıganlı cad."
+   }
+  },
+  {
+   "id": "20-typo-21",
+   "text": "Denizli Merkezefendi Sırakapılar Mah. Hastae Caddesi No:3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9157589269",
+    "number": "3",
+    "streetName": "Hastane Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-22",
+   "text": "Kıbrıs Şiehitleri Caddesi No:34A Fesleğen Mahallesi Pamukkale/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597160905",
+    "number": "34A",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-23",
+   "text": "Bereketler Mah. Gaznler Caddesi 43, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372973689",
+    "number": "43",
+    "streetName": "Gaziler Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-24",
+   "text": "Denizli, Merkezefendi, Bozburun Mahallesi, Ahmet Nuri Eraikoğlu Caddesi, Kapı No: 29",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w827910154",
+    "number": "29",
+    "streetName": "Ahmet Nuri Erikoğlu Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-25",
+   "text": "Denizli Çivril Akpınar Mah. Çanmlık Caddesi No:29-B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634844",
+    "number": "29-B",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-26",
+   "text": "Menideres Bulvarı No:185 Kayalar Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w518858870",
+    "number": "185",
+    "streetName": "Menderes Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-27",
+   "text": "Orta Mah. Hüükmet Caddesi 90, Tavas, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4699020280",
+    "number": "90",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-28",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, Atatrük Caddesi, Kapı No: 2B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474243",
+    "number": "2B",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-29",
+   "text": "Denizli Merkezefendi Şemikler Mah. Cinakya Bulvarı No:104",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1055344383",
+    "number": "104",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-30",
+   "text": "Maueşal Çakmak Caddesi No:18 Bereketler Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906860",
+    "number": "18",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-31",
+   "text": "Pamukkale Mah. Atatüfrk Caddesi 14, Pamukkale, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n5993312089",
+    "number": "14",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-32",
+   "text": "Denizli, Merkezefendi, Bereketler Mahallesi, Maeşal Çakmak Caddesi, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906859",
+    "number": "19",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-33",
+   "text": "Denizli Merkezefendi Şemikler Mah. Cinkasya Bulvarı No:24",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067505",
+    "number": "24",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-34",
+   "text": "Doğan Demizrcioğlu Caddesi No:2 Mehmetçik Mahallesi Pamukkale/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n5911717546",
+    "number": "2",
+    "streetName": "Doğan Demircioğlu Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-35",
+   "text": "Göveçlik Mah. Hürrieyt Caddesi 19, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13807050501",
+    "number": "19",
+    "streetName": "Hürriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-36",
+   "text": "Denizli, Pamukkale, Zeytinköy Mahallesi, Acıpnayam Bulvarı, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374047539",
+    "number": "9",
+    "streetName": "Acıpayam Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-37",
+   "text": "Denizli Pamukkale Zeytinköy Mah. Bararos Bulvarı No:69",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12985533063",
+    "number": "69",
+    "streetName": "Barbaros Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-38",
+   "text": "Cucmhuriyet Caddesi No:19 Saraylar Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7947409596",
+    "number": "19",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-39",
+   "text": "Mehmetçik Mah. İpncilipınar Caddesi 98, Pamukkale, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3787622380",
+    "number": "98",
+    "streetName": "İncilipınar Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-40",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, Kazım Karabkeir Caddesi, Kapı No: 39",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374424147",
+    "number": "39",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-41",
+   "text": "Denizli Merkezefendi Servergazi Mah. Fatih Suhltan Mehmet Caddesi No:14",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375082971",
+    "number": "14",
+    "streetName": "Fatih Sultan Mehmet Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-42",
+   "text": "Cumhurdiyet Caddesi No:71 Yeşilyuva Mahallesi Acıpayam/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4699022889",
+    "number": "71",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-43",
+   "text": "Kayıhan Mah. Fevzi Çakak Caddesi 10/A, Pamukkale, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n8917434712",
+    "number": "10/A",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-44",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, Ataütrk Caddesi, Kapı No: 2C",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474244",
+    "number": "2C",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-45",
+   "text": "Denizli Merkezefendi Adalet Mah. Kazım Kraabekir Caddesi No:61",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395108",
+    "number": "61",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-46",
+   "text": "Atnatürk Caddesi No:2E 1200 Evler Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474246",
+    "number": "2E",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-47",
+   "text": "Adalet Mah. Mevlagna Caddesi 6, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374395116",
+    "number": "6",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-48",
+   "text": "Denizli, Pamukkale, Yunusemre Mahallesi, Sülyeman Demirel Caddesi, Kapı No: 50/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10570828382",
+    "number": "50/A",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-49",
+   "text": "Denizli Çivril Akpınar Mah. Çamlvk Caddesi No:29-D",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634840",
+    "number": "29-D",
+    "streetName": "Çamlık Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-50",
+   "text": "İzmir Asfzaltı No:1 Sümer Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4686944384",
+    "number": "1",
+    "streetName": "İzmir Asfaltı"
+   }
+  },
+  {
+   "id": "20-typo-51",
+   "text": "Gültepe Mah. Cinkayya Bulvarı 161/2, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13711210289",
+    "number": "161/2",
+    "streetName": "Cinkaya Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-52",
+   "text": "Denizli, Pamukkale, Kınıklı Mahallesi, Çmlık Bulvarı, Kapı No: 30",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371187262",
+    "number": "30",
+    "streetName": "Çamlık Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-53",
+   "text": "Denizli Pamukkale Zeytinköy Mah. Acıpcyam Bulvarı No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374047538",
+    "number": "7",
+    "streetName": "Acıpayam Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-54",
+   "text": "Mareşol Çakmak Caddesi No:13 Bereketler Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906857",
+    "number": "13",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-55",
+   "text": "Bahçelievler Mah. Baheçlievler Caddesi 3, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10799099633",
+    "number": "3",
+    "streetName": "Bahçelievler Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-56",
+   "text": "Denizli, Merkezefendi, 1200 Evler Mahallesi, Atatcrk Caddesi, Kapı No: 2G",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474238",
+    "number": "2G",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-57",
+   "text": "Denizli Merkezefendi Adalet Mah. Hasan Göndüllü Bulvarı No:38",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n13439747432",
+    "number": "38",
+    "streetName": "Hasan Gönüllü Bulvarı"
+   }
+  },
+  {
+   "id": "20-typo-58",
+   "text": "Saltka Caddesi No:2/1 Saraylar Mahallesi Merkezefendi/Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n4685810384",
+    "number": "2/1",
+    "streetName": "Saltak Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-59",
+   "text": "1200 Evler Mah. Atatrük Caddesi 2D, Merkezefendi, Denizli",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474235",
+    "number": "2D",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "20-typo-60",
+   "text": "Denizli, Merkezefendi, Bereketler Mahallesi, Mareşl Çakmak Caddesi, Kapı No: 16",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906861",
+    "number": "16",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-numbered-1",
+   "text": "Denizli Merkezefendi Bereketler Mah. 10202. Sokak No:21",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374915914",
+    "number": "21",
+    "streetName": "10202. Sokak",
+    "streetNumber": 10202
+   }
+  },
+  {
+   "id": "20-numbered-2",
+   "text": "10148. Sokak No:12 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376514872",
+    "number": "12",
+    "streetName": "10148. Sokak",
+    "streetNumber": 10148
+   }
+  },
+  {
+   "id": "20-numbered-3",
+   "text": "Gültepe Mah. 4866. Sokak 15, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7035305585",
+    "number": "15",
+    "streetName": "4866. Sokak",
+    "streetNumber": 4866
+   }
+  },
+  {
+   "id": "20-numbered-4",
+   "text": "Denizli, Merkezefendi, Mehmet Akif Ersoy Mahallesi, 45. Sokak, Kapı No: 14",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w378121093",
+    "number": "14",
+    "streetName": "45. Sokak",
+    "streetNumber": 45
+   }
+  },
+  {
+   "id": "20-numbered-5",
+   "text": "Denizli Merkezefendi Bereketler Mah. 10165. Sokak No:12",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906864",
+    "number": "12",
+    "streetName": "10165. Sokak",
+    "streetNumber": 10165
+   }
+  },
+  {
+   "id": "20-numbered-6",
+   "text": "3102. Sokak No:66 Şemikler Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371399069",
+    "number": "66",
+    "streetName": "3102. Sokak",
+    "streetNumber": 3102
+   }
+  },
+  {
+   "id": "20-numbered-7",
+   "text": "Çakmak Mah. 171. Sokak 3, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371474828",
+    "number": "3",
+    "streetName": "171. Sokak",
+    "streetNumber": 171
+   }
+  },
+  {
+   "id": "20-numbered-8",
+   "text": "Denizli, Merkezefendi, Selçuk Bey Mahallesi, 554 Sokak, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374294374",
+    "number": "8",
+    "streetName": "554 Sokak",
+    "streetNumber": 554
+   }
+  },
+  {
+   "id": "20-numbered-9",
+   "text": "Denizli Merkezefendi Yenişafak Mah. 1037. Sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373400069",
+    "number": "6",
+    "streetName": "1037. Sokak",
+    "streetNumber": 1037
+   }
+  },
+  {
+   "id": "20-numbered-10",
+   "text": "10192. Sokak No:2 Bereketler Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374912185",
+    "number": "2",
+    "streetName": "10192. Sokak",
+    "streetNumber": 10192
+   }
+  },
+  {
+   "id": "20-numbered-11",
+   "text": "Selçuk Bey Mah. 501. Sokak 11, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374294361",
+    "number": "11",
+    "streetName": "501. Sokak",
+    "streetNumber": 501
+   }
+  },
+  {
+   "id": "20-numbered-12",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, 10148. Sokak, Kapı No: 4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374915935",
+    "number": "4",
+    "streetName": "10148. Sokak",
+    "streetNumber": 10148
+   }
+  },
+  {
+   "id": "20-numbered-13",
+   "text": "Denizli Merkezefendi 1200 Evler Mah. 2017. Sokak No:3",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474215",
+    "number": "3",
+    "streetName": "2017. Sokak",
+    "streetNumber": 2017
+   }
+  },
+  {
+   "id": "20-numbered-14",
+   "text": "129. Sokak No:4 Çakmak Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371474816",
+    "number": "4",
+    "streetName": "129. Sokak",
+    "streetNumber": 129
+   }
+  },
+  {
+   "id": "20-numbered-15",
+   "text": "1200 Evler Mah. 2006. Sokak 1F, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373410124",
+    "number": "1F",
+    "streetName": "2006. Sokak",
+    "streetNumber": 2006
+   }
+  },
+  {
+   "id": "20-numbered-16",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, 10126. Sokak, Kapı No: 1A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374948949",
+    "number": "1A",
+    "streetName": "10126. Sokak",
+    "streetNumber": 10126
+   }
+  },
+  {
+   "id": "20-numbered-17",
+   "text": "Denizli Merkezefendi Yenişafak Mah. 1037. Sokak No:6A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373400064",
+    "number": "6A",
+    "streetName": "1037. Sokak",
+    "streetNumber": 1037
+   }
+  },
+  {
+   "id": "20-numbered-18",
+   "text": "10150. Sokak No:10A Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374915933",
+    "number": "10A",
+    "streetName": "10150. Sokak",
+    "streetNumber": 10150
+   }
+  },
+  {
+   "id": "20-numbered-19",
+   "text": "Adalet Mah. 10126. Sokak 1B, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374948950",
+    "number": "1B",
+    "streetName": "10126. Sokak",
+    "streetNumber": 10126
+   }
+  },
+  {
+   "id": "20-numbered-20",
+   "text": "Denizli, Merkezefendi, Adalet Mahallesi, 10146. Sokak, Kapı No: 19B",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399321",
+    "number": "19B",
+    "streetName": "10146. Sokak",
+    "streetNumber": 10146
+   }
+  },
+  {
+   "id": "20-numbered-21",
+   "text": "Denizli Merkezefendi Çakmak Mah. 104. Sokak No:2B",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371468908",
+    "number": "2B",
+    "streetName": "104. Sokak",
+    "streetNumber": 104
+   }
+  },
+  {
+   "id": "20-numbered-22",
+   "text": "10086. Sokak No:8 Adalet Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887831",
+    "number": "8",
+    "streetName": "10086. Sokak",
+    "streetNumber": 10086
+   }
+  },
+  {
+   "id": "20-numbered-23",
+   "text": "Bereketler Mah. 10188. Sokak 16, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374912196",
+    "number": "16",
+    "streetName": "10188. Sokak",
+    "streetNumber": 10188
+   }
+  },
+  {
+   "id": "20-numbered-24",
+   "text": "Denizli, Merkezefendi, Çakmak Mahallesi, 118. Sokak, Kapı No: 7",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371472270",
+    "number": "7",
+    "streetName": "118. Sokak",
+    "streetNumber": 118
+   }
+  },
+  {
+   "id": "20-numbered-25",
+   "text": "Denizli Merkezefendi Selçuk Bey Mah. 551. Sokak No:4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375221095",
+    "number": "4",
+    "streetName": "551. Sokak",
+    "streetNumber": 551
+   }
+  },
+  {
+   "id": "20-numbered-26",
+   "text": "514. Sokak No:6 Selçuk Bey Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374250395",
+    "number": "6",
+    "streetName": "514. Sokak",
+    "streetNumber": 514
+   }
+  },
+  {
+   "id": "20-numbered-27",
+   "text": "Adalet Mah. 10152. Sokak 4, Merkezefendi, Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375077315",
+    "number": "4",
+    "streetName": "10152. Sokak",
+    "streetNumber": 10152
+   }
+  },
+  {
+   "id": "20-numbered-28",
+   "text": "Denizli, Merkezefendi, Çakmak Mahallesi, 114. Sokak, Kapı No: 3",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371474818",
+    "number": "3",
+    "streetName": "114. Sokak",
+    "streetNumber": 114
+   }
+  },
+  {
+   "id": "20-numbered-29",
+   "text": "Denizli Pamukkale Yunusemre Mah. 6436. Sokak No:7",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1132210190",
+    "number": "7",
+    "streetName": "6436. Sokak",
+    "streetNumber": 6436
+   }
+  },
+  {
+   "id": "20-numbered-30",
+   "text": "112. Sokak No:4 Çakmak Mahallesi Merkezefendi/Denizli",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371473246",
+    "number": "4",
+    "streetName": "112. Sokak",
+    "streetNumber": 112
+   }
+  },
+  {
+   "id": "20-hide-1",
+   "text": "Aşağı Mah. Atatürk_10 Caddesi 40A, Çivril, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w719385442",
+    "number": "40A",
+    "streetName": "Atatürk_10 Caddesi",
+    "truth": [
+     29.738388,
+     38.299945
+    ]
+   }
+  },
+  {
+   "id": "20-hide-2",
+   "text": "Hacıkaplanlar Mah. Cinar Meydani Istiklal Caddesi 9/A, Pamukkale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n2901897043",
+    "number": "9/A",
+    "streetName": "Cinar Meydani Istiklal Caddesi",
+    "truth": [
+     29.088084,
+     37.77336
+    ]
+   }
+  },
+  {
+   "id": "20-hide-3",
+   "text": "Bereketler Mah. Hasan Gönüllü Bulvarı 31, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374912193",
+    "number": "31",
+    "streetName": "Hasan Gönüllü Bulvarı",
+    "truth": [
+     29.017066,
+     37.779604
+    ]
+   }
+  },
+  {
+   "id": "20-hide-4",
+   "text": "1200 Evler Mah. Atatürk Caddesi 2A, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474241",
+    "number": "2A",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     29.010472,
+     37.783201
+    ]
+   }
+  },
+  {
+   "id": "20-hide-5",
+   "text": "Cumhuriyet Mah. Cami Caddesi 22/D, Kale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n11594160369",
+    "number": "22/D",
+    "streetName": "Cami Caddesi",
+    "truth": [
+     28.845934,
+     37.441563
+    ]
+   }
+  },
+  {
+   "id": "20-hide-6",
+   "text": "Adalet Mah. Orhan Gazi Caddesi 23, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399326",
+    "number": "23",
+    "streetName": "Orhan Gazi Caddesi",
+    "truth": [
+     29.023986,
+     37.781826
+    ]
+   }
+  },
+  {
+   "id": "20-hide-7",
+   "text": "Akpınar Mah. Çamlık Caddesi 29-A, Çivril, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634843",
+    "number": "29-A",
+    "streetName": "Çamlık Caddesi",
+    "truth": [
+     29.72013,
+     38.317605
+    ]
+   }
+  },
+  {
+   "id": "20-hide-8",
+   "text": "Adalet Mah. Yunus Emre Caddesi 39, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887853",
+    "number": "39",
+    "streetName": "Yunus Emre Caddesi",
+    "truth": [
+     29.033024,
+     37.78446
+    ]
+   }
+  },
+  {
+   "id": "20-hide-9",
+   "text": "Akpınar Mah. Çamlık Caddesi 29-E, Çivril, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w712634841",
+    "number": "29-E",
+    "streetName": "Çamlık Caddesi",
+    "truth": [
+     29.719614,
+     38.317764
+    ]
+   }
+  },
+  {
+   "id": "20-hide-10",
+   "text": "Bereketler Mah. Mareşal Çakmak Caddesi 5, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374160144",
+    "number": "5",
+    "streetName": "Mareşal Çakmak Caddesi",
+    "truth": [
+     29.017058,
+     37.779057
+    ]
+   }
+  },
+  {
+   "id": "20-hide-11",
+   "text": "Bereketler Mah. Mareşal Çakmak Caddesi 17, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906858",
+    "number": "17",
+    "streetName": "Mareşal Çakmak Caddesi",
+    "truth": [
+     29.016409,
+     37.778329
+    ]
+   }
+  },
+  {
+   "id": "20-hide-12",
+   "text": "1200 Evler Mah. Atatürk Caddesi 2H, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373474237",
+    "number": "2H",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     29.010702,
+     37.783461
+    ]
+   }
+  },
+  {
+   "id": "20-hide-13",
+   "text": "Şemikler Mah. Neşet Çakır Caddesi 70, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi",
+    "truth": [
+     29.057794,
+     37.807935
+    ]
+   }
+  },
+  {
+   "id": "20-hide-14",
+   "text": "1200 Evler Mah. İnönü Caddesi 15, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574037",
+    "number": "15",
+    "streetName": "İnönü Caddesi",
+    "truth": [
+     29.006621,
+     37.780055
+    ]
+   }
+  },
+  {
+   "id": "20-hide-15",
+   "text": "1200 Evler Mah. İnönü Caddesi 41, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373574024",
+    "number": "41",
+    "streetName": "İnönü Caddesi",
+    "truth": [
+     29.004672,
+     37.783631
+    ]
+   }
+  },
+  {
+   "id": "20-hide-16",
+   "text": "Akçeşme Mah. Bozburun Caddesi 2, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi",
+    "truth": [
+     29.061007,
+     37.818035
+    ]
+   }
+  },
+  {
+   "id": "20-hide-17",
+   "text": "Saraylar Mah. Sarayköy Caddesi 11, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi",
+    "truth": [
+     29.083216,
+     37.785313
+    ]
+   }
+  },
+  {
+   "id": "20-hide-18",
+   "text": "Sümer Mah. İzmir Bulvarı 16, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w518858865",
+    "number": "16",
+    "streetName": "İzmir Bulvarı",
+    "truth": [
+     29.09389,
+     37.784583
+    ]
+   }
+  },
+  {
+   "id": "20-hide-19",
+   "text": "Yunusemre Mah. Süleyman Demirel Caddesi 50, Pamukkale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi",
+    "truth": [
+     29.108929,
+     37.744429
+    ]
+   }
+  },
+  {
+   "id": "20-hide-20",
+   "text": "Korucuk Mah. Pamukkale Bulvarı 116, Pamukkale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı",
+    "truth": [
+     29.135222,
+     37.839633
+    ]
+   }
+  },
+  {
+   "id": "20-hide-21",
+   "text": "Bahçelievler Mah. 29 Ekim Bulvarı 221, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519071850",
+    "number": "221",
+    "streetName": "29 Ekim Bulvarı",
+    "truth": [
+     29.049074,
+     37.777627
+    ]
+   }
+  },
+  {
+   "id": "20-hide-22",
+   "text": "Mehmet Akif Ersoy Mah. Albayrak Bulvarı 12A, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3792383012",
+    "number": "12A",
+    "streetName": "Albayrak Bulvarı",
+    "truth": [
+     29.037571,
+     37.784407
+    ]
+   }
+  },
+  {
+   "id": "20-hide-23",
+   "text": "Adalet Mah. Orhan Gazi Caddesi 7, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376517992",
+    "number": "7",
+    "streetName": "Orhan Gazi Caddesi",
+    "truth": [
+     29.024057,
+     37.778954
+    ]
+   }
+  },
+  {
+   "id": "20-hide-24",
+   "text": "Merkezefendi Mah. 29 Ekim Bulvarı 60/B, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3791828482",
+    "number": "60/B",
+    "streetName": "29 Ekim Bulvarı",
+    "truth": [
+     29.06216,
+     37.779168
+    ]
+   }
+  },
+  {
+   "id": "20-hide-25",
+   "text": "Afşinbey Mah. Yurtlar Sokağı 22, Honaz, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w704744213",
+    "number": "22",
+    "streetName": "Yurtlar Sokağı",
+    "truth": [
+     29.279246,
+     37.762756
+    ]
+   }
+  },
+  {
+   "id": "20-hide-26",
+   "text": "Bereketler Mah. Mareşal Çakmak Caddesi 11, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906856",
+    "number": "11",
+    "streetName": "Mareşal Çakmak Caddesi",
+    "truth": [
+     29.016731,
+     37.778672
+    ]
+   }
+  },
+  {
+   "id": "20-hide-27",
+   "text": "Kervansaray Mah. Barbaros Bulvarı 108, Pamukkale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w377604104",
+    "number": "108",
+    "streetName": "Barbaros Bulvarı",
+    "truth": [
+     29.13163,
+     37.731091
+    ]
+   }
+  },
+  {
+   "id": "20-hide-28",
+   "text": "Yazır Mah. Fatih 15, Acıpayam, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9252433873",
+    "number": "15",
+    "streetName": "Fatih",
+    "truth": [
+     29.556113,
+     37.36591
+    ]
+   }
+  },
+  {
+   "id": "20-hide-29",
+   "text": "Adalet Mah. Kazım Karabekir Caddesi 35, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w376516395",
+    "number": "35",
+    "streetName": "Kazım Karabekir Caddesi",
+    "truth": [
+     29.026534,
+     37.779948
+    ]
+   }
+  },
+  {
+   "id": "20-hide-30",
+   "text": "Adalet Mah. Vatan Caddesi 22, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887850",
+    "number": "22",
+    "streetName": "Vatan Caddesi",
+    "truth": [
+     29.032735,
+     37.784232
+    ]
+   }
+  },
+  {
+   "id": "20-hide-31",
+   "text": "Adalet Mah. Tuna Caddesi 34/A, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12631379838",
+    "number": "34/A",
+    "streetName": "Tuna Caddesi",
+    "truth": [
+     29.029837,
+     37.782333
+    ]
+   }
+  },
+  {
+   "id": "20-hide-32",
+   "text": "Adalet Mah. Hasan Gönüllü Bulvarı 50, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374931736",
+    "number": "50",
+    "streetName": "Hasan Gönüllü Bulvarı",
+    "truth": [
+     29.02267,
+     37.778452
+    ]
+   }
+  },
+  {
+   "id": "20-hide-33",
+   "text": "Merkezefendi Mah. 29 Ekim Bulvarı 62, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375840890",
+    "number": "62",
+    "streetName": "29 Ekim Bulvarı",
+    "truth": [
+     29.061777,
+     37.779154
+    ]
+   }
+  },
+  {
+   "id": "20-hide-34",
+   "text": "Fesleğen Mah. Kıbrıs Şehitleri Caddesi 53/B, Pamukkale, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597168505",
+    "number": "53/B",
+    "streetName": "Kıbrıs Şehitleri Caddesi",
+    "truth": [
+     29.086821,
+     37.76531
+    ]
+   }
+  },
+  {
+   "id": "20-hide-35",
+   "text": "Adalet Mah. Vatan Caddesi 12, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375278744",
+    "number": "12",
+    "streetName": "Vatan Caddesi",
+    "truth": [
+     29.034576,
+     37.784435
+    ]
+   }
+  },
+  {
+   "id": "20-hide-36",
+   "text": "Saraylar Mah. İzmir Asfaltı 123, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n7472251637",
+    "number": "123",
+    "streetName": "İzmir Asfaltı",
+    "truth": [
+     29.087963,
+     37.787886
+    ]
+   }
+  },
+  {
+   "id": "20-hide-37",
+   "text": "Adalet Mah. Orhan Gazi Caddesi 25, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399329",
+    "number": "25",
+    "streetName": "Orhan Gazi Caddesi",
+    "truth": [
+     29.023959,
+     37.782077
+    ]
+   }
+  },
+  {
+   "id": "20-hide-38",
+   "text": "Adalet Mah. Yunus Emre Caddesi 16, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1455952364",
+    "number": "16",
+    "streetName": "Yunus Emre Caddesi",
+    "truth": [
+     29.033828,
+     37.780962
+    ]
+   }
+  },
+  {
+   "id": "20-hide-39",
+   "text": "1200 Evler Mah. İnönü Caddesi 33B, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373571873",
+    "number": "33B",
+    "streetName": "İnönü Caddesi",
+    "truth": [
+     29.005454,
+     37.782186
+    ]
+   }
+  },
+  {
+   "id": "20-hide-40",
+   "text": "Şemikler Mah. Osman Gazi Caddesi 45, Merkezefendi, Denizli",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372836040",
+    "number": "45",
+    "streetName": "Osman Gazi Caddesi",
+    "truth": [
+     29.037433,
+     37.79582
+    ]
+   }
+  },
+  {
+   "id": "20-lang-1",
+   "text": "Semikler, 70 Neset Cakir Avenue floor 8 apartment 6, Merkezefendi/Denizli",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-2",
+   "text": "Merkezefendi, Şemikler Ortsteil, Neşet Çakır Straße Nummer 70, 20919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-3",
+   "text": "денизли меркезефенди, проспект нешет чакыр д. 70",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-4",
+   "text": "Λεωφόρος Neşet Çakır αρ. 70 όροφος 5 μπλοκ D διαμέρισμα 29, ντενιζλι Merkezefendi",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-5",
+   "text": "حي Şemikler، جادة Neşet Çakır رقم 70،  ",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-6",
+   "text": "Bozburun Street 2, Denizli Merkezefendi, 20408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-7",
+   "text": "MERKEZEFENDİ/DENİZLİ AKCESME ORTSTEİL BOZBURUN STRASSE NR. 2",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-8",
+   "text": "акчешме, проспект бозбурун дом 2, денизли меркезефенди",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-9",
+   "text": "ντενιζλι Merkezefendi, Λεωφ. Bozburun αρ. 2",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-10",
+   "text": "حي Akçeşme, جادة Bozburun رقم 2, Denizli Merkezefendi",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "n6463018386",
+    "number": "2",
+    "streetName": "Bozburun Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-11",
+   "text": "Saraylar Neighbourhood, 11 Sarayköy Ave floor 2 apartment 6, Merkezefendi/Denizli, 20715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-12",
+   "text": "Denizli Merkezefendi Sarayköy Straße Nummer 11 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-13",
+   "text": "микрорайон сарайлар, пр. сарайкёй 11, меркезефенди/денизли",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-14",
+   "text": "γειτονιά Saraylar, Λεωφ. σαραϊκοϊ 11 όροφος 1 μπλοκ C διαμέρισμα 9, Denizli Merkezefendi",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-15",
+   "text": "Saraylar، جادة Sarayköy رقم 11 طابق 5 بلوك A شقة 30، Merkezefendi/Denizli، 20497",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "n6769117966",
+    "number": "11",
+    "streetName": "Sarayköy Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-16",
+   "text": "Denizli Pamukkale Yunusemre Neighbourhood 50 Süleyman Demirel Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-17",
+   "text": "Yunusemre, Süleyman Demirel Straße Nummer 50, Pamukkale ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-18",
+   "text": "денизли памуккале, микрорайон йунусемре, проспект сюлейман демирел д. 50 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΓΙΟΥΝΟΥΣΕΜΡΕ, ΛΕΩΦΌΡΟΣ SÜLEYMAN DEMIREL ΑΡΙΘΜΌΣ 50, ΝΤΕΝΙΖΛΙ PAMUKKALE",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-20",
+   "text": "حي Yunusemre, جادة Süleyman Demirel رقم 50,  Pamukkale",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "w1109614071",
+    "number": "50",
+    "streetName": "Süleyman Demirel Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-21",
+   "text": "Korucuk, Pamukkale Blvd no 116, Denizli Pamukkale",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-lang-22",
+   "text": "Korucuk Ortsteil, Pamukkale Boulevard Nr. 116, Denizli Pamukkale, 20152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-lang-23",
+   "text": "памуккале/денизли, микрорайон коруджук, бул. памуккале д. 116",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-lang-24",
+   "text": "Korucuk, Λεωφόρος παμουκκαλε 116, παμουκκαλε Denizli",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-lang-25",
+   "text": "Korucuk، شارع Pamukkale رقم 116،  Pamukkale",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "n9169401380",
+    "number": "116",
+    "streetName": "Pamukkale Bulvarı"
+   }
+  },
+  {
+   "id": "20-lang-26",
+   "text": "Şemikler Neighbourhood, Neşet Çakır Street number 70, Merkezefendi/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-27",
+   "text": "Merkezefendi, Semikler Ortsteil, Neset Cakir Straße 70",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-28",
+   "text": "меркезефенди, проспект нешет чакыр д. 70 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-29",
+   "text": "Merkezefendi Denizli Λεωφόρος Neşet Çakır 70",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-lang-30",
+   "text": "حي Şemikler، جادة Neşet Çakır رقم 70، Denizli Merkezefendi",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "20",
+    "osm": "n3793067507",
+    "number": "70",
+    "streetName": "Neşet Çakır Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-1",
+   "text": "Tuna Caddesi 34/A Adalet",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n12631379838",
+    "number": "34/A",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-2",
+   "text": "Fesleğen mah Kıbrıs Şehitleri Caddesi no:53/B d:3 kat:2 Pamukkale",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10597168505",
+    "number": "53/B",
+    "streetName": "Kıbrıs Şehitleri Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-3",
+   "text": "Merkezefendi Vatan Caddesi no12",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375278744",
+    "number": "12",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-4",
+   "text": "25 Orhan Gazi Caddesi Adalet Merkezefendi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374399329",
+    "number": "25",
+    "streetName": "Orhan Gazi Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-5",
+   "text": "BAHCELIEVLER UGUR MUMCU CADDESI 19",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373416799",
+    "number": "19",
+    "streetName": "Uğur Mumcu Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-6",
+   "text": "Merkezefendi Mareşal Çakmak Caddesi apartmanı 9 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w374906855",
+    "number": "9",
+    "streetName": "Mareşal Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-7",
+   "text": "Adalet mahallesi Vatan Caddesi 24 nolu bina Merkezefendi/Denizli",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375887849",
+    "number": "24",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-8",
+   "text": "Vatan 3 Adalet Merkezefendi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375038305",
+    "number": "3",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-9",
+   "text": "Adaet mah Vatan Caddesi 21 Merkezefendi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375888522",
+    "number": "21",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-10",
+   "text": "2. Ticari Yol 33 Saraylar mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n6840324983",
+    "number": "33",
+    "streetName": "2. Ticari Yol"
+   }
+  },
+  {
+   "id": "20-hard-11",
+   "text": "Pamukkale Zeytinköy Yıldırım Beyazıt Caddesi 42, 34174",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w911112343",
+    "number": "42",
+    "streetName": "Yıldırım Beyazıt Caddesi"
+   }
+  },
+  {
+   "id": "20-hard-12",
+   "text": "Denizli Merkezefendi Şehit Piyade Çavuş Tuncay Özçoban Caddesi 10/105 Yenişehir",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9523524336",
+    "number": "10/105",
+    "streetName": "Şehit Piyade Çavuş Tuncay Özçoban Caddesi"
+   }
+  },
+  {
+   "id": "20-poi-1",
+   "text": "Tekden Hastanesi Merkezefendi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w369551580",
+    "kind": "hospital",
+    "streetName": "Tekden Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-2",
+   "text": "forum denizli pamukkale denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w305490429",
+    "kind": "mall",
+    "streetName": "Forum Denizli"
+   }
+  },
+  {
+   "id": "20-poi-3",
+   "text": "Nikfer Belediyesi Tavas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w115504254",
+    "kind": "townhall",
+    "streetName": "Nikfer Belediyesi"
+   }
+  },
+  {
+   "id": "20-poi-4",
+   "text": "Denizli Müftülüğü Ahmet Hulusi Efendi Eğitim Merkezi Müdürlüğü Merkezefendi Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w377598568",
+    "kind": "school",
+    "streetName": "Denizli Müftülüğü Ahmet Hulusi Efendi Eğitim Merkezi Müdürlüğü"
+   }
+  },
+  {
+   "id": "20-poi-5",
+   "text": "Osman Özgür İlkokulu Merkezefendi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373769696",
+    "kind": "school",
+    "streetName": "Osman Özgür İlkokulu"
+   }
+  },
+  {
+   "id": "20-poi-6",
+   "text": "Özel Çamlık Koleji Pamukkale",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n3709776791",
+    "kind": "school",
+    "streetName": "Özel Çamlık Koleji"
+   }
+  },
+  {
+   "id": "20-poi-7",
+   "text": "Yaşar Kımıl Fen Lisesi Pamukkale",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w366994283",
+    "kind": "school",
+    "streetName": "Yaşar Kımıl Fen Lisesi"
+   }
+  },
+  {
+   "id": "20-poi-8",
+   "text": "Cumhuriyet Anadolu Lisesi Pamukkale",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w305490201",
+    "kind": "school",
+    "streetName": "Cumhuriyet Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "20-poi-9",
+   "text": "is adamlari mesleki ve teknik anadolu lisesi merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w371468899",
+    "kind": "school",
+    "streetName": "İş Adamları Mesleki ve Teknik Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "20-poi-10",
+   "text": "Reşat Vural İlkokulu Merkezefendi Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w518803178",
+    "kind": "school",
+    "streetName": "Reşat Vural İlkokulu"
+   }
+  },
+  {
+   "id": "20-poi-11",
+   "text": "DESKİ Genel Müdürlüğü Pamukkale Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n9679880369",
+    "kind": "townhall",
+    "streetName": "DESKİ Genel Müdürlüğü"
+   }
+  },
+  {
+   "id": "20-poi-12",
+   "text": "senay ozturk anaokulu pamukkale denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w372702445",
+    "kind": "school",
+    "streetName": "Şenay Öztürk Anaokulu"
+   }
+  },
+  {
+   "id": "20-poi-13",
+   "text": "saraykoy devlet hastane saraykoy denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1238502850",
+    "kind": "hospital",
+    "streetName": "Sarayköy Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-14",
+   "text": "Bahçeşehir Denizli Okulları Merkezefendi Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w368496661",
+    "kind": "school",
+    "streetName": "Bahçeşehir Denizli Okulları"
+   }
+  },
+  {
+   "id": "20-poi-15",
+   "text": "Tavas Devlet hastane Tavas",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1221529858",
+    "kind": "hospital",
+    "streetName": "Tavas Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-16",
+   "text": "ibrahim cinkaya sosyal bilimler lisesi merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w368474456",
+    "kind": "school",
+    "streetName": "İbrahim Cinkaya Sosyal Bilimler Lisesi"
+   }
+  },
+  {
+   "id": "20-poi-17",
+   "text": "Eski (Karaköy Belediyesi) Kale Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1089740929",
+    "kind": "townhall",
+    "streetName": "Eski (Karaköy Belediyesi)"
+   }
+  },
+  {
+   "id": "20-poi-18",
+   "text": "varol textile merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "n10721174314",
+    "kind": "mall",
+    "streetName": "Varol Textile"
+   }
+  },
+  {
+   "id": "20-poi-19",
+   "text": "acipayam kaymakamligi acipayam denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w115594525",
+    "kind": "townhall",
+    "streetName": "Acıpayam Kaymakamlığı"
+   }
+  },
+  {
+   "id": "20-poi-20",
+   "text": "pekdemir bereketli avm merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w368575462",
+    "kind": "mall",
+    "streetName": "Pekdemir Bereketli AVM"
+   }
+  },
+  {
+   "id": "20-poi-21",
+   "text": "teras park avm merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519328305",
+    "kind": "mall",
+    "streetName": "Teras Park AVM"
+   }
+  },
+  {
+   "id": "20-poi-22",
+   "text": "Özel Denizli Sağlık Hastanesi Merkezefendi Denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w373415952",
+    "kind": "hospital",
+    "streetName": "Özel Denizli Sağlık Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-23",
+   "text": "ozel ladik hastanesi merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w375840896",
+    "kind": "hospital",
+    "streetName": "Özel Ladik Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-24",
+   "text": "Merkezefendi Belediyesi Merkezefendi",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519357377",
+    "kind": "townhall",
+    "streetName": "Merkezefendi Belediyesi"
+   }
+  },
+  {
+   "id": "20-poi-25",
+   "text": "t.c. cardak belediyesi cardak denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1350409410",
+    "kind": "townhall",
+    "streetName": "T.C. Çardak Belediyesi"
+   }
+  },
+  {
+   "id": "20-poi-26",
+   "text": "honaz devlet hastane honaz denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w427379067",
+    "kind": "hospital",
+    "streetName": "Honaz Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-27",
+   "text": "acipayam devlet hastanesi acipayam denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w656042802",
+    "kind": "hospital",
+    "streetName": "Acıpayam Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-28",
+   "text": "horizon garden avm merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w519153985",
+    "kind": "mall",
+    "streetName": "Horizon Garden AVM"
+   }
+  },
+  {
+   "id": "20-poi-29",
+   "text": "Çivril Devlet hastane Çivril",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1238779642",
+    "kind": "hospital",
+    "streetName": "Çivril Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "20-poi-30",
+   "text": "dbb hal mudurlugu merkezefendi denizli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w518860813",
+    "kind": "townhall",
+    "streetName": "DBB Hal Müdürlüğü"
+   }
+  },
+  {
+   "id": "20-poi-31",
+   "text": "inceler belediye binasi bozkurt",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w714434190",
+    "kind": "townhall",
+    "streetName": "İnceler Belediyesi"
+   }
+  },
+  {
+   "id": "20-poi-33",
+   "text": "kale belediye binasi kale",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "20",
+    "osm": "w1091357274",
+    "kind": "townhall",
+    "streetName": "Kale Belediyesi"
+   }
+  }
+ ]
+}

@@ -1,0 +1,4641 @@
+{
+ "version": 1,
+ "plate": "34",
+ "queries": [
+  {
+   "id": "34-full-1",
+   "text": "İstanbul Beyoğlu Katip Mustafa Çelebi Mah. Billurcu Sokağı No:14",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11811873069",
+    "number": "14",
+    "streetName": "Billurcu Sokağı"
+   }
+  },
+  {
+   "id": "34-full-2",
+   "text": "Altınordu Caddesi No:28 Merkez Mahallesi Eyüpsultan/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1075708597",
+    "number": "28",
+    "streetName": "Altınordu Caddesi"
+   }
+  },
+  {
+   "id": "34-full-3",
+   "text": "Mimaroba Mah. Belen Sokağı 2/FA, Büyükçekmece, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4447505890",
+    "number": "2/FA",
+    "streetName": "Belen Sokağı"
+   }
+  },
+  {
+   "id": "34-full-4",
+   "text": "İstanbul, Ataşehir, Atatürk Mahallesi, Yakut Caddesi, Kapı No: 44L",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1089727477",
+    "number": "44L",
+    "streetName": "Yakut Caddesi"
+   }
+  },
+  {
+   "id": "34-full-5",
+   "text": "İstanbul Arnavutköy Nene hatun Mah. Fatih Caddesi No:312",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13075841501",
+    "number": "312",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "34-full-6",
+   "text": "Moda Caddesi No:60 Caferağa Mahallesi Kadıköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694271975",
+    "number": "60",
+    "streetName": "Moda Caddesi"
+   }
+  },
+  {
+   "id": "34-full-7",
+   "text": "Firuzağa Mah. Borazan Sokağı 1, Beyoğlu, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w247045695",
+    "number": "1",
+    "streetName": "Borazan Sokağı"
+   }
+  },
+  {
+   "id": "34-full-8",
+   "text": "İstanbul, Kadıköy, Suadiye Mahallesi, Ayşe Çavuş Caddesi, Kapı No: 5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1115806926",
+    "number": "5",
+    "streetName": "Ayşe Çavuş Caddesi"
+   }
+  },
+  {
+   "id": "34-full-9",
+   "text": "İstanbul Şişli Merkez Mah. Sıra Cevizler Caddesi No:23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w548990901",
+    "number": "23",
+    "streetName": "Sıra Cevizler Caddesi"
+   }
+  },
+  {
+   "id": "34-full-10",
+   "text": "Nurettin Ali Berkol Sokağı No:4 Caddebostan Mahallesi Kadıköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1018572492",
+    "number": "4",
+    "streetName": "Nurettin Ali Berkol Sokağı"
+   }
+  },
+  {
+   "id": "34-full-11",
+   "text": "Kandilli Mah. Kandilli Göksu Caddesi 11, Üsküdar, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10312137545",
+    "number": "11",
+    "streetName": "Kandilli Göksu Caddesi"
+   }
+  },
+  {
+   "id": "34-full-12",
+   "text": "İstanbul, Beyoğlu, Katip Mustafa Çelebi Mahallesi, Sıraselviler Caddesi, Kapı No: 32",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w249042563",
+    "number": "32",
+    "streetName": "Sıraselviler Caddesi"
+   }
+  },
+  {
+   "id": "34-full-13",
+   "text": "İstanbul Şişli Bozkurt Mah. Ergenekon Caddesi No:7/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14203211801",
+    "number": "7/A",
+    "streetName": "Ergenekon Caddesi"
+   }
+  },
+  {
+   "id": "34-full-14",
+   "text": "Beyaz Erguvan Caddesi No:60 Paşabahçe Mahallesi Beykoz/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w718797095",
+    "number": "60",
+    "streetName": "Beyaz Erguvan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-15",
+   "text": "Aydınlı Mah. Sümbül Sokağı 11, Tuzla, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w626410675",
+    "number": "11",
+    "streetName": "Sümbül Sokağı"
+   }
+  },
+  {
+   "id": "34-full-16",
+   "text": "İstanbul, Kadıköy, Caferağa Mahallesi, Dr. Esat Işık Caddesi, Kapı No: 76",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w478456849",
+    "number": "76",
+    "streetName": "Dr. Esat Işık Caddesi"
+   }
+  },
+  {
+   "id": "34-full-17",
+   "text": "İstanbul Kartal Petrol İş Mah. Vişne Sokak No:22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w546909473",
+    "number": "22",
+    "streetName": "Vişne Sokak"
+   }
+  },
+  {
+   "id": "34-full-18",
+   "text": "Kaptan Arif Sokağı No:36 Suadiye Mahallesi Kadıköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w549621632",
+    "number": "36",
+    "streetName": "Kaptan Arif Sokağı"
+   }
+  },
+  {
+   "id": "34-full-19",
+   "text": "Yenidoğan Mah. Akın Caddesi 58, Sancaktepe, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127575368",
+    "number": "58",
+    "streetName": "Akın Caddesi"
+   }
+  },
+  {
+   "id": "34-full-20",
+   "text": "İstanbul, Fatih, Küçük Ayasofya Mahallesi, Şehsuvarbey Sokak, Kapı No: 22",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w530620450",
+    "number": "22",
+    "streetName": "Şehsuvarbey Sokak"
+   }
+  },
+  {
+   "id": "34-full-21",
+   "text": "İstanbul Avcılar Ambarlı Mah. Fevzi Çakmak Caddesi No:61/2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6680882685",
+    "number": "61/2",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "34-full-22",
+   "text": "Alaaddin Sk. No:13 Fatih Mahallesi Pendik/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w653350702",
+    "number": "13",
+    "streetName": "Alaaddin Sk."
+   }
+  },
+  {
+   "id": "34-full-23",
+   "text": "Hobyar Mah. Ankara Caddesi 67, Fatih, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13735215640",
+    "number": "67",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "34-full-24",
+   "text": "İstanbul, Çekmeköy, Çamlık Mahallesi, Fatih Caddesi, Kapı No: 54",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5489334450",
+    "number": "54",
+    "streetName": "Fatih Caddesi"
+   }
+  },
+  {
+   "id": "34-full-25",
+   "text": "İstanbul Kadıköy Suadiye Mah. Bağdat Caddesi No:373",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w235683618",
+    "number": "373",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-full-26",
+   "text": "Bağdat Caddesi No:5 Bağlarbaşı Mahallesi Maltepe/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w461207989",
+    "number": "5",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-full-27",
+   "text": "Suadiye Mah. Aydın Sokağı 3, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w549595356",
+    "number": "3",
+    "streetName": "Aydın Sokağı"
+   }
+  },
+  {
+   "id": "34-full-28",
+   "text": "İstanbul, Eyüpsultan, Rami Yeni Mahallesi, İmam Rüstem Sokağı, Kapı No: 10-12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1034418544",
+    "number": "10-12",
+    "streetName": "İmam Rüstem Sokağı"
+   }
+  },
+  {
+   "id": "34-full-29",
+   "text": "İstanbul Arnavutköy İslambey Mah. Gülnihal Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4455185723",
+    "number": "3",
+    "streetName": "Gülnihal Sokak"
+   }
+  },
+  {
+   "id": "34-full-30",
+   "text": "Uluçınar Sokağı No:17 Küçük Çamlıca Mahallesi Üsküdar/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w722926920",
+    "number": "17",
+    "streetName": "Uluçınar Sokağı"
+   }
+  },
+  {
+   "id": "34-full-31",
+   "text": "Yenidoğan Mah. Barbaros Caddesi 35, Sancaktepe, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609560",
+    "number": "35",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "34-full-32",
+   "text": "İstanbul, Üsküdar, Mehmet Akif Ersoy Mahallesi, Ağasar Sokağı, Kapı No: 99E",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1297291414",
+    "number": "99E",
+    "streetName": "Ağasar Sokağı"
+   }
+  },
+  {
+   "id": "34-full-33",
+   "text": "İstanbul Silivri Çanta Sancaktepe Mah. Zühre Sokağı No:27",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12158058117",
+    "number": "27",
+    "streetName": "Zühre Sokağı"
+   }
+  },
+  {
+   "id": "34-full-34",
+   "text": "Hanımeli Sokak No:13 Zekeriyaköy Mahallesi Sarıyer/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w275901851",
+    "number": "13",
+    "streetName": "Hanımeli Sokak"
+   }
+  },
+  {
+   "id": "34-full-35",
+   "text": "Aydınlı Mah. Ersan Sk. 1, Tuzla, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w627904157",
+    "number": "1",
+    "streetName": "Ersan Sk."
+   }
+  },
+  {
+   "id": "34-full-36",
+   "text": "İstanbul, Kadıköy, 19 Mayıs Mahallesi, Şahin Sokağı, Kapı No: 9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13033339872",
+    "number": "9",
+    "streetName": "Şahin Sokağı"
+   }
+  },
+  {
+   "id": "34-full-37",
+   "text": "İstanbul Sancaktepe Yenidoğan Mah. Kıbrıs Sokağı No:9A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562166",
+    "number": "9A",
+    "streetName": "Kıbrıs Sokağı"
+   }
+  },
+  {
+   "id": "34-full-38",
+   "text": "Halkalı İstasyon Caddesi No:54 İstasyon Mahallesi Küçükçekmece/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w539643898",
+    "number": "54",
+    "streetName": "Halkalı İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "34-full-39",
+   "text": "Caddebostan Mah. Tuna Sokağı 5, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w478593773",
+    "number": "5",
+    "streetName": "Tuna Sokağı"
+   }
+  },
+  {
+   "id": "34-full-40",
+   "text": "İstanbul, Bahçelievler, Zafer Mahallesi, Marsan Sokak, Kapı No: 11/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5047367032",
+    "number": "11/A",
+    "streetName": "Marsan Sokak"
+   }
+  },
+  {
+   "id": "34-full-41",
+   "text": "İstanbul Kadıköy Acıbadem Mah. Acıbadem Caddesi No:76/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14289843101",
+    "number": "76/A",
+    "streetName": "Acıbadem Caddesi"
+   }
+  },
+  {
+   "id": "34-full-42",
+   "text": "İkbal Caddesi111 No:156/C Çamlık Mahallesi Ümraniye/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10100852248",
+    "number": "156/C",
+    "streetName": "İkbal Caddesi111"
+   }
+  },
+  {
+   "id": "34-full-43",
+   "text": "Tomtom Mah. İstiklal Caddesi 174, Beyoğlu, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n3360707037",
+    "number": "174",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "34-full-44",
+   "text": "İstanbul, Pendik, Çamlık Mahallesi, Leylak Sokağı, Kapı No: 3/5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w675451859",
+    "number": "3/5",
+    "streetName": "Leylak Sokağı"
+   }
+  },
+  {
+   "id": "34-full-45",
+   "text": "İstanbul Ümraniye Atakent Mah. Reşitpaşa Caddesi No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13951243401",
+    "number": "19",
+    "streetName": "Reşitpaşa Caddesi"
+   }
+  },
+  {
+   "id": "34-full-46",
+   "text": "Gazi Ethempaşa Sokağı No:4 Rami Yeni Mahallesi Eyüpsultan/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1130850002",
+    "number": "4",
+    "streetName": "Gazi Ethempaşa Sokağı"
+   }
+  },
+  {
+   "id": "34-full-47",
+   "text": "Aydınlı Mah. Çamlı Belde Yolu 66, Tuzla, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w627895245",
+    "number": "66",
+    "streetName": "Çamlı Belde Yolu"
+   }
+  },
+  {
+   "id": "34-full-48",
+   "text": "İstanbul, Büyükçekmece, Çakmaklı Mahallesi, Hicaz Sokağı, Kapı No: 6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1330882268",
+    "number": "6",
+    "streetName": "Hicaz Sokağı"
+   }
+  },
+  {
+   "id": "34-full-49",
+   "text": "İstanbul Büyükçekmece Karaağaç Mah. Sırtköy Bulvarı No:33/304",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12125656631",
+    "number": "33/304",
+    "streetName": "Sırtköy Bulvarı"
+   }
+  },
+  {
+   "id": "34-full-50",
+   "text": "Mehmetçik Sokağı No:1 Nizam Mahallesi Adalar/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1192914801",
+    "number": "1",
+    "streetName": "Mehmetçik Sokağı"
+   }
+  },
+  {
+   "id": "34-full-51",
+   "text": "Ağva Merkez Mah. Yakuplu Caddesi 154/1, Şile, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9526938831",
+    "number": "154/1",
+    "streetName": "Yakuplu Caddesi"
+   }
+  },
+  {
+   "id": "34-full-52",
+   "text": "İstanbul, Kadıköy, Caferağa Mahallesi, General Asım Gündüz Caddesi, Kapı No: 78",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694706305",
+    "number": "78",
+    "streetName": "General Asım Gündüz Caddesi"
+   }
+  },
+  {
+   "id": "34-full-53",
+   "text": "İstanbul Pendik Batı Mah. Neyzen Tevfik Sokak No:19",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w540605141",
+    "number": "19",
+    "streetName": "Neyzen Tevfik Sokak"
+   }
+  },
+  {
+   "id": "34-full-54",
+   "text": "Göktürk Caddesi No:9/A Göktürk Merkez Mahallesi Eyüpsultan/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w875459391",
+    "number": "9/A",
+    "streetName": "Göktürk Caddesi"
+   }
+  },
+  {
+   "id": "34-full-55",
+   "text": "Caferağa Mah. Moda Bostanı Sokağı 7, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w693985483",
+    "number": "7",
+    "streetName": "Moda Bostanı Sokağı"
+   }
+  },
+  {
+   "id": "34-full-56",
+   "text": "İstanbul, Eyüpsultan, Rami Yeni Mahallesi, Paşa Baba Sokağı, Kapı No: 12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1036240635",
+    "number": "12",
+    "streetName": "Paşa Baba Sokağı"
+   }
+  },
+  {
+   "id": "34-full-57",
+   "text": "İstanbul Kadıköy Merdivenköy Mah. Dr. Erkin Caddesi No:58/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6191657555",
+    "number": "58/A",
+    "streetName": "Dr. Erkin Caddesi"
+   }
+  },
+  {
+   "id": "34-full-58",
+   "text": "Fişekhane Caddesi No:28A Zeytinlik Mahallesi Bakırköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14156263801",
+    "number": "28A",
+    "streetName": "Fişekhane Caddesi"
+   }
+  },
+  {
+   "id": "34-full-59",
+   "text": "Rasimpaşa Mah. İzzettin Sokağı 44A, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10220947915",
+    "number": "44A",
+    "streetName": "İzzettin Sokağı"
+   }
+  },
+  {
+   "id": "34-full-60",
+   "text": "İstanbul, Sancaktepe, Yenidoğan Mahallesi, Huzur Sokağı, Kapı No: 20",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127582248",
+    "number": "20",
+    "streetName": "Huzur Sokağı"
+   }
+  },
+  {
+   "id": "34-full-61",
+   "text": "İstanbul Kadıköy Merdivenköy Mah. Fahrettin Kerim Gökay Caddesi No:219/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8521509251",
+    "number": "219/A",
+    "streetName": "Fahrettin Kerim Gökay Caddesi"
+   }
+  },
+  {
+   "id": "34-full-62",
+   "text": "Pazar Yolu Sokağı No:4 Osmanağa Mahallesi Kadıköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694941290",
+    "number": "4",
+    "streetName": "Pazar Yolu Sokağı"
+   }
+  },
+  {
+   "id": "34-full-63",
+   "text": "Caddebostan Mah. Zincirli Köşk Sokağı 2, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w809725247",
+    "number": "2",
+    "streetName": "Zincirli Köşk Sokağı"
+   }
+  },
+  {
+   "id": "34-full-64",
+   "text": "İstanbul, Sancaktepe, Yenidoğan Mahallesi, Tunahan Caddesi, Kapı No: 34",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609279",
+    "number": "34",
+    "streetName": "Tunahan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-65",
+   "text": "İstanbul Kartal Cumhuriyet Mah. Seza Sokak No:6C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12750689572",
+    "number": "6C",
+    "streetName": "Seza Sokak"
+   }
+  },
+  {
+   "id": "34-full-66",
+   "text": "Tansel Caddesi No:12/18 Cevizli Mahallesi Maltepe/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w750038846",
+    "number": "12/18",
+    "streetName": "Tansel Caddesi"
+   }
+  },
+  {
+   "id": "34-full-67",
+   "text": "Caferağa Mah. Hasırcıbaşı Caddesi 66, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694681603",
+    "number": "66",
+    "streetName": "Hasırcıbaşı Caddesi"
+   }
+  },
+  {
+   "id": "34-full-68",
+   "text": "İstanbul, Kadıköy, Rasimpaşa Mahallesi, Recaizade Sokağı, Kapı No: 37A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10220946429",
+    "number": "37A",
+    "streetName": "Recaizade Sokağı"
+   }
+  },
+  {
+   "id": "34-full-69",
+   "text": "İstanbul Sancaktepe Yenidoğan Mah. Çayır Sokağı No:62",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609292",
+    "number": "62",
+    "streetName": "Çayır Sokağı"
+   }
+  },
+  {
+   "id": "34-full-70",
+   "text": "Semerkant Bulvarı No:18/11 Çamlık Mahallesi Pendik/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w594684613",
+    "number": "18/11",
+    "streetName": "Semerkant Bulvarı"
+   }
+  },
+  {
+   "id": "34-full-71",
+   "text": "Bahçeköy Kemer Mah. Şehit Cengiz Topel Caddesi 15, Sarıyer, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13891424865",
+    "number": "15",
+    "streetName": "Şehit Cengiz Topel Caddesi"
+   }
+  },
+  {
+   "id": "34-full-72",
+   "text": "İstanbul, Avcılar, Cihangir Mahallesi, Kirazlı Caddesi, Kapı No: 29",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13420597584",
+    "number": "29",
+    "streetName": "Kirazlı Caddesi"
+   }
+  },
+  {
+   "id": "34-full-73",
+   "text": "İstanbul Eyüpsultan Topçular Mah. 1. Maltepe Çıkmazı No:1/4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1332454226",
+    "number": "1/4",
+    "streetName": "1. Maltepe Çıkmazı"
+   }
+  },
+  {
+   "id": "34-full-74",
+   "text": "Manyasizade Caddesi No:21/B Atikali Mahallesi Fatih/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4828995339",
+    "number": "21/B",
+    "streetName": "Manyasizade Caddesi"
+   }
+  },
+  {
+   "id": "34-full-75",
+   "text": "Ambarlı Mah. Eğitim Sokağı 14, Avcılar, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w524619425",
+    "number": "14",
+    "streetName": "Eğitim Sokağı"
+   }
+  },
+  {
+   "id": "34-full-76",
+   "text": "İstanbul, Pendik, Esenler Mahallesi, İlknur Sokağı, Kapı No: 27",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1545381216",
+    "number": "27",
+    "streetName": "İlknur Sokağı"
+   }
+  },
+  {
+   "id": "34-full-77",
+   "text": "İstanbul Kartal Petrol İş Mah. Vişne Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w546910587",
+    "number": "11",
+    "streetName": "Vişne Sokak"
+   }
+  },
+  {
+   "id": "34-full-78",
+   "text": "Çeşme Cad. No:14 Orhanlı Mahallesi Tuzla/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w632251021",
+    "number": "14",
+    "streetName": "Çeşme Cad."
+   }
+  },
+  {
+   "id": "34-full-79",
+   "text": "Yenidoğan Mah. Çayır Sokağı 22, Sancaktepe, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127608903",
+    "number": "22",
+    "streetName": "Çayır Sokağı"
+   }
+  },
+  {
+   "id": "34-full-80",
+   "text": "İstanbul, Beykoz, Merkez Mahallesi, Kelle İbrahim Caddesi, Kapı No: 2A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w739605747",
+    "number": "2A",
+    "streetName": "Kelle İbrahim Caddesi"
+   }
+  },
+  {
+   "id": "34-full-81",
+   "text": "İstanbul Bakırköy Kartaltepe Mah. Mektupçu Sokağı No:5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1123959233",
+    "number": "5",
+    "streetName": "Mektupçu Sokağı"
+   }
+  },
+  {
+   "id": "34-full-82",
+   "text": "Hazım Tepeyran Sokağı No:5 19 Mayıs Mahallesi Kadıköy/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12809056201",
+    "number": "5",
+    "streetName": "Hazım Tepeyran Sokağı"
+   }
+  },
+  {
+   "id": "34-full-83",
+   "text": "Petrol İş Mah. Villa Sokağı 7, Kartal, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w547321778",
+    "number": "7",
+    "streetName": "Villa Sokağı"
+   }
+  },
+  {
+   "id": "34-full-84",
+   "text": "İstanbul, Kadıköy, Erenköy Mahallesi, Fırın Sokağı, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w810422452",
+    "number": "18",
+    "streetName": "Fırın Sokağı"
+   }
+  },
+  {
+   "id": "34-full-85",
+   "text": "İstanbul Sancaktepe Yenidoğan Mah. Murat Sokağı No:2B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562228",
+    "number": "2B",
+    "streetName": "Murat Sokağı"
+   }
+  },
+  {
+   "id": "34-full-86",
+   "text": "Kardelen Sokağı No:2A Bahçeşehir 2. Kısım Mahallesi Başakşehir/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12125725254",
+    "number": "2A",
+    "streetName": "Kardelen Sokağı"
+   }
+  },
+  {
+   "id": "34-full-87",
+   "text": "Rasimpaşa Mah. Uzun Hafız Sokağı 57, Kadıköy, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11898250328",
+    "number": "57",
+    "streetName": "Uzun Hafız Sokağı"
+   }
+  },
+  {
+   "id": "34-full-88",
+   "text": "İstanbul, Kadıköy, Feneryolu Mahallesi, Hüseyin Hüsnüpaşa Sokağı, Kapı No: 3/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14203604702",
+    "number": "3/B",
+    "streetName": "Hüseyin Hüsnüpaşa Sokağı"
+   }
+  },
+  {
+   "id": "34-full-89",
+   "text": "İstanbul Kadıköy Osmanağa Mah. Vişne Sokak No:36",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13686546701",
+    "number": "36",
+    "streetName": "Vişne Sokak"
+   }
+  },
+  {
+   "id": "34-full-90",
+   "text": "Hayriye Tüccarı Caddesi No:32/1 Katip Kasım Mahallesi Fatih/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w520646500",
+    "number": "32/1",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-full-91",
+   "text": "Yenidoğan Mah. Tunahan Caddesi 30, Sancaktepe, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609283",
+    "number": "30",
+    "streetName": "Tunahan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-92",
+   "text": "İstanbul, Ataşehir, Küçükbakkalköy Mahallesi, Prof. Dr. Hıfzı Özcan Caddesi, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w866642952",
+    "number": "1",
+    "streetName": "Prof. Dr. Hıfzı Özcan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-93",
+   "text": "İstanbul Sarıyer Zekeriyaköy Mah. Meşe Sokak No:29",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w276187016",
+    "number": "29",
+    "streetName": "Meşe Sokak"
+   }
+  },
+  {
+   "id": "34-full-94",
+   "text": "Prof. Dr. Necmettin Erbakan Caddesi No:95 İçerenköy Mahallesi Ataşehir/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9800856858",
+    "number": "95",
+    "streetName": "Prof. Dr. Necmettin Erbakan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-95",
+   "text": "Yenidoğan Mah. Ender Sokağı 1, Sancaktepe, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127563566",
+    "number": "1",
+    "streetName": "Ender Sokağı"
+   }
+  },
+  {
+   "id": "34-full-96",
+   "text": "İstanbul, Ataşehir, Küçükbakkalköy Mahallesi, Gülbahar Sokağı, Kapı No: 5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11913117632",
+    "number": "5",
+    "streetName": "Gülbahar Sokağı"
+   }
+  },
+  {
+   "id": "34-full-97",
+   "text": "İstanbul Beşiktaş Sinanpaşa Mah. Hayrettin İskelesi Sokağı No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8494196892",
+    "number": "1",
+    "streetName": "Hayrettin İskelesi Sokağı"
+   }
+  },
+  {
+   "id": "34-full-98",
+   "text": "Beyazıt Sokağı No:13-15 Yenidoğan Mahallesi Sancaktepe/İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562449",
+    "number": "13-15",
+    "streetName": "Beyazıt Sokağı"
+   }
+  },
+  {
+   "id": "34-full-99",
+   "text": "Aydınlı Mah. Aslı Cad. 67, Tuzla, İstanbul",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w624992304",
+    "number": "67",
+    "streetName": "Aslı Cad."
+   }
+  },
+  {
+   "id": "34-full-100",
+   "text": "İstanbul, Tuzla, Aydınlı Mahallesi, Hamarat Sk., Kapı No: 5",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w628209094",
+    "number": "5",
+    "streetName": "Hamarat Sk."
+   }
+  },
+  {
+   "id": "34-full-101",
+   "text": "İstanbul Küçükçekmece Atatürk Mah. İkitelli Caddesi No:140",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "34",
+    "osm": "w597952774",
+    "number": "140",
+    "streetName": "İkitelli Caddesi"
+   }
+  },
+  {
+   "id": "34-full-102",
+   "text": "İstanbul Esenyurt Osmangazi Mah. Vatan Caddesi No:5",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "34",
+    "osm": "w1352040251",
+    "number": "5",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "34-full-103",
+   "text": "İstanbul Fatih Alemdar Mah. Divanyolu Caddesi No:12",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "34",
+    "osm": "n6356489886",
+    "number": "12",
+    "streetName": "Divanyolu Caddesi"
+   }
+  },
+  {
+   "id": "34-full-104",
+   "text": "İstanbul Pendik Çamçeşme Mah. Misakı Milli Caddesi No:26",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "34",
+    "osm": "w684948386",
+    "number": "26",
+    "streetName": "Misakı Milli Caddesi"
+   }
+  },
+  {
+   "id": "34-full-105",
+   "text": "İstanbul Fatih Alemdar Mah. Divanyolu Caddesi No:12",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "34",
+    "osm": "w313451996",
+    "number": "12",
+    "streetName": "Divanyolu Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-1",
+   "text": "istanbul beykoz kavacik mah fatih sultan mehmet cd. no 2c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4582621593",
+    "number": "2C",
+    "streetName": "Fatih Sultan Mehmet Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-2",
+   "text": "istanbul fatih balat mah yildirim cad. no 128",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13026654305",
+    "number": "128",
+    "streetName": "Yıldırım Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-3",
+   "text": "ISTANBUL ZEYTINBURNU MALTEPE MAH KARACABEY SK. NO 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1298217799",
+    "number": "1",
+    "streetName": "Karacabey Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-4",
+   "text": "ISTANBUL AVCILAR UNIVERSITE MAH KANARYA SK NO 34/AA",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14184469602",
+    "number": "34/AA",
+    "streetName": "Kanarya Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-5",
+   "text": "istanbul silivri canta sancaktepe mah zuhre sok. no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12158058112",
+    "number": "17",
+    "streetName": "Zühre Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-6",
+   "text": "istanbul sancaktepe yenidogan mah akin cd no 29",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562199",
+    "number": "29",
+    "streetName": "Akın Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-7",
+   "text": "istanbul maltepe yali mah piri reis cad. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w517513023",
+    "number": "3",
+    "streetName": "Piri Reis Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-8",
+   "text": "istanbul kadikoy suadiye mah bagdat cd no 453",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w547117252",
+    "number": "453",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-9",
+   "text": "ISTANBUL PENDIK BATI MAH TEVFIK FIKRET SOK. NO 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6402530419",
+    "number": "8",
+    "streetName": "Tevfik Fikret Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-10",
+   "text": "istanbul kadikoy kozyatagi mah oral sk no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11662220161",
+    "number": "4",
+    "streetName": "Oral Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-11",
+   "text": "istanbul atasehir kucukbakkalkoy mah serif ali cad. no 62/64",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6495058966",
+    "number": "62/64",
+    "streetName": "Şerif Ali Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-12",
+   "text": "istanbul bagcilar goztepe mah kazim karabekir cd no 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488956972",
+    "number": "15",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-13",
+   "text": "istanbul kadikoy bostanci mah bagdat cad. no 513",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w546905023",
+    "number": "513",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-14",
+   "text": "istanbul avcilar cihangir mah kirazli cd. no 35",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13420597585",
+    "number": "35",
+    "streetName": "Kirazlı Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-15",
+   "text": "istanbul kadikoy suadiye mah asuman sk no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w543871478",
+    "number": "4",
+    "streetName": "Asuman Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-16",
+   "text": "ISTANBUL SANCAKTEPE YENIDOGAN MAH OMER HAYYAM CD. NO 33/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562620",
+    "number": "33/1",
+    "streetName": "Ömer Hayyam Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-17",
+   "text": "istanbul uskudar kandilli mah marti sk. no 2/22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10560595843",
+    "number": "2/22",
+    "streetName": "Martı Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-18",
+   "text": "istanbul kadikoy caferaga mah general asim gunduz cd no 81",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w478608426",
+    "number": "81",
+    "streetName": "General Asım Gündüz Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-19",
+   "text": "istanbul kadikoy sahrayicedit mah bahceli sok. no 8",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9966218477",
+    "number": "8",
+    "streetName": "Bahçeli Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-20",
+   "text": "istanbul sariyer zekeriyakoy mah zeytin sok. no 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w275894122",
+    "number": "28",
+    "streetName": "Zeytin Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-21",
+   "text": "istanbul eyupsultan rami yeni mah gulaga sk. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1036240720",
+    "number": "4",
+    "streetName": "Gülağa Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-22",
+   "text": "istanbul fatih hirka-i serif mah aktar sok. no 7",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w785704771",
+    "number": "7",
+    "streetName": "Aktar Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-23",
+   "text": "ISTANBUL SANCAKTEPE YENIDOGAN MAH MELIH SK NO 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127563790",
+    "number": "12",
+    "streetName": "Melih Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-24",
+   "text": "istanbul sile dogancili mah karsidegirmen cd. no 41",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w459830135",
+    "number": "41",
+    "streetName": "KarşıDeğirmen Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-25",
+   "text": "ISTANBUL BEYOGLU KULOGLU MAH SADRI ALISIK SK. NO 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12181011001",
+    "number": "28",
+    "streetName": "Sadri Alışık Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-26",
+   "text": "istanbul gaziosmanpasa merkez mah cukurcesme cad. no 49/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8733501200",
+    "number": "49/A",
+    "streetName": "Çukurçeşme Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-27",
+   "text": "istanbul kadikoy rasimpasa mah elmalicesme sok. no 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1117875309",
+    "number": "49",
+    "streetName": "Elmalıçeşme Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-28",
+   "text": "istanbul kadikoy suadiye mah tonozlu sk. no 36",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w549621635",
+    "number": "36",
+    "streetName": "Tonozlu Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-29",
+   "text": "istanbul sisli inonu mah cumhuriyet cd no 127/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w664978669",
+    "number": "127/A",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-30",
+   "text": "istanbul kartal soganlik yeni mah mimar sinan cd. no 40a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13851578667",
+    "number": "40A",
+    "streetName": "Mimar Sinan Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-31",
+   "text": "istanbul sancaktepe yenidogan mah amac sk no 5/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127582264",
+    "number": "5/1",
+    "streetName": "Amaç Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-32",
+   "text": "istanbul kadikoy erenkoy mah firin sok. no 30",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14188894101",
+    "number": "30",
+    "streetName": "Fırın Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-33",
+   "text": "istanbul sancaktepe yenidogan mah ilba sk. no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127581901",
+    "number": "23",
+    "streetName": "İlba Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-34",
+   "text": "ISTANBUL PENDIK AHMET YESEVI MAH GUNEYSU SK. NO 28",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w652911122",
+    "number": "28",
+    "streetName": "Güneysu Sk."
+   }
+  },
+  {
+   "id": "34-folded-35",
+   "text": "istanbul kadikoy caferaga mah nail bey sok. no 29a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10149339317",
+    "number": "29A",
+    "streetName": "Nail Bey Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-36",
+   "text": "istanbul sancaktepe yenidogan mah arifler sok. no 4a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562425",
+    "number": "4A",
+    "streetName": "Arifler Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-37",
+   "text": "istanbul tuzla aydinli mah yakamoz sk. no 10-12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "r8655513",
+    "number": "10-12",
+    "streetName": "Yakamoz Sk."
+   }
+  },
+  {
+   "id": "34-folded-38",
+   "text": "istanbul bayrampasa yenidogan mah rami kisla cd. no 95",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1136704976",
+    "number": "95",
+    "streetName": "Rami Kışla Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-39",
+   "text": "istanbul sancaktepe yenidogan mah girne sk. no 1-3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562292",
+    "number": "1-3",
+    "streetName": "Girne Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-40",
+   "text": "ISTANBUL KADIKOY RASIMPASA MAH NUZHET EFENDI SK. NO 52",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w695616954",
+    "number": "52",
+    "streetName": "Nüzhet Efendi Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-41",
+   "text": "istanbul tuzla aydinli mah carsi sk. no 18",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w625095958",
+    "number": "18",
+    "streetName": "Çarşı Sk."
+   }
+  },
+  {
+   "id": "34-folded-42",
+   "text": "ISTANBUL ARNAVUTKOY ARNAVUTKOY MERKEZ MAH MUSLIM SK NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w448041847",
+    "number": "3",
+    "streetName": "Müslim Sokak"
+   }
+  },
+  {
+   "id": "34-folded-43",
+   "text": "ISTANBUL KADIKOY FENERBAHCE MAH ALAGEYIK SK NO 3A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10287302209",
+    "number": "3A",
+    "streetName": "Alageyik Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-44",
+   "text": "istanbul kadikoy erenkoy mah bengi sok. no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w502583217",
+    "number": "12",
+    "streetName": "Bengi Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-45",
+   "text": "istanbul tuzla aydinli mah oya sk. no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w627847836",
+    "number": "19",
+    "streetName": "Oya Sk."
+   }
+  },
+  {
+   "id": "34-folded-46",
+   "text": "ISTANBUL KADIKOY SUADIYE MAH AYDIN SOK. NO 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11367257396",
+    "number": "16",
+    "streetName": "Aydın Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-47",
+   "text": "istanbul kartal orhantepe mah ihlamur sk. no 1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1120836968",
+    "number": "1",
+    "streetName": "Ihlamur Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-48",
+   "text": "ISTANBUL USKUDAR KUCUKSU MAH KAMER SOK. NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10563269255",
+    "number": "9",
+    "streetName": "Kamer Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-49",
+   "text": "istanbul kadikoy caferaga mah yaver bey sok. no 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694263694",
+    "number": "17",
+    "streetName": "Yaver Bey Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-50",
+   "text": "ISTANBUL SANCAKTEPE YENIDOGAN MAH TEVFIK SOK. NO 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127563260",
+    "number": "5",
+    "streetName": "Tevfik Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-51",
+   "text": "istanbul kadikoy feneryolu mah gedikli sk. no 11",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10555045089",
+    "number": "11",
+    "streetName": "Gedikli Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-52",
+   "text": "istanbul arnavutkoy imrahor mah sevban mehmet cad. no 148/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11799458770",
+    "number": "148/1",
+    "streetName": "Sevban Mehmet Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-53",
+   "text": "istanbul umraniye istiklal mah sair nesimi sk. no 49-51",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1495045761",
+    "number": "49-51",
+    "streetName": "Şair Nesimi Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-54",
+   "text": "istanbul fatih balat mah vodina cd. no 39a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13738064850",
+    "number": "39A",
+    "streetName": "Vodina Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-55",
+   "text": "istanbul tuzla evliya celebi mah akgul sok. no 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4821411209",
+    "number": "14",
+    "streetName": "Akgül Sokak"
+   }
+  },
+  {
+   "id": "34-folded-56",
+   "text": "istanbul pendik bahcelievler mah mutluluk sk no 23",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w546864646",
+    "number": "23",
+    "streetName": "Mutluluk Sokak"
+   }
+  },
+  {
+   "id": "34-folded-57",
+   "text": "istanbul beyoglu asmali mescit mah mesrutiyet cd no 83",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6821294089",
+    "number": "83",
+    "streetName": "Meşrutiyet Caddesi"
+   }
+  },
+  {
+   "id": "34-folded-58",
+   "text": "istanbul tuzla aydinli mah ulus sok. no 49",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w627705721",
+    "number": "49",
+    "streetName": "Ulus Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-59",
+   "text": "istanbul bakirkoy yesilyurt mah ekin sk no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w539743629",
+    "number": "5",
+    "streetName": "Ekin Sokağı"
+   }
+  },
+  {
+   "id": "34-folded-60",
+   "text": "istanbul kadikoy suadiye mah semsettin gunaltay cad. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w460265712",
+    "number": "2",
+    "streetName": "Şemsettin Günaltay Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-1",
+   "text": "İstanbul Beyoğlu Katip Mustafa Çelebi Mah. Billurtu Sokağı No:14",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11811873069",
+    "number": "14",
+    "streetName": "Billurcu Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-2",
+   "text": "Altıonrdu Caddesi No:28 Merkez Mahallesi Eyüpsultan/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1075708597",
+    "number": "28",
+    "streetName": "Altınordu Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-3",
+   "text": "Firuzağa Mah. Boraran Sokağı 1, Beyoğlu, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w247045695",
+    "number": "1",
+    "streetName": "Borazan Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-4",
+   "text": "İstanbul, Şişli, Merkez Mahallesi, Sıra Cfvizler Caddesi, Kapı No: 23",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w548990901",
+    "number": "23",
+    "streetName": "Sıra Cevizler Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-5",
+   "text": "İstanbul Kadıköy Caddebostan Mah. Nurtetin Ali Berkol Sokağı No:4",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1018572492",
+    "number": "4",
+    "streetName": "Nurettin Ali Berkol Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-6",
+   "text": "Kadilli Göksu Caddesi No:11 Kandilli Mahallesi Üsküdar/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10312137545",
+    "number": "11",
+    "streetName": "Kandilli Göksu Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-7",
+   "text": "Katip Mustafa Çelebi Mah. Sıraselivler Caddesi 32, Beyoğlu, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w249042563",
+    "number": "32",
+    "streetName": "Sıraselviler Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-8",
+   "text": "İstanbul, Şişli, Bozkurt Mahallesi, Ergeneon Caddesi, Kapı No: 7/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14203211801",
+    "number": "7/A",
+    "streetName": "Ergenekon Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-9",
+   "text": "İstanbul Beykoz Paşabahçe Mah. Beyaz Erugvan Caddesi No:60",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w718797095",
+    "number": "60",
+    "streetName": "Beyaz Erguvan Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-10",
+   "text": "Sübmül Sokağı No:11 Aydınlı Mahallesi Tuzla/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w626410675",
+    "number": "11",
+    "streetName": "Sümbül Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-11",
+   "text": "Suadiye Mah. Kpatan Arif Sokağı 36, Kadıköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w549621632",
+    "number": "36",
+    "streetName": "Kaptan Arif Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-12",
+   "text": "İstanbul, Fatih, Küçük Ayasofya Mahallesi, Şehsuavrbey Sokak, Kapı No: 22",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w530620450",
+    "number": "22",
+    "streetName": "Şehsuvarbey Sokak"
+   }
+  },
+  {
+   "id": "34-typo-13",
+   "text": "İstanbul Avcılar Ambarlı Mah. Fevzi Çamkak Caddesi No:61/2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6680882685",
+    "number": "61/2",
+    "streetName": "Fevzi Çakmak Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-14",
+   "text": "Alaadein Sk. No:13 Fatih Mahallesi Pendik/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w653350702",
+    "number": "13",
+    "streetName": "Alaaddin Sk."
+   }
+  },
+  {
+   "id": "34-typo-15",
+   "text": "Hobyar Mah. Ankagra Caddesi 67, Fatih, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13735215640",
+    "number": "67",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-16",
+   "text": "İstanbul, Kadıköy, Suadiye Mahallesi, Bağdpt Caddesi, Kapı No: 373",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w235683618",
+    "number": "373",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-17",
+   "text": "İstanbul Maltepe Bağlarbaşı Mah. Bağadt Caddesi No:5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w461207989",
+    "number": "5",
+    "streetName": "Bağdat Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-18",
+   "text": "İmam Rvüstem Sokağı No:10-12 Rami Yeni Mahallesi Eyüpsultan/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1034418544",
+    "number": "10-12",
+    "streetName": "İmam Rüstem Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-19",
+   "text": "İslambey Mah. Gülihal Sokak 3, Arnavutköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4455185723",
+    "number": "3",
+    "streetName": "Gülnihal Sokak"
+   }
+  },
+  {
+   "id": "34-typo-20",
+   "text": "İstanbul, Üsküdar, Küçük Çamlıca Mahallesi, Uluuçınar Sokağı, Kapı No: 17",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w722926920",
+    "number": "17",
+    "streetName": "Uluçınar Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-21",
+   "text": "İstanbul Sancaktepe Yenidoğan Mah. Barbros Caddesi No:35",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609560",
+    "number": "35",
+    "streetName": "Barbaros Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-22",
+   "text": "Ağsaar Sokağı No:99E Mehmet Akif Ersoy Mahallesi Üsküdar/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1297291414",
+    "number": "99E",
+    "streetName": "Ağasar Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-23",
+   "text": "Zekeriyaköy Mah. Hanıemli Sokak 13, Sarıyer, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w275901851",
+    "number": "13",
+    "streetName": "Hanımeli Sokak"
+   }
+  },
+  {
+   "id": "34-typo-24",
+   "text": "İstanbul, Sancaktepe, Yenidoğan Mahallesi, Kbırıs Sokağı, Kapı No: 9A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562166",
+    "number": "9A",
+    "streetName": "Kıbrıs Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-25",
+   "text": "İstanbul Küçükçekmece İstasyon Mah. Halkalı İstauyon Caddesi No:54",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w539643898",
+    "number": "54",
+    "streetName": "Halkalı İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-26",
+   "text": "Mrasan Sokak No:11/A Zafer Mahallesi Bahçelievler/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5047367032",
+    "number": "11/A",
+    "streetName": "Marsan Sokak"
+   }
+  },
+  {
+   "id": "34-typo-27",
+   "text": "Acıbadem Mah. Acıbadme Caddesi 76/A, Kadıköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14289843101",
+    "number": "76/A",
+    "streetName": "Acıbadem Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-28",
+   "text": "İstanbul, Beyoğlu, Tomtom Mahallesi, İsgtiklal Caddesi, Kapı No: 174",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n3360707037",
+    "number": "174",
+    "streetName": "İstiklal Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-29",
+   "text": "İstanbul Pendik Çamlık Mah. Lelyak Sokağı No:3/5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w675451859",
+    "number": "3/5",
+    "streetName": "Leylak Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-30",
+   "text": "Reştpaşa Caddesi No:19 Atakent Mahallesi Ümraniye/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13951243401",
+    "number": "19",
+    "streetName": "Reşitpaşa Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-31",
+   "text": "Rami Yeni Mah. Gazi Etheopaşa Sokağı 4, Eyüpsultan, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1130850002",
+    "number": "4",
+    "streetName": "Gazi Ethempaşa Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-32",
+   "text": "İstanbul, Büyükçekmece, Karaağaç Mahallesi, Sırtkdöy Bulvarı, Kapı No: 33/304",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12125656631",
+    "number": "33/304",
+    "streetName": "Sırtköy Bulvarı"
+   }
+  },
+  {
+   "id": "34-typo-33",
+   "text": "İstanbul Adalar Nizam Mah. Mehmtçik Sokağı No:1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1192914801",
+    "number": "1",
+    "streetName": "Mehmetçik Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-34",
+   "text": "Yakuslu Caddesi No:154/1 Ağva Merkez Mahallesi Şile/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9526938831",
+    "number": "154/1",
+    "streetName": "Yakuplu Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-35",
+   "text": "Caferağa Mah. Genesral Asım Gündüz Caddesi 78, Kadıköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694706305",
+    "number": "78",
+    "streetName": "General Asım Gündüz Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-36",
+   "text": "İstanbul, Pendik, Batı Mahallesi, Nceyzen Tevfik Sokak, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w540605141",
+    "number": "19",
+    "streetName": "Neyzen Tevfik Sokak"
+   }
+  },
+  {
+   "id": "34-typo-37",
+   "text": "İstanbul Eyüpsultan Göktürk Merkez Mah. Göktüsrk Caddesi No:9/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w875459391",
+    "number": "9/A",
+    "streetName": "Göktürk Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-38",
+   "text": "Moda Bostnaı Sokağı No:7 Caferağa Mahallesi Kadıköy/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w693985483",
+    "number": "7",
+    "streetName": "Moda Bostanı Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-39",
+   "text": "Zeytinlik Mah. Fiekhane Caddesi 28A, Bakırköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14156263801",
+    "number": "28A",
+    "streetName": "Fişekhane Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-40",
+   "text": "İstanbul, Kadıköy, Rasimpaşa Mahallesi, İzzetyin Sokağı, Kapı No: 44A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10220947915",
+    "number": "44A",
+    "streetName": "İzzettin Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-41",
+   "text": "İstanbul Kadıköy Merdivenköy Mah. Fahrtetin Kerim Gökay Caddesi No:219/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8521509251",
+    "number": "219/A",
+    "streetName": "Fahrettin Kerim Gökay Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-42",
+   "text": "Zinczrli Köşk Sokağı No:2 Caddebostan Mahallesi Kadıköy/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w809725247",
+    "number": "2",
+    "streetName": "Zincirli Köşk Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-43",
+   "text": "Yenidoğan Mah. Tunahna Caddesi 34, Sancaktepe, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609279",
+    "number": "34",
+    "streetName": "Tunahan Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-44",
+   "text": "İstanbul, Maltepe, Cevizli Mahallesi, Tatnsel Caddesi, Kapı No: 12/18",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w750038846",
+    "number": "12/18",
+    "streetName": "Tansel Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-45",
+   "text": "İstanbul Kadıköy Caferağa Mah. Hasırcıaşı Caddesi No:66",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w694681603",
+    "number": "66",
+    "streetName": "Hasırcıbaşı Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-46",
+   "text": "Recaizaed Sokağı No:37A Rasimpaşa Mahallesi Kadıköy/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10220946429",
+    "number": "37A",
+    "streetName": "Recaizade Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-47",
+   "text": "Çamlık Mah. Semerkhnt Bulvarı 18/11, Pendik, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w594684613",
+    "number": "18/11",
+    "streetName": "Semerkant Bulvarı"
+   }
+  },
+  {
+   "id": "34-typo-48",
+   "text": "İstanbul, Sarıyer, Bahçeköy Kemer Mahallesi, Şehit Clngiz Topel Caddesi, Kapı No: 15",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13891424865",
+    "number": "15",
+    "streetName": "Şehit Cengiz Topel Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-49",
+   "text": "İstanbul Avcılar Cihangir Mah. Kirazflı Caddesi No:29",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13420597584",
+    "number": "29",
+    "streetName": "Kirazlı Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-50",
+   "text": "1. Maltpee Çıkmazı No:1/4 Topçular Mahallesi Eyüpsultan/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1332454226",
+    "number": "1/4",
+    "streetName": "1. Maltepe Çıkmazı"
+   }
+  },
+  {
+   "id": "34-typo-51",
+   "text": "Atikali Mah. Manasizade Caddesi 21/B, Fatih, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4828995339",
+    "number": "21/B",
+    "streetName": "Manyasizade Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-52",
+   "text": "İstanbul, Avcılar, Ambarlı Mahallesi, Eğitoim Sokağı, Kapı No: 14",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w524619425",
+    "number": "14",
+    "streetName": "Eğitim Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-53",
+   "text": "İstanbul Pendik Esenler Mah. İlkynur Sokağı No:27",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1545381216",
+    "number": "27",
+    "streetName": "İlknur Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-54",
+   "text": "Kelle İbrahm Caddesi No:2A Merkez Mahallesi Beykoz/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w739605747",
+    "number": "2A",
+    "streetName": "Kelle İbrahim Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-55",
+   "text": "Kartaltepe Mah. Mektpçu Sokağı 5, Bakırköy, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1123959233",
+    "number": "5",
+    "streetName": "Mektupçu Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-56",
+   "text": "İstanbul, Kadıköy, 19 Mayıs Mahallesi, Hazım Teperan Sokağı, Kapı No: 5",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12809056201",
+    "number": "5",
+    "streetName": "Hazım Tepeyran Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-57",
+   "text": "İstanbul Başakşehir Bahçeşehir 2. Kısım Mah. Kardeen Sokağı No:2A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12125725254",
+    "number": "2A",
+    "streetName": "Kardelen Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-58",
+   "text": "Hüseyin Hüsnüpala Sokağı No:3/B Feneryolu Mahallesi Kadıköy/İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14203604702",
+    "number": "3/B",
+    "streetName": "Hüseyin Hüsnüpaşa Sokağı"
+   }
+  },
+  {
+   "id": "34-typo-59",
+   "text": "Katip Kasım Mah. Hayriuye Tüccarı Caddesi 32/1, Fatih, İstanbul",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w520646500",
+    "number": "32/1",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-typo-60",
+   "text": "İstanbul, Sancaktepe, Yenidoğan Mahallesi, Tunhaan Caddesi, Kapı No: 30",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609283",
+    "number": "30",
+    "streetName": "Tunahan Caddesi"
+   }
+  },
+  {
+   "id": "34-numbered-1",
+   "text": "İstanbul Bağcılar Göztepe Mah. 2321. Sokak No:4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w571357453",
+    "number": "4",
+    "streetName": "2321. Sokak",
+    "streetNumber": 2321
+   }
+  },
+  {
+   "id": "34-numbered-2",
+   "text": "2276. Sokak No:12 Göztepe Mahallesi Bağcılar/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1489117935",
+    "number": "12",
+    "streetName": "2276. Sokak",
+    "streetNumber": 2276
+   }
+  },
+  {
+   "id": "34-numbered-3",
+   "text": "Davutpaşa Mah. 61. Sokak 3, Esenler, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1302182421",
+    "number": "3",
+    "streetName": "61. Sokak",
+    "streetNumber": 61
+   }
+  },
+  {
+   "id": "34-numbered-4",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2304. Sokak, Kapı No: 25",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488956967",
+    "number": "25",
+    "streetName": "2304. Sokak",
+    "streetNumber": 2304
+   }
+  },
+  {
+   "id": "34-numbered-5",
+   "text": "İstanbul Bağcılar Göztepe Mah. 2292. Sokak No:10",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w570336737",
+    "number": "10",
+    "streetName": "2292. Sokak",
+    "streetNumber": 2292
+   }
+  },
+  {
+   "id": "34-numbered-6",
+   "text": "63. Sokak No:20 Turgut Özal Mahallesi Esenyurt/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1124495042",
+    "number": "20",
+    "streetName": "63. Sokak",
+    "streetNumber": 63
+   }
+  },
+  {
+   "id": "34-numbered-7",
+   "text": "Akçaburgaz Mah. 3084. Sokak 3, Esenyurt, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w826412936",
+    "number": "3",
+    "streetName": "3084. Sokak",
+    "streetNumber": 3084
+   }
+  },
+  {
+   "id": "34-numbered-8",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2283. Sokak, Kapı No: 4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488898379",
+    "number": "4",
+    "streetName": "2283. Sokak",
+    "streetNumber": 2283
+   }
+  },
+  {
+   "id": "34-numbered-9",
+   "text": "İstanbul Gaziosmanpaşa Kazım Karabekir Mah. 859. Cadde No:16/C",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6240981993",
+    "number": "16/C",
+    "streetName": "859. Cadde",
+    "streetNumber": 859
+   }
+  },
+  {
+   "id": "34-numbered-10",
+   "text": "1 Nolu Cadde No:12 Aydınlı Mahallesi Tuzla/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w490426823",
+    "number": "12",
+    "streetName": "1 Nolu Cadde",
+    "streetNumber": 1
+   }
+  },
+  {
+   "id": "34-numbered-11",
+   "text": "Karadeniz Mah. 1142. Sokak 1, Gaziosmanpaşa, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1211571264",
+    "number": "1",
+    "streetName": "1142. Sokak",
+    "streetNumber": 1142
+   }
+  },
+  {
+   "id": "34-numbered-12",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2281. Sokak, Kapı No: 46",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488898316",
+    "number": "46",
+    "streetName": "2281. Sokak",
+    "streetNumber": 2281
+   }
+  },
+  {
+   "id": "34-numbered-13",
+   "text": "İstanbul Bağcılar Göztepe Mah. 2329. Sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488784351",
+    "number": "6",
+    "streetName": "2329. Sokak",
+    "streetNumber": 2329
+   }
+  },
+  {
+   "id": "34-numbered-14",
+   "text": "1438. Sokak No:2I Halkalı Merkez Mahallesi Küçükçekmece/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1062368301",
+    "number": "2I",
+    "streetName": "1438. Sokak",
+    "streetNumber": 1438
+   }
+  },
+  {
+   "id": "34-numbered-15",
+   "text": "Göztepe Mah. 2325. Sokak 17, Bağcılar, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488670545",
+    "number": "17",
+    "streetName": "2325. Sokak",
+    "streetNumber": 2325
+   }
+  },
+  {
+   "id": "34-numbered-16",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2330. Sokak, Kapı No: 38",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488784304",
+    "number": "38",
+    "streetName": "2330. Sokak",
+    "streetNumber": 2330
+   }
+  },
+  {
+   "id": "34-numbered-17",
+   "text": "İstanbul Zeytinburnu Telsiz Mah. 84. Sokak No:61/B",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5667642081",
+    "number": "61/B",
+    "streetName": "84. Sokak",
+    "streetNumber": 84
+   }
+  },
+  {
+   "id": "34-numbered-18",
+   "text": "2329. Sokak No:17 Göztepe Mahallesi Bağcılar/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488784328",
+    "number": "17",
+    "streetName": "2329. Sokak",
+    "streetNumber": 2329
+   }
+  },
+  {
+   "id": "34-numbered-19",
+   "text": "Aydınlı Mah. 2. Sokak 4, Tuzla, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w491085234",
+    "number": "4",
+    "streetName": "2. Sokak",
+    "streetNumber": 2
+   }
+  },
+  {
+   "id": "34-numbered-20",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2330. Sokak, Kapı No: 60",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w571706165",
+    "number": "60",
+    "streetName": "2330. Sokak",
+    "streetNumber": 2330
+   }
+  },
+  {
+   "id": "34-numbered-21",
+   "text": "İstanbul Bağcılar Göztepe Mah. 2289. Sokak No:21",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w570333658",
+    "number": "21",
+    "streetName": "2289. Sokak",
+    "streetNumber": 2289
+   }
+  },
+  {
+   "id": "34-numbered-22",
+   "text": "235. Sokak No:4 Atakent Mahallesi Küçükçekmece/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w514430868",
+    "number": "4",
+    "streetName": "235. Sokak",
+    "streetNumber": 235
+   }
+  },
+  {
+   "id": "34-numbered-23",
+   "text": "Aydınlı Mah. 6. Sokak 5, Tuzla, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w490374428",
+    "number": "5",
+    "streetName": "6. Sokak",
+    "streetNumber": 6
+   }
+  },
+  {
+   "id": "34-numbered-24",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2371. Sokak, Kapı No: 30",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w569761290",
+    "number": "30",
+    "streetName": "2371. Sokak",
+    "streetNumber": 2371
+   }
+  },
+  {
+   "id": "34-numbered-25",
+   "text": "İstanbul Esenyurt Orhan Gazi Mah. 1664. Sokak No:1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14203259301",
+    "number": "1/A",
+    "streetName": "1664. Sokak",
+    "streetNumber": 1664
+   }
+  },
+  {
+   "id": "34-numbered-26",
+   "text": "2332. Sokak No:6 Göztepe Mahallesi Bağcılar/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488670565",
+    "number": "6",
+    "streetName": "2332. Sokak",
+    "streetNumber": 2332
+   }
+  },
+  {
+   "id": "34-numbered-27",
+   "text": "Göztepe Mah. 2347. Sokak 11, Bağcılar, İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1147676355",
+    "number": "11",
+    "streetName": "2347. Sokak",
+    "streetNumber": 2347
+   }
+  },
+  {
+   "id": "34-numbered-28",
+   "text": "İstanbul, Bağcılar, Göztepe Mahallesi, 2343. Sokak, Kapı No: 25",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1487150921",
+    "number": "25",
+    "streetName": "2343. Sokak",
+    "streetNumber": 2343
+   }
+  },
+  {
+   "id": "34-numbered-29",
+   "text": "İstanbul Bağcılar Göztepe Mah. 2351. Sokak No:20",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w571706131",
+    "number": "20",
+    "streetName": "2351. Sokak",
+    "streetNumber": 2351
+   }
+  },
+  {
+   "id": "34-numbered-30",
+   "text": "2311. Sokak No:26 Göztepe Mahallesi Bağcılar/İstanbul",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1488784356",
+    "number": "26",
+    "streetName": "2311. Sokak",
+    "streetNumber": 2311
+   }
+  },
+  {
+   "id": "34-hide-1",
+   "text": "Topçular Mah. 1. Maltepe Çıkmazı 1/3, Eyüpsultan, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1332454227",
+    "number": "1/3",
+    "streetName": "1. Maltepe Çıkmazı",
+    "truth": [
+     28.92281,
+     41.033948
+    ]
+   }
+  },
+  {
+   "id": "34-hide-2",
+   "text": "Kemalpaşa Mah. Ersöz Sokağı 27, Küçükçekmece, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w625295483",
+    "number": "27",
+    "streetName": "Ersöz Sokağı",
+    "truth": [
+     28.793282,
+     41.001496
+    ]
+   }
+  },
+  {
+   "id": "34-hide-3",
+   "text": "Rami Yeni Mah. Paşa Baba Sokağı 15-17, Eyüpsultan, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1036240695",
+    "number": "15-17",
+    "streetName": "Paşa Baba Sokağı",
+    "truth": [
+     28.919634,
+     41.051477
+    ]
+   }
+  },
+  {
+   "id": "34-hide-4",
+   "text": "Meclis Mah. Katip Çelebi Caddesi 10, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w570007699",
+    "number": "10",
+    "streetName": "Katip Çelebi Caddesi",
+    "truth": [
+     29.208704,
+     41.010333
+    ]
+   }
+  },
+  {
+   "id": "34-hide-5",
+   "text": "Yukarı Mah. Oymak Sokağı 4, Kartal, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w657411865",
+    "number": "4",
+    "streetName": "Oymak Sokağı",
+    "truth": [
+     29.1809,
+     40.888644
+    ]
+   }
+  },
+  {
+   "id": "34-hide-6",
+   "text": "Paşabahçe Mah. Beyaz Erguvan Caddesi 7, Beykoz, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w725839480",
+    "number": "7",
+    "streetName": "Beyaz Erguvan Caddesi",
+    "truth": [
+     29.096257,
+     41.115686
+    ]
+   }
+  },
+  {
+   "id": "34-hide-7",
+   "text": "Yenidoğan Mah. İmaret Sokağı 7A, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609249",
+    "number": "7A",
+    "streetName": "İmaret Sokağı",
+    "truth": [
+     29.237892,
+     41.014658
+    ]
+   }
+  },
+  {
+   "id": "34-hide-8",
+   "text": "Yenidoğan Mah. Dalga Sokağı 11, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127582130",
+    "number": "11",
+    "streetName": "Dalga Sokağı",
+    "truth": [
+     29.231032,
+     41.011883
+    ]
+   }
+  },
+  {
+   "id": "34-hide-9",
+   "text": "Suadiye Mah. Suadiye Camii Sokağı 6, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10268587595",
+    "number": "6",
+    "streetName": "Suadiye Camii Sokağı",
+    "truth": [
+     29.080569,
+     40.962587
+    ]
+   }
+  },
+  {
+   "id": "34-hide-10",
+   "text": "Yenidoğan Mah. Mansur Sokağı 16, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609451",
+    "number": "16",
+    "streetName": "Mansur Sokağı",
+    "truth": [
+     29.241281,
+     41.015594
+    ]
+   }
+  },
+  {
+   "id": "34-hide-11",
+   "text": "Çamlık Mah. Meşe Sokak 6/4, Pendik, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w673710230",
+    "number": "6/4",
+    "streetName": "Meşe Sokak",
+    "truth": [
+     29.279812,
+     40.921349
+    ]
+   }
+  },
+  {
+   "id": "34-hide-12",
+   "text": "Yenidoğan Mah. Akın Caddesi 111A, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127563205",
+    "number": "111A",
+    "streetName": "Akın Caddesi",
+    "truth": [
+     29.2315,
+     41.01102
+    ]
+   }
+  },
+  {
+   "id": "34-hide-13",
+   "text": "Yenidoğan Mah. Sağlamlar Sokağı 9, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127562894",
+    "number": "9",
+    "streetName": "Sağlamlar Sokağı",
+    "truth": [
+     29.231478,
+     41.009741
+    ]
+   }
+  },
+  {
+   "id": "34-hide-14",
+   "text": "Beyazıt Mah. Parçacılar Sokağı 6, Fatih, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4452480289",
+    "number": "6",
+    "streetName": "Parçacılar Sokağı",
+    "truth": [
+     28.967608,
+     41.011168
+    ]
+   }
+  },
+  {
+   "id": "34-hide-15",
+   "text": "Sahrayıcedit Mah. Atatürk Caddesi 27, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w657571503",
+    "number": "27",
+    "streetName": "Atatürk Caddesi",
+    "truth": [
+     29.083082,
+     40.981576
+    ]
+   }
+  },
+  {
+   "id": "34-hide-16",
+   "text": "İsmetpaşa Mah. Ordu Caddesi 1, Sultangazi, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8227494199",
+    "number": "1",
+    "streetName": "Ordu Caddesi",
+    "truth": [
+     28.858537,
+     41.105728
+    ]
+   }
+  },
+  {
+   "id": "34-hide-17",
+   "text": "Yeni Mah. Hekimsuyu Caddesi 55A, Gaziosmanpaşa, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w796915967",
+    "number": "55A",
+    "streetName": "Hekimsuyu Caddesi",
+    "truth": [
+     28.906678,
+     41.079798
+    ]
+   }
+  },
+  {
+   "id": "34-hide-18",
+   "text": "Yenidoğan Mah. Bostan Sokağı 5, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127582468",
+    "number": "5",
+    "streetName": "Bostan Sokağı",
+    "truth": [
+     29.243803,
+     41.013616
+    ]
+   }
+  },
+  {
+   "id": "34-hide-19",
+   "text": "Reşitpaşa Mah. Katar Caddesi 2/23A, Sarıyer, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n3181116593",
+    "number": "2/23A",
+    "streetName": "Katar Caddesi",
+    "truth": [
+     29.020352,
+     41.104588
+    ]
+   }
+  },
+  {
+   "id": "34-hide-20",
+   "text": "Yenidoğan Mah. Tunahan Caddesi 13-15, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609016",
+    "number": "13-15",
+    "streetName": "Tunahan Caddesi",
+    "truth": [
+     29.235512,
+     41.014262
+    ]
+   }
+  },
+  {
+   "id": "34-hide-21",
+   "text": "Yenidoğan Mah. Hattat Sokağı 21, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127609457",
+    "number": "21",
+    "streetName": "Hattat Sokağı",
+    "truth": [
+     29.241491,
+     41.01576
+    ]
+   }
+  },
+  {
+   "id": "34-hide-22",
+   "text": "Aydınlı Mah. Murat Sokağı 3, Tuzla, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w626832062",
+    "number": "3",
+    "streetName": "Murat Sokağı",
+    "truth": [
+     29.324667,
+     40.879956
+    ]
+   }
+  },
+  {
+   "id": "34-hide-23",
+   "text": "Atatürk Mah. Çavuşbaşı Caddesi 100/C, Ümraniye, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4958295329",
+    "number": "100/C",
+    "streetName": "Çavuşbaşı Caddesi",
+    "truth": [
+     29.096169,
+     41.029584
+    ]
+   }
+  },
+  {
+   "id": "34-hide-24",
+   "text": "Meclis Mah. Atalay Sokağı 48, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w572439244",
+    "number": "48",
+    "streetName": "Atalay Sokağı",
+    "truth": [
+     29.200146,
+     41.013121
+    ]
+   }
+  },
+  {
+   "id": "34-hide-25",
+   "text": "Burgazada Mah. Hızır Reis Sokağı 16, Adalar, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1052315175",
+    "number": "16",
+    "streetName": "Hızır Reis Sokağı",
+    "truth": [
+     29.058316,
+     40.885568
+    ]
+   }
+  },
+  {
+   "id": "34-hide-26",
+   "text": "Suadiye Mah. Çolak İsmail Sokağı 3, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1121504578",
+    "number": "3",
+    "streetName": "Çolak İsmail Sokağı",
+    "truth": [
+     29.079709,
+     40.96391
+    ]
+   }
+  },
+  {
+   "id": "34-hide-27",
+   "text": "Osmanağa Mah. Nuri Duyguer Sokağı 4, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w478455147",
+    "number": "4",
+    "streetName": "Nuri Duyguer Sokağı",
+    "truth": [
+     29.031176,
+     40.987846
+    ]
+   }
+  },
+  {
+   "id": "34-hide-28",
+   "text": "Suadiye Mah. Bağdat Caddesi 399, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1104957286",
+    "number": "399",
+    "streetName": "Bağdat Caddesi",
+    "truth": [
+     29.078743,
+     40.961507
+    ]
+   }
+  },
+  {
+   "id": "34-hide-29",
+   "text": "Gümüşsuyu Mah. Kelle İbrahim Caddesi 47-4, Beykoz, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w740018593",
+    "number": "47-4",
+    "streetName": "Kelle İbrahim Caddesi",
+    "truth": [
+     29.100187,
+     41.125788
+    ]
+   }
+  },
+  {
+   "id": "34-hide-30",
+   "text": "Ayvansaray Mah. Esnaf Loncası Sokağı 74/A, Fatih, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14184622101",
+    "number": "74/A",
+    "streetName": "Esnaf Loncası Sokağı",
+    "truth": [
+     28.94324,
+     41.037413
+    ]
+   }
+  },
+  {
+   "id": "34-hide-31",
+   "text": "Uskumruköy Mah. Kilyos Caddesi 282/10, Sarıyer, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w357793810",
+    "number": "282/10",
+    "streetName": "Kilyos Caddesi",
+    "truth": [
+     29.037544,
+     41.217884
+    ]
+   }
+  },
+  {
+   "id": "34-hide-32",
+   "text": "İçerenköy Mah. İspirli Canip Sokağı 32, Ataşehir, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1125584751",
+    "number": "32",
+    "streetName": "İspirli Canip Sokağı",
+    "truth": [
+     29.116896,
+     40.971022
+    ]
+   }
+  },
+  {
+   "id": "34-hide-33",
+   "text": "Hürriyet Mah. Cengiz Topel Caddesi 59, Gaziosmanpaşa, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9067963895",
+    "number": "59",
+    "streetName": "Cengiz Topel Caddesi",
+    "truth": [
+     28.905234,
+     41.066443
+    ]
+   }
+  },
+  {
+   "id": "34-hide-34",
+   "text": "Hasanpaşa Mah. Kurbağalıdere Caddesi 39A, Kadıköy, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w666658687",
+    "number": "39A",
+    "streetName": "Kurbağalıdere Caddesi",
+    "truth": [
+     29.036387,
+     40.993969
+    ]
+   }
+  },
+  {
+   "id": "34-hide-35",
+   "text": "Yenidoğan Mah. Nusret Sokağı 14, Sancaktepe, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127563086",
+    "number": "14",
+    "streetName": "Nusret Sokağı",
+    "truth": [
+     29.234997,
+     41.009754
+    ]
+   }
+  },
+  {
+   "id": "34-hide-36",
+   "text": "Cumhuriyet Mah. Yıldıray Çınar Sokağı 47, Büyükçekmece, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1369654432",
+    "number": "47",
+    "streetName": "Yıldıray Çınar Sokağı",
+    "truth": [
+     28.623411,
+     41.021727
+    ]
+   }
+  },
+  {
+   "id": "34-hide-37",
+   "text": "Fulya Mah. Ortaklar Caddesi 1/B, Şişli, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4837021740",
+    "number": "1/B",
+    "streetName": "Ortaklar Caddesi",
+    "truth": [
+     28.995713,
+     41.065598
+    ]
+   }
+  },
+  {
+   "id": "34-hide-38",
+   "text": "İstinye Mah. Çayır Caddesi 46/A, Sarıyer, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11085305472",
+    "number": "46/A",
+    "streetName": "Çayır Caddesi",
+    "truth": [
+     29.052246,
+     41.115336
+    ]
+   }
+  },
+  {
+   "id": "34-hide-39",
+   "text": "Aydınlı Mah. Baki Sokağı 1, Tuzla, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w626359841",
+    "number": "1",
+    "streetName": "Baki Sokağı",
+    "truth": [
+     29.331191,
+     40.874953
+    ]
+   }
+  },
+  {
+   "id": "34-hide-40",
+   "text": "Fulya Mah. Gülseren Sokağı 3, Şişli, İstanbul",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w729366575",
+    "number": "3",
+    "streetName": "Gülseren Sokağı",
+    "truth": [
+     28.995607,
+     41.060074
+    ]
+   }
+  },
+  {
+   "id": "34-lang-1",
+   "text": "Konaklar, 25 Meseli Street floor 8 apartment 6, Besiktas/Istanbul",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "n7515907235",
+    "number": "25",
+    "streetName": "Meşeli Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-2",
+   "text": "Beşiktaş, Konaklar Ortsteil, Meşeli Gasse Nummer 25, 34919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "n7515907235",
+    "number": "25",
+    "streetName": "Meşeli Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-3",
+   "text": "истанбул бешикташ, ул. мешели д. 25",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "n7515907235",
+    "number": "25",
+    "streetName": "Meşeli Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-4",
+   "text": "Οδός Meşeli αρ. 25 όροφος 2 διαμέρισμα 2, ιστανμπουλ μπεσικτασ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "n7515907235",
+    "number": "25",
+    "streetName": "Meşeli Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-5",
+   "text": "Konaklar، شارع Meşeli رقم 25،  Beşiktaş",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "n7515907235",
+    "number": "25",
+    "streetName": "Meşeli Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-6",
+   "text": "Sinan Ercan Street 9, İstanbul Kadıköy, 34408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "n5300905330",
+    "number": "9",
+    "streetName": "Sinan Ercan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-7",
+   "text": "KADİKOY/ISTANBUL 19 MAYİS ORTSTEİL SİNAN ERCAN STRASSE NR. 9",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "n5300905330",
+    "number": "9",
+    "streetName": "Sinan Ercan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-8",
+   "text": "19 майыс, проспект синан эрджан дом 9, истанбул кадыкёй",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "n5300905330",
+    "number": "9",
+    "streetName": "Sinan Ercan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-9",
+   "text": "Λεωφόρος Sinan Ercan αρ. 9, καντικοϊ/ιστανμπουλ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "n5300905330",
+    "number": "9",
+    "streetName": "Sinan Ercan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-10",
+   "text": "Kadıköy İstanbul, جادة Sinan Ercan رقم 9, 34334",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "n5300905330",
+    "number": "9",
+    "streetName": "Sinan Ercan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-11",
+   "text": "Yıldız Neighbourhood, 38 Çırağan Ave floor 2 apartment 6, Beşiktaş/İstanbul, 34715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "w580441736",
+    "number": "38",
+    "streetName": "Çırağan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-12",
+   "text": "İstanbul Beşiktaş Çırağan Straße Nummer 38 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "w580441736",
+    "number": "38",
+    "streetName": "Çırağan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-13",
+   "text": "микрорайон йылдыз, пр. чыраган 38, бешикташ/истанбул",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "w580441736",
+    "number": "38",
+    "streetName": "Çırağan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-14",
+   "text": "İstanbul Beşiktaş γειτονιά Yıldız Λεωφ. τσιραγαν 38 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "w580441736",
+    "number": "38",
+    "streetName": "Çırağan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-15",
+   "text": "شارع Çırağan رقم 38، Beşiktaş İstanbul، 34988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "w580441736",
+    "number": "38",
+    "streetName": "Çırağan Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-16",
+   "text": "İstanbul Kadıköy Feneryolu Neighbourhood 14 Boztepe St",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "w993593827",
+    "number": "14",
+    "streetName": "Boztepe Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-17",
+   "text": "Feneryolu, Boztepe Str. Nummer 14, Kadıköy ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "w993593827",
+    "number": "14",
+    "streetName": "Boztepe Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-18",
+   "text": "истанбул кадыкёй, микрорайон фенерйолу, ул. бозтепе д. 14 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "w993593827",
+    "number": "14",
+    "streetName": "Boztepe Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΦΕΝΕΡΓΙΟΛΟΥ, ΟΔΌΣ BOZTEPE ΑΡΙΘΜΌΣ 14, ΙΣΤΑΝΜΠΟΥΛ KADIKÖY",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "w993593827",
+    "number": "14",
+    "streetName": "Boztepe Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-20",
+   "text": "حي Feneryolu, شارع Boztepe رقم 14,  Kadıköy",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "w993593827",
+    "number": "14",
+    "streetName": "Boztepe Sokağı"
+   }
+  },
+  {
+   "id": "34-lang-21",
+   "text": "Katip Kasim, Hayriye Tuccari Ave no 42/A, Istanbul Fatih",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "n14231482501",
+    "number": "42/A",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-22",
+   "text": "Katip Kasım Ortsteil, Hayriye Tüccarı Straße Nr. 42/A, İstanbul Fatih, 34152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "n14231482501",
+    "number": "42/A",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-23",
+   "text": "фатих/истанбул, микрорайон катип касым, пр. хайрийе тюджджары д. 42/A",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "n14231482501",
+    "number": "42/A",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-24",
+   "text": "Katip Kasım, Λεωφ. χαϊριγιε τουτζτζαρι 42/A, φατιχ İstanbul",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "n14231482501",
+    "number": "42/A",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-25",
+   "text": "Katip Kasım، جادة Hayriye Tüccarı رقم 42/A،  Fatih",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "n14231482501",
+    "number": "42/A",
+    "streetName": "Hayriye Tüccarı Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-26",
+   "text": "Nuripaşa Neighbourhood, Merv Street number 76, Zeytinburnu/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "34",
+    "osm": "n4458905089",
+    "number": "76",
+    "streetName": "Merv Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-27",
+   "text": "Zeytinburnu, Nuripasa Ortsteil, Merv Straße 76",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "34",
+    "osm": "n4458905089",
+    "number": "76",
+    "streetName": "Merv Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-28",
+   "text": "зейтинбурну, проспект мерв д. 76 этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "34",
+    "osm": "n4458905089",
+    "number": "76",
+    "streetName": "Merv Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-29",
+   "text": "İstanbul ζεϊτινμπουρνου Λεωφόρος μερβ αριθμός 76",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "34",
+    "osm": "n4458905089",
+    "number": "76",
+    "streetName": "Merv Caddesi"
+   }
+  },
+  {
+   "id": "34-lang-30",
+   "text": "حي Nuripaşa، جادة Merv رقم 76، İstanbul Zeytinburnu",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "34",
+    "osm": "n4458905089",
+    "number": "76",
+    "streetName": "Merv Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-1",
+   "text": "Sıra Cevizler Caddesi 23 Merkez",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w548990901",
+    "number": "23",
+    "streetName": "Sıra Cevizler Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-2",
+   "text": "Kandilli mah Kandilli Göksu Caddesi no:11 d:3 kat:2 Üsküdar",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n10312137545",
+    "number": "11",
+    "streetName": "Kandilli Göksu Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-3",
+   "text": "Beykoz Beyaz Erguvan Caddesi no60",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w718797095",
+    "number": "60",
+    "streetName": "Beyaz Erguvan Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-4",
+   "text": "76 Dr. Esat Işık Caddesi Caferağa Kadıköy",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w478456849",
+    "number": "76",
+    "streetName": "Dr. Esat Işık Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-5",
+   "text": "YENIDOGAN AKIN CADDESI 58",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n12127575368",
+    "number": "58",
+    "streetName": "Akın Caddesi"
+   }
+  },
+  {
+   "id": "34-hard-6",
+   "text": "Fatih Şehsuvarbey Sokak apartmanı 22 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w530620450",
+    "number": "22",
+    "streetName": "Şehsuvarbey Sokak"
+   }
+  },
+  {
+   "id": "34-hard-7",
+   "text": "Rami Yeni mahallesi İmam Rüstem Sokağı 10-12 nolu bina Eyüpsultan/İstanbul",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1034418544",
+    "number": "10-12",
+    "streetName": "İmam Rüstem Sokağı"
+   }
+  },
+  {
+   "id": "34-hard-8",
+   "text": "Gülnihal 3 İslambey Arnavutköy",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n4455185723",
+    "number": "3",
+    "streetName": "Gülnihal Sokak"
+   }
+  },
+  {
+   "id": "34-hard-9",
+   "text": "Küçük Çamıca mah Uluçınar Sokağı 17 Üsküdar",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w722926920",
+    "number": "17",
+    "streetName": "Uluçınar Sokağı"
+   }
+  },
+  {
+   "id": "34-hard-10",
+   "text": "Ağasar Sokağı 99E Mehmet Akif Ersoy mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1297291414",
+    "number": "99E",
+    "streetName": "Ağasar Sokağı"
+   }
+  },
+  {
+   "id": "34-hard-11",
+   "text": "Tuzla Aydınlı Ersan Sk. 1, 34137",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w627904157",
+    "number": "1",
+    "streetName": "Ersan Sk."
+   }
+  },
+  {
+   "id": "34-hard-12",
+   "text": "İstanbul Küçükçekmece Halkalı İstasyon Caddesi 54 İstasyon",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w539643898",
+    "number": "54",
+    "streetName": "Halkalı İstasyon Caddesi"
+   }
+  },
+  {
+   "id": "34-poi-1",
+   "text": "Sabancı 50. Yıl Lisesi Avcılar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1326094314",
+    "kind": "school",
+    "streetName": "Sabancı 50. Yıl Lisesi"
+   }
+  },
+  {
+   "id": "34-poi-2",
+   "text": "Bahçeşehir Koleji (Tema Kampüsü) Küçükçekmece İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1545657500",
+    "kind": "school",
+    "streetName": "Bahçeşehir Koleji (Tema Kampüsü)"
+   }
+  },
+  {
+   "id": "34-poi-3",
+   "text": "tahsin banguoglu ilkokulu kucukcekmece istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n11173527737",
+    "kind": "school",
+    "streetName": "Tahsin Banguoğlu İlkokulu"
+   }
+  },
+  {
+   "id": "34-poi-4",
+   "text": "Silivri Kız Anadolu İmam Hatip Lisesi Silivri İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1243998852",
+    "kind": "school",
+    "streetName": "Silivri Kız Anadolu İmam Hatip Lisesi"
+   }
+  },
+  {
+   "id": "34-poi-5",
+   "text": "Pınartepe Ortaokulu Büyükçekmece İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w689871490",
+    "kind": "school",
+    "streetName": "Pınartepe Ortaokulu"
+   }
+  },
+  {
+   "id": "34-poi-6",
+   "text": "Büyükada Rum Yetimhanesi İlkokulu Adalar İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w738364063",
+    "kind": "school",
+    "streetName": "Büyükada Rum Yetimhanesi İlkokulu"
+   }
+  },
+  {
+   "id": "34-poi-7",
+   "text": "arnavutkoy ilk ogretim okulu arnavutkoy istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w451432352",
+    "kind": "school",
+    "streetName": "Arnavutköy ilk öğretim okulu"
+   }
+  },
+  {
+   "id": "34-poi-8",
+   "text": "Sözen Center Fatih",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5244809907",
+    "kind": "mall",
+    "streetName": "Sözen Center"
+   }
+  },
+  {
+   "id": "34-poi-9",
+   "text": "uskudar sinav koleji uskudar istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1300552230",
+    "kind": "school",
+    "streetName": "Üsküdar Sınav Koleji"
+   }
+  },
+  {
+   "id": "34-poi-10",
+   "text": "Mimar Sinan ortaokul Sultanbeyli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5329336994",
+    "kind": "school",
+    "streetName": "Mimar Sinan Ortaokulu"
+   }
+  },
+  {
+   "id": "34-poi-11",
+   "text": "Akrida koleji temel lise Bağcılar İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5667747258",
+    "kind": "school",
+    "streetName": "Akrida koleji temel lise"
+   }
+  },
+  {
+   "id": "34-poi-12",
+   "text": "Medical Park Hastanesi Ataşehir Ataşehir İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1069015768",
+    "kind": "hospital",
+    "streetName": "Medical Park Hastanesi Ataşehir"
+   }
+  },
+  {
+   "id": "34-poi-13",
+   "text": "Pusula Orman Ürünleri Sultanbeyli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5329319553",
+    "kind": "mall",
+    "streetName": "Pusula Orman Ürünleri"
+   }
+  },
+  {
+   "id": "34-poi-14",
+   "text": "Doktor Levent Polikliniği Şişli İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6874195043",
+    "kind": "hospital",
+    "streetName": "Doktor Levent Polikliniği"
+   }
+  },
+  {
+   "id": "34-poi-15",
+   "text": "Konsept Plaza B-Blok Güngören",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n6749964889",
+    "kind": "mall",
+    "streetName": "Konsept Plaza B-Blok"
+   }
+  },
+  {
+   "id": "34-poi-16",
+   "text": "Hasanpaşa Aile Sağlığı Merkezi Kadıköy İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n7468612173",
+    "kind": "hospital",
+    "streetName": "Hasanpaşa Aile Sağlığı Merkezi"
+   }
+  },
+  {
+   "id": "34-poi-17",
+   "text": "Bağcılar Meydan TRSM Bağcılar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n13542433175",
+    "kind": "hospital",
+    "streetName": "Bağcılar Meydan TRSM"
+   }
+  },
+  {
+   "id": "34-poi-18",
+   "text": "ozel bilge hastane gaziosmanpasa istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n9060510149",
+    "kind": "hospital",
+    "streetName": "Özel Bilge Hastanesi"
+   }
+  },
+  {
+   "id": "34-poi-19",
+   "text": "Aziz Mahmud Hüdayi Mahallesi Muhtarlığı Üsküdar İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w733808422",
+    "kind": "townhall",
+    "streetName": "Aziz Mahmud Hüdayi Mahallesi Muhtarlığı"
+   }
+  },
+  {
+   "id": "34-poi-20",
+   "text": "Florence Nightingale Beşiktaş",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n1740708127",
+    "kind": "hospital",
+    "streetName": "Florence Nightingale"
+   }
+  },
+  {
+   "id": "34-poi-21",
+   "text": "Marmara Belediyeler Birliği Fatih",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5244812125",
+    "kind": "townhall",
+    "streetName": "Marmara Belediyeler Birliği"
+   }
+  },
+  {
+   "id": "34-poi-22",
+   "text": "Sancaktepe Prof. Dr. Feriha Öz Acil Durum Hastanesi Sancaktepe İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w804028921",
+    "kind": "hospital",
+    "streetName": "Sancaktepe Prof. Dr. Feriha Öz Acil Durum Hastanesi"
+   }
+  },
+  {
+   "id": "34-poi-23",
+   "text": "fatih belediyesi fatih istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1385365288",
+    "kind": "townhall",
+    "streetName": "Fatih Belediyesi"
+   }
+  },
+  {
+   "id": "34-poi-24",
+   "text": "Academic Hospital Üsküdar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w524892365",
+    "kind": "hospital",
+    "streetName": "Academic Hospital"
+   }
+  },
+  {
+   "id": "34-poi-25",
+   "text": "Ucuzluk pazari Sultanbeyli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5542883011",
+    "kind": "mall",
+    "streetName": "Ucuzluk pazari"
+   }
+  },
+  {
+   "id": "34-poi-26",
+   "text": "Optimum Premium Outlet Ataşehir",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w154518844",
+    "kind": "mall",
+    "streetName": "Optimum Premium Outlet"
+   }
+  },
+  {
+   "id": "34-poi-27",
+   "text": "Istikal AVM Beyoğlu İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n14157304667",
+    "kind": "mall",
+    "streetName": "Istikal AVM"
+   }
+  },
+  {
+   "id": "34-poi-28",
+   "text": "112 acil anadolu komuta kontrol merkezi uskudar istanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w733034117",
+    "kind": "hospital",
+    "streetName": "112 Acil Anadolu Komuta Kontrol Merkezi"
+   }
+  },
+  {
+   "id": "34-poi-29",
+   "text": "Bezmialem Üniversitesi Dragos hastane Maltepe",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w390256751",
+    "kind": "hospital",
+    "streetName": "Bezmialem Üniversitesi Dragos Hastanesi"
+   }
+  },
+  {
+   "id": "34-poi-30",
+   "text": "Asya nakis Bağcılar İstanbul",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n5667689799",
+    "kind": "mall",
+    "streetName": "Asya nakis"
+   }
+  },
+  {
+   "id": "34-poi-31",
+   "text": "beyoglu belediye binasi beyoglu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w144791349",
+    "kind": "townhall",
+    "streetName": "Beyoğlu Belediyesi"
+   }
+  },
+  {
+   "id": "34-poi-32",
+   "text": "zeytinburnu belediye binasi zeytinburnu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "w1116976694",
+    "kind": "townhall",
+    "streetName": "Zeytinburnu Belediyesi"
+   }
+  },
+  {
+   "id": "34-poi-33",
+   "text": "istanbul buyuksehir belediye binasi bakirkoy",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "34",
+    "osm": "n8581736991",
+    "kind": "townhall",
+    "streetName": "İstanbul Büyükşehir Belediyesi"
+   }
+  }
+ ]
+}

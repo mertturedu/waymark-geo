@@ -1,0 +1,4617 @@
+{
+ "version": 1,
+ "plate": "42",
+ "queries": [
+  {
+   "id": "42-full-1",
+   "text": "Konya Selçuklu Fatih Mah. Köprü Sokak No:35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13510400521",
+    "number": "35",
+    "streetName": "Köprü Sokak"
+   }
+  },
+  {
+   "id": "42-full-2",
+   "text": "Milli Egemenlik Caddesi No:74 Kızılcalar Mahallesi Seydişehir/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4699022579",
+    "number": "74",
+    "streetName": "Milli Egemenlik Caddesi"
+   }
+  },
+  {
+   "id": "42-full-3",
+   "text": "Mehmet Akif Mah. Gürgenağacı Sokak 1, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w262684531",
+    "number": "1",
+    "streetName": "Gürgenağacı Sokak"
+   }
+  },
+  {
+   "id": "42-full-4",
+   "text": "Konya, Selçuklu, Yazır Mahallesi, Şehit Erkan Özbalcı Sokak, Kapı No: 20/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3659978654",
+    "number": "20/A",
+    "streetName": "Şehit Erkan Özbalcı Sokak"
+   }
+  },
+  {
+   "id": "42-full-5",
+   "text": "Konya Karatay Emirgazi Mah. Hilal Caddesi No:41",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1342682992",
+    "number": "41",
+    "streetName": "Hilal Caddesi"
+   }
+  },
+  {
+   "id": "42-full-6",
+   "text": "Sehavet Sokağı No:2 Sille Ak Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11485641094",
+    "number": "2",
+    "streetName": "Sehavet Sokağı"
+   }
+  },
+  {
+   "id": "42-full-7",
+   "text": "Sancak Mah. Şule Sokak 17/B, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3660032804",
+    "number": "17/B",
+    "streetName": "Şule Sokak"
+   }
+  },
+  {
+   "id": "42-full-8",
+   "text": "Konya, Selçuklu, Feritpaşa Mahallesi, Mıhcıdede Sokak, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w528785958",
+    "number": "18",
+    "streetName": "Mıhcıdede Sokak"
+   }
+  },
+  {
+   "id": "42-full-9",
+   "text": "Konya Selçuklu İhsaniye Mah. Derviş Hilmi Sokak No:3A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13519518833",
+    "number": "3A",
+    "streetName": "Derviş Hilmi Sokak"
+   }
+  },
+  {
+   "id": "42-full-10",
+   "text": "Mercidabık Sokak No:49 Ulubatlıhasan Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527316596",
+    "number": "49",
+    "streetName": "Mercidabık Sokak"
+   }
+  },
+  {
+   "id": "42-full-11",
+   "text": "Yazır Mah. Büyükşehir Caddesi 19, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1114858573",
+    "number": "19",
+    "streetName": "Büyükşehir Caddesi"
+   }
+  },
+  {
+   "id": "42-full-12",
+   "text": "Konya, Selçuklu, Hüsamettin Çelebi Mahallesi, Yeşilçam Sokak, Kapı No: 8",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658497",
+    "number": "8",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-full-13",
+   "text": "Konya Selçuklu Malazgirt Mah. Kocagöl Sokak No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w283600126",
+    "number": "1",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-full-14",
+   "text": "Yahya Çavuş Caddesi No:42 İhsaniye Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n6984675982",
+    "number": "42",
+    "streetName": "Yahya Çavuş Caddesi"
+   }
+  },
+  {
+   "id": "42-full-15",
+   "text": "Hüsamettin Çelebi Mah. Yeşilçam Sokak 13, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659729",
+    "number": "13",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-full-16",
+   "text": "Konya, Selçuklu, Hüsamettin Çelebi Mahallesi, Yeşilçam Sokak, Kapı No: 11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659728",
+    "number": "11",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-full-17",
+   "text": "Konya Selçuklu Malazgirt Mah. Tuna Caddesi No:16",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689389",
+    "number": "16",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "42-full-18",
+   "text": "Akabe Caddesi No:3 Hüsamettin Çelebi Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658472",
+    "number": "3",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-full-19",
+   "text": "İhsaniye Mah. Yahya Çavuş Caddesi 42, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w264755283",
+    "number": "42",
+    "streetName": "Yahya Çavuş Caddesi"
+   }
+  },
+  {
+   "id": "42-full-20",
+   "text": "Konya, Selçuklu, Bedir Mahallesi, Sedef Köy Sokak Misal Apartmanı, Kapı No: 3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670139816",
+    "number": "3",
+    "streetName": "Sedef Köy Sokak Misal Apartmanı"
+   }
+  },
+  {
+   "id": "42-full-21",
+   "text": "Konya Selçuklu Malazgirt Mah. Kocagöl Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689366",
+    "number": "7",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-full-22",
+   "text": "Seymenler Caddesi No:38 Selahaddini Eyyubi Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1329870075",
+    "number": "38",
+    "streetName": "Seymenler Caddesi"
+   }
+  },
+  {
+   "id": "42-full-23",
+   "text": "Şemsitebrizi Mah. Kazanlı Sokak 6, Karatay, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w320912474",
+    "number": "6",
+    "streetName": "Kazanlı Sokak"
+   }
+  },
+  {
+   "id": "42-full-24",
+   "text": "Konya, Meram, Sahibata Mahallesi, Taşkapı Medrese Caddesi, Kapı No: 2C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483366418",
+    "number": "2C",
+    "streetName": "Taşkapı Medrese Caddesi"
+   }
+  },
+  {
+   "id": "42-full-25",
+   "text": "Konya Meram Sahibata Mah. Mümine Sokak No:23",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w388766724",
+    "number": "23",
+    "streetName": "Mümine Sokak"
+   }
+  },
+  {
+   "id": "42-full-26",
+   "text": "Akabe Caddesi No:13/C Hüsamettin Çelebi Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4063354896",
+    "number": "13/C",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-full-27",
+   "text": "Şemsitebrizi Mah. İstanbul Caddesi 99/B, Karatay, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276173073",
+    "number": "99/B",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "42-full-28",
+   "text": "Konya, Karatay, Hamzaoğlu Mahallesi, İlkay Sokak, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1341648115",
+    "number": "1",
+    "streetName": "İlkay Sokak"
+   }
+  },
+  {
+   "id": "42-full-29",
+   "text": "Konya Selçuklu Malazgirt Mah. Tuna Caddesi No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w260083523",
+    "number": "12",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "42-full-30",
+   "text": "Gülümser Sokak No:45 Parsana Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542052",
+    "number": "45",
+    "streetName": "Gülümser Sokak"
+   }
+  },
+  {
+   "id": "42-full-31",
+   "text": "Şeyh Şamil Mah. Şehit Vali Karakoç Sk. 2/B, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3660087258",
+    "number": "2/B",
+    "streetName": "Şehit Vali Karakoç Sk."
+   }
+  },
+  {
+   "id": "42-full-32",
+   "text": "Konya, Karatay, Fevziçakmak Mahallesi, Öğüt Sokak, Kapı No: 8/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11387161700",
+    "number": "8/A",
+    "streetName": "Öğüt Sokak"
+   }
+  },
+  {
+   "id": "42-full-33",
+   "text": "Konya Karatay Fevziçakmak Mah. Aslım Caddesi No:98/3B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13510400536",
+    "number": "98/3B",
+    "streetName": "Aslım Caddesi"
+   }
+  },
+  {
+   "id": "42-full-34",
+   "text": "Cumhuriyet Caddesi No:30 Ladik Mahallesi Sarayönü/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1381063924",
+    "number": "30",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "42-full-35",
+   "text": "Yazır Mah. Sultan Caddesi 34/I, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3659978650",
+    "number": "34/I",
+    "streetName": "Sultan Caddesi"
+   }
+  },
+  {
+   "id": "42-full-36",
+   "text": "Konya, Karatay, Akabe Mahallesi, Aladdin Kap Caddesi, Kapı No: 118",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307892276",
+    "number": "118",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-full-37",
+   "text": "Konya Karatay Fevziçakmak Mah. Gülistan Caddesi No:51",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1561458258",
+    "number": "51",
+    "streetName": "Gülistan Caddesi"
+   }
+  },
+  {
+   "id": "42-full-38",
+   "text": "Piri Esat Caddesi No:16 Aziziye Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w367391226",
+    "number": "16",
+    "streetName": "Piri Esat Caddesi"
+   }
+  },
+  {
+   "id": "42-full-39",
+   "text": "Bosna Hersek Mah. Parlaktürk Sokağı 8, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1357152888",
+    "number": "8",
+    "streetName": "Parlaktürk Sokağı"
+   }
+  },
+  {
+   "id": "42-full-40",
+   "text": "Konya, Selçuklu, Malazgirt Mahallesi, Kaşköy Sokak, Kapı No: 18",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689386",
+    "number": "18",
+    "streetName": "Kaşköy Sokak"
+   }
+  },
+  {
+   "id": "42-full-41",
+   "text": "Konya Selçuklu Sancak Mah. Şule Sokak No:19/B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3660032802",
+    "number": "19/B",
+    "streetName": "Şule Sokak"
+   }
+  },
+  {
+   "id": "42-full-42",
+   "text": "Aladdin Kap Caddesi No:114 Akabe Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w331052303",
+    "number": "114",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-full-43",
+   "text": "Yazır Mah. Türkler Sokak 34, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w259888466",
+    "number": "34",
+    "streetName": "Türkler Sokak"
+   }
+  },
+  {
+   "id": "42-full-44",
+   "text": "Konya, Selçuklu, Fatih Mahallesi, Zakkum Sokak, Kapı No: 4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483486271",
+    "number": "4",
+    "streetName": "Zakkum Sokak"
+   }
+  },
+  {
+   "id": "42-full-45",
+   "text": "Konya Meram Yaka Mah. Gümüşhane Sokak No:13",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w358774796",
+    "number": "13",
+    "streetName": "Gümüşhane Sokak"
+   }
+  },
+  {
+   "id": "42-full-46",
+   "text": "Kaside Sokak No:2 Akabe Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w777633527",
+    "number": "2",
+    "streetName": "Kaside Sokak"
+   }
+  },
+  {
+   "id": "42-full-47",
+   "text": "Parsana Mah. Vatan Sokak 4, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542061",
+    "number": "4",
+    "streetName": "Vatan Sokak"
+   }
+  },
+  {
+   "id": "42-full-48",
+   "text": "Konya, Selçuklu, Aydınlıkevler Mahallesi, Kayageçit Sokak, Kapı No: 51",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w288898648",
+    "number": "51",
+    "streetName": "Kayageçit Sokak"
+   }
+  },
+  {
+   "id": "42-full-49",
+   "text": "Konya Meram Ateşbaz Veli Mah. İki Çay Arası Caddesi No:4",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w528930487",
+    "number": "4",
+    "streetName": "İki Çay Arası Caddesi"
+   }
+  },
+  {
+   "id": "42-full-50",
+   "text": "Yeşilçam Sokak No:2 Hüsamettin Çelebi Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658494",
+    "number": "2",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-full-51",
+   "text": "Hüsamettin Çelebi Mah. Akabe Caddesi 11/A, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4063354886",
+    "number": "11/A",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-full-52",
+   "text": "Konya, Selçuklu, Fatih Mahallesi, Çobandede Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13517367265",
+    "number": "2",
+    "streetName": "Çobandede Sokak"
+   }
+  },
+  {
+   "id": "42-full-53",
+   "text": "Konya Selçuklu Parsana Mah. Yalvaç Sokak No:9",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374527669",
+    "number": "9",
+    "streetName": "Yalvaç Sokak"
+   }
+  },
+  {
+   "id": "42-full-54",
+   "text": "Büyükşahin Caddesi No:35/B Horozluhan Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670596023",
+    "number": "35/B",
+    "streetName": "Büyükşahin Caddesi"
+   }
+  },
+  {
+   "id": "42-full-55",
+   "text": "Parsana Mah. Yalvaç Sokak 10, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374527878",
+    "number": "10",
+    "streetName": "Yalvaç Sokak"
+   }
+  },
+  {
+   "id": "42-full-56",
+   "text": "Konya, Selçuklu, Feritpaşa Mahallesi, Kule Caddesi, Kapı No: 7C",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483366423",
+    "number": "7C",
+    "streetName": "Kule Caddesi"
+   }
+  },
+  {
+   "id": "42-full-57",
+   "text": "Konya Meram Melikşah Mah. Hocafakıh Caddesi No:35",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1263347319",
+    "number": "35",
+    "streetName": "Hocafakıh Caddesi"
+   }
+  },
+  {
+   "id": "42-full-58",
+   "text": "Nevzat İspir Caddesi No:1/A Camiiatik Mahallesi Ilgın/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10312591010",
+    "number": "1/A",
+    "streetName": "Nevzat İspir Caddesi"
+   }
+  },
+  {
+   "id": "42-full-59",
+   "text": "Parsana Mah. Ahmet Yesevi Caddesi 59, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374537218",
+    "number": "59",
+    "streetName": "Ahmet Yesevi Caddesi"
+   }
+  },
+  {
+   "id": "42-full-60",
+   "text": "Konya, Selçuklu, Nişantaş Mahallesi, Vatan Caddesi, Kapı No: 54",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4699020230",
+    "number": "54",
+    "streetName": "Vatan Caddesi"
+   }
+  },
+  {
+   "id": "42-full-61",
+   "text": "Konya Selçuklu Bosna Hersek Mah. Elçibey Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w529504706",
+    "number": "11",
+    "streetName": "Elçibey Sokak"
+   }
+  },
+  {
+   "id": "42-full-62",
+   "text": "COŞANDERE No:22B Kosova Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11915675833",
+    "number": "22B",
+    "streetName": "COŞANDERE"
+   }
+  },
+  {
+   "id": "42-full-63",
+   "text": "Sahibata Mah. Mevlana Caddesi 16, Meram, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w265382874",
+    "number": "16",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "42-full-64",
+   "text": "Konya, Karatay, Çatalhüyük Mahallesi, Uluğbeyli Sokak, Kapı No: 17",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w279521597",
+    "number": "17",
+    "streetName": "Uluğbeyli Sokak"
+   }
+  },
+  {
+   "id": "42-full-65",
+   "text": "Konya Karatay Fevziçakmak Mah. Karakayış Caddesi No:260",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13509464034",
+    "number": "260",
+    "streetName": "Karakayış Caddesi"
+   }
+  },
+  {
+   "id": "42-full-66",
+   "text": "Yıldızlı Sokak No:7 Parsana Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374537209",
+    "number": "7",
+    "streetName": "Yıldızlı Sokak"
+   }
+  },
+  {
+   "id": "42-full-67",
+   "text": "Lalebahçe Mah. Aslan Ali Caddesi 4A, Meram, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527821919",
+    "number": "4A",
+    "streetName": "Aslan Ali Caddesi"
+   }
+  },
+  {
+   "id": "42-full-68",
+   "text": "Konya, Selçuklu, Feritpaşa Mahallesi, Kule Caddesi, Kapı No: 7B",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13520223488",
+    "number": "7B",
+    "streetName": "Kule Caddesi"
+   }
+  },
+  {
+   "id": "42-full-69",
+   "text": "Konya Selçuklu Hüsamettin Çelebi Mah. Yeşilçam Sokak No:12",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658505",
+    "number": "12",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-full-70",
+   "text": "Metehan Caddesi No:4B Nişantaş Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n5119816322",
+    "number": "4B",
+    "streetName": "Metehan Caddesi"
+   }
+  },
+  {
+   "id": "42-full-71",
+   "text": "Feritpaşa Mah. Mıhcıdede Sokak 15, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w361696870",
+    "number": "15",
+    "streetName": "Mıhcıdede Sokak"
+   }
+  },
+  {
+   "id": "42-full-72",
+   "text": "Konya, Selçuklu, Musalla Bağları Mahallesi, Belh Caddesi, Kapı No: 6",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w528771639",
+    "number": "6",
+    "streetName": "Belh Caddesi"
+   }
+  },
+  {
+   "id": "42-full-73",
+   "text": "Konya Selçuklu Yazır Mah. Yeni Şahin Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w293993263",
+    "number": "3",
+    "streetName": "Yeni Şahin Sokak"
+   }
+  },
+  {
+   "id": "42-full-74",
+   "text": "Baraj Caddesi No:5 Belceağaç Mahallesi Ereğli/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1482879237",
+    "number": "5",
+    "streetName": "Baraj Caddesi"
+   }
+  },
+  {
+   "id": "42-full-75",
+   "text": "Bosna Hersek Mah. Kayaköy Sokak 28, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w529478504",
+    "number": "28",
+    "streetName": "Kayaköy Sokak"
+   }
+  },
+  {
+   "id": "42-full-76",
+   "text": "Konya, Karatay, Şemsitebrizi Mahallesi, İstanbul Caddesi, Kapı No: 139/A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3711957799",
+    "number": "139/A",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "42-full-77",
+   "text": "Konya Meram Sahibata Mah. Sakarya Sokak No:7",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n14174913149",
+    "number": "7",
+    "streetName": "Sakarya Sokak"
+   }
+  },
+  {
+   "id": "42-full-78",
+   "text": "Tekel Sokak No:5 Yediler Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w308734059",
+    "number": "5",
+    "streetName": "Tekel Sokak"
+   }
+  },
+  {
+   "id": "42-full-79",
+   "text": "Bosna Hersek Mah. Büyük Hizmet Caddesi 32/1, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1357152890",
+    "number": "32/1",
+    "streetName": "Büyük Hizmet Caddesi"
+   }
+  },
+  {
+   "id": "42-full-80",
+   "text": "Konya, Selçuklu, Hüsamettin Çelebi Mahallesi, Akabe Caddesi, Kapı No: 11/D",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4063354887",
+    "number": "11/D",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-full-81",
+   "text": "Konya Karatay Şemsitebrizi Mah. Mevlana Caddesi No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w265407071",
+    "number": "1",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "42-full-82",
+   "text": "Akabe Caddesi No:9/C Hüsamettin Çelebi Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4063354878",
+    "number": "9/C",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-full-83",
+   "text": "Bosna Hersek Mah. Mesaj Caddesi 17/F, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10296477509",
+    "number": "17/F",
+    "streetName": "Mesaj Caddesi"
+   }
+  },
+  {
+   "id": "42-full-84",
+   "text": "Konya, Selçuklu, Yazır Mahallesi, Sayılan Sokak, Kapı No: 2",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n6375655394",
+    "number": "2",
+    "streetName": "Sayılan Sokak"
+   }
+  },
+  {
+   "id": "42-full-85",
+   "text": "Konya Karatay Kumköprü Mah. Malamar Sokak No:11",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w928091660",
+    "number": "11",
+    "streetName": "Malamar Sokak"
+   }
+  },
+  {
+   "id": "42-full-86",
+   "text": "Taşkınpaşa Sokak No:16/1 Akabe Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1338962849",
+    "number": "16/1",
+    "streetName": "Taşkınpaşa Sokak"
+   }
+  },
+  {
+   "id": "42-full-87",
+   "text": "Hüsamettin Çelebi Mah. Ziya Ülhak Sokak 72, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658485",
+    "number": "72",
+    "streetName": "Ziya Ülhak Sokak"
+   }
+  },
+  {
+   "id": "42-full-88",
+   "text": "Konya, Karatay, Gaziosmanpaşa Mahallesi, Küçük Kumköprü Caddesi, Kapı No: 113",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1344887621",
+    "number": "113",
+    "streetName": "Küçük Kumköprü Caddesi"
+   }
+  },
+  {
+   "id": "42-full-89",
+   "text": "Konya Karatay Ulubatlıhasan Mah. Kapalı Sokak No:1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307892290",
+    "number": "1",
+    "streetName": "Kapalı Sokak"
+   }
+  },
+  {
+   "id": "42-full-90",
+   "text": "Keklik Sokak No:3 Sarıyakup Mahallesi Karatay/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1340153005",
+    "number": "3",
+    "streetName": "Keklik Sokak"
+   }
+  },
+  {
+   "id": "42-full-91",
+   "text": "Aydoğdu Mah. Araböldüren Caddesi 125/A, Meram, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10301771112",
+    "number": "125/A",
+    "streetName": "Araböldüren Caddesi"
+   }
+  },
+  {
+   "id": "42-full-92",
+   "text": "Konya, Karatay, Ulubatlıhasan Mahallesi, Ankara Caddesi, Kapı No: 152/GG",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n14287820601",
+    "number": "152/GG",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "42-full-93",
+   "text": "Konya Meram Sahibata Mah. Alaaddin Bulvarı No:30A",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w265382871",
+    "number": "30A",
+    "streetName": "Alaaddin Bulvarı"
+   }
+  },
+  {
+   "id": "42-full-94",
+   "text": "Yıldızlı Sokak No:24 Parsana Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374539080",
+    "number": "24",
+    "streetName": "Yıldızlı Sokak"
+   }
+  },
+  {
+   "id": "42-full-95",
+   "text": "Anabağlar Mah. Prof. Dr. Necmettin Erbakan Caddesi 19/3, Seydişehir, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n12227803401",
+    "number": "19/3",
+    "streetName": "Prof. Dr. Necmettin Erbakan Caddesi"
+   }
+  },
+  {
+   "id": "42-full-96",
+   "text": "Konya, Selçuklu, Musalla Bağları Mahallesi, Çakırlı Caddesi, Kapı No: 32",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4686944333",
+    "number": "32",
+    "streetName": "Çakırlı Caddesi"
+   }
+  },
+  {
+   "id": "42-full-97",
+   "text": "Konya Karatay Aziziye Mah. Topraklık Caddesi No:60",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053379",
+    "number": "60",
+    "streetName": "Topraklık Caddesi"
+   }
+  },
+  {
+   "id": "42-full-98",
+   "text": "Tunceli Sokak No:2 Bosna Hersek Mahallesi Selçuklu/Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1357152895",
+    "number": "2",
+    "streetName": "Tunceli Sokak"
+   }
+  },
+  {
+   "id": "42-full-99",
+   "text": "Kosova Mah. Veysel Karani Caddesi 210/I, Selçuklu, Konya",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10296477510",
+    "number": "210/I",
+    "streetName": "Veysel Karani Caddesi"
+   }
+  },
+  {
+   "id": "42-full-100",
+   "text": "Konya, Meram, Sahibata Mahallesi, Başaralı Caddesi, Kapı No: 1",
+   "category": "full",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1123618535",
+    "number": "1",
+    "streetName": "Başaralı Caddesi"
+   }
+  },
+  {
+   "id": "42-full-101",
+   "text": "Konya Selçuklu Parsana Mah. Kaletaş Caddesi No:7",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "42",
+    "osm": "r16338926",
+    "number": "7",
+    "streetName": "Kaletaş Caddesi"
+   }
+  },
+  {
+   "id": "42-full-102",
+   "text": "Konya Karatay Karaaslan Mah. Şehit Mehmet Düzenli Sokak No:12",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "42",
+    "osm": "w1343399387",
+    "number": "12",
+    "streetName": "Şehit Mehmet Düzenli Sokak"
+   }
+  },
+  {
+   "id": "42-full-103",
+   "text": "Konya Selçuklu Yazır Mah. Şensözlü Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "42",
+    "osm": "w478799079",
+    "number": "3",
+    "streetName": "Şensözlü Sokak"
+   }
+  },
+  {
+   "id": "42-full-104",
+   "text": "Konya Selçuklu Yazır Mah. Şensözlü Sokak No:3",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "42",
+    "osm": "w478799078",
+    "number": "3",
+    "streetName": "Şensözlü Sokak"
+   }
+  },
+  {
+   "id": "42-full-105",
+   "text": "Konya Selçuklu Malazgirt Mah. Tuna Caddesi No:4",
+   "category": "full",
+   "lang": "tr",
+   "conflict": true,
+   "expect": {
+    "plate": "42",
+    "osm": "w260083522",
+    "number": "4",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-1",
+   "text": "KONYA SELCUKLU HUSAMETTIN CELEBI MAH GUZELDERE CD NO 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n6902627608",
+    "number": "5",
+    "streetName": "Güzeldere Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-2",
+   "text": "KONYA SELCUKLU PARSANA MAH YILDIZLI SK NO 22",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374539077",
+    "number": "22",
+    "streetName": "Yıldızlı Sokak"
+   }
+  },
+  {
+   "id": "42-folded-3",
+   "text": "KONYA SELCUKLU FATIH MAH SEHIT OMER ALI AGAOGLU SK. NO 12/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n5344927721",
+    "number": "12/1",
+    "streetName": "Şehit Ömer Ali Ağaoğlu Sk."
+   }
+  },
+  {
+   "id": "42-folded-4",
+   "text": "KONYA SELCUKLU PARSANA MAH RAMAZANOGLU SK NO 26",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542069",
+    "number": "26",
+    "streetName": "Ramazanoğlu Sokak"
+   }
+  },
+  {
+   "id": "42-folded-5",
+   "text": "konya meram aymanas mah kinik sok. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w359510290",
+    "number": "4",
+    "streetName": "Kınık Sokak"
+   }
+  },
+  {
+   "id": "42-folded-6",
+   "text": "konya selcuklu parsana mah cayhisar sk no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542079",
+    "number": "6",
+    "streetName": "Çayhisar Sokak"
+   }
+  },
+  {
+   "id": "42-folded-7",
+   "text": "KONYA KARATAY CATALHUYUK MAH CAYLIZADE SOK. NO 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1340792979",
+    "number": "10",
+    "streetName": "Çaylızade Sokak"
+   }
+  },
+  {
+   "id": "42-folded-8",
+   "text": "konya karatay gaziosmanpasa mah tastekin sok. no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307880136",
+    "number": "20",
+    "streetName": "Taştekin Sokak"
+   }
+  },
+  {
+   "id": "42-folded-9",
+   "text": "KONYA MERAM SAHIBATA MAH VALI MUAMMERBEY CAD. NO 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053354",
+    "number": "6",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-10",
+   "text": "konya cumra baglar mah kazim karabekir cd. no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w662236129",
+    "number": "3",
+    "streetName": "Kazım Karabekir Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-11",
+   "text": "KONYA KULU CAMIKEBIR MAH ATATURK CD. NO 115",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n9513335293",
+    "number": "115",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-12",
+   "text": "konya selcuklu kosova mah veysel karani cd no 156",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1561458265",
+    "number": "156",
+    "streetName": "Veysel Karani Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-13",
+   "text": "konya selcuklu parsana mah ramazanoglu sok. no 27a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374519796",
+    "number": "27A",
+    "streetName": "Ramazanoğlu Sokak"
+   }
+  },
+  {
+   "id": "42-folded-14",
+   "text": "KONYA SELCUKLU SELAHADDINI EYYUBI MAH KONYALILAR SK. NO 44",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1079737792",
+    "number": "44",
+    "streetName": "Konyalılar Sokak"
+   }
+  },
+  {
+   "id": "42-folded-15",
+   "text": "konya karatay cimenlik mah aladdin kap cad. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307892268",
+    "number": "5",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-16",
+   "text": "konya selcuklu kilincarslan mah adakale cad. no 30/d",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10308317818",
+    "number": "30/D",
+    "streetName": "Adakale Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-17",
+   "text": "konya meram sahibata mah istanbul cd no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13517367258",
+    "number": "19",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-18",
+   "text": "KONYA SELCUKLU SEYH SAMIL MAH DOC. DR. HALIL URUN CD NO 21F",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13512846415",
+    "number": "21F",
+    "streetName": "Doç. Dr. Halil Ürün Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-19",
+   "text": "konya karatay fevzicakmak mah ankara cad. no 208a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13517367266",
+    "number": "208A",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-20",
+   "text": "konya meram meliksah mah yeni meram cd no 102a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483486241",
+    "number": "102A",
+    "streetName": "Yeni Meram Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-21",
+   "text": "konya beysehir evsat mah hukumet cd no 20",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n8248979803",
+    "number": "20",
+    "streetName": "Hükümet Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-22",
+   "text": "KONYA MERAM ALAVARDI MAH YAMAN SK. NO 14",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w287831152",
+    "number": "14",
+    "streetName": "Yaman Sokak"
+   }
+  },
+  {
+   "id": "42-folded-23",
+   "text": "KONYA MERAM KOZAGAC MAH ONBASILAR SK NO 51",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-folded-24",
+   "text": "KONYA MERAM HAVZAN MAH EBU SUUD EFENDI CD NO 13/A",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-25",
+   "text": "KONYA KARATAY TATLICAK MAH KONYA EREGLI CD. NO 45",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-26",
+   "text": "konya meram sahibata mah vali muammerbey cd. no 4",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-27",
+   "text": "konya selcuklu malazgirt mah kocagol sk no 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-folded-28",
+   "text": "konya karatay sariyakup mah yedi yildiz sk. no 48/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-folded-29",
+   "text": "KONYA BEYSEHIR DALYAN MAH ATATURK CD. NO 13/B",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10536235509",
+    "number": "13/B",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-30",
+   "text": "KONYA SELCUKLU PARSANA MAH YILDIZLI SK NO 15",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374537213",
+    "number": "15",
+    "streetName": "Yıldızlı Sokak"
+   }
+  },
+  {
+   "id": "42-folded-31",
+   "text": "konya karatay akabe mah aslanli kisla cd. no 86",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w292685179",
+    "number": "86",
+    "streetName": "Aslanlı Kışla Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-32",
+   "text": "konya karatay araplar mah karakayis cad. no 2",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1077763361",
+    "number": "2",
+    "streetName": "Karakayış Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-33",
+   "text": "konya selcuklu selahaddini eyyubi mah hidir sk. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1421484830",
+    "number": "10",
+    "streetName": "Hıdır Sokak"
+   }
+  },
+  {
+   "id": "42-folded-34",
+   "text": "konya karatay aziziye mah mevlana cd no 59",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13481555225",
+    "number": "59",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-35",
+   "text": "KONYA SELCUKLU HUSAMETTIN CELEBI MAH YESILCAM SOK. NO 17",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w296445899",
+    "number": "17",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-folded-36",
+   "text": "konya karatay istiklal mah akkuyucak cad. no 67",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w436392580",
+    "number": "67",
+    "streetName": "Akkuyucak Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-37",
+   "text": "konya meram pirebi mah yedi kizlar sk. no 19",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w366317908",
+    "number": "19",
+    "streetName": "Yedi Kızlar Sokak"
+   }
+  },
+  {
+   "id": "42-folded-38",
+   "text": "konya karatay fetih mah saydamlar sk no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w313673456",
+    "number": "10",
+    "streetName": "Saydamlar Sokak"
+   }
+  },
+  {
+   "id": "42-folded-39",
+   "text": "KONYA MERAM MELIKSAH MAH BEYSEHIR CD NO 9",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1263347310",
+    "number": "9",
+    "streetName": "Beyşehir Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-40",
+   "text": "konya selcuklu horozluhan mah ankara cd no 147",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w281983945",
+    "number": "147",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-41",
+   "text": "KONYA KARATAY SARACOGLU MAH ANAMUR SK NO 3",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1343178667",
+    "number": "3",
+    "streetName": "Anamur Sokak"
+   }
+  },
+  {
+   "id": "42-folded-42",
+   "text": "KONYA MERAM KASINHANI MAH KALKINMA SK NO 28/1",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1562077544",
+    "number": "28/1",
+    "streetName": "Kalkınma Sokak"
+   }
+  },
+  {
+   "id": "42-folded-43",
+   "text": "konya meram alakova mah camlica cd. no 25",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1341344177",
+    "number": "25",
+    "streetName": "Çamlıca Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-44",
+   "text": "konya karatay semsitebrizi mah semsettin cd. no 10",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n8503434256",
+    "number": "10",
+    "streetName": "Şemsettin Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-45",
+   "text": "konya selcuklu parsana mah ahmet yesevi cd no 55",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w301634316",
+    "number": "55",
+    "streetName": "Ahmet Yesevi Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-46",
+   "text": "konya eregli toros mah sehit metin duzgun cd no 1/c",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1488629422",
+    "number": "1/C",
+    "streetName": "Şehit Metin Düzgün Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-47",
+   "text": "konya karatay gaziosmanpasa mah milliler cd. no 7h",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10299884110",
+    "number": "7H",
+    "streetName": "Milliler Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-48",
+   "text": "konya karatay semsitebrizi mah serafettin cad. no 10/g",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3147001854",
+    "number": "10/G",
+    "streetName": "Şerafettin Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-49",
+   "text": "konya selcuklu nisantas mah sitre no 12",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w264721962",
+    "number": "12",
+    "streetName": "Sitre"
+   }
+  },
+  {
+   "id": "42-folded-50",
+   "text": "konya karatay hamzaoglu mah mikail sk. no 5",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1341648105",
+    "number": "5",
+    "streetName": "Mikail Sokak"
+   }
+  },
+  {
+   "id": "42-folded-51",
+   "text": "konya karatay akabe mah aladdin kap cd. no 130",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w369529617",
+    "number": "130",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-52",
+   "text": "konya karatay semsitebrizi mah serafettin cad. no 92/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3704279435",
+    "number": "92/A",
+    "streetName": "Şerafettin Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-53",
+   "text": "KONYA KARATAY ULUBATLIHASAN MAH ANKARA CAD. NO 152",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1384381461",
+    "number": "152",
+    "streetName": "Ankara Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-54",
+   "text": "konya selcuklu yazir mah turkler sk. no 32",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w260415185",
+    "number": "32",
+    "streetName": "Türkler Sokak"
+   }
+  },
+  {
+   "id": "42-folded-55",
+   "text": "konya meram sahibata mah ataturk cad. no 16",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w290648773",
+    "number": "16",
+    "streetName": "Atatürk Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-56",
+   "text": "konya meram meliksah mah meliksah cd. no 36/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13125384767",
+    "number": "36/A",
+    "streetName": "Melikşah Caddesi"
+   }
+  },
+  {
+   "id": "42-folded-57",
+   "text": "konya selcuklu horozluhan mah sabirhan sok. no 23/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n8060007258",
+    "number": "23/A",
+    "streetName": "Sabırhan Sok."
+   }
+  },
+  {
+   "id": "42-folded-58",
+   "text": "konya karatay istiklal mah ciller sk no 6",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1343178657",
+    "number": "6",
+    "streetName": "Çiller Sokak"
+   }
+  },
+  {
+   "id": "42-folded-59",
+   "text": "konya karatay kalenderhane mah bolay sk no 11/b",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10308823609",
+    "number": "11/B",
+    "streetName": "Bolay Sokak"
+   }
+  },
+  {
+   "id": "42-folded-60",
+   "text": "konya karatay mengene mah fetih cd. no 384/a",
+   "category": "folded",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307868250",
+    "number": "384/A",
+    "streetName": "Fetih Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-1",
+   "text": "Konya Seydişehir Kızılcalar Mah. Milli Egemeflik Caddesi No:74",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4699022579",
+    "number": "74",
+    "streetName": "Milli Egemenlik Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-2",
+   "text": "Gürgsenağacı Sokak No:1 Mehmet Akif Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w262684531",
+    "number": "1",
+    "streetName": "Gürgenağacı Sokak"
+   }
+  },
+  {
+   "id": "42-typo-3",
+   "text": "Yazır Mah. Şehit Erkan Özblacı Sokak 20/A, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3659978654",
+    "number": "20/A",
+    "streetName": "Şehit Erkan Özbalcı Sokak"
+   }
+  },
+  {
+   "id": "42-typo-4",
+   "text": "Konya, Selçuklu, Sille Ak Mahallesi, Sheavet Sokağı, Kapı No: 2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11485641094",
+    "number": "2",
+    "streetName": "Sehavet Sokağı"
+   }
+  },
+  {
+   "id": "42-typo-5",
+   "text": "Konya Selçuklu Feritpaşa Mah. Mıhucıdede Sokak No:18",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w528785958",
+    "number": "18",
+    "streetName": "Mıhcıdede Sokak"
+   }
+  },
+  {
+   "id": "42-typo-6",
+   "text": "Devriş Hilmi Sokak No:3A İhsaniye Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13519518833",
+    "number": "3A",
+    "streetName": "Derviş Hilmi Sokak"
+   }
+  },
+  {
+   "id": "42-typo-7",
+   "text": "Ulubatlıhasan Mah. Mercidabk Sokak 49, Karatay, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527316596",
+    "number": "49",
+    "streetName": "Mercidabık Sokak"
+   }
+  },
+  {
+   "id": "42-typo-8",
+   "text": "Konya, Selçuklu, Yazır Mahallesi, Büyükşhir Caddesi, Kapı No: 19",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1114858573",
+    "number": "19",
+    "streetName": "Büyükşehir Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-9",
+   "text": "Konya Selçuklu Hüsamettin Çelebi Mah. Yeşilçgm Sokak No:8",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658497",
+    "number": "8",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-typo-10",
+   "text": "Koecagöl Sokak No:1 Malazgirt Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w283600126",
+    "number": "1",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-typo-11",
+   "text": "Hüsamettin Çelebi Mah. Yeşoilçam Sokak 13, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659729",
+    "number": "13",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-typo-12",
+   "text": "Konya, Selçuklu, Hüsamettin Çelebi Mahallesi, Yşilçam Sokak, Kapı No: 11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659728",
+    "number": "11",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-typo-13",
+   "text": "Konya Selçuklu Bedir Mah. Sedef Köy Sokak Misal Apartmarı No:3",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670139816",
+    "number": "3",
+    "streetName": "Sedef Köy Sokak Misal Apartmanı"
+   }
+  },
+  {
+   "id": "42-typo-14",
+   "text": "Koctgöl Sokak No:7 Malazgirt Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689366",
+    "number": "7",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-typo-15",
+   "text": "Selahaddini Eyyubi Mah. Seymenlger Caddesi 38, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1329870075",
+    "number": "38",
+    "streetName": "Seymenler Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-16",
+   "text": "Konya, Karatay, Şemsitebrizi Mahallesi, Kazalnı Sokak, Kapı No: 6",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w320912474",
+    "number": "6",
+    "streetName": "Kazanlı Sokak"
+   }
+  },
+  {
+   "id": "42-typo-17",
+   "text": "Konya Meram Sahibata Mah. Taşkzapı Medrese Caddesi No:2C",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483366418",
+    "number": "2C",
+    "streetName": "Taşkapı Medrese Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-18",
+   "text": "Mümne Sokak No:23 Sahibata Mahallesi Meram/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w388766724",
+    "number": "23",
+    "streetName": "Mümine Sokak"
+   }
+  },
+  {
+   "id": "42-typo-19",
+   "text": "Şemsitebrizi Mah. İstanul Caddesi 99/B, Karatay, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276173073",
+    "number": "99/B",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-20",
+   "text": "Konya, Selçuklu, Parsana Mahallesi, Gülüsmer Sokak, Kapı No: 45",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542052",
+    "number": "45",
+    "streetName": "Gülümser Sokak"
+   }
+  },
+  {
+   "id": "42-typo-21",
+   "text": "Konya Selçuklu Şeyh Şamil Mah. Şehit Vali Karakç Sk. No:2/B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3660087258",
+    "number": "2/B",
+    "streetName": "Şehit Vali Karakoç Sk."
+   }
+  },
+  {
+   "id": "42-typo-22",
+   "text": "Cumhurnyet Caddesi No:30 Ladik Mahallesi Sarayönü/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1381063924",
+    "number": "30",
+    "streetName": "Cumhuriyet Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-23",
+   "text": "Yazır Mah. Suotan Caddesi 34/I, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3659978650",
+    "number": "34/I",
+    "streetName": "Sultan Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-24",
+   "text": "Konya, Karatay, Akabe Mahallesi, Aladadin Kap Caddesi, Kapı No: 118",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307892276",
+    "number": "118",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-25",
+   "text": "Konya Karatay Fevziçakmak Mah. Glistan Caddesi No:51",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1561458258",
+    "number": "51",
+    "streetName": "Gülistan Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-26",
+   "text": "Parlaktükr Sokağı No:8 Bosna Hersek Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1357152888",
+    "number": "8",
+    "streetName": "Parlaktürk Sokağı"
+   }
+  },
+  {
+   "id": "42-typo-27",
+   "text": "Malazgirt Mah. Kaşkcy Sokak 18, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689386",
+    "number": "18",
+    "streetName": "Kaşköy Sokak"
+   }
+  },
+  {
+   "id": "42-typo-28",
+   "text": "Konya, Karatay, Akabe Mahallesi, Aaddin Kap Caddesi, Kapı No: 114",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w331052303",
+    "number": "114",
+    "streetName": "Aladdin Kap Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-29",
+   "text": "Konya Selçuklu Yazır Mah. Türkger Sokak No:34",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w259888466",
+    "number": "34",
+    "streetName": "Türkler Sokak"
+   }
+  },
+  {
+   "id": "42-typo-30",
+   "text": "Zakkium Sokak No:4 Fatih Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483486271",
+    "number": "4",
+    "streetName": "Zakkum Sokak"
+   }
+  },
+  {
+   "id": "42-typo-31",
+   "text": "Yaka Mah. Gmüşhane Sokak 13, Meram, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w358774796",
+    "number": "13",
+    "streetName": "Gümüşhane Sokak"
+   }
+  },
+  {
+   "id": "42-typo-32",
+   "text": "Konya, Karatay, Akabe Mahallesi, Kasiude Sokak, Kapı No: 2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w777633527",
+    "number": "2",
+    "streetName": "Kaside Sokak"
+   }
+  },
+  {
+   "id": "42-typo-33",
+   "text": "Konya Selçuklu Aydınlıkevler Mah. Kayigeçit Sokak No:51",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w288898648",
+    "number": "51",
+    "streetName": "Kayageçit Sokak"
+   }
+  },
+  {
+   "id": "42-typo-34",
+   "text": "Yeşilçma Sokak No:2 Hüsamettin Çelebi Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658494",
+    "number": "2",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-typo-35",
+   "text": "Fatih Mah. Çobandee Sokak 2, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13517367265",
+    "number": "2",
+    "streetName": "Çobandede Sokak"
+   }
+  },
+  {
+   "id": "42-typo-36",
+   "text": "Konya, Selçuklu, Parsana Mahallesi, Yavlaç Sokak, Kapı No: 9",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374527669",
+    "number": "9",
+    "streetName": "Yalvaç Sokak"
+   }
+  },
+  {
+   "id": "42-typo-37",
+   "text": "Konya Selçuklu Horozluhan Mah. Büyükşhain Caddesi No:35/B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670596023",
+    "number": "35/B",
+    "streetName": "Büyükşahin Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-38",
+   "text": "Ylvaç Sokak No:10 Parsana Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374527878",
+    "number": "10",
+    "streetName": "Yalvaç Sokak"
+   }
+  },
+  {
+   "id": "42-typo-39",
+   "text": "Melikşah Mah. Hocaeakıh Caddesi 35, Meram, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1263347319",
+    "number": "35",
+    "streetName": "Hocafakıh Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-40",
+   "text": "Konya, Ilgın, Camiiatik Mahallesi, Nezat İspir Caddesi, Kapı No: 1/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10312591010",
+    "number": "1/A",
+    "streetName": "Nevzat İspir Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-41",
+   "text": "Konya Selçuklu Parsana Mah. Ahmet Yeevi Caddesi No:59",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374537218",
+    "number": "59",
+    "streetName": "Ahmet Yesevi Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-42",
+   "text": "Eçlibey Sokak No:11 Bosna Hersek Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w529504706",
+    "number": "11",
+    "streetName": "Elçibey Sokak"
+   }
+  },
+  {
+   "id": "42-typo-43",
+   "text": "Kosova Mah. COŞAaDERE 22B, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11915675833",
+    "number": "22B",
+    "streetName": "COŞANDERE"
+   }
+  },
+  {
+   "id": "42-typo-44",
+   "text": "Konya, Meram, Sahibata Mahallesi, Mnvlana Caddesi, Kapı No: 16",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w265382874",
+    "number": "16",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-45",
+   "text": "Konya Karatay Çatalhüyük Mah. Uluğebyli Sokak No:17",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w279521597",
+    "number": "17",
+    "streetName": "Uluğbeyli Sokak"
+   }
+  },
+  {
+   "id": "42-typo-46",
+   "text": "Karaskayış Caddesi No:260 Fevziçakmak Mahallesi Karatay/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13509464034",
+    "number": "260",
+    "streetName": "Karakayış Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-47",
+   "text": "Parsana Mah. Yıldızı Sokak 7, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374537209",
+    "number": "7",
+    "streetName": "Yıldızlı Sokak"
+   }
+  },
+  {
+   "id": "42-typo-48",
+   "text": "Konya, Selçuklu, Hüsamettin Çelebi Mahallesi, Yeşrilçam Sokak, Kapı No: 12",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658505",
+    "number": "12",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-typo-49",
+   "text": "Konya Selçuklu Nişantaş Mah. Methan Caddesi No:4B",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n5119816322",
+    "number": "4B",
+    "streetName": "Metehan Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-50",
+   "text": "Mıhıcdede Sokak No:15 Feritpaşa Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w361696870",
+    "number": "15",
+    "streetName": "Mıhcıdede Sokak"
+   }
+  },
+  {
+   "id": "42-typo-51",
+   "text": "Bosna Hersek Mah. Khayaköy Sokak 28, Selçuklu, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w529478504",
+    "number": "28",
+    "streetName": "Kayaköy Sokak"
+   }
+  },
+  {
+   "id": "42-typo-52",
+   "text": "Konya, Karatay, Şemsitebrizi Mahallesi, İstabnul Caddesi, Kapı No: 139/A",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3711957799",
+    "number": "139/A",
+    "streetName": "İstanbul Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-53",
+   "text": "Konya Meram Sahibata Mah. Sakaroya Sokak No:7",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n14174913149",
+    "number": "7",
+    "streetName": "Sakarya Sokak"
+   }
+  },
+  {
+   "id": "42-typo-54",
+   "text": "Büyük Hzzmet Caddesi No:32/1 Bosna Hersek Mahallesi Selçuklu/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1357152890",
+    "number": "32/1",
+    "streetName": "Büyük Hizmet Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-55",
+   "text": "Şemsitebrizi Mah. Melana Caddesi 1, Karatay, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w265407071",
+    "number": "1",
+    "streetName": "Mevlana Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-56",
+   "text": "Konya, Selçuklu, Yazır Mahallesi, Saılan Sokak, Kapı No: 2",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n6375655394",
+    "number": "2",
+    "streetName": "Sayılan Sokak"
+   }
+  },
+  {
+   "id": "42-typo-57",
+   "text": "Konya Karatay Kumköprü Mah. Mlaamar Sokak No:11",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w928091660",
+    "number": "11",
+    "streetName": "Malamar Sokak"
+   }
+  },
+  {
+   "id": "42-typo-58",
+   "text": "Takşınpaşa Sokak No:16/1 Akabe Mahallesi Karatay/Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1338962849",
+    "number": "16/1",
+    "streetName": "Taşkınpaşa Sokak"
+   }
+  },
+  {
+   "id": "42-typo-59",
+   "text": "Gaziosmanpaşa Mah. Küçük Kbumköprü Caddesi 113, Karatay, Konya",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1344887621",
+    "number": "113",
+    "streetName": "Küçük Kumköprü Caddesi"
+   }
+  },
+  {
+   "id": "42-typo-60",
+   "text": "Konya, Karatay, Ulubatlıhasan Mahallesi, Kaaplı Sokak, Kapı No: 1",
+   "category": "typo",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w307892290",
+    "number": "1",
+    "streetName": "Kapalı Sokak"
+   }
+  },
+  {
+   "id": "42-numbered-1",
+   "text": "Konya Karatay Fevziçakmak Mah. 10753. Sokak No:48O",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483486267",
+    "number": "48O",
+    "streetName": "10753. Sokak",
+    "streetNumber": 10753
+   }
+  },
+  {
+   "id": "42-numbered-2",
+   "text": "41338. Sokak No:2 Yeni Mahallesi Beyşehir/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089933994",
+    "number": "2",
+    "streetName": "41338. Sokak",
+    "streetNumber": 41338
+   }
+  },
+  {
+   "id": "42-numbered-3",
+   "text": "Yeni Mah. 41352. Sokak 10B, Beyşehir, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089717461",
+    "number": "10B",
+    "streetName": "41352. Sokak",
+    "streetNumber": 41352
+   }
+  },
+  {
+   "id": "42-numbered-4",
+   "text": "Konya, Beyşehir, Yeni Mahallesi, 41357. Sokak, Kapı No: 8",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089802807",
+    "number": "8",
+    "streetName": "41357. Sokak",
+    "streetNumber": 41357
+   }
+  },
+  {
+   "id": "42-numbered-5",
+   "text": "Konya Selçuklu Büyükkayacık Mah. 101. Cd No:16",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670082022",
+    "number": "16",
+    "streetName": "101. Cd",
+    "streetNumber": 101
+   }
+  },
+  {
+   "id": "42-numbered-6",
+   "text": "41343. Sokak No:6 Yeni Mahallesi Beyşehir/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089802802",
+    "number": "6",
+    "streetName": "41343. Sokak",
+    "streetNumber": 41343
+   }
+  },
+  {
+   "id": "42-numbered-7",
+   "text": "Bahçelievler Mah. 107402. Sokak 22/A, Halkapınar, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13521369495",
+    "number": "22/A",
+    "streetName": "107402. Sokak",
+    "streetNumber": 107402
+   }
+  },
+  {
+   "id": "42-numbered-8",
+   "text": "Konya, Ilgın, Fatih Mahallesi, 116294. Sokak, Kapı No: 1/A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10312471555",
+    "number": "1/A",
+    "streetName": "116294. Sokak",
+    "streetNumber": 116294
+   }
+  },
+  {
+   "id": "42-numbered-9",
+   "text": "Konya Cihanbeyli Yeşilöz Mah. 61316. Sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n12422167961",
+    "number": "6",
+    "streetName": "61316. Sokak",
+    "streetNumber": 61316
+   }
+  },
+  {
+   "id": "42-numbered-10",
+   "text": "41354. Sokak No:5 Yeni Mahallesi Beyşehir/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089717471",
+    "number": "5",
+    "streetName": "41354. Sokak",
+    "streetNumber": 41354
+   }
+  },
+  {
+   "id": "42-numbered-11",
+   "text": "Bahçelievler Mah. 107402. Sokak 16/A, Halkapınar, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13521184588",
+    "number": "16/A",
+    "streetName": "107402. Sokak",
+    "streetNumber": 107402
+   }
+  },
+  {
+   "id": "42-numbered-12",
+   "text": "Konya, Beyşehir, Yeni Mahallesi, 41341. Sokak, Kapı No: 4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089933975",
+    "number": "4",
+    "streetName": "41341. Sokak",
+    "streetNumber": 41341
+   }
+  },
+  {
+   "id": "42-numbered-13",
+   "text": "Konya Halkapınar Bahçelievler Mah. 107465. Sokak No:13",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13523679992",
+    "number": "13",
+    "streetName": "107465. Sokak",
+    "streetNumber": 107465
+   }
+  },
+  {
+   "id": "42-numbered-14",
+   "text": "107402. Sokak No:28-A Bahçelievler Mahallesi Halkapınar/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13522317579",
+    "number": "28-A",
+    "streetName": "107402. Sokak",
+    "streetNumber": 107402
+   }
+  },
+  {
+   "id": "42-numbered-15",
+   "text": "Büyükkayacık Mah. 101. Cd 12, Selçuklu, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w524209095",
+    "number": "12",
+    "streetName": "101. Cd",
+    "streetNumber": 101
+   }
+  },
+  {
+   "id": "42-numbered-16",
+   "text": "Konya, Halkapınar, Bahçelievler Mahallesi, 107465. Sokak, Kapı No: 17",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13523679990",
+    "number": "17",
+    "streetName": "107465. Sokak",
+    "streetNumber": 107465
+   }
+  },
+  {
+   "id": "42-numbered-17",
+   "text": "Konya Selçuklu Büyükkayacık Mah. 103. Cadde No:11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670082035",
+    "number": "11",
+    "streetName": "103. Cadde",
+    "streetNumber": 103
+   }
+  },
+  {
+   "id": "42-numbered-18",
+   "text": "41355. Sokak No:10 Yeni Mahallesi Beyşehir/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089802811",
+    "number": "10",
+    "streetName": "41355. Sokak",
+    "streetNumber": 41355
+   }
+  },
+  {
+   "id": "42-numbered-19",
+   "text": "Yeni Mah. 41337. Sokak 16, Beyşehir, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089933978",
+    "number": "16",
+    "streetName": "41337. Sokak",
+    "streetNumber": 41337
+   }
+  },
+  {
+   "id": "42-numbered-20",
+   "text": "Konya, Selçuklu, Büyükkayacık Mahallesi, 422 Nolu Sokak, Kapı No: 11",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670087738",
+    "number": "11",
+    "streetName": "422 Nolu Sokak",
+    "streetNumber": 422
+   }
+  },
+  {
+   "id": "42-numbered-21",
+   "text": "Konya Beyşehir Yeni Mah. 41352. Sokak No:6",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089717467",
+    "number": "6",
+    "streetName": "41352. Sokak",
+    "streetNumber": 41352
+   }
+  },
+  {
+   "id": "42-numbered-22",
+   "text": "41354. Sokak No:3 Yeni Mahallesi Beyşehir/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089717470",
+    "number": "3",
+    "streetName": "41354. Sokak",
+    "streetNumber": 41354
+   }
+  },
+  {
+   "id": "42-numbered-23",
+   "text": "Büyükkayacık Mah. 15. Sokak 7/A, Selçuklu, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w523813196",
+    "number": "7/A",
+    "streetName": "15. Sokak",
+    "streetNumber": 15
+   }
+  },
+  {
+   "id": "42-numbered-24",
+   "text": "Konya, Ilgın, Camiiatik Mahallesi, 114919 sokak, Kapı No: 1",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n12831391884",
+    "number": "1",
+    "streetName": "114919 sokak",
+    "streetNumber": 114919
+   }
+  },
+  {
+   "id": "42-numbered-25",
+   "text": "Konya Selçuklu Büyükkayacık Mah. 403. Sokak No:9",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670082029",
+    "number": "9",
+    "streetName": "403. Sokak",
+    "streetNumber": 403
+   }
+  },
+  {
+   "id": "42-numbered-26",
+   "text": "107402. Sokak No:14/B Bahçelievler Mahallesi Halkapınar/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13521225754",
+    "number": "14/B",
+    "streetName": "107402. Sokak",
+    "streetNumber": 107402
+   }
+  },
+  {
+   "id": "42-numbered-27",
+   "text": "Büyükkayacık Mah. 405. Sokak 18, Selçuklu, Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670074629",
+    "number": "18",
+    "streetName": "405. Sokak",
+    "streetNumber": 405
+   }
+  },
+  {
+   "id": "42-numbered-28",
+   "text": "Konya, Beyşehir, Yeni Mahallesi, 41358. Sokak, Kapı No: 4",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089802815",
+    "number": "4",
+    "streetName": "41358. Sokak",
+    "streetNumber": 41358
+   }
+  },
+  {
+   "id": "42-numbered-29",
+   "text": "Konya Beyşehir Yeni Mah. 41352. Sokak No:10A",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089717460",
+    "number": "10A",
+    "streetName": "41352. Sokak",
+    "streetNumber": 41352
+   }
+  },
+  {
+   "id": "42-numbered-30",
+   "text": "107402. Sokak No:23 Bahçelievler Mahallesi Halkapınar/Konya",
+   "category": "numbered",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13521225751",
+    "number": "23",
+    "streetName": "107402. Sokak",
+    "streetNumber": 107402
+   }
+  },
+  {
+   "id": "42-hide-1",
+   "text": "İhsaniye Mah. Müneccimbaşı Sokak 3C, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n8842132180",
+    "number": "3C",
+    "streetName": "Müneccimbaşı Sokak",
+    "truth": [
+     32.487793,
+     37.873564
+    ]
+   }
+  },
+  {
+   "id": "42-hide-2",
+   "text": "Parsana Mah. Ahmet Yesevi Caddesi 43/A, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w823560321",
+    "number": "43/A",
+    "streetName": "Ahmet Yesevi Caddesi",
+    "truth": [
+     32.472659,
+     37.95845
+    ]
+   }
+  },
+  {
+   "id": "42-hide-3",
+   "text": "Horozluhan Mah. Ankara Caddesi 145/2, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1384282047",
+    "number": "145/2",
+    "streetName": "Ankara Caddesi",
+    "truth": [
+     32.508579,
+     37.901389
+    ]
+   }
+  },
+  {
+   "id": "42-hide-4",
+   "text": "Hocacihan Mah. Hicaz Caddesi 88/A, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13169022998",
+    "number": "88/A",
+    "streetName": "Hicaz Caddesi",
+    "truth": [
+     32.441483,
+     37.889656
+    ]
+   }
+  },
+  {
+   "id": "42-hide-5",
+   "text": "Fevziçakmak Mah. Adana Çevre Yolu Caddesi 24A, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13520135567",
+    "number": "24A",
+    "streetName": "Adana Çevre Yolu Caddesi",
+    "truth": [
+     32.526801,
+     37.907792
+    ]
+   }
+  },
+  {
+   "id": "42-hide-6",
+   "text": "Hüsamettin Çelebi Mah. Yeşilçam Sokak 14, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658506",
+    "number": "14",
+    "streetName": "Yeşilçam Sokak",
+    "truth": [
+     32.490392,
+     37.911305
+    ]
+   }
+  },
+  {
+   "id": "42-hide-7",
+   "text": "Pirebi Mah. Furkan Dede Caddesi 18/A, Meram, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276663277",
+    "number": "18/A",
+    "streetName": "Furkan Dede Caddesi",
+    "truth": [
+     32.49164,
+     37.865789
+    ]
+   }
+  },
+  {
+   "id": "42-hide-8",
+   "text": "Karaaslan Mah. Eğridağ Sokak 15, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w278169225",
+    "number": "15",
+    "streetName": "Eğridağ Sokak",
+    "truth": [
+     32.525009,
+     37.804925
+    ]
+   }
+  },
+  {
+   "id": "42-hide-9",
+   "text": "Ferhuniye Mah. Sultan Mesut Sokak 6, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13528347740",
+    "number": "6",
+    "streetName": "Sultan Mesut Sokak",
+    "truth": [
+     32.491458,
+     37.875519
+    ]
+   }
+  },
+  {
+   "id": "42-hide-10",
+   "text": "Çimenlik Mah. Çimenlik Caddesi 3/B, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n11295977863",
+    "number": "3/B",
+    "streetName": "Çimenlik Caddesi",
+    "truth": [
+     32.514179,
+     37.86582
+    ]
+   }
+  },
+  {
+   "id": "42-hide-11",
+   "text": "Şemsitebrizi Mah. İstanbul Caddesi 103/E, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276474617",
+    "number": "103/E",
+    "streetName": "İstanbul Caddesi",
+    "truth": [
+     32.500803,
+     37.872323
+    ]
+   }
+  },
+  {
+   "id": "42-hide-12",
+   "text": "İstiklal Mah. Yelda Sokak 9, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1343178660",
+    "number": "9",
+    "streetName": "Yelda Sokak",
+    "truth": [
+     32.556459,
+     37.836187
+    ]
+   }
+  },
+  {
+   "id": "42-hide-13",
+   "text": "Aziziye Mah. Aziziye Caddesi 27A, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13512971552",
+    "number": "27A",
+    "streetName": "Aziziye Caddesi",
+    "truth": [
+     32.501769,
+     37.870784
+    ]
+   }
+  },
+  {
+   "id": "42-hide-14",
+   "text": "Hamzaoğlu Mah. Azık Sokak 4, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1341648111",
+    "number": "4",
+    "streetName": "Azık Sokak",
+    "truth": [
+     32.512877,
+     37.856661
+    ]
+   }
+  },
+  {
+   "id": "42-hide-15",
+   "text": "Fevziçakmak Mah. Ankara Caddesi 240, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n7611581723",
+    "number": "240",
+    "streetName": "Ankara Caddesi",
+    "truth": [
+     32.533565,
+     37.930628
+    ]
+   }
+  },
+  {
+   "id": "42-hide-16",
+   "text": "Melikşah Mah. Sivaslı Ali Kemal Caddesi 6A, Meram, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n9262766274",
+    "number": "6A",
+    "streetName": "Sivaslı Ali Kemal Caddesi",
+    "truth": [
+     32.459944,
+     37.86651
+    ]
+   }
+  },
+  {
+   "id": "42-hide-17",
+   "text": "Bosna Hersek Mah. Demirören Sokak 3, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n12531783802",
+    "number": "3",
+    "streetName": "Demirören Sokak",
+    "truth": [
+     32.524515,
+     38.009025
+    ]
+   }
+  },
+  {
+   "id": "42-hide-18",
+   "text": "bahçelievler Mah. 23 nisan 1, Cihanbeyli, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w778640204",
+    "number": "1",
+    "streetName": "23 nisan",
+    "truth": [
+     32.907398,
+     38.663872
+    ]
+   }
+  },
+  {
+   "id": "42-hide-19",
+   "text": "Yeni Mah. Erenler Caddesi 90, Beyşehir, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1089802788",
+    "number": "90",
+    "streetName": "Erenler Caddesi",
+    "truth": [
+     31.715017,
+     37.664182
+    ]
+   }
+  },
+  {
+   "id": "42-hide-20",
+   "text": "Parsana Mah. Eşrefoğlu Sokak 4, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1120654665",
+    "number": "4",
+    "streetName": "Eşrefoğlu Sokak",
+    "truth": [
+     32.484109,
+     37.957237
+    ]
+   }
+  },
+  {
+   "id": "42-hide-21",
+   "text": "Malazgirt Mah. Kaşköy Sokak 6, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689363",
+    "number": "6",
+    "streetName": "Kaşköy Sokak",
+    "truth": [
+     32.497138,
+     37.928661
+    ]
+   }
+  },
+  {
+   "id": "42-hide-22",
+   "text": "Çatalhüyük Mah. Tesisli Sokak 7, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w279521518",
+    "number": "7",
+    "streetName": "Tesisli Sokak",
+    "truth": [
+     32.540672,
+     37.805591
+    ]
+   }
+  },
+  {
+   "id": "42-hide-23",
+   "text": "Erenler Mah. Vasıta Sokak 2, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w293819656",
+    "number": "2",
+    "streetName": "Vasıta Sokak",
+    "truth": [
+     32.536748,
+     37.891179
+    ]
+   }
+  },
+  {
+   "id": "42-hide-24",
+   "text": "Parsana Mah. Seyit Ahmet Başak Sokak 6, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w374542058",
+    "number": "6",
+    "streetName": "Seyit Ahmet Başak Sokak",
+    "truth": [
+     32.466805,
+     37.951433
+    ]
+   }
+  },
+  {
+   "id": "42-hide-25",
+   "text": "Fevziçakmak Mah. Karakayış Caddesi 275, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13517367264",
+    "number": "275",
+    "streetName": "Karakayış Caddesi",
+    "truth": [
+     32.524955,
+     37.907329
+    ]
+   }
+  },
+  {
+   "id": "42-hide-26",
+   "text": "Esenler Mah. Yeni Sille Caddesi 85, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n7612182704",
+    "number": "85",
+    "streetName": "Yeni Sille Caddesi",
+    "truth": [
+     32.46734,
+     37.900382
+    ]
+   }
+  },
+  {
+   "id": "42-hide-27",
+   "text": "Hocacihan Mah. Saray Caddesi 11E, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n12137674348",
+    "number": "11E",
+    "streetName": "Saray Caddesi",
+    "truth": [
+     32.454942,
+     37.885098
+    ]
+   }
+  },
+  {
+   "id": "42-hide-28",
+   "text": "İhsaniye Mah. barbaros hayrettin sokak 4, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n4383602091",
+    "number": "4",
+    "streetName": "barbaros hayrettin sokak",
+    "truth": [
+     32.48175,
+     37.871156
+    ]
+   }
+  },
+  {
+   "id": "42-hide-29",
+   "text": "Akademi Mah. Gürbulut SK 67, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n10736986353",
+    "number": "67",
+    "streetName": "Gürbulut SK",
+    "truth": [
+     32.507875,
+     38.001454
+    ]
+   }
+  },
+  {
+   "id": "42-hide-30",
+   "text": "Fevziçakmak Mah. KOSGEB Caddesi 1C, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13483366435",
+    "number": "1C",
+    "streetName": "KOSGEB Caddesi",
+    "truth": [
+     32.528383,
+     37.92444
+    ]
+   }
+  },
+  {
+   "id": "42-hide-31",
+   "text": "Bosna Hersek Mah. Mesaj Caddesi 38A, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n2654195209",
+    "number": "38A",
+    "streetName": "Mesaj Caddesi",
+    "truth": [
+     32.522948,
+     38.010895
+    ]
+   }
+  },
+  {
+   "id": "42-hide-32",
+   "text": "Beyhekim Mah. Gülaçar Sokak 5, Selçuklu, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1114859445",
+    "number": "5",
+    "streetName": "Gülaçar Sokak",
+    "truth": [
+     32.500521,
+     37.982595
+    ]
+   }
+  },
+  {
+   "id": "42-hide-33",
+   "text": "Fevziçakmak Mah. Ankara Caddesi 240, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w524620176",
+    "number": "240",
+    "streetName": "Ankara Caddesi",
+    "truth": [
+     32.533621,
+     37.930674
+    ]
+   }
+  },
+  {
+   "id": "42-hide-34",
+   "text": "Erenler Mah. Taşyurt Sokak 7, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1343032362",
+    "number": "7",
+    "streetName": "Taşyurt Sokak",
+    "truth": [
+     32.523799,
+     37.893694
+    ]
+   }
+  },
+  {
+   "id": "42-hide-35",
+   "text": "Akabe Mah. Şehit Mehmet Gökhan Sokak 63, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1338962874",
+    "number": "63",
+    "streetName": "Şehit Mehmet Gökhan Sokak",
+    "truth": [
+     32.530733,
+     37.865568
+    ]
+   }
+  },
+  {
+   "id": "42-hide-36",
+   "text": "Sarıyakup Mah. Garaj Caddesi 9, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w525412230",
+    "number": "9",
+    "streetName": "Garaj Caddesi",
+    "truth": [
+     32.503648,
+     37.864689
+    ]
+   }
+  },
+  {
+   "id": "42-hide-37",
+   "text": "Çatalhüyük Mah. Uluğbeyli Sokak 1, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w279521544",
+    "number": "1",
+    "streetName": "Uluğbeyli Sokak",
+    "truth": [
+     32.539293,
+     37.804972
+    ]
+   }
+  },
+  {
+   "id": "42-hide-38",
+   "text": "Kaşınhanı Mah. Kalkınma Sokak 28, Meram, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527804299",
+    "number": "28",
+    "streetName": "Kalkınma Sokak",
+    "truth": [
+     32.574054,
+     37.703339
+    ]
+   }
+  },
+  {
+   "id": "42-hide-39",
+   "text": "Aşkan Mah. Yaka Caddesi 111, Meram, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1206475573",
+    "number": "111",
+    "streetName": "Yaka Caddesi",
+    "truth": [
+     32.438134,
+     37.869218
+    ]
+   }
+  },
+  {
+   "id": "42-hide-40",
+   "text": "Akabe Mah. Aladdin Kap Caddesi 117, Karatay, Konya",
+   "category": "hide",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1120660224",
+    "number": "117",
+    "streetName": "Aladdin Kap Caddesi",
+    "truth": [
+     32.543914,
+     37.867623
+    ]
+   }
+  },
+  {
+   "id": "42-lang-1",
+   "text": "Kozagac, 51 Onbasilar Street floor 8 apartment 6, Meram/Konya",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-lang-2",
+   "text": "Meram, Kozağaç Ortsteil, Onbaşılar Gasse Nummer 51, 42919",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-lang-3",
+   "text": "конья мерам, ул. онбашылар д. 51",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-lang-4",
+   "text": "Οδός Onbaşılar αρ. 51 όροφος 2 διαμέρισμα 2, κονγια μεραμ",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-lang-5",
+   "text": "Kozağaç، شارع Onbaşılar رقم 51،  Meram",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "w321778426",
+    "number": "51",
+    "streetName": "Onbaşılar Sokak"
+   }
+  },
+  {
+   "id": "42-lang-6",
+   "text": "Ebu Suud Efendi Street 13/A, Konya Meram, 42408",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-7",
+   "text": "MERAM/KONYA HAVZAN ORTSTEİL EBU SUUD EFENDİ STRASSE NR. 13/A",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-8",
+   "text": "хавзан, проспект эбу сууд эфенди дом 13/A, конья мерам",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-9",
+   "text": "κονγια μεραμ, Λεωφόρος Ebu Suud Efendi αρ. 13/A",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-10",
+   "text": "حي Havzan, جادة Ebu Suud Efendi رقم 13/A, Konya Meram",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "n13119969433",
+    "number": "13/A",
+    "streetName": "Ebu Suud Efendi Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-11",
+   "text": "Tatlıcak Neighbourhood, 45 Konya Ereğli Ave floor 2 apartment 6, Karatay/Konya, 42715",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-12",
+   "text": "Konya Karatay Konya Ereğli Straße Nummer 45 Etage 1 Wohnung 8",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-13",
+   "text": "микрорайон татлыджак, пр. конья эрегли 45, каратай/конья",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-14",
+   "text": "Konya Karatay γειτονιά Tatlıcak Λεωφ. κονγια ερεγλι 45 όροφος 3 διαμέρισμα 3",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-15",
+   "text": "شارع Konya Ereğli رقم 45، Karatay Konya، 42988",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "w1550634005",
+    "number": "45",
+    "streetName": "Konya Ereğli Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-16",
+   "text": "Konya Meram Sahibata Neighbourhood 4 Vali Muammerbey Ave",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-17",
+   "text": "Sahibata, Vali Muammerbey Straße Nummer 4, Meram ",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-18",
+   "text": "конья мерам, микрорайон сахибата, проспект вали муаммербей д. 4 корпус K кв. 16",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-19",
+   "text": "ΓΕΙΤΟΝΙΆ ΣΑΧΙΜΠΑΤΑ, ΛΕΩΦΌΡΟΣ VALI MUAMMERBEY ΑΡΙΘΜΌΣ 4, ΚΟΝΓΙΑ MERAM",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-20",
+   "text": "حي Sahibata, جادة Vali Muammerbey رقم 4,  Meram",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "w282053359",
+    "number": "4",
+    "streetName": "Vali Muammerbey Caddesi"
+   }
+  },
+  {
+   "id": "42-lang-21",
+   "text": "Malazgirt, Kocagol St no 3, Konya Selcuklu",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-lang-22",
+   "text": "Malazgirt Ortsteil, Kocagöl Str. Nr. 3, Konya Selçuklu, 42152",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-lang-23",
+   "text": "селчуклу/конья, микрорайон малазгирт, улица коджагёл д. 3",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-lang-24",
+   "text": "Malazgirt, Οδ. κοτζαγκολ 3, σελτσουκλου Konya",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-lang-25",
+   "text": "Malazgirt، شارع Kocagöl رقم 3،  Selçuklu",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436922453",
+    "number": "3",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-lang-26",
+   "text": "Sarıyakup Neighbourhood, Yedi Yıldız St number 48/A, Karatay/",
+   "category": "lang",
+   "lang": "en",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-lang-27",
+   "text": "Karatay, Sariyakup Ortsteil, Yedi Yildiz Str. 48/A",
+   "category": "lang",
+   "lang": "de",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-lang-28",
+   "text": "каратай, ул. йеди йылдыз д. 48/A этаж 2 квартира 30",
+   "category": "lang",
+   "lang": "ru",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-lang-29",
+   "text": "Konya καραταϊ Οδός γιεντι γιιλντιζ αριθμός 48/A",
+   "category": "lang",
+   "lang": "el",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-lang-30",
+   "text": "حي Sarıyakup، شارع Yedi Yıldız رقم 48/A، Konya Karatay",
+   "category": "lang",
+   "lang": "ar",
+   "expect": {
+    "plate": "42",
+    "osm": "n3276517887",
+    "number": "48/A",
+    "streetName": "Yedi Yıldız Sokak"
+   }
+  },
+  {
+   "id": "42-hard-1",
+   "text": "Derviş Hilmi Sokak 3A İhsaniye",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n13519518833",
+    "number": "3A",
+    "streetName": "Derviş Hilmi Sokak"
+   }
+  },
+  {
+   "id": "42-hard-2",
+   "text": "Ulubatlıhasan mah Mercidabık Sokak no:49 d:3 kat:2 Karatay",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527316596",
+    "number": "49",
+    "streetName": "Mercidabık Sokak"
+   }
+  },
+  {
+   "id": "42-hard-3",
+   "text": "Selçuklu Büyükşehir Caddesi no19",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1114858573",
+    "number": "19",
+    "streetName": "Büyükşehir Caddesi"
+   }
+  },
+  {
+   "id": "42-hard-4",
+   "text": "8 Yeşilçam Sokak Hüsamettin Çelebi Selçuklu",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658497",
+    "number": "8",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-hard-5",
+   "text": "MALAZGIRT KOCAGOL SOKAK 1",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w283600126",
+    "number": "1",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-hard-6",
+   "text": "Selçuklu Yeşilçam Sokak apartmanı 13 numara",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659729",
+    "number": "13",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-hard-7",
+   "text": "Hüsamettin Çelebi mahallesi Yeşilçam Sokak 11 nolu bina Selçuklu/Konya",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652659728",
+    "number": "11",
+    "streetName": "Yeşilçam Sokak"
+   }
+  },
+  {
+   "id": "42-hard-8",
+   "text": "Tuna 16 Malazgirt Selçuklu",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689389",
+    "number": "16",
+    "streetName": "Tuna Caddesi"
+   }
+  },
+  {
+   "id": "42-hard-9",
+   "text": "Hüsamevttin Çelebi mah Akabe Caddesi 3 Selçuklu",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n3652658472",
+    "number": "3",
+    "streetName": "Akabe Caddesi"
+   }
+  },
+  {
+   "id": "42-hard-10",
+   "text": "Sedef Köy Sokak Misal Apartmanı 3 Bedir mh",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w670139816",
+    "number": "3",
+    "streetName": "Sedef Köy Sokak Misal Apartmanı"
+   }
+  },
+  {
+   "id": "42-hard-11",
+   "text": "Selçuklu Malazgirt Kocagöl Sokak 7, 34137",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1436689366",
+    "number": "7",
+    "streetName": "Kocagöl Sokak"
+   }
+  },
+  {
+   "id": "42-hard-12",
+   "text": "Konya Selçuklu Seymenler Caddesi 38 Selahaddini Eyyubi",
+   "category": "hard",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1329870075",
+    "number": "38",
+    "streetName": "Seymenler Caddesi"
+   }
+  },
+  {
+   "id": "42-poi-1",
+   "text": "Adnan Hadiye Sürmegöz Ortaokulu Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w283563909",
+    "kind": "school",
+    "streetName": "Adnan Hadiye Sürmegöz Ortaokulu"
+   }
+  },
+  {
+   "id": "42-poi-2",
+   "text": "Ahmet Hazım Uluşahin İmam Hatip Ortaokulu Selçuklu Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w289888829",
+    "kind": "school",
+    "streetName": "Ahmet Hazım Uluşahin İmam Hatip Ortaokulu"
+   }
+  },
+  {
+   "id": "42-poi-3",
+   "text": "Cemile Erkunt İlkokulu Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w283586913",
+    "kind": "school",
+    "streetName": "Cemile Erkunt İlkokulu"
+   }
+  },
+  {
+   "id": "42-poi-4",
+   "text": "arsinci ilkokulu kulu konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w506132216",
+    "kind": "school",
+    "streetName": "Arşıncı İlkokulu"
+   }
+  },
+  {
+   "id": "42-poi-5",
+   "text": "Yavuz Selim İlkokulu Karatay Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w279689606",
+    "kind": "school",
+    "streetName": "Yavuz Selim İlkokulu"
+   }
+  },
+  {
+   "id": "42-poi-6",
+   "text": "Nizamülmülk Anadolu Lisesi Karatay Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1340727753",
+    "kind": "school",
+    "streetName": "Nizamülmülk Anadolu Lisesi"
+   }
+  },
+  {
+   "id": "42-poi-7",
+   "text": "Karatay Halk Eğitimi Merkezi Karatay Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1338962840",
+    "kind": "school",
+    "streetName": "Karatay Halk Eğitimi Merkezi"
+   }
+  },
+  {
+   "id": "42-poi-8",
+   "text": "aksehir nasreddin hoca ilkokulu aksehir konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w366492958",
+    "kind": "school",
+    "streetName": "Akşehir Nasreddin Hoca İlkokulu"
+   }
+  },
+  {
+   "id": "42-poi-9",
+   "text": "Karatay Ortaokulu Karatay",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w308850339",
+    "kind": "school",
+    "streetName": "Karatay Ortaokulu"
+   }
+  },
+  {
+   "id": "42-poi-10",
+   "text": "Anaokul Selçuklu Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w361521139",
+    "kind": "school",
+    "streetName": "Anaokul"
+   }
+  },
+  {
+   "id": "42-poi-11",
+   "text": "Beyhekim Akıl ve Ruh Sağlığı hastane Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1126448726",
+    "kind": "hospital",
+    "streetName": "Beyhekim Akıl ve Ruh Sağlığı Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-12",
+   "text": "Dr. Vefa Tanır Ilgın Devlet hastane Ilgın",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w855874810",
+    "kind": "hospital",
+    "streetName": "Dr. Vefa Tanır Ilgın Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-13",
+   "text": "Özel Selçuklu Hastanesi Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n5112704523",
+    "kind": "hospital",
+    "streetName": "Özel Selçuklu Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-14",
+   "text": "Beyhekim Onkoloji Hastanesi Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1126448729",
+    "kind": "hospital",
+    "streetName": "Beyhekim Onkoloji Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-15",
+   "text": "kto karatay universitesi medicana tip fakultesi hastane selcuklu konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w288606118",
+    "kind": "hospital",
+    "streetName": "KTO Karatay Üniversitesi Medicana Tıp Fakültesi Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-16",
+   "text": "karapinar belediye binasi karapinar konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w104496733",
+    "kind": "townhall",
+    "streetName": "Karapınar Belediyesi"
+   }
+  },
+  {
+   "id": "42-poi-17",
+   "text": "medline hastane meram konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w287831116",
+    "kind": "hospital",
+    "streetName": "Medline Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-18",
+   "text": "bozkir devlet hastanesi bozkir konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w858908132",
+    "kind": "hospital",
+    "streetName": "Bozkır Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-19",
+   "text": "refik saime koyuncu kadinhani devlet hastanesi kadinhani konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w274748131",
+    "kind": "hospital",
+    "streetName": "Refik Saime Koyuncu Kadınhanı Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-20",
+   "text": "Yeni Karapınar Devlet Hastanesi Karapınar",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w503312889",
+    "kind": "hospital",
+    "streetName": "Yeni Karapınar Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-21",
+   "text": "aksehir devlet hastanesi aksehir konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w396713679",
+    "kind": "hospital",
+    "streetName": "Akşehir Devlet Hastanesi"
+   }
+  },
+  {
+   "id": "42-poi-22",
+   "text": "aksehir belediye binasi aksehir konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "n8401584517",
+    "kind": "townhall",
+    "streetName": "Akşehir Belediyesi"
+   }
+  },
+  {
+   "id": "42-poi-23",
+   "text": "tuzlukcu belediye binasi tuzlukcu konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w424705857",
+    "kind": "townhall",
+    "streetName": "Tuzlukçu Belediyesi"
+   }
+  },
+  {
+   "id": "42-poi-24",
+   "text": "Meram Cadde AVM Meram",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1548045554",
+    "kind": "mall",
+    "streetName": "Meram Cadde AVM"
+   }
+  },
+  {
+   "id": "42-poi-25",
+   "text": "Sarayköy Mahallesi Muhtarlığı Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w635409111",
+    "kind": "townhall",
+    "streetName": "Sarayköy Mahallesi Muhtarlığı"
+   }
+  },
+  {
+   "id": "42-poi-26",
+   "text": "Kulesite AVM Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527615714",
+    "kind": "mall",
+    "streetName": "Kulesite AVM"
+   }
+  },
+  {
+   "id": "42-poi-27",
+   "text": "Kent Plaza AVM Selçuklu",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527221774",
+    "kind": "mall",
+    "streetName": "Kent Plaza AVM"
+   }
+  },
+  {
+   "id": "42-poi-28",
+   "text": "Meram Belediye Binası Meram Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w290659729",
+    "kind": "townhall",
+    "streetName": "Meram Belediye Binası"
+   }
+  },
+  {
+   "id": "42-poi-29",
+   "text": "meram belediye binasi meram konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527898805",
+    "kind": "townhall",
+    "streetName": "Meram Belediyesi"
+   }
+  },
+  {
+   "id": "42-poi-30",
+   "text": "Koçtaş Selçuklu Konya",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w527225237",
+    "kind": "mall",
+    "streetName": "Koçtaş"
+   }
+  },
+  {
+   "id": "42-poi-32",
+   "text": "cihanbeyli belediye binasi cihanbeyli",
+   "category": "poi",
+   "lang": "tr",
+   "expect": {
+    "plate": "42",
+    "osm": "w1485560010",
+    "kind": "townhall",
+    "streetName": "Cihanbeyli Belediyesi"
+   }
+  }
+ ]
+}

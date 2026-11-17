@@ -1,0 +1,44 @@
+{
+  "mutate": [
+    "src/core/route/bytes.ts",
+    "src/core/route/format.ts",
+    "src/core/route/ch-query.ts",
+    "src/core/route/matrix.ts",
+    "src/core/route/snap.ts",
+    "src/core/route/labels.ts",
+    "src/core/route/line.ts",
+    "src/core/route/planner.ts",
+    "src/core/route/router.ts",
+    "src/core/route/heap.ts",
+    "src/core/route/plain.ts"
+  ],
+  "testRunner": "jest",
+  "jest": {
+    "configFile": "jest.route-mutation.config.js"
+  },
+  "coverageAnalysis": "perTest",
+  "thresholds": {
+    "high": 90,
+    "low": 80,
+    "break": 80
+  },
+  "reporters": [
+    "clear-text",
+    "progress"
+  ],
+  "ignorePatterns": [
+    "dist",
+    "pipeline/.venv",
+    "pipeline/bin",
+    "pipeline/data",
+    "pipeline/tests",
+    "pipeline/extract",
+    "example/ios",
+    "example/android",
+    "example/node_modules",
+    "example/.expo"
+  ],
+  "tempDirName": ".stryker-tmp-route",
+  "dryRunTimeoutMinutes": 30,
+  "concurrency": 5
+}

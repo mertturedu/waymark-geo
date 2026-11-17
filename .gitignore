@@ -1,0 +1,16 @@
+node_modules
+dist
+coverage
+.stryker-tmp
+pipeline/.venv
+pipeline/bin
+pipeline/data
+example/node_modules
+example/ios
+example/android
+example/.expo
+*.pmtiles
+.DS_Store
+reports
+lib
+__pycache__/
